@@ -9,7 +9,7 @@ __Prerequisites:__
 
 __Final Grade:__
 
-* 40% - Homework assignments.
+* 40% - Homework assignments (one submission is skippable).
 * 60% - Final project.
 
 Each 3-hour lecture will start with an oral presentation, followed by individual work in the computer lab. Main topics of the course will include:
