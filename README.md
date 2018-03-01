@@ -7,7 +7,8 @@ This repository contains material relevant to the entire course,
 including the classes.
 
 Homework assignments, excluding the first one, will be presented in different repositories,
-but the lectures themselves reside here.
+but the lectures themselves reside here. They're named `classX.ipynb` and are viewable in GitHub,
+and editable and runnable with Jupyter Notebook.
 
 If you come across any useful learning resources which are not listed in `Resources.md`,
 please don't hesitate to create a pull request with the new resource you found.
