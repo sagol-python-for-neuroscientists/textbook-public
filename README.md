@@ -4,7 +4,8 @@
 #### By Hagai Har-Gil, hagaihargil@protonmail.com
 
 This repository contains material relevant to the entire course,
-including the classes.
+including the classes. You should star it (top-right corner) to receive
+notifications when I update it with new material.
 
 Homework assignments, excluding the first one, will be presented in different repositories,
 but the lectures themselves reside here. They're named `classX.ipynb` and are viewable in GitHub,
