@@ -1,4 +1,4 @@
-# Setting Your Python Stack
+# Setting Up Your Python Stack
 
 Below you can find the tools we'll use throughout the semester to work with Python. To complete exercise #1 you only have
 to compelete Task number 1 - "Python Setup". In the second week of the semester I'll show in class how to install
@@ -9,8 +9,7 @@ week of the semester.
 1. In the course we'll use Python 3.6. The easiest way to install Python is via 
 Anaconda, a popular Python distribution. We'll get to know Anaconda throughout
 the course.
-2. Download __Miniconda__ from [here](https://conda.io/miniconda.html), for Python 3.6, and install it. Make sure to check the option "Add to path".
-3. Verify the setup by starting a command line terminal (cmd.exe in Windows, Terminal in Mac\Linux) and typing in `conda`. You should receive back a list of available commands.
+2. Download __Miniconda__ from [here](https://conda.io/miniconda.html), for Python 3.6.
 3. Setup a new Python environment with the following command: 
 `conda create --name my_env python=3.6` (you can change the environment name)
 4. Environments are important, since they allow you isolate each project you work on
