@@ -4,7 +4,7 @@
 #### By Hagai Har-Gil, hagaihargil@protonmail.com
 
 This repository contains material relevant to the entire course,
-including the classes. You should star it (top-right corner) to receive
+including the classes. You should star and watch it (top-right corner) to receive
 notifications when I update it with new material.
 
 Homework assignments, excluding the first one, will be presented in different repositories,
