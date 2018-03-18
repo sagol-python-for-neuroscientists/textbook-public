@@ -13,3 +13,7 @@ and editable and runnable with Jupyter Notebook. I've also uploaded them in a pr
 
 If you come across any useful learning resources which are not listed in `Resources.md`,
 please don't hesitate to create a pull request with the new resource you found.
+
+## Homework Assignments:
+
+### Assignment 2: https://classroom.github.com/a/Lk_aw7SK
