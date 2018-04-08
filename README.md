@@ -20,6 +20,7 @@ please don't hesitate to create a pull request with the new resource you found.
 
 ### Assignment 2: 
 Repo: https://classroom.github.com/a/Lk_aw7SK
+
 Solutions (and grades) are in the `assignment2` folder.
 
 ### Assignment 3:
