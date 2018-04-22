@@ -26,6 +26,9 @@ Solutions (and grades) are in the `assignment2` folder.
 ### Assignment 3:
 Repo: https://classroom.github.com/a/c22J_eQk
 
+### Assignment 4:
+Repo: https://classroom.github.com/a/FYej5STw
+
 ## Final Project
 
 As I mentioned in Sunday's class, we plan to end the course with a Sagol Hackathon, during which you'll write you final project - 60% of the total grade. The event will start with a lecture by a manager from the industry about Data Science and Python, and following that you'll divide into pre-determined groups of 3-4 students that will each tackle a project for a day-and-a-half. At the end you'll be required to present the work you've done in front of the class.
