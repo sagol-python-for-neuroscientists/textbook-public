@@ -21,10 +21,12 @@ please don't hesitate to create a pull request with the new resource you found.
 ### Assignment 2: 
 Repo: https://classroom.github.com/a/Lk_aw7SK
 
-Solutions (and grades) are in the `assignment2` folder.
+Solutions and grades are in `assignment2`.
 
 ### Assignment 3:
 Repo: https://classroom.github.com/a/c22J_eQk
+
+Solutions and grades are in `assignment3`.
 
 ### Assignment 4:
 Repo: https://classroom.github.com/a/FYej5STw
