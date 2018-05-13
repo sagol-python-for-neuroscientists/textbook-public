@@ -2,20 +2,17 @@
 __author__ = Hagai Har-Gil
 """
 import numpy as np
-import attr
 
 
-def validate_nonneg_int(instance, attribute, value):
-    """ Validate that a number is a non-negative integer """
-    if not isinstance(value, int) or value < 0:
-        raise TypeError("n must be a non-negative number")
-
-
-@attr.s
 class CompareSeries:
     """ Compare Fibonacci series to prime numbers series """
+    def __init__(self, n):
+        self._validate_nonneg_int(n)
+        self.n = n
 
-    n = attr.ib(validator=validate_nonneg_int)
+    def _validate_nonneg_int(self, n):
+        if not isinstance(n, int) or n < 0:
+            raise TypeError("n must be a non-negative number")
 
     def compare(self):
         """ Run the comparison of the series """

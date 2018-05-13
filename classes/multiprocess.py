@@ -3,6 +3,7 @@ __author__ = Hagai Har-Gil
 """
 import multiprocessing
 
+
 def add_tuple(tup):
     return tup[0] + tup[1]
 
