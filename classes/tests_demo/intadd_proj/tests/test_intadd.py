@@ -29,6 +29,3 @@ class TestIntadd:
     def test_float_inp(self, inp):
         with pytest.raises(TypeError):
             intadd(inp[0], inp[1])
-
-if __name__ == '__main__':
-    pass

@@ -17,7 +17,7 @@ class TestFib:
 
     def test_fib_valid(self):
         result = CompareSeries(4).gen_fib_arr()
-        assert all(result == self.fib[:4])
+        assert np.all(result == self.fib[:4])
 
     def test_fib_single(self):
         result = CompareSeries(1).gen_fib_arr()
@@ -25,7 +25,7 @@ class TestFib:
 
     def test_primes_valid(self):
         result = CompareSeries(6).gen_prime_arr()
-        assert all(result == self.primes[:6])
+        assert np.all(result == self.primes[:6])
 
     def test_primes_single(self):
         result = CompareSeries(1).gen_prime_arr()
@@ -34,7 +34,7 @@ class TestFib:
     # Integration tests
     def test_valid(self):
         result = CompareSeries(8).compare()
-        assert all((self.fib - self.primes) == result)
+        assert np.all((self.fib - self.primes) == result)
 
     def test_zero(self):
         assert len(CompareSeries(0).compare()) == 0
