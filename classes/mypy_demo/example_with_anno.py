@@ -23,13 +23,13 @@ class DataParser:
         self.a: int = 1
         self.b: float = 2.
 
-    def __process(self, pre: float) -> List[float]:
+    def __process(self, pre: float) -> List[int]:
         pre += 1
         pre /= 2
 
         return [pre, pre]
 
-    def print_result(self, result: List[float]) -> None:
+    def print_result(self, result: List[int]) -> None:
         print(result)
 
 
