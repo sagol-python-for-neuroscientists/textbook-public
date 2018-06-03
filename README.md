@@ -33,7 +33,7 @@ Repo: https://classroom.github.com/a/FYej5STw
 Repo to fork: https://github.com/sagol-python-for-neuroscientists/hw5
 
 ### Assignment 6:
-Repo: XXX
+Repo: https://classroom.github.com/a/s2mPldEf
 
 ## Hackathon
 
