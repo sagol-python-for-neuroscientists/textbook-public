@@ -14,8 +14,6 @@ and editable and runnable with Jupyter Notebook. I've also uploaded them in a pr
 If you come across any useful learning resources which are not listed in `Resources.md`,
 please don't hesitate to create a pull request with the new resource you found.
 
-## [Mid-term feedback](https://docs.google.com/forms/d/e/1FAIpQLSeLXLtcyd5omC0s_0ZU67F-iF6S57bh5fji70McSzKL_nrELA/viewform)
-
 ## Homework Assignments:
 
 ### Assignment 2: 
@@ -35,12 +33,10 @@ Repo: https://classroom.github.com/a/FYej5STw
 Repo to fork: https://github.com/sagol-python-for-neuroscientists/hw5
 
 ### Assignment 6:
-Repo: XXX
+Repo: https://classroom.github.com/a/s2mPldEf
 
-## Final Project
+## Hackathon
 
-As I mentioned in class, we plan to end the course with a Sagol Hackathon, during which you'll write you final project - 60% of the total grade. The event will start with a lecture by a manager from the industry about Data Science and Python, and following that you'll divide into pre-determined groups of 3-4 students that will each tackle a project for a day-and-a-half. At the end you'll be required to present the work you've done in front of the class.
+The year will end with Sagol Hacakthon. [Here](https://docs.google.com/document/d/1GVy7XWHAtUcNIG7g9BTZLS7KH1_QesVWxn4VgnxyvzY/edit?usp=sharing) you can find the list of projects (currently 5-6 of them). Please write your name next to each project you wish to take part of. I'll have a session with each group in which we go over the details and refine each project to the scope of the availble 24 hours.
 
-Project topics can be diverse - we're currently gathering a pool of these, and you're more than welcome to suggest your own ideas, taken from your lab's research interests. As mentioned, the scope of the project should fit a group of 3-4 students working throughout the hackathon.
-
-The hackathon will be conducted on the 27-28.6 in the "Miflat" near the main gate. More details will follow.
+The hackathon will be conducted on the 27-28.6 in the "Miflat" near the main gate. 
