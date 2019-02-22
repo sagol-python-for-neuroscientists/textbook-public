@@ -7,28 +7,27 @@ analysis of your own data by increasing its automation and reproducibility.
 __Prerequisites:__
 
 1. Basic knowledge of programming.
-2. Extended Mathematics course (in the Life Sciences faculty), or a parallel one. 
+2. Extended Mathematics course (in the Life Sciences faculty), or a parallel one.
 
 __Final Grade:__
 
-* 40% - Homework assignments (one submission is skippable).
-* 60% - Final project (details later).
+* 40% - Homework assignments - one submission is skippable (not the first).
+* 60% - Final project (hackathon).
 
 Each 3-hour lecture will start with an oral presentation, followed by individual work in the computer lab.
 To summarize I'll present solutions to the class exercises and we'll discuss some of the difficulties you encountered.
 
-Main topics of the course will include:
+Main topics of the course will include (not necessarily in this order):
 
-1. Motivation, transition from Matlab. 
+1. Motivation, transition from Matlab.
 2. Data structures (lists, tuples, sets, dictionaries), functions and iteration.
 2. Object-oriented programming.
 3. Principles of Software Design.
 3. File I/O and exception handling.
 3. Python's scientific stack - NumPy, SciPy, Pandas, Matplotlib.
 4. Important programming tools and habits - Package management, Git, unit tests.
-5. Advanced Pandas - use cases, data organization. 
-6. Bio-informatics and statistics in Python.
+5. Advanced Pandas - use cases, data organization.
 7. Integration of web tools for I/O, plotting and dashboards.
 8. Image processing and basic machine learning.
 9. Performant code - Cython, Numba, multiprocessing.
-10. Advanced subjects - FFIs, generators, decorators, meta-programming. 
+10. Advanced subjects - FFIs, generators, decorators, meta-programming.
