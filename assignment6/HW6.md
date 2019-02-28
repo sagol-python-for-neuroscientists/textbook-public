@@ -1,7 +1,7 @@
 # Homework Assignment #6
 
-### Date: 03-06-2018
-### Due date: 17-06-2018
+### Date: xx-xx-2018
+### Due date: xx-xx-2018
 
 ## Three-dimensional _Submarines_ Game
 
