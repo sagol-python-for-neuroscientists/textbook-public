@@ -39,7 +39,9 @@ def trifeca(word):
 
 if __name__ == '__main__':
     print("Question 1 solution:")
-    print(trifeca('llkkbmm'))
+    string1 = 'llkkbmm'
+    string2 = '434343'
+    print("String one: ", trifeca(string1))
 
 
 

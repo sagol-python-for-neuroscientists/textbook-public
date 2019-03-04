@@ -1,19 +1,14 @@
 # Homework Assignment, 04-03-2019
 ## Due date: 11-03-2019, 15:00
 
-When functions require input, you should be the one simulating it. For example,
-if a function requires a list, please submit the HW with a mock list already in place.
-
-If you have any Pythonic and \ or technical difficulties don't hesitate to contact me.
-
 1. _Three consecutive double-letter words:_ Write a program that receives a word
 and checks whether it has three consecutive pairs of identical letters in it.
 For example:
-    - `aabbcc` returns `True`
-    - `abccddee0123` returns `True`
-    - `llkkbmm` returns `False`
-    - `aaaazz` returns `True`
-    - `bbcCdd` returns `False`
+    - `'aabbcc'` returns `True`
+    - `'abccddee0123'` returns `True`
+    - `'llkkbmm'` returns `False`
+    - `'aaaazz'` returns `True`
+    - `'bbcCdd'` returns `False`
     - The empty string `''` returns `False`
 
     Function signature:
@@ -28,8 +23,7 @@ For example:
 
 2. _Palindrome madness:_ A palindrome is a sequence that can be read both ways
 (left to right, right to left) and have the same value, for example `1441`, or `2`.
-Write a function that tests all 6 digit numbers (from 100000, 000003 doesn't count)
-and finds the ones that satisfy the following conditions:
+Write a function that tests all 6 digit numbers (from 100000 to 999999, 000003 doesn't count) and finds the ones that satisfy the following conditions:
     - The first number has a palindrome in its last 4 digits.
     - After adding 1, the result has a palindrome in its last 5 digts.
     - Another addition of 1 results in a palindrome in the middle 4 digits.
@@ -79,6 +73,15 @@ print out Jack's name alogside his better subject - History.
     at least four students in each subject.
     * Not all students participate in all subjects. These students should be left out of the printout.
 
+Notes:
+
+- When functions require input, you should be the one simulating it. For example,
+if a function requires a list, please submit the HW with a mock list already in place.
+
+- Follow closely the instructions on `SubmissionGuidelines.md` - your HW is automatically checked and graded, and my bot lacks empathy.
+
+- If you have any Pythonic and \ or technical difficulties don't hesitate to contact me.
+
 ## Submission
 
 The submission guidelines for this exercise are unique, and should also serve as a learning experience
@@ -93,7 +96,7 @@ The `.gitignore` file specifies the files that are ignored, i.e. _not_ under ver
 4. The page you arrived at is the homepage of your repository. All code you write will
 one day be shown there. You can create new files directly from this web interface,
 and edit them online as you like.
-5. However, a better option is to connect this repository (repo) to a folder in your computer.
+5. However, a better option is to connect this repository (repo) to a folder in your computer, and this is what you'll do next.
 This folder can push (_from_ local folder _to_ web) and pull (_from_ web _to_ local folder) data to and from this interface,
 allowing you to work offline with your own preferred editor.
 5. To do so, you can either use the command line or use dedicated software:
@@ -102,10 +105,10 @@ allowing you to work offline with your own preferred editor.
     - GitKraken.
     - VS Code Git integration (preferred).
     Class 2 includes instructions how to work with the command line interface, and the installation instructions
-    can be found in `PythonSetup.md` in the course's website. Working with the VS Code GUI should be simpler and more intuitive, as I'll show below.
-6. Each tool is a bit different, but what you wish to do is to `clone` the repo to your computer.
+    can be found in `PythonSetup.md` in the course's website. However, working with the VS Code GUI should be simpler and more intuitive, as I'll show below.
+6. The operation we wish to perform is to `clone` the repo to your computer.
 A `clone` operation requires a URL of the respective repo. You can obtain it by clicking the
-__Clone or download__ bottom on the right side of your web repo. Copy the link to the repo (the one ending with `.git`). Open VS Code and press `Ctrl[Cmd] + Shift + P` and type `Git: Clone`. Paste the URL to the address bar and choose a folder. Click "Open Repository" to open VS Code inside that folder. This operation "cloned" the online repo and created a copy of it in your computer. You should find inside that folder the `.gitignore` file you created.
+__Clone or download__ button on the right side of your web repo. Copy the link (the one ending with `.git`). Open VS Code and press `Ctrl[Cmd] + Shift + P` and type `Git: Clone`. Paste the URL to the address bar and choose a folder. Click "Open Repository" to open VS Code inside that folder. This operation "cloned" the online repo and created a copy of it in your computer. You should find inside that folder the `.gitignore` file you created.
 8. Now you can create new files inside this folder with your answers to the HW assignment. When you're happy with the changes you've made, you can commit the change. Again, the instructions are in the class, but what you should generally do is go to the Git symbol on the left bar (fork-looking), highlight the "Changes" row and choose "Stage All Changes". Then you can press the "V" icon on the top and commit the changes to the git tree. VS Code (and git) will request a message describing the changes you've made in your last commit, like "added function x" or "HW is complete".
 9. You're now ready to push the changes to the online repo. Click the three dots and select "Push". Enter your credentials and the files should momentarily appear online.
 9. Finally, the HW should be submitted by sending Hagai by mail (hagaihargil@protonmail.com)
