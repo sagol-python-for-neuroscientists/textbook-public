@@ -5,52 +5,52 @@ HW2 Question 3 Solution
 import random
 import time
 
-
-class Cell:
+class Neuron:
     """
-    Abstract biological cell.
-    Attributes: cell_id, cur_division_phase
-    Methods: next_division_step
-    """
-    cell_division_phases = ['None', 'Interphase', 'Prophase',
-                            'Metaphase', 'Anaphase', 'Telophase']  # this is a class variable,
-                                                                   # available to all class instances
-
-    def __init__(self, cell_id: str, cur_division_phase: str):
-        self.cell_id = str(cell_id)
-        assert isinstance(cur_division_phase, str)
-        assert cur_division_phase in self.cell_division_phases
-        self.cur_division_phase = cur_division_phase
-
-    def next_division_step(self):
-        """ Take the next step in the cell division process """
-        cur_index = self.cell_division_phases.index(self.cur_division_phase)
-        next_index = (cur_index + 1) % len(self.cell_division_phases)
-        self.cur_division_phase = self.cell_division_phases[next_index]
-
-
-class PyramidalNeuron(Cell):
-    """
-    A very coarse model of a pyramidal neuron.
-    Mandatory attributes: cell_id, potential, synaptic_strength
-    Mandatory methods: fire  # fires a spike
+    Abstract neuron.
+    Attributes: cell_id (int), na_conc (float), number_of_axons (int)
+    Methods: fire(), check_na()
     """
 
-    def __init__(self, cell_id, cur_division_phase, potential, synaptic_strength):
-        super().__init__(cell_id, cur_division_phase)
+    def __init__(self, cell_id, potential, synaptic_strength=0.7):
+        self.cell_id = int(cell_id)
         self.potential = potential
-        self.synaptic_strength = synaptic_strength
+        self.synaptic_strength = float(synaptic_strength)
 
     def fire(self):
         """ Try to evoke a spike if the synaptic strength allows for it """
         if random.random() > self.synaptic_strength:
             self.potential = 40  # mV
-            print(f"PyramidalNeuron {self.cell_id} fired!")
+            print(f"Neuron {self.cell_id} fired!")
             self.potential = -70
             return True
-        else:
-            print(f"PyramidalNeuron {self.cell_id} didn't fire.")
-            return False
+        print(f"Neuron {self.cell_id} didn't fire.")
+        return False
+
+    def reset_synaptic_strength(self, strength=0.7):
+        """
+        Changes synaptic strength back to
+        baseline levels. Useful when you want to just
+        forget.
+        """
+        self.synaptic_strength = strength
+
+
+class PyramidalNeuron(Neuron):
+    """
+    A very coarse model of a pyramidal neuron.
+    Mandatory attributes: cell_id, potential, synaptic_strength
+    Added attribute: is_layer_five - True if the neuron
+    is located in layer five.
+    Mandatory methods: fire  # fires a spike
+
+    The fire method is _inherited_ from the Neuron class,
+    and so we don't need to redefine it.
+    """
+
+    def __init__(self, cell_id, potential, is_layer_five=True, synaptic_strength=0.7):
+        super().__init__(cell_id, potential, synaptic_strength)
+        self.is_layer_five = is_layer_five
 
 
 class NeuralNetwork:
@@ -78,22 +78,30 @@ class NeuralNetwork:
                 print("NeuralNetwork moving to the next cell.")
             else:
                 self.is_active_firing = False
+                print(f"Neuron {neuron.cell_id} didn't fire")
                 break
         else:  # for loop completed without a break
             print("All cells in network fired successfully.")
             self.is_active_firing = False
 
+        for neuron in self.neurons:
+            neuron.reset_synaptic_strength()
 
-class InhibitoryNeuron(Cell):
-    """ Similar to a PyramidalNeuron """
 
-    def __init__(self, cell_id, cur_division_phase, potential, synaptic_strength):
-        super().__init__(cell_id, cur_division_phase)
-        self.potential = potential
-        self.synaptic_strength = synaptic_strength
+class InhibitoryNeuron(Neuron):
+    """ Similar to a PyramidalNeuron, but has an ability to
+    fire twice in a row """
+
+    def __init__(self, cell_id, potential, main_receptor='vip', synaptic_strength=0.7):
+        super().__init__(cell_id, potential, synaptic_strength)
+        self.main_receptor = main_receptor
 
     def fire(self):
-        """ Try to evoke a spike if the synaptic strength allows for it """
+        """
+        Try to evoke a spike if the synaptic strength allows for it
+        This method is different from the standard fire() method
+        since it has an option for a secondary spike.
+        """
         if random.random() > self.synaptic_strength:
             self.potential = 40  # mV
             print(f"InhibitoryNeuron {self.cell_id} fired!")
@@ -105,7 +113,7 @@ class InhibitoryNeuron(Cell):
             self.potential = -70
             return True
         else:
-            print(f"PyramidalNeuron {self.cell_id} didn't fire.")
+            print(f"InhibitoryNeuron {self.cell_id} didn't fire.")
             return False
 
 
