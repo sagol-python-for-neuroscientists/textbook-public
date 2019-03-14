@@ -38,4 +38,4 @@ if __name__ == '__main__':
              'Matt': (66, 77), 'Georgia': (83, 91),
              'Rob': (62, 70), 'subject': 'Chemistry'}
     compare_subjects_within_student(subj1, subj2)
-    # Notice how Daana and Georgia are missing
+    # Notice how Dana and Georgia are missing

@@ -17,19 +17,20 @@ def check_palindrome():
     """
     result = []
     for num in range(100000, 1000000):
-        if is_palindrome(str(num)[2:]) and \
-            is_palindrome(str(num + 1)[1:]) and \
-            is_palindrome(str(num + 2)[1:5]) and \
-            is_palindrome(str(num + 3)):
+        if (
+            is_palindrome(str(num)[2:])
+            and is_palindrome(str(num + 1)[1:])
+            and is_palindrome(str(num + 2)[1:5])
+            and is_palindrome(str(num + 3))
+        ):
 
             result.append(num)
 
     return result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print("Question 2 solution:")
     fitting_numbers = check_palindrome()
     print(fitting_numbers)
-
 
