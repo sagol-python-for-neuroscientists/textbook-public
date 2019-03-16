@@ -1,8 +1,12 @@
 """
 __author__ = Hagai Har-Gil
 HW1 Question 1 Solution
-"""
 
+This is by far not the fastest solution, but I wanted to show
+you how I divide the question into a main function (trifeca)
+and a smaller function (_trifeca_logic) that does the "heavy
+lifting".
+"""
 
 def trifeca(word):
     """
