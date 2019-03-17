@@ -17,7 +17,8 @@ please don't hesitate to create a pull request with the new resource you found.
 
 ## Homework Assignments:
 
-Assignment 1 - the assignment is described in the `assignments/assignments1`.
+* Assignment 1 - the assignment is described in the `assignments/assignments1`.
+
 
 ## Hackathon
 

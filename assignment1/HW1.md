@@ -51,7 +51,7 @@ exams of the semester. The principle wishes to compare the grades of a single st
 has the highest grade.
 
     Write a program that compares the highest grade, for each student, in the two subjects. The program should print a "table" with the
-student's name and the higher-graded subject.
+student's name and the higher-graded subject. The table should be some data structure which is returned from the function.
 
     For example: In Maths, Jack received 80 in his first test and 85 in his second. In History, Jack received 75 and 95. The program
 print out Jack's name alogside his better subject - History.
@@ -65,6 +65,8 @@ print out Jack's name alogside his better subject - History.
         subject for each student. Single-subject students shouldn't be printed.
 
         Choice for the data structure of the function's arguments is up to you.
+        Returns a data structure with the name of the student and the
+        corresponding subject.
         """
     ```
 
