@@ -1,7 +1,7 @@
 # Homework Assignment #2
 
 ## Date: 18-03-2019
-## Due date: 5-4-2019
+## Due date: 5-4-2019, 15:00
 
 1. _The Bicycle Class:_
     * Write a definition for a class named ``Bicycle``:
@@ -75,8 +75,17 @@ This assignment and all others to follow will be submitted via GitHub Classroom,
 
 As always, when you wish to answer the questions clone the repository to your computer and solve the exercise. Don't forget to commit your code once in a while, normally before and after major changes, like new functions or major bug fixes. You can also push your codebase to the online repo to back it up and\or to work on it from multiple workstations.
 
-In the repo you can find test classes for the questions. These classes contain unit tests, and will determine your grade for these questions. Unit tests are a very common procedure when writing code, and should be a part of any script you write. The three unit test classes I added serve as a good example of how to write these (the tests themselves, not the machinery that runs them). Take note that the score of Q3 is not completely determined by the unit tests. They all must pass, but since it's an API design question, points can be deducted for not following the guidelines in the question - guidelines which are harder to enforce using unit tests.
-
 When you're done, push the code to the repo and verify that it indeed contains your latest updates. Right at the deadline a bot will read the contents of your repository, downloading the latest version of the code that's in there. It will then run the tests in the repo and assert that they all pass. Commits that occur after the deadline will not count.
+
+### Tests
+In the repo you can find test classes for the questions. These classes contain unit tests, and will determine your grade for these questions. Unit tests are a very common procedure when writing code, and should be a part of any script you write. The three unit test classes I added serve as a good example of how to write these (the tests themselves, not the machinery that runs them). It's more than likely that you won't understand _how_ exactly do all tests work - some are simple, but some are quite daunting. If one of the more "complicated" tests keeps failing and you're not sure what to do, please contact me.
+
+Take note that the score for question 3 is not completely determined by the unit tests. They all must pass, but since it's an API design question, points can be deducted for not following the guidelines in the question - guidelines which are harder to enforce using unit tests.
+
+#### Running the tests
+The preferred way to run the tests is using `pytest`:
+1. In the command line, `pip install pytest`.
+2. Next, you can either write `pytest` in the command line when you're inside your code folder to run all tests automatically, or use VSCode's test runner. The test runner can be accessed from the bubbling beaker symbol - in it you should navigate to the folder with the tests and click the green "play" button to run them.
+3. If you're unsuccessful, the test files can simply be run like any other Python script, either by right-clicking in the editor screen and choosing the "Run Python File In Terminal" option, or by typing `python test_q1.py` in the command line.
 
 Good luck, and don't hesitate to contact me if Google doesn't solve your technical issues :)
