@@ -1,8 +1,5 @@
 # Submission Guidelines
 
-The guidelines below __do not__ refer to the first submission, but to all others. The guidelines for the first
-submission are slightly different, and are detailed in the exercise's description.
-
 1. Each home assignment contains at least one question. Each question should have its own file,
 labeled clearly. Unless stated otherwise, all functions used to solve that specific question
 should be located inside that `.py` file.
