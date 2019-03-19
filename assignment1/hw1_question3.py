@@ -2,8 +2,9 @@
 __author__ = Hagai Har-Gil
 HW1 Question 3 Solution
 """
-def compare_subjects_within_student(subj1_all_students,
-                                    subj2_all_students):
+
+
+def compare_subjects_within_student(subj1_all_students, subj2_all_students):
     """
     Compare the two subjects with their students and print out the "preferred"
     subject for each student. Single-subject students shouldn't be printed.
@@ -15,8 +16,8 @@ def compare_subjects_within_student(subj1_all_students,
     # {'Jack': (75, 95), 'Jenny': (80, 90), 'subject': 'History'}.
 
     # I keep the output in a dictionary of lists, one 'column' for each subject
-    subj1 = subj1_all_students.pop('subject')
-    subj2 = subj2_all_students.pop('subject')
+    subj1 = subj1_all_students.pop("subject")
+    subj2 = subj2_all_students.pop("subject")
     result_table = {subj1: [], subj2: []}
 
     for key, val in subj1_all_students.items():
@@ -29,13 +30,23 @@ def compare_subjects_within_student(subj1_all_students,
     return result_table
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print("Question 3 solution:")
-    subj1 = {'Jack': (75, 95), 'Jenny': (80, 90),
-             'Matt': (66, 77), 'Dana': (100, 90),
-             'Rob': (70, 70), 'subject': 'History'}
-    subj2 = {'Jack': (45, 85), 'Jenny': (80, 91),
-             'Matt': (66, 77), 'Georgia': (83, 91),
-             'Rob': (62, 70), 'subject': 'Chemistry'}
+    subj1 = {
+        "Jack": (75, 95),
+        "Jenny": (80, 90),
+        "Matt": (66, 77),
+        "Dana": (100, 90),
+        "Rob": (70, 70),
+        "subject": "History",
+    }
+    subj2 = {
+        "Jack": (45, 85),
+        "Jenny": (80, 91),
+        "Matt": (66, 77),
+        "Georgia": (83, 91),
+        "Rob": (62, 70),
+        "subject": "Chemistry",
+    }
     compare_subjects_within_student(subj1, subj2)
     # Notice how Dana and Georgia are missing

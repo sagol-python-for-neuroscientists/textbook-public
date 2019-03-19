@@ -2,6 +2,7 @@
 
 from print_the_time import cur_time
 from print_my_name import print_name
+import other_functions
 
 # Script version
 
@@ -16,7 +17,7 @@ print_name("Hagai")
 
     # cur_time()
     # print_name("Hagai")
-	
-	
+
+
 # if __name__ == '__main__':
 	# run()
