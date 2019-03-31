@@ -1,7 +1,7 @@
 # Homework Assignment #3
 
-## Date: 08-04-2018
-## Due date: 22-04-2018, 15:00
+## Date: 01-04-2019
+## Due date: 15-04-2019, 15:00
 
 1. _Duplicates Discovery:_
 Define a class that scans through a folder with all of its subfolders and returns the following:
@@ -24,6 +24,7 @@ class FolderIterator:
         Main function to find duplicate and unique files in the filesystem.
         Must use the "with" statement to open individual files.
         """
+        pass
 
 ```
 
@@ -56,27 +57,42 @@ MORSE_CODE = {'A': '.-',     'B': '-...',   'C': '-.-.',
 
 class EnglishToMorse:
     """ Convert a text file to Morse code file """
-
-    # ...
+    def __init__(self, file):
+        self.file = ...
+        # ...
 
     def convert(self):
         """ Convert self.file to one-word-in-line Morse and write it back to the disk """
 ```
 
 
+3. _Basic `numpy` Calculations:_
+
+    Saving and loading `numpy` arrays is done using the functions `np.load`, `np.save` and `np.savez`. A single array is saved in the `.npy` format using `np.save`, while a dictionary of arrays is saved to the `.npz` format using `np.savez`. Both data structures can be read using `np.load`. In the repo you can see `data.npy`, a single 4D array that I randomly generated. The file `hw3_q3.py` should contain functions that take this specific array as input.
+
+    i. Define the `load_data` function which receives a filename and returns the array.
+
+    ```python
+    def load_data(fname: str):
+        """ Load and return an '.npy' file """
+    ```
+
+    ii. Find and return all numbers within the range (0.3, 0.4) in the array. Note: exclusive on both ends.
+
+    ```python
+    def find_in_range(data: np.ndarray, num_range: tuple=(0.3, 0.4)):
+        """ Return an array containing the values of 'data' that are inside 'num_range' """
+    ```
+
+    iii. Return the index of the first value larger than 0.9, the input value. The index is a
+    `numpy` array with one dimension and four values, which are the coordinates at which one can find
+    this value. Meaing that the line `data[returned_index]` returns the first value above 0.9.
+
+    ```python
+    def first_after_val(data: np.ndarray, val: float=0.9) -> np.ndarray:
+        """ Return the position of the first value larger than val """
+    ```
+
 ## Tests
 The tests for both questions are provided. Again, assignment grading is completely based on the success
-of the tests. This type of tests is called _unit tests._ We'll
-only discuss this concept later in the course, but we'll starting familiarizing ourselves with it right now.
-The best testing library out there today is `pytest`, and so that's the library we'll use to
-test our solution. By the way, the tests that I wrote for the previous assignment weren't really compatible
-with the standard way people write tests, so don't make an example of them.
-
-One of the things that makes `pytest` so good is its ease of use. To run the tests, open the terminal and download `pytest` using `pip`.
-Don't forget to activate your environment before downloading. Next, navigate to the folder containing your code and verify
-that the `test_qX.py` file is located in the same folder. Since this is a folder with Python source files, add in the
-standard `__init__.py` file as well.
-
-Now that we're all set up we can run the test. Inside that folder, write in the terminal `pytest`. It should recognize
-the two `test_qX.py` files and run all tests in them consecutively, reporting back to you of any errors it encountered. If all tests in
-all files run successfully you'll receive a perfect grade for the HW assignment.
+of the tests.

@@ -3,37 +3,6 @@
 ## Date: 22-04-2018
 ## Due date: 06-05-2018, 15:00
 
-1. _Basic `numpy` Calculations:_
-
-    Saving and loading `numpy` arrays is done using the functions `np.load`, `np.save` and `np.savez`.
-    A single array is saved in the `.npy` format using `np.save`, while a dictionary of arrays is saved to
-    the `.npz` format using `np.savez`. Both data structures can be read using `np.load`.
-    In the repo you can see `data.npy`, a single 4D array that I randomly generated. The file `hw4_q1.py`
-    should contain functions that take this specific array as input.
-    i. Define the `load_data` function which receives a filename and returns the array.
-
-    ```python
-    def load_data(fname: str):
-        """ Load and return an '.npy' file """
-    ```
-
-    ii. Find and return all numbers within the range (0.3, 0.4) in the array. Note: exclusive on both ends.
-
-    ```python
-    def find_in_range(data: np.ndarray, num_range: tuple=(0.3, 0.4)):
-        """ Return an array containing the values of 'data' that are inside 'num_range' """
-    ```
-
-    iii. Return the index of the first value larger than 0.9, the input value. The index is a
-    `numpy` array with one dimension and four values, which are the coordinates at which one can find
-    this value. Meaing that the line `data[returned_index]` returns the first value above 0.9.
-
-    ```python
-    def first_after_val(data: np.ndarray, val: float=0.9) -> np.ndarray:
-        """ Return the position of the first value larger than val """
-    ```
-
-
 3. _Mandelbrot Set (20 point bonus):_
 
     Assuming `n` iterations, a number is a part of the Mandelbrot set `if |z| < thresh`,
