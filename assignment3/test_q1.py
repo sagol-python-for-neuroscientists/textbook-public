@@ -1,7 +1,7 @@
 """
 __author__ = Hagai Har-Gil
 """
-from Solutions.assignment3.my_sol.hw3_q1 import *
+from hw3_q1 import *
 
 
 class TestQ1:
