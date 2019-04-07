@@ -53,9 +53,8 @@ MORSE_CODE = {'A': '.-',     'B': '-...',   'C': '-.-.',
               '9': '----.',
 
               '.': '.-.-.-', ',': '--..--', ':': '---...',
-w '-....-',
-w
-w
+               '-....-',
+              
 class EnglishToMorse:
     """ Convert a text file to Morse code file """
     def __init__(self, file):
