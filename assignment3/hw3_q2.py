@@ -2,15 +2,14 @@
 __author__ = Hagai Har-Gil
 """
 import pathlib
-import os
 
 
 class EnglishToMorse:
-    """ Convert a text file to Morse code file using numpy """
+    """ Convert a text file to Morse code file """
     def __init__(self, file):
         self.file = pathlib.Path(str(file))
         assert self.file.exists()
-
+        self.data = None
         CODE = {'A': '.-',     'B': '-...',   'C': '-.-.',
                 'D': '-..',    'E': '.',      'F': '..-.',
                 'G': '--.',    'H': '....',   'I': '..',
@@ -31,21 +30,29 @@ class EnglishToMorse:
                 }
         code_ord_upper = {ord(key): val for key, val in CODE.items()}
         code_ord_lower = {ord(key.lower()): val for key, val in CODE.items()}
-
         self.new_code = {**code_ord_lower, **code_ord_upper}
-        self.data = None
+
+    def run(self):
+        """ Main pipeline """
+        self.convert()
+        self.to_disk()
 
     def convert(self):
-        """ Convert self.file to Morse and write it back to the disk """
+        """ Convert self.file to one-word-in-line Morse """
         with open(self.file) as f:
             data = f.read()
         self.data = data.translate(self.new_code)
-        split = os.path.splitext(self.file.name)
-        new_filename = split[0] + '_morse' + split[1]
-        with open(new_filename, 'w') as f:
-            f.write(self.data)
+
+    def to_disk(self, fname='lorem_morse.txt'):
+        """ Writes self.data to the disk with filename == fname """
+        try:
+            with open(fname, 'w') as f:
+                f.write(self.data)
+        except PermissionError as e:
+            print(f"Error: {e}. Data is still accessible in self.data.")
 
 
 if __name__ == '__main__':
     morse = EnglishToMorse('lorem.txt')
-    morse.convert()
+    morse.run()
+

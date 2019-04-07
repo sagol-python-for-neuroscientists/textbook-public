@@ -34,7 +34,7 @@ class Time:
     def _validate_input(self, val, lim, time_type):
         """
         Makes sure val is between 0 and lim, and that it's an integer.
-        Returns val if it stands the checks, else 0
+        Returns val if it stands the checks, else 0.
         The underscore signifies an internal method
         """
         if (isinstance(val, int) and (0 <= val <= lim)):

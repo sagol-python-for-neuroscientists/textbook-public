@@ -20,7 +20,7 @@ class Bicycle:
         direction: str - 'up' or 'down'
         """
         if direction is 'up':  # one way
-            self.gear = max(self.gear + 1, 7)
+            self.gear = min(self.gear + 1, 7)
 
         elif direction is 'down':  # another way
             if self.gear > 1:
@@ -107,11 +107,17 @@ class Bicycle_Advanced:
             raise ValueError("Cadence must be between 0 and 500 rotations per minute.")
 
     def _change_gear_to(self, gear):
-        """ Internal method to change the gear """
+        """
+        Internal method to change the gear.
+        The assertion helps since this method should never fail,
+        as it is a private method, but it's good to assert
+        its success anyway.
+        """
+        assert gear  in self._gear_table
         self.gear = gear
         self._cur_gear_index = gear - 1
 
-    def change_gear(self, direction: GearChange):
+    def change_gear(self, direction):
         """
         Change the bicycle's gear.
         direction: Enumeration - UP (+1) or DOWN (-1)

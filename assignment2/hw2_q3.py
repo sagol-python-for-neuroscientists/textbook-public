@@ -74,7 +74,7 @@ class NeuralNetwork:
                 print("NeuralNetwork moving to the next cell.")
             else:
                 self.is_active_firing = False
-                print(f"Neuron {neuron.neuron_id} didn't fire")
+                print(f"Neuron {neuron.neuron_id} stopped the network.")
                 break
         else:  # for loop completed without a break
             print("All cells in network fired successfully.")
@@ -88,7 +88,7 @@ class InhibitoryNeuron(Neuron):
     """ Similar to a PyramidalNeuron, but has an ability to
     fire twice in a row """
 
-    def __init__(self, neuron_id, potential, main_receptor='vip', synaptic_strength=0.7):
+    def __init__(self, neuron_id, potential, synaptic_strength=0.7, main_receptor='vip'):
         super().__init__(neuron_id, potential, synaptic_strength)
         self.main_receptor = main_receptor
 
@@ -107,10 +107,10 @@ class InhibitoryNeuron(Neuron):
                 print(f"InhibitoryNeuron {self.neuron_id} fired again!")
 
             self.potential = -70
-            return True
-        else:
-            print(f"InhibitoryNeuron {self.neuron_id} didn't fire.")
             return False
+        else:
+            print(f"InhibitoryNeuron {self.neuron_id} didn't fire - and didn't inhibit the network.")
+            return True
 
 
 if __name__ == '__main__':
@@ -130,8 +130,8 @@ if __name__ == '__main__':
 
     # Create a new network with a couple of inhibitory neurons.
     # It's important to note how the call to the method stays the same.
-    inhib1 = InhibitoryNeuron('inhib1', 'None', -80, 0.1)
-    inhib2 = InhibitoryNeuron('inhib2', 'None', -65, 0.2)
+    inhib1 = InhibitoryNeuron('inhib1', -80, 0.9)
+    inhib2 = InhibitoryNeuron('inhib2', -65, 0.9, 'SST')
     network2 = NeuralNetwork((pyr1, inhib1, inhib2,
                               pyr4, pyr3, pyr2))
     network2.show_neural_network()

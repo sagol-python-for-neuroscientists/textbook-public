@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/home/hagaihargil/miniconda3/envs/course/bin/python"
+    "python.pythonPath": "/home/hagaihargil/miniconda3/envs/course/bin/python",
+    "python.linting.pylintEnabled": true
 }
