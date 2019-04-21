@@ -93,7 +93,7 @@ class EnglishToMorse:
     this value. Meaing that the line `data[returned_index]` returns the first value above 0.9.
 
     ```python
-    def first_after_val(data: np.ndarray, val: float=0.9) -> np.ndarray:
+    def first_after_val(data: np.ndarray, val: float=0.9):
         """ Return the position of the first value larger than val """
     ```
 
