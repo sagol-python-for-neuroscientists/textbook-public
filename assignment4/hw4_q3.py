@@ -1,35 +1,27 @@
-"""
-__author__ = Hagai Har-Gil
-"""
 import numpy as np
 import pandas as pd
 
 
-def largest_species(fname: str) -> pd.Series:
-    """ Return largest column by year from the text file """
-
-    data = pd.read_table(fname, index_col=0, dtype=np.int64)
-    return data.idxmax(axis=1)
-
-
-def lynxes_when_hares(fname: str) -> pd.Series:
-    """ Returns the number of lynxes when hares > fox """
-
-    data = pd.read_table(fname, index_col=0, dtype=np.int64)
-    return data.loc[data['hare'] > data['fox'], 'lynx']
+def common_complaint(fname: str):
+    """
+    Finds and returns the most common complaint as a tuple:
+    (complaint_name, num)
+    """
+    data = pd.read_csv(fname, header=0, index_col=0)
+    complaint_counts = data['Complaint Type'].value_counts()
+    return complaint_counts.index[0], complaint_counts[0]
 
 
-def mean_animals(fname: str) -> pd.DataFrame:
-    """ Add a fourth column with the normalized mean number of animals in each year """
-    data = pd.read_table(fname, index_col=0, dtype=np.int64)
-    # Could use the .assign() method as well
-    data['mean_animals'] = data.sum(axis=1)
-    data['mean_animals'] /= data['mean_animals'].max()
-    return data
-
+def parking_borough(fname: str) -> str:
+    """
+    Finds and returns the name of the NYC borough that has the
+    most complaints of type 'Illegal Parking'.
+    """
+    data = pd.read_csv(fname, header=0, index_col=0)
+    illegal_parks = data[data['Complaint Type'] == 'Illegal Parking']
+    return illegal_parks.Borough.value_counts().index[0]
 
 if __name__ == '__main__':
-    fname = 'populations.txt'
-    a = largest_species(fname)
-    b = lynxes_when_hares(fname)
-    d = mean_animals(fname)
+    fname = '311_service_requests.zip'
+    d = common_complaint(fname)
+    c = parking_borough(fname)

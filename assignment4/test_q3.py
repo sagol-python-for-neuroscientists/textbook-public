@@ -1,41 +1,16 @@
-"""
-__author__ = Hagai Har-Gil
-"""
-from .hw4_q3 import *
-
 import pandas as pd
-import numpy as np
 
-class TestBasicPandas:
+from hw4_q3 import *
 
-    fname = 'populations.txt'
 
-    def test_assert_largest_species_series(self):
-        assert isinstance(largest_species(self.fname), pd.Series)
+class TestPandasMunch:
 
-    def test_largest_species_idx(self):
-        data = pd.read_csv('tests_data/q3_largest.csv', index_col=0, header=None, names=['year', 'animal'])
-        assert np.all(data.index == largest_species(self.fname).index)
+    fname = '311_service_requests.zip'
 
-    def test_largest_species_content(self):
-        data = pd.read_csv('tests_data/q3_largest.csv', index_col=0, header=None, names=['year', 'animal'], squeeze=True)
-        assert np.all(data.values == largest_species(self.fname).values)
+    def test_common_complaint(self):
+        ans = common_complaint(self.fname)
+        assert ans == ('HEATING', 73371)
 
-    def test_assert_lynx_series(self):
-        assert isinstance(lynxes_when_hares(self.fname), pd.Series)
-
-    def test_lynx_idx(self):
-        data = pd.read_csv('tests_data/q3_lynx.csv', index_col=0, header=None, names=['year', 'lynx'])
-        assert np.all(data.index == lynxes_when_hares(self.fname).index)
-
-    def test_lynx_values(self):
-        data = pd.read_csv('tests_data/q3_lynx.csv', index_col=0, header=None, names=['year', 'lynx'], squeeze=True)
-        assert np.allclose(data.values, lynxes_when_hares(self.fname).values)
-
-    def test_mean_columns(self):
-        data = pd.read_csv('tests_data/q3_mean.csv', index_col=0, header=0)
-        assert all(data.columns == mean_animals(self.fname).columns)
-
-    def test_mean_vals(self):
-        data = pd.read_csv('tests_data/q3_mean.csv', index_col=0, header=0)
-        assert np.allclose(data.mean_animals.values, mean_animals(self.fname).mean_animals.values)
+    def test_parking_borough(self):
+        ans = parking_borough(self.fname)
+        assert ans == 'BROOKLYN'

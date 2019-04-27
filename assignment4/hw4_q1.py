@@ -1,23 +1,44 @@
 """
-__author__ = Hagai Har-Gil
+Compute the Mandelbrot fractal
 """
 import numpy as np
-import pandas as pd
+import matplotlib
+import matplotlib.pyplot as plt
 
 
-def load_data(fname: str):
-    """ Load and return an '.npy' file """
-    if fname.endswith('.npy'):
-        return np.load(fname)
+
+def mandel(n: int, thresh: float=50.,
+           xlims: np.ndarray=np.array([-2, 1]), nx: int=1500,
+           ylims: np.ndarray=np.array([-1.5, 1.5]), ny: int=1500):
+    """
+    Computes the Mandelbrot fractal on some given set of numbers. Creates
+    a binary image with a value of 1 if the point belongs to the set.
+    Parameters:
+    n (int): Number of iterations.
+    thresh (float): Threshold which decides if a number is a part of the set.
+    xlims, ylims (np.ndarray): Limits for the computation of the fractal.
+    nx, ny (int): Number of points between xlims.min() and xlims.max() to
+    calculate the set on.
+    """
+
+    # A grid of c-values
+    x = np.linspace(xlims[0], xlims[1], nx)
+    y = np.linspace(ylims[0], ylims[1], ny)
+
+    c = x[:, np.newaxis] + 1j * y[np.newaxis, :]
+
+    # Mandelbrot iteration
+    z = c
+    for _ in range(n):
+        z = z**2 + c
+
+    mandelbrot_set = np.abs(z) < thresh
+    return mandelbrot_set
 
 
-def find_in_range(data: np.ndarray, num_range: tuple=(0.3, 0.4)):
-    """ Return an array containing the values of 'data' that are inside 'num_range' """
-
-    return data[(data > num_range[0]) & (data < num_range[1])]
-
-def first_after_val(data: np.ndarray, val: float=0.9) -> np.ndarray:
-    """ Return the position of the first value larger than val """
-
-    return np.argwhere(data > val)[0]
-
+if __name__ == '__main__':
+    mandelbrot_set = mandel(50)
+    fig, ax = plt.subplots()
+    ax.imshow(mandelbrot_set.T, extent=[-2, 1, -1.5, 1.5], cmap='gray')
+    plt.show()
+    fig.savefig('mandelbrot.png')
