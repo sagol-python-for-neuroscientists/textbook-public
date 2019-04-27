@@ -1,6 +1,3 @@
-"""
-__author__ = Hagai Har-Gil
-"""
 from hw3_q3 import *
 import numpy as np
 import pathlib

@@ -1,6 +1,3 @@
-"""
-__author__ = Hagai Har-Gil
-"""
 from hw3_q1 import *
 
 

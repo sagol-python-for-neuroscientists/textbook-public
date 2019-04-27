@@ -1,8 +1,3 @@
-"""
-__author__ = Hagai Har-Gil
-"""
-
-
 class TestQ2:
     """ Tests for Q2 """
     name = 'lorem_morse.txt'
