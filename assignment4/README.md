@@ -5,6 +5,8 @@
 
 **Do not change the signature (definition) of the functions in the exercise.**
 
+**Tests are run with `pytest`.**
+
 1. _Mandelbrot Set:_
 
     Assuming `n` iterations, a number is a part of the Mandelbrot set `if |z| < thresh`,
