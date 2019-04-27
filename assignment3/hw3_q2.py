@@ -5,10 +5,25 @@ import pathlib
 
 
 class EnglishToMorse:
-    """ Convert a text file to Morse code file """
+    """
+    Convert a text file to Morse code file.
+    One change I made to the CODE dictionary is to add
+    the '\n' value to it, to account for the empty lines
+    in the original text. This helps us recreate the
+    text *exactly* as it was before translation to Morse.
+
+    I've also created a miniature "pipeline" in this class,
+    dividing each functionality into a short, clear function
+    which does only one thing.
+
+    Another "cool" feature shown here is the way I combine
+    the two dictionaries - lower case and upper case - into
+    one, using the ** operator.
+    """
     def __init__(self, file):
         self.file = pathlib.Path(str(file))
-        assert self.file.exists()
+        if not self.file.exists():
+            raise ValueError(f"File {self.file} doesn't exist.")
         self.data = None
         CODE = {'A': '.-',     'B': '-...',   'C': '-.-.',
                 'D': '-..',    'E': '.',      'F': '..-.',

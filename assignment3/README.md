@@ -1,10 +1,12 @@
 # Homework Assignment #3
 
 ## Date: 01-04-2019
+
 ## Due date: 15-04-2019, 15:00
 
 1. _Duplicates Discovery:_
 Define a class that scans through a folder with all of its subfolders and returns the following:
+
 * Names and content of the unique files. "Unique" in this sense means, that if two files - `a.txt` and `b.tif` for example -
 have the same content, only the first should be returned.
 * Names of the "parent" files and their duplicates. In the example above, the parent file
@@ -53,13 +55,13 @@ MORSE_CODE = {'A': '.-',     'B': '-...',   'C': '-.-.',
               '9': '----.',
 
               '.': '.-.-.-', ',': '--..--', ':': '---...',
-               '-....-',
-              
+              "'": '.----.', '-': '-....-',
+              }
+
 class EnglishToMorse:
     """ Convert a text file to Morse code file """
     def __init__(self, file):
         self.file = ...
-        # ...
 
     def convert(self):
         """ Convert self.file to one-word-in-line Morse """
@@ -68,7 +70,6 @@ class EnglishToMorse:
         """ Writes data to the disk with filename == fname """
 
 ```
-
 
 3. _Basic `numpy` Calculations:_
 
@@ -93,10 +94,12 @@ class EnglishToMorse:
     this value. Meaing that the line `data[returned_index]` returns the first value above 0.9.
 
     ```python
-    def first_after_val(data: np.ndarray, val: float=0.9):
+    def first_after_val(data: np.ndarray, val: float=0.9) -> np.ndarray:
         """ Return the position of the first value larger than val """
     ```
 
 ## Tests
-The tests for both questions are provided. Again, assignment grading is completely based on the success
-of the tests, for all three questions.
+
+The tests for both questions are provided. Again, assignment grading is mostly based on the success
+of the tests, for all three questions. I do reserve myself the right to lower (or raise) the grade under
+some circumstances.
