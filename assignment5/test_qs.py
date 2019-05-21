@@ -2,7 +2,7 @@ import pathlib
 
 import pytest
 
-from hw5_q1 import *
+from hw5 import *
 
 
 def test_valid_input():
@@ -59,7 +59,7 @@ def test_correct_age_distrib_edges():
 
 
 def test_email_validation():
-    truth = pd.read_csv('tests_data/q1_email.csv')
+    truth = pd.read_csv('tests_data/q2_email.csv')
     fname = 'data.json'
     q = QuestionnaireAnalysis(fname)
     q.read_data()
@@ -68,7 +68,7 @@ def test_email_validation():
 
 
 def test_fillna_rows():
-    truth = np.load('tests_data/q1_fillna.npy')
+    truth = np.load('tests_data/q3_fillna.npy')
     fname = 'data.json'
     q = QuestionnaireAnalysis(fname)
     q.read_data()
@@ -77,10 +77,18 @@ def test_fillna_rows():
 
 
 def test_fillna_df():
-    truth = pd.read_csv('tests_data/q1_fillna.csv')
+    truth = pd.read_csv('tests_data/q3_fillna.csv')
     fname = 'data.json'
     q = QuestionnaireAnalysis(fname)
     q.read_data()
     df, _ = q.fill_na_with_mean()
     df.equals(truth)
 
+
+def test_correlation():
+    truth = pd.read_csv('tests_data/q4_corr.csv').set_index(['gender', 'age'])
+    fname = 'data.json'
+    q = QuestionnaireAnalysis(fname)
+    q.read_data()
+    df = q.correlate_gender_age()
+    df.equals(truth)
