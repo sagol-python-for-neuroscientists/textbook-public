@@ -7,6 +7,8 @@
 
 **Tests are run with `pytest`.**
 
+**Check the new submission guidelines below**
+
 The data available in `data.json` is a table of participants in a questionnaire-type experiment. The data is mostly fine, but upon a closer inspection you may identify a few missing\corrupt values here and there. Our goal is to clean the data and analyze the results. Define a class that have several methods that process the given data. The first are:
 
 ```python
@@ -93,3 +95,12 @@ rows that were corrected.
     ```
 
     [Average per group - result of `correlate_gender_age`](avg_per_group.png)
+
+
+## Submission
+
+The submission will be done via a pull request to this repository. A pull request is a common action when using Git and GitHub, and it represents the mechanism by which two or more programmers work on the same codebase. This operation pings the owner of the repository, i.e. the main code author, presenting changes that you think should be done to the code inside that repository.
+
+Contributions to most open-source projects, from tiny command-line utilities to the Linux operating systems, are done using pull requests. You can read more about them [here](https://help.github.com/en/articles/about-pull-requests).
+
+To start off, fork the `hw5` repository by clicking the button on the top right-hand side. This will create a "snapshot" of the main repository, by copying its current state into a new repository under your control. You should clone this new repo into your computer, and work as usual - add files, commit and push as you normally would. When you're done , i.e. uploaded the final files to GitHub, go to your repo and click the "new pull request" button and create it. You can update the pull request after it was created by simply pushing new updates to your own original fork, so starting a pull request doesn't forbid you from updating your code. If you're unsure whether the operation was successful, go back to the original repo I started and click the "Pull Requests" option at the top of the page. Your PR should be listed there. The deadline for that PR to show in my repo is the deadline of submission.
