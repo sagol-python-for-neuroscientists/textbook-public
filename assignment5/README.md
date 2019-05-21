@@ -1,13 +1,13 @@
 # Homework Assignment #5
 
-## Date: 20-05-2019
+## Date: 21-05-2019
 ## Due date: 03-06-2019, 15:00
 
 **Do not change the signature (definition) of the functions in the exercise.**
 
 **Tests are run with `pytest`.**
 
-The data available in `data.json` is a table of participants in a questionnaire-type experiment that was conducted. The data is mostly fine, but upon a closer inspection you may identify a few missing\corrupt values here and there. Define a class that have several methods that process the given data. The first two are:
+The data available in `data.json` is a table of participants in a questionnaire-type experiment. The data is mostly fine, but upon a closer inspection you may identify a few missing\corrupt values here and there. Our goal is to clean the data and analyze the results. Define a class that have several methods that process the given data. The first are:
 
 ```python
 class QuestionnaireAnalysis:
