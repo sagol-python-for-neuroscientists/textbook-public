@@ -6,18 +6,81 @@ from hw5_q1 import *
 
 
 def test_valid_input():
-    fname = pathlib.Path('test_q1.py')
+    fname = pathlib.Path(__file__)
     q = QuestionnaireAnalysis(fname)
     assert fname == q.data_fname
 
 
 def test_str_input():
-    fname = 'test_q1.py'
-    q = QuestionnaireAnalysis(fname)
-    assert pathlib.Path(fname) == q.data_fname
+    q = QuestionnaireAnalysis(__file__)
+    assert pathlib.Path(__file__) == q.data_fname
 
 
 def test_missing_file():
     fname = pathlib.Path('teststs.fdfd')
     with pytest.raises(ValueError):
         QuestionnaireAnalysis(fname)
+
+
+def test_wrong_input_type():
+    fname = 2
+    with pytest.raises(TypeError):
+        q = QuestionnaireAnalysis(pathlib.Path(fname))
+
+
+def test_data_attr_exists():
+    fname = 'data.json'
+    q = QuestionnaireAnalysis(fname)
+    q.read_data()
+    assert hasattr(q, 'data')
+
+
+def test_data_attr_is_df():
+    fname = 'data.json'
+    q = QuestionnaireAnalysis(fname)
+    q.read_data()
+    assert isinstance(q.data, pd.DataFrame)
+
+
+def test_correct_age_distrib_hist():
+    truth = np.load('tests_data/q1_hist.npz')
+    fname = 'data.json'
+    q = QuestionnaireAnalysis(fname)
+    q.read_data()
+    assert np.array_equal(q.show_age_distrib()[0], truth['hist'])
+
+
+def test_correct_age_distrib_edges():
+    truth = np.load('tests_data/q1_hist.npz')
+    fname = 'data.json'
+    q = QuestionnaireAnalysis(fname)
+    q.read_data()
+    assert np.array_equal(q.show_age_distrib()[1], truth['edges'])
+
+
+def test_email_validation():
+    truth = pd.read_csv('tests_data/q1_email.csv')
+    fname = 'data.json'
+    q = QuestionnaireAnalysis(fname)
+    q.read_data()
+    corrected = q.remove_rows_without_mail()
+    assert truth["email"].equals(corrected["email"])
+
+
+def test_fillna_rows():
+    truth = np.load('tests_data/q1_fillna.npy')
+    fname = 'data.json'
+    q = QuestionnaireAnalysis(fname)
+    q.read_data()
+    _, rows = q.fill_na_with_mean()
+    assert np.array_equal(truth, rows)
+
+
+def test_fillna_df():
+    truth = pd.read_csv('tests_data/q1_fillna.csv')
+    fname = 'data.json'
+    q = QuestionnaireAnalysis(fname)
+    q.read_data()
+    df, _ = q.fill_na_with_mean()
+    df.equals(truth)
+

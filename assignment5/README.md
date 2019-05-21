@@ -8,7 +8,7 @@
 **Tests are run with `pytest`.**
 
 1. _Data crunching:_
-    The data available in `data.json` is a table of participants in a questionnaire-type experiment that was conducted. The data is mostly fine, but upon a closer inspection you may identify a few missing\corrupt values here and there. Define a class that have several methods that process the given data.
+    The data available in `data.json` is a table of participants in a questionnaire-type experiment that was conducted. The data is mostly fine, but upon a closer inspection you may identify a few missing\corrupt values here and there. Define a class that have several methods that process the given data. The first two are:
 
     ```python
     class QuestionnareAnalysis:
@@ -25,12 +25,13 @@
             """
             # ...
     ```
-    The following questions should be answered by writing methods that perform the needed computation.
+
+    The following questions should be answered by writing additional methods that perform the needed computation.
 
     a. Plot the distribution of ages of the participants. The bins for the histogram should be [0, 10), [10, 20), [20, 30), ..., [90, 100).
 
         ```python
-        def age_distrib(self):
+        def show_age_distrib(self):
             """
             Calculates and plots the age distribution of the participants.
             Returns a tuple containing two numpy arrays:
@@ -38,5 +39,30 @@
             The second item being the bin edges.
             """
         ```
-    2. a
+    b. Participants without a valid email are useless since we can't contact them. Remove all of the rows with an invalid address and return the new DataFrame.
 
+        ```python
+        def remove_rows_without_mail(self) -> pd.DataFrame:
+            """
+            Checks self.data for rows with invalid emails, and removes them.
+            Returns the corrected DataFrame, i.e. the same table but with
+            the erroneous rows removed and the (ordinal) index after a reset.
+            """
+        ```
+    c. Some participants haven't answered all of the question. It was decided
+    that the grade for those missing questions will be the average grade of
+    the other question for that subject.
+    Write a method that works on the original DataFrame (in `self.data`), replaces
+    the missing values with the mean for that subject in the other questions and
+    returns the corrected DataFrame as well as a `np.array` of the indices of the
+    rows that were corrected.
+
+        ```python
+        def fill_na_with_mean(self) -> Union[pd.DataFrame, np.ndarray]:
+            """
+            Finds, in the original DataFrame, the subjects that didn't answer
+            all questions, and replaces that missing value with the mean of the
+            other grades for that student. Also returns the row indices of the
+            students that their new grades were generated.
+            """
+        ```
