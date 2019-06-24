@@ -18,6 +18,7 @@
 
 2. _The Time Class:_
     * Define the `Time` class:
+
     ```python
     class Time:
         """
@@ -25,6 +26,7 @@
         Attributes: hour, minute, second
         """
     ```
+
     * Give default values to the `__init__` function.
     * Validate that the input fits a 24 hour clock. Think of as many edge-cases as you can. If the input
     isn't valid reset that value to 0.
@@ -40,6 +42,7 @@
     This question will deal with the concept of a basic API - application programming interface - for a "NeuralNetwork" class. This class represents a network of different types of neurons that may fire one after the other. The user should only deal with the methods available to this class, without "caring" which exact cells compose the network. In other words, the implementation of the network should be agnostic to the type, and order, of neurons it contains.
 
     * Define the `PyramidalNeuron` class:
+    
     ```python
     class PyramidalNeuron(Neuron):
         """
@@ -69,22 +72,30 @@
     * Again - the goal is to separate the "user interface", i.e. the call
     to `NeuralNetwork.start_firing()` method, from the actual existing neurons.
 
+## Submission
 
-## Submission:
-This assignment and all others to follow will be submitted via GitHub Classroom, a special interface of GitHub which eases the creation of new, identical repositories for multiple students of the same class. Other than this convenience this repository is identical to ones you can create on your own.
+This assignment and the next two to follow will be submitted via GitHub Classroom, a special interface of GitHub which eases the creation of new, identical repositories for multiple students of the same class. Other than this convenience this repository is identical to ones you can create on your own. The submission guidelines for this exercise should also serve as a learning experience on how to work with version control and GitHub.
 
-As always, when you wish to answer the questions clone the repository to your computer and solve the exercise. Don't forget to commit your code once in a while, normally before and after major changes, like new functions or major bug fixes. You can also push your codebase to the online repo to back it up and\or to work on it from multiple workstations.
+When you wish to answer the questions follow these steps:
+1. Click the __Clone or download__ button on the top right side of this repo. Copy the link (the one ending with `.git`).
+2. Open VS Code and press `Ctrl[Cmd] + Shift + P` and type `Git: Clone`. Paste the URL to the address bar and choose a folder. Click "Open Repository" to open VS Code inside that folder. This operation "cloned" the online repo and created a copy of it in your computer.
+3. You may now write code, add new files and so on. Don't forget to commit your changes once in a while, normally before and after major changes, like new functions or major bug fixes.
+4. To commit, go to the Git symbol on the left bar (fork-looking), highlight the "Changes" row and choose "Stage All Changes". Staging is a required step before committing - you'll commit evert staged changed, but you don't have to stage every change you've made. After staging, you can press the "V" icon on the top to commit the changes to the git tree. VSCode (and git) will request a message describing the changes you've made in your last commit, like "added function x" or "HW is complete".
+9. When you're done editing, you can push the changes to the online repo. Click the three dots (in the git fork-looking tab) and select "Push". Enter your credentials and the files should momentarily appear online.
 
-When you're done, push the code to the repo and verify that it indeed contains your latest updates. Right at the deadline a bot will read the contents of your repository, downloading the latest version of the code that's in there. It will then run the tests in the repo and assert that they all pass. Commits that occur after the deadline will not count.
+You may push several times to the repo, I'll check the last push before the deadline by running the tests on this version and asserting that they all pass.
 
 ### Tests
+
 In the repo you can find test classes for the questions. These classes contain unit tests, and will determine your grade for these questions. Unit tests are a very common procedure when writing code, and should be a part of any script you write. The three unit test classes I added serve as a good example of how to write these (the tests themselves, not the machinery that runs them). It's more than likely that you won't understand _how_ exactly do all tests work - some are simple, but some are quite daunting. If one of the more "complicated" tests keeps failing and you're not sure what to do, please contact me.
 
 Take note that the score for question 3 is not completely determined by the unit tests. They all must pass, but since it's an API design question, points can be deducted for not following the guidelines in the question - guidelines which are harder to enforce using unit tests.
 
 #### Running the tests
+
 The preferred way to run the tests is using `pytest`:
-1. In the command line, `pip install pytest`.
+
+1. In the command line, activate your environment and write `pip install pytest`.
 2. Next, you can either write `pytest` in the command line when you're inside your code folder to run all tests automatically, or use VSCode's test runner. The test runner can be accessed from the bubbling beaker symbol - in it you should navigate to the folder with the tests and click the green "play" button to run them.
 3. If you're unsuccessful, the test files can simply be run like any other Python script, either by right-clicking in the editor screen and choosing the "Run Python File In Terminal" option, or by typing `python test_q1.py` in the command line.
 

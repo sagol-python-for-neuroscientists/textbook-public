@@ -65,7 +65,7 @@ returns the corrected DataFrame as well as a `np.array` of the indices of the
 rows that were corrected.
 
     ```python
-    def fill_na_with_mean(self) -> Union[pd.DataFrame, np.ndarray]:
+    def fill_na_with_mean(self) -> Tuple[pd.DataFrame, np.ndarray]:
         """
         Finds, in the original DataFrame, the subjects that didn't answer
         all questions, and replaces that missing value with the mean of the

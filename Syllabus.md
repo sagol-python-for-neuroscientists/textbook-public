@@ -17,17 +17,16 @@ __Final Grade:__
 Each 3-hour lecture will start with an oral presentation, followed by individual work in the computer lab.
 To summarize I'll present solutions to the class exercises and we'll discuss some of the difficulties you encountered.
 
-Main topics of the course will include (not necessarily in this order):
+Main topics of the course will include:
 
 1. Motivation, transition from Matlab.
 2. Data structures (lists, tuples, sets, dictionaries), functions and iteration.
 2. Object-oriented programming.
-3. Principles of Software Design.
 3. File I/O and exception handling.
 3. Python's scientific stack - NumPy, SciPy, Pandas, Matplotlib.
-4. Important programming tools and habits - Package management, Git, unit tests.
 5. Advanced Pandas - use cases, data organization.
-7. Integration of web tools for I/O, plotting and dashboards.
+4. Important programming tools and habits - Package management, Git, unit tests.
 8. Image processing and basic machine learning.
 9. Performant code - Cython, Numba, multiprocessing.
-10. Advanced subjects - FFIs, generators, decorators, meta-programming.
+3. Principles of Software Design.
+10. Advanced subjects - generators, decorators, meta-programming.
