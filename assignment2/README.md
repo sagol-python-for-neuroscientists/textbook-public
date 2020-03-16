@@ -1,102 +1,158 @@
 # Homework Assignment #2
 
-## Date: 18-03-2019
-## Due date: 5-4-2019, 15:00
+### Date: 16-03-2020
+### Due date: 30-3-2020, 15:00
 
-1. _The Bicycle Class:_
-    * Write a definition for a class named ``Bicycle``:
-        * It must contain the following attributes: `cadence`, `speed`, `gear`.
-        * It must contain a `__str__` method which prints its state (like the ShoppingList in class).
-        * The bicycle should be able speed up, brake, change gear and cadence. However, the `speed` attribute should be calculated from the two other attributes, since it depends directly
-        on the pedal cadence and gear.
-        * Write a `change_speed_to` method that increases\decreases the speed by changing the cadence and gear as necessary.
-            - Note: You might want to add more methods to the class that will help you to implement this behavior.
-            - The maximal speed of our bicycle should be 1000 KPH.
-        * Make sure the bicycle can't reach a speed below 0 when breaking, or slow the pedal cadence below 0 rotations.
-        * Our bicycle only has 7 gears, enforce this limit on the method that controls the change of gears.
+This exercise's purpose is to help you familiarize yourself with some parts of the rich Python standard library. The two questions below can be solved
+quite simply with existing functions that do (almost) exactly what I'm asking for, give or take some effort by you :)
 
 
-2. _The Time Class:_
-    * Define the `Time` class:
+## Question 1: Morse Code Interpreter
 
-    ```python
-    class Time:
-        """
-        Represents the time of the day.
-        Attributes: hour, minute, second
-        """
-    ```
+Write a program that reads a text file (`lorem.txt`), converts it to Morse code and writes it back
+to a new file called `lorem_morse.txt`. In the new file, each (Morse) word should be in a new line.
+**Don't loop over the string.** Rather, use [built-in Python string methods](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str) to do the _heavy lifting_.
 
-    * Give default values to the `__init__` function.
-    * Validate that the input fits a 24 hour clock. Think of as many edge-cases as you can. If the input
-    isn't valid reset that value to 0.
-    * Override the `__str__` method so that when you print a Time instance it prints out nicely.
-    * Define a `Time().is_after(other_time)` method. that returns `True` if the first `Time()` is later
-    than the `other_time` instance, and `False` otherwise. `00:00:00` is the earliest, `23:59:59` is the latest.
-    * Overload the `__add__` operator to allow the addition of two `Time` instances.
-        - Make sure you deal with all possible cases - "overflow" of minutes
-        and seconds, and that after `23:59:59` comes `00:00:00`.
+```python
+MORSE_CODE = {'A': '.-',     'B': '-...',   'C': '-.-.',
+              'D': '-..',    'E': '.',      'F': '..-.',
+              'G': '--.',    'H': '....',   'I': '..',
+              'J': '.---',   'K': '-.-',    'L': '.-..',
+              'M': '--',     'N': '-.',     'O': '---',
+              'P': '.--.',   'Q': '--.-',   'R': '.-.',
+              'S': '...',    'T': '-',      'U': '..-',
+              'V': '...-',   'W': '.--',    'X': '-..-',
+              'Y': '-.--',   'Z': '--..',
+
+              '0': '-----',  '1': '.----',  '2': '..---',
+              '3': '...--',  '4': '....-',  '5': '.....',
+              '6': '-....',  '7': '--...',  '8': '---..',
+              '9': '----.',
+
+              '.': '.-.-.-', ',': '--..--', ':': '---...',
+              "'": '.----.', '-': '-....-',
+              }
 
 
-3. _Basic API Design:_
-    This question will deal with the concept of a basic API - application programming interface - for a "NeuralNetwork" class. This class represents a network of different types of neurons that may fire one after the other. The user should only deal with the methods available to this class, without "caring" which exact cells compose the network. In other words, the implementation of the network should be agnostic to the type, and order, of neurons it contains.
+def english_to_morse(
+    input_file: str = "lorem.txt",
+    output_file: str = "lorem_morse.txt"
+):
+    """Convert an input text file to an output Morse code file.
 
-    * Define the `PyramidalNeuron` class:
-    
-    ```python
-    class PyramidalNeuron(Neuron):
-        """
-        A very coarse model of a neuron.
-        Mandatory attributes: neuron_id, potential, synaptic_strength
-        Mandatory methods: fire  # fires a spike, raising the cell's electric potential.
-        """
-    ```
-    * `PyramidalNeuron`s should inherit at least one attribute from a `Neuron` base class which you should define.
-    * The `fire` method should only raise the cell's potential if a random number you roll exceeds the `synaptic_strength` value.
-    * Write a NeuralNetwork class that models the connectivity of a given list of PyramidalNeuron instances.
+    Notes
+    -----
+    This function assumes the existence of a MORSE_CODE dictionary, containing a
+    mapping between English letters and their corresponding Morse code.
 
-    ```python
-    class NeuralNetwork:
+    Parameters
+    ----------
+    input_file : str
+        Path to file containing the text file to convert.
+    output_file : str
+        Name of output file containing the translated Morse code. Please don't change
+        it since it's also hard-coded in the tests file.
     """
-    Models a neural network of types of Neuron instances.
-    Mandatory attributes: neurons (iterable)
-    """
-    ```
+```
 
-    * Write a `show_neural_network` method for the `NeuralNetwork` class that shows the connectivity of the cells.
-    * Write a `start_firing` method that orders the first cell to fire and tracks the firing inside
-    the network. If the `fire` was successful, it should make the next cell in line try to fire.
-    * Write another neuron class, this time `InhibitoryNeuron(Neuron)`. It should have similar features to the `PyramidalNeuron` we already have. On top of that, make it so when it does fire, it has an increased chance to fire a second spike.
-    * Don't forget that it should also be able to integrate seamlessly into the NeuralNetwork.
-    * Start up the network and see that it fires correctly.
-    * Again - the goal is to separate the "user interface", i.e. the call
-    to `NeuralNetwork.start_firing()` method, from the actual existing neurons.
+## Question 2: Spreading Virus
+
+Pairs of people ("agents") are continuously meeting and possibly spreading a virus
+they're carrying, and your job is to model the way their virus spreads.
+You're given a list of agents that are about to meet in pairs, i.e. agent #1 will meet
+agent #2, agent 3# with agent #4, etc. Write a program that returns the status of these
+agents after each pair had their meeting.
+The rules that govern this encounter are quite simple: Each agent has a name and a "category",
+and the categories are:
+1. Cure - a special agent that makes other agents feel better.
+2. Healthy
+3. Sick
+4. Dying
+5. Dead
+
+Agents of type "Healthy" and "Dead" aren't going to meet anyone - the healthy went home and
+the dead are... dead. Thus, both types should be discarded from the meetings. A "Cure" agent
+improves by one step the status of other agents, that is a "Sick" agent becomes "Healthy", and a
+"Dying" agent becomes "Sick". A "Cure" agent doesn't affect other "Cure" agents.
+
+The other types of agents always worsens the conditions of other agents. When a "Sick" agent
+meets a "Dying" agent the "Sick" one becomes "Dying", and the "Dying" becomes "Dead". If two
+"Dying" agents meet they both become "Dead".
+
+For the given lists of inputs write a function that takes one such list of agents, models the
+"meeting" of the pairs and returns the resulting list of agents with their "categories" changed
+accordingly. The returned list doesn't have to be in the same order of the original list.
+
+Since this exercise's goal is to familiarize youselves with the Python standard library,
+I've taken the liberty to model both the categories of agents and the agents themselves using
+tools from the standard library:
+
+```python
+from enum import Enum
+from collections import namedtuple
+
+
+Type = Enum("Type", ("CURE", "HEALTHY", "SICK", "DYING", "DEAD"))
+Agent = namedtuple("Agent", ("name", "category"))
+```
+
+Please read about [enumerations](https://docs.python.org/3/library/enum.html) and [namedtuple](https://docs.python.org/3/library/collections.html#collections.namedtuple)
+to understand their value and use-cases.
+
+Moreover, some key parts of this exercise can dramatically benefit from the excellent [`itertools`](https://docs.python.org/3/library/itertools.html) package.
+You should review the available functions there and the given examples and see whether you can use any of them.
+
+The signature for the main function you'll write is given below. You're encouraged to create multiple
+smaller functions that this main one will use.
+
+```python
+def meetup(agent_listing: tuple) -> list:
+    """Model the outcome of the meetings of pairs of agents.
+
+    The pairs of agents are ((a[0], a[1]), (a[2], a[3]), ...). If there's an uneven
+    number of agents, the last agent will remain the same.
+
+    Notes
+    -----
+    The rules governing the meetings were described in the question. The outgoing
+    listing may change its internal ordering relative to the incoming one.
+
+    Parameters
+    ----------
+    agent_listing : tuple of Agent
+        A listing (tuple in this case) in which each element is of the Agent
+        type, containing a 'name' field and a 'category' field, with 'category' being
+        of the type Type.
+
+    Returns
+    -------
+    updated_listing : list
+        A list of Agents with their 'category' field changed according the result
+        of the meeting.
+    """
+```
+
 
 ## Submission
 
-This assignment and the next two to follow will be submitted via GitHub Classroom, a special interface of GitHub which eases the creation of new, identical repositories for multiple students of the same class. Other than this convenience this repository is identical to ones you can create on your own. The submission guidelines for this exercise should also serve as a learning experience on how to work with version control and GitHub.
+Most course assignments, including this one, will be submitted via GitHub Classroom, a special interface of GitHub which eases the creation of new, identical repositories for multiple students of the same class. Other than this convenience this repository is identical to ones you can create on your own. The submission guidelines for this exercise should also serve as a learning experience on how to work with version control and GitHub.
 
 When you wish to answer the questions follow these steps:
 1. Click the __Clone or download__ button on the top right side of this repo. Copy the link (the one ending with `.git`).
 2. Open VS Code and press `Ctrl[Cmd] + Shift + P` and type `Git: Clone`. Paste the URL to the address bar and choose a folder. Click "Open Repository" to open VS Code inside that folder. This operation "cloned" the online repo and created a copy of it in your computer.
-3. You may now write code, add new files and so on. Don't forget to commit your changes once in a while, normally before and after major changes, like new functions or major bug fixes.
-4. To commit, go to the Git symbol on the left bar (fork-looking), highlight the "Changes" row and choose "Stage All Changes". Staging is a required step before committing - you'll commit evert staged changed, but you don't have to stage every change you've made. After staging, you can press the "V" icon on the top to commit the changes to the git tree. VSCode (and git) will request a message describing the changes you've made in your last commit, like "added function x" or "HW is complete".
-9. When you're done editing, you can push the changes to the online repo. Click the three dots (in the git fork-looking tab) and select "Push". Enter your credentials and the files should momentarily appear online.
+3. You may now write code, add new files and so on. Don't forget to commit your changes once in a while, normally before and after major changes, like new functions or major bug fixes. *Note:* Don't change the structure of the folder - your code files and tests should be under the same folder. You can add new files, but don't modify the names of the existing ones, otherwise the tests will fail for the wrong reasons.
+4. To commit, go to the Git symbol on the left bar (fork-looking), highlight the "Changes" row and choose "Stage All Changes". Staging is a required step before committing - you'll commit evert staged changed, but you don't have to stage every change you've made. After staging, you can press the "V" icon on the top to commit the changes to the git tree. VSCode (and git) will request a message describing the changes you've made in your last commit, like "added function x" or "HW is complete". A more complete tutorial was given in class #2.
+5. When you're done editing, you can push the changes to the online repo. Click the three dots (in the git fork-looking tab) and select "Push". Enter your credentials and the files should momentarily appear online.
 
-You may push several times to the repo, I'll check the last push before the deadline by running the tests on this version and asserting that they all pass.
+You may push several times to the repo, we'll check the last push before the deadline by running the tests on this version and asserting that they all pass.
 
 ### Tests
 
-In the repo you can find test classes for the questions. These classes contain unit tests, and will determine your grade for these questions. Unit tests are a very common procedure when writing code, and should be a part of any script you write. The three unit test classes I added serve as a good example of how to write these (the tests themselves, not the machinery that runs them). It's more than likely that you won't understand _how_ exactly do all tests work - some are simple, but some are quite daunting. If one of the more "complicated" tests keeps failing and you're not sure what to do, please contact me.
-
-Take note that the score for question 3 is not completely determined by the unit tests. They all must pass, but since it's an API design question, points can be deducted for not following the guidelines in the question - guidelines which are harder to enforce using unit tests.
+In the repo you can find test classes for the questions. These classes contain unit tests, and will determine your grade for these questions. Unit tests are a very common procedure when writing code, and should be a part of any script you write. The two tests files serve as a good example of how to write these, or at least a certain type of tests. The grade for this exercise, as well as for most others, is determined completely by the success rate of the tests, meaning that if all tests pass for a given question the grade of that question is 100.
 
 #### Running the tests
 
-The preferred way to run the tests is using `pytest`:
+If you've heard of `pytest` and have it installed then this is the preferred way to run the tests. If you haven't, then to run them simply press the green "Run" arrow icon on the top right, which is the equivilant of writing `python test_q1.py`. The assertions at the end of the tests will fail if the condition isn't held, and so Python will raise an exception there. The code I've written under `if __name__ == '__main__'` will catch these exceptions and write them more clearly to you. When there are no more exceptions left, the file should print "Tests pass successfully."
 
-1. In the command line, activate your environment and write `pip install pytest`.
-2. Next, you can either write `pytest` in the command line when you're inside your code folder to run all tests automatically, or use VSCode's test runner. The test runner can be accessed from the bubbling beaker symbol - in it you should navigate to the folder with the tests and click the green "play" button to run them.
-3. If you're unsuccessful, the test files can simply be run like any other Python script, either by right-clicking in the editor screen and choosing the "Run Python File In Terminal" option, or by typing `python test_q1.py` in the command line.
 
-Good luck, and don't hesitate to contact me if Google doesn't solve your technical issues :)
+Good luck, and don't hesitate to contact us if Google doesn't solve your technical issues :)

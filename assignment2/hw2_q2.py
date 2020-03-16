@@ -1,71 +1,101 @@
-"""
-__author__ = Hagai Har-Gil
-HW2 Question 2 Solution
-"""
-class Time:
+from enum import Enum
+from collections import namedtuple
+
+from itertools import chain, zip_longest
+
+
+Type = Enum("Type", ("CURE", "HEALTHY", "SICK", "DYING", "DEAD"))
+Agent = namedtuple("Agent", ("name", "category"))
+
+
+def grouper(iterable, n, fillvalue=None):
+    """Collect data into fixed-length chunks or blocks.
+    Taken directly from https://docs.python.org/3/library/itertools.html#itertools-recipes.
+
+    Example
+    -------
+    grouper('ABCDEFG', 3, 'x') --> ABC DEF Gxx"
     """
-    Represents the time of the day.
-    Attributes: hour, minute, second
+    args = [iter(iterable)] * n
+    return zip_longest(*args, fillvalue=fillvalue)
+
+
+def treat_cure(left, right):
+    if right is None:
+        return (left,)
+    if right.category is Type.CURE:
+        return left, right
+    elif right.category is Type.SICK:
+        return left, Agent(right.name, Type.HEALTHY)
+    elif right.category is Type.DYING:
+        return left, Agent(right.name, Type.SICK)
+
+
+def treat_sick(left, right):
+    if right is None:
+        return (left,)
+    if right.category is Type.CURE:
+        return Agent(left.name, Type.HEALTHY), right
+    elif right.category is Type.SICK:
+        return Agent(left.name, Type.DYING), Agent(right.name, Type.DYING)
+    elif right.category is Type.DYING:
+        return Agent(left.name, Type.DYING), Agent(right.name, Type.DEAD)
+
+
+def treat_dying(left, right):
+    if right is None:
+        return (left,)
+    if right.category is Type.CURE:
+        return Agent(left.name, Type.SICK), right
+    elif right.category is Type.SICK:
+        return Agent(left.name, Type.DEAD), Agent(right.name, Type.DYING)
+    elif right.category is Type.DYING:
+        return Agent(left.name, Type.DEAD), Agent(right.name, Type.DEAD)
+
+
+type_to_function_switch = {
+    Type.CURE: treat_cure,
+    Type.SICK: treat_sick,
+    Type.DYING: treat_dying,
+}
+
+
+def meetup(agent_listing: tuple) -> list:
+    """Model the outcome of the meetings of pairs of agents.
+
+    The pairs of agents are ((a[0], a[1]), (a[2], a[3]), ...). If there's an uneven
+    number of agents, the last agent will remain the same.
+
+    Notes
+    -----
+    The rules governing the meetings were described in the question. The outgoing
+    listing may change its internal ordering relative to the incoming one.
+
+    Parameters
+    ----------
+    agent_listing : tuple of Agent
+        A listing (tuple in this case) in which each element is of the Agent
+        type, containing a 'name' field and a 'category' field, with 'category' being
+        of the type Type.
+
+    Returns
+    -------
+    updated_listing : list
+        A list of Agents with their 'category' field changed according the result
+        of the meeting.
     """
-    def __init__(self, hour=0, minute=0, second=0):
-        self.hour = self._validate_input(hour, 23, 'hour')
-        self.minute = self._validate_input(minute, 59, 'minute')
-        self.second = self._validate_input(second, 59, 'second')
-
-    def __str__(self):
-        return f"{self.hour:02}:{self.minute:02}:{self.second:02}"  # formatting the 0's
-
-    def _time_to_seconds(self):
-        """ Convert a time to seconds """
-        return self.second + self.minute * 60 + self.hour * 3600
-
-    def is_after(self, other):
-        """
-        True if our time is later than the other time, False otherwise.
-        Returns None if other isn't a Time instance.
-        """
-        if not isinstance(other, Time):
-            print("Can only compare a Time instance to another one.")
-            return None
-        our_time = self._time_to_seconds()
-        their_time = other._time_to_seconds()
-        return our_time > their_time
-
-    def _validate_input(self, val, lim, time_type):
-        """
-        Makes sure val is between 0 and lim, and that it's an integer.
-        Returns val if it stands the checks, else 0.
-        The underscore signifies an internal method
-        """
-        if (isinstance(val, int) and (0 <= val <= lim)):
-            return val
+    # First we filter our original agents listing - DEAD and HEALTHY ones
+    # are immediately thrown to the "updated_listing" list which we'll
+    # return, and the rest will be processed.
+    relevant_agents = []
+    updated_listing = []
+    for agent in agent_listing:
+        if (agent.category is Type.DEAD) or (agent.category is Type.HEALTHY):
+            updated_listing.append((agent,))
         else:
-            print(f"Value for {time_type} was inappropriate. Setting it to 0")
-            return 0
+            relevant_agents.append(agent)
 
-    def __add__(self, other):
-        """ Add two time instances, returning a new one """
-        if not isinstance(other, Time):
-            print("Can only add a Time instance to another one.")
-            return None
-
-        new_seconds = self.second + other.second
-        new_minutes, new_seconds = divmod(new_seconds, 60)
-        new_minutes += self.minute + other.minute
-        new_hours, new_minutes = divmod(new_minutes, 60)
-        new_hours += self.hour + other.hour
-        _, new_hours = divmod(new_hours, 24)
-
-        return Time(hour=new_hours,
-                    minute=new_minutes,
-                    second=new_seconds)
-
-if __name__ == '__main__':
-    t1 = Time(hour=1, minute=2, second=2)
-    t2 = Time(hour=23, minute=58, second=4)
-    t3 = Time(hour=24, minute=0, second=-1)
-
-    print(f"The first time is {t1}, while the second is {t2}. What is the third? {t3}.")
-
-    new_time = t1 + t2
-    print(f"After adding the first two, we have {new_time}.")
+    for inp in grouper(relevant_agents, 2):
+        updated_listing.append(type_to_function_switch[inp[0].category](inp[0], inp[1]))
+    updated_listing = chain.from_iterable(updated_listing)
+    return list(updated_listing)

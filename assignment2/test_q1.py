@@ -1,74 +1,37 @@
-from hw2_q1 import *
+""" Tests for question 1 - Morse code translator """
+name = 'lorem_morse.txt'  # output filename, please don't change
 
 
-class TestBicycle:
-    """
-    Unit tests for the bicycle question. If no errors pop
-    during the execution, and the summary printout doesn't
-    contain any errors, your grade for the question will be perfect.
-    """
-    def test_existence(self):
-        """ Asserts the class exists with the right name """
-        assert Bicycle(gear=1, cadence=20)
-
-    def test_change_speed_below_0(self):
-        bi = Bicycle(gear=1, cadence=20)
-        bi.change_speed_to(-1)
-        assert bi.speed >= 0
-
-    def test_change_speed_to_non_number(self):
-        bi = Bicycle(gear=1, cadence=20)
-        bi.change_speed_to('a')
-        assert (int(bi.speed) >= 0) and (int(bi.speed) <= 1000)
-
-    def test_change_speed_to_higher_than_1000(self):
-        bi = Bicycle(gear=1, cadence=20)
-        bi.change_speed_to(1300)
-        assert (bi.speed <= 1000)
-
-    def test_cadence_remains_positive_zero(self):
-        bi = Bicycle(gear=1, cadence=20)
-        bi.change_speed_to(0)
-        assert bi.cadence >=0
-
-    def test_cadence_remains_positive_one(self):
-        bi = Bicycle(gear=1, cadence=20)
-        bi.change_speed_to(1)
-        assert bi.cadence >= 0
-
-    def test_gear_below_7(self):
-        bi = Bicycle(gear=1, cadence=20)
-        bi.change_speed_to(0)
-        assert bi.gear >= 1
-        bi.change_speed_to(1)
-        assert bi.gear >= 1
-
-    def test_gear_at_high_speeds(self):
-        bi = Bicycle(gear=1, cadence=20)
-        bi.change_speed_to(999)
-        assert bi.gear <= 7
-
-    def test_many_gear_changes(self):
-        bi = Bicycle(gear=1, cadence=20)
-        for speed in range(1000):
-            bi.change_speed_to(speed)
-        assert ((1 <= bi.gear <= 7) and (0 <= bi.speed <= 1000)), f"At a real speed of {speed},"\
-                f"gear was {bi.gear} and bicycle speed was {bi.speed}."
+def test_file_exists():
+    with open(name) as f:
+        f.read()
+    assert True
 
 
-if __name__ == '__main__':
-    btests = TestBicycle()
-    methods = ["existence", "change_speed_below_0", "change_speed_to_non_number",
-               "change_speed_to_higher_than_1000", "cadence_remains_positive_zero",
-               "cadence_remains_positive_one", "gear_below_7", "gear_at_high_speeds",
-               "many_gear_changes"]
+def test_file_valid():
+    with open(name) as f:
+        data = f.read()
+    assert data.count('-') == 2748
+    assert data.count('.') == 4175
+    assert data.count('\n') == 453
 
+
+def test_individual_lines():
+    with open(name) as f:
+        data = f.readlines()
+    assert len(data) == 454
+    assert data[-1] == '.-....--.-.-..-....-.-.-'
+    assert data[3].startswith('.....-')
+
+
+if __name__ == "__main__":
+    methods = ["test_file_exists", "test_file_valid", "test_individual_lines"]
     errors = []
 
     for method in methods:
         try:
-            getattr(btests, "test_" + method)()
-        except AssertionError as e:
+            eval(method)()
+        except Exception as e:
             errors.append(f"Failed when testing method 'test_{method}': {e}")
     if len(errors) > 0:
         print(errors)
