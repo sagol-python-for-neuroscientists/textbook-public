@@ -32,44 +32,6 @@ class FolderIterator:
 
 The folder in question is `base`, also located in this repo.
 
-2. _Morse Code Interpreter:_
-Write a program that reads a text file (`lorem.txt`), converts it to Morse code and writes it back
-to a new file called `lorem_morse.txt`. In the new file, each (Morse) word should be in a new line.
-**Don't loop over the string.** Rather, use built-in Python string methods to do the _heavy lifting_.
-
-
-```python
-MORSE_CODE = {'A': '.-',     'B': '-...',   'C': '-.-.',
-              'D': '-..',    'E': '.',      'F': '..-.',
-              'G': '--.',    'H': '....',   'I': '..',
-              'J': '.---',   'K': '-.-',    'L': '.-..',
-              'M': '--',     'N': '-.',     'O': '---',
-              'P': '.--.',   'Q': '--.-',   'R': '.-.',
-              'S': '...',    'T': '-',      'U': '..-',
-              'V': '...-',   'W': '.--',    'X': '-..-',
-              'Y': '-.--',   'Z': '--..',
-
-              '0': '-----',  '1': '.----',  '2': '..---',
-              '3': '...--',  '4': '....-',  '5': '.....',
-              '6': '-....',  '7': '--...',  '8': '---..',
-              '9': '----.',
-
-              '.': '.-.-.-', ',': '--..--', ':': '---...',
-              "'": '.----.', '-': '-....-',
-              }
-
-class EnglishToMorse:
-    """ Convert a text file to Morse code file """
-    def __init__(self, file):
-        self.file = ...
-
-    def convert(self):
-        """ Convert self.file to one-word-in-line Morse """
-
-    def to_disk(self, fname='lorem_morse.txt'):
-        """ Writes data to the disk with filename == fname """
-
-```
 
 3. _Basic `numpy` Calculations:_
 

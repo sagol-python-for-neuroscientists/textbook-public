@@ -81,7 +81,7 @@ def meetup(agent_listing: tuple) -> list:
     Returns
     -------
     updated_listing : list
-        A list of Agents with their 'category' field changed according the result
+        A list of Agents with their 'category' field changed according to the result
         of the meeting.
     """
     # First we filter our original agents listing - DEAD and HEALTHY ones

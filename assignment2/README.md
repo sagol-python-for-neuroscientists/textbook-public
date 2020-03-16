@@ -70,8 +70,8 @@ and the categories are:
 4. Dying
 5. Dead
 
-Agents of type "Healthy" and "Dead" aren't going to meet anyone - the healthy went home and
-the dead are... dead. Thus, both types should be discarded from the meetings. A "Cure" agent
+Agents of categories "Healthy" and "Dead" aren't going to meet anyone - the healthy went home and
+the dead are... dead. Thus, both categories should be discarded from the meetings. A "Cure" agent
 improves by one step the status of other agents, that is a "Sick" agent becomes "Healthy", and a
 "Dying" agent becomes "Sick". A "Cure" agent doesn't affect other "Cure" agents.
 
@@ -103,7 +103,8 @@ Moreover, some key parts of this exercise can dramatically benefit from the exce
 You should review the available functions there and the given examples and see whether you can use any of them.
 
 The signature for the main function you'll write is given below. You're encouraged to create multiple
-smaller functions that this main one will use.
+smaller functions that this main one will use. As you'll see below, you're only measured at the output level, i.e. as long as the returned list of agents
+is identical to the "true" one, your specific implementation doesn't matter.
 
 ```python
 def meetup(agent_listing: tuple) -> list:
@@ -127,7 +128,7 @@ def meetup(agent_listing: tuple) -> list:
     Returns
     -------
     updated_listing : list
-        A list of Agents with their 'category' field changed according the result
+        A list of Agents with their 'category' field changed according to the result
         of the meeting.
     """
 ```
