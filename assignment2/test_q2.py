@@ -108,8 +108,13 @@ def test_data5():
     assert code_result == true_result
 
 
+def test_data6():
+    code_result = meetup(data5)
+    assert isinstance(code_result, list)
+
+
 if __name__ == "__main__":
-    methods = [f"test_data{num}" for num in range(6)]
+    methods = [f"test_data{num}" for num in range(7)]
     errors = []
 
     for method in methods:
