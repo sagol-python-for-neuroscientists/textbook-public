@@ -1,31 +1,44 @@
 # Homework Assignment #3
 
-## Date: 01-04-2019
+## Date: 30-03-2020
 
-## Due date: 15-04-2019, 15:00
+## Due date: 13-04-2019, 15:00
 
 1. _Duplicates Discovery:_
 Define a class that scans through a folder with all of its subfolders and returns the following:
 
 * Names and content of the unique files. "Unique" in this sense means, that if two files - `a.txt` and `b.tif` for example -
-have the same content, only the first should be returned.
-* Names of the "parent" files and their duplicates. In the example above, the parent file
-is `a.txt`, since it was first in line, and its duplicate is `b.tif`.
+have the same content, only the first should be included in this "uniques" list, while the second (`b.tif`) can be discarded.
+* Names of the "parent" files and their duplicates, held together in a dictionary. In the example above, the parent file
+is `a.txt`, since it was first in line, and its duplicate is `b.tif`. If another file with the same content as `a.txt` and `b.tif`
+will be found it will be added to that dictionary under `a.txt` again.
+
+Note: Please use the `pathlib` module we showed in class, and not the `os` module.
 
 ```python
 class FolderIterator:
-    """ Iterates through the folder, finding duplicates """
-    def __init__(self, foldername='./base'):
+    """.Iterates through the supplied folder, finding duplicates.
+
+    Call the iter_folder() method to parse the directory.
+
+    Attributes
+    ----------
+    foldername : path-like
+        Name of base folder to iterate on.
+    uniques : list
+        A list of unique files in the folder and their content.
+    duplicates : dict
+        The keys are the parent files and the values are a list of filenames
+        with the same content.
+    """
+    def __init__(self, foldername='base'):
         self.foldername = ...  # pathlib.Path instance
         self.uniques = ...  # list instance
         self.duplicates = ...  # dict instance
         # Other attributes may follow
 
     def iter_folder(self):
-        """
-        Main function to find duplicate and unique files in the filesystem.
-        Must use the "with" statement to open individual files.
-        """
+        """Main function to find duplicate and unique files in the filesystem."""
         pass
 
 ```
@@ -33,7 +46,7 @@ class FolderIterator:
 The folder in question is `base`, also located in this repo.
 
 
-3. _Basic `numpy` Calculations:_
+2. _Basic `numpy` Calculations:_
 
     Saving and loading `numpy` arrays is done using the functions `np.load`, `np.save` and `np.savez`. A single array is saved in the `.npy` format using `np.save`, while a dictionary of arrays is saved to the `.npz` format using `np.savez`. Both data structures can be read using `np.load`. In the repo you can see `data.npy`, a single 4D array that I randomly generated. The file `hw3_q3.py` should contain functions that take this specific array as input.
 
