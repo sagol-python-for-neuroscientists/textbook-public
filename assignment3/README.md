@@ -45,8 +45,29 @@ class FolderIterator:
 
 The folder in question is `base`, also located in this repo.
 
+2. _The Time Class:_
+    * Define the `Time` class:
 
-2. _Basic `numpy` Calculations:_
+    ```python
+    class Time:
+        """
+        Represents the time of the day.
+        Attributes: hour, minute, second
+        """
+    ```
+
+    * Give default values to the `__init__` function.
+    * Validate that the input fits a 24 hour clock. Think of as many edge-cases as you can. If the input
+    isn't valid reset that value to 0.
+    * Override the `__str__` method so that when you print a Time instance it prints out nicely.
+    * Define a `Time().is_after(other_time)` method. that returns `True` if the first `Time()` is later
+    than the `other_time` instance, and `False` otherwise. `00:00:00` is the earliest, `23:59:59` is the latest.
+    * Overload the `__add__` operator to allow the addition of two `Time` instances.
+        - Make sure you deal with all possible cases - "overflow" of minutes
+        and seconds, and that after `23:59:59` comes `00:00:00`.
+
+
+3. _Basic `numpy` Calculations:_
 
     Saving and loading `numpy` arrays is done using the functions `np.load`, `np.save` and `np.savez`. A single array is saved in the `.npy` format using `np.save`, while a dictionary of arrays is saved to the `.npz` format using `np.savez`. Both data structures can be read using `np.load`. In the repo you can see `data.npy`, a single 4D array that I randomly generated. The file `hw3_q3.py` should contain functions that take this specific array as input.
 

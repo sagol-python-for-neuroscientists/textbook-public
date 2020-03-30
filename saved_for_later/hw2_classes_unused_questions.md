@@ -1,25 +1,3 @@
-2. _The Time Class:_
-    * Define the `Time` class:
-
-    ```python
-    class Time:
-        """
-        Represents the time of the day.
-        Attributes: hour, minute, second
-        """
-    ```
-
-    * Give default values to the `__init__` function.
-    * Validate that the input fits a 24 hour clock. Think of as many edge-cases as you can. If the input
-    isn't valid reset that value to 0.
-    * Override the `__str__` method so that when you print a Time instance it prints out nicely.
-    * Define a `Time().is_after(other_time)` method. that returns `True` if the first `Time()` is later
-    than the `other_time` instance, and `False` otherwise. `00:00:00` is the earliest, `23:59:59` is the latest.
-    * Overload the `__add__` operator to allow the addition of two `Time` instances.
-        - Make sure you deal with all possible cases - "overflow" of minutes
-        and seconds, and that after `23:59:59` comes `00:00:00`.
-
-
 3. _Basic API Design:_
     This question will deal with the concept of a basic API - application programming interface - for a "NeuralNetwork" class. This class represents a network of different types of neurons that may fire one after the other. The user should only deal with the methods available to this class, without "caring" which exact cells compose the network. In other words, the implementation of the network should be agnostic to the type, and order, of neurons it contains.
 
