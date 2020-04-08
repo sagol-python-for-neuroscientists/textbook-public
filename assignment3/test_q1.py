@@ -73,7 +73,7 @@ if __name__ == "__main__":
         try:
             eval(func)()
         except Exception as e:
-            errors.append(f"Failed when testing method '{func}': {e}")
+            errors.append(f"Failed when testing method '{func}': {repr(e)}")
     if len(errors) > 0:
         print(errors)
     else:

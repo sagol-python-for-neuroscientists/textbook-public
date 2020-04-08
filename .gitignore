@@ -112,3 +112,4 @@ XDG*/
 .idea/
 *.csv
 classes/data.txt
+.vscode/

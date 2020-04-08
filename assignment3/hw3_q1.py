@@ -2,7 +2,7 @@ import pathlib
 
 
 class FolderIterator:
-    """.Iterates through the supplied folder, finding duplicates.
+    """Iterates through the supplied folder, finding duplicates.
 
     Call the iter_folder() method to parse the directory.
 
@@ -25,7 +25,7 @@ class FolderIterator:
     # dictionary or a small class desgined to hold this type of
     # data.
 
-    def __init__(self, foldername="base"):
+    def __init__(self, foldername="./base"):
         self.foldername = pathlib.Path(str(foldername))
         assert self.foldername.exists()
         self.uniques = []  # list of tuples of (filename, content)

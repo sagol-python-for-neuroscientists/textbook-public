@@ -8,7 +8,7 @@
 Define a class that scans through a folder with all of its subfolders and returns the following:
 
 * Names and content of the unique files. "Unique" in this sense means, that if two files - `a.txt` and `b.tif` for example -
-have the same content, only the first should be included in this "uniques" list, while the second (`b.tif`) can be discarded.
+have the same content, only the first file - i.e. higher up the folder hierarchy - should be included in this "uniques" list, while the second (`b.tif`) can be discarded.
 * Names of the "parent" files and their duplicates, held together in a dictionary. In the example above, the parent file
 is `a.txt`, since it was first in line, and its duplicate is `b.tif`. If another file with the same content as `a.txt` and `b.tif`
 will be found it will be added to that dictionary under `a.txt` again.
@@ -17,7 +17,7 @@ Note: Please use the `pathlib` module we showed in class, and not the `os` modul
 
 ```python
 class FolderIterator:
-    """.Iterates through the supplied folder, finding duplicates.
+    """Iterates through the supplied folder, finding duplicates.
 
     Call the iter_folder() method to parse the directory.
 
@@ -31,7 +31,7 @@ class FolderIterator:
         The keys are the parent files and the values are a list of filenames
         with the same content.
     """
-    def __init__(self, foldername='base'):
+    def __init__(self, foldername='./base'):
         self.foldername = ...  # pathlib.Path instance
         self.uniques = ...  # list instance
         self.duplicates = ...  # dict instance
