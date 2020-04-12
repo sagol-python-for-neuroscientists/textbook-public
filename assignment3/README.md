@@ -87,8 +87,8 @@ The folder in question is `base`, also located in this repo.
 
     iii. Return the index of the first value larger than 0.9, the input value. The index is a
     `numpy` array with one dimension and four values, which are the coordinates at which one can find
-    this value. Meaing that the line `data[returned_index]` returns the first value above 0.9.
-
+    this value.
+    
     ```python
     def first_after_val(data: np.ndarray, val: float=0.9) -> np.ndarray:
         """ Return the position of the first value larger than val """

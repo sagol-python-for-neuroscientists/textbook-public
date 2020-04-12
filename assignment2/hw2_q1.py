@@ -84,6 +84,7 @@ def english_to_morse(
     file = pathlib.Path(str(input_file))
     if not file.exists():
         raise ValueError(f"File {file} doesn't exist.")
+    # Generate a new dictionary with all letters, upper and lower case
     code_ord_upper = {ord(key): val for key, val in MORSE_CODE.items()}
     code_ord_lower = {ord(key.lower()): val for key, val in MORSE_CODE.items()}
     new_code = {**code_ord_lower, **code_ord_upper}
@@ -92,7 +93,7 @@ def english_to_morse(
 
 
 def convert(file: pathlib.Path, code: dict):
-    """ Convert file to one-word-in-line Morse.
+    """Convert file to one-word-in-line Morse.
 
     Parameters
     ----------
