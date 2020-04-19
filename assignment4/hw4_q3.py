@@ -1,6 +1,5 @@
 import pathlib
 
-import numpy as np
 import pandas as pd
 
 
@@ -18,7 +17,7 @@ def common_complaint(fname: pathlib.Path):
         (Complaint name, number of occasions)
     """
     data = pd.read_csv(fname, header=0, index_col=0)
-    complaint_counts = data['Complaint Type'].value_counts()
+    complaint_counts = data["Complaint Type"].value_counts()
     return complaint_counts.index[0], complaint_counts[0]
 
 
@@ -37,11 +36,11 @@ def parking_borough(fname: pathlib.Path) -> str:
         Name of the relevant NYC borough.
     """
     data = pd.read_csv(fname, header=0, index_col=0)
-    illegal_parks = data[data['Complaint Type'] == 'Illegal Parking']
+    illegal_parks = data[data["Complaint Type"] == "Illegal Parking"]
     return illegal_parks.Borough.value_counts().index[0]
 
 
-if __name__ == '__main__':
-    fname = pathlib.Path('311_service_requests.zip')
+if __name__ == "__main__":
+    fname = pathlib.Path("311_service_requests.zip")
     d = common_complaint(fname)
     c = parking_borough(fname)
