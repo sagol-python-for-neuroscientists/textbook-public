@@ -59,8 +59,19 @@ solutions.
     i. Which species has the largest population in each year? Write the following function:
 
     ```python
-    def largest_species(fname: str) -> pd.Series:
-    """ Return largest column by year from the text file """
+    def largest_species(fname: pathlib.Path) -> pd.Series:
+    """Returns the name of the most widespread species per year.
+
+    Parameters
+    ----------
+    fname : pathlib.Path
+        Filename for the columnar data containing the population numbers.
+
+    Returns
+    -------
+    largest_by_year : pd.Series
+        Name of most common species per year
+    """
     ```
 
     The function should return a pandas Series object, each row containing the name
@@ -70,8 +81,19 @@ solutions.
     the population of hares outgrew that of the foxes.
 
     ```python
-    def lynxes_when_hares(fname: str) -> pd.Series:
-        """ Returns the number of lynxes when hares > fox """
+    def lynxes_when_hares(fname: pathlib.Path) -> pd.Series:
+        """Returns the number of lynxes when hares > foxes.
+
+        Parameters
+        ----------
+        fname : pathlib.Path
+            Filename for the columnar data containing the population numbers.
+
+        Returns
+        -------
+        lynxes : pd.Series
+            Number of lynxes when hares > foxes
+        """
     ```
 
     iii. Add a column to the `DataFrame` called `mean_animals` with the normalized mean number
@@ -79,8 +101,22 @@ solutions.
     combined should have a `mean_animals` value of 1, and the rest should have a value between 0 and 1.
 
     ```python
-    def mean_animals(fname: str) -> pd.DataFrame:
-        """ Add a fourth column with the normalized mean number of animals in each year """
+    def mean_animals(fname: pathlib.Path) -> pd.DataFrame:
+        """Adds a column with the normalized mean number of animals in each year.
+
+        This means that in the year with most animals, this column will have the value of 1,
+        and in the rest of the years the value will be between [0, 1).
+
+        Parameters
+        ----------
+        fname : pathlib.Path
+            Filename for the columnar data containing the population numbers.
+
+        Returns
+        -------
+        data : pd.DataFrame
+            Original dataset with the new "mean_animals" column.
+        """
     ```
 
 3. _More Data Munching:_
