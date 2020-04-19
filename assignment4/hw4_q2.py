@@ -62,7 +62,7 @@ def mean_animals(fname: pathlib.Path) -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    fname = "populations.txt"
+    fname = pathlib.Path("populations.txt")
     a = largest_species(fname)
     b = lynxes_when_hares(fname)
     d = mean_animals(fname)

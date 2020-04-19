@@ -124,13 +124,21 @@ solutions.
     Download the NYC 311 service requests data from [here](https://osf.io/3a6qs), and read it with pandas.
 
     i. What is the most common complaint type? Write a function that returns a tuple
-    with the complaint tag and number of occasions it was reported.
+    with the complaint name and number of occasions it was reported.
 
     ```python
-    def common_complaint(fname: str):
-        """
-        Finds and returns the most common complaint as a tuple:
-        (complaint_name, num)
+    def common_complaint(fname: pathlib.Path):
+        """Finds and returns the most common complaint as (complaint_name, num).
+
+        Parameters
+        ----------
+        fname : pathlib.Path
+            Filename for the NYC data.
+
+        Returns
+        -------
+        common_complaint : tuple
+            (Complaint name, number of occasions)
         """
     ```
 
@@ -138,11 +146,20 @@ solutions.
     Return its name.
 
     ```python
-    def parking_borough(fname: str) -> str:
-    """
-    Finds and returns the name of the NYC borough that has the
-    most complaints of type 'Illegal Parking'.
-    """
+    def parking_borough(fname: pathlib.Path) -> str:
+        """Finds and returns the name of the NYC borough that has the
+        most complaints of type 'Illegal Parking'.
+
+        Parameters
+        ----------
+        fname : pathlib.Path
+            Filename for the NYC data.
+
+        Returns
+        -------
+        borough_name : str
+            Name of the relevant NYC borough.
+        """
     ```
 
     Please don't push the `.zip` (or `.csv`) file into your repository for the submission.
