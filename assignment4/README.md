@@ -1,11 +1,11 @@
 # Homework Assignment #4
 
-## Date: 29-04-2019
-## Due date: 13-05-2019, 15:00
+## Date: 20-04-2020
+## Due date: 04-05-2020, 15:00
 
 **Do not change the signature (definition) of the functions in the exercise.**
 
-**Tests are run with `pytest`.**
+**Tests are run with `pytest`. It's time to learn how to use it :)**
 
 1. _Mandelbrot Set:_
 
@@ -95,4 +95,4 @@ solutions.
     """
     ```
 
-    You don't need to push the `.zip` (or `.csv`) file into your repository for the submission.
+    Please don't push the `.zip` (or `.csv`) file into your repository for the submission.
