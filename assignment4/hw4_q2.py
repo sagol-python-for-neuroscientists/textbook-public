@@ -56,7 +56,9 @@ def mean_animals(fname: pathlib.Path) -> pd.DataFrame:
     """
     data = pd.read_csv(fname, index_col=0, sep="\t", dtype=np.int64)
     # Could use the .assign() method as well
-    data["mean_animals"] = data.sum(axis=1)
+    data["mean_animals"] = data.mean(axis=1)
+    min_ = data["mean_animals"].min()
+    data["mean_animals"] -= min_
     data["mean_animals"] /= data["mean_animals"].max()
     return data
 

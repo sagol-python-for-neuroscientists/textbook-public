@@ -9,11 +9,11 @@
 
 1. _Mandelbrot Set:_
 
-    Assuming `n` iterations, a number is a part of the [Mandelbrot set](https://www.youtube.com/watch?v=FFftmWSzgmk) if `|z| < thresh`,
-    where `z(n+1) = z(n) ** 2 + c` and `c = x + jy` ("2D" complex number).
+    A number is a part of the [Mandelbrot set](https://www.youtube.com/watch?v=FFftmWSzgmk) if `|z| < thresh`,
+    where `z(n+1) = z(n) ** 2 + c`, `c = x + jy` is an arbitrary "2D" complex number and `n` is the index of iteration.
     Write a function that computes a 2D binary mask of the numbers that belong to the set, in the
     grid [-2, 1], [-1.5, 1.5], after `n` iterations.
-    The correctness is checked by the resulting 2D image, easily generated with `matplotlib` - an example is attached.
+    The correctness is checked qualitatively with the resulting 2D image, easily generated with `matplotlib` - an example is attached.
     Use the `extent` keyword for the `imshow` function to show image with the right boundaries.
 
     ```python
@@ -123,7 +123,7 @@ solutions.
 
     Download the NYC 311 service requests data from [here](https://osf.io/3a6qs), and read it with pandas.
 
-    i. What is the most common complaint type? Write a function that returns a tuple
+    i. What is the most common complaint? Write a function that returns a tuple
     with the complaint name and number of occasions it was reported.
 
     ```python

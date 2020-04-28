@@ -36,7 +36,7 @@ def parking_borough(fname: pathlib.Path) -> str:
         Name of the relevant NYC borough.
     """
     data = pd.read_csv(fname, header=0, index_col=0)
-    illegal_parks = data[data["Complaint Type"] == "Illegal Parking"]
+    illegal_parks = data.loc[data.loc[:, "Complaint Type"] == "Illegal Parking", :]
     return illegal_parks.Borough.value_counts().index[0]
 
 

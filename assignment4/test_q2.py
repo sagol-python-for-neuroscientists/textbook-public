@@ -1,10 +1,11 @@
-from hw4_q2 import *
+import pathlib
 
 import pandas as pd
 import numpy as np
 
+from hw4_q2 import *
 
-fname = "populations.txt"
+fname = pathlib.Path("populations.txt")
 
 
 def test_assert_largest_species_series():
@@ -26,7 +27,7 @@ def test_largest_species_content():
         names=["year", "animal"],
         squeeze=True,
     )
-    assert np.all(data.values == largest_species(fname).values)
+    assert np.all(data.to_numpy() == largest_species(fname).to_numpy())
 
 
 def test_assert_lynx_series():
@@ -48,7 +49,7 @@ def test_lynx_values():
         names=["year", "lynx"],
         squeeze=True,
     )
-    assert np.allclose(data.values, lynxes_when_hares(fname).values)
+    assert np.allclose(data.to_numpy(), lynxes_when_hares(fname).to_numpy())
 
 
 def test_mean_columns():
@@ -59,5 +60,5 @@ def test_mean_columns():
 def test_mean_vals():
     data = pd.read_csv("tests_data/q3_mean.csv", index_col=0, header=0)
     assert np.allclose(
-        data.mean_animals.values, mean_animals(fname).mean_animals.values
+        data.mean_animals.to_numpy(), mean_animals(fname).mean_animals.to_numpy()
     )

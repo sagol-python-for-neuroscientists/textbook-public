@@ -10,7 +10,8 @@ Define a class that scans through a folder with all of its subfolders and return
 * Names and content of the unique files. "Unique" in this sense means, that if two files - `a.txt` and `b.tif` for example -
 have the same content, only the first file - i.e. higher up the folder hierarchy - should be included in this "uniques" list, while the second (`b.tif`) can be discarded.
 * Names of the "parent" files and their duplicates, held together in a dictionary. In the example above, the parent file
-is `a.txt`, since it was first in line, and its duplicate is `b.tif`. If another file with the same content as `a.txt` and `b.tif`
+is `a.txt`, since it was first in line, and i their content.
+    duplicates : dictts duplicate is `b.tif`. If another file with the same content as `a.txt` and `b.tif`
 will be found it will be added to that dictionary under `a.txt` again.
 
 Note: Please use the `pathlib` module we showed in class, and not the `os` module.
@@ -24,7 +25,8 @@ class FolderIterator:
     Attributes
     ----------
     foldername : path-like
-        Name of base folder to iterate on.
+        Name of base folder to iterate on their content.
+    duplicates : dict
     uniques : list
         A list of unique files in the folder and their content.
     duplicates : dict
@@ -88,7 +90,7 @@ The folder in question is `base`, also located in this repo.
     iii. Return the index of the first value larger than 0.9, the input value. The index is a
     `numpy` array with one dimension and four values, which are the coordinates at which one can find
     this value.
-    
+
     ```python
     def first_after_val(data: np.ndarray, val: float=0.9) -> np.ndarray:
         """ Return the position of the first value larger than val """
