@@ -76,7 +76,7 @@ The following questions should be answered by writing additional method(s) that 
         """
     ```
 
-4. Each participants receives a integer score for his or her answers, given in a new "score" column you should add. After some deliberation it was decided that if a subject has no grade in two questions or more, the score of that subject will be NA. Write a method that produces this score by averaging the grades of the not-NaN questions in the relevant rows.
+4. Each participants should receive an integer score for his or her answers, given in a new "score" column you should add. After some deliberation it was decided that if a subject has no grade in two questions or more, the score of that subject will be NA. Write a method that produces this score by averaging the grades of the not-NaN questions in the relevant rows.
 
     ```python
     def score_subjects(self, maximal_nans_per_sub: int = 1) -> pd.DataFrame:
@@ -85,7 +85,7 @@ The following questions should be answered by writing additional method(s) that 
 
         If the subject has more than "maximal_nans_per_sub" NaN in his grades, the
         score should be NA. Otherwise, the score is simply the mean of the other grades.
-        The datatype of score is np.uint8, and the floating point numbers should be
+        The datatype of score is UInt8, and the floating point raw numbers should be
         rounded down.
 
         Parameters
@@ -100,7 +100,7 @@ The following questions should be answered by writing additional method(s) that 
         """
     ```
 
-4. **BONUS 15 POINTS** There's reason to believe that there's a correlation between the subject's gender, age and grades.
+5. **BONUS 15 POINTS** There's reason to believe that there's a correlation between the subject's gender, age and grades.
 
     a. Use the original DataFrame and transform its index into a MultiIndex with three levels: the ordinal index (row number), gender and age.
 
@@ -115,10 +115,10 @@ The following questions should be answered by writing additional method(s) that 
 
 	Returns
 	-------
-	df : pd.DataFrame
-          A DataFrame with a MultiIndex containing the gender and whether the subject is above
-	  40 years of age, and the average score in each of the five questions.
-        """
+	pd.DataFrame
+        A DataFrame with a MultiIndex containing the gender and whether the subject is above
+	    40 years of age, and the average score in each of the five questions.
+    """
     ```
 
     [Average per group - result of `correlate_gender_age`](avg_per_group.png)

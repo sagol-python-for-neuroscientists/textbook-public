@@ -85,8 +85,33 @@ def test_fillna_df():
     df.equals(truth)
 
 
+def test_score_exists():
+    fname = 'data.json'
+    q = QuestionnaireAnalysis(fname)
+    q.read_data()
+    df = q.score_subjects()
+    assert "score" in df.columns
+
+
+def test_score_dtype():
+    fname = 'data.json'
+    q = QuestionnaireAnalysis(fname)
+    q.read_data()
+    df = q.score_subjects()
+    assert isinstance(df["score"].dtype, pd.UInt8Dtype)
+
+
+def test_score_results():
+    truth = pd.read_csv('tests_data/q4_score.csv', squeeze=True, index_col=0).astype("UInt8")
+    fname = 'data.json'
+    q = QuestionnaireAnalysis(fname)
+    q.read_data()
+    df = q.score_subjects()
+    assert df["score"].equals(truth)
+
+
 def test_correlation():
-    truth = pd.read_csv('tests_data/q4_corr.csv').set_index(['gender', 'age'])
+    truth = pd.read_csv('tests_data/q5_corr.csv').set_index(['gender', 'age'])
     fname = 'data.json'
     q = QuestionnaireAnalysis(fname)
     q.read_data()

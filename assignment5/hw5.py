@@ -99,17 +99,52 @@ class QuestionnaireAnalysis:
         new_data = pd.concat([self.data.loc[:, :"last_name"], corrected], axis=1)
         return new_data, rows_with_nulls
 
+    def score_subjects(self, maximal_nans_per_sub: int = 1) -> pd.DataFrame:
+        """Calculates the average score of a subject and adds a new "score" column
+        with it.
+
+        If the subject has more than "maximal_nans_per_sub" NaN in his grades, the
+        score should be NA. Otherwise, the score is simply the mean of the other grades.
+        The datatype of score should be 'UInt8', and the floating point raw numbers should be
+        rounded down before the conversion.
+
+        Parameters
+        ----------
+        maximal_nans_per_sub : int, optional
+            Number of allowed NaNs per subject before giving a NA score.
+
+        Returns
+        -------
+        pd.DataFrame
+            A new DF with a new column - "score".
+        """
+        question_columns = self.data.loc[:, "q1":"q5"]
+        self.data["score"] = (
+            question_columns.mean(axis=1).astype("uint8").astype("UInt8")
+        )
+        more_than_maximal_nans_row_indices = (
+            question_columns.isna().sum(axis=1) > maximal_nans_per_sub
+        )
+        self.data.loc[more_than_maximal_nans_row_indices, "score"] = pd.NA
+        return self.data
+
     def correlate_gender_age(self) -> pd.DataFrame:
         """Looks for a correlation between the gender of the subject, their age
         and the score for all five questions.
 
         Returns
         -------
-        df : pd.DataFrame
+        pd.DataFrame
             A DataFrame with a MultiIndex containing the gender and whether the subject is above
-        40 years of age, and the average score in each of the five questions.
+            40 years of age, and the average score in each of the five questions.
         """
         new_df = self.data.set_index(["gender", "age"], append=True)
         grps = new_df.groupby([None, lambda x: x > 40], level=[1, 2])
         return grps.mean().loc[:, "q1":"q5"]
 
+
+if __name__ == "__main__":
+    fname = "data.json"
+    q = QuestionnaireAnalysis(fname)
+    q.read_data()
+    d = q.score_subjects()
