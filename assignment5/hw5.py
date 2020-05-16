@@ -99,18 +99,20 @@ class QuestionnaireAnalysis:
             indices of the students that their new grades were generated
         """
         only_grades = self.data.loc[:, "q1":"q5"]
-        corrected = (
-            only_grades.stack()
-            .unstack(0)
-            .fillna(only_grades.mean(1))
-            .stack()
-            .unstack(0)
-        )
+        # Row indices are calculated by finding any NaN in a row.
         rows_with_nulls = only_grades.loc[
             only_grades.isna().any(axis=1)
         ].index.to_numpy()
-        new_data = pd.concat([self.data.loc[:, :"last_name"], corrected], axis=1)
-        return new_data, rows_with_nulls
+        # To generate the corrected DF we'll construct an identically-sized DF
+        # that contains only the means per students, and we'll use the "where"
+        # method to swap the NA values with the values from the "means" DataFrame.
+        only_means = only_grades.mean(axis=1)
+        only_means = pd.DataFrame({key: only_means for key in only_grades.columns})
+        only_grades = only_grades.where(only_grades.notnull(), only_means)
+
+        updated = self.data.copy()
+        updated.loc[:, "q1":"q5"] = only_grades
+        return updated, rows_with_nulls
 
     def score_subjects(self, maximal_nans_per_sub: int = 1) -> pd.DataFrame:
         """Calculates the average score of a subject and adds a new "score" column
@@ -154,4 +156,3 @@ class QuestionnaireAnalysis:
         new_df = self.data.set_index(["gender", "age"], append=True)
         grps = new_df.groupby([None, lambda x: x > 40], level=[1, 2])
         return grps.mean().loc[:, "q1":"q5"]
-
