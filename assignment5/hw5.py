@@ -153,6 +153,8 @@ class QuestionnaireAnalysis:
             A DataFrame with a MultiIndex containing the gender and whether the subject is above
             40 years of age, and the average score in each of the five questions.
         """
-        new_df = self.data.set_index(["gender", "age"], append=True)
+        new_df = self.data.dropna(axis=0, subset=["age"]).set_index(
+            ["gender", "age"], append=True
+        )
         grps = new_df.groupby([None, lambda x: x > 40], level=[1, 2])
         return grps.mean().loc[:, "q1":"q5"]
