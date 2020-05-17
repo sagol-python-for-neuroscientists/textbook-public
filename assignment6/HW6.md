@@ -1,11 +1,11 @@
 # Homework Assignment #6
 
-### Date: xx-xx-2018
-### Due date: xx-xx-2018
+### Date: 18-05-2020
+### Due date: 01-06-2020
 
 ## Three-dimensional _Submarines_ Game
 
-This homework has but one assignment - design a "Submarines" game. As you might recall,
+This homework has but one assignment - design a "Submarines" game, AKA "Battleship". As you might recall,
 in Submarines each player has a board, hidden from his or her opponent, with "submarine-like" pieces
 placed on it. At each turn a player targets a specific cell in the other player's board, in
 hopes of hitting a marine vessel. The targeted player announces if one of his vessels was
@@ -56,15 +56,17 @@ number of units (but only one General), and the computer should randomly allocat
 each player's board.
 
 ### Grading
+
 No tests are provided, since these will hint towards a "direction" as to how to design this game internally,
 which is exactly what I want you to think about and practice. Hence I will examine closely the following aspects:
 
 1. Simple, clean user API, with clear documentation of the relevant functions.
 2. Extensibility: It shouldn't require much if I want to add another type of piece to the game.
 3. Ability to `show` and `quit` during the game.
-4. Input verification.
-5. Asserting that pieces do not overlap on the board, or go out-of-bounds.
-6. Use of inheritance (and OO in general) and enumerations (`enum` module) is encouraged.
+4. Testing.
+5. Input verification.
+6. Asserting that pieces do not overlap on the board, or go out-of-bounds.
+7. Usage of objects (when needed), enumerations and other Pythonic advanced features where appropriate.
 
 Good luck!
 
