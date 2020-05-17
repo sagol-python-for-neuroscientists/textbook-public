@@ -12,7 +12,7 @@ class Signal(Enum):
 
     HIT = "hit"
     MISS = "miss"
-    KILL = "kill"
+    DESTROYED = "destroyed"
     END = "end"
 
 
@@ -91,7 +91,7 @@ class Jet(GamePiece):
         )
 
     def hit(self, coord):
-        return Signal.KILL
+        return Signal.DESTROYED
 
 
 class Destroyer(GamePiece):
@@ -112,7 +112,7 @@ class Destroyer(GamePiece):
             return Signal.MISS
         else:
             if len(self.locs) == 0:
-                return Signal.KILL
+                return Signal.DESTROYED
             else:
                 return Signal.HIT
 
@@ -125,7 +125,7 @@ class Submarine(GamePiece):
         self.outline = np.array([[1, 1, 1]], dtype=np.int16)
 
     def hit(self, coord):
-        return Signal.KILL
+        return Signal.DESTROYED
 
 
 class SubmarinesPieces(Enum):
@@ -147,7 +147,7 @@ class ThreeDSubmarinesBoard(np.ndarray):
 
     There are 3 "planes" to the board, which are represented by the third dimension.
     Plane 0 is under the sea, plane 1 is at sea-level, and plane 2 is the air.
-    
+
     The pieces attribute is a list containing all active pieces on the board. Once it's empty
     the game is over.
     """
@@ -236,7 +236,7 @@ class ThreeDSubmarinesBoard(np.ndarray):
         """Once the placement was successful, both the board and the piece
         should be notified.
 
-        The method inserts the pieces into the board and updates their 
+        The method inserts the pieces into the board and updates their
         "locs" attributes accordingly.
 
         Parameters
@@ -256,10 +256,10 @@ class ThreeDSubmarinesBoard(np.ndarray):
         and that the cells were empty.
         If indeed so, it places views of the piece object in each cell.
         """
-        MAX_NUMBER_OF_TRIALS_FOR_ALL_PIECES = 50
+        MAX_NUMBER_OF_TRIALS_FOR_ALL_PIECES = 200 
         for piece in self.pieces:
             placed = False
-            trial = 0 
+            trial = 0
             while not placed and trial < MAX_NUMBER_OF_TRIALS_FOR_ALL_PIECES:
                 slice_for_piece = self._create_random_slice_for_piece(piece)
                 try:
@@ -268,7 +268,7 @@ class ThreeDSubmarinesBoard(np.ndarray):
                     pass
                 finally:
                     trial += 1
-            if trial >= 50:
+            if trial >= MAX_NUMBER_OF_TRIALS_FOR_ALL_PIECES:
                 raise UserWarning("Board is too small for all pieces.")
 
             # If we reached here then the piece fits this location
@@ -285,8 +285,11 @@ class ThreeDSubmarinesBoard(np.ndarray):
         if cell == 0:
             return Signal.MISS
         sig = cell.hit(coord)
-        if sig is Signal.KILL:
-            self.pieces.remove(cell)
+        if sig is Signal.DESTROYED:
+            try:
+                self.pieces.remove(cell)
+            except ValueError:  # already killed
+                pass
             if len(self.pieces) == 1:
                 sig = Signal.END
         return sig
@@ -342,7 +345,7 @@ class SubmarinesGame:
 
     def _parse_coord_user_str_into_tuple(self, coord: str) -> tuple:
         """Takes the given string and parses it into a coordinate tuple.
-        
+
         This function doesn't deal with the verification of the actual
         number of coordinates, it only transforms strings to tuples.
 
@@ -410,7 +413,7 @@ class SubmarinesGame:
             values per axis otherwise.
         """
         coor = input(
-            f"{self.players[self.move % 2]}, what is the coordinate you're targeting (x, y, z)?"
+            f"{self.players[self.move % 2]}, what is the coordinate you're targeting (x, y, z)? "
         )
         if coor == "quit":
             raise SystemExit("Quitting")

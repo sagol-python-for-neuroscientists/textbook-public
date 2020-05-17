@@ -52,7 +52,7 @@ class TestGamePieces:
 
     def test_pieces_jet_hit_is_kill(self):
         j = Jet(1)
-        assert Signal.KILL is j.hit(1)
+        assert Signal.DESTROYED is j.hit(1)
 
     def test_pieces_jet_pid_in_outline(self):
         pid = 31
@@ -84,11 +84,11 @@ class TestGamePieces:
         d = Destroyer(3)
         d.locs = [[0, 1, 1]]
         sig = d.hit([0, 1, 1])
-        assert sig is Signal.KILL
+        assert sig is Signal.DESTROYED
 
     def test_pieces_submarine_hit_results_in_kill(self):
         s = Submarine(10)
-        assert Signal.KILL is s.hit(1)
+        assert Signal.DESTROYED is s.hit(1)
 
 
 @pytest.fixture()
