@@ -1,6 +1,3 @@
-"""
-__author__ = Hagai Har-Gil
-"""
 import pytest
 import numpy as np
 
