@@ -256,7 +256,7 @@ class ThreeDSubmarinesBoard(np.ndarray):
         and that the cells were empty.
         If indeed so, it places views of the piece object in each cell.
         """
-        MAX_NUMBER_OF_TRIALS_FOR_ALL_PIECES = 200 
+        MAX_NUMBER_OF_TRIALS_FOR_ALL_PIECES = 200
         for piece in self.pieces:
             placed = False
             trial = 0
