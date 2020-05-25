@@ -78,7 +78,9 @@ def test_fillna_rows():
 
 
 def test_fillna_df():
-    truth = pd.read_csv("tests_data/q3_fillna.csv", index_col=False, parse_dates=['timestamp']).drop('Unnamed: 0', axis=1)
+    truth = pd.read_csv(
+        "tests_data/q3_fillna.csv", index_col=False, parse_dates=["timestamp"]
+    ).drop("Unnamed: 0", axis=1)
     fname = "data.json"
     q = QuestionnaireAnalysis(fname)
     q.read_data()

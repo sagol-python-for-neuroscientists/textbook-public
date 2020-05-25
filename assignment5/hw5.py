@@ -87,6 +87,39 @@ class QuestionnaireAnalysis:
             and (email[email.find("@") + 1] != ".")
         )
 
+    def _find_rows_with_nulls(self) -> np.ndarray:
+        """Finds rows which contain at least one NA
+        and returns their index as an array.
+
+        Returns
+        -------
+        np.ndarray
+            Indices of rows with at least one NA.
+        """
+        only_grades = self.data.loc[:, "q1":"q5"]
+        rows_with_nulls = only_grades.loc[
+            only_grades.isna().any(axis=1)
+        ].index.to_numpy()
+        return rows_with_nulls
+
+    def _fill_na_with_mean(self) -> pd.DataFrame:
+        """Fills the dataframe with means instead of NAs.
+
+        To generate the corrected DF we'll construct an identically-sized DF
+        that contains only the means per students, and we'll use the "where"
+        method to swap the NA values with the values from the "means" DataFrame.
+
+        Returns
+        -------
+        pd.DataFrame
+            DF with the mean of the row instead of the NA value
+        """
+        only_grades = self.data.loc[:, "q1":"q5"]
+        only_means = only_grades.mean(axis=1)
+        only_means = pd.DataFrame({key: only_means for key in only_grades.columns})
+        only_grades = only_grades.where(only_grades.notnull(), only_means)
+        return only_grades
+
     def fill_na_with_mean(self) -> Tuple[pd.DataFrame, np.ndarray]:
         """Finds, in the original DataFrame, the subjects that didn't answer
         all questions, and replaces that missing value with the mean of the
@@ -98,18 +131,8 @@ class QuestionnaireAnalysis:
             The corrected DataFrame after insertion of the mean grade and row
             indices of the students that their new grades were generated
         """
-        only_grades = self.data.loc[:, "q1":"q5"]
-        # Row indices are calculated by finding any NaN in a row.
-        rows_with_nulls = only_grades.loc[
-            only_grades.isna().any(axis=1)
-        ].index.to_numpy()
-        # To generate the corrected DF we'll construct an identically-sized DF
-        # that contains only the means per students, and we'll use the "where"
-        # method to swap the NA values with the values from the "means" DataFrame.
-        only_means = only_grades.mean(axis=1)
-        only_means = pd.DataFrame({key: only_means for key in only_grades.columns})
-        only_grades = only_grades.where(only_grades.notnull(), only_means)
-
+        rows_with_nulls = self._find_rows_with_nulls()
+        only_grades = self._fill_na_with_mean()
         updated = self.data.copy()
         updated.loc[:, "q1":"q5"] = only_grades
         return updated, rows_with_nulls
