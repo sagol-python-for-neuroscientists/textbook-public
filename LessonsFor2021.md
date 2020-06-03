@@ -11,6 +11,8 @@
 * HW3 - FolderIterator question is a difficult nut to crack. It's "technical" in a way, but it also has some very important aspects to it. It forces people to debug their code, it makes them use Pathlib (somewhat) effectively, it teaches about properties of different collections (inserting new keys in dicts overrides existing ones, list(set(list())) destroys ordering) but it also keeps giving students the sense that everything they're doing is right, but the tests are wrong.
 * Move the "assignment 2 comments" from the start of class 4 to the start of class 3, or perhaps class 2?
 * Seaborn should receive a larger emphasis when plotting. Bascially 99% of plots can be accomplished using seaborn with ease. If we start numpy earlier then seaborn can take more space, instead of the unneeded parts on OOP.
+* Configuring VSCode to work with pytest as its default test runner isn't written anywhere.
 * Computational pipelines library? Dask? Luigi? Something simpler?
 * I added a bunch of visualization library information in class 8. It might be a bit too much.
 * I changed class 9 (testing) to talk more about testing in general and less about TDD. I feel like TDD is a major change which is very difficult to do in such a short period of time, and TDD is just a technique - writing tests is the issue here, not how you write them, or what do you write first. Class 9 also became very "interactive" in nature because of that, which is good I believe.
+* I added a new class with more libraries and more information about git, mainly for the hackathon.

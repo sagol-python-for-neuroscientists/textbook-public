@@ -24,3 +24,4 @@ def normalize_array(arr: np.ndarray) -> np.ndarray:
     max_ = arr.max()
     return arr if np.isclose(max_, 0.) else arr / max_
 
+
