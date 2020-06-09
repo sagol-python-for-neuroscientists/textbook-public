@@ -113,3 +113,4 @@ XDG*/
 *.csv
 classes/data.txt
 .vscode/
+dask-worker-space/
