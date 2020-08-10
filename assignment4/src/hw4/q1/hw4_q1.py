@@ -2,7 +2,6 @@
 Compute the Mandelbrot fractal
 """
 import numpy as np
-import matplotlib
 import matplotlib.pyplot as plt
 
 
@@ -52,5 +51,5 @@ if __name__ == "__main__":
     fig, ax = plt.subplots()
     ax.imshow(mandelbrot_set.T, extent=[-2, 1, -1.5, 1.5], cmap="gray")
     ax.axis('off')
-    plt.show()
-    fig.savefig("mandelbrot.png")
+    plt.show(block=True)
+    fig.savefig("results/mandelbrot.png")

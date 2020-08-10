@@ -1,0 +1,8 @@
+__version__ = "0.1.0"
+__title__ = "Homework 4"
+__description__ = "HW4 for the Sagol school Python for Neuroscience course"
+__url__ = "https://github.com/sagol-python-for-neuroscientists/hw4"
+__doc__ = __description__ + " <" + __url__ + ">"
+__author__ = "Hagai Har-Gil"
+__email__ = "hagaihargil@protonmail.com"
+__license__ = "MIT"

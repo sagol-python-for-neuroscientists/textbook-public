@@ -1,11 +1,9 @@
 import pathlib
 
-import pandas as pd
-
-from hw4_q3 import *
+from hw4.q3.hw4_q3 import *
 
 
-fname = pathlib.Path('311_service_requests.zip')
+fname = pathlib.Path('data/311_service_requests.zip').resolve()
 
 
 def test_common_complaint():

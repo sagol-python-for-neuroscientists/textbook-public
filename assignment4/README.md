@@ -7,6 +7,8 @@
 
 **Tests are run with `pytest`. It's time to learn how to use it :)**
 
+**Read below to see how to structure your files for this project. You should start working on the HW from there.**
+
 1. _Mandelbrot Set:_
 
     A number is a part of the [Mandelbrot set](https://www.youtube.com/watch?v=FFftmWSzgmk) if `|z| < thresh`,
@@ -14,7 +16,8 @@
     Write a function that computes a 2D binary mask of the numbers that belong to the set, in the
     grid [-2, 1], [-1.5, 1.5], after `n` iterations.
     The correctness is checked qualitatively with the resulting 2D image, easily generated with `matplotlib` - an example is attached.
-    Use the `extent` keyword for the `imshow` function to show image with the right boundaries.
+    Use the `extent` keyword for the `imshow` function to show image with the right boundaries. Save the resulting image
+    in the `results` folder under the name `mandelbrot.png`.
 
     ```python
     def mandel(
@@ -43,6 +46,7 @@
         img : np.ndarray
             A binary image with a value of 1 if the point belongs to the set.
             The shape of the resulting image is (nx, ny).
+        Also saves "mandelbrot.png" to the "results" folder.
         """
     ```
 
@@ -53,8 +57,11 @@ solutions.
 
 2. _Basic Data Manipulation:_
 
-    The repo contains `populations.txt`, a small data file containing a table with observations
-    of the number of individual animals each year.
+    The repo contains `data/populations.txt`, a small data file containing a table with observations
+    of the number of individual animals each year. Create `hw4/q2/data_loading.py` which contains
+    (at least) one function called `load_data` which receives the filename and returns a dataframe.
+    All functions which are defined below should use this `load_data` function to load their data by
+    `import`ing it from `data_loading`.
 
     i. Which species has the largest population in each year? Write the following function:
 
@@ -121,7 +128,11 @@ solutions.
 
 3. _More Data Munching:_
 
-    Download the NYC 311 service requests data from [here](https://osf.io/3a6qs), and read it with pandas.
+    Download the NYC 311 service requests data from [here](https://osf.io/3a6qs) to the `data` folder, and read it with pandas by creating `hw4/q3/data_loading.py` which should contain
+    (at least) one function called `load_data` which receives the filename and returns a dataframe.
+    All functions which are defined below should use this `load_data` function to load their data by
+    `import`ing it from `data_loading`.
+
 
     i. What is the most common complaint? Write a function that returns a tuple
     with the complaint name and number of occasions it was reported.
@@ -163,3 +174,67 @@ solutions.
     ```
 
     Please don't push the `.zip` (or `.csv`) file into your repository for the submission.
+
+
+## More Submission Instructions
+
+One of the goals of this HW is to show an example of how a real Python project is constructed. "Real" in this sense means that we're not writing a few "loosely connected" files for some insignificant homework assignment. Instead we're emulating the way in which a major Python application will be built in terms of the folder structure and the usability aspect. Accordingly some of the tests in the repo don't test the actual performance of your code, but instead test whether it was structured correctly.
+
+The folder structure for this project, which we'll call `hw4`, should be as follows:
+
+```
+SagolPythonHW4
+|   README.md
+|   setup.py
+|   LICENSE
+|   .gitignore
+└--- src
+|    └--- hw4
+|    |    |    __init__.py
+|    |    └--- q1
+|    |    |    |   __init__.py
+|    |    |    |   hw4_q1.py
+|    |    └--- q2
+|    |    |    |    __init__.py
+|    |    |    |    data_loading.py
+|    |    |    |    hw4_q2.py
+|    |    └--- q3
+|    |    |    |    __init__.py
+|    |    |    |    data_loading.py
+|    |    |    |    hw4_q3.py
+└--- tests
+|    └--- tests_data
+|    |    |    q3_largest.csv
+|    |    |    q3_lynx.csv
+|    |    |    q3_mean.csv
+|    |    test_folder_structure.py
+|    |    test_q2.py
+|    |    test_q3.py
+└--- data
+|    |    311_service_requests.zip
+|    |    populations.txt
+└--- results
+|    |    mandelbrot.png
+```
+
+### Notes:
+
+1. The name of the top folder, `SagolPythonHW4` is not important. You may call it however you'd like.
+2. When we `import` this project, the name is determined by what will be written inside `setup.py` and by the name of the folder under `src`, which is `hw4` in this case. This is the __project's name__ - `numpy` for Numpy, `pandas` for Pandas, etc.
+3. Each folder which contains Python code inside it, or in one of its subfolders, should include a `__init__.py` file. We have four of these in this project.
+4. The filenames themselves (e.g. `hw4_q2.py`) don't have to have the project's name (`hw4`) in their filename in general. It's done here for clarity.
+5. Again, this is a bit of an overkill for a simple home assignment. The goal here is to show you how to build your real-life, research-focused project.
+
+Once you have this tree set up, you should start filling in the files with actual content:
+
+1. Follow the steps in the file `create_and_publish_package.ipynb` which can be found in the course's website. The project there is named `parse_stuff` and here we called it `hw4`, so make sure to swap these two names. Besides that, it should help you populate `setup.py`, `LICENSE`, `.gitignore` and `src/hw4/__init__.py`.
+2. Follow the steps up to and including `pip install -e .`.
+3. Check that you can indeed import your new package. Start a Python instance (`python`) and try to `import hw4`. It should Just Work™.
+
+Now you're ready to work on the code itself. A few additional points:
+
+1. Question 1 should output the `mandelbrot.png` file to the `results` folder.
+2. Questions 2 & 3 require you to read some data. This function should live inside `data_loading.py`, in the respective `q2`/`q3` folder, and the code in `q2/hw4_q2.py` or `q3/hw4_q3.py` should import it.
+3. The tests will only run if the installation step was successful, since they treat this package as an "external" package (look for the `from hw4.q2.hw4_q2 import *` line, for example). It means that they import it much like they would any other package. It also means that you won't be able to test anything before you actually finish installing the project correctly.
+
+
