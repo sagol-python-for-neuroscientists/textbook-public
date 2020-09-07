@@ -1,0 +1,26 @@
+title: Python for Neuroscience
+author: Dr. Hagai Hargil, Zvi Baratz
+logo: logo.png
+
+execute:
+  allow_errors: true
+
+parse:
+  myst_extended_syntax: true
+
+repository:
+  url: https://github.com/sagol-python-for-neuroscientists/textbook
+  path_to_book: source/
+
+html:
+  home_page_in_navbar: true
+  use_issues_button: true
+
+launch_buttons:
+  binderhub_url: https://mybinder.org
+
+latex:
+  latex_documents:
+    targetname: book.tex
+
+exclude_patterns: ["*skip*"]
