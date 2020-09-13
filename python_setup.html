@@ -1,0 +1,312 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Setting Up Your Python Stack &#8212; Python for Neuroscience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Class 0" href="classes/class_0/class_0.html" />
+    <link rel="prev" title="Contents" href="contents.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Python for Neuroscience</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="contents.html">
+   Contents
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Setting Up Your Python Stack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classes/class_0/class_0.html">
+     Class 0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classes/class_1/class_1.html">
+     Class 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classes/create_git_repo.html">
+     How to create your own git repository and synchronize its online and offline parts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="resources.html">
+   Useful Pythonic Resources
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/python_setup.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        
+        <a class="issues-button"
+            href="https://github.com/sagol-python-for-neuroscientists/textbook/issues/new?title=Issue%20on%20page%20%2Fpython_setup.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-1-python-setup">
+   Task 1: Python Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-version-control">
+   Task 2: Version Control
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extra-jupyter-notebook">
+   Extra: Jupyter Notebook
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="setting-up-your-python-stack">
+<h1>Setting Up Your Python Stack<a class="headerlink" href="#setting-up-your-python-stack" title="Permalink to this headline">¶</a></h1>
+<p>Below you can find the tools we’ll use throughout the semester to work with Python. Please complete these technical tasks as soon as possible.</p>
+<div class="section" id="task-1-python-setup">
+<h2>Task 1: Python Setup<a class="headerlink" href="#task-1-python-setup" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>In the course we’ll use Python 3.7/3.8, the latest Python versions. The easiest way to install Python is via Anaconda, a popular Python distribution for the scientific community. We’ll get to know Anaconda throughout the course.</p></li>
+<li><p>Download <strong>Miniconda</strong> from <a class="reference external" href="https://conda.io/miniconda.html">here</a> for Python 3.7/3.8 (64 bit). Miniconda contains the Python interpreter, i.e. the software that can run Python code, and grants you the ability to install third party libraries for Python, which will become very useful later in the course. We’ll explore Miniconda’s other important features throughout the course.</p></li>
+<li><p>During Miniconda’s installation you have to make sure to install in for “All Users”. You’ll also be asked whether to use conda’s Python as the system’s default Python and add it to the PATH. <strong>Please check these options.</strong></p></li>
+<li><p>Now that you have Python installed, you probably want to write some code to go along with it. Python code can be written in any editor, as long as the file is saved with a <code class="docutils literal notranslate"><span class="pre">.py</span></code> suffix. However, some editors are better than others, containing more features and making the developers’ lives easier. In this course I <em>highly recommend</em> using Visual Studio Code (VSCode) as your main editor, especially if you have no previous Python experience. To install it, download it from its <a class="reference external" href="https://code.visualstudio.com/Download">download page</a>. After installing it, you’ll also have to install the Python Extension, which can be found either inside VSCode (in the extensions menu on the left side of your screen) or from <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">here</a>.</p></li>
+<li><p>If you’re on a Windows machine, it’s better to change the default VSCode terminal to the command prompt. Do so by opening the bottom terminal (“View” -&gt; “Terminal”), click the downfacing arrow to the left of the “+” sign, click “Select default shell” in the menu and choose the command prompt (<code class="docutils literal notranslate"><span class="pre">cmd</span></code>). You’ll need to re-open VSCode for this change to take effect.</p></li>
+<li><p>Later on in the course we’ll need <code class="docutils literal notranslate"><span class="pre">pytest</span></code>, but let’s make it to work with VSCode right now. Go to your settings (<code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">,</span></code>) and search for “pytest”. Then check the “Python -&gt; Testing -&gt; pytest enabled” option.</p></li>
+<li><p>Lastly, you’ll have to help VSCode find your Python installation. After opening a <code class="docutils literal notranslate"><span class="pre">.py</span></code> file (you can create one just for this purpose), click on the yellow “Select Python Environment” button on the bottom left side of your screen and select from the list the conda “base” environment.</p></li>
+<li><p>That’s it! Python is installed and you’re ready to code.
+Note: After that Python installation will finish you’ll probably receive quite a few prompts from VSCode regarding the installation of different packages and libraries. Feel free to press Yes on all of them, they’re not malware and they’ll generally improve the behavior of the editor.</p></li>
+</ol>
+</div>
+<div class="section" id="task-2-version-control">
+<h2>Task 2: Version Control<a class="headerlink" href="#task-2-version-control" title="Permalink to this headline">¶</a></h2>
+<p>Scripts are saved and catalogued using version control. The application we’ll use this semester is called <code class="docutils literal notranslate"><span class="pre">git</span></code>, and as a web interface we’ll use GitHub.com.</p>
+<p>To install <code class="docutils literal notranslate"><span class="pre">git</span></code>, go <a class="reference external" href="https://git-scm.com/downloads">here</a>, download the client for your operating system and install it. Before using it you’ll have to tell <code class="docutils literal notranslate"><span class="pre">git</span></code> who you are. Open a new command-line session, i.e. one that was opened after you finished installing <code class="docutils literal notranslate"><span class="pre">git</span></code>, and write the following two commands (with the proper values replaced):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global user.name <span class="s2">&quot;MY_NAME&quot;</span>
+git config --global user.email <span class="s2">&quot;MY_EMAIL_ADDRESS&quot;</span>
+</pre></div>
+</div>
+<p>The actual username and email don’t matter that much, they just identify you when looking at your commits.</p>
+<!--
+## Task 3: Repl.it
+
+The first exercise will be written, run and submitted using `repl.it`, a website in which you can write and execute Python code, alongside many other languages. Please [go there](https://repl.it/repls) and sign up. Then go to [our classroom](https://repl.it/community/classrooms/136766) and click "Take and Learn" to enroll yourself. You should see the details of your first assignment there. Submission is also done through the `repl.it` interface. -->
+</div>
+<div class="section" id="extra-jupyter-notebook">
+<h2>Extra: Jupyter Notebook<a class="headerlink" href="#extra-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+<p>The classes are posted in an editable Jupyter Notebook format, which allows for live coding and easy code presentation. It’s also a great tool for “quick-and-dirty” data analysis. Thus I recommend you to install it and use it throughout the semester and beyond.</p>
+<ol class="simple">
+<li><p>Open a command line and write <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">jupyter</span> <span class="pre">notebook</span></code>.</p></li>
+<li><p>The notebook is installed! Run it with a simple <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> command in the command line. It will open a file browser which you can use to navigate to the folder containing existing notebooks, or to the folder in which you wish to create a new one.</p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="contents.html" title="previous page">Contents</a>
+    <a class='right-next' id="next-link" href="classes/class_0/class_0.html" title="next page">Class 0</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Dr. Hagai Hargil, Zvi Baratz<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>

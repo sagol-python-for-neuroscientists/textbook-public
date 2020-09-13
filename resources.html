@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Useful Pythonic Resources &#8212; Python for Neuroscience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="How to create your own git repository and synchronize its online and offline parts" href="classes/create_git_repo.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Python for Neuroscience</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="contents.html">
+   Contents
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Useful Pythonic Resources
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/resources.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        
+        <a class="issues-button"
+            href="https://github.com/sagol-python-for-neuroscientists/textbook/issues/new?title=Issue%20on%20page%20%2Fresources.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-python">
+   General Python:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scientific-python">
+   Scientific Python:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-programming">
+   General Programming:
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="useful-pythonic-resources">
+<h1>Useful Pythonic Resources<a class="headerlink" href="#useful-pythonic-resources" title="Permalink to this headline">¶</a></h1>
+<p>Please suggest pull requests with useful websites and PDFs that you find during the semester.</p>
+<div class="section" id="general-python">
+<h2>General Python:<a class="headerlink" href="#general-python" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://blog.thedigitalcatonline.com/blog/2014/08/20/python-3-oop-part-1-objects-and-types/">Python Object Oriented Programming</a></p></li>
+<li><p><a class="reference external" href="http://www.davekuhlman.org/python_book_01.html">A Python Book</a>, by Dave Kuhlman</p></li>
+<li><p><a class="reference external" href="http://www.bogotobogo.com/python/files/pytut/Python%20Essential%20Reference,%20Fourth%20Edition%20(2009).pdf">Python Essential Reference</a>, by David Beazley</p></li>
+<li><p><a class="reference external" href="https://www.codecademy.com/learn/learn-python">Code Academy</a> - basics</p></li>
+<li><p><a class="reference external" href="https://conda.io/docs/user-guide/getting-started.html">Setting up <code class="docutils literal notranslate"><span class="pre">conda</span></code></a></p></li>
+<li><p>Fluent Python (PDF in this repo) - relatively advanced</p></li>
+</ul>
+</div>
+<div class="section" id="scientific-python">
+<h2>Scientific Python:<a class="headerlink" href="#scientific-python" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://realpython.com/blog/python/python-matplotlib-guide/">Matplotlib tutorial</a></p></li>
+<li><p><a class="reference external" href="https://www.machinelearningplus.com/101-numpy-exercises-python/">101 Numpy exercises</a></p></li>
+<li><p><a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook">Python Data Science Handbook</a>, by Jake Vanderplas</p></li>
+<li><p><a class="reference external" href="https://docs.scipy.org/doc/numpy-dev/user/numpy-for-matlab-users.html">Numpy for MATLAB users</a></p></li>
+<li><p><a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/dsintro.html">Introduction to pandas data structures</a></p></li>
+<li><p><a class="reference external" href="http://www.scipy-lectures.org/">Scipy Lecture Notes</a></p></li>
+<li><p><a class="reference external" href="https://realpython.com/matlab-vs-python/">Python and Matlab</a></p></li>
+</ul>
+</div>
+<div class="section" id="general-programming">
+<h2>General Programming:<a class="headerlink" href="#general-programming" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://software-carpentry.org/lessons/">Software Carpentry</a> - wide variety of lessons</p></li>
+<li><p><a class="reference external" href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners">Git and GitHub tutorial</a></p></li>
+<li><p><a class="reference external" href="http://www.patrickzahnd.ch/uploads/git-transport-v1.png">Git Cheat Sheet, by Patrick Zahnd</a></p></li>
+<li><p>Best practices for software development - <a class="reference external" href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">Article 1</a>, <a class="reference external" href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510">Article 2</a>, <a class="reference external" href="https://www.youtube.com/watch?v=wkboQuY8Tjg&amp;t=550s">Video</a></p></li>
+<li><p><a class="reference external" href="https://lab.github.com/">GitHub interactive course</a></p></li>
+<li><p><a class="reference external" href="https://software-carpentry.org/">Software Carpentry</a> - intro to Python, git, testing, etc.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="classes/create_git_repo.html" title="previous page">How to create your own git repository and synchronize its online and offline parts</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Dr. Hagai Hargil, Zvi Baratz<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>
