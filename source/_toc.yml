@@ -1,8 +1,10 @@
 - file: intro
 - file: contents
   sections:
-    - file: python_setup
     - file: classes/class_0/class_0
     - file: classes/class_1/class_1
-    - file: classes/create_git_repo
+- file: tutorials
+  sections:
+    - file: tutorials/python_setup
+    - file: tutorials/create_git_repo
 - file: resources
