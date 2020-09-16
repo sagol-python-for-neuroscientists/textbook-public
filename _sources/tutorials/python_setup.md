@@ -1,18 +1,20 @@
-# Setting Up Your Python Stack
+(python-setup)=
+
+# Python Setup
 
 Below you can find the tools we'll use throughout the semester to work with Python. Please complete these technical tasks as soon as possible.
 
 ## Task 1: Python Setup
 
 1. In the course we'll use Python 3.7/3.8, the latest Python versions. The easiest way to install Python is via Anaconda, a popular Python distribution for the scientific community. We'll get to know Anaconda throughout the course.
-2. Download __Miniconda__ from [here](https://conda.io/miniconda.html) for Python 3.7/3.8 (64 bit). Miniconda contains the Python interpreter, i.e. the software that can run Python code, and grants you the ability to install third party libraries for Python, which will become very useful later in the course. We'll explore Miniconda's other important features throughout the course.
-3. During Miniconda's installation you have to make sure to install in for "All Users". You'll also be asked whether to use conda's Python as the system's default Python and add it to the PATH. __Please check these options.__
+2. Download **Miniconda** from [here](https://conda.io/miniconda.html) for Python 3.7/3.8 (64 bit). Miniconda contains the Python interpreter, i.e. the software that can run Python code, and grants you the ability to install third party libraries for Python, which will become very useful later in the course. We'll explore Miniconda's other important features throughout the course.
+3. During Miniconda's installation you have to make sure to install in for "All Users". You'll also be asked whether to use conda's Python as the system's default Python and add it to the PATH. **Please check these options.**
 4. Now that you have Python installed, you probably want to write some code to go along with it. Python code can be written in any editor, as long as the file is saved with a `.py` suffix. However, some editors are better than others, containing more features and making the developers' lives easier. In this course I _highly recommend_ using Visual Studio Code (VSCode) as your main editor, especially if you have no previous Python experience. To install it, download it from its [download page](https://code.visualstudio.com/Download). After installing it, you'll also have to install the Python Extension, which can be found either inside VSCode (in the extensions menu on the left side of your screen) or from [here](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
 5. If you're on a Windows machine, it's better to change the default VSCode terminal to the command prompt. Do so by opening the bottom terminal ("View" -> "Terminal"), click the downfacing arrow to the left of the "+" sign, click "Select default shell" in the menu and choose the command prompt (`cmd`). You'll need to re-open VSCode for this change to take effect.
 6. Later on in the course we'll need `pytest`, but let's make it to work with VSCode right now. Go to your settings (`Ctrl + ,`) and search for "pytest". Then check the "Python -> Testing -> pytest enabled" option.
 7. Lastly, you'll have to help VSCode find your Python installation. After opening a `.py` file (you can create one just for this purpose), click on the yellow "Select Python Environment" button on the bottom left side of your screen and select from the list the conda "base" environment.
 8. That's it! Python is installed and you're ready to code.
-Note: After that Python installation will finish you'll probably receive quite a few prompts from VSCode regarding the installation of different packages and libraries. Feel free to press Yes on all of them, they're not malware and they'll generally improve the behavior of the editor.
+   Note: After that Python installation will finish you'll probably receive quite a few prompts from VSCode regarding the installation of different packages and libraries. Feel free to press Yes on all of them, they're not malware and they'll generally improve the behavior of the editor.
 
 ## Task 2: Version Control
 
@@ -26,6 +28,7 @@ git config --global user.email "MY_EMAIL_ADDRESS"
 ```
 
 The actual username and email don't matter that much, they just identify you when looking at your commits.
+
 <!--
 ## Task 3: Repl.it
 

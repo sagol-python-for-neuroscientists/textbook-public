@@ -36,7 +36,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Class 1" href="../class_1/class_1.html" />
-    <link rel="prev" title="Setting Up Your Python Stack" href="../../python_setup.html" />
+    <link rel="prev" title="Contents" href="../../contents.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -82,11 +82,6 @@
    Contents
   </a>
   <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../python_setup.html">
-     Setting Up Your Python Stack
-    </a>
-   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Class 0
@@ -97,12 +92,12 @@
      Class 1
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../create_git_repo.html">
-     How to create your own git repository and synchronize its online and offline parts
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tutorials.html">
+   Tutorials
+  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../resources.html">
@@ -1227,7 +1222,10 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f41a0888940&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7fce1c332940&gt;, -100]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -1291,9 +1289,9 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The original list:
-[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f41a0888940&gt;, -100]
+[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7fce1c332940&gt;, -100]
 l[0]: 1
-l[5]: &lt;function always_return_2 at 0x7f41a0888940&gt;
+l[5]: &lt;function always_return_2 at 0x7fce1c332940&gt;
 l[0:2]: [1, &#39;2&#39;]
 </pre></div>
 </div>
@@ -1307,7 +1305,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7f41a0888940&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7fce1c332940&gt;
 </pre></div>
 </div>
 </div>
@@ -1387,7 +1385,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7f41a0888940&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7fce1c332940&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
 </pre></div>
 </div>
 </div>
@@ -1400,7 +1398,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7f41a0888940&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7fce1c332940&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1585,7 +1583,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;c&#39;, &#39;e&#39;, &#39;a&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;e&#39;, &#39;a&#39;, &#39;c&#39;}
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
@@ -1677,7 +1675,10 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 4} - {3, 4, 5, 6} = {1, 2}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 4} 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- {3, 4, 5, 6} = {1, 2}
 </pre></div>
 </div>
 </div>
@@ -1810,7 +1811,7 @@ list_without_dups = list(set(list_with_dups))
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../../python_setup.html" title="previous page">Setting Up Your Python Stack</a>
+    <a class='left-prev' id="prev-link" href="../../contents.html" title="previous page">Contents</a>
     <a class='right-next' id="next-link" href="../class_1/class_1.html" title="next page">Class 1</a>
 
     </div>
