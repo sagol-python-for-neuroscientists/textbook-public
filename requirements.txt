@@ -4,4 +4,5 @@ numpy~=1.19
 pandas~=1.1
 seaborn~=0.10
 sklearn
+sphinx-tabs~=1.3
 statsmodels~=0.11

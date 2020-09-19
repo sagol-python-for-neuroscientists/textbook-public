@@ -1,42 +1,42 @@
-(python-setup)=
+(general-setup)=
 
-# Python Setup
+# General Setup
 
-Below you can find the tools we'll use throughout the semester to work with Python. Please complete these technical tasks as soon as possible.
+## Installing Python
 
-## Task 1: Python Setup
+<center><img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png" width="200px"></img></center>
 
-1. In the course we'll use Python 3.7/3.8, the latest Python versions. The easiest way to install Python is via Anaconda, a popular Python distribution for the scientific community. We'll get to know Anaconda throughout the course.
-2. Download **Miniconda** from [here](https://conda.io/miniconda.html) for Python 3.7/3.8 (64 bit). Miniconda contains the Python interpreter, i.e. the software that can run Python code, and grants you the ability to install third party libraries for Python, which will become very useful later in the course. We'll explore Miniconda's other important features throughout the course.
-3. During Miniconda's installation you have to make sure to install in for "All Users". You'll also be asked whether to use conda's Python as the system's default Python and add it to the PATH. **Please check these options.**
-4. Now that you have Python installed, you probably want to write some code to go along with it. Python code can be written in any editor, as long as the file is saved with a `.py` suffix. However, some editors are better than others, containing more features and making the developers' lives easier. In this course I _highly recommend_ using Visual Studio Code (VSCode) as your main editor, especially if you have no previous Python experience. To install it, download it from its [download page](https://code.visualstudio.com/Download). After installing it, you'll also have to install the Python Extension, which can be found either inside VSCode (in the extensions menu on the left side of your screen) or from [here](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
-5. If you're on a Windows machine, it's better to change the default VSCode terminal to the command prompt. Do so by opening the bottom terminal ("View" -> "Terminal"), click the downfacing arrow to the left of the "+" sign, click "Select default shell" in the menu and choose the command prompt (`cmd`). You'll need to re-open VSCode for this change to take effect.
-6. Later on in the course we'll need `pytest`, but let's make it to work with VSCode right now. Go to your settings (`Ctrl + ,`) and search for "pytest". Then check the "Python -> Testing -> pytest enabled" option.
-7. Lastly, you'll have to help VSCode find your Python installation. After opening a `.py` file (you can create one just for this purpose), click on the yellow "Select Python Environment" button on the bottom left side of your screen and select from the list the conda "base" environment.
-8. That's it! Python is installed and you're ready to code.
-   Note: After that Python installation will finish you'll probably receive quite a few prompts from VSCode regarding the installation of different packages and libraries. Feel free to press Yes on all of them, they're not malware and they'll generally improve the behavior of the editor.
+Please follow the [Real Python](https://realpython.com/) website's [excellent tutorial](https://realpython.com/installing-python/) to setup Python on your operating system.
 
-## Task 2: Version Control
+## Installing an IDE
 
-Scripts are saved and catalogued using version control. The application we'll use this semester is called `git`, and as a web interface we'll use GitHub.com.
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" width="100px"></img></center><br />
 
-To install `git`, go [here](https://git-scm.com/downloads), download the client for your operating system and install it. Before using it you'll have to tell `git` who you are. Open a new command-line session, i.e. one that was opened after you finished installing `git`, and write the following two commands (with the proper values replaced):
+Now that you have Python installed, you're going to want to write some code to run with it. Python code can be written in any editor, as long as the file is saved with a `.py` suffix. However, not all editors were made equal. In this course, I _highly recommend_ using [Visual Studio Code (VSCode)](https://code.visualstudio.com) as your main editor, especially if you have no prior Python experience.
 
-```bash
-git config --global user.name "MY_NAME"
-git config --global user.email "MY_EMAIL_ADDRESS"
-```
+- Download and install VSCode from its [download page](https://code.visualstudio.com/Download).
+- Install the Python Extension:
+  - Inside VSCode press the <img src="vsc_extensions.png" alt="VSC Extensions Marketplace" width="30" style="display:inline"></img> (or Ctrl+Shift+X), search for Python and install it.
+    _or_
+  - From the VSC Marketplace website ([here](https://marketplace.visualstudio.com/items?itemName=ms-python.python)).
+- Help VSCode find your Python installation. After opening a `.py` file (you can create one just for this purpose), click on the yellow "Select Python Environment" button on the bottom left side of your screen and select the latest installed Python version.
 
-The actual username and email don't matter that much, they just identify you when looking at your commits.
+:::{note}
+If you're on a Windows machine, it's better to change the default VSCode terminal to the command prompt. Do so by opening the bottom terminal ("View" -> "Terminal", or Ctrl+\`), click the downfacing arrow to the left of the "+" sign, click "Select default shell" in the menu and choose the command prompt (`cmd`). You'll need to re-open VSCode for this change to take effect.
+:::
 
-<!--
-## Task 3: Repl.it
+## Installing Git
 
-The first exercise will be written, run and submitted using `repl.it`, a website in which you can write and execute Python code, alongside many other languages. Please [go there](https://repl.it/repls) and sign up. Then go to [our classroom](https://repl.it/community/classrooms/136766) and click "Take and Learn" to enroll yourself. You should see the details of your first assignment there. Submission is also done through the `repl.it` interface. -->
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1024px-Git-logo.svg.png" width="120px"></img></center><br />
 
-## Extra: Jupyter Notebook
+Code is archived and catalogued using [version control](https://en.wikipedia.org/wiki/Version_control). The application we'll use in this course (and by far the most popular choice) is [`git`](https://git-scm.com/), complemented with [GitHub](https://www.github.com), which we will use to store our archive online and share it.
 
-The classes are posted in an editable Jupyter Notebook format, which allows for live coding and easy code presentation. It's also a great tool for "quick-and-dirty" data analysis. Thus I recommend you to install it and use it throughout the semester and beyond.
+- Install `git` from the [download page](https://git-scm.com/downloads).
+- Before using it you'll have to tell `git` who you are. Open a new command-line or terminal instance and write the following two commands (with the values between `< >` replaced):
 
-1. Open a command line and write `conda install jupyter notebook`.
-2. The notebook is installed! Run it with a simple `jupyter notebook` command in the command line. It will open a file browser which you can use to navigate to the folder containing existing notebooks, or to the folder in which you wish to create a new one.
+  ```bash
+  git config --global user.name "<MY_NAME>"
+  git config --global user.email "<MY_EMAIL_ADDRESS>"
+  ```
+
+  This user profile will identify you whenever you make any commits in the future.
