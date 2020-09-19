@@ -15,6 +15,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -26,6 +30,8 @@
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -92,6 +98,16 @@
      Class 1
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_2/class_2.html">
+     Class 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_2/class_2.html#object-oriented-programming">
+     Object-Oriented Programming
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -101,7 +117,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../resources.html">
-   Useful Pythonic Resources
+   Resources
   </a>
  </li>
 </ul>
@@ -1222,10 +1238,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7fce1c332940&gt;, -100]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f0024845940&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1289,9 +1302,9 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The original list:
-[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7fce1c332940&gt;, -100]
+[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f0024845940&gt;, -100]
 l[0]: 1
-l[5]: &lt;function always_return_2 at 0x7fce1c332940&gt;
+l[5]: &lt;function always_return_2 at 0x7f0024845940&gt;
 l[0:2]: [1, &#39;2&#39;]
 </pre></div>
 </div>
@@ -1305,7 +1318,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7fce1c332940&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7f0024845940&gt;
 </pre></div>
 </div>
 </div>
@@ -1385,7 +1398,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7fce1c332940&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7f0024845940&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
 </pre></div>
 </div>
 </div>
@@ -1398,7 +1411,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7fce1c332940&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7f0024845940&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1583,7 +1596,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;e&#39;, &#39;a&#39;, &#39;c&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;c&#39;, &#39;a&#39;, &#39;e&#39;}
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
@@ -1675,10 +1688,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 4} 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>- {3, 4, 5, 6} = {1, 2}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 4} - {3, 4, 5, 6} = {1, 2}
 </pre></div>
 </div>
 </div>
