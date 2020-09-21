@@ -19,7 +19,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/spanels-index--0afa1ebdab0bb23b98b56d34c23d9f57.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/spanels-variables--ffc7f74dcb1b9eecba2dbcbc22818714.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -103,11 +104,6 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Class 2
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="#object-oriented-programming">
-     Object-Oriented Programming
     </a>
    </li>
   </ul>
@@ -238,16 +234,140 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#how-to-create-a-virtual-environment">
-     How to create a virtual environment?
+    <a class="reference internal nav-link" href="#creating-a-virtual-environment">
+     Creating a Virtual Environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-virtual-environment-directory">
+     The Virtual Environment Directory
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#activating-the-virtual-environment">
+     Activating the Virtual Environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise">
+     Exercise
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise">
-   Exercise
+  <a class="reference internal nav-link" href="#object-oriented-programming">
+   Object-Oriented Programming
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction">
+     Introduction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#procedural-programming">
+     Procedural Programming
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classes-and-objects">
+     Classes and Objects
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example-i-the-point-class">
+       Example I: The
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         Point
+        </span>
+       </code>
+       Class
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Exercise
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example-ii-rectangles">
+       Example II: Rectangles
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#methods">
+       Methods
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-init-method">
+       The
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         __init__
+        </span>
+       </code>
+       Method
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-str-method">
+       The
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         __str__
+        </span>
+       </code>
+       Method
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exercise-ii">
+       Exercise II
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operator-overloading">
+       Operator Overloading
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exercise-iii">
+       Exercise III
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary">
+     Summary
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#two-exercises">
+   Two Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-vector-class">
+     The Vector Class
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-path-class">
+     The Path Class
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercises-solutions-follow">
+     Exercises solutions follow…
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -270,14 +390,14 @@
 <p><img alt="Summary of environments and namespaces" src="../../_images/envs.png" /></p>
 <p>If this concept feels a little vague, don’t be too worried. Once you’ve created a couple of virtual environments you’ll get it in no time.</p>
 </div>
-<div class="section" id="how-to-create-a-virtual-environment">
-<h3>How to create a virtual environment?<a class="headerlink" href="#how-to-create-a-virtual-environment" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="creating-a-virtual-environment">
+<span id="create"></span><h3>Creating a Virtual Environment<a class="headerlink" href="#creating-a-virtual-environment" title="Permalink to this headline">¶</a></h3>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>To learn more about other available virtual environment management tools, see the <a class="reference internal" href="../../resources.html#resources-venv"><span class="std std-ref">Virtual Environments</span></a> section under <a class="reference internal" href="../../resources.html#resources"><span class="std std-ref">resources</span></a>.</p>
 </div>
 <p>There are numerous tools for creating and managing virtual environments with Python. In this course we will use <a class="reference external" href="https://docs.python.org/3/library/venv.html#module-venv"><code class="docutils literal notranslate"><span class="pre">venv</span></code></a>, which is one of Python’s built-in packages and is therefore a simple option that will always be available to you.</p>
-<p>Creating a new virtual environment with <code class="docutils literal notranslate"><span class="pre">venv</span></code> is as simple as executing:</p>
+<p>Creating a new virtual environment with <code class="docutils literal notranslate"><span class="pre">venv</span></code> is as easy as running:</p>
 <div class="sphinx-tabs docutils container">
 <div class="ui top attached tabular menu sphinx-menu docutils container">
 <div class="active item sphinx-data-tab-0-0 docutils container">
@@ -301,8 +421,11 @@
 </pre></div>
 </div>
 </div>
-<p>In both cases, we use <code class="docutils literal notranslate"><span class="pre">&lt;python</span> <span class="pre">binary&gt;</span> <span class="pre">-m</span> <span class="pre">venv</span></code> to execute the <code class="docutils literal notranslate"><span class="pre">venv</span></code> module as a script and pass it the path in which it should create the new virtual environment.</p>
+<p>We are calling <code class="docutils literal notranslate"><span class="pre">&lt;python</span> <span class="pre">binary&gt;</span> <span class="pre">-m</span></code> to execute the <code class="docutils literal notranslate"><span class="pre">venv</span></code> module as a script and pass it the path in which it should create the new virtual environment.</p>
 </div>
+</div>
+<div class="section" id="the-virtual-environment-directory">
+<h3>The Virtual Environment Directory<a class="headerlink" href="#the-virtual-environment-directory" title="Permalink to this headline">¶</a></h3>
 <p>Looking at the newly created virtual environment’s directory tree, please note the following files and folders:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>venv
 ├── bin/
@@ -323,63 +446,54 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">venv/bin/activate</span></code>: A script we will use to activate the virtual environment (making the prior two files the default <code class="docutils literal notranslate"><span class="pre">python</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code> executables).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">lib/python3.8/site-packages/</span></code>: This directory will contain all external packages installed with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&lt;package-name&gt;</span></code> when our virtual environment is activated.</p></li>
 </ul>
-<p>To activate the virtual environment and comfortably use the newly created isolated Python environment, simply run:</p>
-<div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-1-0 docutils container">
-<div class="docutils container">
-<p>Linux/MacOS</p>
 </div>
-</div>
-<div class="item sphinx-data-tab-1-1 docutils container">
-<div class="docutils container">
-<p>Windows</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-1-0 active docutils container">
+<div class="section" id="activating-the-virtual-environment">
+<h3>Activating the Virtual Environment<a class="headerlink" href="#activating-the-virtual-environment" title="Permalink to this headline">¶</a></h3>
+<p>Activating a virtual environment means modifying your working environment to use a particular, isolated installation of Python (created in <a class="reference internal" href="#create"><span class="std std-ref">Creating a Virtual Environment</span></a>). This will normally also “override” some other related CLI tools with those installed within the virtual environment’s <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory (such as <code class="docutils literal notranslate"><span class="pre">pip</span></code>), and sometimes also change some OS-related environment variables.</p>
+<p>To activate the virtual environment and use the newly created isolated Python environment, simply run:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="7af531be-4dcd-471d-bbe9-b6c341f22342" name="c96bdb18-efb5-4d3a-8700-ab3a2b90cdff" type="radio">
+</input><label class="tabbed-label" for="7af531be-4dcd-471d-bbe9-b6c341f22342">
+Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">source</span> &lt;venv&gt;/bin/activate
 </pre></div>
 </div>
+<p><em>* Replace <code class="docutils literal notranslate"><span class="pre">&lt;venv&gt;</span></code> with your virtual environment’s directory path.</em></p>
 </div>
-<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-1-1 docutils container">
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C:\&gt; &lt;venv&gt;\Scripts\activate.bat</span>
+<input id="0e37c475-8b45-417c-89a5-452288be36bd" name="c96bdb18-efb5-4d3a-8700-ab3a2b90cdff" type="radio">
+</input><label class="tabbed-label" for="0e37c475-8b45-417c-89a5-452288be36bd">
+Windows</label><div class="tabbed-content docutils">
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C:\&gt; &lt;venv&gt;\Scripts\activate</span>
 </pre></div>
 </div>
+<p><em>* Replace <code class="docutils literal notranslate"><span class="pre">&lt;venv&gt;</span></code> with your virtual environment’s directory path.</em></p>
 </div>
 </div>
 <p>You should now see your virtual environment’s directory name used as a prefix (<code class="docutils literal notranslate"><span class="pre">(venv)</span></code>) in your terminal window.</p>
 <p>To validate the activation, run:</p>
-<div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-2-0 docutils container">
-<div class="docutils container">
-<p>Linux/MacOS</p>
-</div>
-</div>
-<div class="item sphinx-data-tab-2-1 docutils container">
-<div class="docutils container">
-<p>Windows</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-2-0 active docutils container">
+<div class="tabbed-set docutils">
+<input checked="checked" id="459d1907-c48e-449d-90d3-2da9a2be0949" name="233fa4c4-234d-4fb6-8c5a-dbcda38ca886" type="radio">
+</input><label class="tabbed-label" for="459d1907-c48e-449d-90d3-2da9a2be0949">
+Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$</span> which python
+<span class="go">&lt;venv&gt;/bin/python</span>
 </pre></div>
 </div>
 </div>
-<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-2-1 docutils container">
+<input id="8180be65-38b8-4fc3-9438-49791657bec6" name="233fa4c4-234d-4fb6-8c5a-dbcda38ca886" type="radio">
+</input><label class="tabbed-label" for="8180be65-38b8-4fc3-9438-49791657bec6">
+Windows</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="go">C:\&gt; where python</span>
+<span class="go">&lt;venv&gt;\Scripts\python</span>
 </pre></div>
+</div>
 </div>
 </div>
 <p>This should print out the path of the Python interpreter within the virtual environment’s directory.</p>
-</div>
 <p>For the purposes of this course one virtual environment will probably be enough. Always remember to activate it before starting work, and be sure to create a new virtual environment for any new project you begin in the future.</p>
 </div>
-</div>
 <div class="section" id="exercise">
-<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Create a new <code class="docutils literal notranslate"><span class="pre">my_project</span></code> directory on your computer.</p></li>
 <li><p>Start VSCode and open your new project’s directory.</p></li>
@@ -395,18 +509,21 @@
 </div>
 </div>
 <div class="section" id="object-oriented-programming">
-<h1>Object-Oriented Programming<a class="headerlink" href="#object-oriented-programming" title="Permalink to this headline">¶</a></h1>
+<h2>Object-Oriented Programming<a class="headerlink" href="#object-oriented-programming" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
 <p>There are three main programming paradigms in use in mainstream programming languages:</p>
 <ul class="simple">
-<li><p>Functional</p></li>
 <li><p>Procedural</p></li>
+<li><p>Functional</p></li>
 <li><p>Object-oriented</p></li>
 </ul>
-<p>While a <em>functional</em> paradigm is very interesting, we’ll not be discussing it in this course. You can read about Haskell, OCaml, F# and other functional programming languages wherever you get your information from.</p>
-<p>The <em>procedural</em> paradigm is the most widely used paradigm… in the academia. And it’s probably the one you’re most familiar with from your work in Matlab.</p>
-<p>Confusingly, this paradigm is based around <em>functions</em> (procedures):</p>
+<p>While the <em>functional</em> paradigm is very interesting, we will not be discussing it in this course. You can read about Haskell, OCaml, F# and other functional programming languages wherever you get your information from.</p>
+</div>
+<div class="section" id="procedural-programming">
+<h3>Procedural Programming<a class="headerlink" href="#procedural-programming" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=Ct-lOOUqmyY"><img alt="Procedural Programming PB&amp;J" src="http://img.youtube.com/vi/Ct-lOOUqmyY/0.jpg" /></a></p>
+<p>The <em>procedural</em> paradigm is the most widely used paradigm… in the academia. And it’s probably the one you’re most familiar with from your work with MATLAB.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We could write:</span>
@@ -477,10 +594,9 @@
     <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You should be extremely decisive and eliminate repeating code. It’s perhaps the most common source for errors in scientific computing, and it may bite you any of these ways:</p>
-<ul class="simple">
-<li><p>Encapsulation:</p></li>
-</ul>
+<p>You should decisively eliminate any repeating code. It’s perhaps the most common source for errors in scientific computing, and it may bite you any of these ways:</p>
+<ul>
+<li><p>Encapsulation</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># String concatenation</span>
 <span class="n">first_string</span> <span class="o">=</span> <span class="s1">&#39;abcd&#39;</span>
 <span class="n">second_string</span> <span class="o">=</span> <span class="s1">&#39;efgh&#39;</span>
@@ -494,15 +610,13 @@
 <span class="c1"># concatenation - but you forgot that you excluded the last character of the second string.</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The moment you realized that you have a recurring operation on strings - you have to encapsulate it in a function - be _ruthless!_
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Parametrization</p></li>
-</ul>
+<p>The moment you realized that you have a recurring operation on strings - you have to encapsulate it in a function. Be <em>ruthless!</em><br />
+<br/></p>
+</li>
+<li><p>Parametrization</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
     <span class="n">scaled_data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">*</span> <span class="mf">0.3</span>  <span class="c1">#  what is 0.3 exactly? Parametrize it.</span>
-    
+
 <span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">na_concentration</span><span class="o">=</span><span class="mf">0.3</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Multiplies data by the Na concentration&quot;&quot;&quot;</span>
     <span class="n">scaled_data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">*</span> <span class="n">na_concentration</span>
@@ -510,6 +624,8 @@
 </pre></div>
 </div>
 <p>But this is usually not enough. When calling the <code class="docutils literal notranslate"><span class="pre">process_data</span></code> parameterize the <code class="docutils literal notranslate"><span class="pre">na_concentration</span></code> variable as well:</p>
+</li>
+</ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">b</span> <span class="o">*</span> <span class="n">c</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">a</span>
 <span class="n">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">)</span>
 <span class="c1"># Script continues...</span>
@@ -519,31 +635,25 @@
 <span class="c1"># the top of your script.</span>
 </pre></div>
 </div>
+<p>While procedural programming works great for most simple tasks, it might be considered inferior when writing code that is meant to scale and be collaborated on.</p>
 </div>
-<div class="section" id="alternatives">
-<h2>Alternatives<a class="headerlink" href="#alternatives" title="Permalink to this headline">¶</a></h2>
-<p>While procedural programming works great most of the time, it can sometime be inferior to other paradigms, namely <em>object-oriented programming.</em></p>
-<p>But what do I mean by <strong>inferior</strong>? Obviously, all programs can be written successfully without leaving the safe confines of procedural programming.</p>
-<p>While this statement holds true, sometimes our <em>mental model</em> of the task at hand fits an object-oriented paradigm more naturally.</p>
 <div class="section" id="classes-and-objects">
 <h3>Classes and Objects<a class="headerlink" href="#classes-and-objects" title="Permalink to this headline">¶</a></h3>
 <p>Classes are user-defined types. Just like <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">dict</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code> and the rest of the standard types, Python allows us to create our own types.</p>
 <p>Objects are <em>instances</em> of classes, they’re an instance of a type we made. Actually, <em>all</em> instances of <em>all</em> types are objects in Python. It means that every variable and function in Python are, by themselves, an instance of a type. A function you make is an instance of the <code class="docutils literal notranslate"><span class="pre">function</span></code> type, for example. We’ll get to this during later stages of the course.</p>
-<p>Classes are a type of abstraction we create with our code. A variable is the most simple type of abstraction - it’s a <em>thing</em> that is closely tied to a “real value” in a very simple relationship: My variable <span class="math notranslate nohighlight">\(x\)</span> represnts the value <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>Classes are a type of abstraction we create with our code. A variable is the most simple type of abstraction - it’s a <em>thing</em> that is closely tied to a “real value” in a very simple relationship: My variable <span class="math notranslate nohighlight">\(x\)</span> represents the value <span class="math notranslate nohighlight">\(y\)</span>.</p>
 <p>Classes are more abstract - they don’t relate to a specific value directly, but rather they try to convey an idea of an object.</p>
-</div>
-<div class="section" id="the-point-class">
-<h3>The Point Class<a class="headerlink" href="#the-point-class" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-i-the-point-class">
+<h4>Example I: The <code class="docutils literal notranslate"><span class="pre">Point</span></code> Class<a class="headerlink" href="#example-i-the-point-class" title="Permalink to this headline">¶</a></h4>
 <p>To show what we mean by “our own type”, we’ll define the <code class="docutils literal notranslate"><span class="pre">Point</span></code> type.</p>
-<p>What is a point? What is composed of?</p>
+<p>So, what is a point?</p>
 <ul class="simple">
 <li><p>In a 2D space it’s a pair of values, <span class="math notranslate nohighlight">\((x, y)\)</span>, specifying a location on a grid.</p></li>
 <li><p><span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are the coordinates of the point.</p></li>
 <li><p>Points have special relations to other points and to the space they reside in.</p></li>
 </ul>
 <p>From these three simple observations, we expect our <code class="docutils literal notranslate"><span class="pre">Point</span></code> type to include both data about its coordinates, and functions, or <strong>methods</strong>, used to interact with the grid and\or other points.</p>
-<p>An object usually bundles together data and methods to use the data.</p>
-<p>We wish to express these abstract ideas in our code. It might seem like a lot of code at the start (“boilerplate” code) - but it will be worth it - certainly for more complex classes.</p>
+<p>An object usually bundles together data (attributes) and methods we wish to express as some abstract template in our code. It might seem like a lot to write at first, but it pays off tremendously in no time.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Introducing the class keyword:</span>
@@ -568,22 +678,21 @@
 </div>
 </div>
 </div>
+<p>The name <code class="docutils literal notranslate"><span class="pre">Point</span></code> is now a factory to create new <code class="docutils literal notranslate"><span class="pre">Point</span></code> instances. To make one, we have to call it like we do with a function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The name Point is now a factory to create new Points.</span>
-<span class="c1"># To make one, we have to call it like we do with a function:</span>
-<span class="n">blank</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">blank</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
 <span class="n">blank</span>
-<span class="c1"># We call this *instantiation*, as blank is an instance of Point</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7fc7f4578a60&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7fd22c159b80&gt;
 </pre></div>
 </div>
 </div>
 </div>
+<p>We call this <em>instantiation</em> (and <code class="docutils literal notranslate"><span class="pre">blank</span></code> is an <em>instance</em> of <code class="docutils literal notranslate"><span class="pre">Point</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assign the point&#39;s data in the form of coordinates</span>
@@ -606,32 +715,10 @@
 </div>
 </div>
 </div>
+<p>The <code class="docutils literal notranslate"><span class="pre">.</span></code> means <code class="docutils literal notranslate"><span class="pre">x</span></code> is an attribute or method (callable) of <code class="docutils literal notranslate"><span class="pre">blank</span></code> (and of course there’s no conflict between a variable named <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">blank.x</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import prints_</span>
-<span class="n">prints</span><span class="o">.</span><span class="n">print_</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="n">e7a96e93996d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># import prints_</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">prints</span><span class="o">.</span><span class="n">print_</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;prints&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
-<p>The notation <code class="docutils literal notranslate"><span class="pre">.x</span></code> means “go the instance <code class="docutils literal notranslate"><span class="pre">blank</span></code> of the class <code class="docutils literal notranslate"><span class="pre">Point</span></code> and find the value <code class="docutils literal notranslate"><span class="pre">x</span></code> refers to.”</p>
-<p>There’s no conflict between a variable named <code class="docutils literal notranslate"><span class="pre">x</span></code> and the attribute <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
-<p>The attribute can be used anywhere:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simple statements</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">blank</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">blank</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -643,8 +730,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Printouts</span>
-<span class="sa">f</span><span class="s2">&quot;A case of a pointy Point at </span><span class="si">{</span><span class="p">(</span><span class="n">blank</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">blank</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;A case of a pointy Point at </span><span class="si">{</span><span class="p">(</span><span class="n">blank</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">blank</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -656,8 +742,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Arguments to functions</span>
-<span class="k">def</span> <span class="nf">print_point</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_point</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Print a Point object.</span>
 <span class="sd">    </span>
 <span class="sd">    Parameters</span>
@@ -684,49 +769,32 @@
 </div>
 </div>
 <div class="section" id="id1">
-<h3>Exercise:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Write a function <code class="docutils literal notranslate"><span class="pre">distance_between_points(p1,</span> <span class="pre">p2)</span></code> that takes two points and returns the Cartesian distance between them.</p>
-</div>
-<div class="section" id="exercise-solution-below">
-<h3>Exercise solution below…<a class="headerlink" href="#exercise-solution-below" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<h4>Exercise<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">calculate_distance(p1,</span> <span class="pre">p2)</span></code> that takes two points and returns the Cartesian distance between them.</p>
+<div class="dropdown admonition">
+<p class="admonition-title"> Solution</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
 
-<span class="k">def</span> <span class="nf">distance_between_points</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Calculate Cartesian distance between points &quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">calculate_distance</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Returns the Cartesian distance between two points. &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span>
         <span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">p2</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> 
         <span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">p2</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
     <span class="p">)</span>
-
-<span class="n">blank2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
-<span class="n">blank2</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.0</span>
-<span class="n">blank2</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mf">1.0</span>
-<span class="n">dist</span> <span class="o">=</span> <span class="n">distance_between_points</span><span class="p">(</span><span class="n">blank</span><span class="p">,</span> <span class="n">blank2</span><span class="p">)</span>
-<span class="n">dist</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="rectangles">
-<h3>Rectangles<a class="headerlink" href="#rectangles" title="Permalink to this headline">¶</a></h3>
-<p>If we wish to model a rectangle, the first thing that should now be clear is that a rectangle is best modelled with a class (at least in Python).</p>
-<p>Deciding on the exact content of our type is sometimes not straight-forward. How would you implement a rectangle?</p>
-<p>Modelling a rectangle can be done in the following ways:</p>
+<div class="section" id="example-ii-rectangles">
+<h4>Example II: Rectangles<a class="headerlink" href="#example-ii-rectangles" title="Permalink to this headline">¶</a></h4>
+<p>Take a minute to think how you would implement a <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> class.</p>
+<p>Here are a couple of options:</p>
 <ul class="simple">
-<li><p>We can decide to define it with a point and two sides.</p></li>
-<li><p>We can choose the point to be a corner or its center.</p></li>
+<li><p>We can decide to define it with a point (corner or center) and two sides.</p></li>
 <li><p>We can also use two opposing points.</p></li>
 </ul>
-<p>Here’s we’ll go with the first option, with the Point being the corner.</p>
+<p>We’ll go with the first option, with the point being the corner.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
@@ -735,9 +803,11 @@
 <span class="sd">    Attributes</span>
 <span class="sd">    ----------</span>
 <span class="sd">    corner : Point</span>
-<span class="sd">        bottom left corner</span>
+<span class="sd">        Bottom left corner</span>
 <span class="sd">    height : float</span>
+<span class="sd">        Length of vertical side</span>
 <span class="sd">    width : float</span>
+<span class="sd">        Length of horizontal size</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 </pre></div>
 </div>
@@ -757,7 +827,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7fc7f44a9cd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7fd22c123520&gt;
 </pre></div>
 </div>
 </div>
@@ -790,11 +860,10 @@
 </div>
 </div>
 </div>
+<p>Objects are mutable:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Objects are mutable - we can change their attributes:</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">corner</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">corner</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
 <span class="n">rect</span><span class="o">.</span><span class="n">corner</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">100</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">corner</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
@@ -820,43 +889,33 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rect</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">rect</span><span class="o">.</span><span class="n">height</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">rect</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+<span class="n">grow_rectangle</span><span class="p">(</span><span class="n">rect</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">rect</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(100.0, 200.0)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grow_rectangle</span><span class="p">(</span><span class="n">rect</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">rect</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">rect</span><span class="o">.</span><span class="n">height</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(200.0, 300.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100.0 200.0
+200.0 300.0
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="class-methods">
-<h3>Class Methods<a class="headerlink" href="#class-methods" title="Permalink to this headline">¶</a></h3>
-<p>We really haven’t done object-oriented programming yet. Our objects currently contain only <em>data</em>, in the form of their attributes.</p>
-<p>To go one step closer we must learn of <em>methods</em>.</p>
-<p>Methods are functions bound to objects, describing actions they can do, or that can be done to them. For example, a real-world car can drive. So a <code class="docutils literal notranslate"><span class="pre">Car</span></code> object should have a <code class="docutils literal notranslate"><span class="pre">drive()</span></code> method attached to it. It should also have a <code class="docutils literal notranslate"><span class="pre">park()</span></code> method, and a couple of attributes, like <code class="docutils literal notranslate"><span class="pre">number_of_wheels</span></code>, <code class="docutils literal notranslate"><span class="pre">manufacturer</span></code> and <code class="docutils literal notranslate"><span class="pre">model</span></code>.</p>
-<p>As we’ll see in a second, the only differentce between methods and functions is that the former are always attached to an object, and they only make sense when attached to that specific object. A <code class="docutils literal notranslate"><span class="pre">park()</span></code> method has no meaning when we try to run it on a <code class="docutils literal notranslate"><span class="pre">Rectangle()</span></code>.</p>
-<p>We’ve already met many methods and used them successfully. For example, we used the <code class="docutils literal notranslate"><span class="pre">.append(item)</span></code> method of a list instance. In this case it’s clear why a method is always bound to a specific class - it’s irrelevant to “append” an item to an object which is not a list.</p>
+<div class="section" id="methods">
+<h4>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h4>
+<p>We really haven’t done object-oriented programming yet. Our objects currently contain only <em>data</em> (as attributes), and we wrote independent functions to manipulate them as required. <em>Methods</em> are functions bound to objects, describing actions they can do, or that can be done to them.</p>
+<p>For example, a real-world car can drive. So a <code class="docutils literal notranslate"><span class="pre">Car</span></code> object should have a <code class="docutils literal notranslate"><span class="pre">drive()</span></code> method. It should also have a <code class="docutils literal notranslate"><span class="pre">park()</span></code> method, and a couple of attributes, like <code class="docutils literal notranslate"><span class="pre">number_of_wheels</span></code>, <code class="docutils literal notranslate"><span class="pre">manufacturer</span></code> and <code class="docutils literal notranslate"><span class="pre">model</span></code>.</p>
+<p>As we’ll see in a second, the only difference between methods and functions is that methods are a part of an object, and they only make sense the context of that object or an instance of it. A <code class="docutils literal notranslate"><span class="pre">park()</span></code> method has no meaning when we try to run it on a <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code>.</p>
+<p>We’ve already met many methods and used them successfully. For example, we used the <code class="docutils literal notranslate"><span class="pre">append()</span></code> method of a list instance. In this case it’s clear why a method is always bound to a specific class - it’s irrelevant to “append” an item to an object which is not a list.</p>
 <p>Let’s add a method to our Point object:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;A 2D point.&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">transpose</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    
+    <span class="k">def</span> <span class="nf">transpose</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># The first argument to a method is always the calling instance itself (self)</span>
         <span class="sd">&quot;&quot;&quot;Trasnposes by flipping x and y&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span>
 </pre></div>
@@ -883,15 +942,12 @@
 <p>The conceptual change here is the following: The active agents here are the <em>objects</em>, not the functions. Instead of transpose(point) we have the point “transposing itself”: <code class="docutils literal notranslate"><span class="pre">p.transpose()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The method is a function:</span>
-<span class="n">p</span><span class="o">.</span><span class="n">transpose</span>
-<span class="c1"># This returns the address to the function, but doesn&#39;t call it, just like regular functions.</span>
-<span class="c1"># See how it&#39;s not a regular function, but a &quot;bound method&quot;?</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">transpose</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;bound method Point.transpose of &lt;__main__.Point object at 0x7fc7f45633a0&gt;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;bound method Point.transpose of &lt;__main__.Point object at 0x7fd22c12d1c0&gt;&gt;
 </pre></div>
 </div>
 </div>
@@ -902,17 +958,17 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This doesn&#39;t work, look at the number of arguments:</span>
 <span class="n">p</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-<span class="c1"># Two argumnets were given? We gave only one. The second was the self argument that is implicitly passed.</span>
+<span class="c1"># Two arguments were given? We gave only one. The second was the self argument that is implicitly passed.</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">26</span><span class="o">-</span><span class="mi">4</span><span class="n">b107e3f2982</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">23</span><span class="o">-</span><span class="mi">07</span><span class="n">dc2a9995d9</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># This doesn&#39;t work, look at the number of arguments:</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">p</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Two argumnets were given? We gave only one. The second was the self argument that is implicitly passed.</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Two arguments were given? We gave only one. The second was the self argument that is implicitly passed.</span>
 
 <span class="ne">TypeError</span>: transpose() takes 1 positional argument but 2 were given
 </pre></div>
@@ -928,14 +984,20 @@
 <p>First, it would be nice if we could make this process shorter. Second, the Point instance is really unusable unless it has both attributes <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code> set, so we want to make sure that we don’t have a Point without both <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>. This is accomplished by the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method.</p>
 </div>
 <div class="section" id="the-init-method">
-<h3>The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method<a class="headerlink" href="#the-init-method" title="Permalink to this headline">¶</a></h3>
-<p>Classes have several special methods attached to them. While most are out the course’s scope, a special method that <strong>does</strong> deserve a closer look is the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method. It has two underscores before and after its name, making it a “dunder” method, short for “double underscore”.</p>
+<h4>The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> Method<a class="headerlink" href="#the-init-method" title="Permalink to this headline">¶</a></h4>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p><code class="docutils literal notranslate"><span class="pre">__init__()</span></code> is one example of a <em>dunder</em> method. <em>dunder</em> is short for <em>double underscore</em> and generally implies an internal (structural) part of the class itself.</p>
+</div>
+<p>Classes have several special methods attached to them. While most are out this course’s scope, the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method is regularly used and we should definitely familiarize ourselves with it.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> methods allows us to define our class’ attributes inside the class definition:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;A 2D point.&quot;&quot;&quot;</span>
+    
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize a new Point instance&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
 
@@ -946,7 +1008,7 @@
 </div>
 </div>
 </div>
-<p>Now, in order to create a Point instance, we have to pass in the two arguments that the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method requires:</p>
+<p>Now, in order to create a <code class="docutils literal notranslate"><span class="pre">Point</span></code> instance, we have to pass in the two arguments that the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method requires:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
@@ -963,20 +1025,46 @@ p.x: 20, p.y: 10
 </div>
 </div>
 </div>
-<p>As we said, this is better because we enforce our Point user to initialize all attributes, which eases the use of the other methods the Point has. Most chances are that the first method you’ll write for a newly defined class is the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method.
-Let’s look at a broader example using the Rectange we defined earlier and the two other functions we also had.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Rectangle model.</span>
-<span class="sd">    </span>
-<span class="sd">    Attributes</span>
-<span class="sd">    ----------</span>
-<span class="sd">    corner : Point</span>
-<span class="sd">        Bottom left corner</span>
-<span class="sd">    height, width : float</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">26</span><span class="o">-</span><span class="mi">13</span><span class="n">fd077f7b13</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
+
+<span class="ne">TypeError</span>: __init__() missing 2 required positional arguments: &#39;x&#39; and &#39;y&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>As we said, this is better because we enforce our <code class="docutils literal notranslate"><span class="pre">Point</span></code> user to initialize all attributes, which eases the use of the other methods the <code class="docutils literal notranslate"><span class="pre">Point</span></code> has. Most chances are that the first method you’ll write for a newly defined class is the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method.</p>
+<p>Let’s look at a broader example using the Rectange we defined earlier and the two other functions we also had.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>    
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Representation of a rectangle in Cartesian space based on the</span>
+<span class="sd">    bottom left corner and the sizes of its sides.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">corner</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize a Rectangle instance.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        corner : Point</span>
+<span class="sd">            Bottom left corner</span>
+<span class="sd">        height : float</span>
+<span class="sd">            Length of vertical side</span>
+<span class="sd">        width : float</span>
+<span class="sd">            Length of horizontal side</span>
+<span class="sd">        </span>
+<span class="sd">        &quot;&quot;&quot;</span>        
         <span class="bp">self</span><span class="o">.</span><span class="n">corner</span> <span class="o">=</span> <span class="n">corner</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
@@ -997,17 +1085,26 @@ Let’s look at a broader example using the Rectange we defined earlier and the 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">+=</span> <span class="n">dwidth</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">+=</span> <span class="n">dheight</span>
+
+    <span class="k">def</span> <span class="nf">move_to_origin</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Moves the center of the rectangle to (0, 0)&quot;&quot;&quot;</span>
+        <span class="n">center</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_center</span><span class="p">()</span>
+        <span class="n">centered</span> <span class="o">=</span> <span class="n">center</span><span class="o">.</span><span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">center</span><span class="o">.</span><span class="n">y</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">centered</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">corner</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>        
 </pre></div>
 </div>
 </div>
 </div>
-<p>In the example above:</p>
-<ol class="simple">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
 <li><p>The Class name is CamelCase.</p></li>
 <li><p>The docstring of the entire class describes its general purpose.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method takes in three arguments, but two of them are optional.</p></li>
 <li><p>We added the two functions we defined earlier to the class as methods, since they only operate on rectangles in the first place.</p></li>
-</ol>
+</ul>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rect</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
@@ -1023,54 +1120,13 @@ Let’s look at a broader example using the Rectange we defined earlier and the 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Methods can use other methods</span>
-<span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Rectangle model.</span>
-<span class="sd">    </span>
-<span class="sd">    Attributes</span>
-<span class="sd">    ----------</span>
-<span class="sd">    corner : Point</span>
-<span class="sd">        Bottom left corner</span>
-<span class="sd">    height, width : float</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">corner</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">corner</span> <span class="o">=</span> <span class="n">corner</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
-        
-    <span class="k">def</span> <span class="nf">find_center</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Return a Point to the center of the Rectangle box.&quot;&quot;&quot;</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="mi">2</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">/</span> <span class="mi">2</span>
-        <span class="k">return</span> <span class="n">Point</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">grow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dwidth</span><span class="p">,</span> <span class="n">dheight</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Change this instance&#39;s size by (dwidth, dheight).</span>
-<span class="sd">        </span>
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
-<span class="sd">        dwidth, dheight : float</span>
-<span class="sd">            Change the first and second axes by +dwidth\dheight</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">+=</span> <span class="n">dwidth</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">+=</span> <span class="n">dheight</span> 
-    
-    <span class="k">def</span> <span class="nf">move_to_origin</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Moves the center of the rectangle to (0, 0)&quot;&quot;&quot;</span>
-        <span class="n">center</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_center</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">center</span><span class="o">.</span><span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">center</span><span class="o">.</span><span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">return</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">corner</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corner</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a new Rectangle instance and find its center</span>
+<span class="n">corner</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">rect</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">corner</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="n">center</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">find_center</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The center of the rectange is </span><span class="si">{</span><span class="p">(</span><span class="n">center</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">center</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Move to origin</span>
 <span class="n">rect</span><span class="o">.</span><span class="n">move_to_origin</span><span class="p">()</span>
 <span class="n">new_center</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">find_center</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The center of the moved rectange is </span><span class="si">{</span><span class="p">(</span><span class="n">new_center</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">new_center</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1084,97 +1140,109 @@ The center of the moved rectange is (0.0, 0.0)
 </div>
 </div>
 </div>
-<p>Again, you should see how the object modifies itself and acts upon itself using other methods. We’re not modifying the internal parts of the instance ourselves - we let the methods do it for us.</p>
-<div class="section" id="str">
-<h4><code class="docutils literal notranslate"><span class="pre">__str__</span></code><a class="headerlink" href="#str" title="Permalink to this headline">¶</a></h4>
-<p>Another interesting <em>dunder</em> method is the <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method, which defines what the class will print when invoked using the <code class="docutils literal notranslate"><span class="pre">print(class_instance)</span></code> command. For example:</p>
+<p>Note how the object modifies itself and acts upon itself using its methods. We’re not modifying the internal parts of the instance ourselves, we let the methods do it for us.</p>
+</div>
+<div class="section" id="the-str-method">
+<h4>The <code class="docutils literal notranslate"><span class="pre">__str__</span></code> Method<a class="headerlink" href="#the-str-method" title="Permalink to this headline">¶</a></h4>
+<p>Another interesting <em>dunder</em> method is the <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method, which defines what an instance of the class will show when invoked with the <code class="docutils literal notranslate"><span class="pre">print(class_instance)</span></code> command. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ShoppingList</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vegetables</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">fruits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">bread</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vegetables</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">fruit</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">bread</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">=</span> <span class="n">vegetables</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">fruits</span> <span class="o">=</span> <span class="n">fruits</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fruit</span> <span class="o">=</span> <span class="n">fruit</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">bread</span> <span class="o">=</span> <span class="n">bread</span>
     
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">str_to_print</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;Shopping List:</span>
+        <span class="n">n_items</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">fruits</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bread</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        Shopping List:</span>
 <span class="s2">            Vegetabels: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span><span class="si">}</span><span class="s2"></span>
-<span class="s2">            Fruits: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">fruits</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">            Fruits: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">fruit</span><span class="si">}</span><span class="s2"></span>
 <span class="s2">            Bread: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">bread</span><span class="si">}</span><span class="s2"></span>
-<span class="s2">            Total items: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">fruits</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bread</span><span class="si">}</span><span class="s2">&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">str_to_print</span>
+<span class="s2">            Total items: </span><span class="si">{</span><span class="n">n_items</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">        &quot;&quot;&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">slist</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">slist</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shopping List:
-            Vegetabels: 10
-            Fruits: 5
-            Bread: 1
-            Total items: 16
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shop_list</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">31</span><span class="o">-</span><span class="n">a93285b9d212</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">shopping_list</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span>
 
-<span class="c1"># We can change the order of parameters when using keyword arguments</span>
-<span class="n">shop_list2</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">(</span><span class="n">fruits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">bread</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">vegetables</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="nn">&lt;ipython-input-30-d877ed2654e0&gt;</span> in <span class="ni">__str__</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">----&gt; </span><span class="mi">8</span>         <span class="n">n_items</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">fruits</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bread</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span><span class="s2">         Shopping List:</span>
+
+<span class="ne">AttributeError</span>: &#39;ShoppingList&#39; object has no attribute &#39;fruits&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fruits: </span><span class="si">{</span><span class="n">shop_list</span><span class="o">.</span><span class="n">fruits</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Shopping list #2:</span><span class="se">\n</span><span class="si">{</span><span class="n">shop_list2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fruits: 1
-Shopping list #2:
-Shopping List:
-            Vegetabels: 3
-            Fruits: 5
-            Bread: 1
-            Total items: 9
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We can change the order of parameters when using keyword arguments, e.g.:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list_2</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">(</span><span class="n">fruit</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">bread</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">vegetables</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method is very useful for debugging purposes.</p>
+<div class="section" id="exercise-ii">
+<h4>Exercise II<a class="headerlink" href="#exercise-ii" title="Permalink to this headline">¶</a></h4>
+<p>Implement a <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method for the <code class="docutils literal notranslate"><span class="pre">Point</span></code> class from earlier.</p>
+<div class="dropdown admonition">
+<p class="admonition-title"> Solution</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;A 2D point.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize a new Point instance&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+       
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return a string representation of this instance.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">)&quot;</span>
+
+    <span class="k">def</span> <span class="nf">transpose</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Trasnposes by flipping x and y&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="operator-overloading">
-<h3>Operator Overloading<a class="headerlink" href="#operator-overloading" title="Permalink to this headline">¶</a></h3>
-<p>One of the most interesting properties of Python is operator overloading (although it’s not unique to Python). It means that we can force our self-declared types (i.e. classes) to behave in a certain way with the standard mathematical operations.</p>
+<h4>Operator Overloading<a class="headerlink" href="#operator-overloading" title="Permalink to this headline">¶</a></h4>
+<p>One of the most interesting properties of Python (although it’s not unique to it) is operator overloading. It means that we can force our self-declared types (i.e. classes) to behave in a certain way with the standard mathematical operations.</p>
 <p>We’ll use the ShoppingList class as an example. Say we want to <strong>add</strong> two different shopping lists. Naively, we might just try the following:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shoplist1</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
-<span class="n">shoplist2</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">shoplist1</span> <span class="o">+</span> <span class="n">shoplist2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list_a</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
+<span class="n">shopping_list_b</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shopping_list_a</span> <span class="o">+</span> <span class="n">shopping_list_b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">37</span><span class="o">-</span><span class="mi">1</span><span class="n">c0ae3e8adc3</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">shoplist1</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">shoplist2</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">shoplist1</span> <span class="o">+</span> <span class="n">shoplist2</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">32</span><span class="o">-</span><span class="mi">0334</span><span class="n">a09f9174</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">shopping_list_a</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">shopping_list_b</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">shopping_list_a</span> <span class="o">+</span> <span class="n">shopping_list_b</span><span class="p">)</span>
 
 <span class="ne">TypeError</span>: unsupported operand type(s) for +: &#39;ShoppingList&#39; and &#39;ShoppingList&#39;
 </pre></div>
@@ -1186,23 +1254,33 @@ Shopping List:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ShoppingList</span><span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39; Shopping list class</span>
-<span class="sd">    Attributes:</span>
-<span class="sd">    vegeteb</span>
-<span class="sd">    </span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vegetables</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">fruits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">bread</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Represents a shopping list&#39;&#39;&#39;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vegetables</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">fruit</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">bread</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize a ShoppingList instance.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        vegetables : int</span>
+<span class="sd">            Number of vegetable items</span>
+<span class="sd">        fruit : int</span>
+<span class="sd">            Number of fruit items</span>
+<span class="sd">        bread : int</span>
+<span class="sd">            Number of bread items</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">=</span> <span class="n">vegetables</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">fruits</span> <span class="o">=</span> <span class="n">fruits</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fruit</span> <span class="o">=</span> <span class="n">fruit</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">bread</span> <span class="o">=</span> <span class="n">bread</span>
     
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">str_to_print</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;Shopping List:</span>
-<span class="s2">        Vegetabels: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span><span class="si">}</span><span class="s2"></span>
-<span class="s2">        Fruits: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">fruits</span><span class="si">}</span><span class="s2"></span>
-<span class="s2">        Bread: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">bread</span><span class="si">}</span><span class="s2"></span>
-<span class="s2">        Total items: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">fruits</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bread</span><span class="si">}</span><span class="s2">&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">str_to_print</span>
+        <span class="n">n_items</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">fruit</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bread</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        Shopping List:</span>
+<span class="s2">            Vegetabels: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">            Fruits: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">fruit</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">            Bread: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">bread</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">            Total items: </span><span class="si">{</span><span class="n">n_items</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">        &quot;&quot;&quot;</span>
     
     <span class="c1"># ----- New method below: ------</span>
     <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
@@ -1212,10 +1290,20 @@ Shopping List:
 <span class="sd">        -----</span>
 <span class="sd">        This method returns a new shopping list, meaning it doesn&#39;t modify</span>
 <span class="sd">        any of the existing lists it was given.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        other : ShoppingList</span>
+<span class="sd">            Another shopping list</span>
+<span class="sd">        </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ShoppingList</span>
+<span class="sd">            Combined shopping list</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">new_list</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">(</span>
             <span class="n">vegetables</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">vegetables</span><span class="p">,</span>
-            <span class="n">fruits</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">fruits</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">fruits</span><span class="p">,</span>
+            <span class="n">fruit</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">fruit</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">fruit</span><span class="p">,</span>
             <span class="n">bread</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">bread</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">bread</span>
         <span class="p">)</span>
         <span class="k">return</span> <span class="n">new_list</span>
@@ -1223,76 +1311,104 @@ Shopping List:
 </div>
 </div>
 </div>
+<p>Now we can safely add two <code class="docutils literal notranslate"><span class="pre">ShoppingList</span></code> instances together:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now we can safely add two ShoppingList() instances:</span>
-<span class="n">shoplist1</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
-<span class="n">shoplist2</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
-<span class="n">added_shoplist</span> <span class="o">=</span> <span class="n">shoplist1</span> <span class="o">+</span> <span class="n">shoplist2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">added_shoplist</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list_a</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
+<span class="n">shopping_list_b</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
+<span class="n">shopping_list_c</span> <span class="o">=</span> <span class="n">shopping_list_a</span> <span class="o">+</span> <span class="n">shopping_list_b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">shopping_list_c</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shopping List:
-        Vegetabels: 20
-        Fruits: 10
-        Bread: 2
-        Total items: 32
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        Shopping List:
+            Vegetabels: 20
+            Fruits: 10
+            Bread: 2
+            Total items: 32
+        
 </pre></div>
 </div>
 </div>
 </div>
+<p>Addition of something other than a <code class="docutils literal notranslate"><span class="pre">ShoppingList</span></code> instance will result in an <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">shoplist1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shopping List:
-        Vegetabels: 10
-        Fruits: 5
-        Bread: 1
-        Total items: 16
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Addition of something other than a ShoppingList will result in an AttributeError:</span>
-<span class="n">shoplist1</span> <span class="o">+</span> <span class="mi">1</span>
-
-<span class="c1"># We could write an &quot;if&quot; in the __add__() method that checks if &#39;other&#39; is an integer, </span>
-<span class="c1"># and if so just adds that integer number to all items in the shopping list</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list_a</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">41</span><span class="o">-</span><span class="mi">2</span><span class="n">c924382622f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Addition of something other than a ShoppingList will result in an AttributeError:</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">shoplist1</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># We could write an &quot;if&quot; in the __add__() method that checks if &#39;other&#39; is an integer,</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># and if so just adds that integer number to all items in the shopping list</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">35</span><span class="o">-</span><span class="n">e48709e66585</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">shopping_list_a</span> <span class="o">+</span> <span class="mi">1</span>
 
-<span class="nn">&lt;ipython-input-38-f3f7a0ec9668&gt;</span> in <span class="ni">__add__</span><span class="nt">(self, other)</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span><span class="s2">         new_list = ShoppingList(</span>
-<span class="ne">---&gt; </span><span class="mi">30</span><span class="s2">             vegetables=self.vegetables + other.vegetables,</span>
-<span class="g g-Whitespace">     </span><span class="mi">31</span><span class="s2">             fruits=self.fruits + other.fruits,</span>
-<span class="g g-Whitespace">     </span><span class="mi">32</span><span class="s2">             bread=self.bread + other.bread</span>
+<span class="nn">&lt;ipython-input-33-f48d1b2ecc36&gt;</span> in <span class="ni">__add__</span><span class="nt">(self, other)</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span><span class="s2">         new_list = ShoppingList(</span>
+<span class="ne">---&gt; </span><span class="mi">50</span><span class="s2">             vegetables=self.vegetables + other.vegetables,</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span><span class="s2">             fruit=self.fruit + other.fruit,</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span><span class="s2">             bread=self.bread + other.bread</span>
 
 <span class="ne">AttributeError</span>: &#39;int&#39; object has no attribute &#39;vegetables&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>We can overload all operators to make our classes behave as one would intuitively expect them to. A quick google query will tell you the name of the dunder method you’re after when you wish to overload some operator.</p>
-<p>We usually don’t write new dunder methods. That is, Python pre-defines the relevant dunder methods for us, and we just re-use their names. Generally you shouldn’t implement some random method you thought of as a dunder method.</p>
+</div>
+<div class="section" id="exercise-iii">
+<h4>Exercise III<a class="headerlink" href="#exercise-iii" title="Permalink to this headline">¶</a></h4>
+<p>Modify the <code class="docutils literal notranslate"><span class="pre">__add__()</span></code> method so that if <em>other</em> is an integer, it will simply add that number to all items in the shopping list.</p>
+<div class="dropdown admonition">
+<p class="admonition-title"> Solution</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ShoppingList</span><span class="p">:</span>
+    
+    <span class="o">...</span>
+    
+    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add together two shopping lists.</span>
+<span class="sd">        </span>
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This method returns a new shopping list, meaning it doesn&#39;t modify</span>
+<span class="sd">        any of the existing lists it was given.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        other : ShoppingList</span>
+<span class="sd">            Another shopping list</span>
+<span class="sd">        </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ShoppingList</span>
+<span class="sd">            Combined shopping list</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">ShoppingList</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">ShoppingList</span><span class="p">(</span>
+                <span class="n">vegetables</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">vegetables</span><span class="p">,</span>
+                <span class="n">fruit</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">fruit</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">fruit</span><span class="p">,</span>
+                <span class="n">bread</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">bread</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">bread</span>
+            <span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">ShoppingList</span><span class="p">(</span>
+                <span class="n">vegetables</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="n">other</span><span class="p">,</span>
+                <span class="n">fruit</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">fruit</span> <span class="o">+</span> <span class="n">other</span><span class="p">,</span>
+                <span class="n">bread</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">bread</span> <span class="o">+</span> <span class="n">other</span>                
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;other must by either a ShoppingList instance or an integer, got: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">other</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To learn more about other Python operators, see <a class="reference external" href="https://www.python-course.eu/python3_magic_methods.php">this overview</a>.</p>
+</div>
+</div>
 </div>
 <div class="section" id="summary">
 <h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
