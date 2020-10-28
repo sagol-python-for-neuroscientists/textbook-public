@@ -4,6 +4,7 @@
     - file: classes/class_0/class_0
     - file: classes/class_1/class_1
     - file: classes/class_2/class_2
+    - file: classes/class_3/class_3
 - file: tutorials
   sections:
     - file: tutorials/python_setup

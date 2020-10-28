@@ -11,3 +11,6 @@ venv
 # TODO: Remove after updating book
 tmp
 extra_material
+
+# VSCode configuration files
+.vscode
