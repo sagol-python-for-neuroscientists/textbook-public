@@ -27,4 +27,4 @@ latex:
   latex_documents:
     targetname: book.tex
 
-exclude_patterns: ["*skip*"]
+exclude_patterns: ["**/*_skip.ipynb*"]
