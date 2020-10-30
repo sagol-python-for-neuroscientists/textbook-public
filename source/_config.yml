@@ -9,7 +9,7 @@ parse:
   myst_extended_syntax: true
 
 repository:
-  url: https://github.com/sagol-python-for-neuroscientists/textbook
+  url: https://github.com/ZviBaratz/python_for_neuroscientists
   path_to_book: source/
   branch: main
 
