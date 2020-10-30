@@ -11,6 +11,7 @@ parse:
 repository:
   url: https://github.com/sagol-python-for-neuroscientists/textbook
   path_to_book: source/
+  branch: main
 
 html:
   home_page_in_navbar: true
