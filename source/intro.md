@@ -13,8 +13,8 @@ General questions - both technical and Python-related - can be posted to the "Is
 Asking question in the "Issues" tab is highly encouraged since it allows you fellow students to see both the issue, whcih they will probably run into at some point, and the answer for it.
 
 However, if for some reason you prefer to engage us directly, feel free to do so at:
-- Zvi Baratz - [zvibaratz@mail.tau.ac.il](zvibaratz@mail.tau.ac.il)
-- Gal Ben-Zvi - [hershkovitz1@mail.tau.ac.il](hershkovitz1@mail.tau.ac.il)
+- Zvi Baratz - [at zvibaratz@mail.tau.ac.il](zvibaratz@mail.tau.ac.il)
+- Gal Ben-Zvi - [at hershkovitz1@mail.tau.ac.il](hershkovitz1@mail.tau.ac.il)
 
 ![good luck](good_luck.jpg)
 This [jupyter book](https://jupyterbook.org/intro.html) is written and
