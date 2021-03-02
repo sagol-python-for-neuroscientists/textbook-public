@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Git Repository &#8212; Python for Neuroscience</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.37f24b989f4638ff9c27c22dc7559d4f.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Resources" href="../resources.html" />
+    <link rel="prev" title="General Setup" href="python_setup.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Python for Neuroscience</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../contents.html">
+   Contents
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../classes/class_0/class_0.html">
+     Class 0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../classes/class_1/class_1.html">
+     Class 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../classes/class_2/class_2.html">
+     Class 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../classes/class_3/class_3.html">
+     Class 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../classes/class_4/class_4.html">
+     Class 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../classes/class_5/class_5.html">
+     Class 5
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../tutorials.html">
+   Tutorials
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="python_setup.html">
+     General Setup
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Create a Git Repository
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources.html">
+   Resources
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/tutorials/create_git_repo.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        
+        <a class="issues-button"
+            href="https://github.com/ZviBaratz/python_for_neuroscientists/issues/new?title=Issue%20on%20page%20%2Ftutorials/create_git_repo.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="create-a-git-repository">
+<span id="create-git-repo"></span><h1>Create a Git Repository<a class="headerlink" href="#create-a-git-repository" title="Permalink to this headline">¶</a></h1>
+<p>This document serves as a reference on the proper way to create a git “repo” which is located both on your computer and on GitHub. This allows to backup your code “on the cloud”, while also simplifying sharing code between developers.</p>
+<ol class="simple">
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">git</span></code> by completing “Task 2” in <code class="docutils literal notranslate"><span class="pre">SetupPython.md</span></code>.</p></li>
+<li><p>Create a new <a class="reference external" href="https://github.com">GitHub.com</a> user (or use your existing one).</p></li>
+<li><p>Create a new repository there. Name it. At the bottom of the page choose a Python <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file.
+The <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file specifies the files that are ignored, i.e. <em>not</em> under version control.</p></li>
+<li><p>The page you arrived at is the homepage of your repository (repo). All code you write will
+one day be shown there. You can create new files directly from this web interface,
+and edit them online as you like.</p></li>
+<li><p>However, a better option is to connect this repo to a folder in your computer, and this is what you’ll do next.
+This folder can push (<em>from</em> local folder <em>to</em> web) and pull (<em>from</em> web <em>to</em> local folder) data to and from this website,
+allowing you to work offline with your own preferred editor and backup and share your code when you wish to.</p></li>
+<li><p>To do so, you can either use the command line or use dedicated software:</p>
+<ul class="simple">
+<li><p>Basic git command line tool can be installed from <a class="reference external" href="https://git-scm.com/downloads">here</a>.</p></li>
+<li><p>GitHub Desktop.</p></li>
+<li><p>GitKraken.</p></li>
+<li><p>VS Code Git integration (preferred).
+Class 2 includes instructions how to work with the command line interface, and the installation instructions
+can be found in <code class="docutils literal notranslate"><span class="pre">PythonSetup.md</span></code> in the course’s website. However, working with the VS Code GUI should be simpler and more intuitive, as I’ll show below.</p></li>
+</ul>
+</li>
+<li><p>The operation we wish to perform is to <code class="docutils literal notranslate"><span class="pre">clone</span></code> the repo to your computer, i.e. creating a copy of the online repo on your computer.
+A <code class="docutils literal notranslate"><span class="pre">clone</span></code> operation requires a URL of the respective repo. You can obtain it by clicking the
+<strong>Clone or download</strong> button on the right side of your web repo. Copy the link (the one ending with <code class="docutils literal notranslate"><span class="pre">.git</span></code>). Open VS Code and press <code class="docutils literal notranslate"><span class="pre">Ctrl[Cmd]</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">P</span></code> and type <code class="docutils literal notranslate"><span class="pre">Git:</span> <span class="pre">Clone</span></code>. Paste the URL to the address bar and choose a folder. Click “Open Repository” to open VS Code inside that folder. This operation “cloned” the online repo and created a copy of it in your computer. You should find inside that folder the <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file you created.</p></li>
+<li><p>Now you can create new files inside this folder. When you’re happy with the new code you’ve written, you can commit the changes. Committing means giving a “tag” to a state your code is in. Everytime you do some significant change to your codebase, like adding a function or deleting something, you should commit this change, since it marks a specific milestone in your development process. Git will allow you later to go back to this point in time and review (and possible revert) the changes you’ve made.</p></li>
+<li><p>To commit, go to the Git symbol on the left bar (fork-looking), highlight the “Changes” row and choose “Stage All Changes”. Staging is a required step before committing - you’ll commit evert staged changed, but you don’t have to stage every change you’ve made. After staging, you can press the “V” icon on the top to commit the changes to the git tree. VSCode (and git) will request a message describing the changes you’ve made in your last commit, like “added function x” or “HW is complete”.</p></li>
+<li><p>You’re now ready to push the changes to the online repo. Click the three dots and select “Push”. Enter your credentials and the files should momentarily appear online.</p></li>
+</ol>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tutorials"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="python_setup.html" title="previous page">General Setup</a>
+    <a class='right-next' id="next-link" href="../resources.html" title="next page">Resources</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
