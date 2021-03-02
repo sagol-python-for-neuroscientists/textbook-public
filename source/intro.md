@@ -14,8 +14,8 @@ Asking question in the "Issues" tab is highly encouraged since it allows you fel
 
 However, if for some reason you prefer to engage us directly, feel free to do so at:
 
-- Zvi Baratz - <zvibaratz@mail.tau.ac.il>
-- Gal Ben-Zvi - <hershkovitz1@mail.tau.ac.il>
+- Zvi Baratz - [zvibaratz@mail.tau.ac.il](mailto:zvibaratz@mail.tau.ac.il)
+- Gal Ben-Zvi - [hershkovitz1@mail.tau.ac.il](mailto:hershkovitz1@mail.tau.ac.il)
 
 ![good luck](good_luck.jpg)
 This [jupyter book](https://jupyterbook.org/intro.html) is written and
