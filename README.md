@@ -12,4 +12,4 @@ For any questions you might have during the course, feel free to contact us by:
   - [Zvi Baratz](mailto:zvibaratz@mail.tau.ac.il)
   - [Gal Ben-Zvi](mailto:hershkovitz1@mail.tau.ac.il)
 
-![python](https://i.redd.it/uafkeky6huc11.jpg)
+<div style="text-align:center"><img src="https://i.redd.it/uafkeky6huc11.jpg" /></div>
