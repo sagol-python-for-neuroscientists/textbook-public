@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Class 4 -Python’s scientific stack &#8212; Python for Neuroscience</title>
+    <title>Class 4: The Scientific Stack (Part I - numpy) &#8212; Python for Neuroscience</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -58,8 +58,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Class 5" href="../class_5/class_5.html" />
-    <link rel="prev" title="Class 3: File I/O and exception handling" href="../class_3/class_3.html" />
+    <link rel="next" title="Class 5: The Scientific Stack (Part II - matplotlib and pandas)" href="../class_5/class_5.html" />
+    <link rel="prev" title="Class 3: File I/O and Exception Handling" href="../class_3/class_3.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -114,27 +114,45 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_1/class_1.html">
-     Class 1: Data structures, Functions and Iterations
+     Class 1: Data Structures, Functions and Iterations
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_2/class_2.html">
-     Class 2: Object-oriented programming
+     Class 2: Object-oriented Programming
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_3/class_3.html">
-     Class 3: File I/O and exception handling
+     Class 3: File I/O and Exception Handling
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Class 4 -Python’s scientific stack
+     Class 4: The Scientific Stack (Part I -
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+     )
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_5/class_5.html">
-     Class 5
+     Class 5: The Scientific Stack (Part II -
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
+      </span>
+     </code>
+     and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+     )
     </a>
    </li>
   </ul>
@@ -386,8 +404,8 @@
         
               <div>
                 
-  <div class="section" id="class-4-python-s-scientific-stack">
-<h1>Class 4 -Python’s scientific stack<a class="headerlink" href="#class-4-python-s-scientific-stack" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="class-4-the-scientific-stack-part-i-numpy">
+<h1>Class 4: The Scientific Stack (Part I - <code class="docutils literal notranslate"><span class="pre">numpy</span></code>)<a class="headerlink" href="#class-4-the-scientific-stack-part-i-numpy" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="scientific-python">
 <h2>Scientific Python<a class="headerlink" href="#scientific-python" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="introduction">
@@ -1247,7 +1265,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>92.8 ms ± 1.96 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>101 ms ± 2.46 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -1264,7 +1282,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.63 ms ± 100 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.67 ms ± 24.8 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1497,7 +1515,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>505.33872653153065
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>505.15867278706145
 </pre></div>
 </div>
 </div>
@@ -1512,13 +1530,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>92.7 µs ± 1.43 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>96.7 µs ± 1.36 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.45 µs ± 37.4 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.81 µs ± 335 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.43 µs ± 25.6 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.72 µs ± 64.5 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1535,13 +1553,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>73 µs ± 1.18 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>75.9 µs ± 816 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.2 µs ± 72.8 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.43 µs ± 46.6 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.39 µs ± 53.7 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.4 µs ± 33.7 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1555,7 +1573,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0043862262285959686
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.007314796033922488
 </pre></div>
 </div>
 </div>
@@ -1568,10 +1586,10 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.00438623, 0.2720163 , 0.24944157, 0.34944806],
-       [0.10735138, 0.05946691, 0.29959869, 0.12458934],
-       [0.15087555, 0.20228312, 0.05741418, 0.04322005],
-       [0.1698138 , 0.29392339, 0.32821734, 0.29497073]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.32670898, 0.02919313, 0.0073148 , 0.08763718],
+       [0.09661871, 0.23666757, 0.42498989, 0.0116275 ],
+       [0.36971043, 0.40404855, 0.3608695 , 0.31457867],
+       [0.22809521, 0.03341948, 0.01521414, 0.14700335]])
 </pre></div>
 </div>
 </div>
@@ -1584,7 +1602,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.92344239, 0.95875796, 0.99868864, 0.99836255])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.95709491, 0.89211924, 0.74452513, 0.89115887])
 </pre></div>
 </div>
 </div>
@@ -1938,79 +1956,79 @@ np.sum result: 5
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>arr1 (integers) stats:
-Mean: 0.003659999999999993,
-STD: [[0.63235749 0.42049495 0.48101559 0.6444967  0.49969991 0.48073277
-  0.60445016 0.71100211 0.62399038 0.62418267]
- [0.51795367 0.40615268 0.63185125 0.41723375 0.58338666 0.44118477
-  0.33745518 0.46184413 0.60359258 0.68017939]
- [0.46209956 0.47470412 0.49478884 0.62657482 0.48462769 0.57452937
-  0.38616577 0.58345523 0.44022267 0.60153138]
- [0.46439638 0.44472014 0.60808223 0.55332088 0.58199656 0.62243393
-  0.47714149 0.57376302 0.60999672 0.68122243]
- [0.59051164 0.49690643 0.56350333 0.32192546 0.38637288 0.54419114
-  0.57863287 0.57288393 0.4014424  0.68514524]
- [0.56455646 0.53667495 0.60134516 0.55301356 0.56656509 0.58540926
-  0.69898498 0.52300669 0.60447994 0.52638009]
- [0.60623428 0.60572271 0.67249981 0.46389654 0.52423277 0.45382375
-  0.45371357 0.60764792 0.65660034 0.64077765]
- [0.53792565 0.58782651 0.54210331 0.6506612  0.39336497 0.54477885
-  0.34804597 0.51725816 0.5147582  0.51457167]
- [0.46223803 0.46709314 0.36042197 0.66537208 0.47753115 0.60068294
-  0.51932264 0.54750708 0.61441354 0.62886883]
- [0.70386362 0.55504955 0.44369359 0.5984647  0.55035988 0.44479658
-  0.62521676 0.49331531 0.71460199 0.54553093]],
-Sum: [[ 4.16  1.18 -3.34  2.68 -2.84  1.86 -0.08 -1.64  1.06  1.94]
- [ 4.   -0.62  0.3  -2.96  0.56 -1.06  1.06 -2.18  0.24 -0.32]
- [-2.1   2.94 -3.32 -2.52 -1.    2.04 -1.42 -0.38  0.46 -2.52]
- [-3.34 -1.18 -1.48 -0.34 -1.56  3.8   2.02  0.46  0.76  0.84]
- [ 0.68 -0.8   0.08 -1.84  1.3  -3.3   3.44 -1.5  -1.18  2.42]
- [ 0.72  0.02  1.7   2.84 -1.02  0.12  0.76  0.38  0.32 -0.32]
- [ 0.78 -1.44  2.96  0.86  0.24 -2.42  1.28  1.    1.38  1.4 ]
- [ 0.54  1.7   0.26 -0.8  -1.56  0.94 -1.68  1.14 -3.78 -1.48]
- [ 1.22  0.36  1.54  1.64 -0.08  3.62 -0.44 -0.68 -0.1  -0.52]
- [-3.    1.    1.88 -0.36 -2.2  -1.14  0.14 -0.38  1.02 -2.16]]
+Mean: 0.02086,
+STD: [[0.69014781 0.66880191 0.59871863 0.45246436 0.62559092 0.50857055
+  0.51501068 0.70058547 0.45956936 0.60315504]
+ [0.62104428 0.63755784 0.51418285 0.6531646  0.44841499 0.64802469
+  0.46925047 0.65475492 0.45309602 0.42811681]
+ [0.56588338 0.54153855 0.36509725 0.56919592 0.48404958 0.71028163
+  0.61884085 0.44782139 0.5925538  0.50993725]
+ [0.40396039 0.44987109 0.57431699 0.43949516 0.55382669 0.42915731
+  0.72846139 0.46777772 0.4327817  0.44102154]
+ [0.48777454 0.546      0.72783515 0.55136558 0.60750309 0.53927729
+  0.35869207 0.52582887 0.30792856 0.54312061]
+ [0.45906427 0.41341988 0.5984012  0.62153359 0.39304453 0.41037056
+  0.62644712 0.43865248 0.5624091  0.55756973]
+ [0.44714204 0.63106577 0.46277424 0.54575086 0.55752668 0.5774461
+  0.33567246 0.55812543 0.44381978 0.50227084]
+ [0.5486857  0.38358311 0.55172819 0.5711077  0.40323194 0.52634969
+  0.60494297 0.53995926 0.6417632  0.61824267]
+ [0.61318839 0.60459573 0.55378335 0.45803493 0.454      0.52445782
+  0.55433203 0.65802432 0.5857269  0.56684742]
+ [0.55776698 0.55445829 0.629031   0.3354102  0.53860561 0.57982411
+  0.55457732 0.57001403 0.61481705 0.59700921]],
+Sum: [[ 0.8  -0.2   3.64  0.72 -0.84  2.56 -1.44  2.24 -1.68 -1.34]
+ [-0.82 -0.84 -0.62 -2.08 -0.44  0.54 -2.08  0.92  2.38  1.62]
+ [ 2.02  3.1   2.46  1.04  1.92 -2.64 -3.4   0.76  2.    1.12]
+ [ 1.7   0.22  0.32  1.78  0.86 -0.3   0.22 -2.36  0.24  2.  ]
+ [ 0.16 -0.98 -1.62 -1.76 -0.22  0.48  3.28  0.24  0.64 -0.74]
+ [-0.14 -2.    2.02  0.44  0.94 -0.64  1.88  1.66  0.84 -1.74]
+ [ 2.48 -1.34 -0.48  1.28  1.56 -1.44  2.56 -0.78  1.4   0.16]
+ [ 2.56 -0.52 -2.5   1.38  1.86  0.06 -0.2  -0.2  -1.4  -2.22]
+ [ 3.36 -1.26  0.38 -1.62 -1.28 -2.14 -1.3   0.2   4.54 -0.78]
+ [-0.24 -2.68 -1.92 -1.06  0.4   3.28  0.04  1.76  0.66 -2.54]]
 arr2 (normal distribution) stats:
-Mean: -1.0505910288663702,
-STD: [[1.95765087 1.323712   2.28248409 2.30542971 2.46554282 2.05087175
-  1.04532786 2.08124661 1.83630477 1.56547589]
- [2.57467805 1.91587847 2.23548842 2.50774314 1.79394935 1.53508045
-  1.86793774 2.13451524 1.89436562 2.53897414]
- [2.38025663 1.48722183 1.58044284 2.69939713 2.57515473 2.00924506
-  1.86074703 1.85633055 0.92951514 2.42489443]
- [1.77204509 1.4345767  1.6887205  1.81856885 1.63424644 1.66070868
-  1.08225924 1.52447946 1.72651183 1.20410146]
- [1.67459456 2.22124334 1.56498056 2.05965369 1.85821728 1.35455617
-  2.03860481 1.79198998 2.17177894 2.05791377]
- [2.60083656 1.99482862 1.40019818 1.39192626 1.42539765 1.73279749
-  1.4758437  2.50182244 1.72447018 2.23660353]
- [2.50131934 1.97399853 1.1755345  1.68134972 1.82720482 1.90756436
-  2.36261125 3.34854493 2.1148159  1.59228084]
- [1.84338021 1.64919642 1.20319495 2.29928154 1.27993123 1.96820595
-  2.01620228 2.46827352 1.69988628 2.85150213]
- [2.03506201 1.84605665 2.5750594  1.92478314 1.79041461 1.22622805
-  1.48255076 2.48333973 1.12900269 1.1860694 ]
- [2.60589427 1.48569982 2.03668699 1.85272194 1.94029069 1.45075317
-  2.00566546 2.695246   2.35459045 1.9008677 ]],
-Sum: [[-15.5199096   -2.90226909 -19.16375355 -10.32550562 -13.01072506
-  -13.29750315 -15.60730693 -18.31485925  -9.11330918 -12.67884768]
- [-13.13143321 -19.48173178   1.48913394 -14.44503292 -13.60918831
-   -3.96378124 -10.95390569 -16.40424016  -5.81140847 -23.8371942 ]
- [ -6.55693995 -16.38816796  -4.27873469 -13.33220919  -3.16601747
-  -16.47688793 -15.69449452 -10.63845713 -10.60934197  -5.72409724]
- [  3.10490912  -7.66339144  -6.79874175  -6.67135862 -14.54695917
-  -11.3823422   -8.82538683  -3.42667815  -4.08271803  -7.81339127]
- [-11.97650358  -9.36962937  -4.07423427 -12.87318885   3.08670291
-   -3.96304813  -3.34776469 -23.56051726  -3.82127408 -10.81570668]
- [-12.67191082  -6.95977591  -9.64968939  -8.78708794  -8.1697357
-   -4.12905306 -16.16148382  -3.08318223 -13.16152736 -24.20171772]
- [ -9.68034936  -0.95979409 -10.79541333 -11.36002126 -19.88444199
-  -15.66634677  -5.65778238 -15.40175929   1.95378225 -21.15862621]
- [-16.16869178 -22.35373501 -23.1659701   -5.48593421 -15.57632712
-  -10.8381751   -4.17839432  -5.72003567 -11.73105421  -6.36815283]
- [ -3.00961774 -11.45601305 -14.00555502 -17.80530971 -14.30772505
-   -8.74398517 -20.21144409 -13.51332098 -11.3787843  -22.48490951]
- [-13.1604335    1.10399518  -7.72635233 -12.9537917   -1.31946248
-   -0.40385266  -6.57073494  -0.44851274 -12.31221508 -20.94127567]]
+Mean: -1.0177004765228415,
+STD: [[0.94836381 1.95969737 1.9642534  2.05960282 1.57005244 2.24129993
+  1.97213852 1.84748692 1.44523332 2.36451814]
+ [1.74901204 1.83661662 2.06003078 1.66926223 2.05114456 1.00423849
+  1.75536734 1.51731696 1.34198694 2.34380729]
+ [1.67424489 2.38468226 1.00918903 2.73010916 1.42574107 1.75524671
+  1.85731853 1.52754338 2.10078804 2.4201029 ]
+ [1.94425156 1.41768889 1.1632925  1.65849677 1.55664118 1.36251576
+  2.20786648 1.70146932 1.28618121 1.49881873]
+ [1.68766569 2.57800274 1.41969408 1.57836289 2.30361932 2.42929879
+  1.78862358 1.82970045 2.358783   1.80659957]
+ [2.01319724 1.43601036 2.39542193 1.20583702 1.80586041 1.08777124
+  1.98726878 1.76164452 1.16776923 2.71269657]
+ [2.3407217  1.62486404 1.6843003  1.45280999 2.18970557 2.10145058
+  1.9272072  2.04134606 1.57321017 1.64134745]
+ [1.40664217 1.75502814 1.82358074 2.12873171 1.9370139  1.75498095
+  1.73581898 1.88420059 1.24936896 1.71017328]
+ [2.21482013 2.21090527 1.52579333 2.31411859 1.80340687 1.5619312
+  2.94556884 2.586355   2.11755472 2.67190747]
+ [2.27360566 2.14369819 2.37980799 1.47910848 2.15762763 1.58274527
+  1.57229628 2.62551418 1.88751118 1.34622268]],
+Sum: [[ -8.35167982  -6.87159618 -14.50371827 -11.30444726 -16.05662298
+   -4.38943304 -13.00894795  -9.28474287 -14.07838757 -16.35274891]
+ [-12.17155969 -13.42454247 -25.74352494  -9.0292843   -9.74619116
+   -1.95490369 -16.01047515  -4.53318771  -8.8367926  -11.68556087]
+ [-10.68646081  -6.57342907  -8.23184738 -14.42065751 -10.13380133
+   -1.95768981  -8.68375122 -12.33834445 -17.13382357  -6.5711555 ]
+ [ -9.61124122  -8.71818645  -8.80141352 -12.08077554  -9.35928497
+   -4.93734039   4.61544025  -5.9257282  -13.41318611 -11.56095823]
+ [-11.65557867 -16.20169161  -5.37701072 -14.06603583 -12.83914891
+  -14.41330802 -11.75431213 -18.42292495 -10.40270009 -18.68420841]
+ [ -7.786739   -12.99945205  -5.65404881  -4.33364318 -19.58880821
+   -7.99410962  -1.84438739 -17.96997626 -18.43662802   0.09460014]
+ [-10.17095387 -18.16457866 -18.96332361  -6.48057231  -8.8602698
+  -10.2891148  -12.13345032 -15.6468118   -2.16778358 -11.83108083]
+ [  2.98026147 -12.79330959  -9.54992559  -8.39102171 -10.33530415
+  -16.93482507   1.18063352 -19.96724092 -11.41593274  -5.42694437]
+ [-16.78951336 -21.94990231  -4.1662078   -9.56165774  -5.56219384
+  -12.77013016  -3.39755281  -2.65837526 -11.12079276  -4.92082324]
+ [-13.57071415 -12.3159847  -14.0313117   -8.63162261  -2.83791367
+   -6.08938203 -14.60854949  -7.22068861  -3.90275843  -2.0407589 ]]
 </pre></div>
 </div>
 </div>
@@ -2029,7 +2047,7 @@ Sum: [[-15.5199096   -2.90226909 -19.16375355 -10.32550562 -13.01072506
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>438 µs ± 5.33 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>451 µs ± 7.73 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -2048,7 +2066,7 @@ Sum: [[-15.5199096   -2.90226909 -19.16375355 -10.32550562 -13.01072506
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.6 µs ± 132 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12.5 µs ± 230 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -2113,8 +2131,8 @@ Sum: [[-15.5199096   -2.90226909 -19.16375355 -10.32550562 -13.01072506
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../class_3/class_3.html" title="previous page">Class 3: File I/O and exception handling</a>
-    <a class='right-next' id="next-link" href="../class_5/class_5.html" title="next page">Class 5</a>
+    <a class='left-prev' id="prev-link" href="../class_3/class_3.html" title="previous page">Class 3: File I/O and Exception Handling</a>
+    <a class='right-next' id="next-link" href="../class_5/class_5.html" title="next page">Class 5: The Scientific Stack (Part II - <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code>)</a>
 
         </div>
         
