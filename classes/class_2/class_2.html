@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Class 2 &#8212; Python for Neuroscience</title>
+    <title>Class 2: Object-oriented programming &#8212; Python for Neuroscience</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -60,8 +60,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Class 3" href="../class_3/class_3.html" />
-    <link rel="prev" title="Class 1" href="../class_1/class_1.html" />
+    <link rel="next" title="Class 3: File I/O and exception handling" href="../class_3/class_3.html" />
+    <link rel="prev" title="Class 1: Data structures, Functions and Iterations" href="../class_1/class_1.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -99,6 +99,11 @@
  </li>
 </ul>
 <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus.html">
+   Syllabus
+  </a>
+ </li>
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="../../contents.html">
    Contents
@@ -106,32 +111,32 @@
   <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../class_0/class_0.html">
-     Class 0
+     Class 0: Introduction and Motivation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_1/class_1.html">
-     Class 1
+     Class 1: Data structures, Functions and Iterations
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Class 2
+     Class 2: Object-oriented programming
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_3/class_3.html">
-     Class 3
+     Class 3: File I/O and exception handling
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_4/class_4.html">
-     Class 4
+     Class 4 -Python’s scientific stack
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_5/class_5.html">
-     Class 5
+     Class 5 - Advanced Pandas &amp; Visualization
     </a>
    </li>
   </ul>
@@ -433,8 +438,8 @@
         
               <div>
                 
-  <div class="section" id="class-2">
-<h1>Class 2<a class="headerlink" href="#class-2" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="class-2-object-oriented-programming">
+<h1>Class 2: Object-oriented programming<a class="headerlink" href="#class-2-object-oriented-programming" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="virtual-environments">
 <h2>Virtual Environments<a class="headerlink" href="#virtual-environments" title="Permalink to this headline">¶</a></h2>
 <p>The basic idea is that <strong>every Python project you have should be contained within an isolated environment</strong>, which includes the interpreter and any libraries (i.e. external Python packages) that are needed for that specific project.</p>
@@ -453,15 +458,15 @@
 <p>There are numerous tools for creating and managing virtual environments with Python. In this course we will use <a class="reference external" href="https://docs.python.org/3/library/venv.html#module-venv"><code class="docutils literal notranslate"><span class="pre">venv</span></code></a>, which is one of Python’s built-in packages and is therefore a simple option that will always be available to you.</p>
 <p>Creating a new virtual environment with <code class="docutils literal notranslate"><span class="pre">venv</span></code> is as easy as running:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="ac7fe6d9-14ba-4917-bf43-b4ac801995e4" name="11799e14-7e4b-4c0c-b249-b5847442d076" type="radio">
-</input><label class="tabbed-label" for="ac7fe6d9-14ba-4917-bf43-b4ac801995e4">
+<input checked="checked" id="720d40bc-5bcd-4872-b909-6097af7f907e" name="0c11d685-7988-4f2e-8142-a9c77b0e096e" type="radio">
+</input><label class="tabbed-label" for="720d40bc-5bcd-4872-b909-6097af7f907e">
 Linux/macOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m venv /path/to/new/virtual/environment/
 </pre></div>
 </div>
 </div>
-<input id="8267b167-236f-484b-b8ac-8cb4084fe492" name="11799e14-7e4b-4c0c-b249-b5847442d076" type="radio">
-</input><label class="tabbed-label" for="8267b167-236f-484b-b8ac-8cb4084fe492">
+<input id="51f0533e-2ffe-477e-94f7-a1c8d361d973" name="0c11d685-7988-4f2e-8142-a9c77b0e096e" type="radio">
+</input><label class="tabbed-label" for="51f0533e-2ffe-477e-94f7-a1c8d361d973">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> C:\Python38\python -m venv C:\path\to\new\virtual\environment\
 </pre></div>
@@ -498,16 +503,16 @@ Windows</label><div class="tabbed-content docutils">
 <p>Activating a virtual environment means modifying your working environment to use a particular, isolated installation of Python (created in <a class="reference internal" href="#create"><span class="std std-ref">Creating a Virtual Environment</span></a>). This will normally also “override” some other related CLI tools with those installed within the virtual environment’s <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory (such as <code class="docutils literal notranslate"><span class="pre">pip</span></code>), and sometimes also change some OS-related environment variables.</p>
 <p>To activate the virtual environment and use the newly created isolated Python environment, simply run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="099b0db0-c916-4537-a160-00a40bde9d57" name="d056b64d-f0a4-40ce-8b48-39b48196925c" type="radio">
-</input><label class="tabbed-label" for="099b0db0-c916-4537-a160-00a40bde9d57">
+<input checked="checked" id="f4bd2949-9db2-494a-a4e4-ec0d28d0e0b4" name="bc24b98a-51dd-4dd8-a18b-17b2cae355a5" type="radio">
+</input><label class="tabbed-label" for="f4bd2949-9db2-494a-a4e4-ec0d28d0e0b4">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">source</span> &lt;venv&gt;/bin/activate
 </pre></div>
 </div>
 <p><em>* Replace <code class="docutils literal notranslate"><span class="pre">&lt;venv&gt;</span></code> with your virtual environment’s directory path.</em></p>
 </div>
-<input id="1f501fda-9582-4898-802c-b8122de54a98" name="d056b64d-f0a4-40ce-8b48-39b48196925c" type="radio">
-</input><label class="tabbed-label" for="1f501fda-9582-4898-802c-b8122de54a98">
+<input id="b2dd076c-5172-46da-9fb7-e7014c966023" name="bc24b98a-51dd-4dd8-a18b-17b2cae355a5" type="radio">
+</input><label class="tabbed-label" for="b2dd076c-5172-46da-9fb7-e7014c966023">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> <span class="p">&lt;</span>venv<span class="p">&gt;</span>\Scripts\activate
 </pre></div>
@@ -518,16 +523,16 @@ Windows</label><div class="tabbed-content docutils">
 <p>You should now see your virtual environment’s directory name used as a prefix (<code class="docutils literal notranslate"><span class="pre">(venv)</span></code>) in your terminal window.</p>
 <p>To validate the activation, run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="5d5031e3-e426-4faa-a6a8-3494500ea24e" name="56c5c847-c1bc-447e-b74d-14cc1b8a7d06" type="radio">
-</input><label class="tabbed-label" for="5d5031e3-e426-4faa-a6a8-3494500ea24e">
+<input checked="checked" id="4349a4fa-6642-4eba-af76-94b83200a3ab" name="94875b0e-0eaa-4107-8981-36a050158857" type="radio">
+</input><label class="tabbed-label" for="4349a4fa-6642-4eba-af76-94b83200a3ab">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$ </span>which python
 <span class="go">&lt;venv&gt;/bin/python</span>
 </pre></div>
 </div>
 </div>
-<input id="75477c1f-f508-46b5-9720-26ba5f189aa5" name="56c5c847-c1bc-447e-b74d-14cc1b8a7d06" type="radio">
-</input><label class="tabbed-label" for="75477c1f-f508-46b5-9720-26ba5f189aa5">
+<input id="211749ec-feaf-432c-a951-6e7c2c4e5bd9" name="94875b0e-0eaa-4107-8981-36a050158857" type="radio">
+</input><label class="tabbed-label" for="211749ec-feaf-432c-a951-6e7c2c4e5bd9">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">C:\&gt;</span> where python
 <span class="gp">&lt;venv&gt;</span>\Scripts\python
@@ -741,7 +746,7 @@ Instead of writing:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7f6b0422aa30&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7fb8208e1640&gt;
 </pre></div>
 </div>
 </div>
@@ -868,7 +873,7 @@ Instead of writing:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7f6b041da550&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7fb8200985b0&gt;
 </pre></div>
 </div>
 </div>
@@ -1601,8 +1606,8 @@ p.x: 20, p.y: 10
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../class_1/class_1.html" title="previous page">Class 1</a>
-    <a class='right-next' id="next-link" href="../class_3/class_3.html" title="next page">Class 3</a>
+    <a class='left-prev' id="prev-link" href="../class_1/class_1.html" title="previous page">Class 1: Data structures, Functions and Iterations</a>
+    <a class='right-next' id="next-link" href="../class_3/class_3.html" title="next page">Class 3: File I/O and exception handling</a>
 
         </div>
         

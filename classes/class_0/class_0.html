@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Class 0 &#8212; Python for Neuroscience</title>
+    <title>Class 0: Introduction and Motivation &#8212; Python for Neuroscience</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -58,7 +58,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Class 1" href="../class_1/class_1.html" />
+    <link rel="next" title="Class 1: Data structures, Functions and Iterations" href="../class_1/class_1.html" />
     <link rel="prev" title="Contents" href="../../contents.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -97,6 +97,11 @@
  </li>
 </ul>
 <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus.html">
+   Syllabus
+  </a>
+ </li>
  <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="../../contents.html">
    Contents
@@ -104,32 +109,32 @@
   <ul class="current collapse-ul">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Class 0
+     Class 0: Introduction and Motivation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_1/class_1.html">
-     Class 1
+     Class 1: Data structures, Functions and Iterations
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_2/class_2.html">
-     Class 2
+     Class 2: Object-oriented programming
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_3/class_3.html">
-     Class 3
+     Class 3: File I/O and exception handling
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_4/class_4.html">
-     Class 4
+     Class 4 -Python’s scientific stack
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_5/class_5.html">
-     Class 5
+     Class 5 - Advanced Pandas &amp; Visualization
     </a>
    </li>
   </ul>
@@ -475,8 +480,8 @@
         
               <div>
                 
-  <div class="section" id="class-0">
-<h1>Class 0<a class="headerlink" href="#class-0" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="class-0-introduction-and-motivation">
+<h1>Class 0: Introduction and Motivation<a class="headerlink" href="#class-0-introduction-and-motivation" title="Permalink to this headline">¶</a></h1>
 <div class="dropdown admonition">
 <p class="admonition-title"> Administration</p>
 <ul class="simple">
@@ -1275,7 +1280,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f5c7529a8b0&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f349460a8b0&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1339,9 +1344,9 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The original list:
-[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f5c7529a8b0&gt;, -100]
+[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f349460a8b0&gt;, -100]
 l[0]: 1
-l[5]: &lt;function always_return_2 at 0x7f5c7529a8b0&gt;
+l[5]: &lt;function always_return_2 at 0x7f349460a8b0&gt;
 l[0:2]: [1, &#39;2&#39;]
 </pre></div>
 </div>
@@ -1355,7 +1360,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7f5c7529a8b0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7f349460a8b0&gt;
 </pre></div>
 </div>
 </div>
@@ -1435,7 +1440,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7f5c7529a8b0&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7f349460a8b0&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
 </pre></div>
 </div>
 </div>
@@ -1448,7 +1453,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7f5c7529a8b0&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7f349460a8b0&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1633,7 +1638,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;c&#39;, &#39;e&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;e&#39;, &#39;a&#39;, &#39;c&#39;}
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
@@ -1658,7 +1663,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, 2, 1}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, &#39;a&#39;}
 </pre></div>
 </div>
 </div>
@@ -1672,7 +1677,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0, &#39;a&#39;, 1}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0, 1, &#39;a&#39;}
 </pre></div>
 </div>
 </div>
@@ -1856,7 +1861,7 @@ list_without_dups = list(set(list_with_dups))
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../../contents.html" title="previous page">Contents</a>
-    <a class='right-next' id="next-link" href="../class_1/class_1.html" title="next page">Class 1</a>
+    <a class='right-next' id="next-link" href="../class_1/class_1.html" title="next page">Class 1: Data structures, Functions and Iterations</a>
 
         </div>
         
