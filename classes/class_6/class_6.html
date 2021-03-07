@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Class 6 - Advanced Pandas &#8212; Python for Neuroscience</title>
+    <title>Class 6: Advanced pandas &#8212; Python for Neuroscience</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -60,6 +60,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tutorials" href="../../tutorials.html" />
+    <link rel="prev" title="Class 5: The Scientific Stack (Part II - matplotlib and pandas)" href="../class_5/class_5.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -96,17 +98,17 @@
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../../syllabus.html">
    Syllabus
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="../../contents.html">
    Contents
   </a>
-  <ul class="collapse-ul">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="../class_0/class_0.html">
      Class 0: Background and Basic Syntax
@@ -153,6 +155,16 @@
       </span>
      </code>
      )
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Class 6: Advanced
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
     </a>
    </li>
   </ul>
@@ -283,11 +295,6 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#note">
-   Note
-  </a>
- </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#missing-data">
    Missing Data
@@ -432,23 +439,15 @@
               <div>
                 
   <div class="section" id="class-6-advanced-pandas">
-<h1>Class 6 - Advanced Pandas<a class="headerlink" href="#class-6-advanced-pandas" title="Permalink to this headline">¶</a></h1>
-<p>Currently, pandas’ <code class="docutils literal notranslate"><span class="pre">Series</span></code> and <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> might seem to us as no more than tables with too-complicated indexing methods. But this notion is far away from the truth, as we’ll soon see.</p>
-<div class="section" id="note">
-<h2>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h2>
+<h1>Class 6: Advanced <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#class-6-advanced-pandas" title="Permalink to this headline">¶</a></h1>
+<p>Currently, <code class="docutils literal notranslate"><span class="pre">pandas</span></code>’ <code class="docutils literal notranslate"><span class="pre">Series</span></code> and <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> might seem to us as no more than tables with complicated indexing methods. In this lesson, we will learn more about what makes <code class="docutils literal notranslate"><span class="pre">pandas</span></code> so powerful and how we can use it to write efficient and readable code.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Some of the features described below only work with pandas &gt;= 1.0.0. Make sure you have the latest pandas installation when running this notebook. To check the version of your pandas (or any other package), import it and print its <code class="docutils literal notranslate"><span class="pre">__version__</span></code> attribute:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+<span class="go">&#39;1.2.0&#39;</span>
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.2.0
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="missing-data">
@@ -6577,6 +6576,8 @@ dtype: int64
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="../class_5/class_5.html" title="previous page">Class 5: The Scientific Stack (Part II - <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code>)</a>
+    <a class='right-next' id="next-link" href="../../tutorials.html" title="next page">Tutorials</a>
 
         </div>
         
