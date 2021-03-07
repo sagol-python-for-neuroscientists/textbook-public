@@ -10,14 +10,14 @@ Homework assignments, excluding the first one, will be presented in a [different
 If you come across any useful learning resources which are not listed in the _resources_ section on the left, please don't hesitate to create a pull request with the new resource you found. _Feel free to ask us how to do so_
 
 General questions - both technical and Python-related - can be posted to the "Issues" tab of the [book's corresponding Git repository](https://github.com/sagol-python-for-neuroscientists/textbook.git). We'll do our best to answer them as soon as possible.
-Asking question in the "Issues" tab is highly encouraged since it allows you fellow students to see both the issue, whcih they will probably run into at some point, and the answer for it.
+Asking question in the "Issues" tab is highly encouraged since it allows your fellow students to see both the issue, which they will probably run into at some point, and the answer for it.
 
-However, if for some reason you prefer to engage us directly, feel free to do so at:
+However, if for some reason you prefer to contact us directly, feel free to do so at:
 
 - Zvi Baratz - [zvibaratz@mail.tau.ac.il](mailto:zvibaratz@mail.tau.ac.il)
 - Gal Ben-Zvi - [hershkovitz1@mail.tau.ac.il](mailto:hershkovitz1@mail.tau.ac.il)
 
-![good luck](good_luck.jpg)
+<div style="text-align:center"><img src="good_luck.jpg" /></div>
 This [jupyter book](https://jupyterbook.org/intro.html) is written and
 maintained for the "Python for Neuroscience" course in
 [Tel Aviv University](https://english.tau.ac.il/).
