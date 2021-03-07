@@ -56,6 +56,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Class 1: More Syntax and The Python Stack" href="../class_1/class_1.html" />
@@ -506,18 +508,17 @@
 <li><p>Classes are composed of a frontal lecture and some personal work.</p></li>
 <li><p>Final grade:</p>
 <ul>
-<li><p>40% HW (one submission is optional)</p></li>
-<li><p>60% final project</p></li>
+<li><p>40% - 6 Homework Assignments (one submission is optional)</p></li>
+<li><p>60% - Final Project</p></li>
 </ul>
 </li>
-<li><p>Feel free to contact:</p>
+<li><p>Feel free to contact us at:</p>
 <ul>
-<li><p>z.baratz&#64;gmail.com</p></li>
+<li><p>zvibaratz&#64;mail.tau.ac.il</p></li>
 <li><p>hershkovitz1&#64;mail.tau.ac.il</p></li>
 </ul>
 </li>
-<li><p>HW will usually be submitted via GitHub.</p></li>
-<li><p>All course material is uploaded online.</p></li>
+<li><p>Other than the first assignment, homework will be submitted via GitHub (for more information, see the <a class="reference internal" href="../../intro.html"><span class="doc">Introduction</span></a> and <a class="reference external" href="https://github.com/sagol-python-for-neuroscientists/course_site_2021/blob/master/SubmissionGuidelines.md">Submission Guidelines</a>).</p></li>
 </ul>
 </div>
 <div class="section" id="introduction-to-python">
@@ -569,13 +570,13 @@
 <h4>What can you do with Python?<a class="headerlink" href="#what-can-you-do-with-python" title="Permalink to this headline">¶</a></h4>
 <p><img alt="antigravity" src="../../_images/antigravity.png" /></p>
 <ul class="simple">
-<li><p>99% of what MATLAB does, and often better.</p>
+<li><p>99% of what MATLAB does, and often better</p>
 <ul>
 <li><p>Linear algebra</p></li>
 <li><p>Signal and image processing</p></li>
 <li><p>Data analysis</p></li>
-<li><p>Microcontrollers</p></li>
 <li><p>Visualizations</p></li>
+<li><p>Graphical User Interfaces (GUIs)</p></li>
 </ul>
 </li>
 <li><p>Data science</p></li>
@@ -589,7 +590,7 @@
 <ul class="simple">
 <li><p>Open source software</p></li>
 <li><p>Fully-featured language</p></li>
-<li><p>Widely adopted - tooling, libraries, documentation - most active programming language in the past three years.</p></li>
+<li><p>Widely adopted</p></li>
 <li><p>Easy to use but also allows for advanced programming paradigms</p></li>
 <li><p>In continuous development</p></li>
 </ul>
@@ -605,8 +606,8 @@
 <li><p>Python was created in the early 90’s by <a class="reference external" href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido van Russom</a>.</p></li>
 <li><p>In 2018 he left the role of <a class="reference external" href="https://en.wikipedia.org/wiki/Benevolent_dictator_for_life">Benevolent Dictator for Life (BDFL)</a>, and now Python is governed by a selected board of Core Developers.</p></li>
 <li><p>Changes in the core language are the result of a standardized <a class="reference external" href="https://www.python.org/dev/peps/">Python Enhancement Proposals (PEP)</a> process.</p></li>
-<li><p>Hundreds of thousands of libraries created by 3rd party developers like us.</p></li>
-<li><p>Python users are the ones developing the language - bug fixes, new features, etc.</p></li>
+<li><p>Hundreds of thousands of libraries created by 3<span class="math notranslate nohighlight">\(^{rd}\)</span> party developers like us.</p></li>
+<li><p>Python users are the ones developing the language, fixing bugs, creating new features, etc.</p></li>
 </ul>
 </div>
 <div class="section" id="python-2-vs-python-3">
@@ -615,7 +616,7 @@
 <ul class="simple">
 <li><p>In short, Python 3 is a non-backwards-compatible upgrade to Python 2, and was released in the end of 2008.</p></li>
 <li><p>The advantages of Python 3 are many-fold, and we’ll be using the latest version of Python 3, namely Python 3.7 or 3.8, in our course.</p></li>
-<li><p>~~I strongly advise you to use Python 3 if you’re not shackled to old Python codebases.~~ Python 2 is depracated and you should not rely on any code written in it.</p></li>
+<li><p><s>I strongly advise you to use Python 3 if you’re not shackled to old Python codebases.</s> Python 2 is depracated and you should not rely on any code written in it.</p></li>
 </ul>
 </div>
 </div>
@@ -675,10 +676,11 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 <div class="section" id="general-syntax">
 <h4>General Syntax<a class="headerlink" href="#general-syntax" title="Permalink to this headline">¶</a></h4>
+<p>Before diving into all the different variable types and how to use them, let’s get a general feel for Python’s basic syntax.</p>
+<p>Numbers:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numbers behave as you&#39;d expect:</span>
-<span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
 </pre></div>
 </div>
 </div>
@@ -754,6 +756,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 </div>
+<p>Booleans:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Boolean logic - capital letter</span>
@@ -840,10 +843,10 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 </div>
+<p>Strings:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Strings</span>
-<span class="s1">&#39;This is a string&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;This is a string&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -899,8 +902,8 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 <div class="section" id="types">
 <h4>Types<a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h4>
-<p>Types and data structures are essential in all programming languages. The type of a given variable is the first decision you make regarding the use of the variable - and an important one at that.</p>
-<p>Python has many types that you might have not heard of if you’ve only used MATLAB, but once you get to know and use them you can’t really understand how you lived without them. The type of a variable encodes a very basic and important piece of information on that variable.</p>
+<p>Types and data structures are essential in all programming languages. The type of any given new variable you create is the first decision you make about it (be it explicitly or implicitly), and it is an important one.</p>
+<p>Python has many types that you might have not heard of if you’ve only used MATLAB, but once you will get to know and use them you will not be able to remember how you’ve written code without them.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Unlike MATLAB</span>
@@ -1211,11 +1214,11 @@ It might seem like a dramatic difference from your programming language of choic
 <div class="section" id="things-to-notice">
 <h5>Things to notice:<a class="headerlink" href="#things-to-notice" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">def</span></code> is a reserved keyword</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">def</span></code> is a reserved keyword.</p></li>
 <li><p>Indentation - no brackets, no <code class="docutils literal notranslate"><span class="pre">end</span></code>, just colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>) followed by 4 spaces.</p></li>
-<li><p>Docstring: <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code> The place to document what this function does - its inputs, its logic and its outcome</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">snake_case</span></code> naming</p></li>
-<li><p>Returning is optional - you don’t have to add the <code class="docutils literal notranslate"><span class="pre">return</span></code> statement</p></li>
+<li><p>Docstring: <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code> The place to document what this function does - its inputs, its logic and its outcome.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snake_case</span></code> naming.</p></li>
+<li><p>Returning is optional - you don’t have to add the <code class="docutils literal notranslate"><span class="pre">return</span></code> statement.</p></li>
 </ul>
 <p>Functions can have also zero arguments:</p>
 <div class="cell docutils container">
@@ -1298,7 +1301,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7ff0882d39d0&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7fe6b80479d0&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1362,9 +1365,9 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The original list:
-[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7ff0882d39d0&gt;, -100]
+[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7fe6b80479d0&gt;, -100]
 l[0]: 1
-l[5]: &lt;function always_return_2 at 0x7ff0882d39d0&gt;
+l[5]: &lt;function always_return_2 at 0x7fe6b80479d0&gt;
 l[0:2]: [1, &#39;2&#39;]
 </pre></div>
 </div>
@@ -1378,7 +1381,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7ff0882d39d0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7fe6b80479d0&gt;
 </pre></div>
 </div>
 </div>
@@ -1458,7 +1461,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7ff0882d39d0&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7fe6b80479d0&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
 </pre></div>
 </div>
 </div>
@@ -1471,7 +1474,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7ff0882d39d0&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7fe6b80479d0&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1788,8 +1791,30 @@ list_without_dups = list(set(list_with_dups))
 </div>
 <div class="section" id="exercise-1-the-enigma">
 <h3>Exercise 1: The Enigma<a class="headerlink" href="#exercise-1-the-enigma" title="Permalink to this headline">¶</a></h3>
-<p>The Enigma code worked by subtituting each letter with a different one. Write an encoder function which receives the letters to encode and the pairs of letters that are used for the code.</p>
-<p>Make sure to use appropriate data structures. If it helps, you can assume that all received letters are in the pairs of the code.</p>
+<p>The Enigma code worked by subtituting each letter with a different one. Write an encoder function which receives the letters to encode and the pairs of letters that are used for the code. The function’s signature should look something like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">enigma_code</span><span class="p">(</span><span class="n">letters</span><span class="p">,</span> <span class="n">table</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Encode\decode the letters using the table. </span>
+<span class="sd">    </span>
+<span class="sd">    If a letter in letters isn&#39;t found in table,</span>
+<span class="sd">    None is returned.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    letters : iterable</span>
+<span class="sd">        The letters to encode or decode</span>
+<span class="sd">    table : dictionary</span>
+<span class="sd">        A real &quot;dictionary&quot; which defines the translation </span>
+<span class="sd">        from one letter to the other</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    result : list</span>
+<span class="sd">        A list of translated letters</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># ...</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
 <div class="dropdown tip admonition">
 <p class="admonition-title"> Solution</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">enigma_code</span><span class="p">(</span><span class="n">letters</span><span class="p">,</span> <span class="n">table</span><span class="p">):</span>
@@ -1804,7 +1829,7 @@ list_without_dups = list(set(list_with_dups))
 <span class="sd">        The letters to encode or decode</span>
 <span class="sd">    table : dictionary</span>
 <span class="sd">        A real &quot;dictionary&quot; which defines the translation </span>
-<span class="sd">        from one letter to the other.</span>
+<span class="sd">        from one letter to the other</span>
 <span class="sd">        </span>
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
