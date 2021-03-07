@@ -1,6 +1,6 @@
 # Introduction
 
-Welcome to the "Python for Neuroscience" course in Tel Aviv University. This book is built using [Jupyter book](https://jupyterbook.org/intro.html), just one of the many amazing tools you will be able to learn how to use once you comfortable enough with Python.
+Welcome to the "Python for Neuroscience" course in Tel Aviv University. This book is built using [Jupyter book](https://jupyterbook.org/intro.html), just one of the many amazing tools you will be able to learn how to use once you get comfortable enough with writing code in Python.
 
 Homework assignments, excluding the first one, will be presented in a [dedicated repository](https://github.com/sagol-python-for-neuroscientists/course_site_2021.git). If you are a registered student in the course, you should star and watch this repository (top-right corner on GitHub) to receive notifications when new materials are updated.
 
