@@ -639,10 +639,6 @@
 <p>Again, this is quite similar to MATLAB:</p>
 <p><img alt="MATLAB REPL vs. Editor" src="../../_images/matlab_repl_editor.png" /></p>
 <p>As you see, we have no direct access to the C code that the Python interpreter makes, nor do we really care about it. From the programmer’s point of view writing Python is a very straight-forward process.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This text, and the code that accompanies it, is written in a Jupyter Notebook (similar to MATLAB’s Live Editor). Writing code here is like using a REPL, i.e. the code is read and evaluated at the spot.</p>
-</div>
 </div>
 <div class="section" id="whitespaces-and-brackets">
 <h4>Whitespaces and Brackets<a class="headerlink" href="#whitespaces-and-brackets" title="Permalink to this headline">¶</a></h4>
@@ -1309,7 +1305,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f4e142aa9d0&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7ff3d8c869d0&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1373,9 +1369,9 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The original list:
-[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f4e142aa9d0&gt;, -100]
+[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7ff3d8c869d0&gt;, -100]
 l[0]: 1
-l[5]: &lt;function always_return_2 at 0x7f4e142aa9d0&gt;
+l[5]: &lt;function always_return_2 at 0x7ff3d8c869d0&gt;
 l[0:2]: [1, &#39;2&#39;]
 </pre></div>
 </div>
@@ -1389,7 +1385,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7f4e142aa9d0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7ff3d8c869d0&gt;
 </pre></div>
 </div>
 </div>
@@ -1469,7 +1465,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7f4e142aa9d0&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7ff3d8c869d0&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
 </pre></div>
 </div>
 </div>
@@ -1482,7 +1478,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7f4e142aa9d0&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7ff3d8c869d0&gt;, -100]
 </pre></div>
 </div>
 </div>
