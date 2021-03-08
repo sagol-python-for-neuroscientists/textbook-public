@@ -56,8 +56,6 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Class 1: More Syntax and The Python Stack" href="../class_1/class_1.html" />
@@ -616,7 +614,7 @@
 <li><p>Python was created in the early 90’s by <a class="reference external" href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido van Russom</a>.</p></li>
 <li><p>In 2018 he left the role of <a class="reference external" href="https://en.wikipedia.org/wiki/Benevolent_dictator_for_life">Benevolent Dictator for Life (BDFL)</a>, and now Python is governed by a selected board of Core Developers.</p></li>
 <li><p>Changes in the core language are the result of a standardized <a class="reference external" href="https://www.python.org/dev/peps/">Python Enhancement Proposals (PEP)</a> process.</p></li>
-<li><p>Hundreds of thousands of libraries created by 3<span class="math notranslate nohighlight">\(^{rd}\)</span> party developers like us.</p></li>
+<li><p>Hundreds of thousands of libraries created by 3rd party developers like us.</p></li>
 <li><p>Python users are the ones developing the language, fixing bugs, creating new features, etc.</p></li>
 </ul>
 </div>
@@ -1311,7 +1309,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f100037b9d0&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f4e142aa9d0&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1375,9 +1373,9 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The original list:
-[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f100037b9d0&gt;, -100]
+[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f4e142aa9d0&gt;, -100]
 l[0]: 1
-l[5]: &lt;function always_return_2 at 0x7f100037b9d0&gt;
+l[5]: &lt;function always_return_2 at 0x7f4e142aa9d0&gt;
 l[0:2]: [1, &#39;2&#39;]
 </pre></div>
 </div>
@@ -1391,7 +1389,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7f100037b9d0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7f4e142aa9d0&gt;
 </pre></div>
 </div>
 </div>
@@ -1471,7 +1469,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7f100037b9d0&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7f4e142aa9d0&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
 </pre></div>
 </div>
 </div>
@@ -1484,7 +1482,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7f100037b9d0&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7f4e142aa9d0&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1669,7 +1667,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;e&#39;, &#39;c&#39;, &#39;a&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;e&#39;, &#39;a&#39;, &#39;c&#39;}
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
