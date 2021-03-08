@@ -13,7 +13,3 @@ Asking question in the "Issues" tab is highly encouraged, since it allows other 
 - Gal Ben-Zvi - [hershkovitz1@mail.tau.ac.il](mailto:hershkovitz1@mail.tau.ac.il)
 
 <div style="text-align:center"><img src="good_luck.jpg" /></div>
-This [jupyter book](https://jupyterbook.org/intro.html) is written and
-maintained for the "Python for Neuroscience" course in
-[Tel Aviv University](https://english.tau.ac.il/).
-
