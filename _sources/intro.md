@@ -6,7 +6,7 @@ Homework assignments, excluding the first one, will be presented in a [dedicated
 
 If you find any mistakes, have any suggestions, come across useful learning resources not listed in the _Resources_ section, etc., please do not hesitate to create a pull request and contribute in any way you think could make this book better.
 
-General questions - both technical and Python-related - can be posted to the "Issues" tab of [the book's Git repository](https://github.com/sagol-python-for-neuroscientists/textbook.git). We'll do our best to answer them as soon as possible.
+General questions - both technical and Python-related - can be posted to the "Issues" tab of [the book's Git repository](https://github.com/sagol-python-for-neuroscientists/textbook-public.git). We'll do our best to answer them as soon as possible.
 Asking question in the "Issues" tab is highly encouraged, since it allows other students to see both the issue, which they will probably run into at some point, and the answer for it. In case you still prefer to contact us directly, feel free to do so at:
 
 - Zvi Baratz - [zvibaratz@mail.tau.ac.il](mailto:zvibaratz@mail.tau.ac.il)
