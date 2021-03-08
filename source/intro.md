@@ -12,4 +12,6 @@ Asking question in the "Issues" tab is highly encouraged, since it allows other 
 - Zvi Baratz - [zvibaratz@mail.tau.ac.il](mailto:zvibaratz@mail.tau.ac.il)
 - Gal Ben-Zvi - [hershkovitz1@mail.tau.ac.il](mailto:hershkovitz1@mail.tau.ac.il)
 
-<div style="text-align:center"><img src="good_luck.jpg" /></div>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/sagol-python-for-neuroscientists/textbook-public/main/source/good_luck.jpg" alt="Good luck!" />
+</p>
