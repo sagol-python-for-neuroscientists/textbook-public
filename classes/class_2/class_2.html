@@ -483,15 +483,15 @@ Solution<div class="summary-down docutils">
 <p>There are numerous tools for creating and managing virtual environments with Python. In this course we will use <a class="reference external" href="https://docs.python.org/3/library/venv.html#module-venv"><code class="docutils literal notranslate"><span class="pre">venv</span></code></a>, which is one of Python’s built-in packages and is therefore a simple option that will always be available to you.</p>
 <p>Creating a new virtual environment with <code class="docutils literal notranslate"><span class="pre">venv</span></code> is as easy as running:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="f4d3770f-d60d-4c9b-b68f-cab30cf2b1aa" name="131dd619-77b8-4dcf-a17e-fd0e4562d730" type="radio">
-</input><label class="tabbed-label" for="f4d3770f-d60d-4c9b-b68f-cab30cf2b1aa">
+<input checked="checked" id="7cb3730f-1255-4908-b517-28005da7243d" name="46c69db5-d000-4845-8961-b6227fcad8b7" type="radio">
+</input><label class="tabbed-label" for="7cb3730f-1255-4908-b517-28005da7243d">
 Linux/macOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m venv /path/to/new/virtual/environment/
 </pre></div>
 </div>
 </div>
-<input id="34b2cb1c-0213-4422-8b38-27dcebc5eb29" name="131dd619-77b8-4dcf-a17e-fd0e4562d730" type="radio">
-</input><label class="tabbed-label" for="34b2cb1c-0213-4422-8b38-27dcebc5eb29">
+<input id="8342340d-c199-48ef-8c9e-041819188002" name="46c69db5-d000-4845-8961-b6227fcad8b7" type="radio">
+</input><label class="tabbed-label" for="8342340d-c199-48ef-8c9e-041819188002">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> C:\Python38\python -m venv C:\path\to\new\virtual\environment\
 </pre></div>
@@ -528,16 +528,16 @@ Windows</label><div class="tabbed-content docutils">
 <p>Activating a virtual environment means modifying your working environment to use a particular, isolated installation of Python (created in <a class="reference internal" href="#create"><span class="std std-ref">Creating a Virtual Environment</span></a>). This will normally also “override” some other related CLI tools with those installed within the virtual environment’s <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory (such as <code class="docutils literal notranslate"><span class="pre">pip</span></code>), and sometimes also change some OS-related environment variables.</p>
 <p>To activate the virtual environment and use the newly created isolated Python environment, simply run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="12f4d14c-c63f-4e85-87e2-bb2f42250642" name="d7790a83-5b9f-460d-8359-e8ea66317faa" type="radio">
-</input><label class="tabbed-label" for="12f4d14c-c63f-4e85-87e2-bb2f42250642">
+<input checked="checked" id="1da192ea-73dc-46d7-a1a0-9496bcc195b5" name="1930e232-439b-4191-a4e0-a44774802816" type="radio">
+</input><label class="tabbed-label" for="1da192ea-73dc-46d7-a1a0-9496bcc195b5">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">source</span> &lt;venv&gt;/bin/activate
 </pre></div>
 </div>
 <p><em>* Replace <code class="docutils literal notranslate"><span class="pre">&lt;venv&gt;</span></code> with your virtual environment’s directory path.</em></p>
 </div>
-<input id="99b2db92-87ef-44cc-8704-3544b6814b06" name="d7790a83-5b9f-460d-8359-e8ea66317faa" type="radio">
-</input><label class="tabbed-label" for="99b2db92-87ef-44cc-8704-3544b6814b06">
+<input id="3a01f7b4-219b-44ed-8b5d-0737708f198a" name="1930e232-439b-4191-a4e0-a44774802816" type="radio">
+</input><label class="tabbed-label" for="3a01f7b4-219b-44ed-8b5d-0737708f198a">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> <span class="p">&lt;</span>venv<span class="p">&gt;</span>\Scripts\activate
 </pre></div>
@@ -548,16 +548,16 @@ Windows</label><div class="tabbed-content docutils">
 <p>You should now see your virtual environment’s directory name used as a prefix (<code class="docutils literal notranslate"><span class="pre">(venv)</span></code>) in your terminal window.</p>
 <p>To validate the activation, run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="6d34fb0f-cf83-4025-bc47-683b7c3ea143" name="c92ef920-2e18-4da2-bde2-576561c56ecd" type="radio">
-</input><label class="tabbed-label" for="6d34fb0f-cf83-4025-bc47-683b7c3ea143">
+<input checked="checked" id="70be5d16-8f47-405b-9a14-3b1a3782ce3d" name="3e6811d4-b684-4a8c-9bb0-abd1c9c3a060" type="radio">
+</input><label class="tabbed-label" for="70be5d16-8f47-405b-9a14-3b1a3782ce3d">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$ </span>which python
 <span class="go">&lt;venv&gt;/bin/python</span>
 </pre></div>
 </div>
 </div>
-<input id="01ecc5bc-97c1-4c50-a131-9db2d2750f48" name="c92ef920-2e18-4da2-bde2-576561c56ecd" type="radio">
-</input><label class="tabbed-label" for="01ecc5bc-97c1-4c50-a131-9db2d2750f48">
+<input id="49a02e3a-5981-4660-a551-4dccc6dbc339" name="3e6811d4-b684-4a8c-9bb0-abd1c9c3a060" type="radio">
+</input><label class="tabbed-label" for="49a02e3a-5981-4660-a551-4dccc6dbc339">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">C:\&gt;</span> where python
 <span class="gp">&lt;venv&gt;</span>\Scripts\python
@@ -668,7 +668,7 @@ Windows</label><div class="tabbed-content docutils">
 <p>Procedural programming allows us to group and order our code base into small units, called functions or <strong>procedures</strong>, that have a specific, defined task.</p>
 <p>It usually contains a “wrapper” script that defines the order of running for these functions:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run_pipeline</span><span class="p">(</span><span class="n">foldername</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Main data pipeline script &quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Main data pipeline script.&quot;&quot;&quot;</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">get_user_input</span><span class="p">(</span><span class="n">foldername</span><span class="p">)</span>
     <span class="n">data_without_fieldnames</span> <span class="o">=</span> <span class="n">extract_fieldnames</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="n">columnar_data</span> <span class="o">=</span> <span class="n">generate_columns</span><span class="p">(</span><span class="n">data_without_fieldnames</span><span class="p">,</span> <span class="n">num_of_columns</span><span class="p">)</span>
@@ -708,7 +708,7 @@ Instead of writing:</p>
 </div>
 <p>We might do:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">na_concentration</span><span class="o">=</span><span class="mf">0.3</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Multiplies data by the Na concentration&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Multiplies data by the Na concentration.&quot;&quot;&quot;</span>
     <span class="n">scaled_data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">*</span> <span class="n">na_concentration</span>
 </pre></div>
 </div>
@@ -726,7 +726,7 @@ Instead of writing:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">NA_CONCENTRATION</span> <span class="o">=</span> <span class="mf">0.4</span>
 
 <span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">na_concentration</span><span class="o">=</span><span class="n">NA_CONCENTRATION</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Multiplies data by the Na concentration&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Multiplies data by the Na concentration.&quot;&quot;&quot;</span>
     <span class="n">scaled_data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">*</span> <span class="n">na_concentration</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">b</span> <span class="o">*</span> <span class="n">c</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">a</span>
@@ -760,7 +760,7 @@ Instead of writing:</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Introducing the class keyword:</span>
 <span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a point in a 2D space&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Represents a point in a 2D space.&quot;&quot;&quot;</span>
     <span class="k">pass</span>
 
 <span class="n">Point</span>
@@ -783,7 +783,7 @@ Instead of writing:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7fe5245894c0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7fa8a859e040&gt;
 </pre></div>
 </div>
 </div>
@@ -906,7 +906,8 @@ Solution<div class="summary-down docutils">
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Rectangle model.</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Rectangle model.</span>
 <span class="sd">    </span>
 <span class="sd">    Attributes</span>
 <span class="sd">    ----------</span>
@@ -932,7 +933,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7fe5245dc8b0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7fa8a85eafd0&gt;
 </pre></div>
 </div>
 </div>
@@ -1182,7 +1183,8 @@ p.x: 20, p.y: 10
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">corner</span><span class="p">:</span> <span class="n">Point</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">10</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Initialize a Rectangle instance.</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize a Rectangle instance.</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
