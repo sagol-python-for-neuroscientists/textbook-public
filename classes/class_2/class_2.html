@@ -297,6 +297,11 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review">
+   Review
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#virtual-environments">
    Virtual Environments
   </a>
@@ -319,11 +324,6 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#activating-the-virtual-environment">
      Activating the Virtual Environment
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise">
-     Exercise
     </a>
    </li>
   </ul>
@@ -360,16 +360,6 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exercise-i-calculate-distance">
-       Exercise I:
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         calculate_distance()
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#example-ii-rectangles">
        Example II: Rectangles
       </a>
@@ -402,24 +392,8 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exercise-ii-the-str-method">
-       Exercise II: The
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         __str__()
-        </span>
-       </code>
-       method
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#operator-overloading">
        Operator Overloading
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exercise-iii-dunder-methods">
-       Exercise III: “Dunder” Methods
       </a>
      </li>
     </ul>
@@ -428,30 +402,6 @@
     <a class="reference internal nav-link" href="#summary">
      Summary
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exercise-iv-the-vector-class">
-       Exercise IV: The
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         Vector
-        </span>
-       </code>
-       Class
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exercise-v-the-path-class">
-       Exercise V: The
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         Path
-        </span>
-       </code>
-       Class
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -469,6 +419,52 @@
                 
   <div class="section" id="class-2-virtual-environments-and-object-oriented-programming-oop">
 <h1>Class 2: Virtual Environments and Object-oriented Programming (OOP)<a class="headerlink" href="#class-2-virtual-environments-and-object-oriented-programming-oop" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="review">
+<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Describe the function of the <code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> statements.</p></li>
+</ul>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Within the context of a loop, <code class="docutils literal notranslate"><span class="pre">continue</span></code> is used to invoke an immediate progression to the next step, and <code class="docutils literal notranslate"><span class="pre">break</span></code> is used to terminate the loop before the iterator is exhausted.</p>
+</div>
+</details><ul class="simple">
+<li><p>Briefly explain type hinting in Python and its significance.</p></li>
+</ul>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Type hinting is implemented by adding <code class="docutils literal notranslate"><span class="pre">:</span> <span class="pre">&lt;type&gt;</span></code> to a variable or function argument’s definition. Any type can be used, and Python’s built-in <code class="docutils literal notranslate"><span class="pre">typing</span></code> module enables creating fine-grained type hints.</p>
+</div>
+</details><ul class="simple">
+<li><p>How would you recommend implementing a simple file I/O operation?</p></li>
+</ul>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">The recommended way to implement a simple file I/O operation in Python is by combining the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function with a context manager clause (<code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">...</span> <span class="pre">as</span> <span class="pre">file_object:</span></code>). This way we don’t have to concern ourselves with closing the file.</p>
+<p class="card-text">For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/path/to/file.txt&quot;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_object</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">file_object</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</details></div>
 <div class="section" id="virtual-environments">
 <h2>Virtual Environments<a class="headerlink" href="#virtual-environments" title="Permalink to this headline">¶</a></h2>
 <p>The basic idea is that <strong>every Python project you have should be contained within an isolated environment</strong>, which includes the interpreter and any libraries (i.e. external Python packages) that are needed for that specific project.</p>
@@ -487,15 +483,15 @@
 <p>There are numerous tools for creating and managing virtual environments with Python. In this course we will use <a class="reference external" href="https://docs.python.org/3/library/venv.html#module-venv"><code class="docutils literal notranslate"><span class="pre">venv</span></code></a>, which is one of Python’s built-in packages and is therefore a simple option that will always be available to you.</p>
 <p>Creating a new virtual environment with <code class="docutils literal notranslate"><span class="pre">venv</span></code> is as easy as running:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="67a4fde8-ea37-4227-946b-9200facf6288" name="0855d9a1-4550-44e9-994d-a8384f4b7058" type="radio">
-</input><label class="tabbed-label" for="67a4fde8-ea37-4227-946b-9200facf6288">
+<input checked="checked" id="f4d3770f-d60d-4c9b-b68f-cab30cf2b1aa" name="131dd619-77b8-4dcf-a17e-fd0e4562d730" type="radio">
+</input><label class="tabbed-label" for="f4d3770f-d60d-4c9b-b68f-cab30cf2b1aa">
 Linux/macOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m venv /path/to/new/virtual/environment/
 </pre></div>
 </div>
 </div>
-<input id="fe95fe7e-e702-48ba-ba20-d55ac41ec41f" name="0855d9a1-4550-44e9-994d-a8384f4b7058" type="radio">
-</input><label class="tabbed-label" for="fe95fe7e-e702-48ba-ba20-d55ac41ec41f">
+<input id="34b2cb1c-0213-4422-8b38-27dcebc5eb29" name="131dd619-77b8-4dcf-a17e-fd0e4562d730" type="radio">
+</input><label class="tabbed-label" for="34b2cb1c-0213-4422-8b38-27dcebc5eb29">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> C:\Python38\python -m venv C:\path\to\new\virtual\environment\
 </pre></div>
@@ -532,16 +528,16 @@ Windows</label><div class="tabbed-content docutils">
 <p>Activating a virtual environment means modifying your working environment to use a particular, isolated installation of Python (created in <a class="reference internal" href="#create"><span class="std std-ref">Creating a Virtual Environment</span></a>). This will normally also “override” some other related CLI tools with those installed within the virtual environment’s <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory (such as <code class="docutils literal notranslate"><span class="pre">pip</span></code>), and sometimes also change some OS-related environment variables.</p>
 <p>To activate the virtual environment and use the newly created isolated Python environment, simply run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="4c2f478d-3f71-4565-be56-ac450c4705cd" name="fcb5d882-b6ca-46b1-b018-fa49395a0032" type="radio">
-</input><label class="tabbed-label" for="4c2f478d-3f71-4565-be56-ac450c4705cd">
+<input checked="checked" id="12f4d14c-c63f-4e85-87e2-bb2f42250642" name="d7790a83-5b9f-460d-8359-e8ea66317faa" type="radio">
+</input><label class="tabbed-label" for="12f4d14c-c63f-4e85-87e2-bb2f42250642">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">source</span> &lt;venv&gt;/bin/activate
 </pre></div>
 </div>
 <p><em>* Replace <code class="docutils literal notranslate"><span class="pre">&lt;venv&gt;</span></code> with your virtual environment’s directory path.</em></p>
 </div>
-<input id="de89e597-2c11-471d-afbe-cf24883e2f09" name="fcb5d882-b6ca-46b1-b018-fa49395a0032" type="radio">
-</input><label class="tabbed-label" for="de89e597-2c11-471d-afbe-cf24883e2f09">
+<input id="99b2db92-87ef-44cc-8704-3544b6814b06" name="d7790a83-5b9f-460d-8359-e8ea66317faa" type="radio">
+</input><label class="tabbed-label" for="99b2db92-87ef-44cc-8704-3544b6814b06">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> <span class="p">&lt;</span>venv<span class="p">&gt;</span>\Scripts\activate
 </pre></div>
@@ -552,16 +548,16 @@ Windows</label><div class="tabbed-content docutils">
 <p>You should now see your virtual environment’s directory name used as a prefix (<code class="docutils literal notranslate"><span class="pre">(venv)</span></code>) in your terminal window.</p>
 <p>To validate the activation, run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="75ab0a33-6fd5-4021-b4d8-a388d43cb6ed" name="3008dfb2-1cb8-4989-969a-d4d1d1cbf670" type="radio">
-</input><label class="tabbed-label" for="75ab0a33-6fd5-4021-b4d8-a388d43cb6ed">
+<input checked="checked" id="6d34fb0f-cf83-4025-bc47-683b7c3ea143" name="c92ef920-2e18-4da2-bde2-576561c56ecd" type="radio">
+</input><label class="tabbed-label" for="6d34fb0f-cf83-4025-bc47-683b7c3ea143">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$ </span>which python
 <span class="go">&lt;venv&gt;/bin/python</span>
 </pre></div>
 </div>
 </div>
-<input id="70971989-fdb0-4878-9341-4d3f2012297e" name="3008dfb2-1cb8-4989-969a-d4d1d1cbf670" type="radio">
-</input><label class="tabbed-label" for="70971989-fdb0-4878-9341-4d3f2012297e">
+<input id="01ecc5bc-97c1-4c50-a131-9db2d2750f48" name="c92ef920-2e18-4da2-bde2-576561c56ecd" type="radio">
+</input><label class="tabbed-label" for="01ecc5bc-97c1-4c50-a131-9db2d2750f48">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">C:\&gt;</span> where python
 <span class="gp">&lt;venv&gt;</span>\Scripts\python
@@ -571,9 +567,8 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 <p>The returned path should be the path of the Python interpreter within the virtual environment’s directory.</p>
 <p>For the purposes of this course one virtual environment will probably be enough. Always remember to activate it before starting work, and be sure to create a new virtual environment for any new project you begin in the future.</p>
-</div>
-<div class="section" id="exercise">
-<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
+<div class="attention admonition">
+<p class="admonition-title">Project Setup Exercise</p>
 <ol class="simple">
 <li><p>Create a new <code class="docutils literal notranslate"><span class="pre">my_project</span></code> directory on your computer.</p></li>
 <li><p>Start VSCode and open your new project’s directory.</p></li>
@@ -582,10 +577,11 @@ Windows</label><div class="tabbed-content docutils">
 <li><p>Create a <code class="docutils literal notranslate"><span class="pre">.py</span></code> file with a function that simply prints your name.</p></li>
 <li><p>Create another <code class="docutils literal notranslate"><span class="pre">.py</span></code> file that <code class="docutils literal notranslate"><span class="pre">import</span></code>s your function and runs it.</p></li>
 <li><p>Install the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> package using <code class="docutils literal notranslate"><span class="pre">pip</span></code> and make sure you’re able to <code class="docutils literal notranslate"><span class="pre">import</span></code> it.</p></li>
-<li><p>Add an MIT license to the repo, as well as a basic <code class="docutils literal notranslate"><span class="pre">README.md</span></code>.</p></li>
+<li><p>Add an <a class="reference external" href="https://opensource.org/licenses/MIT">MIT license</a> to the repo, as well as a basic <code class="docutils literal notranslate"><span class="pre">README.md</span></code>.</p></li>
 <li><p>If the virtual environment’s directory is found under the project’s directory, create a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file and add its relative path to it. This will tell Git to ignore this directory (and not archive everything in it as part of our code repository, which would be an absolute mess).</p></li>
 <li><p>Publish this project to your GitHub account.</p></li>
 </ol>
+</div>
 </div>
 </div>
 <div class="section" id="object-oriented-programming-part-1">
@@ -671,8 +667,7 @@ Windows</label><div class="tabbed-content docutils">
 <p>This new procedure does one thing, and one thing only. This is what’s so powerful about it.</p>
 <p>Procedural programming allows us to group and order our code base into small units, called functions or <strong>procedures</strong>, that have a specific, defined task.</p>
 <p>It usually contains a “wrapper” script that defines the order of running for these functions:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">my_wrapper_script</span><span class="o">.</span><span class="n">py</span>
-<span class="k">def</span> <span class="nf">run_pipeline</span><span class="p">(</span><span class="n">foldername</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run_pipeline</span><span class="p">(</span><span class="n">foldername</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Main data pipeline script &quot;&quot;&quot;</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">get_user_input</span><span class="p">(</span><span class="n">foldername</span><span class="p">)</span>
     <span class="n">data_without_fieldnames</span> <span class="o">=</span> <span class="n">extract_fieldnames</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -681,7 +676,7 @@ Windows</label><div class="tabbed-content docutils">
     <span class="c1"># At the end of the file it will contain:</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">foldername</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;/path/to/folder&#39;</span>  <span class="c1"># raw string</span>
+    <span class="n">foldername</span> <span class="o">=</span> <span class="s1">&#39;/path/to/folder&#39;</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">run_pipeline</span><span class="p">(</span><span class="n">foldername</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
@@ -717,7 +712,7 @@ Instead of writing:</p>
     <span class="n">scaled_data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">*</span> <span class="n">na_concentration</span>
 </pre></div>
 </div>
-<p>But this is usually not enough. When calling the <code class="docutils literal notranslate"><span class="pre">process_data</span></code> parameterize the <code class="docutils literal notranslate"><span class="pre">na_concentration</span></code> variable as well. This will help you avoid a situation such as:</p>
+<p>But this is usually not enough. When calling the <code class="docutils literal notranslate"><span class="pre">process_data</span></code>, parameterize the <code class="docutils literal notranslate"><span class="pre">na_concentration</span></code> variable as well. This will help you avoid a situation such as:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">b</span> <span class="o">*</span> <span class="n">c</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">a</span>
 <span class="n">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">)</span>
 <span class="c1"># Script continues...</span>
@@ -725,6 +720,19 @@ Instead of writing:</p>
 <span class="c1"># parameters, but it&#39;s more likely that you decided that 0.5 was too high, so you changed it to 0.4</span>
 <span class="c1"># in the first call, but forgot that you had a second call. This parameter should appear somewhere at</span>
 <span class="c1"># the top of your script.</span>
+</pre></div>
+</div>
+<p>Instead, we can specify module-wide constants, e.g.:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">NA_CONCENTRATION</span> <span class="o">=</span> <span class="mf">0.4</span>
+
+<span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">na_concentration</span><span class="o">=</span><span class="n">NA_CONCENTRATION</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Multiplies data by the Na concentration&quot;&quot;&quot;</span>
+    <span class="n">scaled_data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">*</span> <span class="n">na_concentration</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">b</span> <span class="o">*</span> <span class="n">c</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">a</span>
+<span class="n">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="c1"># If we really do wish to process the data with some other na_concentration:</span>
+<span class="n">process_data</span><span class="p">(</span><span class="n">data2</span><span class="p">,</span> <span class="n">na_concentration</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span> 
 </pre></div>
 </div>
 </li>
@@ -775,7 +783,7 @@ Instead of writing:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7f25bd26e130&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7fe5245894c0&gt;
 </pre></div>
 </div>
 </div>
@@ -825,13 +833,18 @@ Instead of writing:</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_point</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_point</span><span class="p">(</span><span class="n">p</span><span class="p">:</span> <span class="n">Point</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Print a Point object.</span>
 <span class="sd">    </span>
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    p : Point</span>
 <span class="sd">        The point instance to print</span>
+<span class="sd">    </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        Point coordinates</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
@@ -845,24 +858,41 @@ Instead of writing:</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="exercise-i-calculate-distance">
-<h4>Exercise I: <code class="docutils literal notranslate"><span class="pre">calculate_distance()</span></code><a class="headerlink" href="#exercise-i-calculate-distance" title="Permalink to this headline">¶</a></h4>
+<div class="attention admonition">
+<p class="admonition-title">Exercise: calculate_distance()</p>
 <p>Write the <code class="docutils literal notranslate"><span class="pre">calculate_distance()</span></code> function that takes two points (<code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code>) and returns the Cartesian distance between them.</p>
-<div class="dropdown admonition">
-<p class="admonition-title"> Solution</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
+<span class="k">def</span> <span class="nf">calculate_distance</span><span class="p">(</span><span class="n">p1</span><span class="p">:</span> <span class="n">Point</span><span class="p">,</span> <span class="n">p2</span><span class="p">:</span> <span class="n">Point</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns the Cartesian distance between two points.</span>
 
-<span class="k">def</span> <span class="nf">calculate_distance</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Returns the Cartesian distance between two points. &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span>
-        <span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">p2</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> 
-        <span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">p2</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
-    <span class="p">)</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    p1 : Point</span>
+<span class="sd">        One point</span>
+<span class="sd">    p2 : Point</span>
+<span class="sd">        Second point</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        Cartesian distance</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dx</span> <span class="o">=</span> <span class="n">p1</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">p2</span><span class="o">.</span><span class="n">x</span>
+    <span class="n">dy</span> <span class="o">=</span> <span class="n">p1</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">p2</span><span class="o">.</span><span class="n">y</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">dy</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details></div>
 </div>
 <div class="section" id="example-ii-rectangles">
 <h4>Example II: Rectangles<a class="headerlink" href="#example-ii-rectangles" title="Permalink to this headline">¶</a></h4>
@@ -902,7 +932,7 @@ Instead of writing:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7f25bd26eb50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7fe5245dc8b0&gt;
 </pre></div>
 </div>
 </div>
@@ -910,9 +940,19 @@ Instead of writing:</p>
 <p>We can return instances of classes (just like we do with instances of dictionaries):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_center</span><span class="p">(</span><span class="n">rect</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_center</span><span class="p">(</span><span class="n">rect</span><span class="p">:</span> <span class="n">Rectangle</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Point</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Return a Point instance with coordinates pointing to the center of the Rectangle.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    rect : Rectangle</span>
+<span class="sd">        Rectangle instance to calculate the center of</span>
+<span class="sd">    </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Point</span>
+<span class="sd">        Rectangle center</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">p</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
     <span class="n">p</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">corner</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">rect</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="mi">2</span>
@@ -933,21 +973,46 @@ Instead of writing:</p>
 <p>Also, objects are mutable:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">grow_rectangle</span><span class="p">(</span><span class="n">rect</span><span class="p">,</span> <span class="n">dwidth</span><span class="p">,</span> <span class="n">dheight</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Take a Rectangle instance and grow it by (dwidth, dheight) &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">grow_rectangle</span><span class="p">(</span><span class="n">rect</span><span class="p">:</span> <span class="n">Rectangle</span><span class="p">,</span> <span class="n">dwidth</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">dheight</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Take a Rectangle instance and grow it by (*dwidth*, *dheight*).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    rect : Rectangle</span>
+<span class="sd">        Rectangle instance to grow</span>
+<span class="sd">    dwidth : float</span>
+<span class="sd">        Width delta</span>
+<span class="sd">    dheight : float</span>
+<span class="sd">        Height delta</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">rect</span><span class="o">.</span><span class="n">width</span> <span class="o">+=</span> <span class="n">dwidth</span>
     <span class="n">rect</span><span class="o">.</span><span class="n">height</span> <span class="o">+=</span> <span class="n">dheight</span>
-    <span class="c1"># No need to return the instance</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">rect</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
-<span class="n">grow_rectangle</span><span class="p">(</span><span class="n">rect</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">rect</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">rect</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100.0 200.0
-200.0 300.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grow_rectangle</span><span class="p">(</span><span class="n">rect</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">rect</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200.0 300.0
 </pre></div>
 </div>
 </div>
@@ -971,17 +1036,32 @@ Instead of writing:</p>
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;transpose is now of type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">transpose</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Before:</span><span class="se">\t</span><span class="s2">p.x: </span><span class="si">{</span><span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">, p.y: </span><span class="si">{</span><span class="n">p</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;transpose is now of type: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">transpose</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>transpose is now of type: &lt;class &#39;method&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Before:</span><span class="se">\t</span><span class="s2">p.x: </span><span class="si">{</span><span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">, p.y: </span><span class="si">{</span><span class="n">p</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After:</span><span class="se">\t</span><span class="s2">p.x: </span><span class="si">{</span><span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">, p.y: </span><span class="si">{</span><span class="n">p</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>transpose is now of type: &lt;class &#39;method&#39;&gt;
-Before:	p.x: 10, p.y: 20
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Before:	p.x: 10, p.y: 20
 After:	p.x: 20, p.y: 10
 </pre></div>
 </div>
@@ -1003,7 +1083,7 @@ After:	p.x: 20, p.y: 10
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">14</span><span class="o">-</span><span class="n">cde66be33c83</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">18</span><span class="o">-</span><span class="n">cde66be33c83</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># This doesn&#39;t work, look at the number of arguments:</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">p</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 
@@ -1027,20 +1107,31 @@ After:	p.x: 20, p.y: 10
 <p class="sidebar-title"></p>
 <p><code class="docutils literal notranslate"><span class="pre">__init__()</span></code> is one example of a <em>dunder</em> method. <em>dunder</em> is short for <em>double underscore</em> and generally implies an internal (structural) part of the class itself.</p>
 </div>
-<p>Classes have several special methods attached to them. While most are out this course’s scope, the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method is regularly used and we should definitely familiarize ourselves with it.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> methods allows us to define our class’ attributes inside the class definition:</p>
+<p>Classes have several special methods attached to them. While most are out of the scope of this course, the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method is regularly used and we should definitely familiarize ourselves with it.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> methods allows us to define our class attributes inside the class definition:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;A 2D point.&quot;&quot;&quot;</span>
-    
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Initialize a new Point instance&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize a new Point instance.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        x : float</span>
+<span class="sd">            X-axis coordinate</span>
+<span class="sd">        y : float</span>
+<span class="sd">            Y-axis coordinate</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
 
-    <span class="k">def</span> <span class="nf">transpose</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Trasnposes by flipping x and y&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">transpose</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Trasnposes by flipping *x* and *y*.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span>
 </pre></div>
 </div>
@@ -1072,7 +1163,7 @@ p.x: 20, p.y: 10
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">17</span><span class="o">-</span><span class="mi">13</span><span class="n">fd077f7b13</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">21</span><span class="o">-</span><span class="mi">13</span><span class="n">fd077f7b13</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
 
 <span class="ne">TypeError</span>: __init__() missing 2 required positional arguments: &#39;x&#39; and &#39;y&#39;
@@ -1084,15 +1175,15 @@ p.x: 20, p.y: 10
 <p>Let’s look at a broader example using the Rectange we defined earlier and the two other functions we also had.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>    
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Representation of a rectangle in Cartesian space based on the</span>
 <span class="sd">    bottom left corner and the sizes of its sides.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">corner</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">corner</span><span class="p">:</span> <span class="n">Point</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">10</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Initialize a Rectangle instance.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        corner : Point</span>
@@ -1101,21 +1192,28 @@ p.x: 20, p.y: 10
 <span class="sd">            Length of vertical side</span>
 <span class="sd">        width : float</span>
 <span class="sd">            Length of horizontal side</span>
-<span class="sd">        </span>
-<span class="sd">        &quot;&quot;&quot;</span>        
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">corner</span> <span class="o">=</span> <span class="n">corner</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
-        
-    <span class="k">def</span> <span class="nf">find_center</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Return a Point to the center of the Rectangle box.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">find_center</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Point</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a Point to the center of the Rectangle box.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Point</span>
+<span class="sd">            This rectangle instance&#39;s center</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="mi">2</span>
         <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">corner</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">/</span> <span class="mi">2</span>
         <span class="k">return</span> <span class="n">Point</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">grow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dwidth</span><span class="p">,</span> <span class="n">dheight</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Change this instance&#39;s size by (dwidth, dheight).</span>
-<span class="sd">        </span>
+    <span class="k">def</span> <span class="nf">grow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dwidth</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">dheight</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Change this instance&#39;s size by (*dwidth*, *dheight*).</span>
+
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        dwidth, dheight : float</span>
@@ -1124,12 +1222,12 @@ p.x: 20, p.y: 10
         <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">+=</span> <span class="n">dwidth</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">+=</span> <span class="n">dheight</span>
 
-    <span class="k">def</span> <span class="nf">move_to_origin</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Moves the center of the rectangle to (0, 0)&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">move_to_origin</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Moves the center of the rectangle to (0, 0).&quot;&quot;&quot;</span>
         <span class="n">center</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_center</span><span class="p">()</span>
         <span class="n">centered</span> <span class="o">=</span> <span class="n">center</span><span class="o">.</span><span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">center</span><span class="o">.</span><span class="n">y</span> <span class="o">==</span> <span class="mi">0</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">centered</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">corner</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>        
+            <span class="bp">self</span><span class="o">.</span><span class="n">corner</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1137,7 +1235,7 @@ p.x: 20, p.y: 10
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
-<li><p>The Class name is CamelCase.</p></li>
+<li><p>Class names are written in CamelCase.</p></li>
 <li><p>The docstring of the entire class describes its general purpose.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method takes in three arguments, but two of them are optional.</p></li>
 <li><p>We added the two functions we defined earlier to the class as methods, since they only operate on rectangles in the first place.</p></li>
@@ -1191,7 +1289,7 @@ p.x: 20, p.y: 10
 </div>
 <div class="section" id="the-str-method">
 <h4>The <code class="docutils literal notranslate"><span class="pre">__str__</span></code> Method<a class="headerlink" href="#the-str-method" title="Permalink to this headline">¶</a></h4>
-<p>Another interesting <em>dunder</em> method is the <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method, which defines what an instance of the class will show when invoked with the <code class="docutils literal notranslate"><span class="pre">print(class_instance)</span></code> command. For example:</p>
+<p>Another interesting <em>dunder</em> (<em>“double underscore”</em>) method is the <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method, which defines what an instance of the class will show when invoked with the <code class="docutils literal notranslate"><span class="pre">print(class_instance)</span></code> command. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ShoppingList</span><span class="p">:</span>
@@ -1238,30 +1336,54 @@ p.x: 20, p.y: 10
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="exercise-ii-the-str-method">
-<h4>Exercise II: The <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method<a class="headerlink" href="#exercise-ii-the-str-method" title="Permalink to this headline">¶</a></h4>
+<div class="attention admonition">
+<p class="admonition-title">The <em>str</em> Dunder Method</p>
 <p>Implement a <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method for the <code class="docutils literal notranslate"><span class="pre">Point</span></code> class from earlier.</p>
-<div class="dropdown admonition">
-<p class="admonition-title"> Solution</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;A 2D point.&quot;&quot;&quot;</span>
-    
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Initialize a new Point instance&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize a new Point instance.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        x : float</span>
+<span class="sd">            X-axis coordinate</span>
+<span class="sd">        y : float</span>
+<span class="sd">            Y-axis coordinate</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
-       
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Return a string representation of this instance.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the string representation of this instance.</span>
+<span class="sd">        </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+<span class="sd">            String represetation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">)&quot;</span>
 
-    <span class="k">def</span> <span class="nf">transpose</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Trasnposes by flipping x and y&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">transpose</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Trasnposes by flipping *x* and *y*.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span>
+
 </pre></div>
 </div>
 </div>
+</details></div>
 </div>
 <div class="section" id="operator-overloading">
 <h4>Operator Overloading<a class="headerlink" href="#operator-overloading" title="Permalink to this headline">¶</a></h4>
@@ -1278,7 +1400,7 @@ p.x: 20, p.y: 10
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">24</span><span class="o">-</span><span class="mi">0334</span><span class="n">a09f9174</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">28</span><span class="o">-</span><span class="mi">0334</span><span class="n">a09f9174</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">shopping_list_a</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">shopping_list_b</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">shopping_list_a</span> <span class="o">+</span> <span class="n">shopping_list_b</span><span class="p">)</span>
@@ -1293,11 +1415,12 @@ p.x: 20, p.y: 10
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ShoppingList</span><span class="p">:</span>
-    <span class="sd">&#39;&#39;&#39;Represents a shopping list&#39;&#39;&#39;</span>
-    
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vegetables</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">fruit</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">bread</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Initialize a ShoppingList instance.</span>
-<span class="sd">        </span>
+    <span class="sd">&quot;&quot;&quot;Represents a shopping list.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vegetables</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">fruit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">bread</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize a ShoppingList instance.</span>
+
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        vegetables : int</span>
@@ -1310,9 +1433,16 @@ p.x: 20, p.y: 10
         <span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">=</span> <span class="n">vegetables</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fruit</span> <span class="o">=</span> <span class="n">fruit</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">bread</span> <span class="o">=</span> <span class="n">bread</span>
-    
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Return a string representation of this instance.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a string representation of this instance.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+<span class="sd">            String representation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">n_items</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">fruit</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bread</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">        Shopping List:</span>
@@ -1321,32 +1451,32 @@ p.x: 20, p.y: 10
 <span class="s2">            Bread: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">bread</span><span class="si">}</span><span class="s2"></span>
 <span class="s2">            Total items: </span><span class="si">{</span><span class="n">n_items</span><span class="si">}</span><span class="s2"></span>
 <span class="s2">        &quot;&quot;&quot;</span>
-    
+
     <span class="c1"># ----- New method below: ------</span>
-    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Add together two shopping lists.</span>
-<span class="sd">        </span>
+    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">ShoppingList</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ShoppingList</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Combines two shopping lists and returns the result.</span>
+
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
 <span class="sd">        This method returns a new shopping list, meaning it doesn&#39;t modify</span>
-<span class="sd">        any of the existing lists it was given.</span>
-<span class="sd">        </span>
+<span class="sd">        any of the existing instances it was given.</span>
+
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        other : ShoppingList</span>
 <span class="sd">            Another shopping list</span>
-<span class="sd">        </span>
+
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        ShoppingList</span>
 <span class="sd">            Combined shopping list</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">new_list</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">(</span>
+        <span class="k">return</span> <span class="n">ShoppingList</span><span class="p">(</span>
             <span class="n">vegetables</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">vegetables</span><span class="p">,</span>
             <span class="n">fruit</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">fruit</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">fruit</span><span class="p">,</span>
-            <span class="n">bread</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">bread</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">bread</span>
+            <span class="n">bread</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">bread</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">bread</span><span class="p">,</span>
         <span class="p">)</span>
-        <span class="k">return</span> <span class="n">new_list</span>
 </pre></div>
 </div>
 </div>
@@ -1356,6 +1486,7 @@ p.x: 20, p.y: 10
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list_a</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
 <span class="n">shopping_list_b</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
+
 <span class="n">shopping_list_c</span> <span class="o">=</span> <span class="n">shopping_list_a</span> <span class="o">+</span> <span class="n">shopping_list_b</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">shopping_list_c</span><span class="p">)</span>
 </pre></div>
@@ -1382,48 +1513,58 @@ p.x: 20, p.y: 10
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">27</span><span class="o">-</span><span class="n">e48709e66585</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">31</span><span class="o">-</span><span class="n">e48709e66585</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">shopping_list_a</span> <span class="o">+</span> <span class="mi">1</span>
 
-<span class="nn">&lt;ipython-input-25-96536863a166&gt;</span> in <span class="ni">__add__</span><span class="nt">(self, other)</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span><span class="s2">         new_list = ShoppingList(</span>
-<span class="ne">---&gt; </span><span class="mi">51</span><span class="s2">             vegetables=self.vegetables + other.vegetables,</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span><span class="s2">             fruit=self.fruit + other.fruit,</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span><span class="s2">             bread=self.bread + other.bread</span>
+<span class="nn">&lt;ipython-input-29-1d6b0f8bbde6&gt;</span> in <span class="ni">__add__</span><span class="nt">(self, other)</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span><span class="s2">         return ShoppingList(</span>
+<span class="ne">---&gt; </span><span class="mi">60</span><span class="s2">             vegetables=self.vegetables + other.vegetables,</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span><span class="s2">             fruit=self.fruit + other.fruit,</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span><span class="s2">             bread=self.bread + other.bread,</span>
 
 <span class="ne">AttributeError</span>: &#39;int&#39; object has no attribute &#39;vegetables&#39;
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="exercise-iii-dunder-methods">
-<h4>Exercise III: “Dunder” Methods<a class="headerlink" href="#exercise-iii-dunder-methods" title="Permalink to this headline">¶</a></h4>
+<div class="attention admonition">
+<p class="admonition-title">Exercise: <em>Dunder</em> Methods</p>
 <p>Modify the <code class="docutils literal notranslate"><span class="pre">__add__()</span></code> method so that if <em>other</em> is an integer, it will simply add that number to all items in the shopping list.</p>
-<div class="dropdown admonition">
-<p class="admonition-title"> Solution</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ShoppingList</span><span class="p">:</span>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span>
+
+
+<span class="k">class</span> <span class="nc">ShoppingList</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents a shopping list.&quot;&quot;&quot;</span>
     
     <span class="o">...</span>
     
-    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Add together two shopping lists.</span>
-<span class="sd">        </span>
+    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">ShoppingList</span><span class="p">,</span> <span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ShoppingList</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Combines two shopping lists or adds *other* to all item categories</span>
+<span class="sd">        (if an *int* is provided).</span>
+
 <span class="sd">        Notes</span>
 <span class="sd">        -----</span>
 <span class="sd">        This method returns a new shopping list, meaning it doesn&#39;t modify</span>
-<span class="sd">        any of the existing lists it was given.</span>
-<span class="sd">        </span>
+<span class="sd">        any of the existing instances it was given.</span>
+
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        other : ShoppingList</span>
-<span class="sd">            Another shopping list</span>
-<span class="sd">        </span>
+<span class="sd">        other : Union[ShoppingList, int]</span>
+<span class="sd">            Another shopping list or number to increase all categories by</span>
+
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        ShoppingList</span>
-<span class="sd">            Combined shopping list</span>
+<span class="sd">            New shopping list</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">ShoppingList</span><span class="p">):</span>
             <span class="k">return</span> <span class="n">ShoppingList</span><span class="p">(</span>
@@ -1441,9 +1582,11 @@ p.x: 20, p.y: 10
             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
                 <span class="sa">f</span><span class="s2">&quot;other must by either a ShoppingList instance or an integer, got: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">other</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
             <span class="p">)</span>
+
 </pre></div>
 </div>
 </div>
+</details></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To learn more about other Python operators, see <a class="reference external" href="https://www.python-course.eu/python3_magic_methods.php">this overview</a>.</p>
@@ -1454,49 +1597,82 @@ p.x: 20, p.y: 10
 <h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
 <p>OOP is the most important programming paradigm for you to master on your Python journey. Some problems fit this paradigm hand in glove, however, it’s not the “ultimate” answer to any design difficulty you have. Some problems <em>can</em> be solved by using intricate objects and multiple inheritance, but in reality they’re much simpler when solved using a procedural design. Remember to write code that humans, and especially your future self, can read and understand.</p>
 <p>With that being said, throughout this course I prefer you write too many objects over writing too few. Whether you’ll be writing new objects every day or not, you will certainly be using them any time you write Python code, and creating classes will nurture your confidence when doing so.</p>
-<div class="section" id="exercise-iv-the-vector-class">
-<h4>Exercise IV: The <code class="docutils literal notranslate"><span class="pre">Vector</span></code> Class<a class="headerlink" href="#exercise-iv-the-vector-class" title="Permalink to this headline">¶</a></h4>
+<div class="attention admonition">
+<p class="admonition-title">Exercise: The Vector Class</p>
 <ol class="simple">
 <li><p>Create a <code class="docutils literal notranslate"><span class="pre">Vector</span></code> class that simulates a <em>1D</em> vector array. Assume the inputs to the class are valid. The <code class="docutils literal notranslate"><span class="pre">Vector</span></code> instance should be initialized with at least two attributes.</p></li>
-<li><p>Override some dunder method(s) so that you’re able to add either an integer or a different vector to a vector.</p></li>
-<li><p>Override some dunder method(s) so that you’re able to check which of the two vectors is bigger, element-wise. The output is another vector with the corresponding <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> values.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Vector</span></code> class should enable adding either an integer or a different vector to a vector.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Vector</span></code> class should enable checking which of two vectors is bigger, element-wise. The output is another vector with the corresponding <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> values.</p></li>
 </ol>
-<div class="dropdown admonition">
-<p class="admonition-title"> Solution</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Vector</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Models a 1D vector array, assuming the inputs are valid.</span>
-<span class="sd">    </span>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterable</span>
+
+
+<span class="k">class</span> <span class="nc">Vector</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Models a 1D vector array, assuming the inputs are valid.</span>
+
 <span class="sd">    Notes</span>
 <span class="sd">    -------</span>
 <span class="sd">    Integers and other vectors can be added. Element-wise comparison with other vectors</span>
 <span class="sd">    is also supported.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize a new `Vector` instance.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Attributes</span>
 <span class="sd">        ----------</span>
-<span class="sd">        data : list-like</span>
+<span class="sd">        data : Iterable</span>
 <span class="sd">            The actual data in a list</span>
-<span class="sd">        length : int</span>
-<span class="sd">            Number of elements</span>
-<span class="sd">        &quot;&quot;&quot;</span>        
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-        
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Allows us to call len() on the vector.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Allows us to call len() on the vector.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        int</span>
+<span class="sd">            Vector size</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span>
-    
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns a string representation of the instance.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a string representation of the instance.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+<span class="sd">            String representation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="si">}</span><span class="s2"> with </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="si">}</span><span class="s2"> elements&quot;</span>
-    
-    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Left-add a Vector to an integer or another vector. </span>
-<span class="sd">        </span>
+
+    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Vector</span><span class="p">,</span> <span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Vector</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Left-add a Vector to an integer or another vector.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        other : Union[Vector, int]</span>
+<span class="sd">            New `Vector` instance if added with a `Vector`, this instance</span>
+<span class="sd">            otherwise</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Vector</span>
+<span class="sd">            New vector or `self`</span>
+
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        AssertionError</span>
@@ -1504,19 +1680,37 @@ p.x: 20, p.y: 10
 <span class="sd">        TypeError</span>
 <span class="sd">            If other isn&#39;t a vector or an integer</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Handle modifying this instance when provided an integer.</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">datum</span> <span class="o">+</span> <span class="n">other</span> <span class="k">for</span> <span class="n">datum</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">]</span>
             <span class="k">return</span> <span class="bp">self</span>
+        <span class="c1"># Handle creating a new `Vector` instance when provided another vector.</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Vector</span><span class="p">):</span>
             <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
-            <span class="n">new_vec</span> <span class="o">=</span> <span class="p">[</span><span class="n">elem0</span> <span class="o">+</span> <span class="n">elem1</span> <span class="k">for</span> <span class="n">elem0</span><span class="p">,</span> <span class="n">elem1</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">data</span><span class="p">)]</span>
+            <span class="n">new_vec</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="n">elem0</span> <span class="o">+</span> <span class="n">elem1</span> <span class="k">for</span> <span class="n">elem0</span><span class="p">,</span> <span class="n">elem1</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+            <span class="p">]</span>
             <span class="k">return</span> <span class="n">Vector</span><span class="p">(</span><span class="n">new_vec</span><span class="p">)</span>
+        <span class="c1"># Otherwise, raise exception.</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Other object was </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">other</span><span class="p">)</span><span class="si">}</span><span class="s2">, expected int or Vector.&quot;</span><span class="p">)</span>
-    
-    <span class="k">def</span> <span class="fm">__gt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Left &gt; between two vectors.</span>
-<span class="sd">        </span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Other object was </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">other</span><span class="p">)</span><span class="si">}</span><span class="s2">, expected int or Vector.&quot;</span>
+            <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__gt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">Vector</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Enables using `&gt;` between two vectors.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        other : Vector</span>
+<span class="sd">            Vector to compare size with</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        bool</span>
+<span class="sd">            Left is greater than right or not</span>
+
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        AssertionError</span>
@@ -1525,87 +1719,22 @@ p.x: 20, p.y: 10
 <span class="sd">            If other isn&#39;t a vector</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Vector</span><span class="p">):</span>
-            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Other object was </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">other</span><span class="p">)</span><span class="si">}</span><span class="s2">, expected Vector.&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Other object was </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">other</span><span class="p">)</span><span class="si">}</span><span class="s2">, expected Vector.&quot;</span>
+            <span class="p">)</span>
         <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
-        <span class="n">ans</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="n">elem0</span> <span class="o">&gt;</span> <span class="n">elem1</span> <span class="k">for</span> <span class="n">elem0</span><span class="p">,</span> <span class="n">elem1</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-        <span class="p">]</span>
-        <span class="c1"># Same as:</span>
+        <span class="n">ans</span> <span class="o">=</span> <span class="p">[</span><span class="n">elem0</span> <span class="o">&gt;</span> <span class="n">elem1</span> <span class="k">for</span> <span class="n">elem0</span><span class="p">,</span> <span class="n">elem1</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">data</span><span class="p">)]</span>
+        <span class="k">return</span> <span class="n">Vector</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
+
+        <span class="c1"># The list concatenation does the same thing as:</span>
         <span class="c1"># ans = []</span>
         <span class="c1"># for elem0, elem1 in zip(self.data, other.data):</span>
         <span class="c1">#     ans.append(elem0 &gt; elem1)</span>
         <span class="c1"># but better :)</span>
-        <span class="k">return</span> <span class="n">Vector</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="exercise-v-the-path-class">
-<h4>Exercise V: The <code class="docutils literal notranslate"><span class="pre">Path</span></code> Class<a class="headerlink" href="#exercise-v-the-path-class" title="Permalink to this headline">¶</a></h4>
-<p>Create a <code class="docutils literal notranslate"><span class="pre">Path</span></code> class, representing a file or directory in the filesystem. The class should have at least one attribute named <code class="docutils literal notranslate"><span class="pre">location</span></code>, containing the full “route” to that item, and three methods, not including the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">get_parent()</span></code> - returns the path of the parent directory.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">get_size()</span></code> - returns the size in KB of the of the file or directory.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exists()</span></code> - checks whether the path indeed exists in the filesystem.</p></li>
-</ul>
-<p>In addition, overload the true division operator (<code class="docutils literal notranslate"><span class="pre">/</span></code>, triggering the dunder method <code class="docutils literal notranslate"><span class="pre">__truediv__()</span></code>) to concatenate <code class="docutils literal notranslate"><span class="pre">Path</span></code> instances with some string, e.g.:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/home&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;usr&quot;</span>
-<span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/home/usr&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Use the <code class="docutils literal notranslate"><span class="pre">os.path</span></code> module to inspect file-system objects.</p>
-</div>
-<div class="dropdown admonition">
-<p class="admonition-title"> Solution</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-
-
-<span class="k">class</span> <span class="nc">Path</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Representation of a file-system node (file or directory).&quot;&quot;&quot;</span>
-    
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Initialize a `Path` instance.</span>
-<span class="sd">        </span>
-<span class="sd">        Attributes</span>
-<span class="sd">        ----------</span>
-<span class="sd">        location : str</span>
-<span class="sd">            Route to file-system node</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">location</span>
-    
-    <span class="k">def</span> <span class="nf">get_parent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the path of the parent directory.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
-            
-    <span class="k">def</span> <span class="nf">get_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the size in KB of the file or directory.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
-    
-    <span class="k">def</span> <span class="nf">check_existence</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Changes current path to new_path &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">location</span><span class="p">)</span>
-    
-    <span class="k">def</span> <span class="fm">__truediv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; </span>
-<span class="sd">        Create new `Path` instance using the `/` sign.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-            <span class="n">has_sep</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">)</span> <span class="ow">or</span> <span class="n">other</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="p">)</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="n">has_sep</span><span class="p">:</span>
-                <span class="n">other</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span> <span class="o">+</span> <span class="n">other</span>
-            <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">location</span> <span class="o">+</span> <span class="n">other</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expected str, got: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">other</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Fortunately, Python already has an awesome implementation of a <code class="docutils literal notranslate"><span class="pre">Path</span></code> class included in its standard library. For more information, see the <a class="reference external" href="https://docs.python.org/3/library/pathlib.html"><code class="docutils literal notranslate"><span class="pre">pathlib</span></code> module’s documentation</a>.</p>
-</div>
-</div>
+</details></div>
 </div>
 </div>
 </div>
