@@ -14,3 +14,7 @@ extra_material
 
 # VSCode configuration files
 .vscode
+
+# Artifacts
+source/classes/class_5/*.mat
+source/classes/class_5/*.pdf
