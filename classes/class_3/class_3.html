@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Class 3: More OOP and Exception Handling &#8212; Python for Neuroscience</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
@@ -312,23 +313,6 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise">
-   Exercise
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#smartphones">
-     Smartphones
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-solution-below">
-     Exercise solution below…
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#errors-and-exceptions">
    Errors and Exceptions
   </a>
@@ -356,7 +340,7 @@
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
+    <a class="reference internal nav-link" href="#exercise-solution-below">
      Exercise solution below…
     </a>
    </li>
@@ -374,29 +358,38 @@
         
               <div>
                 
-  <div class="section" id="class-3-more-oop-and-exception-handling">
+  <section id="class-3-more-oop-and-exception-handling">
 <h1>Class 3: More OOP and Exception Handling<a class="headerlink" href="#class-3-more-oop-and-exception-handling" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="object-oriented-programming-part-2">
+<section id="object-oriented-programming-part-2">
 <h2>Object Oriented Programming: Part 2<a class="headerlink" href="#object-oriented-programming-part-2" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="inheritance">
+<section id="inheritance">
 <h3>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h3>
-<p>One of the most interesting aspects or features of object-oriented programming is <em>inheritance</em>. Inheritance is a specific type of relation between the objects we create that signifies that a “child” object <em>inherits</em> from its “parent”. In other words, the child object <strong>“is a”</strong> parent object. Our examples so far were of “real-life” objects, and so to continue this line we’d perhaps wish to create a class of a “Person”, which would be the parent class, and a child class of a “Student”. In this examples it’s clear why a “Student” <strong>is a</strong> Person, so the inheritance holds. All Persons have a name, age, gender, etc - but only students have an associated school and a final grade. This means that the Student will have all attributes associated with all Persons - name, age, gender - and they’ll also have a school and a grade. This is the meaning of “inheritance” in our lingo.</p>
-<p>To solidify this point we’ll not use a contrived Person-Student example. Instead, we’ll use something a bit more typical to the work we do in our day to day life - a data reader. Say that we have some computational pipeline, that reads some data in, pre-processes it (denoising, filtering, changes its dimensions), then it computes some measurement of that dataset (number of cells in the image, mean calcium activity, min-max of electrical activity) and finally it writes it to disk. Let’s focus on the first step of this pipeline - reading in the data.</p>
+<p>One of the most interesting aspects or features of object-oriented programming is <em>inheritance</em>. Inheritance is a specific type of relation between the objects we create that signifies that a “child” object <em>inherits</em> from its “parent”. In other words, the child object <strong>“is a”</strong> parent object. Our examples so far were of “real-life” objects, and so to continue this line we’d perhaps wish to create a class of a <code class="docutils literal notranslate"><span class="pre">Person</span></code>, which would be the parent class, and a child class of a <code class="docutils literal notranslate"><span class="pre">Student</span></code>. In this examples it’s clear why a <code class="docutils literal notranslate"><span class="pre">Student</span></code> <strong>is a</strong> <code class="docutils literal notranslate"><span class="pre">Person</span></code>, so the inheritance holds. All <code class="docutils literal notranslate"><span class="pre">Person</span></code> instances have a name, age, gender, etc., but only <code class="docutils literal notranslate"><span class="pre">Student</span></code> instances have an associated school and a final grade. This means that the <code class="docutils literal notranslate"><span class="pre">Student</span></code> will have all attributes associated with all <code class="docutils literal notranslate"><span class="pre">Person</span></code>s (name, age, gender), and they’ll also have a school and a grade, the is referred to as “inheritance”.</p>
+<p>Say that we have some computational pipeline, that reads some data, preprocesses it (denoising, filtering, changing its dimensions), then it computes some measurement of that dataset (number of cells in the image, mean calcium activity, min-max of electrical activity) and finally it writes it to disk. Let’s focus on the first step of this pipeline - reading in the data.</p>
 <p><img alt="Computational pipeline" src="../../_images/pipeline_oop_inheritance.png" /></p>
-<p>Our approach will be the following - we’ll build a parent class called <code class="docutils literal notranslate"><span class="pre">DataReader</span></code>, and its child classes will know how to read in specific data formats only. In the graph above we’ll have two child implementations: one that can read <code class="docutils literal notranslate"><span class="pre">.tif</span></code> images, and one for <code class="docutils literal notranslate"><span class="pre">.png</span></code>. This will allow us to “plug in” different classes into our pipeline, depending on the input, and the downstream functions won’t see a difference.</p>
+<p>Our approach will be the following: we will build a parent class called <code class="docutils literal notranslate"><span class="pre">DataReader</span></code>, and its child classes will know how to read in specific data formats only. In the graph above we’ll have two child implementations: one that can read <em>.tif</em> images, and one for <em>.png</em>. This will allow us to “plug in” different classes into our pipeline, depending on the input, and the downstream functions won’t see a difference.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
 
 <span class="k">class</span> <span class="nc">DataReader</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Parent class of DataReader objects.</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Base class for DataReader objects.</span>
 <span class="sd">    </span>
-<span class="sd">    This class provides an &quot;interface&quot; for child classes to implement,</span>
-<span class="sd">    if they wish to be a part of the larger data processing pipeline of this project.</span>
+<span class="sd">    This class provides an &quot;interface&quot; for subclasses to implement which</span>
+<span class="sd">    conforms with the larger data processing pipeline of this project.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="n">Path</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Path</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize a new instance.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        path : Path</span>
+<span class="sd">            Input data path</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="kc">None</span>
     
     <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -404,6 +397,7 @@
         <span class="k">raise</span> <span class="ne">NotImplementedError</span>
     
     <span class="k">def</span> <span class="nf">summarize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns an informative summary of the data.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </pre></div>
 </div>
@@ -412,41 +406,37 @@
 <p>This parent class could be initialized with:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_reader</span> <span class="o">=</span> <span class="n">DataReader</span><span class="p">(</span><span class="s2">&quot;/some/path.tiff&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/some/path.tiff&quot;</span><span class="p">)</span>
+<span class="n">data_reader</span> <span class="o">=</span> <span class="n">DataReader</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>and no harm will be done, but in practice there’s little one can achieve with this class. Any class that inherits from this base class has all methods the parent class has, even though theu currently simply raise an error (an exception) called <code class="docutils literal notranslate"><span class="pre">NotImplementedError</span></code>.</p>
+<p>and no harm will be done, but in practice there’s little one can achieve with this class. Any class that inherits from this base class has all methods the parent class has, but currently all they do is simply raise an error (an exception) called <code class="docutils literal notranslate"><span class="pre">NotImplementedError</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;a.png&#39;</span>
-<span class="n">data_reader</span> <span class="o">=</span> <span class="n">DataReader</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;data_reader: </span><span class="si">{</span><span class="n">data_reader</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="c1"># Using ends_with works</span>
-<span class="n">extension</span> <span class="o">=</span> <span class="n">data_reader</span><span class="o">.</span><span class="n">ends_with</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Current extension: </span><span class="si">{</span><span class="n">extension</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="c1"># Using read doesn&#39;t</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;a.png&#39;</span>
+<span class="n">data_reader</span> <span class="o">=</span> <span class="n">DataReader</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 <span class="n">data_reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data_reader: &lt;__main__.DataReader object at 0x7f1d2840a370&gt;
-</pre></div>
-</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">9</span><span class="n">c623f8826a2</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Using ends_with works</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">extension</span> <span class="o">=</span> <span class="n">data_reader</span><span class="o">.</span><span class="n">ends_with</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Current extension: </span><span class="si">{</span><span class="n">extension</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> 
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mf">80265e96</span><span class="n">f09c</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;a.png&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">data_reader</span> <span class="o">=</span> <span class="n">DataReader</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">data_reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
-<span class="ne">AttributeError</span>: &#39;DataReader&#39; object has no attribute &#39;ends_with&#39;
+<span class="nn">&lt;ipython-input-1-0f79e4a93edb&gt;</span> in <span class="ni">read</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span>         <span class="sd">&quot;&quot;&quot;Reads data into disk and returns it. Should populate self.data.&quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">25</span>         <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span> 
+<span class="g g-Whitespace">     </span><span class="mi">27</span>     <span class="k">def</span> <span class="nf">summarize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="ne">NotImplementedError</span>: 
 </pre></div>
 </div>
 </div>
@@ -454,216 +444,184 @@
 <p>This <code class="docutils literal notranslate"><span class="pre">NotImplementedError</span></code> tells the users of this class that they’ll have to implement this method when they derive the child class if they wish to have anything done with this interface. Let’s see how we write a child class:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tifffile</span>  <span class="c1"># Python&#39;s most popular tif processing library</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">import</span> <span class="nn">tifffile</span>
 
 
 <span class="k">class</span> <span class="nc">TifDataReader</span><span class="p">(</span><span class="n">DataReader</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;A DataReader designated to read .tif files. </span>
-<span class="sd">    </span>
-<span class="sd">    Uses the tifffile package to do the heavy lifting.</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A DataReader subclass for reading *.tif* files.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-        <span class="c1"># self.name = &#39;abc&#39;</span>
-    
-    <span class="k">def</span> <span class="nf">verify_input</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Verifies that the given filename is valid.&quot;&quot;&quot;</span>
-        <span class="k">pass</span>
-    
+
     <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Reads a tif image to self.data and returns it as well.&quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">verify_input</span><span class="p">()</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Reads a *.tif* image to self.data and returns it as well.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">tifffile</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
-    
+
     <span class="k">def</span> <span class="nf">summarize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;A simple mean of the data.&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the mean of the data.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        float</span>
+<span class="sd">            Data mean</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">calculate_tif_thing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Calcualtes some measurement from a *.tif* file.&quot;&quot;&quot;</span>
+        <span class="k">pass</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Inheritance happens when you write a different class’ name between the braces at the top line. This tells Python to transfer attributes and methods from the parent to this child. The instatiation (=magic) happens using the special syntax of <code class="docutils literal notranslate"><span class="pre">super().__init__(argumets)</span></code> - what it says is “create the super (i.e. parent) class and call its <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method with the given arguments.</p>
-<p>Besides that the only things that might catch the eye is the new method <code class="docutils literal notranslate"><span class="pre">verify_input()</span></code>, which the parent class didn’t require. This function, which I left unimplemented, checks that the given filename exists and that it’s indeed a tif file. The parent class didn’t mandate it, but I, as the implementer of the child class, deemed it necessary.</p>
-<p>Let’s see how to use this class. Don’t worry, everything should seem straight-forward from now on:</p>
+<p>Inheritance happens when you pass some class using the braces of the <code class="docutils literal notranslate"><span class="pre">class</span></code> definition. This tells Python to transfer attributes and methods from the parent to this child.</p>
+<p>Note how on one hand we didn’t have to rewrite the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method to define the instance initialization parameters, and on the other hand we had no problem creating a new <code class="docutils literal notranslate"><span class="pre">calculate_tif_thing()</span></code> method to provide some <em>.tif</em>-specific functionality. In between we have the <code class="docutils literal notranslate"><span class="pre">read()</span></code> and <code class="docutils literal notranslate"><span class="pre">summarize()</span></code> methods, which where implemented by overriding the base class’s.</p>
+<p>Let’s consider how one could use this class:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;a.tif&#39;</span>
-<span class="n">tif_data_reader</span> <span class="o">=</span> <span class="n">TifDataReader</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">tif_data_reader</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
-<span class="n">tif_data_reader</span><span class="o">.</span><span class="n">ends_with</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;a.tif&#39;</span>
+<span class="n">tif_data_reader</span> <span class="o">=</span> <span class="n">TifDataReader</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="n">tif_data_reader</span><span class="o">.</span><span class="n">path</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a.tif
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">5</span><span class="n">a9cdcd3ad5f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">tif_data_reader</span> <span class="o">=</span> <span class="n">TifDataReader</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">tif_data_reader</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">tif_data_reader</span><span class="o">.</span><span class="n">ends_with</span><span class="p">()</span>
-
-<span class="ne">AttributeError</span>: &#39;TifDataReader&#39; object has no attribute &#39;ends_with&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;a.tif&#39;)
 </pre></div>
 </div>
 </div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">tif_data_reader</span></code> has the <code class="docutils literal notranslate"><span class="pre">.read()</span></code> and <code class="docutils literal notranslate"><span class="pre">.summarize()</span></code> method ready to use. We won’t read an actual <code class="docutils literal notranslate"><span class="pre">.tif</span></code> file but you can see that nothing is really special about this class and instance. Inheritance in this case helped us give a tag to this class, signaling to its users that it’s “special” and should be used in some specific contexts.</p>
-<p>For completeness, let’s write the other child class of <code class="docutils literal notranslate"><span class="pre">DataReader</span></code>. A single parent can obviously have as many childs as you wish.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">imageio</span>
-
-
-<span class="k">class</span> <span class="nc">PngDataReader</span><span class="p">(</span><span class="n">DataReader</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;A DataReader designated to read .tif files. </span>
-<span class="sd">    </span>
-<span class="sd">    Uses the imageio package to do the heavy lifting.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-    
-    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Reads a PNG image to self.data and returns it as well.</span>
-<span class="sd">        Also populates self.metadat with the image&#39;s metadata.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">imageio</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">meta</span>  <span class="c1"># imageio reads metadata for us</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
-    
-    <span class="k">def</span> <span class="nf">summarize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;A simple mean of the data.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sometimes we wish to call the parent class’s method, particularly when overriding that same method in the subclass and wanting to continue any base class logic, or when modifying the instance initialization logic.</p>
+<p>This is easily done by using the built-in <code class="docutils literal notranslate"><span class="pre">super()</span></code> function, e.g.:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ChildClass</span><span class="p">(</span><span class="n">ParentClass</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">overridden_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg_1</span><span class="p">,</span> <span class="n">arg_2</span><span class="p">):</span>
+        <span class="n">base_class_result</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">overridden_method</span><span class="p">(</span><span class="n">arg_1</span><span class="p">,</span> <span class="n">arg_2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">another_calculation</span><span class="p">(</span><span class="n">base_class_result</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-</div>
-<p>Since <code class="docutils literal notranslate"><span class="pre">imageio</span></code> does input verification for me (kinda) we don’t need our own method to do it for us. Besides that, the read method also creates a <code class="docutils literal notranslate"><span class="pre">self.metadata</span></code> attribute, since <code class="docutils literal notranslate"><span class="pre">imageio</span></code> allows it. Again, this wasn’t required by the parent.</p>
-</div>
-<div class="section" id="inheritance-why-and-when">
+</section>
+<section id="inheritance-why-and-when">
 <h3>Inheritance - Why and When<a class="headerlink" href="#inheritance-why-and-when" title="Permalink to this headline">¶</a></h3>
-<p>Inheritance can facilitate code re-use and simpler, clearer mental models of the problem at hand. In the example above, we generated very clear and concise classes that do one thing, and do it well. People reading this code - including us in three months - will understand everything about it without any hassle.</p>
+<p>Inheritance can facilitate code re-use and simpler, clearer mental models of the problem at hand. In the example above, we generated very clear and concise classes that do one thing, and do it well. People reading this code, including us in three months, will understand everything about it without any hassle.</p>
 <p>A possible issue with inheritance is readability - finding the methods that are associated with the base class can be cumbersome when we start working with tens of attributes and multiple methods. This is why usually people try to avoid more than a single layer of inheritance.</p>
-</div>
-</div>
-<div class="section" id="exercise">
-<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="smartphones">
-<h3>Smartphones<a class="headerlink" href="#smartphones" title="Permalink to this headline">¶</a></h3>
-<p>Model both a smartphone and a label-specific phone - an iPhone in our case - by using a parent and child class. Have at least one method and one attribute for the base class, and at least one unique method for the child class.</p>
-<p>One of the methods has to be a <code class="docutils literal notranslate"><span class="pre">call(phone)</span></code> method, designed to call from one phone to the other. When <code class="docutils literal notranslate"><span class="pre">call()</span></code>ing between iPhones, the method should use the FaceTime interface of the two iPhones. Make sure to keep a log of the calls on both phones.</p>
-</div>
-<div class="section" id="exercise-solution-below">
-<h3>Exercise solution below…<a class="headerlink" href="#exercise-solution-below" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<div class="attention admonition">
+<p class="admonition-title">Exercise: The Person Base Class</p>
+<p>You have decided to write a program that will manage the entirety of your lab’s data and you’re considering creating a <code class="docutils literal notranslate"><span class="pre">Person</span></code> class that will be the base class for the <code class="docutils literal notranslate"><span class="pre">Researcher</span></code> and the <code class="docutils literal notranslate"><span class="pre">Participant</span></code> classes. Note that:</p>
+<ul class="simple">
+<li><p>The shared attributes are: <code class="docutils literal notranslate"><span class="pre">first_name</span></code>, <code class="docutils literal notranslate"><span class="pre">last_name</span></code>, <code class="docutils literal notranslate"><span class="pre">id_number</span></code>, <code class="docutils literal notranslate"><span class="pre">sex</span></code>, and <code class="docutils literal notranslate"><span class="pre">date_of_birth</span></code>.</p></li>
+<li><p>Researchers also have <code class="docutils literal notranslate"><span class="pre">title</span></code> and <code class="docutils literal notranslate"><span class="pre">position</span></code> attributes.</p></li>
+<li><p>Participants also have <code class="docutils literal notranslate"><span class="pre">weight</span></code> and <code class="docutils literal notranslate"><span class="pre">dominant_hand</span></code> attributes.</p></li>
+<li><p>Both classes need a <code class="docutils literal notranslate"><span class="pre">get_full_name()</span></code> method to return the full name, but the <code class="docutils literal notranslate"><span class="pre">Researcher</span></code> class should include the <code class="docutils literal notranslate"><span class="pre">title</span></code> as a prefix if it is specified.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Participant</span></code> class should also have a <code class="docutils literal notranslate"><span class="pre">read_text()</span></code> method that reads a file that is expected to be found under <em>data/&lt;id_number&gt;.txt</em> and returns its content.</p></li>
+</ul>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
 
-<span class="k">class</span> <span class="nc">Phone</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Base class for all types of mobile phones &quot;&quot;&quot;</span>
-    
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">screen_size</span><span class="p">,</span> <span class="n">num_camera</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">screen_size</span> <span class="o">=</span> <span class="n">screen_size</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">num_of_camera</span> <span class="o">=</span> <span class="n">num_camera</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">is_on</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># power switch</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">photos</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># list of pictures taken</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">calls</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># call log</span>
-    
-    <span class="k">def</span> <span class="nf">switch_power</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="c1">#         self.is_on = False if self.is_on else True</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_on</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">is_on</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">is_on</span> <span class="o">=</span> <span class="kc">True</span>
-    
-    <span class="k">def</span> <span class="nf">take_photo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Take a photo and append it to the photo album &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">photos</span><span class="o">.</span><span class="n">append</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
-    
-    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Call another Phone instance &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_on</span> <span class="ow">and</span> <span class="n">other</span><span class="o">.</span><span class="n">is_on</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">calls</span><span class="p">[</span><span class="n">other</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-            <span class="n">other</span><span class="o">.</span><span class="n">calls</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Phone </span><span class="si">{</span><span class="n">other</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> is off.&quot;</span><span class="p">)</span>
-            
-        <span class="k">return</span> <span class="n">other</span>
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Base class representing people.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-<span class="k">class</span> <span class="nc">IPhone</span><span class="p">(</span><span class="n">Phone</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; A more expensive phone, that can call other iPhones using a special call method &quot;&quot;&quot;</span>
-    
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">screen_size</span><span class="p">,</span> <span class="n">num_camera</span><span class="p">,</span> <span class="n">apple_id</span><span class="p">):</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">screen_size</span><span class="p">,</span> <span class="n">num_camera</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">apple_id</span> <span class="o">=</span> <span class="n">apple_id</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">facetime_calls</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># FaceTime call log</span>
-    
-    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Overrides the call method from the parent class &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_on</span> <span class="ow">and</span> <span class="n">other</span><span class="o">.</span><span class="n">is_on</span><span class="p">:</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">facetime_calls</span><span class="p">[</span><span class="n">other</span><span class="o">.</span><span class="n">apple_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-            <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">calls</span><span class="p">[</span><span class="n">other</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-                <span class="n">other</span><span class="o">.</span><span class="n">calls</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">other</span><span class="o">.</span><span class="n">facetime_calls</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">apple_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Phone </span><span class="si">{</span><span class="n">other</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> is off.&quot;</span><span class="p">)</span>
-        
-        <span class="k">return</span> <span class="n">other</span>
-        
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regular</span> <span class="o">=</span> <span class="n">Phone</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;lg_v10&#39;</span><span class="p">,</span> <span class="n">screen_size</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
-<span class="n">iphone</span> <span class="o">=</span> <span class="n">IPhone</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;iphone_8&#39;</span><span class="p">,</span> <span class="n">screen_size</span><span class="o">=</span><span class="mf">5.5</span><span class="p">,</span> <span class="n">num_camera</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">apple_id</span><span class="o">=</span><span class="s1">&#39;first_iphone_8&#39;</span><span class="p">)</span>
-<span class="n">iphone2</span> <span class="o">=</span> <span class="n">IPhone</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;iphone_X&#39;</span><span class="p">,</span> <span class="n">screen_size</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">num_camera</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">apple_id</span><span class="o">=</span><span class="s1">&#39;second_iphone_X&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Extracts person attributes from the provided keyword arguments.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;first_name&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;last_name&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id_number</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;id_number&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sex</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;sex&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">date_of_birth</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;date_of_birth&quot;</span><span class="p">)</span>
 
-<span class="c1"># Call from regular phone to iPhone</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Before calling, the log for regular shows: </span><span class="si">{</span><span class="n">regular</span><span class="o">.</span><span class="n">calls</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">iphone</span> <span class="o">=</span> <span class="n">regular</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">iphone</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After the call, regular shows </span><span class="si">{</span><span class="n">regular</span><span class="o">.</span><span class="n">calls</span><span class="si">}</span><span class="s2"> and the iPhone shows </span><span class="si">{</span><span class="n">iphone</span><span class="o">.</span><span class="n">calls</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">get_full_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the full name of the person in the format of &quot;first last&quot;.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+<span class="sd">            Full name</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2">&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Researcher</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Represents a researcher in the lab.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Extract researcher attributes from the provided keyword arguments.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;position&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_full_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the full name of the researcher, including their title.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+<span class="sd">            Researcher name and title</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">full_name</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">get_full_name</span><span class="p">()</span>
+        <span class="c1"># Introducting Python&#39;s ternary expressions:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">title</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">full_name</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="k">else</span> <span class="n">full_name</span>
+
+
+<span class="k">def</span> <span class="nf">Participant</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Represents a participant in some experiment.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">TEXT_PATH_TEMPLATE</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;data/</span><span class="si">{id_number}</span><span class="s2">.txt&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;weight&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dominant_hand</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;dominant_hand&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">read_text</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Reads the participant&#39;s textual data from a predefined location.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+<span class="sd">            Participants textual data</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">TEXT_PATH_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">id_number</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">id_number</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">text_file</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">text_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Before calling, the log for regular shows: {}
-After the call, regular shows {&#39;iphone_8&#39;: 1615892116.173634} and the iPhone shows {&#39;lg_v10&#39;: 1615892116.1736345}
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Two iPhones:</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Before calling, the log for first iPhone shows: </span><span class="si">{</span><span class="n">iphone</span><span class="o">.</span><span class="n">facetime_calls</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">iphone2</span> <span class="o">=</span> <span class="n">iphone</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">iphone2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After the call, the first iPhone shows </span><span class="si">{</span><span class="n">iphone</span><span class="o">.</span><span class="n">facetime_calls</span><span class="si">}</span><span class="s2"> and the second shows </span><span class="si">{</span><span class="n">iphone2</span><span class="o">.</span><span class="n">facetime_calls</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Before calling, the log for first iPhone shows: {}
-After the call, the first iPhone shows {&#39;second_iphone_X&#39;: 1615892116.1816897} and the second shows {&#39;first_iphone_8&#39;: 1615892116.1816914}
-</pre></div>
-</div>
-</div>
-</div>
+</details></div>
 <p>Object-oriented design requires you to think about the code you’re about to write - how to model each object, how to deal with the interfaces between them, how to verify the types of each input, etc.</p>
-<p>Because we’re trying to model a complex structures, we usually don’t succeed in the first try. That’s because we become smarter and understand our needs from the model better <strong>only after we’ve used it.</strong> Premeditating and debating on the exact way through which two <code class="docutils literal notranslate"><span class="pre">Phones()</span></code> will call each other is important, but we’ll usually just <strong>refactor</strong> our initial model in favor of a better one after a few days of “usage”. That’s the underlying reason for “alpha” and “beta” versions of software.</p>
-<p>In short, rewriting large parts of an application you designed is expected, since it’s a natural and important part of software design - a luxury other engineers rarely have.</p>
-</div>
-</div>
-<div class="section" id="errors-and-exceptions">
+<p>Classes are tremendously powerful, but require a great deal of experience in order to be used wisely. Until we can envision complete entity structures in our mind and account for all the details of their implementation and interactions, <strong>we do our best, we learn from it, and then we do better</strong>. Rewriting large parts of an application you designed is expected, it is a natural and important part of software design (and a luxury other engineers rarely have).</p>
+<p>The term used to describe rewriting parts of some code in a way that preserves its original function but somehow improves it (performance, readability, documentation) is <em>refactoring</em>, and it is absolutely crucial.</p>
+</section>
+</section>
+<section id="errors-and-exceptions">
 <h2>Errors and Exceptions<a class="headerlink" href="#errors-and-exceptions" title="Permalink to this headline">¶</a></h2>
 <p>A very debated feature of Python (and other scripting languages) is its fear of failing. Python tries to coerce unknown commands into something familiar that it can work with. For example, addition of <code class="docutils literal notranslate"><span class="pre">bool</span></code>s and other types is fully supported, since <code class="docutils literal notranslate"><span class="pre">bool</span></code> types are treated as 0 (for <code class="docutils literal notranslate"><span class="pre">False</span></code>) and 1 (for <code class="docutils literal notranslate"><span class="pre">True</span></code>).</p>
 <div class="cell docutils container">
@@ -700,7 +658,7 @@ After the call, the first iPhone shows {&#39;second_iphone_X&#39;: 1615892116.18
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">977675</span><span class="n">d93a78</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">977675</span><span class="n">d93a78</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="s1">&#39;3&#39;</span> <span class="o">+</span> <span class="mi">3</span>  <span class="c1"># TypeError</span>
 
 <span class="ne">TypeError</span>: can only concatenate str (not &quot;int&quot;) to str
@@ -718,7 +676,7 @@ After the call, the first iPhone shows {&#39;second_iphone_X&#39;: 1615892116.18
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">13</span><span class="o">-</span><span class="mi">4076</span><span class="n">b5525985</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mi">4076</span><span class="n">b5525985</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># IndexError</span>
 
@@ -736,7 +694,7 @@ After the call, the first iPhone shows {&#39;second_iphone_X&#39;: 1615892116.18
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">14</span><span class="o">-</span><span class="mi">30</span><span class="n">dc50b6b31d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">30</span><span class="n">dc50b6b31d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">camel</span>  <span class="c1"># NameError</span>
 
 <span class="ne">NameError</span>: name &#39;camel&#39; is not defined
@@ -838,7 +796,7 @@ Exception: tuple index out of range; tup: (1,)
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">17</span><span class="o">-</span><span class="mi">79278</span><span class="n">fbd754c</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">13</span><span class="o">-</span><span class="mi">79278</span><span class="n">fbd754c</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">try</span><span class="p">:</span>
 <span class="ne">----&gt; </span><span class="mi">4</span>     <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">tup</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">tup</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -930,15 +888,15 @@ None ---- unsupported operand type(s) for /: &#39;int&#39; and &#39;str&#39;
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="exercise-user-input-verification">
+</section>
+<section id="exercise-user-input-verification">
 <h2>Exercise - User Input Verification<a class="headerlink" href="#exercise-user-input-verification" title="Permalink to this headline">¶</a></h2>
 <p>The user’s input is always a very error-prone area in an application. A famous joke describes this situation in the following manner:</p>
 <blockquote>
 <div><p>A Quality Assurance (QA) Engineer walks into a bar. Orders a beer. Orders 0 beers. Orders 999999999 beers. Orders a lizard. Orders -1 beers. Orders a sfdeljknesv.</p>
 </div></blockquote>
 <p>A decent application should not only handle all possible incoming inputs, but should also convey back to the user the information of what went wrong. In this exercise you’ll write a <code class="docutils literal notranslate"><span class="pre">verify_input</span></code> function that handles file and folder names.</p>
-<div class="section" id="short-intro-pathlib">
+<section id="short-intro-pathlib">
 <h3>Short Intro - <code class="docutils literal notranslate"><span class="pre">pathlib</span></code><a class="headerlink" href="#short-intro-pathlib" title="Permalink to this headline">¶</a></h3>
 <p>For file I/O and other disk operations, some of which are required in this exercise, Pythonistas use <code class="docutils literal notranslate"><span class="pre">pathlib</span></code>, a module in the Python standard library designated to work with files and folders (<code class="docutils literal notranslate"><span class="pre">pathlib2</span></code> in Python 2). Its basic premise is that files and folders are objects themselves, and certain operations are allowed between these objects.</p>
 <div class="cell docutils container">
@@ -1042,7 +1000,7 @@ None ---- unsupported operand type(s) for /: &#39;int&#39; and &#39;str&#39;
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">30</span><span class="o">-</span><span class="mi">62</span><span class="n">f9f5df060a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">26</span><span class="o">-</span><span class="mi">62</span><span class="n">f9f5df060a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">p1</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
 
@@ -1073,7 +1031,7 @@ None ---- unsupported operand type(s) for /: &#39;int&#39; and &#39;str&#39;
 </div>
 </div>
 </div>
-<div class="section" id="the-exercise">
+<section id="the-exercise">
 <h4>The exercise:<a class="headerlink" href="#the-exercise" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1093,10 +1051,10 @@ None ---- unsupported operand type(s) for /: &#39;int&#39; and &#39;str&#39;
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="id1">
-<h3>Exercise solution below…<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="exercise-solution-below">
+<h3>Exercise solution below…<a class="headerlink" href="#exercise-solution-below" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">UserInputVerifier</span><span class="p">:</span>
@@ -1148,12 +1106,12 @@ None ---- unsupported operand type(s) for /: &#39;int&#39; and &#39;str&#39;
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">UserWarning</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">34</span><span class="o">-</span><span class="mi">57</span><span class="n">c6abe60b2f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">30</span><span class="o">-</span><span class="mi">57</span><span class="n">c6abe60b2f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">foldername</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;./mock&#39;</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">verifier</span> <span class="o">=</span> <span class="n">UserInputVerifier</span><span class="p">(</span><span class="n">foldername</span><span class="p">)</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">verifier</span><span class="o">.</span><span class="n">check_folder</span><span class="p">()</span>
 
-<span class="nn">&lt;ipython-input-33-803863538e46&gt;</span> in <span class="ni">check_folder</span><span class="nt">(self)</span>
+<span class="nn">&lt;ipython-input-29-803863538e46&gt;</span> in <span class="ni">check_folder</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">     </span><span class="mi">23</span>         <span class="n">missing_files</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="g g-Whitespace">     </span><span class="mi">24</span>         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_folder</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
 <span class="ne">---&gt; </span><span class="mi">25</span>             <span class="k">raise</span> <span class="ne">UserWarning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Folder </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_folder</span><span class="si">}</span><span class="s2"> doesn&#39;t exist.&quot;</span><span class="p">)</span>
@@ -1165,9 +1123,9 @@ None ---- unsupported operand type(s) for /: &#39;int&#39; and &#39;str&#39;
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Class 4: The Scientific Stack (Part I - numpy) &#8212; Python for Neuroscience</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
@@ -415,11 +416,11 @@
         
               <div>
                 
-  <div class="section" id="class-4-the-scientific-stack-part-i-numpy">
+  <section id="class-4-the-scientific-stack-part-i-numpy">
 <h1>Class 4: The Scientific Stack (Part I - <code class="docutils literal notranslate"><span class="pre">numpy</span></code>)<a class="headerlink" href="#class-4-the-scientific-stack-part-i-numpy" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="scientific-python">
+<section id="scientific-python">
 <h2>Scientific Python<a class="headerlink" href="#scientific-python" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="introduction">
+<section id="introduction">
 <h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
 <p><img alt="The scientific Python stack" src="../../_images/scientific_python.jpg" /></p>
 <p>The onion-like scientific stack of Python is composed of the most important packages used in the Python scientific world. Here’s a quick overview of the most important names in the stack, before we dive in deep:</p>
@@ -433,13 +434,13 @@
 <li><p><a class="reference external" href="http://seaborn.pydata.org/">seaborn</a>: Smart visualizations of tabular data.</p></li>
 </ol>
 <p>This scientific stack is one of the main reasons that empowered Python in recent years to the prominent role it has today. Throughout the course you will become familiar with all of the aforementioned tools, and more.</p>
-</div>
-<div class="section" id="numpy">
+</section>
+<section id="numpy">
 <h3>NumPy<a class="headerlink" href="#numpy" title="Permalink to this headline">¶</a></h3>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p><a class="reference external" href="https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html">This</a> page contains a thorough comparison of similar functions in MATLAB and <code class="docutils literal notranslate"><span class="pre">numpy</span></code>. If you want to use MATLAB’s <code class="docutils literal notranslate"><span class="pre">find</span></code> function and can’t seem to find a counterpart in NumPy (it’s <code class="docutils literal notranslate"><span class="pre">nonzero</span></code>, BTW), or if you wish to see how do different arithmetic functions compare between the two, that page can be of great assistance.</p>
-</div>
+</aside>
 <p>NumPy is the de-facto implementation of arrays in Python. They’re very similar to MATLAB arrays (and to other implementations in other programming languages).</p>
 <p>Although <code class="docutils literal notranslate"><span class="pre">numpy</span></code> is used extensively in the Python eco-system, it doesn’t come with the Python standard library, which means you have to install it first. Activate your environment and run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">numpy</span></code> from the command line (inside VSCode, for example). Only then you can follow the rest of the class.</p>
 <div class="cell docutils container">
@@ -592,8 +593,8 @@ The len of the array is 2 - which corresponds to the shape of the 0th dimension.
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="getting-help">
+</section>
+<section id="getting-help">
 <h3>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h3>
 <p>NumPy has a ton of features, and to get around it we can use <code class="docutils literal notranslate"><span class="pre">lookfor</span></code> and the <code class="docutils literal notranslate"><span class="pre">?</span></code> sign, besides the official reference on the internet:</p>
 <div class="cell tag_output_scroll docutils container">
@@ -1016,8 +1017,8 @@ numpy.random.Generator.permuted
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="creating-arrays">
+</section>
+<section id="creating-arrays">
 <h3>Creating arrays<a class="headerlink" href="#creating-arrays" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1212,13 +1213,13 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 <p class="admonition-title">Note</p>
 <p>NumPy does contain a matrix-like array - <code class="docutils literal notranslate"><span class="pre">np.matrix('1</span> <span class="pre">2;</span> <span class="pre">3</span> <span class="pre">4')</span></code>, which behaves like a linear algebra 2D matrix (see <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.matrix.html"><code class="docutils literal notranslate"><span class="pre">np.matrix</span></code></a>), but its use is discouraged.</p>
 </div>
-</div>
-<div class="section" id="more-on-datatypes">
+</section>
+<section id="more-on-datatypes">
 <h3>More on datatypes<a class="headerlink" href="#more-on-datatypes" title="Permalink to this headline">¶</a></h3>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>For more information about <code class="docutils literal notranslate"><span class="pre">dtype</span></code>s, see the <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.dtypes.html">Data type objects (dtypes)</a> section in NumPy’s official documentation.</p>
-</div>
+</aside>
 <p>While <code class="docutils literal notranslate"><span class="pre">numpy</span></code> doesn’t require you to actively think of the data type of each of your arrays, it’s a useful habit to have. The existing data types in <code class="docutils literal notranslate"><span class="pre">numpy</span></code> are:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1238,13 +1239,13 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 <p>Many array creation and handling methods have a <code class="docutils literal notranslate"><span class="pre">dtype</span></code> keyword argument, that allow you to specify the required output’s data type easily.</p>
 <p>Python will issue a <code class="docutils literal notranslate"><span class="pre">RuntimeWarning</span></code> whenever an “unsafe” conversion of data type will occur, for example from <code class="docutils literal notranslate"><span class="pre">np.float64</span></code> to <code class="docutils literal notranslate"><span class="pre">np.float32</span></code>.</p>
-</div>
-<div class="section" id="difference-between-numpy-arrays-and-lists">
+</section>
+<section id="difference-between-numpy-arrays-and-lists">
 <h3>Difference between NumPy arrays and lists<a class="headerlink" href="#difference-between-numpy-arrays-and-lists" title="Permalink to this headline">¶</a></h3>
 <p>You might have asked yourselves by this point what’s the difference between lists and <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays. In other words, if Python already has an array-like data structure, why does it need another one?</p>
 <p>Lists are truly amazing, but their flexibility comes at a cost. You won’t notice it when you’re writing some short script, but when you start working with real datasets you notice that their performance is lacking.</p>
 <p>Naive iteration over lists is good enough when the lists contain up to a few thousands of elements, but somewhere after this invisible threshold you will start to notice the runtimes of your app turning very slow.</p>
-<div class="section" id="why-are-lists-slower">
+<section id="why-are-lists-slower">
 <h4>Why are lists slower?<a class="headerlink" href="#why-are-lists-slower" title="Permalink to this headline">¶</a></h4>
 <p>Lists are slower due to their implementation. Because a list has to be heterogeneous, a list is actually an object containing references to other objects, which are the elements of the data contained in the list. This nesting can go on even deeper, since elements of lists can be other lists, or other complex data types.</p>
 <p>Iterating over such a complicated objects contains a lot of “overhead”, i.e. time the interpreter tries to figure out what is it actually facing - is this current value an integer? A float? A dictionary of tuples?</p>
@@ -1276,7 +1277,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>97.5 ms ± 126 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>97 ms ± 2.65 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -1293,7 +1294,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.26 ms ± 8.72 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.64 ms ± 35.9 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1326,9 +1327,9 @@ Numpy array size (1M elements, MB): 4.0
 <p>Each element has to weigh 4 bytes, or 32 bits. This means that the <code class="docutils literal notranslate"><span class="pre">np.arange()</span></code> function generates by default <code class="docutils literal notranslate"><span class="pre">int32</span></code> values.</p>
 </div>
 <p>Lower memory usage can help us pack larger array in the computer’s working memory (RAM), and it will also improve the performance of the underlying code.</p>
-</div>
-</div>
-<div class="section" id="indexing-and-slicing">
+</section>
+</section>
+<section id="indexing-and-slicing">
 <h3>Indexing and slicing<a class="headerlink" href="#indexing-and-slicing" title="Permalink to this headline">¶</a></h3>
 <p>Indexing <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays is very much what you’d expect it to be.</p>
 <div class="cell docutils container">
@@ -1431,7 +1432,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 </div>
-<div class="section" id="view-vs-copy">
+<section id="view-vs-copy">
 <h4>View vs. Copy<a class="headerlink" href="#view-vs-copy" title="Permalink to this headline">¶</a></h4>
 <p>In Python, slicing creates a view of an object, not a copy:</p>
 <div class="cell docutils container">
@@ -1514,9 +1515,9 @@ Numpy array size (1M elements, MB): 4.0
 <p>This behavior allows NumPy to save time and memory. It will usually go unnoticed during day-to-day use. Occasionally, however, it can result in ugly bugs which are hard to locate.</p>
 <p>Let’s look at a summary of 2D indexing:</p>
 <p><img alt="Numpy indexing" src="../../_images/numpy_indexing.png" /></p>
-</div>
-</div>
-<div class="section" id="aggregation">
+</section>
+</section>
+<section id="aggregation">
 <h3>Aggregation<a class="headerlink" href="#aggregation" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1526,7 +1527,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>501.70442995234976
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>509.7298496694146
 </pre></div>
 </div>
 </div>
@@ -1541,13 +1542,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>107 µs ± 1.79 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>96.6 µs ± 3.03 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.33 µs ± 9.52 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.3 µs ± 326 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.31 µs ± 16.7 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.94 µs ± 71.8 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1564,13 +1565,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>81.8 µs ± 1.05 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>80.8 µs ± 8.27 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.29 µs ± 17.1 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.25 µs ± 344 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.38 µs ± 18.4 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.7 µs ± 214 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1584,7 +1585,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.024719313508217433
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.003052925271863738
 </pre></div>
 </div>
 </div>
@@ -1597,10 +1598,10 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.25637707, 0.50496841, 0.2244237 , 0.17621982],
-       [0.09862273, 0.14875764, 0.24404205, 0.24789986],
-       [0.02471931, 0.18940044, 0.42484432, 0.13831108],
-       [0.14563704, 0.26247724, 0.31379339, 0.20564321]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.40263069, 0.09154093, 0.09759033, 0.40241816],
+       [0.11808639, 0.174261  , 0.00325399, 0.46067222],
+       [0.15832263, 0.39329164, 0.00305293, 0.19035987],
+       [0.01311627, 0.24174218, 0.05277976, 0.22062515]])
 </pre></div>
 </div>
 </div>
@@ -1613,7 +1614,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.99223072, 0.95189317, 0.92687834, 0.92006559])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.92135707, 0.89000916, 0.94480771, 0.99825317])
 </pre></div>
 </div>
 </div>
@@ -1628,8 +1629,8 @@ Numpy array size (1M elements, MB): 4.0
 </pre></div>
 </div>
 <p>Most of them have an object-oriented version, i.e. <code class="docutils literal notranslate"><span class="pre">arr.var()</span></code>, and a procedural version, i.e. <code class="docutils literal notranslate"><span class="pre">np.var(arr)</span></code>.</p>
-</div>
-<div class="section" id="fancy-indexing">
+</section>
+<section id="fancy-indexing">
 <h3>Fancy indexing<a class="headerlink" href="#fancy-indexing" title="Permalink to this headline">¶</a></h3>
 <p>In NumPy, indexing an array with a different array is called “fancy” indexing. Perhaps confusingly, it creates a copy, not a view.</p>
 <div class="cell docutils container">
@@ -1766,8 +1767,8 @@ np.sum result: 5
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="sorting">
+</section>
+<section id="sorting">
 <h3>Sorting<a class="headerlink" href="#sorting" title="Permalink to this headline">¶</a></h3>
 <p>Again we face a condition in which Python has its own <code class="docutils literal notranslate"><span class="pre">sort</span></code> functions, but numpy’s <code class="docutils literal notranslate"><span class="pre">np.sort()</span></code> are much better suited for arrays. We can either sort in-place, or have a new object back:</p>
 <div class="cell docutils container">
@@ -1810,8 +1811,8 @@ np.sum result: 5
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="concatenation">
+</section>
+<section id="concatenation">
 <h3>Concatenation<a class="headerlink" href="#concatenation" title="Permalink to this headline">¶</a></h3>
 <p>Concatenation (and splitting) in <code class="docutils literal notranslate"><span class="pre">numpy</span></code> works as follows:</p>
 <div class="cell docutils container">
@@ -1914,10 +1915,10 @@ np.sum result: 5
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="exercise">
+</section>
+<section id="exercise">
 <h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="a-familiarization">
+<section id="a-familiarization">
 <h4>a. Familiarization:<a class="headerlink" href="#a-familiarization" title="Permalink to this headline">¶</a></h4>
 <p>Create two random 3D arrays, at least 3x3x3 in size. The first should have random integers between 0 and 100, while the second should contain floating points numbers drawn from the normal distribution, with mean -1 and standard deviation of 2</p>
 <ol class="simple">
@@ -1925,13 +1926,13 @@ np.sum result: 5
 <li><p>Center the distribution of the first integer array around 0, with values between -1 and 1.</p></li>
 <li><p>Caclulate their mean, standard deviation along the last axis, and sum along the second axis. Remember that arrays are, like everything in Python, objects.</p></li>
 </ol>
-</div>
-<div class="section" id="b-iteration-over-an-array">
+</section>
+<section id="b-iteration-over-an-array">
 <h4>b. <em>Iteration over an array:</em><a class="headerlink" href="#b-iteration-over-an-array" title="Permalink to this headline">¶</a></h4>
 <p>Find and return the indices of the two random arrays only where <em>both elements</em> comply with -0.5 &lt;= X &lt;= 0.5. Do so in at least two distinct ways. These can include elementwise iteration, masked-arrays, and more.</p>
 <p>Time the execution of the script using the IPython <code class="docutils literal notranslate"><span class="pre">%%timeit</span></code> magic if you have this tool near at hand.</p>
-</div>
-<div class="section" id="c-broadcasting">
+</section>
+<section id="c-broadcasting">
 <h4>c. <em>Broadcasting:</em><a class="headerlink" href="#c-broadcasting" title="Permalink to this headline">¶</a></h4>
 <ol class="simple">
 <li><p>Create a vector with length 100, filled with ones, and a 2D zero-filled array with its last dimension with size of 100.</p></li>
@@ -1940,9 +1941,9 @@ np.sum result: 5
 <li><p>What happens to the non-tiled addition when the first dimension of the matrix is 100? Why?</p></li>
 <li><p>Bonus: How can one add the matrix (in its new shape) and vector without np.tile()?</p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="exercise-solutions-below">
+</section>
+</section>
+<section id="exercise-solutions-below">
 <h3>Exercise solutions below…<a class="headerlink" href="#exercise-solutions-below" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1967,79 +1968,79 @@ np.sum result: 5
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>arr1 (integers) stats:
-Mean: -0.005000000000000005,
-STD: [[0.47878596 0.63687047 0.5168404  0.52167423 0.28171617 0.44094898
-  0.57991724 0.51201953 0.56469815 0.54089186]
- [0.52719636 0.46897335 0.44170578 0.72647367 0.45536798 0.55004
-  0.53425088 0.40306823 0.59012202 0.55591366]
- [0.67674515 0.44209049 0.58140863 0.57346665 0.56989824 0.40319226
-  0.4932545  0.60340699 0.63075827 0.64387576]
- [0.67421362 0.44805803 0.49577818 0.5440919  0.54391176 0.44811159
-  0.48487524 0.55412634 0.44486402 0.44072667]
- [0.47727979 0.65986665 0.57573952 0.49114153 0.56804577 0.42247367
-  0.56656509 0.41496506 0.64021559 0.58721035]
- [0.53059966 0.55659321 0.56499558 0.534176   0.4316897  0.62470473
-  0.46410775 0.4328926  0.47615544 0.60670916]
- [0.43412441 0.5063951  0.42352804 0.40714125 0.63096434 0.5209069
-  0.61807767 0.47413078 0.4493729  0.40910145]
- [0.35991666 0.49952377 0.50400397 0.50683331 0.71143798 0.41694604
-  0.378      0.35833504 0.47201695 0.57615623]
- [0.49859402 0.41194174 0.5946562  0.57445975 0.60644868 0.51310818
-  0.48168454 0.59849478 0.60180063 0.34281774]
- [0.5062371  0.58096816 0.63158531 0.55281462 0.6578176  0.58733636
-  0.4630378  0.64919951 0.41899403 0.59927957]],
-Sum: [[-2.4   0.78 -0.86  1.6   0.2  -0.52 -0.22  1.7  -1.54  0.98]
- [ 0.14  3.2   0.84 -3.1   0.62  1.14 -1.14 -1.74 -0.76  0.88]
- [-3.32  3.66 -1.2   1.16  2.56 -2.24  0.98 -0.02  3.4   0.12]
- [-2.2  -2.16 -0.14 -0.06  2.74  2.52 -4.1   0.62 -3.54 -1.7 ]
- [ 1.58  0.8   1.42  0.58 -1.84 -0.4   1.28  1.7  -1.   -0.44]
- [ 0.94  0.84  2.1   0.2  -0.74  0.32 -1.62 -1.26  3.24 -2.22]
- [-1.5   0.14  1.56 -0.7   4.74 -2.08  0.72  1.7  -0.38  0.18]
- [ 1.7  -2.52 -2.1   1.56 -0.52 -0.24 -0.08  2.    0.1  -1.04]
- [-0.98  1.06 -1.14 -1.84 -2.86  0.68 -4.06 -0.54  0.76  2.82]
- [-0.36  0.08  2.94 -0.16 -2.44 -1.38 -1.54  2.06 -1.98 -1.72]]
+Mean: -0.0505,
+STD: [[0.46279585 0.52348448 0.32221732 0.62699282 0.68010587 0.45022661
+  0.61662306 0.4726267  0.4986221  0.4678846 ]
+ [0.38000526 0.31959975 0.42635197 0.55122046 0.40514689 0.46484836
+  0.56506283 0.67463768 0.46878567 0.47220758]
+ [0.61258795 0.55778132 0.61606493 0.67382193 0.40647263 0.61744311
+  0.68580172 0.53411984 0.32530601 0.56964901]
+ [0.50825584 0.5874317  0.67593195 0.50978034 0.58022065 0.39324801
+  0.58483844 0.67547021 0.6495814  0.60983932]
+ [0.48070365 0.58945398 0.59682158 0.61106137 0.52192337 0.58257703
+  0.57583331 0.3990188  0.44707494 0.54558592]
+ [0.44918148 0.69753853 0.63624209 0.4376117  0.50462263 0.66134409
+  0.5130653  0.56171523 0.58228515 0.59010508]
+ [0.63888653 0.73752288 0.63794984 0.50536719 0.44933729 0.53614923
+  0.52695351 0.58786393 0.61653548 0.54242419]
+ [0.5485253  0.55027266 0.5463918  0.30189402 0.44622864 0.503464
+  0.37099326 0.47707861 0.59641932 0.53795539]
+ [0.65838894 0.43222217 0.55557178 0.52432433 0.4548802  0.5213214
+  0.50144192 0.46812392 0.56034275 0.49089714]
+ [0.52279633 0.58146367 0.65311867 0.55812543 0.61966443 0.59901252
+  0.49014692 0.4893465  0.63961238 0.58202749]],
+Sum: [[-4.12  2.88 -1.6  -3.12 -0.26 -0.94 -2.82 -0.32  1.28 -3.48]
+ [ 0.24  2.32  0.54  1.96  0.3  -2.34 -0.16 -0.54  1.26  1.5 ]
+ [ 3.58  0.18 -1.42  0.18 -0.44 -0.34 -1.54  0.58 -2.96  3.7 ]
+ [-2.46 -5.48 -0.98 -1.54 -1.44 -2.72  0.46 -1.32  0.56 -2.88]
+ [-3.86 -1.88 -3.74  1.32  0.8  -0.16 -1.38  3.52 -0.82 -3.  ]
+ [ 0.4  -0.48 -0.88 -1.12  2.28 -2.9  -2.9  -0.88 -1.12  2.18]
+ [ 1.14 -0.84 -1.04  0.02  3.38 -2.54  0.96 -3.4  -0.98 -1.14]
+ [-0.28  0.44 -1.62 -0.34 -1.8  -0.16 -3.38  0.96 -0.7   4.68]
+ [ 2.52 -0.74 -0.2   1.98 -1.14  1.12  0.42 -0.7  -0.68 -0.84]
+ [-0.44 -0.62  2.7  -0.6  -3.52 -2.68 -2.4   0.82 -2.46  1.92]]
 arr2 (normal distribution) stats:
-Mean: -0.895868542026137,
-STD: [[1.96196373 2.17566443 1.35827143 1.48468241 1.50428729 2.79439187
-  2.24457329 2.22380925 2.60961581 2.40468853]
- [1.45650242 1.61251677 2.00137916 1.79511875 1.65284677 1.13134806
-  1.55833276 0.9279964  2.33578998 1.1275609 ]
- [1.36809552 1.77691216 1.83506548 2.54028592 1.80894354 1.71777526
-  2.2316401  2.039773   1.11040738 2.55133602]
- [1.69600276 1.46421638 2.02024245 1.70160942 1.9174884  1.6934933
-  1.91389042 1.96584323 1.74424606 1.68043759]
- [1.74872604 1.74724199 1.34354389 0.72855175 1.99076913 1.58773984
-  2.21140927 1.59860789 2.40575565 1.86580834]
- [1.17720387 2.11354758 1.42637527 1.67254182 1.42149135 1.71439242
-  2.36970088 1.67696166 1.62993236 1.90552044]
- [2.16748551 2.38675967 1.92940612 2.05430804 2.12192411 2.44345856
-  1.58141937 2.17700756 2.32855913 1.39479065]
- [2.16280269 1.55845851 1.95251873 1.87265503 1.93940769 2.24445641
-  2.03978764 1.7486639  1.78852483 2.5755488 ]
- [2.40661466 1.03191026 2.08556984 1.9111978  1.85182798 1.74528951
-  1.0494849  1.9169701  1.51484286 1.91684555]
- [1.67575004 1.48553559 1.89151749 2.04375647 3.12381651 2.06247611
-  1.68676628 1.67427901 1.98750746 1.36983234]],
-Sum: [[ -5.7109467  -15.9836494   -3.23288463  -4.53930518  -8.77788118
-   -9.41679529  -4.4826655   -8.81569045 -26.63271804 -18.71138387]
- [ -2.26228132  -7.58399237  -2.54011761 -14.13790468 -11.34005428
-   -7.85680778  -4.84046952   7.31797955  -3.51495452  -5.70138039]
- [-15.82363914  -6.90587104  -5.27698886 -18.05426797  -8.38342838
-   -1.4211339   -4.93237949  -7.66127692  -7.54330531  -6.23736493]
- [  0.41095773 -10.91322379  -9.8778116   -6.05075526  -8.3614229
-  -13.73033521 -10.90383684 -16.56123722  -9.40356609 -17.5000308 ]
- [-13.56264246  -5.95510276  -5.88552966 -16.7644309  -10.94694592
-   -8.21956151  -0.3273465    1.14038084 -24.69874889  -8.93204153]
- [-18.07834648 -10.57029354  -9.47758835  -2.28647362 -13.02873925
-   -9.08552301  -7.40453644  -4.69489587  -8.8584271  -15.19102702]
- [-11.68222587   0.57703967 -14.57490973   0.52951729 -10.22591406
-  -11.34887795 -20.84795943  -4.72390998 -14.68409635 -10.47003524]
- [ -5.7693059  -17.9156811    0.19025579  -6.42698711 -19.34015204
-   -3.90913212 -13.49860268  -7.69128735  -0.959289    -8.02504091]
- [ -1.72468179  -9.94740517  -1.30354374  -0.21953138 -11.23112764
-  -13.57270287 -13.12063407 -10.46540607 -13.21532407  -9.81603175]
- [-13.6087225  -20.59196683 -14.76772923   3.32038923 -14.87436853
-   -6.34295781   4.08959263  -4.10306257 -11.18015544 -15.67393732]]
+Mean: -1.0268102340582286,
+STD: [[3.01807141 1.17620047 1.75374335 1.24935772 2.23704347 2.16621505
+  2.2546964  1.51488301 2.17550754 2.16911076]
+ [1.26972209 2.16424962 2.23278315 2.31553184 2.04064218 1.36090374
+  2.08980384 0.87429467 2.16823879 1.29729615]
+ [2.07708746 1.22569247 1.91775173 2.04059365 1.76535016 1.68814741
+  0.95187552 1.38699258 1.72028505 2.05585595]
+ [2.27576928 1.97460922 1.21049335 1.61984397 1.02525984 1.24106491
+  1.90588713 1.0667016  1.74797195 1.29118901]
+ [2.01193352 2.13453283 1.76551316 1.27563486 2.3228821  1.36177097
+  1.23919978 1.74229712 2.40451307 2.20432684]
+ [2.30206366 1.8072599  1.9235327  2.24352959 1.85699257 2.72143717
+  1.4396406  1.88054917 1.53946968 1.52102872]
+ [2.80896344 2.05861    2.17331338 2.67137265 2.3390423  1.8892202
+  1.37068819 1.20197109 2.10539304 2.25882568]
+ [2.65522065 2.13631805 2.10900987 1.93524819 1.37770098 2.61837946
+  1.38475762 1.66361214 2.48463974 1.05524102]
+ [0.89356947 1.66521851 1.97318646 2.13860784 1.72251533 1.28563089
+  1.18340003 1.11701851 1.8527045  1.92826206]
+ [2.08012161 2.09271422 1.43775459 1.81615726 1.84290006 2.17491309
+  1.54456591 1.91884581 1.95784711 1.61490502]],
+Sum: [[ -2.10101426 -22.98750763 -27.05726907 -15.08149425  -3.81283836
+  -19.13363651 -18.70813897 -17.19099391   3.07241977   2.85794069]
+ [-16.84381483 -19.46895838  -8.03939255 -16.11545946  -1.46589184
+   -1.24841049  -9.04293168 -11.49254512 -19.93796489  -5.55282587]
+ [-15.47606425  -9.73106863  -7.63551679 -11.22297743  -8.94074496
+  -10.49584678 -11.00134537  -6.87253037  -9.02312601  -4.96154942]
+ [ -8.6614596  -17.85800083 -10.50530917  -5.27498457 -14.7555059
+   -5.9752927   -4.01385046  -2.14313131  -4.47766738 -16.87017124]
+ [-10.97020564  -6.46025392 -18.11523954  -0.54875136 -18.32064022
+    0.33609569  -9.58007591 -14.58446915 -13.74542894 -20.20808005]
+ [-15.18710071 -11.0065904  -14.52642803  -7.29379339 -20.95367781
+  -10.01480369   3.96095059 -12.28798838 -21.61084079  -7.10009238]
+ [ -8.97042979  -3.20629721 -13.98137287 -19.04997159  -6.684534
+  -16.15890366 -10.01470745 -16.98619939 -20.93937528 -16.41049157]
+ [ -2.10165597  -8.8538033   -0.87236606 -13.37088595  -0.37919028
+  -10.48432475 -16.81843625 -14.95103552 -14.10380101   7.26136815]
+ [-16.76562637   1.47077289  -8.90910445  -7.74529928  -6.94268089
+  -16.49735032 -13.38412392  -1.05274842  -8.48281753  -7.87774153]
+ [ -8.33193811 -17.15226744  -6.7450398  -12.28058827  -3.43143294
+   -6.05056532  -7.94093245 -10.63160394 -12.5993535   -4.91909385]]
 </pre></div>
 </div>
 </div>
@@ -2058,7 +2059,7 @@ Sum: [[ -5.7109467  -15.9836494   -3.23288463  -4.53930518  -8.77788118
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>456 µs ± 357 ns per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>470 µs ± 15.8 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -2077,7 +2078,7 @@ Sum: [[ -5.7109467  -15.9836494   -3.23288463  -4.53930518  -8.77788118
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12.7 µs ± 122 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13.2 µs ± 375 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -2113,9 +2114,9 @@ Sum: [[ -5.7109467  -15.9836494   -3.23288463  -4.53930518  -8.77788118
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

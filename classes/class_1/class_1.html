@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Class 1: More Syntax and The Python Stack &#8212; Python for Neuroscience</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
@@ -503,9 +504,9 @@
         
               <div>
                 
-  <div class="section" id="class-1-more-syntax-and-the-python-stack">
+  <section id="class-1-more-syntax-and-the-python-stack">
 <h1>Class 1: More Syntax and The Python Stack<a class="headerlink" href="#class-1-more-syntax-and-the-python-stack" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="review">
+<section id="review">
 <h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Describe the general function of the Python interpreter in a phrase or two.</p></li>
@@ -555,11 +556,11 @@ Solution<div class="summary-down docutils">
 </pre></div>
 </div>
 </div>
-</details></div>
-<div class="section" id="conditionals-and-iteration">
+</details></section>
+<section id="conditionals-and-iteration">
 <h2>Conditionals and Iteration<a class="headerlink" href="#conditionals-and-iteration" title="Permalink to this headline">¶</a></h2>
 <p>Even though you’ve learned it by yourself in the first class and while doing homework, we’ll go through these subjects (quickly) one more time, for the sake of completeness.</p>
-<div class="section" id="the-if-statement">
+<section id="the-if-statement">
 <h3>The <code class="docutils literal notranslate"><span class="pre">if</span></code> Statement<a class="headerlink" href="#the-if-statement" title="Permalink to this headline">¶</a></h3>
 <p>Minimal example:</p>
 <div class="cell docutils container">
@@ -604,12 +605,12 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="iteration">
+</section>
+<section id="iteration">
 <h3>Iteration<a class="headerlink" href="#iteration" title="Permalink to this headline">¶</a></h3>
 <p>One of Python’s strongest features.</p>
-</div>
-<div class="section" id="for-loop">
+</section>
+<section id="for-loop">
 <h3><code class="docutils literal notranslate"><span class="pre">for</span></code> loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h3>
 <p>We’ll compare a naive script adding up numbers in an array using MATLAB and Python:</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Sum all items in array</span><span class="w"></span>
@@ -746,8 +747,8 @@ c 3
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="while-loop">
+</section>
+<section id="while-loop">
 <h3><code class="docutils literal notranslate"><span class="pre">while</span></code> Loop<a class="headerlink" href="#while-loop" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -792,8 +793,8 @@ True
 <p class="admonition-title">Note</p>
 <p>Generally speaking, the usage of <code class="docutils literal notranslate"><span class="pre">while</span></code> loops in Python is discouraged. Whenver you’re tempted to use one, consider the possibility of replacing it with a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. If at all possible, this solution is probably preferable.</p>
 </div>
-</div>
-<div class="section" id="break-and-continue">
+</section>
+<section id="break-and-continue">
 <h3><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code><a class="headerlink" href="#break-and-continue" title="Permalink to this headline">¶</a></h3>
 <p>Stopping a loop is done with <code class="docutils literal notranslate"><span class="pre">break</span></code>, and in order to continue execution from the start of the loop we use <code class="docutils literal notranslate"><span class="pre">continue</span></code>:</p>
 <div class="cell docutils container">
@@ -887,9 +888,9 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 </details></div>
-</div>
-</div>
-<div class="section" id="formatting">
+</section>
+</section>
+<section id="formatting">
 <h2>Formatting<a class="headerlink" href="#formatting" title="Permalink to this headline">¶</a></h2>
 <p>We can print together variables and text in several different manners:</p>
 <div class="cell docutils container">
@@ -968,8 +969,8 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <p>Throughout the course you’ll see me using mostly the f-string option, which is the most readable assuming you only work on Python 3.6+.</p>
-</div>
-<div class="section" id="comprehensions">
+</section>
+<section id="comprehensions">
 <h2>Comprehensions<a class="headerlink" href="#comprehensions" title="Permalink to this headline">¶</a></h2>
 <p>Comprehensions are a set of fast and delightfully readable methods for creating different types of iterables.</p>
 <p>Assume we wish to create a list with the squared values of the numbers in the range [0, 10). Instead of the old:</p>
@@ -1033,7 +1034,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>33.9 µs ± 16.6 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32.3 µs ± 393 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1049,7 +1050,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>39.6 µs ± 502 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>37.7 µs ± 483 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1162,8 +1163,8 @@ c 3 False
 </div>
 </div>
 <p>Once you get used to comprehensions, they quickly become the most “natural” way to iterate. Their brevity on the one hand, and readability on the other, are their most important features. That’s why comprehension are very encouraged when writing true “Pythonic” code.</p>
-</div>
-<div class="section" id="function-default-arguments-and-types">
+</section>
+<section id="function-default-arguments-and-types">
 <h2>Function Default Arguments and Types<a class="headerlink" href="#function-default-arguments-and-types" title="Permalink to this headline">¶</a></h2>
 <p>One thing we didn’t show in our introduction to functions was the default argument feature of function definitions, as well as the optional typing syntax. We’ll start with showing what are default arguments.</p>
 <p>Say you have a function which calculates the <code class="docutils literal notranslate"><span class="pre">n</span></code>th-power of any number its given. It obviously has to be given two inputs - the number and the power by which it will be multiplied. For example:</p>
@@ -1201,7 +1202,7 @@ c 3 False
 </div>
 </div>
 </div>
-<div class="section" id="type-hinting">
+<section id="type-hinting">
 <h3>Type hinting<a class="headerlink" href="#type-hinting" title="Permalink to this headline">¶</a></h3>
 <p>Another interesting feature of Python (3.6+) is its optional typing capabilities. These allow us coders to ‘hint’ at the wanted types of certain variables. We say ‘hint’ since these annotations have no effect during runtime, i.e. a variable can be marked as a string but later receive an integer value without the Python interpreter caring. For functions, Python added a special “arrow” -&gt; sign that marks the output type of it. Let’s see how it works:</p>
 <div class="cell docutils container">
@@ -1258,9 +1259,9 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 </details></div>
-</div>
-</div>
-<div class="section" id="file-input-output">
+</section>
+</section>
+<section id="file-input-output">
 <h2>File Input/Output<a class="headerlink" href="#file-input-output" title="Permalink to this headline">¶</a></h2>
 <p>Yet another error-prone area in applications is their I/O (input-output) module. Interfacing with objects outside the scope of your own project should always be handled carefully. You never know what’s really out there.</p>
 <p>Assume we wish to write some data to a file - a list filled with counts of some sort, for example.</p>
@@ -1307,12 +1308,12 @@ Solution<div class="summary-down docutils">
 </div>
 <p>The unique thing here is that once we’ve opened the file, the <code class="docutils literal notranslate"><span class="pre">with</span></code> block guarantees that the file will be closed, regardless of what code is executed.</p>
 <p>Even if an error occurs while the file is open - the context manager will ensure proper handling of the file and prevent our data from disappearing into the void of the file system.</p>
-</div>
-<div class="section" id="the-python-stack">
+</section>
+<section id="the-python-stack">
 <h2>The Python Stack<a class="headerlink" href="#the-python-stack" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="how-to-run-python">
+<section id="how-to-run-python">
 <h3>How to Run Python?<a class="headerlink" href="#how-to-run-python" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="how-does-matlab-do-it">
+<section id="how-does-matlab-do-it">
 <h4>How does MATLAB do it?<a class="headerlink" href="#how-does-matlab-do-it" title="Permalink to this headline">¶</a></h4>
 <p>MATLAB has its excellent application GUI which essentially everyone uses all the time.</p>
 <p>But all interpreted programming languages, including Python and MATLAB, can be run from the command line.</p>
@@ -1329,37 +1330,37 @@ Solution<div class="summary-down docutils">
 <p>Python is very similar. Just like MATLAB, the quickest option to run Python is from the command line, by simply writing <code class="docutils literal notranslate"><span class="pre">python</span></code>:</p>
 <p><img alt="Python CL" src="../../_images/python_cl.png" /></p>
 <p>Running Python scripts, like <code class="docutils literal notranslate"><span class="pre">myfile.py</span></code>, is as easy as <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">myfile.py</span></code>.</p>
-</div>
-</div>
-<div class="section" id="integrated-development-environment-ide">
+</section>
+</section>
+<section id="integrated-development-environment-ide">
 <h3>Integrated Development Environment (IDE)<a class="headerlink" href="#integrated-development-environment-ide" title="Permalink to this headline">¶</a></h3>
 <p>More often than not, we wish to both write a script, experiment with it a little, and then run it, just as some of us are used to do from the MATLAB environment. Python, being non-propietary, has several such solutions. Generally speaking, software of this type are referred to as <a class="reference external" href="https://en.wikipedia.org/wiki/Integrated_development_environment">Integrated Development Enviornments (IDEs)</a>, and are a basic tool every programmer uses, with choice varying greatly depending on the languages used as well personal preference.</p>
 <p>Some popular options for Python are:</p>
-<div class="section" id="spyder">
+<section id="spyder">
 <h4>Spyder<a class="headerlink" href="#spyder" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://www.spyder-ide.org/">Spyder</a> is an open-source, science-oriented IDE, that was designed with MATLAB’s GUI in mind. It contains many similar functions and might look very similar in a quick glance:</p>
 <p><img alt="Spyder IDE" src="../../_images/spyder.png" /></p>
 <p>Unfortunately, Spyder’s main financial support was cut off in November 2017. It’s still in active development, but on a much slower pace, and its future is unclear at the moment.</p>
-</div>
-<div class="section" id="pycharm">
+</section>
+<section id="pycharm">
 <h4>PyCharm<a class="headerlink" href="#pycharm" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> is a full-blown IDE which contains many advanced features that any modern IDE has, like refactoring capabilities, testing suites and more. It has a free community edition, and a paid proffessional edition, which is actually free for poor students like us:</p>
 <p><img alt="PyCharm IDE" src="../../_images/pycharm.jpg" /></p>
-</div>
-<div class="section" id="visual-studio-code">
+</section>
+<section id="visual-studio-code">
 <h4>Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://code.visualstudio.com/">VSCode</a> is a free, open-source editor for nearly all existing programming languages. It’s relatively lightweight, and relies mostly on its community-driven extensions marketplace. There’s an extension for just about anything you might want to do with a code editor, and both the editor itself and its popular extensions are well maintained and in active development.</p>
 <p><img alt="VS Code" src="../../_images/vs_code.gif" /></p>
-</div>
-</div>
-<div class="section" id="jupyter-notebook">
+</section>
+</section>
+<section id="jupyter-notebook">
 <h3>Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Permalink to this headline">¶</a></h3>
 <p>While not technically an IDE, <a class="reference external" href="https://jupyter.org/">Jupyter</a> is designed with data exploration in mind. It’s less suited for writing long, complex application, but great when it comes for a quick “plot-n-go” on some data you recently acquired.</p>
-</div>
-</div>
-<div class="section" id="version-control">
+</section>
+</section>
+<section id="version-control">
 <h2>Version Control<a class="headerlink" href="#version-control" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="introduction">
+<section id="introduction">
 <h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
 <p>Version control is the active management of the history of your source code. It is an essential part of every developers’ work cycle, for both small and large projects.</p>
 <p>With version control, in any point in time during the work on your code you can decide to “commit” the change. Committing your code means that the system will remember the current state of your work (all files in a folder), and will allow you to return to this exact state of your codebase whenever you wish.</p>
@@ -1367,15 +1368,15 @@ Solution<div class="summary-down docutils">
 <p>Using version control is orthogonal to the traditional save operation. Saving records the current state of your codebase, but usually doesn’t allow you to “go back in time” to previous versions.</p>
 <p>This property is useful in many occasions. For example, if you have a working version of some function, but you wish to make it better - add a feature, or change its internal structure (refactoring). Version control allows you to record this point in time, when you have a good, functioning function, and change the working copy of the function however you’d like. If you fail to refactor the function you can simply jump back to the latest working version.</p>
 <p>Another important version control use case is collaborative work. Version control systems (VCS) can help you communicate changes in code base between developers, without having to somehow transfer updated versions of files from one person to the other.</p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Linus_Torvalds"><img alt="Linus Trovalds" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg/220px-LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg" /></a></p>
-</div>
+</aside>
 <p>There are many version control applications, but the most popular one is Git, developed by <a class="reference external" href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvald</a>
 (the Linux guy) in the early 2000’s. In this course we’ll be using Git with GitHub, an online backup site for your code.</p>
 <p>There are numerous great Git and GitHub tutorials (<a class="reference external" href="https://github.com/pluralsight/git-internals-pdf">here’s one</a>), but for our course we’ll be using only the most basic features of Git and GitHub, so going through all features and intricacies of the software is unnecessary. <a class="reference internal" href="../../tutorials/python_setup.html#general-setup"><span class="std std-ref">General Setup</span></a> and <a class="reference internal" href="../../tutorials/create_git_repo.html#create-git-repo"><span class="std std-ref">Create a Git Repository</span></a> contain instructions on how to setup Git and GitHub, which should be enough for homework submission.</p>
-</div>
-<div class="section" id="git-fundamentals-using-vscode-and-github">
+</section>
+<section id="git-fundamentals-using-vscode-and-github">
 <h3>Git Fundamentals (Using VSCode and GitHub)<a class="headerlink" href="#git-fundamentals-using-vscode-and-github" title="Permalink to this headline">¶</a></h3>
 <p>For the purposes of this walkthrough we’ll assume we have some code inside a <em>my_project</em> directory, looking something like:</p>
 <ul class="simple">
@@ -1398,11 +1399,11 @@ Solution<div class="summary-down docutils">
 <li><p><strong>Push</strong>: To make an online backup of a repository, we need to first set a “remote” (i.e. a remote location containing a copy of the repository). If you don’t already have a <a class="reference external" href="https://www.github.com">GitHub</a> account, create one, and then create a new repository: <img alt="GitHub New Repo" src="../../_images/github_new_repo.png" /> Give the repo a descriptive name create it. Now that you have a remote location to use (should be: https://github.com/&lt;your-user-name&gt;/&lt;repo-name&gt;), head back to VSCode and in the “Source Control” options select “Add remote”: <img alt="VSC Add Remote" src="../../_images/vsc_add_remote.png" /> and finally we are ready to “push” our changes: <img alt="VSC Git Push" src="../../_images/vsc_git_push.png" /></p></li>
 </ol>
 <p>Congratulations! You’ve published your first code repository! Whether you find it trivial or confusing, you’ve made a huge step towards creating software that will not only work better for you, but also for others.</p>
-</div>
-</div>
-<div class="section" id="the-module-system">
+</section>
+</section>
+<section id="the-module-system">
 <h2>The Module System<a class="headerlink" href="#the-module-system" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="namespaces">
+<section id="namespaces">
 <h3>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">¶</a></h3>
 <p>One of the largest differences between Python and MATLAB is the concept of namespaces.</p>
 <p>Namespaces provide a system to avoid ambiguity. We have many Hagai’s, but much less Hagai Har-Gil’s. In computers, we can have many files with the name <code class="docutils literal notranslate"><span class="pre">test1.py</span></code> saved in <em>different folders</em> of our hard drive. In contrast, we can only have one <code class="docutils literal notranslate"><span class="pre">test1.py</span></code> per folder, since the file system prevents these collisions.</p>
@@ -1474,8 +1475,8 @@ But outside of it, a=1
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="the-default-python-namespace">
+</section>
+<section id="the-default-python-namespace">
 <h3>The Default Python Namespace<a class="headerlink" href="#the-default-python-namespace" title="Permalink to this headline">¶</a></h3>
 <p>Python comes with a number of built-in functions and reserved keywords:</p>
 <p><img alt="Python Built-in Functions" src="../../_images/python_builtin.png" /></p>
@@ -1519,7 +1520,7 @@ But outside of it, a=1
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b&#39;&lt;!doctype html&gt;&lt;html itemscope=&quot;&quot; itemtype=&quot;http://schema.org/WebPage&quot; lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta content=&quot;Search the world\&#39;s information, including webpages, images, videos and more. Google has many special features to help you find exactly what you\&#39;re looking for.&quot; name=&quot;description&quot;&gt;&lt;meta content=&quot;noodp&quot; name=&quot;robots&quot;&gt;&lt;meta content=&quot;text/html; charset=UTF-8&quot; http-equiv=&quot;Content-Type&quot;&gt;&lt;meta content=&quot;/images/branding/googleg/1x/googleg_standard_color_128dp.png&quot; itemprop=&quot;image&quot;&gt;&lt;title&gt;Google&lt;/title&gt;&lt;script nonce=&quot;CRkIV2xCBfB5cH3Un+Jy7A==&quot;&gt;(function(){window.google={kEI:\&#39;kI5QYIHJKvOu5NoPi-iMuAc\&#39;,kEXPI:\&#39;0,1302433,56976,954,755,4350,206,2415,2389,2316,383,246,5,1354,4936,314,2342,4044,1116130,1232,1196491,168,392,328984,51223,16115,6056,13342,9286,9188,8384,4858,1362,284,9006,3026,4742,12841,4020,978,13228,2054,920,873,4192,6430,1142,6290,7095,4517,2778,919,2277,8,2796,1595,1277,2212,530,149,1103,840,517,1466,58,4256,108,1339,1,3,2063,606,2023,1777,520,4269,328,1284,8789,3227,1030,1815,7,4774,7580,5096,7877,4928,108,1483,1924,908,2,941,5011,7468,1,2844,432,3,1590,1,820,1,4623,149,5990,5333,2652,4,499,1029,2304,1236,1145,4082,576,74,1717,266,2626,460,1555,4067,5634,1426,374,3824,1297,1753,2658,4243,519,911,564,1120,30,3854,4275,3285,2214,2305,638,37,1457,599,2,1488,3497,3771,5435,559,28,11,731,665,2145,376,3291,2545,479,512,872,1090,1141,20,47,99,2972,6,908,3,163,3378,1,1039,2,3133,1175,668,60,478,444,2295,580,571,894,3371,1,1186,627,38,245,38,934,3374,1164,6,770,618,1260,239,955,2,1056,2016,1226,400,32,2857,425,242,45,77,121,18,1555,2,1394,756,659,110,8,1,26,364,882,1345,370,2,2410,627,1497,1071,2713,351,543,177,450,4,32,4,723,677,4,106,391,2,2,332,2,476,2,59,129,1278,101,588,330,552,242,2,76,174,268,32,310,88,166,93,14,4,397,336,2,254,307,16,975,472,94,30,611,1507,127,56,572,498,5677903,3870,35,203,5996592,509,2800707,549,333,444,1,2,80,1,1796,1,9,2,2551,1,748,141,795,563,1,4265,1,1,2,1331,3299,843,1,2608,172,13,72,174,71,93,10,19,46,5,39,64,33,41,4,6,6,16,2,4,1,1,2,1,1,9,30,10,28,8,8,23956663,150,2781200,1228923,267,26776,522,83,2,191\&#39;,kBL:\&#39;9YS-\&#39;};google.sn=\&#39;webhp\&#39;;google.kHL=\&#39;en\&#39;;})();(function(){\nvar f=[];google.getEI=function(a){for(var b;a&amp;&amp;(!a.getAttribute||!(b=a.getAttribute(&quot;eid&quot;)));)a=a.parentNode;return b||google.kEI};google.getLEI=function(a){for(var b=null;a&amp;&amp;(!a.getAttribute||!(b=a.getAttribute(&quot;leid&quot;)));)a=a.parentNode;return b};google.ml=function(){return null};google.log=function(a,b,c,d,g){if(c=google.logUrl(a,b,c,d,g)){a=new Image;var e=f.length;f[e]=a;a.onerror=a.onload=a.onabort=function(){delete f[e]};a.src=c}};google.logUrl=function(a,b,c,d,g){var e=&quot;&quot;;c||-1!=b.search(&quot;&amp;ei=&quot;)||(e=&quot;&amp;ei=&quot;+google.getEI(d),-1==b.search(&quot;&amp;lei=&quot;)&amp;&amp;(d=google.getLEI(d))&amp;&amp;(e+=&quot;&amp;lei=&quot;+d));d=&quot;&quot;;!c&amp;&amp;window._cshid&amp;&amp;-1==b.search(&quot;&amp;cshid=&quot;)&amp;&amp;&quot;slh&quot;!=a&amp;&amp;(d=&quot;&amp;cshid=&quot;+window._cshid);c=c||&quot;/&quot;+(g||&quot;gen_204&quot;)+&quot;?atyp=i&amp;ct=&quot;+a+&quot;&amp;cad=&quot;+b+e+&quot;&amp;zx=&quot;+Date.now()+d;/^http:/i.test(c)&amp;&amp;&quot;https:&quot;==window.location.protocol&amp;&amp;(google.ml(Error(&quot;a&quot;),!1,{src:c,glmm:1}),c=&quot;&quot;);return c};}).call(this);(function(){google.y={};google.x=function(a,b){if(a)var c=a.id;else{do c=Math.random();while(google.y[c])}google.y[c]=[a,b];return!1};google.lm=[];google.plm=function(a){google.lm.push.apply(google.lm,a)};google.lq=[];google.load=function(a,b,c){google.lq.push([[a],b,c])};google.loadAll=function(a,b){google.lq.push([a,b])};google.bx=!1;google.lx=function(){};}).call(this);google.f={};(function(){\ndocument.documentElement.addEventListener(&quot;submit&quot;,function(b){var a;if(a=b.target){var c=a.getAttribute(&quot;data-submitfalse&quot;);a=&quot;1&quot;==c||&quot;q&quot;==c&amp;&amp;!a.elements.q.value?!0:!1}else a=!1;a&amp;&amp;(b.preventDefault(),b.stopPropagation())},!0);document.documentElement.addEventListener(&quot;click&quot;,function(b){var a;a:{for(a=b.target;a&amp;&amp;a!=document.documentElement;a=a.parentElement)if(&quot;A&quot;==a.tagName){a=&quot;1&quot;==a.getAttribute(&quot;data-nohref&quot;);break a}a=!1}a&amp;&amp;b.preventDefault()},!0);}).call(this);\nvar a=window.location,b=a.href.indexOf(&quot;#&quot;);if(0&lt;=b){var c=a.href.substring(b+1);/(^|&amp;)q=/.test(c)&amp;&amp;-1==c.indexOf(&quot;#&quot;)&amp;&amp;a.replace(&quot;/search?&quot;+c.replace(/(^|&amp;)fp=[^&amp;]*/g,&quot;&quot;)+&quot;&amp;cad=h&quot;)};&lt;/script&gt;&lt;style&gt;#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}\n&lt;/style&gt;&lt;style&gt;body,td,a,p,.h{font-family:arial,sans-serif}body{margin:0;overflow-y:scroll}#gog{padding:3px 8px 0}td{line-height:.8em}.gac_m td{line-height:17px}form{margin-bottom:20px}.h{color:#1558d6}em{font-weight:bold;font-style:normal}.lst{height:25px;width:496px}.gsfi,.lst{font:18px arial,sans-serif}.gsfs{font:17px arial,sans-serif}.ds{display:inline-box;display:inline-block;margin:3px 0 4px;margin-left:4px}input{font-family:inherit}body{background:#fff;color:#000}a{color:#4b11a8;text-decoration:none}a:hover,a:active{text-decoration:underline}.fl a{color:#1558d6}a:visited{color:#4b11a8}.sblc{padding-top:5px}.sblc a{display:block;margin:2px 0;margin-left:13px;font-size:11px}.lsbb{background:#f8f9fa;border:solid 1px;border-color:#dadce0 #70757a #70757a #dadce0;height:30px}.lsbb{display:block}#WqQANb a{display:inline-block;margin:0 12px}.lsb{background:url(/images/nav_logo229.png) 0 -261px repeat-x;border:none;color:#000;cursor:pointer;height:30px;margin:0;outline:0;font:15px arial,sans-serif;vertical-align:top}.lsb:active{background:#dadce0}.lst:focus{outline:none}&lt;/style&gt;&lt;script nonce=&quot;CRkIV2xCBfB5cH3Un+Jy7A==&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body bgcolor=&quot;#fff&quot;&gt;&lt;script nonce=&quot;CRkIV2xCBfB5cH3Un+Jy7A==&quot;&gt;(function(){var src=\&#39;/images/nav_logo229.png\&#39;;var iesg=false;document.body.onload = function(){window.n &amp;&amp; window.n();if (document.images){new Image().src=src;}\nif (!iesg){document.f&amp;&amp;document.f.q.focus();document.gbqf&amp;&amp;document.gbqf.q.focus();}\n}\n})();&lt;/script&gt;&lt;div id=&quot;mngb&quot;&gt;&lt;div id=gbar&gt;&lt;nobr&gt;&lt;b class=gb1&gt;Search&lt;/b&gt; &lt;a class=gb1 href=&quot;https://www.google.com/imghp?hl=en&amp;tab=wi&quot;&gt;Images&lt;/a&gt; &lt;a class=gb1 href=&quot;https://maps.google.com/maps?hl=en&amp;tab=wl&quot;&gt;Maps&lt;/a&gt; &lt;a class=gb1 href=&quot;https://play.google.com/?hl=en&amp;tab=w8&quot;&gt;Play&lt;/a&gt; &lt;a class=gb1 href=&quot;https://www.youtube.com/?gl=US&amp;tab=w1&quot;&gt;YouTube&lt;/a&gt; &lt;a class=gb1 href=&quot;https://news.google.com/?tab=wn&quot;&gt;News&lt;/a&gt; &lt;a class=gb1 href=&quot;https://mail.google.com/mail/?tab=wm&quot;&gt;Gmail&lt;/a&gt; &lt;a class=gb1 href=&quot;https://drive.google.com/?tab=wo&quot;&gt;Drive&lt;/a&gt; &lt;a class=gb1 style=&quot;text-decoration:none&quot; href=&quot;https://www.google.com/intl/en/about/products?tab=wh&quot;&gt;&lt;u&gt;More&lt;/u&gt; &amp;raquo;&lt;/a&gt;&lt;/nobr&gt;&lt;/div&gt;&lt;div id=guser width=100%&gt;&lt;nobr&gt;&lt;span id=gbn class=gbi&gt;&lt;/span&gt;&lt;span id=gbf class=gbf&gt;&lt;/span&gt;&lt;span id=gbe&gt;&lt;/span&gt;&lt;a href=&quot;http://www.google.com/history/optout?hl=en&quot; class=gb4&gt;Web History&lt;/a&gt; | &lt;a  href=&quot;/preferences?hl=en&quot; class=gb4&gt;Settings&lt;/a&gt; | &lt;a target=_top id=gb_70 href=&quot;https://accounts.google.com/ServiceLogin?hl=en&amp;passive=true&amp;continue=https://www.google.com/&amp;ec=GAZAAQ&quot; class=gb4&gt;Sign in&lt;/a&gt;&lt;/nobr&gt;&lt;/div&gt;&lt;div class=gbh style=left:0&gt;&lt;/div&gt;&lt;div class=gbh style=right:0&gt;&lt;/div&gt;&lt;/div&gt;&lt;center&gt;&lt;br clear=&quot;all&quot; id=&quot;lgpd&quot;&gt;&lt;div id=&quot;lga&quot;&gt;&lt;img alt=&quot;Google&quot; height=&quot;92&quot; src=&quot;/images/branding/googlelogo/1x/googlelogo_white_background_color_272x92dp.png&quot; style=&quot;padding:28px 0 14px&quot; width=&quot;272&quot; id=&quot;hplogo&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;form action=&quot;/search&quot; name=&quot;f&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr valign=&quot;top&quot;&gt;&lt;td width=&quot;25%&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td align=&quot;center&quot; nowrap=&quot;&quot;&gt;&lt;input name=&quot;ie&quot; value=&quot;ISO-8859-1&quot; type=&quot;hidden&quot;&gt;&lt;input value=&quot;en&quot; name=&quot;hl&quot; type=&quot;hidden&quot;&gt;&lt;input name=&quot;source&quot; type=&quot;hidden&quot; value=&quot;hp&quot;&gt;&lt;input name=&quot;biw&quot; type=&quot;hidden&quot;&gt;&lt;input name=&quot;bih&quot; type=&quot;hidden&quot;&gt;&lt;div class=&quot;ds&quot; style=&quot;height:32px;margin:4px 0&quot;&gt;&lt;input class=&quot;lst&quot; style=&quot;margin:0;padding:5px 8px 0 6px;vertical-align:top;color:#000&quot; autocomplete=&quot;off&quot; value=&quot;&quot; title=&quot;Google Search&quot; maxlength=&quot;2048&quot; name=&quot;q&quot; size=&quot;57&quot;&gt;&lt;/div&gt;&lt;br style=&quot;line-height:0&quot;&gt;&lt;span class=&quot;ds&quot;&gt;&lt;span class=&quot;lsbb&quot;&gt;&lt;input class=&quot;lsb&quot; value=&quot;Google Search&quot; name=&quot;btnG&quot; type=&quot;submit&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;ds&quot;&gt;&lt;span class=&quot;lsbb&quot;&gt;&lt;input class=&quot;lsb&quot; id=&quot;tsuid1&quot; value=&quot;I\&#39;m Feeling Lucky&quot; name=&quot;btnI&quot; type=&quot;submit&quot;&gt;&lt;script nonce=&quot;CRkIV2xCBfB5cH3Un+Jy7A==&quot;&gt;(function(){var id=\&#39;tsuid1\&#39;;document.getElementById(id).onclick = function(){if (this.form.q.value){this.checked = 1;if (this.form.iflsig)this.form.iflsig.disabled = false;}\nelse top.location=\&#39;/doodles/\&#39;;};})();&lt;/script&gt;&lt;input value=&quot;AINFCbYAAAAAYFCcoEqKRwFf5obTxaWkn-SOSatxKgfR&quot; name=&quot;iflsig&quot; type=&quot;hidden&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;fl sblc&quot; align=&quot;left&quot; nowrap=&quot;&quot; width=&quot;25%&quot;&gt;&lt;a href=&quot;/advanced_search?hl=en&amp;amp;authuser=0&quot;&gt;Advanced search&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;input id=&quot;gbv&quot; name=&quot;gbv&quot; type=&quot;hidden&quot; value=&quot;1&quot;&gt;&lt;script nonce=&quot;CRkIV2xCBfB5cH3Un+Jy7A==&quot;&gt;(function(){var a,b=&quot;1&quot;;if(document&amp;&amp;document.getElementById)if(&quot;undefined&quot;!=typeof XMLHttpRequest)b=&quot;2&quot;;else if(&quot;undefined&quot;!=typeof ActiveXObject){var c,d,e=[&quot;MSXML2.XMLHTTP.6.0&quot;,&quot;MSXML2.XMLHTTP.3.0&quot;,&quot;MSXML2.XMLHTTP&quot;,&quot;Microsoft.XMLHTTP&quot;];for(c=0;d=e[c++];)try{new ActiveXObject(d),b=&quot;2&quot;}catch(h){}}a=b;if(&quot;2&quot;==a&amp;&amp;-1==location.search.indexOf(&quot;&amp;gbv=2&quot;)){var f=google.gbvu,g=document.getElementById(&quot;gbv&quot;);g&amp;&amp;(g.value=a);f&amp;&amp;window.setTimeout(function(){location.href=f},0)};}).call(this);&lt;/script&gt;&lt;/form&gt;&lt;div id=&quot;gac_scont&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size:83%;min-height:3.5em&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;span id=&quot;footer&quot;&gt;&lt;div style=&quot;font-size:10pt&quot;&gt;&lt;div style=&quot;margin:19px auto;text-align:center&quot; id=&quot;WqQANb&quot;&gt;&lt;a href=&quot;/intl/en/ads/&quot;&gt;Advertising\xa0Programs&lt;/a&gt;&lt;a href=&quot;/services/&quot;&gt;Business Solutions&lt;/a&gt;&lt;a href=&quot;/intl/en/about.html&quot;&gt;About Google&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot;font-size:8pt;color:#70757a&quot;&gt;&amp;copy; 2021 - &lt;a href=&quot;/intl/en/policies/privacy/&quot;&gt;Privacy&lt;/a&gt; - &lt;a href=&quot;/intl/en/policies/terms/&quot;&gt;Terms&lt;/a&gt;&lt;/p&gt;&lt;/span&gt;&lt;/center&gt;&lt;script nonce=&quot;CRkIV2xCBfB5cH3Un+Jy7A==&quot;&gt;(function(){window.google.cdo={height:0,width:0};(function(){var a=window.innerWidth,b=window.innerHeight;if(!a||!b){var c=window.document,d=&quot;CSS1Compat&quot;==c.compatMode?c.documentElement:c.body;a=d.clientWidth;b=d.clientHeight}a&amp;&amp;b&amp;&amp;(a!=google.cdo.width||b!=google.cdo.height)&amp;&amp;google.log(&quot;&quot;,&quot;&quot;,&quot;/client_204?&amp;atyp=i&amp;biw=&quot;+a+&quot;&amp;bih=&quot;+b+&quot;&amp;ei=&quot;+google.kEI);}).call(this);})();(function(){var u=\&#39;/xjs/_/js/k\\x3dxjs.hp.en_US.IXvNQoO4I94.O/m\\x3dsb_he,d/am\\x3dAHiCOA/d\\x3d1/rs\\x3dACT90oGFkgIzgAagb4hcLz_MrdCf8s2VyA\&#39;;\nvar d=this||self,e=/^[\\w+/_-]+[=]{0,2}$/,f=null,g=function(a){return(a=a.querySelector&amp;&amp;a.querySelector(&quot;script[nonce]&quot;))&amp;&amp;(a=a.nonce||a.getAttribute(&quot;nonce&quot;))&amp;&amp;e.test(a)?a:&quot;&quot;},h=function(a){return a};var l;var n=function(a,b){this.g=b===m?a:&quot;&quot;};n.prototype.toString=function(){return this.g+&quot;&quot;};var m={};function p(){var a=u;google.lx=function(){q(a);google.lx=function(){}};google.bx||google.lx()}\nfunction q(a){var b=document;var c=&quot;SCRIPT&quot;;&quot;application/xhtml+xml&quot;===b.contentType&amp;&amp;(c=c.toLowerCase());c=b.createElement(c);if(void 0===l){b=null;var k=d.trustedTypes;if(k&amp;&amp;k.createPolicy){try{b=k.createPolicy(&quot;goog#html&quot;,{createHTML:h,createScript:h,createScriptURL:h})}catch(r){d.console&amp;&amp;d.console.error(r.message)}l=b}else l=b}a=(b=l)?b.createScriptURL(a):a;a=new n(a,m);c.src=a instanceof n&amp;&amp;a.constructor===n?a.g:&quot;type_error:TrustedResourceUrl&quot;;(a=c.ownerDocument&amp;&amp;c.ownerDocument.defaultView)&amp;&amp;\na!=d?a=g(a.document):(null===f&amp;&amp;(f=g(d.document)),a=f);a&amp;&amp;c.setAttribute(&quot;nonce&quot;,a);google.timers&amp;&amp;google.timers.load&amp;&amp;google.tick&amp;&amp;google.tick(&quot;load&quot;,&quot;xjsls&quot;);document.body.appendChild(c)};setTimeout(function(){p()},0);})();(function(){window.google.xjsu=\&#39;/xjs/_/js/k\\x3dxjs.hp.en_US.IXvNQoO4I94.O/m\\x3dsb_he,d/am\\x3dAHiCOA/d\\x3d1/rs\\x3dACT90oGFkgIzgAagb4hcLz_MrdCf8s2VyA\&#39;;})();function _DumpException(e){throw e;}\nfunction _F_installCss(c){}\n(function(){google.jl={blt:\&#39;none\&#39;,dw:false,em:[],emw:false,lls:\&#39;default\&#39;,pdt:0,snet:true,uwp:true};})();(function(){var pmc=\&#39;{\\x22d\\x22:{},\\x22sb_he\\x22:{\\x22agen\\x22:false,\\x22cgen\\x22:false,\\x22client\\x22:\\x22heirloom-hp\\x22,\\x22dh\\x22:true,\\x22dhqt\\x22:true,\\x22ds\\x22:\\x22\\x22,\\x22ffql\\x22:\\x22en\\x22,\\x22fl\\x22:true,\\x22host\\x22:\\x22google.com\\x22,\\x22isbh\\x22:28,\\x22jsonp\\x22:true,\\x22msgs\\x22:{\\x22cibl\\x22:\\x22Clear Search\\x22,\\x22dym\\x22:\\x22Did you mean:\\x22,\\x22lcky\\x22:\\x22I\\\\u0026#39;m Feeling Lucky\\x22,\\x22lml\\x22:\\x22Learn more\\x22,\\x22oskt\\x22:\\x22Input tools\\x22,\\x22psrc\\x22:\\x22This search was removed from your \\\\u003Ca href\\x3d\\\\\\x22/history\\\\\\x22\\\\u003EWeb History\\\\u003C/a\\\\u003E\\x22,\\x22psrl\\x22:\\x22Remove\\x22,\\x22sbit\\x22:\\x22Search by image\\x22,\\x22srch\\x22:\\x22Google Search\\x22},\\x22nrft\\x22:false,\\x22ovr\\x22:{},\\x22pq\\x22:\\x22\\x22,\\x22refpd\\x22:true,\\x22rfs\\x22:[],\\x22sbas\\x22:\\x220 3px 8px 0 rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.08)\\x22,\\x22sbpl\\x22:16,\\x22sbpr\\x22:16,\\x22scd\\x22:10,\\x22stok\\x22:\\x22Mn3EPGFvlOE1bmZ_BzhMYniEMQI\\x22,\\x22uhde\\x22:false}}\&#39;;google.pmc=JSON.parse(pmc);})();&lt;/script&gt;        &lt;/body&gt;&lt;/html&gt;&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b&#39;&lt;!doctype html&gt;&lt;html itemscope=&quot;&quot; itemtype=&quot;http://schema.org/WebPage&quot; lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta content=&quot;Search the world\&#39;s information, including webpages, images, videos and more. Google has many special features to help you find exactly what you\&#39;re looking for.&quot; name=&quot;description&quot;&gt;&lt;meta content=&quot;noodp&quot; name=&quot;robots&quot;&gt;&lt;meta content=&quot;text/html; charset=UTF-8&quot; http-equiv=&quot;Content-Type&quot;&gt;&lt;meta content=&quot;/images/branding/googleg/1x/googleg_standard_color_128dp.png&quot; itemprop=&quot;image&quot;&gt;&lt;title&gt;Google&lt;/title&gt;&lt;script nonce=&quot;9sEKRHFet9WV6fsN6g1ONA==&quot;&gt;(function(){window.google={kEI:\&#39;1PBpYMHjItLGsQXF24qQCg\&#39;,kEXPI:\&#39;0,1302536,56873,954,5104,207,2414,2390,926,1390,383,246,5,306,1048,4936,314,7681,1114835,1233,1196548,292,210,328984,51224,8162,7952,19398,9286,9188,8384,4858,1362,9290,3025,4743,12842,4019,978,13228,2054,920,873,4192,6430,1142,6290,7095,235,4284,2776,919,2279,6,2796,889,704,1279,2212,239,291,149,1103,840,518,1465,56,4258,109,3405,606,2023,2297,1704,2565,328,1284,463,8326,3227,2845,7,4808,791,6755,5096,7877,3747,1181,108,1483,1924,908,2,941,2614,2399,7468,1,2842,432,3,1590,1,820,1,4623,149,5990,5333,2652,4,1528,2304,923,313,833,312,4081,577,74,1717,266,2626,460,1553,4069,7434,2110,1714,1297,1753,2658,4243,518,912,566,1116,32,2283,1571,1809,2466,3285,4519,638,37,1457,2091,3495,5425,4340,28,11,731,665,2145,376,3303,2533,479,512,1,1056,905,1141,17,50,99,2972,6,613,295,3,163,3378,1,5349,1207,3280,609,1498,1228,1539,1,1813,38,245,38,873,61,3374,1941,621,1256,1185,2,4307,402,30,2859,424,286,77,1400,115,179,2,1394,114,642,659,110,8,1,27,1245,711,399,605,2,488,1922,24,603,20,2512,36,2713,350,544,171,262,194,4,32,4,62,471,978,392,2,338,2,470,2,1231,1238,813,2,73,25,417,176,8,158,88,167,261,232,350,2,427,170,240,265,1003,13,30,612,1402,49,237,412,185,678,311,1,3,507,341,961,36,385,475,1558,43,1199,1306,745,202,188,203,599,2,2,2,659,779,1589,5665603,3870,35,140,86,5997077,2800708,882,444,1,2,80,1,1796,1,9,2,2551,1,748,141,795,563,1,4265,1,1,2,1331,3299,843,1,2608,155,17,13,72,338,13,16,44,2,44,55,42,41,6,6,20,4,47,42,4,111,3,2,2,2,2,2,2,2,2,2,2,2,2,6,2,2,2,2,2,2,2,11,1,10,2,34,71,26,9,50,25,2,23956272,149,2783191,1226933,267,246,26530,26,582,2,188,1031,553\&#39;,kBL:\&#39;1D5i\&#39;};google.sn=\&#39;webhp\&#39;;google.kHL=\&#39;en\&#39;;})();(function(){\nvar f,h=[];function k(a){for(var b;a&amp;&amp;(!a.getAttribute||!(b=a.getAttribute(&quot;eid&quot;)));)a=a.parentNode;return b||f}function l(a){for(var b=null;a&amp;&amp;(!a.getAttribute||!(b=a.getAttribute(&quot;leid&quot;)));)a=a.parentNode;return b}\nfunction m(a,b,c,d,g){var e=&quot;&quot;;c||-1!=b.search(&quot;&amp;ei=&quot;)||(e=&quot;&amp;ei=&quot;+k(d),-1==b.search(&quot;&amp;lei=&quot;)&amp;&amp;(d=l(d))&amp;&amp;(e+=&quot;&amp;lei=&quot;+d));d=&quot;&quot;;!c&amp;&amp;window._cshid&amp;&amp;-1==b.search(&quot;&amp;cshid=&quot;)&amp;&amp;&quot;slh&quot;!=a&amp;&amp;(d=&quot;&amp;cshid=&quot;+window._cshid);c=c||&quot;/&quot;+(g||&quot;gen_204&quot;)+&quot;?atyp=i&amp;ct=&quot;+a+&quot;&amp;cad=&quot;+b+e+&quot;&amp;zx=&quot;+Date.now()+d;/^http:/i.test(c)&amp;&amp;&quot;https:&quot;==window.location.protocol&amp;&amp;(google.ml(Error(&quot;a&quot;),!1,{src:c,glmm:1}),c=&quot;&quot;);return c};f=google.kEI;google.getEI=k;google.getLEI=l;google.ml=function(){return null};google.log=function(a,b,c,d,g){if(c=m(a,b,c,d,g)){a=new Image;var e=h.length;h[e]=a;a.onerror=a.onload=a.onabort=function(){delete h[e]};a.src=c}};google.logUrl=m;}).call(this);(function(){google.y={};google.sy=[];google.x=function(a,b){if(a)var c=a.id;else{do c=Math.random();while(google.y[c])}google.y[c]=[a,b];return!1};google.sx=function(a){google.sy.push(a)};google.lm=[];google.plm=function(a){google.lm.push.apply(google.lm,a)};google.lq=[];google.load=function(a,b,c){google.lq.push([[a],b,c])};google.loadAll=function(a,b){google.lq.push([a,b])};google.bx=!1;google.lx=function(){};}).call(this);google.f={};(function(){\ndocument.documentElement.addEventListener(&quot;submit&quot;,function(b){var a;if(a=b.target){var c=a.getAttribute(&quot;data-submitfalse&quot;);a=&quot;1&quot;==c||&quot;q&quot;==c&amp;&amp;!a.elements.q.value?!0:!1}else a=!1;a&amp;&amp;(b.preventDefault(),b.stopPropagation())},!0);document.documentElement.addEventListener(&quot;click&quot;,function(b){var a;a:{for(a=b.target;a&amp;&amp;a!=document.documentElement;a=a.parentElement)if(&quot;A&quot;==a.tagName){a=&quot;1&quot;==a.getAttribute(&quot;data-nohref&quot;);break a}a=!1}a&amp;&amp;b.preventDefault()},!0);}).call(this);&lt;/script&gt;&lt;style&gt;#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}\n&lt;/style&gt;&lt;style&gt;body,td,a,p,.h{font-family:arial,sans-serif}body{margin:0;overflow-y:scroll}#gog{padding:3px 8px 0}td{line-height:.8em}.gac_m td{line-height:17px}form{margin-bottom:20px}.h{color:#1558d6}em{font-weight:bold;font-style:normal}.lst{height:25px;width:496px}.gsfi,.lst{font:18px arial,sans-serif}.gsfs{font:17px arial,sans-serif}.ds{display:inline-box;display:inline-block;margin:3px 0 4px;margin-left:4px}input{font-family:inherit}body{background:#fff;color:#000}a{color:#4b11a8;text-decoration:none}a:hover,a:active{text-decoration:underline}.fl a{color:#1558d6}a:visited{color:#4b11a8}.sblc{padding-top:5px}.sblc a{display:block;margin:2px 0;margin-left:13px;font-size:11px}.lsbb{background:#f8f9fa;border:solid 1px;border-color:#dadce0 #70757a #70757a #dadce0;height:30px}.lsbb{display:block}#WqQANb a{display:inline-block;margin:0 12px}.lsb{background:url(/images/nav_logo229.png) 0 -261px repeat-x;border:none;color:#000;cursor:pointer;height:30px;margin:0;outline:0;font:15px arial,sans-serif;vertical-align:top}.lsb:active{background:#dadce0}.lst:focus{outline:none}&lt;/style&gt;&lt;script nonce=&quot;9sEKRHFet9WV6fsN6g1ONA==&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body bgcolor=&quot;#fff&quot;&gt;&lt;script nonce=&quot;9sEKRHFet9WV6fsN6g1ONA==&quot;&gt;(function(){var src=\&#39;/images/nav_logo229.png\&#39;;var iesg=false;document.body.onload = function(){window.n &amp;&amp; window.n();if (document.images){new Image().src=src;}\nif (!iesg){document.f&amp;&amp;document.f.q.focus();document.gbqf&amp;&amp;document.gbqf.q.focus();}\n}\n})();&lt;/script&gt;&lt;div id=&quot;mngb&quot;&gt;&lt;div id=gbar&gt;&lt;nobr&gt;&lt;b class=gb1&gt;Search&lt;/b&gt; &lt;a class=gb1 href=&quot;https://www.google.com/imghp?hl=en&amp;tab=wi&quot;&gt;Images&lt;/a&gt; &lt;a class=gb1 href=&quot;https://maps.google.com/maps?hl=en&amp;tab=wl&quot;&gt;Maps&lt;/a&gt; &lt;a class=gb1 href=&quot;https://play.google.com/?hl=en&amp;tab=w8&quot;&gt;Play&lt;/a&gt; &lt;a class=gb1 href=&quot;https://www.youtube.com/?gl=US&amp;tab=w1&quot;&gt;YouTube&lt;/a&gt; &lt;a class=gb1 href=&quot;https://news.google.com/?tab=wn&quot;&gt;News&lt;/a&gt; &lt;a class=gb1 href=&quot;https://mail.google.com/mail/?tab=wm&quot;&gt;Gmail&lt;/a&gt; &lt;a class=gb1 href=&quot;https://drive.google.com/?tab=wo&quot;&gt;Drive&lt;/a&gt; &lt;a class=gb1 style=&quot;text-decoration:none&quot; href=&quot;https://www.google.com/intl/en/about/products?tab=wh&quot;&gt;&lt;u&gt;More&lt;/u&gt; &amp;raquo;&lt;/a&gt;&lt;/nobr&gt;&lt;/div&gt;&lt;div id=guser width=100%&gt;&lt;nobr&gt;&lt;span id=gbn class=gbi&gt;&lt;/span&gt;&lt;span id=gbf class=gbf&gt;&lt;/span&gt;&lt;span id=gbe&gt;&lt;/span&gt;&lt;a href=&quot;http://www.google.com/history/optout?hl=en&quot; class=gb4&gt;Web History&lt;/a&gt; | &lt;a  href=&quot;/preferences?hl=en&quot; class=gb4&gt;Settings&lt;/a&gt; | &lt;a target=_top id=gb_70 href=&quot;https://accounts.google.com/ServiceLogin?hl=en&amp;passive=true&amp;continue=https://www.google.com/&amp;ec=GAZAAQ&quot; class=gb4&gt;Sign in&lt;/a&gt;&lt;/nobr&gt;&lt;/div&gt;&lt;div class=gbh style=left:0&gt;&lt;/div&gt;&lt;div class=gbh style=right:0&gt;&lt;/div&gt;&lt;/div&gt;&lt;center&gt;&lt;br clear=&quot;all&quot; id=&quot;lgpd&quot;&gt;&lt;div id=&quot;lga&quot;&gt;&lt;img alt=&quot;Google&quot; height=&quot;92&quot; src=&quot;/images/branding/googlelogo/1x/googlelogo_white_background_color_272x92dp.png&quot; style=&quot;padding:28px 0 14px&quot; width=&quot;272&quot; id=&quot;hplogo&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;form action=&quot;/search&quot; name=&quot;f&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr valign=&quot;top&quot;&gt;&lt;td width=&quot;25%&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td align=&quot;center&quot; nowrap=&quot;&quot;&gt;&lt;input name=&quot;ie&quot; value=&quot;ISO-8859-1&quot; type=&quot;hidden&quot;&gt;&lt;input value=&quot;en&quot; name=&quot;hl&quot; type=&quot;hidden&quot;&gt;&lt;input name=&quot;source&quot; type=&quot;hidden&quot; value=&quot;hp&quot;&gt;&lt;input name=&quot;biw&quot; type=&quot;hidden&quot;&gt;&lt;input name=&quot;bih&quot; type=&quot;hidden&quot;&gt;&lt;div class=&quot;ds&quot; style=&quot;height:32px;margin:4px 0&quot;&gt;&lt;input class=&quot;lst&quot; style=&quot;margin:0;padding:5px 8px 0 6px;vertical-align:top;color:#000&quot; autocomplete=&quot;off&quot; value=&quot;&quot; title=&quot;Google Search&quot; maxlength=&quot;2048&quot; name=&quot;q&quot; size=&quot;57&quot;&gt;&lt;/div&gt;&lt;br style=&quot;line-height:0&quot;&gt;&lt;span class=&quot;ds&quot;&gt;&lt;span class=&quot;lsbb&quot;&gt;&lt;input class=&quot;lsb&quot; value=&quot;Google Search&quot; name=&quot;btnG&quot; type=&quot;submit&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;ds&quot;&gt;&lt;span class=&quot;lsbb&quot;&gt;&lt;input class=&quot;lsb&quot; id=&quot;tsuid1&quot; value=&quot;I\&#39;m Feeling Lucky&quot; name=&quot;btnI&quot; type=&quot;submit&quot;&gt;&lt;script nonce=&quot;9sEKRHFet9WV6fsN6g1ONA==&quot;&gt;(function(){var id=\&#39;tsuid1\&#39;;document.getElementById(id).onclick = function(){if (this.form.q.value){this.checked = 1;if (this.form.iflsig)this.form.iflsig.disabled = false;}\nelse top.location=\&#39;/doodles/\&#39;;};})();&lt;/script&gt;&lt;input value=&quot;AINFCbYAAAAAYGn-5OYtMU4oVbg22g7FdScLSzmcuHlU&quot; name=&quot;iflsig&quot; type=&quot;hidden&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;fl sblc&quot; align=&quot;left&quot; nowrap=&quot;&quot; width=&quot;25%&quot;&gt;&lt;a href=&quot;/advanced_search?hl=en&amp;amp;authuser=0&quot;&gt;Advanced search&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;input id=&quot;gbv&quot; name=&quot;gbv&quot; type=&quot;hidden&quot; value=&quot;1&quot;&gt;&lt;script nonce=&quot;9sEKRHFet9WV6fsN6g1ONA==&quot;&gt;(function(){var a,b=&quot;1&quot;;if(document&amp;&amp;document.getElementById)if(&quot;undefined&quot;!=typeof XMLHttpRequest)b=&quot;2&quot;;else if(&quot;undefined&quot;!=typeof ActiveXObject){var c,d,e=[&quot;MSXML2.XMLHTTP.6.0&quot;,&quot;MSXML2.XMLHTTP.3.0&quot;,&quot;MSXML2.XMLHTTP&quot;,&quot;Microsoft.XMLHTTP&quot;];for(c=0;d=e[c++];)try{new ActiveXObject(d),b=&quot;2&quot;}catch(h){}}a=b;if(&quot;2&quot;==a&amp;&amp;-1==location.search.indexOf(&quot;&amp;gbv=2&quot;)){var f=google.gbvu,g=document.getElementById(&quot;gbv&quot;);g&amp;&amp;(g.value=a);f&amp;&amp;window.setTimeout(function(){location.href=f},0)};}).call(this);&lt;/script&gt;&lt;/form&gt;&lt;div id=&quot;gac_scont&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size:83%;min-height:3.5em&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;span id=&quot;footer&quot;&gt;&lt;div style=&quot;font-size:10pt&quot;&gt;&lt;div style=&quot;margin:19px auto;text-align:center&quot; id=&quot;WqQANb&quot;&gt;&lt;a href=&quot;/intl/en/ads/&quot;&gt;Advertising\xa0Programs&lt;/a&gt;&lt;a href=&quot;/services/&quot;&gt;Business Solutions&lt;/a&gt;&lt;a href=&quot;/intl/en/about.html&quot;&gt;About Google&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot;font-size:8pt;color:#70757a&quot;&gt;&amp;copy; 2021 - &lt;a href=&quot;/intl/en/policies/privacy/&quot;&gt;Privacy&lt;/a&gt; - &lt;a href=&quot;/intl/en/policies/terms/&quot;&gt;Terms&lt;/a&gt;&lt;/p&gt;&lt;/span&gt;&lt;/center&gt;&lt;script nonce=&quot;9sEKRHFet9WV6fsN6g1ONA==&quot;&gt;(function(){window.google.cdo={height:0,width:0};(function(){var a=window.innerWidth,b=window.innerHeight;if(!a||!b){var c=window.document,d=&quot;CSS1Compat&quot;==c.compatMode?c.documentElement:c.body;a=d.clientWidth;b=d.clientHeight}a&amp;&amp;b&amp;&amp;(a!=google.cdo.width||b!=google.cdo.height)&amp;&amp;google.log(&quot;&quot;,&quot;&quot;,&quot;/client_204?&amp;atyp=i&amp;biw=&quot;+a+&quot;&amp;bih=&quot;+b+&quot;&amp;ei=&quot;+google.kEI);}).call(this);})();(function(){var u=\&#39;/xjs/_/js/k\\x3dxjs.hp.en_US.rMSPgVHe7zM.O/m\\x3dsb_he,d/am\\x3dAHiCOA/d\\x3d1/rs\\x3dACT90oErbwpHHfKsu8PnXdqPMHNLK83eTw\&#39;;\nvar d=this||self,e=/^[\\w+/_-]+[=]{0,2}$/,f=null,g=function(a){return(a=a.querySelector&amp;&amp;a.querySelector(&quot;script[nonce]&quot;))&amp;&amp;(a=a.nonce||a.getAttribute(&quot;nonce&quot;))&amp;&amp;e.test(a)?a:&quot;&quot;},h=function(a){return a};var l;var n=function(a,b){this.g=b===m?a:&quot;&quot;};n.prototype.toString=function(){return this.g+&quot;&quot;};var m={};function p(){var a=u;google.lx=function(){q(a);google.lx=function(){}};google.bx||google.lx()}\nfunction q(a){var b=document;var c=&quot;SCRIPT&quot;;&quot;application/xhtml+xml&quot;===b.contentType&amp;&amp;(c=c.toLowerCase());c=b.createElement(c);if(void 0===l){b=null;var k=d.trustedTypes;if(k&amp;&amp;k.createPolicy){try{b=k.createPolicy(&quot;goog#html&quot;,{createHTML:h,createScript:h,createScriptURL:h})}catch(r){d.console&amp;&amp;d.console.error(r.message)}l=b}else l=b}a=(b=l)?b.createScriptURL(a):a;a=new n(a,m);c.src=a instanceof n&amp;&amp;a.constructor===n?a.g:&quot;type_error:TrustedResourceUrl&quot;;(a=c.ownerDocument&amp;&amp;c.ownerDocument.defaultView)&amp;&amp;\na!=d?a=g(a.document):(null===f&amp;&amp;(f=g(d.document)),a=f);a&amp;&amp;c.setAttribute(&quot;nonce&quot;,a);google.timers&amp;&amp;google.timers.load&amp;&amp;google.tick&amp;&amp;google.tick(&quot;load&quot;,&quot;xjsls&quot;);document.body.appendChild(c)};setTimeout(function(){p()},0);})();(function(){window.google.xjsu=\&#39;/xjs/_/js/k\\x3dxjs.hp.en_US.rMSPgVHe7zM.O/m\\x3dsb_he,d/am\\x3dAHiCOA/d\\x3d1/rs\\x3dACT90oErbwpHHfKsu8PnXdqPMHNLK83eTw\&#39;;})();function _DumpException(e){throw e;}\nfunction _F_installCss(c){}\n(function(){google.jl={blt:\&#39;none\&#39;,dw:false,em:[],emtn:0,ine:false,lls:\&#39;default\&#39;,pdt:0,snet:true,uwp:true};})();(function(){var pmc=\&#39;{\\x22d\\x22:{},\\x22sb_he\\x22:{\\x22agen\\x22:true,\\x22cgen\\x22:true,\\x22client\\x22:\\x22heirloom-hp\\x22,\\x22dh\\x22:true,\\x22dhqt\\x22:true,\\x22ds\\x22:\\x22\\x22,\\x22ffql\\x22:\\x22en\\x22,\\x22fl\\x22:true,\\x22host\\x22:\\x22google.com\\x22,\\x22isbh\\x22:28,\\x22jsonp\\x22:true,\\x22msgs\\x22:{\\x22cibl\\x22:\\x22Clear Search\\x22,\\x22dym\\x22:\\x22Did you mean:\\x22,\\x22lcky\\x22:\\x22I\\\\u0026#39;m Feeling Lucky\\x22,\\x22lml\\x22:\\x22Learn more\\x22,\\x22oskt\\x22:\\x22Input tools\\x22,\\x22psrc\\x22:\\x22This search was removed from your \\\\u003Ca href\\x3d\\\\\\x22/history\\\\\\x22\\\\u003EWeb History\\\\u003C/a\\\\u003E\\x22,\\x22psrl\\x22:\\x22Remove\\x22,\\x22sbit\\x22:\\x22Search by image\\x22,\\x22srch\\x22:\\x22Google Search\\x22},\\x22nrft\\x22:false,\\x22ovr\\x22:{},\\x22pq\\x22:\\x22\\x22,\\x22refpd\\x22:true,\\x22rfs\\x22:[],\\x22sbas\\x22:\\x220 3px 8px 0 rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.08)\\x22,\\x22sbpl\\x22:16,\\x22sbpr\\x22:16,\\x22scd\\x22:10,\\x22stok\\x22:\\x22x5PWse7NL8Icw3BcpYV0UuS26NU\\x22,\\x22uhde\\x22:false}}\&#39;;google.pmc=JSON.parse(pmc);})();&lt;/script&gt;        &lt;/body&gt;&lt;/html&gt;&#39;
 </pre></div>
 </div>
 </div>
@@ -1601,9 +1602,9 @@ But outside of it, a=1
 </div>
 </div>
 <p>The list of all standard library modules in Python 3 is <a class="reference external" href="https://docs.python.org/3/library/index.html">here</a>. However, it’s just a drop in the ocean that is the Python ecosystem.</p>
-</div>
-</div>
-<div class="section" id="pip-and-external-modules">
+</section>
+</section>
+<section id="pip-and-external-modules">
 <h2><code class="docutils literal notranslate"><span class="pre">pip</span></code> and External Modules<a class="headerlink" href="#pip-and-external-modules" title="Permalink to this headline">¶</a></h2>
 <p>As noted before, Python’s gigantic ecosystem is one of its biggest strengths. And the fact that you can easily install many of these package with a simple command-line instruction is even more important. The standard tool to do that is <code class="docutils literal notranslate"><span class="pre">pip</span></code>, a recursive acronym that stands for “<code class="docutils literal notranslate"><span class="pre">pip</span></code> installs Python”.</p>
 <p><code class="docutils literal notranslate"><span class="pre">pip</span></code> itself is a Python program, <strong>but its not run from inside the Python interpreter.</strong> Instead its run from a shell - the Windows command line (or PowerShell), for example, or the Mac’s terminal - making it an external application to Python. Happily enough, basically all Python distributions come with <code class="docutils literal notranslate"><span class="pre">pip</span></code> pre-installed, so you don’t have to install it yourself.</p>
@@ -1611,19 +1612,19 @@ But outside of it, a=1
 <p><code class="docutils literal notranslate"><span class="pre">pip</span></code>, like any package manager, has two main jobs. The first is to provide a convenient API to a package repository. In essence, it’s a download manager for a single site - the <a class="reference external" href="https://pypi.python.org/pypi">Python Package Index</a> (PyPI, pronounced <strong>pai-pee-eye</strong>), the official Python repository for packages.</p>
 <p>PyPI holds installation files for the packages hosted in it, alongside with some metadata, like version number and dependencies. <code class="docutils literal notranslate"><span class="pre">pip</span></code> (and other tools we’ll discuss soon) downloads the wanted package from PyPI, together with its dependencies, and installs them in a pre-defined location in our personal computer.</p>
 <p><code class="docutils literal notranslate"><span class="pre">pip</span></code>’s second important job is handling dependencies. Many packages rely on other packages, which in turn rely on other, more basic packages, finally leading to the basic Python interpreter. <code class="docutils literal notranslate"><span class="pre">pip</span></code> has to make sure to install all dependencies of the package you’re currently after, and to avoid any collisions with other installed packages. For example, a common problem in the Python world is the Python 2-3 schism, which means that packages written for Python 2 can’t run on a Python 3 interpreter, and vice versa. The package manger’s job is to grant you the right version of the package you’re looking for.</p>
-<div class="section" id="comparison-with-matlab-s-approach">
+<section id="comparison-with-matlab-s-approach">
 <h3>Comparison with MATLAB’s approach<a class="headerlink" href="#comparison-with-matlab-s-approach" title="Permalink to this headline">¶</a></h3>
 <p>We should take a minute here to contrast Python’s approach with that of MATLAB. In MATLAB, once we added a directory to the path using <code class="docutils literal notranslate"><span class="pre">pathtool</span></code>, each file in that file is now directly in the MATLAB namespace. This means that we don’t have to <code class="docutils literal notranslate"><span class="pre">import</span></code> anything - adding something to <code class="docutils literal notranslate"><span class="pre">pathtool</span></code> is essentially <code class="docutils literal notranslate"><span class="pre">import</span></code>ing the entire folder into the general namespace, which is the only namespace in MATLAB world. This is a pretty straight-forward approach, but it’s also one that no other programming language, especially a modern one, uses. This is because cluttering the one and only namespace is a bad idea, since you can quite easily overwrite names of functions from files with names of variables you use, and you won’t even know it. Moreover, you don’t need <strong>all</strong> functions around <strong>all</strong> the time. Each file and project will usually need a few different functions from a couple of toolboxes, and that’s it.</p>
 <p>In Python we have another layer between our code and the <code class="docutils literal notranslate"><span class="pre">import</span></code>-able functions. Inside our code we can only use built-in functions (<code class="docutils literal notranslate"><span class="pre">list()</span></code>, <code class="docutils literal notranslate"><span class="pre">int()</span></code>, <code class="docutils literal notranslate"><span class="pre">print()</span></code>, etc.) and functions that we explicitly imported, which will vary between files and project. In addition, we can only call <code class="docutils literal notranslate"><span class="pre">import</span></code> on files and packages which are in our Python’s path. We’ll discuss Python’s equivilant of <code class="docutils literal notranslate"><span class="pre">pathtool</span></code> in the next class, but for now you should see the separation Python forces on us between the specific file’s namespace and the general Python namespace (what packages can we even import).</p>
-</div>
-</div>
-<div class="section" id="file-structure">
+</section>
+</section>
+<section id="file-structure">
 <h2>File Structure<a class="headerlink" href="#file-structure" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">import</span></code> statements are useful for more than just importing code - they’re also our way of arranging our project’s files. Here’s the standard arrangement of files I’d like you to use throughout the course:</p>
 <p>The base folder can contain many other files, including sample data, for example. The point here is that your actual code in confined to the <code class="docutils literal notranslate"><span class="pre">project_name</span></code> folder, which has an empty <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>. This file allows Python to import user-defined objects from that folder.</p>
 <p>Thus, if you wish to use a function you defined in <code class="docutils literal notranslate"><span class="pre">class_1.py</span></code> in <code class="docutils literal notranslate"><span class="pre">class_2.py</span></code>, you should write inside <code class="docutils literal notranslate"><span class="pre">class_2.py</span></code> the following statement: <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">class_1</span> <span class="pre">import</span> <span class="pre">my_func</span></code>.</p>
-</div>
-<div class="section" id="scripts-and-functions">
+</section>
+<section id="scripts-and-functions">
 <h2>Scripts and Functions<a class="headerlink" href="#scripts-and-functions" title="Permalink to this headline">¶</a></h2>
 <p>If you’re familiar with MATLAB there’s a good chance that you’ve written a script before. A script is a file which is run sequentially, while using other functions and definitions. In the Python world people often prefer to stay away from scripts.</p>
 <p>If you wish to run a module from the command line, you should follow this general pattern:</p>
@@ -1644,8 +1645,8 @@ But outside of it, a=1
 <p class="admonition-title">Version Control and Modules Exercise</p>
 <p>Initialize a new git archive containing the two modules you created in this lesson’s exercises and upload it to a new repository on GitHub.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
