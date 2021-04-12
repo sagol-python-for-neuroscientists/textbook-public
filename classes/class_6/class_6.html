@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class 6: Advanced pandas &#8212; Python for Neuroscience</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
@@ -62,7 +61,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Tutorials" href="../../tutorials.html" />
-    <link rel="prev" title="Class 5: The Scientific Stack (Part II - matplotlib and pandas)" href="../class_5/class_5.html" />
+    <link rel="prev" title="Class 5: The Scientific Stack - Part II: matplotlib and pandas" href="../class_5/class_5.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -132,18 +131,17 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_4/class_4.html">
-     Class 4: The Scientific Stack (Part I -
+     Class 4: The Scientific Stack - Part I:
      <code class="docutils literal notranslate">
       <span class="pre">
        numpy
       </span>
      </code>
-     )
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_5/class_5.html">
-     Class 5: The Scientific Stack (Part II -
+     Class 5: The Scientific Stack - Part II:
      <code class="docutils literal notranslate">
       <span class="pre">
        matplotlib
@@ -155,7 +153,6 @@
        pandas
       </span>
      </code>
-     )
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -440,7 +437,7 @@
         
               <div>
                 
-  <section id="class-6-advanced-pandas">
+  <div class="section" id="class-6-advanced-pandas">
 <h1>Class 6: Advanced <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#class-6-advanced-pandas" title="Permalink to this headline">¶</a></h1>
 <p>Currently, <code class="docutils literal notranslate"><span class="pre">pandas</span></code>’ <code class="docutils literal notranslate"><span class="pre">Series</span></code> and <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> might seem to us as no more than tables with complicated indexing methods. In this lesson, we will learn more about what makes <code class="docutils literal notranslate"><span class="pre">pandas</span></code> so powerful and how we can use it to write efficient and readable code.</p>
 <div class="admonition note">
@@ -452,7 +449,7 @@
 </pre></div>
 </div>
 </div>
-<section id="missing-data">
+<div class="section" id="missing-data">
 <h2>Missing Data<a class="headerlink" href="#missing-data" title="Permalink to this headline">¶</a></h2>
 <div style="text-align:center"><img src="https://static.wikia.nocookie.net/lostpedia/images/1/16/Lost-season1.jpg/revision/latest/scale-to-width-down/300?cb=20070303221754" /></div><p>The last question in the previous class pointed us to <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/missing_data.html">working with missing data</a>. But how and why does missing data occur?</p>
 <p>One option is pandas’ index alignment, the property that makes sure that each value will have the same index throughout the entire computation process.</p>
@@ -759,7 +756,7 @@ dtype: object
 <p>As we mentioned, pandas is oriented towards handling missing data. In general one finds two approaches that one can take - either create a masking array around the DF, in which <code class="docutils literal notranslate"><span class="pre">False</span></code> values represent invalid entries, or create a <em>sentinel</em> value that represents missing data, like -99999 or NaN.</p>
 <p>These two approaches have their downsides - a boolean masks requires more memory, and perhaps longer computation times. The sentinel value might lead to use of inefficient data types and slow down computation as well.</p>
 <p>Due to its reliance on numpy, pandas chose the path of sentinel values, with either <code class="docutils literal notranslate"><span class="pre">None</span></code> or NaN as the value.</p>
-<section id="the-none-object">
+<div class="section" id="the-none-object">
 <h3>The <code class="docutils literal notranslate"><span class="pre">None</span></code> object<a class="headerlink" href="#the-none-object" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">None</span></code> is standard Python’s null value. It can be found in many places in the language. For example, functions that don’t have a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement, implicitly return <code class="docutils literal notranslate"><span class="pre">None</span></code>. While <code class="docutils literal notranslate"><span class="pre">None</span></code> can be used as a missing data type, it’s probably not the best choice.</p>
 <div class="cell docutils container">
@@ -821,8 +818,8 @@ dtype = int
 </div>
 </div>
 </div>
-</section>
-<section id="the-nan-value">
+</div>
+<div class="section" id="the-nan-value">
 <h3>The <code class="docutils literal notranslate"><span class="pre">NaN</span></code> value<a class="headerlink" href="#the-nan-value" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">NaN</span></code> is a special floating-point value recognized by all programming languages that conform to the IEEE standard (which means most of them). As we mentioned before, it forces the entire array to have a floating point type:</p>
 <div class="cell docutils container">
@@ -921,8 +918,8 @@ dtype: float64
 </div>
 </div>
 </div>
-</section>
-<section id="the-nat-value">
+</div>
+<div class="section" id="the-nat-value">
 <h3>The <code class="docutils literal notranslate"><span class="pre">NaT</span></code> value<a class="headerlink" href="#the-nat-value" title="Permalink to this headline">¶</a></h3>
 <p>When dealing with datetime values or indices, the missing value is represented as <code class="docutils literal notranslate"><span class="pre">NaT</span></code>, or not-a-time:</p>
 <div style="text-align:center"><img src="https://149366099.v2.pressablecdn.com/wp-content/uploads/2014/10/What-is-time.png" /></div><div class="cell docutils container">
@@ -1090,8 +1087,8 @@ dtype: float64
 </table>
 </div></div></div>
 </div>
-</section>
-<section id="operations-and-calculations-with-missing-data">
+</div>
+<div class="section" id="operations-and-calculations-with-missing-data">
 <h3>Operations and calculations with missing data<a class="headerlink" href="#operations-and-calculations-with-missing-data" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1458,7 +1455,7 @@ dtype: float64
 </table>
 </div></div></div>
 </div>
-<section id="filling-missing-values">
+<div class="section" id="filling-missing-values">
 <h4>Filling missing values<a class="headerlink" href="#filling-missing-values" title="Permalink to this headline">¶</a></h4>
 <p>The simplest option is to use the <code class="docutils literal notranslate"><span class="pre">fillna</span></code> method:</p>
 <div class="cell docutils container">
@@ -1890,8 +1887,8 @@ dtype: float64
 </table>
 </div></div></div>
 </div>
-</section>
-<section id="dropping-missing-values">
+</div>
+<div class="section" id="dropping-missing-values">
 <h4>Dropping missing values<a class="headerlink" href="#dropping-missing-values" title="Permalink to this headline">¶</a></h4>
 <p>We’ve already seen in the short exercise the <code class="docutils literal notranslate"><span class="pre">dropna</span></code> method, that allows us to drop missing values:</p>
 <div class="cell docutils container">
@@ -2136,8 +2133,8 @@ dtype: float64
 </table>
 </div></div></div>
 </div>
-</section>
-<section id="interpolation">
+</div>
+<div class="section" id="interpolation">
 <h4><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.interpolate.html">Interpolation</a><a class="headerlink" href="#interpolation" title="Permalink to this headline">¶</a></h4>
 <p>The last way to to fill in missing values is through interpolation.</p>
 <p>The default interpolation methods perform linear interpolation on the data, based on its ordinal index:</p>
@@ -2579,9 +2576,9 @@ dtype: float64
 </table>
 </div></div></div>
 </div>
-</section>
-</section>
-<section id="missing-values-in-non-float-columns">
+</div>
+</div>
+<div class="section" id="missing-values-in-non-float-columns">
 <h3>Missing Values in Non-Float Columns<a class="headerlink" href="#missing-values-in-non-float-columns" title="Permalink to this headline">¶</a></h3>
 <p>Starting from pandas v1.0.0 pandas gained support for NaN values in non-float columns. This feature is a bit experimental currently, so the default behavior still converts integers to floats for example, but the support is there if you know where to look. By default:</p>
 <div class="cell docutils container">
@@ -2672,9 +2669,9 @@ dtype: Int32
 <li><p>The data type is <code class="docutils literal notranslate"><span class="pre">Int32</span></code>. It’s CamelCase and it’s actually a class underneath. Standard datatypes are lowercase.</p></li>
 </ol>
 <p>Caveats aside, this is definitely useful for scientists who sometimes have integer values and do not want to convert them to float to supports NAs.</p>
-</section>
-</section>
-<section id="categorical-data">
+</div>
+</div>
+<div class="section" id="categorical-data">
 <h2>Categorical Data<a class="headerlink" href="#categorical-data" title="Permalink to this headline">¶</a></h2>
 <p>I’d like to discuss one more data type - <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/categorical.html"><strong>categorical</strong> data</a>. Most data we’ve been working on is ‘quantitative’ in its nature i.e. integers and real numbers can hold (in general terms) any value. But some data can only have one of a specific set, or categories, of data. For example, if we have a column which marks the weekday, then it can obviously only be one of seven options. Same for boolean data, colors, and other examples. These data columns should be marked as “categorical” to reduce memory consumption and improve performance. It also tells the code readers more about the nature of that data column.</p>
 <p>The easiest way to create a categorical variable is to declare it as such, or to convert as existing column to a categorical data type:</p>
@@ -2935,12 +2932,12 @@ dtype: int64
 </div>
 </div>
 <p>A factor of 8 in memory reduction.</p>
-</section>
-<section id="hierarchical-indexing">
+</div>
+<div class="section" id="hierarchical-indexing">
 <h2><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/advanced.html">Hierarchical Indexing</a><a class="headerlink" href="#hierarchical-indexing" title="Permalink to this headline">¶</a></h2>
 <p>Last time we mentioned that while a DataFrame is inherently a 2D object, it can contain multi-dimensional data. The way a DataFrame (and a Series) does that is with Hierarchical Indexing, or sometimes Multi-Indexing.</p>
 <p>After the deprecation of <code class="docutils literal notranslate"><span class="pre">pd.Panel</span></code>, this is the only remaining way to represent data of higher dimensions in pandas, making it a very useful tool for data science.</p>
-<section id="simple-example-temperature-in-a-grid">
+<div class="section" id="simple-example-temperature-in-a-grid">
 <h3>Simple Example - Temperature in a Grid<a class="headerlink" href="#simple-example-temperature-in-a-grid" title="Permalink to this headline">¶</a></h3>
 <p>Let’s assume I wish to represent points on a 2D grid, perhaps inside a square, that represent the temperature in different locations around this grid. The obvious way to do this is to define a set of two coordinates, <span class="math notranslate nohighlight">\((x, y)\)</span>, which point to a specific location inside my square. These two coordinates should also have a value attached to them - the temperature. A list of such coordinates can be a simple Series:</p>
 <div class="cell docutils container">
@@ -3152,8 +3149,8 @@ Name: temp_cube, dtype: float64
 </div>
 </div>
 <p>Again, you have to remember that this is one-dimensional data, with a three-dimensional index. In statistical term, we might term the indices a fixed, independent categorical variable, while the values are the dependent variable. Pandas actually has a <code class="docutils literal notranslate"><span class="pre">CategoricalIndex</span></code> object which you’ll meet in some future HW.</p>
-</section>
-<section id="more-on-extra-dimensions">
+</div>
+<div class="section" id="more-on-extra-dimensions">
 <h3>More on extra dimensions<a class="headerlink" href="#more-on-extra-dimensions" title="Permalink to this headline">¶</a></h3>
 <p>In the previous square example, it’s very appealing to ditch the MultiIndex altogether and just work with a DataFrame, or even a simple numpy array. This is because the two indices represented rows and columns. A quick way to turn one representation into the other is the <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/reshaping.html"><code class="docutils literal notranslate"><span class="pre">stack()</span></code>\<code class="docutils literal notranslate"><span class="pre">unstack()</span></code></a> method:</p>
 <div class="cell docutils container">
@@ -3356,8 +3353,8 @@ dtype: float64
 <p>As you might have guessed, adding data points, i.e. increasing the dimensionality of the data, is very easy and intuitive. Data remains aligned through addition and deletion of data. Moreover, treating these categorical variables as an index can help the mental modeling of the problem, especially when you wish to perform statistical modeling with your analysis.</p>
 <p>If you’re not convinced yet, I’m sure that in a couple of examples you’ll see their true power unfold.</p>
 <div style="text-align:center"><img src="https://media1.tenor.com/images/f4f1826873b424a2aedd57432b48e2fc/tenor.gif?itemid=12243212" /></div>
-</section>
-<section id="constructing-a-multiindex">
+</div>
+<div class="section" id="constructing-a-multiindex">
 <h3>Constructing a MultiIndex<a class="headerlink" href="#constructing-a-multiindex" title="Permalink to this headline">¶</a></h3>
 <p>Creating a hierarchical index can be done in several ways:</p>
 <div class="cell docutils container">
@@ -3641,7 +3638,7 @@ dtype: float64
 </table>
 </div></div></div>
 </div>
-<section id="creating-a-multiindex-from-a-data-column">
+<div class="section" id="creating-a-multiindex-from-a-data-column">
 <h4>Creating a MultiIndex from a data column<a class="headerlink" href="#creating-a-multiindex-from-a-data-column" title="Permalink to this headline">¶</a></h4>
 <p>While all of the above methods work, and could be useful sometimes, the most common method of creating an index is from an existing data column.</p>
 <div class="cell docutils container">
@@ -4050,9 +4047,9 @@ dtype: float64
 </table>
 </div></div></div>
 </div>
-</section>
-</section>
-<section id="indexing-and-slicing-a-multiindex">
+</div>
+</div>
+<div class="section" id="indexing-and-slicing-a-multiindex">
 <h3>Indexing and Slicing a MultiIndex<a class="headerlink" href="#indexing-and-slicing-a-multiindex" title="Permalink to this headline">¶</a></h3>
 <p>We’ll use these DFs as an example:</p>
 <div class="cell docutils container">
@@ -4682,7 +4679,7 @@ Name: Temp, dtype: float64
 </table>
 </div></div></div>
 </div>
-<section id="small-caveat-unsorted-indices">
+<div class="section" id="small-caveat-unsorted-indices">
 <h4>Small caveat - unsorted indices<a class="headerlink" href="#small-caveat-unsorted-indices" title="Permalink to this headline">¶</a></h4>
 <p>Having an unsorted index in your MultiIndex might make the interpreter pop a few exceptions at you:</p>
 <div class="cell docutils container">
@@ -4809,9 +4806,9 @@ dtype: float64
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="data-aggregation">
+</div>
+</div>
+<div class="section" id="data-aggregation">
 <h3>Data Aggregation<a class="headerlink" href="#data-aggregation" title="Permalink to this headline">¶</a></h3>
 <p>Data aggregation using a MultiIndex is amazingly simple:</p>
 <div class="cell docutils container">
@@ -5080,9 +5077,9 @@ dtype: float64
 </table>
 </div></div></div>
 </div>
-</section>
-</section>
-<section id="exercise">
+</div>
+</div>
+<div class="section" id="exercise">
 <h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p><em>Missing Data:</em> Sample data sparsely from a sine wave. To do so:</p>
@@ -6545,13 +6542,13 @@ dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section id="n-dimensional-containers">
+</div>
+<div class="section" id="n-dimensional-containers">
 <h2><em>n</em>-Dimensional Containers<a class="headerlink" href="#n-dimensional-containers" title="Permalink to this headline">¶</a></h2>
 <p>While technically a DataFrame is a two-dimensional container, in the next lesson we’ll see why it can perform quite efficienty as a pseudo n-dimensional container.</p>
 <p>If you wish to have <em>true</em> n-dimensional DataFrame-like data structures, you should use the <code class="docutils literal notranslate"><span class="pre">xarray</span></code> package and its <code class="docutils literal notranslate"><span class="pre">xr.DataArray</span></code> and <code class="docutils literal notranslate"><span class="pre">xr.Dataset</span></code> objects, which we’ll discuss in the next lessons.</p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -6578,7 +6575,7 @@ dtype: int64
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../class_5/class_5.html" title="previous page">Class 5: The Scientific Stack (Part II - <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code>)</a>
+    <a class='left-prev' id="prev-link" href="../class_5/class_5.html" title="previous page">Class 5: The Scientific Stack - Part II: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a>
     <a class='right-next' id="next-link" href="../../tutorials.html" title="next page">Tutorials</a>
 
         </div>

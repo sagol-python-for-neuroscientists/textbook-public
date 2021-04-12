@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class 3: More OOP and Exception Handling &#8212; Python for Neuroscience</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
@@ -59,7 +58,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Class 4: The Scientific Stack (Part I - numpy)" href="../class_4/class_4.html" />
+    <link rel="next" title="Class 4: The Scientific Stack - Part I: numpy" href="../class_4/class_4.html" />
     <link rel="prev" title="Class 2: Virtual Environments and Object-oriented Programming (OOP)" href="../class_2/class_2.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -130,18 +129,17 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_4/class_4.html">
-     Class 4: The Scientific Stack (Part I -
+     Class 4: The Scientific Stack - Part I:
      <code class="docutils literal notranslate">
       <span class="pre">
        numpy
       </span>
      </code>
-     )
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_5/class_5.html">
-     Class 5: The Scientific Stack (Part II -
+     Class 5: The Scientific Stack - Part II:
      <code class="docutils literal notranslate">
       <span class="pre">
        matplotlib
@@ -153,7 +151,6 @@
        pandas
       </span>
      </code>
-     )
     </a>
    </li>
    <li class="toctree-l2">
@@ -341,11 +338,11 @@
         
               <div>
                 
-  <section id="class-3-more-oop-and-exception-handling">
+  <div class="section" id="class-3-more-oop-and-exception-handling">
 <h1>Class 3: More OOP and Exception Handling<a class="headerlink" href="#class-3-more-oop-and-exception-handling" title="Permalink to this headline">¶</a></h1>
-<section id="object-oriented-programming-part-2">
+<div class="section" id="object-oriented-programming-part-2">
 <h2>Object Oriented Programming: Part 2<a class="headerlink" href="#object-oriented-programming-part-2" title="Permalink to this headline">¶</a></h2>
-<section id="inheritance">
+<div class="section" id="inheritance">
 <h3>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h3>
 <p><img alt="inheritance" src="../../_images/inheritance.jpg" /></p>
 <p>One of the most interesting aspects or features of object-oriented programming is <em>inheritance</em>. Inheritance is a specific type of relation between the objects we create that signifies that a “child” object <em>inherits</em> from its “parent”. In other words, the child object <strong>“is a”</strong> parent object. Our examples so far were of “real-life” objects, and so to continue this line we’d perhaps wish to create a class of a <code class="docutils literal notranslate"><span class="pre">Person</span></code>, which would be the parent class, and a child class of a <code class="docutils literal notranslate"><span class="pre">Student</span></code>. In this examples it’s clear why a <code class="docutils literal notranslate"><span class="pre">Student</span></code> <strong>is a</strong> <code class="docutils literal notranslate"><span class="pre">Person</span></code>, so the inheritance holds. All <code class="docutils literal notranslate"><span class="pre">Person</span></code> instances have a name, age, gender, etc., but only <code class="docutils literal notranslate"><span class="pre">Student</span></code> instances have an associated school and a final grade. This means that the <code class="docutils literal notranslate"><span class="pre">Student</span></code> will have all attributes associated with all <code class="docutils literal notranslate"><span class="pre">Person</span></code>s (name, age, gender), and they’ll also have a school and a grade, the is referred to as “inheritance”.</p>
@@ -492,8 +489,8 @@
 </pre></div>
 </div>
 </div>
-</section>
-<section id="inheritance-why-and-when">
+</div>
+<div class="section" id="inheritance-why-and-when">
 <h3>Inheritance - Why and When<a class="headerlink" href="#inheritance-why-and-when" title="Permalink to this headline">¶</a></h3>
 <p>Inheritance can facilitate code re-use and simpler, clearer mental models of the problem at hand. In the example above, we generated very clear and concise classes that do one thing, and do it well. People reading this code, including us in three months, will understand everything about it without any hassle.</p>
 <p>A possible issue with inheritance is readability - finding the methods that are associated with the base class can be cumbersome when we start working with tens of attributes and multiple methods. This is why usually people try to avoid more than a single layer of inheritance.</p>
@@ -602,9 +599,9 @@ Solution<div class="summary-down docutils">
 <p>Object-oriented design requires you to think about the code you’re about to write - how to model each object, how to deal with the interfaces between them, how to verify the types of each input, etc.</p>
 <p>Classes are tremendously powerful, but require a great deal of experience in order to be used wisely. Until we can envision complete entity structures in our mind and account for all the details of their implementation and interactions, <strong>we do our best, we learn from it, and then we do better</strong>. Rewriting large parts of an application you designed is expected, it is a natural and important part of software design (and a luxury other engineers rarely have).</p>
 <p>The term used to describe rewriting parts of some code in a way that preserves its original function but somehow improves it (performance, readability, documentation) is <em>refactoring</em>, and it is absolutely crucial.</p>
-</section>
-</section>
-<section id="errors-and-exceptions">
+</div>
+</div>
+<div class="section" id="errors-and-exceptions">
 <h2>Errors and Exceptions<a class="headerlink" href="#errors-and-exceptions" title="Permalink to this headline">¶</a></h2>
 <p>A very debated feature of Python (and other scripting languages) is its fear of failing. Python tries to coerce unknown commands into something familiar that it can work with. For example, addition of <code class="docutils literal notranslate"><span class="pre">bool</span></code>s and other types is fully supported, since <code class="docutils literal notranslate"><span class="pre">bool</span></code> types are treated as 0 (for <code class="docutils literal notranslate"><span class="pre">False</span></code>) and 1 (for <code class="docutils literal notranslate"><span class="pre">True</span></code>).</p>
 <div class="cell docutils container">
@@ -871,7 +868,7 @@ None ---- unsupported operand type(s) for /: &#39;int&#39; and &#39;str&#39;
 </div>
 </div>
 </div>
-<section id="pathlib-a-short-introduction">
+<div class="section" id="pathlib-a-short-introduction">
 <h3><code class="docutils literal notranslate"><span class="pre">pathlib</span></code>: A Short Introduction<a class="headerlink" href="#pathlib-a-short-introduction" title="Permalink to this headline">¶</a></h3>
 <p>For file I/O and other disk operations, some of which are required in this exercise, Pythonistas use <code class="docutils literal notranslate"><span class="pre">pathlib</span></code>, a module in the Python standard library designated to work with files and folders. It’s a basic premise is that files and folders are objects themselves, and certain operations are allowed between these objects.</p>
 <div class="cell docutils container">
@@ -1066,9 +1063,9 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 </details></div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1096,7 +1093,7 @@ Solution<div class="summary-down docutils">
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../class_2/class_2.html" title="previous page">Class 2: Virtual Environments and Object-oriented Programming (OOP)</a>
-    <a class='right-next' id="next-link" href="../class_4/class_4.html" title="next page">Class 4: The Scientific Stack (Part I - <code class="docutils literal notranslate"><span class="pre">numpy</span></code>)</a>
+    <a class='right-next' id="next-link" href="../class_4/class_4.html" title="next page">Class 4: The Scientific Stack - Part I: <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a>
 
         </div>
         

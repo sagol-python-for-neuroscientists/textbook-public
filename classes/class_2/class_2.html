@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class 2: Virtual Environments and Object-oriented Programming (OOP) &#8212; Python for Neuroscience</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
@@ -132,18 +131,17 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_4/class_4.html">
-     Class 4: The Scientific Stack (Part I -
+     Class 4: The Scientific Stack - Part I:
      <code class="docutils literal notranslate">
       <span class="pre">
        numpy
       </span>
      </code>
-     )
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_5/class_5.html">
-     Class 5: The Scientific Stack (Part II -
+     Class 5: The Scientific Stack - Part II:
      <code class="docutils literal notranslate">
       <span class="pre">
        matplotlib
@@ -155,7 +153,6 @@
        pandas
       </span>
      </code>
-     )
     </a>
    </li>
    <li class="toctree-l2">
@@ -418,9 +415,9 @@
         
               <div>
                 
-  <section id="class-2-virtual-environments-and-object-oriented-programming-oop">
+  <div class="section" id="class-2-virtual-environments-and-object-oriented-programming-oop">
 <h1>Class 2: Virtual Environments and Object-oriented Programming (OOP)<a class="headerlink" href="#class-2-virtual-environments-and-object-oriented-programming-oop" title="Permalink to this headline">¶</a></h1>
-<section id="review">
+<div class="section" id="review">
 <h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Describe the function of the <code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> statements.</p></li>
@@ -465,34 +462,34 @@ Solution<div class="summary-down docutils">
 </pre></div>
 </div>
 </div>
-</details></section>
-<section id="virtual-environments">
+</details></div>
+<div class="section" id="virtual-environments">
 <h2>Virtual Environments<a class="headerlink" href="#virtual-environments" title="Permalink to this headline">¶</a></h2>
 <p>The basic idea is that <strong>every Python project you have should be contained within an isolated environment</strong>, which includes the interpreter and any libraries (i.e. external Python packages) that are needed for that specific project.</p>
-<section id="why-do-we-need-virtual-environments">
+<div class="section" id="why-do-we-need-virtual-environments">
 <h3>Why do we need virtual environments?<a class="headerlink" href="#why-do-we-need-virtual-environments" title="Permalink to this headline">¶</a></h3>
 <p>Once a project accumulates a number of dependencies (external Python packages used in your code), asserting compatibility between all components become tricky (see <a class="reference external" href="https://en.wikipedia.org/wiki/Dependency_hell"><strong>“dependency hell”</strong></a>). Python libraries are updated regularly, and each released version may introduce new bug fixes and features, or remove functionality that was flagged as depracated. Code that was written using one version of some external package will not necessarily run successfully using a different version. Virtual environments allow us to create as many isolated environments as we’d like, each containing only the libraries we need, and in the exact versions that guarantee compatibility.</p>
 <p><img alt="Summary of environments and namespaces" src="../../_images/envs.png" /></p>
 <p>If this concept feels a little vague, don’t be too worried. Once you’ve created a couple of virtual environments you’ll get it in no time.</p>
-</section>
-<section id="creating-a-virtual-environment">
+</div>
+<div class="section" id="creating-a-virtual-environment">
 <span id="create"></span><h3>Creating a Virtual Environment<a class="headerlink" href="#creating-a-virtual-environment" title="Permalink to this headline">¶</a></h3>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>To learn more about other available virtual environment management tools, see the <a class="reference internal" href="../../resources.html#resources-venv"><span class="std std-ref">Virtual Environments</span></a> section under <a class="reference internal" href="../../resources.html#resources"><span class="std std-ref">resources</span></a>.</p>
-</aside>
+</div>
 <p>There are numerous tools for creating and managing virtual environments with Python. In this course we will use <a class="reference external" href="https://docs.python.org/3/library/venv.html#module-venv"><code class="docutils literal notranslate"><span class="pre">venv</span></code></a>, which is one of Python’s built-in packages and is therefore a simple option that will always be available to you.</p>
 <p>Creating a new virtual environment with <code class="docutils literal notranslate"><span class="pre">venv</span></code> is as easy as running:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="2e0a71ed-4b5e-4a88-92e0-e2063417a132" name="cdd216fa-56a5-4366-b10f-31556f50d0a0" type="radio">
-</input><label class="tabbed-label" for="2e0a71ed-4b5e-4a88-92e0-e2063417a132">
+<input checked="checked" id="ff37ac32-980c-4cbf-93a3-c69e16237082" name="58dca6e0-e0f0-4414-a6b9-6474f0d3a4f1" type="radio">
+</input><label class="tabbed-label" for="ff37ac32-980c-4cbf-93a3-c69e16237082">
 Linux/macOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m venv /path/to/new/virtual/environment/
 </pre></div>
 </div>
 </div>
-<input id="0fcac520-53e4-45b1-a904-689f9ead05c7" name="cdd216fa-56a5-4366-b10f-31556f50d0a0" type="radio">
-</input><label class="tabbed-label" for="0fcac520-53e4-45b1-a904-689f9ead05c7">
+<input id="50795c9d-12f9-4a3b-8b00-b9d5c0aa613e" name="58dca6e0-e0f0-4414-a6b9-6474f0d3a4f1" type="radio">
+</input><label class="tabbed-label" for="50795c9d-12f9-4a3b-8b00-b9d5c0aa613e">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> C:\Python38\python -m venv C:\path\to\new\virtual\environment\
 </pre></div>
@@ -500,8 +497,8 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 </div>
 <p>We are calling <code class="docutils literal notranslate"><span class="pre">&lt;python</span> <span class="pre">binary&gt;</span> <span class="pre">-m</span></code> to execute the <code class="docutils literal notranslate"><span class="pre">venv</span></code> module as a script and pass it the path in which it should create the new virtual environment.</p>
-</section>
-<section id="the-virtual-environment-directory">
+</div>
+<div class="section" id="the-virtual-environment-directory">
 <h3>The Virtual Environment Directory<a class="headerlink" href="#the-virtual-environment-directory" title="Permalink to this headline">¶</a></h3>
 <p>Looking at the newly created virtual environment’s directory tree, please note the following files and folders:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>venv
@@ -523,22 +520,22 @@ Windows</label><div class="tabbed-content docutils">
 <li><p><code class="docutils literal notranslate"><span class="pre">venv/bin/activate</span></code>: A script we will use to activate the virtual environment (making the prior two files the default <code class="docutils literal notranslate"><span class="pre">python</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code> executables).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">lib/python3.8/site-packages/</span></code>: This directory will contain all external packages installed with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&lt;package-name&gt;</span></code> when our virtual environment is activated.</p></li>
 </ul>
-</section>
-<section id="activating-the-virtual-environment">
+</div>
+<div class="section" id="activating-the-virtual-environment">
 <h3>Activating the Virtual Environment<a class="headerlink" href="#activating-the-virtual-environment" title="Permalink to this headline">¶</a></h3>
 <p>Activating a virtual environment means modifying your working environment to use a particular, isolated installation of Python (created in <a class="reference internal" href="#create"><span class="std std-ref">Creating a Virtual Environment</span></a>). This will normally also “override” some other related CLI tools with those installed within the virtual environment’s <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory (such as <code class="docutils literal notranslate"><span class="pre">pip</span></code>), and sometimes also change some OS-related environment variables.</p>
 <p>To activate the virtual environment and use the newly created isolated Python environment, simply run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="bdd42935-7b74-4676-96d5-f72b948f79b4" name="beeca6b1-1961-4633-8de9-645b3f9d0330" type="radio">
-</input><label class="tabbed-label" for="bdd42935-7b74-4676-96d5-f72b948f79b4">
+<input checked="checked" id="0f3de116-f9f5-4e2e-be4b-ac61c4da82a5" name="98867103-3237-4b5f-a763-657683718889" type="radio">
+</input><label class="tabbed-label" for="0f3de116-f9f5-4e2e-be4b-ac61c4da82a5">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">source</span> &lt;venv&gt;/bin/activate
 </pre></div>
 </div>
 <p><em>* Replace <code class="docutils literal notranslate"><span class="pre">&lt;venv&gt;</span></code> with your virtual environment’s directory path.</em></p>
 </div>
-<input id="970045ab-f028-43bc-a470-a49cd3a69977" name="beeca6b1-1961-4633-8de9-645b3f9d0330" type="radio">
-</input><label class="tabbed-label" for="970045ab-f028-43bc-a470-a49cd3a69977">
+<input id="5ae50f26-f0c1-4de1-a3cd-2c9bdf19c6bc" name="98867103-3237-4b5f-a763-657683718889" type="radio">
+</input><label class="tabbed-label" for="5ae50f26-f0c1-4de1-a3cd-2c9bdf19c6bc">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> <span class="p">&lt;</span>venv<span class="p">&gt;</span>\Scripts\activate
 </pre></div>
@@ -549,16 +546,16 @@ Windows</label><div class="tabbed-content docutils">
 <p>You should now see your virtual environment’s directory name used as a prefix (<code class="docutils literal notranslate"><span class="pre">(venv)</span></code>) in your terminal window.</p>
 <p>To validate the activation, run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="dd36afee-7447-4c7f-bd88-b9e21c91b679" name="3ec1a280-cf46-4ca0-8cab-0c9fb6b7b03c" type="radio">
-</input><label class="tabbed-label" for="dd36afee-7447-4c7f-bd88-b9e21c91b679">
+<input checked="checked" id="e1f48673-e029-419f-9369-fa14d036126a" name="2e5238a3-0b7c-4c7c-8e45-6bf06c9b928c" type="radio">
+</input><label class="tabbed-label" for="e1f48673-e029-419f-9369-fa14d036126a">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$ </span>which python
 <span class="go">&lt;venv&gt;/bin/python</span>
 </pre></div>
 </div>
 </div>
-<input id="5c0542f2-b7da-45a4-b961-9a9626961a64" name="3ec1a280-cf46-4ca0-8cab-0c9fb6b7b03c" type="radio">
-</input><label class="tabbed-label" for="5c0542f2-b7da-45a4-b961-9a9626961a64">
+<input id="eb8fdc6e-8866-410d-b5cb-e19cbd0cdbf8" name="2e5238a3-0b7c-4c7c-8e45-6bf06c9b928c" type="radio">
+</input><label class="tabbed-label" for="eb8fdc6e-8866-410d-b5cb-e19cbd0cdbf8">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">C:\&gt;</span> where python
 <span class="gp">&lt;venv&gt;</span>\Scripts\python
@@ -584,11 +581,11 @@ Windows</label><div class="tabbed-content docutils">
 <li><p>Publish this project to your GitHub account.</p></li>
 </ol>
 </div>
-</section>
-</section>
-<section id="object-oriented-programming-part-1">
+</div>
+</div>
+<div class="section" id="object-oriented-programming-part-1">
 <h2>Object-Oriented Programming: Part 1<a class="headerlink" href="#object-oriented-programming-part-1" title="Permalink to this headline">¶</a></h2>
-<section id="introduction">
+<div class="section" id="introduction">
 <h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
 <p>There are three main programming paradigms in use in mainstream programming languages:</p>
 <ul class="simple">
@@ -597,8 +594,8 @@ Windows</label><div class="tabbed-content docutils">
 <li><p>Object-oriented</p></li>
 </ul>
 <p>While the <em>functional</em> paradigm is very interesting, we will not be discussing it in this course. You can read about Haskell, OCaml, F# and other functional programming languages wherever you get your information from.</p>
-</section>
-<section id="procedural-programming">
+</div>
+<div class="section" id="procedural-programming">
 <h3>Procedural Programming<a class="headerlink" href="#procedural-programming" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=Ct-lOOUqmyY"><img alt="Procedural Programming PB&amp;J" src="http://img.youtube.com/vi/Ct-lOOUqmyY/0.jpg" /></a></p>
 <p>The <em>procedural</em> paradigm is the most widely used paradigm… in the academia. And it’s probably the one you’re most familiar with from your work with MATLAB.</p>
@@ -739,14 +736,14 @@ Windows</label><div class="tabbed-content docutils">
 </li>
 </ul>
 <p>While procedural programming works great for most simple tasks, it might be considered inferior when writing code that is meant to scale and be collaborated on.</p>
-</section>
-<section id="classes-and-objects">
+</div>
+<div class="section" id="classes-and-objects">
 <h3>Classes and Objects<a class="headerlink" href="#classes-and-objects" title="Permalink to this headline">¶</a></h3>
 <p>Classes are user-defined types. Just like <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">dict</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code> and the rest of the standard types, Python allows us to create our own types.</p>
 <p>Objects are <em>instances</em> of classes, they’re an instance of a type we made. Actually, all instances of all types are objects in Python. It means that every variable and function in Python are, by themselves, an instance of a type. A function you make is an instance of the <code class="docutils literal notranslate"><span class="pre">function</span></code> type, for example. We’ll get to this during later stages of the course.</p>
 <p>Classes are a type of abstraction we create with our code. A variable is the most simple type of abstraction - it’s a <em>thing</em> that is closely tied to a “real value” in a very simple relationship: My variable <span class="math notranslate nohighlight">\(x\)</span> represents the value <span class="math notranslate nohighlight">\(y\)</span>.</p>
 <p>Classes are more abstract - they don’t relate to a specific value directly, but rather they try to convey an idea of an object.</p>
-<section id="example-i-the-point-class">
+<div class="section" id="example-i-the-point-class">
 <h4>Example I: The <code class="docutils literal notranslate"><span class="pre">Point</span></code> Class<a class="headerlink" href="#example-i-the-point-class" title="Permalink to this headline">¶</a></h4>
 <p>To show what we mean by “our own type”, we’ll define the <code class="docutils literal notranslate"><span class="pre">Point</span></code> type.</p>
 <p>So, what is a point?</p>
@@ -784,7 +781,7 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7fe8a85445e0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7fbb080fedc0&gt;
 </pre></div>
 </div>
 </div>
@@ -894,8 +891,8 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 </details></div>
-</section>
-<section id="example-ii-rectangles">
+</div>
+<div class="section" id="example-ii-rectangles">
 <h4>Example II: Rectangles<a class="headerlink" href="#example-ii-rectangles" title="Permalink to this headline">¶</a></h4>
 <p>Take a minute to think how you would implement a <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> class.</p>
 <p>Here are a couple of options:</p>
@@ -934,7 +931,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7fe8a850c1c0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7fbb080e5d90&gt;
 </pre></div>
 </div>
 </div>
@@ -1019,8 +1016,8 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 </div>
-</section>
-<section id="methods">
+</div>
+<div class="section" id="methods">
 <h4>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h4>
 <p>We really haven’t done object-oriented programming yet. Our objects currently contain only data (as attributes), and we wrote independent functions to manipulate them as required. <em>Methods</em> are functions bound to objects, describing actions they can do, or that can be done to them.</p>
 <p>For example, a real-world car can drive. So a <code class="docutils literal notranslate"><span class="pre">Car</span></code> object should have a <code class="docutils literal notranslate"><span class="pre">drive()</span></code> method. It should also have a <code class="docutils literal notranslate"><span class="pre">park()</span></code> method, and a couple of attributes, like <code class="docutils literal notranslate"><span class="pre">number_of_wheels</span></code>, <code class="docutils literal notranslate"><span class="pre">manufacturer</span></code> and <code class="docutils literal notranslate"><span class="pre">model</span></code>.</p>
@@ -1102,13 +1099,13 @@ After:	p.x: 20, p.y: 10
 <li><p>Add the <code class="docutils literal notranslate"><span class="pre">y</span></code> attribute: <code class="docutils literal notranslate"><span class="pre">p.y</span> <span class="pre">=</span> <span class="pre">3</span></code></p></li>
 </ol>
 <p>First, it would be nice if we could make this process shorter. Second, the Point instance is really unusable unless it has both attributes <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code> set, so we want to make sure that we don’t have a Point without both <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>. This is accomplished by the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method.</p>
-</section>
-<section id="the-init-method">
+</div>
+<div class="section" id="the-init-method">
 <h4>The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> Method<a class="headerlink" href="#the-init-method" title="Permalink to this headline">¶</a></h4>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p><code class="docutils literal notranslate"><span class="pre">__init__()</span></code> is one example of a <em>dunder</em> method. <em>dunder</em> is short for <em>double underscore</em> and generally implies an internal (structural) part of the class itself.</p>
-</aside>
+</div>
 <p>Classes have several special methods attached to them. While most are out of the scope of this course, the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method is regularly used and we should definitely familiarize ourselves with it.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> methods allows us to define our class attributes inside the class definition:</p>
 <div class="cell docutils container">
@@ -1289,8 +1286,8 @@ p.x: 20, p.y: 10
 </div>
 </div>
 <p>Note how the object modifies itself and acts upon itself using its methods. We’re not modifying the internal parts of the instance ourselves, we let the methods do it for us.</p>
-</section>
-<section id="the-str-method">
+</div>
+<div class="section" id="the-str-method">
 <h4>The <code class="docutils literal notranslate"><span class="pre">__str__</span></code> Method<a class="headerlink" href="#the-str-method" title="Permalink to this headline">¶</a></h4>
 <p>Another interesting <em>dunder</em> (<em>“double underscore”</em>) method is the <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method, which defines what an instance of the class will show when invoked with the <code class="docutils literal notranslate"><span class="pre">print(class_instance)</span></code> command. For example:</p>
 <div class="cell docutils container">
@@ -1387,8 +1384,8 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 </details></div>
-</section>
-<section id="operator-overloading">
+</div>
+<div class="section" id="operator-overloading">
 <h4>Operator Overloading<a class="headerlink" href="#operator-overloading" title="Permalink to this headline">¶</a></h4>
 <p>One of the most interesting properties of Python (although it’s not unique to it) is <a class="reference external" href="https://en.wikipedia.org/wiki/Operator_overloading">operator overloading</a>. It means that we can force our self-declared types (i.e. classes) to behave in a certain way with the standard mathematical operations.</p>
 <p>We’ll use the ShoppingList class as an example. Say we want to <strong>add</strong> two different shopping lists. Naively, we might just try the following:</p>
@@ -1594,9 +1591,9 @@ Solution<div class="summary-down docutils">
 <p class="admonition-title">Note</p>
 <p>To learn more about other Python operators, see <a class="reference external" href="https://www.python-course.eu/python3_magic_methods.php">this overview</a>.</p>
 </div>
-</section>
-</section>
-<section id="summary">
+</div>
+</div>
+<div class="section" id="summary">
 <h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
 <p>OOP is the most important programming paradigm for you to master on your Python journey. Some problems fit this paradigm hand in glove, however, it’s not the “ultimate” answer to any design difficulty you have. Some problems <em>can</em> be solved by using intricate objects and multiple inheritance, but in reality they’re much simpler when solved using a procedural design. Remember to write code that humans, and especially your future self, can read and understand.</p>
 <p>With that being said, throughout this course I prefer you write too many objects over writing too few. Whether you’ll be writing new objects every day or not, you will certainly be using them any time you write Python code, and creating classes will nurture your confidence when doing so.</p>
@@ -1738,9 +1735,9 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 </details></div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
