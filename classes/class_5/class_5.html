@@ -640,7 +640,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f451d4a5d60&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f9ccc161bb0&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/class_5_9_1.png" src="../../_images/class_5_9_1.png" />
@@ -883,7 +883,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;__header__&#39;: b&#39;MATLAB 5.0 MAT-file Platform: posix, Created on: Mon Apr 19 13:08:31 2021&#39;,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;__header__&#39;: b&#39;MATLAB 5.0 MAT-file Platform: posix, Created on: Mon Apr 19 14:28:52 2021&#39;,
  &#39;__version__&#39;: &#39;1.0&#39;,
  &#39;__globals__&#39;: [],
  &#39;a&#39;: array([[1., 1., 1.],
@@ -949,7 +949,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2.70256758 1.47916378]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2.71682008 1.53399484]
 </pre></div>
 </div>
 </div>
@@ -977,7 +977,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ttest_indResult(statistic=-5.887191376557915, pvalue=4.494084054230757e-08)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ttest_indResult(statistic=-4.651739065397736, pvalue=9.382242400653341e-06)
 </pre></div>
 </div>
 <img alt="../../_images/class_5_43_1.png" src="../../_images/class_5_43_1.png" />
@@ -1010,7 +1010,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>363 ns ± 5.44 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>380 ns ± 3.8 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1022,7 +1022,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>794 µs ± 14.6 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>757 µs ± 5.79 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1067,7 +1067,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1618837721.4665856
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1618842542.1268034
 </pre></div>
 </div>
 </div>
@@ -1229,33 +1229,6 @@ The <code class="docutils literal notranslate"><span class="pre">match_template(
 <img alt="../../_images/class_5_74_0.png" src="../../_images/class_5_74_0.png" />
 </div>
 </div>
-<p>`````{admonition} Exercise: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>’s Object-oriented Interface</p>
-<ol class="simple">
-<li><p>Create 1000 normally-distributed data points and use a histogram to visualize the result. Overlay the histogram with a dashed line showing the theoretical normal distribution we would expect from the data.</p></li>
-</ol>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
-<span class="kn">import</span> <span class="nn">scipy.stats</span>
-
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-<span class="n">x_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">)</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
-        <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># the &quot;density&quot; keyword simplifies the scaling</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;--&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </div>
 <div class="section" id="exercise-matplotlib-s-object-oriented-interface">
@@ -1278,7 +1251,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_78_0.png" src="../../_images/class_5_78_0.png" />
+<img alt="../../_images/class_5_77_0.png" src="../../_images/class_5_77_0.png" />
 </div>
 </div>
 <ol class="simple">
@@ -1293,7 +1266,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_80_0.png" src="../../_images/class_5_80_0.png" />
+<img alt="../../_images/class_5_79_0.png" src="../../_images/class_5_79_0.png" />
 </div>
 </div>
 <ol class="simple">
@@ -1324,7 +1297,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_82_0.png" src="../../_images/class_5_82_0.png" />
+<img alt="../../_images/class_5_81_0.png" src="../../_images/class_5_81_0.png" />
 </div>
 </div>
 </div>
@@ -1992,29 +1965,29 @@ Columns:	Index([&#39;population&#39;, &#39;medals&#39;], dtype=&#39;object&#39;)
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.278614</td>
-      <td>0.881612</td>
-      <td>0.709999</td>
-      <td>0.849811</td>
-      <td>0.284188</td>
-      <td>0.209544</td>
-      <td>0.092209</td>
-      <td>0.562762</td>
-      <td>0.465552</td>
-      <td>0.766368</td>
+      <td>0.103962</td>
+      <td>0.713636</td>
+      <td>0.921422</td>
+      <td>0.727453</td>
+      <td>0.704845</td>
+      <td>0.635302</td>
+      <td>0.281359</td>
+      <td>0.093962</td>
+      <td>0.429757</td>
+      <td>0.335479</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.283775</td>
-      <td>0.107153</td>
-      <td>0.404846</td>
-      <td>0.247128</td>
-      <td>0.293207</td>
-      <td>0.371923</td>
-      <td>0.985923</td>
-      <td>0.492655</td>
-      <td>0.478141</td>
-      <td>0.186290</td>
+      <td>0.499552</td>
+      <td>0.450764</td>
+      <td>0.681050</td>
+      <td>0.993262</td>
+      <td>0.001607</td>
+      <td>0.830660</td>
+      <td>0.578821</td>
+      <td>0.859396</td>
+      <td>0.831767</td>
+      <td>0.932432</td>
     </tr>
   </tbody>
 </table>
@@ -2289,7 +2262,7 @@ Name: three, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_160_0.png" src="../../_images/class_5_160_0.png" />
+<img alt="../../_images/class_5_159_0.png" src="../../_images/class_5_159_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2299,7 +2272,7 @@ Name: three, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_161_0.png" src="../../_images/class_5_161_0.png" />
+<img alt="../../_images/class_5_160_0.png" src="../../_images/class_5_160_0.png" />
 </div>
 </div>
 <p>More plotting methods will be shown in class 8.</p>
@@ -2386,7 +2359,7 @@ Name: three, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_167_0.png" src="../../_images/class_5_167_0.png" />
+<img alt="../../_images/class_5_166_0.png" src="../../_images/class_5_166_0.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note that the DataFrame itself didn&#39;t change:
 
             population  medals  rel_medals  area
@@ -3155,7 +3128,7 @@ Name: Population, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_205_0.png" src="../../_images/class_5_205_0.png" />
+<img alt="../../_images/class_5_204_0.png" src="../../_images/class_5_204_0.png" />
 </div>
 </div>
 <p><strong>Basics #2</strong></p>
@@ -3209,63 +3182,63 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.459894</td>
-      <td>0.104863</td>
-      <td>0.377330</td>
+      <td>0.365006</td>
+      <td>0.164453</td>
+      <td>0.103982</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.000907</td>
-      <td>0.523438</td>
-      <td>0.140680</td>
+      <td>0.402445</td>
+      <td>0.017509</td>
+      <td>0.618949</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>0.505290</td>
-      <td>0.349952</td>
-      <td>0.968822</td>
+      <td>0.594623</td>
+      <td>0.502419</td>
+      <td>0.464920</td>
     </tr>
     <tr>
       <th>d</th>
-      <td>0.296701</td>
-      <td>0.796091</td>
-      <td>0.879177</td>
+      <td>0.760919</td>
+      <td>0.113071</td>
+      <td>0.166907</td>
     </tr>
     <tr>
       <th>e</th>
-      <td>0.470921</td>
-      <td>0.074554</td>
-      <td>0.030015</td>
+      <td>0.857417</td>
+      <td>0.941928</td>
+      <td>0.204233</td>
     </tr>
     <tr>
       <th>f</th>
-      <td>0.536863</td>
-      <td>0.300272</td>
-      <td>0.464809</td>
+      <td>0.893822</td>
+      <td>0.595265</td>
+      <td>0.216696</td>
     </tr>
     <tr>
       <th>g</th>
-      <td>0.837434</td>
-      <td>0.494850</td>
-      <td>0.658585</td>
+      <td>0.795484</td>
+      <td>0.625108</td>
+      <td>0.156329</td>
     </tr>
     <tr>
       <th>h</th>
-      <td>0.493465</td>
-      <td>0.161123</td>
-      <td>0.979498</td>
+      <td>0.473651</td>
+      <td>0.904282</td>
+      <td>0.520335</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>0.870896</td>
-      <td>0.942803</td>
-      <td>0.565810</td>
+      <td>0.661444</td>
+      <td>0.478608</td>
+      <td>0.396702</td>
     </tr>
     <tr>
       <th>j</th>
-      <td>0.247285</td>
-      <td>0.327300</td>
-      <td>0.382481</td>
+      <td>0.514329</td>
+      <td>0.090771</td>
+      <td>0.809817</td>
     </tr>
   </tbody>
 </table>
@@ -3281,16 +3254,16 @@ Name: Population, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[4.59894197e-01, 1.04862839e-01, 3.77329829e-01],
-       [9.07113071e-04, 5.23437550e-01, 1.40680224e-01],
-       [5.05290480e-01, 3.49952159e-01, 9.68822206e-01],
-       [2.96700958e-01, 7.96091246e-01, 8.79177250e-01],
-       [4.70921267e-01, 7.45536797e-02, 3.00150571e-02],
-       [5.36862550e-01, 3.00272451e-01, 4.64809202e-01],
-       [8.37434165e-01, 4.94850157e-01, 6.58585069e-01],
-       [4.93465289e-01, 1.61122804e-01, 9.79498461e-01],
-       [8.70896070e-01, 9.42803277e-01, 5.65809890e-01],
-       [2.47284893e-01, 3.27299681e-01, 3.82481157e-01]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.36500586, 0.16445305, 0.10398241],
+       [0.40244462, 0.01750949, 0.61894917],
+       [0.59462345, 0.50241888, 0.46491972],
+       [0.76091891, 0.11307053, 0.16690713],
+       [0.85741656, 0.9419284 , 0.20423275],
+       [0.89382237, 0.59526544, 0.21669556],
+       [0.7954838 , 0.62510762, 0.15632864],
+       [0.47365136, 0.90428187, 0.52033548],
+       [0.661444  , 0.47860808, 0.39670197],
+       [0.51432893, 0.09077121, 0.80981654]])
 </pre></div>
 </div>
 </div>
@@ -3333,73 +3306,73 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.459894</td>
-      <td>0.104863</td>
-      <td>0.377330</td>
-      <td>0.837224</td>
+      <td>0.365006</td>
+      <td>0.164453</td>
+      <td>0.103982</td>
+      <td>0.468988</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.000907</td>
-      <td>0.523438</td>
-      <td>0.140680</td>
-      <td>0.141587</td>
+      <td>0.402445</td>
+      <td>0.017509</td>
+      <td>0.618949</td>
+      <td>1.021394</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>0.505290</td>
-      <td>0.349952</td>
-      <td>0.968822</td>
-      <td>1.474113</td>
+      <td>0.594623</td>
+      <td>0.502419</td>
+      <td>0.464920</td>
+      <td>1.059543</td>
     </tr>
     <tr>
       <th>d</th>
-      <td>0.296701</td>
-      <td>0.796091</td>
-      <td>0.879177</td>
-      <td>1.175878</td>
+      <td>0.760919</td>
+      <td>0.113071</td>
+      <td>0.166907</td>
+      <td>0.927826</td>
     </tr>
     <tr>
       <th>e</th>
-      <td>0.470921</td>
-      <td>0.074554</td>
-      <td>0.030015</td>
-      <td>0.500936</td>
+      <td>0.857417</td>
+      <td>0.941928</td>
+      <td>0.204233</td>
+      <td>1.061649</td>
     </tr>
     <tr>
       <th>f</th>
-      <td>0.536863</td>
-      <td>0.300272</td>
-      <td>0.464809</td>
-      <td>1.001672</td>
+      <td>0.893822</td>
+      <td>0.595265</td>
+      <td>0.216696</td>
+      <td>1.110518</td>
     </tr>
     <tr>
       <th>g</th>
-      <td>0.837434</td>
-      <td>0.494850</td>
-      <td>0.658585</td>
-      <td>1.496019</td>
+      <td>0.795484</td>
+      <td>0.625108</td>
+      <td>0.156329</td>
+      <td>0.951812</td>
     </tr>
     <tr>
       <th>h</th>
-      <td>0.493465</td>
-      <td>0.161123</td>
-      <td>0.979498</td>
-      <td>1.472964</td>
+      <td>0.473651</td>
+      <td>0.904282</td>
+      <td>0.520335</td>
+      <td>0.993987</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>0.870896</td>
-      <td>0.942803</td>
-      <td>0.565810</td>
-      <td>1.436706</td>
+      <td>0.661444</td>
+      <td>0.478608</td>
+      <td>0.396702</td>
+      <td>1.058146</td>
     </tr>
     <tr>
       <th>j</th>
-      <td>0.247285</td>
-      <td>0.327300</td>
-      <td>0.382481</td>
-      <td>0.629766</td>
+      <td>0.514329</td>
+      <td>0.090771</td>
+      <td>0.809817</td>
+      <td>1.324145</td>
     </tr>
   </tbody>
 </table>
@@ -3418,7 +3391,7 @@ Name: Population, dtype: float64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;one&#39;, ylabel=&#39;five&#39;&gt;
 </pre></div>
 </div>
-<img alt="../../_images/class_5_213_1.png" src="../../_images/class_5_213_1.png" />
+<img alt="../../_images/class_5_212_1.png" src="../../_images/class_5_212_1.png" />
 </div>
 </div>
 <ul class="simple">
@@ -3459,73 +3432,73 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.443853</td>
-      <td>0.104671</td>
-      <td>0.368439</td>
-      <td>0.742787</td>
+      <td>0.356955</td>
+      <td>0.163713</td>
+      <td>0.103795</td>
+      <td>0.451984</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.000907</td>
-      <td>0.499860</td>
-      <td>0.140217</td>
-      <td>0.141115</td>
+      <td>0.391669</td>
+      <td>0.017509</td>
+      <td>0.580180</td>
+      <td>0.852837</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>0.484062</td>
-      <td>0.342853</td>
-      <td>0.824219</td>
-      <td>0.995330</td>
+      <td>0.560197</td>
+      <td>0.481547</td>
+      <td>0.448351</td>
+      <td>0.872132</td>
     </tr>
     <tr>
       <th>d</th>
-      <td>0.292367</td>
-      <td>0.714627</td>
-      <td>0.770214</td>
-      <td>0.923028</td>
+      <td>0.689587</td>
+      <td>0.112830</td>
+      <td>0.166133</td>
+      <td>0.800318</td>
     </tr>
     <tr>
       <th>e</th>
-      <td>0.453707</td>
-      <td>0.074485</td>
-      <td>0.030011</td>
-      <td>0.480247</td>
+      <td>0.756154</td>
+      <td>0.808694</td>
+      <td>0.202816</td>
+      <td>0.873161</td>
     </tr>
     <tr>
       <th>f</th>
-      <td>0.511442</td>
-      <td>0.295780</td>
-      <td>0.448252</td>
-      <td>0.842373</td>
+      <td>0.779472</td>
+      <td>0.560729</td>
+      <td>0.215004</td>
+      <td>0.895929</td>
     </tr>
     <tr>
       <th>g</th>
-      <td>0.742928</td>
-      <td>0.474900</td>
-      <td>0.611998</td>
-      <td>0.997205</td>
+      <td>0.714202</td>
+      <td>0.585185</td>
+      <td>0.155693</td>
+      <td>0.814468</td>
     </tr>
     <tr>
       <th>h</th>
-      <td>0.473681</td>
-      <td>0.160427</td>
-      <td>0.830218</td>
-      <td>0.995218</td>
+      <td>0.456139</td>
+      <td>0.785981</td>
+      <td>0.497171</td>
+      <td>0.838207</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>0.764906</td>
-      <td>0.809208</td>
-      <td>0.536100</td>
-      <td>0.991023</td>
+      <td>0.614257</td>
+      <td>0.460544</td>
+      <td>0.386379</td>
+      <td>0.871448</td>
     </tr>
     <tr>
       <th>j</th>
-      <td>0.244772</td>
-      <td>0.321487</td>
-      <td>0.373223</td>
-      <td>0.588956</td>
+      <td>0.491951</td>
+      <td>0.090647</td>
+      <td>0.724161</td>
+      <td>0.969736</td>
     </tr>
   </tbody>
 </table>
@@ -3588,45 +3561,45 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>2018-01-31</th>
-      <td>0.837843</td>
-      <td>-0.823259</td>
-      <td>-0.475530</td>
-      <td>-2.371961</td>
+      <td>0.627700</td>
+      <td>0.111338</td>
+      <td>-0.598765</td>
+      <td>0.235676</td>
     </tr>
     <tr>
       <th>2018-02-28</th>
-      <td>-0.691582</td>
-      <td>-1.425472</td>
-      <td>-1.836323</td>
-      <td>-0.482717</td>
+      <td>0.557598</td>
+      <td>2.452037</td>
+      <td>-0.937856</td>
+      <td>-0.902909</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
-      <td>0.119870</td>
-      <td>-1.422682</td>
+      <td>-0.636739</td>
+      <td>-1.060545</td>
       <td>NaN</td>
-      <td>-0.113272</td>
+      <td>1.041722</td>
     </tr>
     <tr>
       <th>2018-04-30</th>
-      <td>0.876429</td>
-      <td>-0.810680</td>
-      <td>1.803677</td>
-      <td>-0.064199</td>
+      <td>1.499155</td>
+      <td>-0.211029</td>
+      <td>1.938053</td>
+      <td>0.541647</td>
     </tr>
     <tr>
       <th>2018-05-31</th>
-      <td>0.022402</td>
-      <td>-0.523400</td>
-      <td>0.626395</td>
-      <td>-0.544083</td>
+      <td>-0.829427</td>
+      <td>-0.028743</td>
+      <td>-1.110253</td>
+      <td>-0.542207</td>
     </tr>
     <tr>
       <th>2018-06-30</th>
-      <td>-0.449151</td>
-      <td>2.049585</td>
-      <td>0.288940</td>
-      <td>1.407413</td>
+      <td>-0.612830</td>
+      <td>-1.334837</td>
+      <td>-1.278343</td>
+      <td>0.394124</td>
     </tr>
   </tbody>
 </table>
@@ -3680,23 +3653,23 @@ Name: Population, dtype: float64
     <tr>
       <th>2018-01-31</th>
       <td>0</td>
-      <td>-0.823259</td>
-      <td>-0.475530</td>
-      <td>-2.371961</td>
+      <td>0.111338</td>
+      <td>-0.598765</td>
+      <td>0.235676</td>
     </tr>
     <tr>
       <th>2018-02-28</th>
       <td>0</td>
-      <td>-1.425472</td>
-      <td>-1.836323</td>
-      <td>-0.482717</td>
+      <td>2.452037</td>
+      <td>-0.937856</td>
+      <td>-0.902909</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
       <td>0</td>
-      <td>-1.422682</td>
+      <td>-1.060545</td>
       <td>NaN</td>
-      <td>-0.113272</td>
+      <td>1.041722</td>
     </tr>
   </tbody>
 </table>
@@ -3736,59 +3709,59 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>count</th>
-      <td>6.0</td>
+      <td>6.000000</td>
       <td>6.000000</td>
       <td>5.000000</td>
       <td>6.000000</td>
     </tr>
     <tr>
       <th>mean</th>
-      <td>0.0</td>
-      <td>-0.492651</td>
-      <td>0.081432</td>
-      <td>-0.361470</td>
+      <td>0.166667</td>
+      <td>-0.011963</td>
+      <td>-0.397433</td>
+      <td>0.128009</td>
     </tr>
     <tr>
       <th>std</th>
-      <td>0.0</td>
-      <td>1.296878</td>
-      <td>1.350386</td>
-      <td>1.214005</td>
+      <td>0.408248</td>
+      <td>1.339845</td>
+      <td>1.329586</td>
+      <td>0.721160</td>
     </tr>
     <tr>
       <th>min</th>
-      <td>0.0</td>
-      <td>-1.425472</td>
-      <td>-1.836323</td>
-      <td>-2.371961</td>
+      <td>0.000000</td>
+      <td>-1.334837</td>
+      <td>-1.278343</td>
+      <td>-0.902909</td>
     </tr>
     <tr>
       <th>25%</th>
-      <td>0.0</td>
-      <td>-1.272826</td>
-      <td>-0.475530</td>
-      <td>-0.528741</td>
+      <td>0.000000</td>
+      <td>-0.848166</td>
+      <td>-1.110253</td>
+      <td>-0.347736</td>
     </tr>
     <tr>
       <th>50%</th>
-      <td>0.0</td>
-      <td>-0.816969</td>
-      <td>0.288940</td>
-      <td>-0.297995</td>
+      <td>0.000000</td>
+      <td>-0.119886</td>
+      <td>-0.937856</td>
+      <td>0.314900</td>
     </tr>
     <tr>
       <th>75%</th>
-      <td>0.0</td>
-      <td>-0.595220</td>
-      <td>0.626395</td>
-      <td>-0.076467</td>
+      <td>0.000000</td>
+      <td>0.076318</td>
+      <td>-0.598765</td>
+      <td>0.504766</td>
     </tr>
     <tr>
       <th>max</th>
-      <td>0.0</td>
-      <td>2.049585</td>
-      <td>1.803677</td>
-      <td>1.407413</td>
+      <td>1.000000</td>
+      <td>2.452037</td>
+      <td>1.938053</td>
+      <td>1.041722</td>
     </tr>
   </tbody>
 </table>
@@ -3834,46 +3807,46 @@ Name: Population, dtype: float64
   </thead>
   <tbody>
     <tr>
-      <th>2018-02-28</th>
-      <td>0</td>
-      <td>-1.425472</td>
-      <td>-1.836323</td>
-      <td>-0.482717</td>
-    </tr>
-    <tr>
-      <th>2018-01-31</th>
-      <td>0</td>
-      <td>-0.823259</td>
-      <td>-0.475530</td>
-      <td>-2.371961</td>
-    </tr>
-    <tr>
       <th>2018-06-30</th>
       <td>0</td>
-      <td>2.049585</td>
-      <td>0.288940</td>
-      <td>1.407413</td>
+      <td>-1.334837</td>
+      <td>-1.278343</td>
+      <td>0.394124</td>
     </tr>
     <tr>
       <th>2018-05-31</th>
       <td>0</td>
-      <td>-0.523400</td>
-      <td>0.626395</td>
-      <td>-0.544083</td>
+      <td>-0.028743</td>
+      <td>-1.110253</td>
+      <td>-0.542207</td>
+    </tr>
+    <tr>
+      <th>2018-02-28</th>
+      <td>0</td>
+      <td>2.452037</td>
+      <td>-0.937856</td>
+      <td>-0.902909</td>
+    </tr>
+    <tr>
+      <th>2018-01-31</th>
+      <td>0</td>
+      <td>0.111338</td>
+      <td>-0.598765</td>
+      <td>0.235676</td>
     </tr>
     <tr>
       <th>2018-04-30</th>
-      <td>0</td>
-      <td>-0.810680</td>
-      <td>1.803677</td>
-      <td>-0.064199</td>
+      <td>1</td>
+      <td>-0.211029</td>
+      <td>1.938053</td>
+      <td>0.541647</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
       <td>0</td>
-      <td>-1.422682</td>
+      <td>-1.060545</td>
       <td>NaN</td>
-      <td>-0.113272</td>
+      <td>1.041722</td>
     </tr>
   </tbody>
 </table>
@@ -3918,44 +3891,44 @@ Name: Population, dtype: float64
     <tr>
       <th>2018-01-31</th>
       <td>0</td>
-      <td>-0.823259</td>
-      <td>-0.475530</td>
-      <td>-2.371961</td>
+      <td>0.111338</td>
+      <td>-0.598765</td>
+      <td>0.235676</td>
     </tr>
     <tr>
       <th>2018-02-28</th>
       <td>0</td>
-      <td>-1.425472</td>
-      <td>-1.836323</td>
-      <td>-0.482717</td>
+      <td>2.452037</td>
+      <td>-0.937856</td>
+      <td>-0.902909</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
       <td>0</td>
-      <td>-1.422682</td>
+      <td>-1.060545</td>
       <td>NaN</td>
-      <td>-0.113272</td>
+      <td>1.041722</td>
     </tr>
     <tr>
       <th>2018-04-30</th>
-      <td>0</td>
-      <td>-0.810680</td>
-      <td>1.803677</td>
-      <td>-0.064199</td>
+      <td>1</td>
+      <td>-0.211029</td>
+      <td>1.938053</td>
+      <td>0.541647</td>
     </tr>
     <tr>
       <th>2018-05-31</th>
       <td>0</td>
-      <td>-0.523400</td>
-      <td>0.626395</td>
-      <td>-0.544083</td>
+      <td>-0.028743</td>
+      <td>-1.110253</td>
+      <td>-0.542207</td>
     </tr>
     <tr>
       <th>2018-06-30</th>
       <td>0</td>
-      <td>2.049585</td>
-      <td>0.288940</td>
-      <td>1.407413</td>
+      <td>-1.334837</td>
+      <td>-1.278343</td>
+      <td>0.394124</td>
     </tr>
   </tbody>
 </table>
@@ -3994,46 +3967,46 @@ Name: Population, dtype: float64
   </thead>
   <tbody>
     <tr>
-      <th>2018-02-28</th>
-      <td>0</td>
-      <td>-1.425472</td>
-      <td>-1.836323</td>
-      <td>-0.482717</td>
-    </tr>
-    <tr>
-      <th>2018-01-31</th>
-      <td>0</td>
-      <td>-0.823259</td>
-      <td>-0.475530</td>
-      <td>-2.371961</td>
-    </tr>
-    <tr>
       <th>2018-06-30</th>
       <td>0</td>
-      <td>2.049585</td>
-      <td>0.288940</td>
-      <td>1.407413</td>
+      <td>-1.334837</td>
+      <td>-1.278343</td>
+      <td>0.394124</td>
     </tr>
     <tr>
       <th>2018-05-31</th>
       <td>0</td>
-      <td>-0.523400</td>
-      <td>0.626395</td>
-      <td>-0.544083</td>
+      <td>-0.028743</td>
+      <td>-1.110253</td>
+      <td>-0.542207</td>
+    </tr>
+    <tr>
+      <th>2018-02-28</th>
+      <td>0</td>
+      <td>2.452037</td>
+      <td>-0.937856</td>
+      <td>-0.902909</td>
+    </tr>
+    <tr>
+      <th>2018-01-31</th>
+      <td>0</td>
+      <td>0.111338</td>
+      <td>-0.598765</td>
+      <td>0.235676</td>
     </tr>
     <tr>
       <th>2018-04-30</th>
-      <td>0</td>
-      <td>-0.810680</td>
-      <td>1.803677</td>
-      <td>-0.064199</td>
+      <td>1</td>
+      <td>-0.211029</td>
+      <td>1.938053</td>
+      <td>0.541647</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
       <td>0</td>
-      <td>-1.422682</td>
+      <td>-1.060545</td>
       <td>NaN</td>
-      <td>-0.113272</td>
+      <td>1.041722</td>
     </tr>
   </tbody>
 </table>
@@ -4050,7 +4023,7 @@ Name: Population, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.049584856452023
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.4520374435282224
 </pre></div>
 </div>
 </div>
@@ -4063,7 +4036,7 @@ Name: Population, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3206648697811305
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.1624360881249236
 </pre></div>
 </div>
 </div>
@@ -4106,78 +4079,78 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>-0.238660</td>
-      <td>0.876192</td>
+      <td>0.635328</td>
+      <td>-0.848870</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.531955</td>
-      <td>-0.048088</td>
+      <td>0.902002</td>
+      <td>0.964342</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>-0.601983</td>
-      <td>0.775732</td>
+      <td>-0.989178</td>
+      <td>0.087285</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.005668</td>
-      <td>-0.756392</td>
+      <td>0.380045</td>
+      <td>0.651073</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.315496</td>
-      <td>0.835919</td>
+      <td>-0.359226</td>
+      <td>0.255170</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>-0.374929</td>
-      <td>0.574503</td>
+      <td>0.484193</td>
+      <td>-0.600730</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.051105</td>
-      <td>-0.162042</td>
+      <td>-0.765290</td>
+      <td>0.113989</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.255381</td>
-      <td>-0.214226</td>
+      <td>-0.611108</td>
+      <td>0.663557</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>-0.364664</td>
-      <td>-0.039615</td>
+      <td>0.794597</td>
+      <td>0.844166</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>-0.844241</td>
-      <td>0.869230</td>
+      <td>-0.014541</td>
+      <td>0.734293</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>0.231488</td>
-      <td>-0.124665</td>
+      <td>0.389233</td>
+      <td>0.878378</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>0.899173</td>
-      <td>-0.451844</td>
+      <td>0.589911</td>
+      <td>0.746431</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>0.550716</td>
-      <td>0.689600</td>
+      <td>0.914909</td>
+      <td>0.311490</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>0.847624</td>
-      <td>-0.254090</td>
+      <td>-0.048775</td>
+      <td>-0.333684</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>0.648375</td>
-      <td>0.863877</td>
+      <td>0.507806</td>
+      <td>0.667296</td>
     </tr>
   </tbody>
 </table>
@@ -4219,78 +4192,78 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.238660</td>
-      <td>0.876192</td>
+      <td>0.635328</td>
+      <td>0.848870</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.531955</td>
-      <td>0.048088</td>
+      <td>0.902002</td>
+      <td>0.964342</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.601983</td>
-      <td>0.775732</td>
+      <td>0.989178</td>
+      <td>0.087285</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.005668</td>
-      <td>0.756392</td>
+      <td>0.380045</td>
+      <td>0.651073</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.315496</td>
-      <td>0.835919</td>
+      <td>0.359226</td>
+      <td>0.255170</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.374929</td>
-      <td>0.574503</td>
+      <td>0.484193</td>
+      <td>0.600730</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.051105</td>
-      <td>0.162042</td>
+      <td>0.765290</td>
+      <td>0.113989</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.255381</td>
-      <td>0.214226</td>
+      <td>0.611108</td>
+      <td>0.663557</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.364664</td>
-      <td>0.039615</td>
+      <td>0.794597</td>
+      <td>0.844166</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>0.844241</td>
-      <td>0.869230</td>
+      <td>0.014541</td>
+      <td>0.734293</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>0.231488</td>
-      <td>0.124665</td>
+      <td>0.389233</td>
+      <td>0.878378</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>0.899173</td>
-      <td>0.451844</td>
+      <td>0.589911</td>
+      <td>0.746431</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>0.550716</td>
-      <td>0.689600</td>
+      <td>0.914909</td>
+      <td>0.311490</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>0.847624</td>
-      <td>0.254090</td>
+      <td>0.048775</td>
+      <td>0.333684</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>0.648375</td>
-      <td>0.863877</td>
+      <td>0.507806</td>
+      <td>0.667296</td>
     </tr>
   </tbody>
 </table>
@@ -4340,63 +4313,63 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.876192</td>
+      <td>0.848870</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.048088</td>
+      <td>0.964342</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.775732</td>
+      <td>0.087285</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.756392</td>
+      <td>0.651073</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.835919</td>
+      <td>0.255170</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.574503</td>
+      <td>0.600730</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.162042</td>
+      <td>0.113989</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.214226</td>
+      <td>0.663557</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.039615</td>
+      <td>0.844166</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>0.869230</td>
+      <td>0.734293</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>0.124665</td>
+      <td>0.878378</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>0.451844</td>
+      <td>0.746431</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>0.689600</td>
+      <td>0.311490</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>0.254090</td>
+      <td>0.333684</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>0.863877</td>
+      <td>0.667296</td>
     </tr>
   </tbody>
 </table>
