@@ -680,10 +680,10 @@ numpy.float_power
     First array elements raised to powers from second array, element-wise.
 numpy.ma.exp
     Calculate the exponential of all elements in the input array.
-numpy.ma.mrecords.MaskedRecords.__new__
-    Create a new masked array from scratch.
 numpy.diag_indices
     Return the indices to access the main diagonal of an array.
+numpy.ma.mrecords.MaskedRecords.__new__
+    Create a new masked array from scratch.
 numpy.nested_iters
     Create nditers for use in nested loops
 numpy.ma.sqrt
@@ -1241,7 +1241,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>79 ms ± 3.04 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>91.4 ms ± 1.01 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -1258,7 +1258,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>969 µs ± 14.9 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.51 ms ± 13.1 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1491,7 +1491,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>510.91583090508516
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>507.25113908134307
 </pre></div>
 </div>
 </div>
@@ -1506,13 +1506,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>84.2 µs ± 2.59 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>92.9 µs ± 1.41 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.21 µs ± 177 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.95 µs ± 35.5 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.55 µs ± 180 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.38 µs ± 103 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1529,13 +1529,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>62.9 µs ± 2.93 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>65.8 µs ± 746 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.29 µs ± 96.3 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.04 µs ± 115 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.65 µs ± 75.9 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.44 µs ± 98.3 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1549,7 +1549,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.02380458229721283
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.009389534677712308
 </pre></div>
 </div>
 </div>
@@ -1562,10 +1562,10 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.36730327, 0.42350479, 0.02380458, 0.0920689 ],
-       [0.20858609, 0.14666716, 0.12817443, 0.19055575],
-       [0.10451488, 0.15895154, 0.12772732, 0.04651804],
-       [0.06044338, 0.08888449, 0.08248046, 0.15278825]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.25391493, 0.0642928 , 0.22021202, 0.28458743],
+       [0.08656236, 0.1548076 , 0.18470718, 0.16711838],
+       [0.31412553, 0.33611589, 0.27187159, 0.00938953],
+       [0.23448719, 0.09941993, 0.13106888, 0.14559176]])
 </pre></div>
 </div>
 </div>
@@ -1578,7 +1578,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.76164635, 0.97814064, 0.90828389, 0.94777734])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.99705884, 0.96111502, 0.97057484, 0.96952272])
 </pre></div>
 </div>
 </div>
