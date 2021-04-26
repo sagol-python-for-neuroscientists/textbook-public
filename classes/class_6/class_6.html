@@ -376,7 +376,7 @@
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#simple-example-temperature-in-a-grid">
-     Simple Example - Temperature in a Grid
+     Simple Example: Temperature in a Grid
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -448,7 +448,7 @@
 </div>
 <div class="section" id="missing-data">
 <h2>Missing Data<a class="headerlink" href="#missing-data" title="Permalink to this headline">¶</a></h2>
-<div style="text-align:center"><img src="https://static.wikia.nocookie.net/lostpedia/images/1/16/Lost-season1.jpg/revision/latest/scale-to-width-down/300?cb=20070303221754" /></div><p>The last question in the previous class pointed us to <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/missing_data.html">working with missing data</a>. But how and why does missing data occur?</p>
+<div style="text-align:center"><img src="https://static.wikia.nocookie.net/lostpedia/images/1/16/Lost-season1.jpg/revision/latest/scale-to-width-down/300?cb=20070303221754" /></div><p>The last question in the previous class pointed us to <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/missing_data.html">working with missing data</a>. But how and why do missing data occur?</p>
 <p>One option is pandas’ index alignment, the property that makes sure that each value will have the same index throughout the entire computation process.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -508,13 +508,13 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>9</td>
-      <td>0</td>
+      <td>2</td>
+      <td>8</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>9</td>
-      <td>4</td>
+      <td>14</td>
+      <td>11</td>
     </tr>
   </tbody>
 </table>
@@ -555,21 +555,21 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
+      <td>0</td>
       <td>7</td>
-      <td>6</td>
-      <td>1</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>4</td>
-      <td>4</td>
-      <td>7</td>
+      <td>2</td>
+      <td>3</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>2</th>
+      <td>9</td>
       <td>2</td>
       <td>5</td>
-      <td>9</td>
     </tr>
   </tbody>
 </table>
@@ -584,10 +584,10 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      A    B   C
-0  15.0  7.0 NaN
-1  13.0  8.0 NaN
-2   NaN  NaN NaN
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      A     B   C
+0   9.0   8.0 NaN
+1  17.0  13.0 NaN
+2   NaN   NaN NaN
 
 Returned dtypes:
 A    float64
@@ -602,7 +602,7 @@ dtype: object
 <p class="admonition-title">Note</p>
 <p>Note how <code class="docutils literal notranslate"><span class="pre">new.dtypes</span></code> itself returns a <code class="docutils literal notranslate"><span class="pre">Series</span></code> of dtypes, with it’s own <code class="docutils literal notranslate"><span class="pre">object</span></code> dtype.</p>
 </div>
-<p>The DF’s shape is the shape of the larger DF, and the “extra” row (index 2) was filled with NaNs. Since we have NaNs, the data type of the column is implicitly converted to a floating point type. To have integer DFs with NaNs, we have to explicitly say we want them available. More on that later.</p>
+<p>The dataframe’s shape is the shape of the larger dataframe, and the “extra” row (index 2) was filled with NaNs. Since we have NaNs, the data type of the column is implicitly converted to a floating point type. To have integer dataframes with NaNs, we have to explicitly say we want them available. More on that later.</p>
 <p>Another way to introduce missing data is through reindexing. If we “resample” our data we can achieve the following:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -639,33 +639,33 @@ dtype: object
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.883559</td>
-      <td>-1.576783</td>
-      <td>-1.342719</td>
+      <td>1.530386</td>
+      <td>0.979454</td>
+      <td>-0.615201</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>2.344569</td>
-      <td>-0.509565</td>
-      <td>0.702114</td>
+      <td>0.224091</td>
+      <td>2.213376</td>
+      <td>0.965547</td>
     </tr>
     <tr>
       <th>e</th>
-      <td>1.877419</td>
-      <td>0.802445</td>
-      <td>0.804583</td>
+      <td>1.183896</td>
+      <td>1.079035</td>
+      <td>-1.415126</td>
     </tr>
     <tr>
       <th>f</th>
-      <td>1.564768</td>
-      <td>-0.472756</td>
-      <td>1.696569</td>
+      <td>0.322996</td>
+      <td>0.200829</td>
+      <td>-1.238448</td>
     </tr>
     <tr>
       <th>h</th>
-      <td>0.585253</td>
-      <td>0.854656</td>
-      <td>-1.500709</td>
+      <td>1.848597</td>
+      <td>-1.256846</td>
+      <td>-1.166626</td>
     </tr>
   </tbody>
 </table>
@@ -705,9 +705,9 @@ dtype: object
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.883559</td>
-      <td>-1.576783</td>
-      <td>-1.342719</td>
+      <td>1.530386</td>
+      <td>0.979454</td>
+      <td>-0.615201</td>
     </tr>
     <tr>
       <th>b</th>
@@ -717,9 +717,9 @@ dtype: object
     </tr>
     <tr>
       <th>c</th>
-      <td>2.344569</td>
-      <td>-0.509565</td>
-      <td>0.702114</td>
+      <td>0.224091</td>
+      <td>2.213376</td>
+      <td>0.965547</td>
     </tr>
     <tr>
       <th>d</th>
@@ -729,15 +729,15 @@ dtype: object
     </tr>
     <tr>
       <th>e</th>
-      <td>1.877419</td>
-      <td>0.802445</td>
-      <td>0.804583</td>
+      <td>1.183896</td>
+      <td>1.079035</td>
+      <td>-1.415126</td>
     </tr>
     <tr>
       <th>f</th>
-      <td>1.564768</td>
-      <td>-0.472756</td>
-      <td>1.696569</td>
+      <td>0.322996</td>
+      <td>0.200829</td>
+      <td>-1.238448</td>
     </tr>
     <tr>
       <th>g</th>
@@ -747,17 +747,15 @@ dtype: object
     </tr>
     <tr>
       <th>h</th>
-      <td>0.585253</td>
-      <td>0.854656</td>
-      <td>-1.500709</td>
+      <td>1.848597</td>
+      <td>-1.256846</td>
+      <td>-1.166626</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<p>As we mentioned, pandas is oriented towards handling missing data. In general one finds two approaches that one can take - either create a masking array around the DF, in which <code class="docutils literal notranslate"><span class="pre">False</span></code> values represent invalid entries, or create a <em>sentinel</em> value that represents missing data, like -99999 or NaN.</p>
-<p>These two approaches have their downsides - a boolean masks requires more memory, and perhaps longer computation times. The sentinel value might lead to use of inefficient data types and slow down computation as well.</p>
-<p>Due to its reliance on numpy, pandas chose the path of sentinel values, with either <code class="docutils literal notranslate"><span class="pre">None</span></code> or NaN as the value.</p>
+<p>But what is <code class="docutils literal notranslate"><span class="pre">NaN</span></code>? Is it the same as <code class="docutils literal notranslate"><span class="pre">None</span></code>? To better answer the former, let’s first have a closer look at the latter.</p>
 <div class="section" id="the-none-object">
 <h3>The <code class="docutils literal notranslate"><span class="pre">None</span></code> object<a class="headerlink" href="#the-none-object" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">None</span></code> is the standard null value in Python, and is used extensively in normal usage of the language. For example, functions that don’t have a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement, implicitly return <code class="docutils literal notranslate"><span class="pre">None</span></code>. While <code class="docutils literal notranslate"><span class="pre">None</span></code> can be used as a missing data type, it’s probably not the best choice.</p>
@@ -788,17 +786,17 @@ dtype: object
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype = object
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>83.9 ms ± 1.56 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>72.2 ms ± 2.13 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
 
 dtype = int
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.77 ms ± 6.6 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.54 ms ± 60.3 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
 </div>
-<p>If you recall from a couple of lessons ago, the “object” timings are very similar to those of standard lists, since indeed object arrays are pretty much identical to lists.</p>
+<p>If you recall from a couple of lessons ago, the performance of <code class="docutils literal notranslate"><span class="pre">object</span></code> arrays is very similar to that of standard lists (generally speaking, the two data structures are effectively identical).</p>
 <p>Another thing we can’t do is aggregation:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -890,7 +888,7 @@ dtype = int
 </div>
 </div>
 </div>
-<p>Numpy has <code class="docutils literal notranslate"><span class="pre">nan</span></code>-aware counterparts to many of its aggregation functions, which can work with NaNs correctly. They usually have the same name as their non-NaN sibling, but with the “nan” preface:</p>
+<p>Numpy has <code class="docutils literal notranslate"><span class="pre">nan</span></code>-aware counterparts to many of its aggregation functions, which can work with NaNs correctly. They usually have the same name as their non-NaN sibling, but with the “nan” prefix:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nansum</span><span class="p">(</span><span class="n">vals2</span><span class="p">))</span>
@@ -963,37 +961,37 @@ dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.883559</td>
-      <td>-1.576783</td>
-      <td>-1.342719</td>
+      <td>1.530386</td>
+      <td>0.979454</td>
+      <td>-0.615201</td>
       <td>2018-01-01</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>2.344569</td>
-      <td>-0.509565</td>
-      <td>0.702114</td>
+      <td>0.224091</td>
+      <td>2.213376</td>
+      <td>0.965547</td>
       <td>2018-01-01</td>
     </tr>
     <tr>
       <th>e</th>
-      <td>1.877419</td>
-      <td>0.802445</td>
-      <td>0.804583</td>
+      <td>1.183896</td>
+      <td>1.079035</td>
+      <td>-1.415126</td>
       <td>2018-01-01</td>
     </tr>
     <tr>
       <th>f</th>
-      <td>1.564768</td>
-      <td>-0.472756</td>
-      <td>1.696569</td>
+      <td>0.322996</td>
+      <td>0.200829</td>
+      <td>-1.238448</td>
       <td>2018-01-01</td>
     </tr>
     <tr>
       <th>h</th>
-      <td>0.585253</td>
-      <td>0.854656</td>
-      <td>-1.500709</td>
+      <td>1.848597</td>
+      <td>-1.256846</td>
+      <td>-1.166626</td>
       <td>2018-01-01</td>
     </tr>
   </tbody>
@@ -1035,9 +1033,9 @@ dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.883559</td>
-      <td>-1.576783</td>
-      <td>-1.342719</td>
+      <td>1.530386</td>
+      <td>0.979454</td>
+      <td>-0.615201</td>
       <td>2018-01-01</td>
     </tr>
     <tr>
@@ -1049,9 +1047,9 @@ dtype: float64
     </tr>
     <tr>
       <th>c</th>
-      <td>2.344569</td>
-      <td>-0.509565</td>
-      <td>0.702114</td>
+      <td>0.224091</td>
+      <td>2.213376</td>
+      <td>0.965547</td>
       <td>2018-01-01</td>
     </tr>
     <tr>
@@ -1063,16 +1061,16 @@ dtype: float64
     </tr>
     <tr>
       <th>e</th>
-      <td>1.877419</td>
-      <td>0.802445</td>
-      <td>0.804583</td>
+      <td>1.183896</td>
+      <td>1.079035</td>
+      <td>-1.415126</td>
       <td>2018-01-01</td>
     </tr>
     <tr>
       <th>f</th>
-      <td>1.564768</td>
-      <td>-0.472756</td>
-      <td>1.696569</td>
+      <td>0.322996</td>
+      <td>0.200829</td>
+      <td>-1.238448</td>
       <td>2018-01-01</td>
     </tr>
     <tr>
@@ -1084,9 +1082,9 @@ dtype: float64
     </tr>
     <tr>
       <th>h</th>
-      <td>0.585253</td>
-      <td>0.854656</td>
-      <td>-1.500709</td>
+      <td>1.848597</td>
+      <td>-1.256846</td>
+      <td>-1.166626</td>
       <td>2018-01-01</td>
     </tr>
   </tbody>
@@ -1130,28 +1128,28 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.211863</td>
-      <td>0.216417</td>
+      <td>0.352190</td>
+      <td>0.518846</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.068824</td>
+      <td>0.219797</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.940506</td>
-      <td>0.738197</td>
+      <td>0.896887</td>
+      <td>0.312477</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.495747</td>
-      <td>0.404331</td>
+      <td>0.716019</td>
+      <td>0.372491</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.303118</td>
-      <td>0.754997</td>
+      <td>0.740648</td>
+      <td>0.745674</td>
     </tr>
   </tbody>
 </table>
@@ -1192,39 +1190,39 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.640500</td>
-      <td>0.671086</td>
-      <td>0.631054</td>
+      <td>0.743881</td>
+      <td>0.978577</td>
+      <td>0.840087</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.965382</td>
-      <td>0.297539</td>
-      <td>0.880254</td>
+      <td>0.809614</td>
+      <td>0.200445</td>
+      <td>0.269994</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.686300</td>
-      <td>0.272473</td>
+      <td>0.688840</td>
+      <td>0.699882</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.531880</td>
-      <td>0.444380</td>
-      <td>0.944025</td>
+      <td>0.755065</td>
+      <td>0.513104</td>
+      <td>0.120425</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.703828</td>
-      <td>0.562354</td>
-      <td>0.895719</td>
+      <td>0.096786</td>
+      <td>0.463836</td>
+      <td>0.172175</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.633596</td>
-      <td>0.746469</td>
-      <td>0.102670</td>
+      <td>0.631564</td>
+      <td>0.592308</td>
+      <td>0.532031</td>
     </tr>
   </tbody>
 </table>
@@ -1263,33 +1261,33 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.852364</td>
+      <td>1.096071</td>
       <td>NaN</td>
-      <td>0.887502</td>
+      <td>1.497423</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.034206</td>
+      <td>1.029411</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.626806</td>
+      <td>1.585727</td>
       <td>NaN</td>
-      <td>1.010671</td>
+      <td>1.012359</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.027627</td>
+      <td>1.471083</td>
       <td>NaN</td>
-      <td>0.848711</td>
+      <td>0.885595</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1.006946</td>
+      <td>0.837434</td>
       <td>NaN</td>
-      <td>1.317352</td>
+      <td>1.209511</td>
     </tr>
     <tr>
       <th>5</th>
@@ -1344,45 +1342,45 @@ dtype: float64
     </tr>
     <tr>
       <th>mean</th>
-      <td>1.109590</td>
+      <td>1.203945</td>
       <td>NaN</td>
-      <td>1.016059</td>
+      <td>1.151222</td>
     </tr>
     <tr>
       <th>std</th>
-      <td>0.298586</td>
+      <td>0.313668</td>
       <td>NaN</td>
-      <td>0.212398</td>
+      <td>0.266517</td>
     </tr>
     <tr>
       <th>min</th>
-      <td>0.852364</td>
+      <td>0.837434</td>
       <td>NaN</td>
-      <td>0.848711</td>
+      <td>0.885595</td>
     </tr>
     <tr>
       <th>25%</th>
-      <td>1.006946</td>
+      <td>1.029411</td>
       <td>NaN</td>
-      <td>0.877805</td>
+      <td>0.980668</td>
     </tr>
     <tr>
       <th>50%</th>
-      <td>1.027627</td>
+      <td>1.096071</td>
       <td>NaN</td>
-      <td>0.949087</td>
+      <td>1.110935</td>
     </tr>
     <tr>
       <th>75%</th>
-      <td>1.034206</td>
+      <td>1.471083</td>
       <td>NaN</td>
-      <td>1.087341</td>
+      <td>1.281489</td>
     </tr>
     <tr>
       <th>max</th>
-      <td>1.626806</td>
+      <td>1.585727</td>
       <td>NaN</td>
-      <td>1.317352</td>
+      <td>1.497423</td>
     </tr>
   </tbody>
 </table>
@@ -1499,33 +1497,33 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.852364</td>
+      <td>1.096071</td>
       <td>NaN</td>
-      <td>0.887502</td>
+      <td>1.497423</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.034206</td>
+      <td>1.029411</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.626806</td>
+      <td>1.585727</td>
       <td>NaN</td>
-      <td>1.010671</td>
+      <td>1.012359</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.027627</td>
+      <td>1.471083</td>
       <td>NaN</td>
-      <td>0.848711</td>
+      <td>0.885595</td>
     </tr>
     <tr>
       <th>4</th>
       <td>NaN</td>
       <td>NaN</td>
-      <td>1.317352</td>
+      <td>1.209511</td>
     </tr>
     <tr>
       <th>5</th>
@@ -1570,33 +1568,33 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.852364</td>
+      <td>1.096071</td>
       <td>0.0</td>
-      <td>0.887502</td>
+      <td>1.497423</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.034206</td>
+      <td>1.029411</td>
       <td>0.0</td>
       <td>0.000000</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.626806</td>
+      <td>1.585727</td>
       <td>0.0</td>
-      <td>1.010671</td>
+      <td>1.012359</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.027627</td>
+      <td>1.471083</td>
       <td>0.0</td>
-      <td>0.848711</td>
+      <td>0.885595</td>
     </tr>
     <tr>
       <th>4</th>
       <td>0.000000</td>
       <td>0.0</td>
-      <td>1.317352</td>
+      <td>1.209511</td>
     </tr>
     <tr>
       <th>5</th>
@@ -1641,33 +1639,33 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.852364</td>
+      <td>1.096071</td>
       <td>missing</td>
-      <td>0.887502</td>
+      <td>1.497423</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.034206</td>
+      <td>1.029411</td>
       <td>missing</td>
       <td>missing</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.626806</td>
+      <td>1.585727</td>
       <td>missing</td>
-      <td>1.010671</td>
+      <td>1.012359</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.027627</td>
+      <td>1.471083</td>
       <td>missing</td>
-      <td>0.848711</td>
+      <td>0.885595</td>
     </tr>
     <tr>
       <th>4</th>
       <td>missing</td>
       <td>missing</td>
-      <td>1.317352</td>
+      <td>1.209511</td>
     </tr>
     <tr>
       <th>5</th>
@@ -1713,39 +1711,39 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.852364</td>
+      <td>1.096071</td>
       <td>NaN</td>
-      <td>0.887502</td>
+      <td>1.497423</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.034206</td>
+      <td>1.029411</td>
       <td>NaN</td>
-      <td>0.887502</td>
+      <td>1.497423</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.626806</td>
+      <td>1.585727</td>
       <td>NaN</td>
-      <td>1.010671</td>
+      <td>1.012359</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.027627</td>
+      <td>1.471083</td>
       <td>NaN</td>
-      <td>0.848711</td>
+      <td>0.885595</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1.027627</td>
+      <td>1.471083</td>
       <td>NaN</td>
-      <td>1.317352</td>
+      <td>1.209511</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>1.027627</td>
+      <td>1.471083</td>
       <td>NaN</td>
-      <td>1.317352</td>
+      <td>1.209511</td>
     </tr>
   </tbody>
 </table>
@@ -1784,39 +1782,39 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.852364</td>
+      <td>1.096071</td>
       <td>NaN</td>
-      <td>0.887502</td>
+      <td>1.497423</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.034206</td>
+      <td>1.029411</td>
       <td>NaN</td>
-      <td>0.887502</td>
+      <td>1.497423</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.626806</td>
+      <td>1.585727</td>
       <td>NaN</td>
-      <td>1.010671</td>
+      <td>1.012359</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.027627</td>
+      <td>1.471083</td>
       <td>NaN</td>
-      <td>0.848711</td>
+      <td>0.885595</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1.027627</td>
+      <td>1.471083</td>
       <td>NaN</td>
-      <td>1.317352</td>
+      <td>1.209511</td>
     </tr>
     <tr>
       <th>5</th>
       <td>NaN</td>
       <td>NaN</td>
-      <td>1.317352</td>
+      <td>1.209511</td>
     </tr>
   </tbody>
 </table>
@@ -1855,39 +1853,39 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.852364</td>
+      <td>1.096071</td>
       <td>NaN</td>
-      <td>0.887502</td>
+      <td>1.497423</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.034206</td>
+      <td>1.029411</td>
       <td>NaN</td>
-      <td>1.016059</td>
+      <td>1.151222</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.626806</td>
+      <td>1.585727</td>
       <td>NaN</td>
-      <td>1.010671</td>
+      <td>1.012359</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.027627</td>
+      <td>1.471083</td>
       <td>NaN</td>
-      <td>0.848711</td>
+      <td>0.885595</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1.135251</td>
+      <td>1.295573</td>
       <td>NaN</td>
-      <td>1.317352</td>
+      <td>1.209511</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>1.135251</td>
+      <td>1.295573</td>
       <td>NaN</td>
-      <td>1.016059</td>
+      <td>1.151222</td>
     </tr>
   </tbody>
 </table>
@@ -1930,33 +1928,33 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.852364</td>
+      <td>1.096071</td>
       <td>NaN</td>
-      <td>0.887502</td>
+      <td>1.497423</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.034206</td>
+      <td>1.029411</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.626806</td>
+      <td>1.585727</td>
       <td>NaN</td>
-      <td>1.010671</td>
+      <td>1.012359</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.027627</td>
+      <td>1.471083</td>
       <td>NaN</td>
-      <td>0.848711</td>
+      <td>0.885595</td>
     </tr>
     <tr>
       <th>4</th>
       <td>NaN</td>
       <td>NaN</td>
-      <td>1.317352</td>
+      <td>1.209511</td>
     </tr>
     <tr>
       <th>5</th>
@@ -2002,39 +2000,39 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.852364</td>
+      <td>1.096071</td>
       <td>NaN</td>
-      <td>0.887502</td>
+      <td>1.497423</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.034206</td>
+      <td>1.029411</td>
       <td>NaN</td>
-      <td>1.016059</td>
+      <td>1.151222</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.626806</td>
+      <td>1.585727</td>
       <td>NaN</td>
-      <td>1.010671</td>
+      <td>1.012359</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.027627</td>
+      <td>1.471083</td>
       <td>NaN</td>
-      <td>0.848711</td>
+      <td>0.885595</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1.135251</td>
+      <td>1.295573</td>
       <td>NaN</td>
-      <td>1.317352</td>
+      <td>1.209511</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>1.135251</td>
+      <td>1.295573</td>
       <td>NaN</td>
-      <td>1.016059</td>
+      <td>1.151222</td>
     </tr>
   </tbody>
 </table>
@@ -2072,33 +2070,33 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.852364</td>
-      <td>0.887502</td>
+      <td>1.096071</td>
+      <td>1.497423</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.034206</td>
-      <td>1.016059</td>
+      <td>1.029411</td>
+      <td>1.151222</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.626806</td>
-      <td>1.010671</td>
+      <td>1.585727</td>
+      <td>1.012359</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.027627</td>
-      <td>0.848711</td>
+      <td>1.471083</td>
+      <td>0.885595</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1.135251</td>
-      <td>1.317352</td>
+      <td>1.295573</td>
+      <td>1.209511</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>1.135251</td>
-      <td>1.016059</td>
+      <td>1.295573</td>
+      <td>1.151222</td>
     </tr>
   </tbody>
 </table>
@@ -2177,33 +2175,33 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.852364</td>
+      <td>1.096071</td>
       <td>NaN</td>
-      <td>0.887502</td>
+      <td>1.497423</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.034206</td>
+      <td>1.029411</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.626806</td>
+      <td>1.585727</td>
       <td>NaN</td>
-      <td>1.010671</td>
+      <td>1.012359</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.027627</td>
+      <td>1.471083</td>
       <td>NaN</td>
-      <td>0.848711</td>
+      <td>0.885595</td>
     </tr>
     <tr>
       <th>4</th>
       <td>NaN</td>
       <td>NaN</td>
-      <td>1.317352</td>
+      <td>1.209511</td>
     </tr>
     <tr>
       <th>5</th>
@@ -2248,39 +2246,39 @@ dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.852364</td>
+      <td>1.096071</td>
       <td>NaN</td>
-      <td>0.887502</td>
+      <td>1.497423</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.034206</td>
+      <td>1.029411</td>
       <td>NaN</td>
-      <td>0.949087</td>
+      <td>1.254891</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.626806</td>
+      <td>1.585727</td>
       <td>NaN</td>
-      <td>1.010671</td>
+      <td>1.012359</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.027627</td>
+      <td>1.471083</td>
       <td>NaN</td>
-      <td>0.848711</td>
+      <td>0.885595</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1.027627</td>
+      <td>1.471083</td>
       <td>NaN</td>
-      <td>1.317352</td>
+      <td>1.209511</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>1.027627</td>
+      <td>1.471083</td>
       <td>NaN</td>
-      <td>1.317352</td>
+      <td>1.209511</td>
     </tr>
   </tbody>
 </table>
@@ -2675,11 +2673,117 @@ dtype: Int32
 <li><p>The data type is <code class="docutils literal notranslate"><span class="pre">Int32</span></code>. It’s CamelCase and it’s actually a class underneath. Standard datatypes are lowercase.</p></li>
 </ol>
 <p>Caveats aside, this is definitely useful for scientists who sometimes have integer values and do not want to convert them to float to supports NAs.</p>
+<div class="cell tag_remove-input tag_remove-output docutils container">
+</div>
+<div class="admonition-exercise-missing-data admonition">
+<p class="admonition-title">Exercise: Missing Data</p>
+<ul class="simple">
+<li><p>Create a vector of 10000 measurements from a 10-cycle sinus wave. Remember that a single period of sine starts at 0 and ends at 2<span class="math notranslate nohighlight">\(\pi\)</span>, so 10 periods span between 0 and 20<span class="math notranslate nohighlight">\(\pi\)</span>.</p></li>
+</ul>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n_cycles</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">n_samples</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">amplitude</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">phase</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span>
+<span class="n">end</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">n_cycles</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="n">n_samples</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">amplitude</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">phase</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><ul class="simple">
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">np.random.choice(replace=False)</span></code> sample 100 points from the wave and place them in a Series.</p></li>
+</ul>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">chosen_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;raw&#39;</span><span class="p">])</span>
+<span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">chosen_idx</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">chosen_idx</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</details><ul class="simple">
+<li><p>Plot the chosen points.</p></li>
+</ul>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig1</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Raw data pre-interpolation&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">raw</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure align-default" style="width: 500px">
+<div class="cell_output docutils container">
+<img alt="../../_images/class_6_82_0.png" src="../../_images/class_6_82_0.png" />
+</div>
+</div>
+</div>
+</details><ul class="simple">
+<li><p>Interpolate the points using linear interpolation and plot them on a different graph.</p></li>
+</ul>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;lin_inter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">raw</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="n">fig2</span><span class="p">,</span> <span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Linear interpolation&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">lin_inter</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure align-default" style="width: 500px">
+<div class="cell_output docutils container">
+<img alt="../../_images/class_6_82_1.png" src="../../_images/class_6_82_1.png" />
+</div>
+</div>
+</div>
+</details><ul class="simple">
+<li><p>Interpolate the points using quadratic interpolation and plot them on a different graph.</p></li>
+</ul>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;quad_inter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">raw</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;quadratic&#39;</span><span class="p">)</span>
+<span class="n">fig3</span><span class="p">,</span> <span class="n">ax3</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Quadratic interpolation&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">quad_inter</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax3</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure align-default" style="width: 500px">
+<div class="cell_output docutils container">
+<img alt="../../_images/class_6_82_2.png" src="../../_images/class_6_82_2.png" />
+</div>
+</div>
+</div>
+</details></div>
 </div>
 </div>
 <div class="section" id="categorical-data">
 <h2>Categorical Data<a class="headerlink" href="#categorical-data" title="Permalink to this headline">¶</a></h2>
-<p>Most data we’ve been working on is ‘quantitative’ in its nature i.e. integers and real numbers can hold (in general terms) any value. But <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/categorical.html">categorical data</a> data can only have one of a specific set, or categories, of data. For example, if we have a column which marks the weekday, then it can obviously only be one of seven options. Same for boolean data, colors, and other examples. These data columns should be marked as “categorical” to reduce memory consumption and improve performance. It also tells the code readers more about the nature of that data column.</p>
+<p>So far, we’ve used examples with quantitative data. Let’s now have a look at <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/categorical.html">categorical data</a>, i.e. data can only have one of a specific set, or categories, of values. For example, if we have a column which marks the weekday, then it can obviously only be one of seven options. Same for boolean data, colors, and other examples. These data columns should be marked as “categorical” to reduce memory consumption and improve performance. It also tells the code readers more about the nature of that data column.</p>
 <p>The easiest way to create a categorical variable is to declare it as such, or to convert as existing column to a categorical data type:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2759,27 +2863,27 @@ dtype: object
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.537204</td>
+      <td>0.759114</td>
       <td>a</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.623950</td>
+      <td>0.124184</td>
       <td>a</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.098220</td>
+      <td>0.327631</td>
       <td>a</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.393018</td>
+      <td>0.050335</td>
       <td>a</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.031891</td>
+      <td>0.449653</td>
       <td>a</td>
     </tr>
     <tr>
@@ -2789,27 +2893,27 @@ dtype: object
     </tr>
     <tr>
       <th>9995</th>
-      <td>0.850566</td>
+      <td>0.126500</td>
       <td>a</td>
     </tr>
     <tr>
       <th>9996</th>
-      <td>0.036882</td>
+      <td>0.871341</td>
       <td>a</td>
     </tr>
     <tr>
       <th>9997</th>
-      <td>0.462514</td>
+      <td>0.128504</td>
       <td>a</td>
     </tr>
     <tr>
       <th>9998</th>
-      <td>0.445849</td>
+      <td>0.876369</td>
       <td>a</td>
     </tr>
     <tr>
       <th>9999</th>
-      <td>0.936579</td>
+      <td>0.903618</td>
       <td>a</td>
     </tr>
   </tbody>
@@ -2850,27 +2954,27 @@ dtype: object
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.537204</td>
+      <td>0.759114</td>
       <td>a</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.623950</td>
+      <td>0.124184</td>
       <td>a</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.098220</td>
+      <td>0.327631</td>
       <td>a</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.393018</td>
+      <td>0.050335</td>
       <td>a</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.031891</td>
+      <td>0.449653</td>
       <td>a</td>
     </tr>
     <tr>
@@ -2880,27 +2984,27 @@ dtype: object
     </tr>
     <tr>
       <th>9995</th>
-      <td>0.850566</td>
+      <td>0.126500</td>
       <td>a</td>
     </tr>
     <tr>
       <th>9996</th>
-      <td>0.036882</td>
+      <td>0.871341</td>
       <td>a</td>
     </tr>
     <tr>
       <th>9997</th>
-      <td>0.462514</td>
+      <td>0.128504</td>
       <td>a</td>
     </tr>
     <tr>
       <th>9998</th>
-      <td>0.445849</td>
+      <td>0.876369</td>
       <td>a</td>
     </tr>
     <tr>
       <th>9999</th>
-      <td>0.936579</td>
+      <td>0.903618</td>
       <td>a</td>
     </tr>
   </tbody>
@@ -2944,8 +3048,8 @@ dtype: int64
 <h2>Hierarchical Indexing<a class="headerlink" href="#hierarchical-indexing" title="Permalink to this headline">¶</a></h2>
 <p>Last time we mentioned that while a DataFrame is inherently a 2D object, it can contain multi-dimensional data. The way a DataFrame (and a Series) does that is with <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/advanced.html">hierarchical indexing</a>, or sometimes Multi-Indexing.</p>
 <div class="section" id="simple-example-temperature-in-a-grid">
-<h3>Simple Example - Temperature in a Grid<a class="headerlink" href="#simple-example-temperature-in-a-grid" title="Permalink to this headline">¶</a></h3>
-<p>Let’s assume I wish to represent points on a 2D grid, perhaps inside a square, that represent the temperature in different locations around this grid. The obvious way to do this is to define a set of two coordinates, <span class="math notranslate nohighlight">\((x, y)\)</span>, which point to a specific location inside my square. These two coordinates should also have a value attached to them, the temperature. A list of such coordinates can be a simple Series:</p>
+<h3>Simple Example: Temperature in a Grid<a class="headerlink" href="#simple-example-temperature-in-a-grid" title="Permalink to this headline">¶</a></h3>
+<p>In this example, our data is the temperature sampled across a 2-dimensional grid. First, we need to generate the required set of indices, <span class="math notranslate nohighlight">\((x, y)\)</span>, which point to a specific location inside the square. These coordinates can then be assigned the designated temperature values. A list of such coordinates can be a simple <code class="docutils literal notranslate"><span class="pre">Series</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">3.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">2.9</span><span class="p">])</span>
@@ -3054,7 +3158,7 @@ Name: temperature, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">points</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:]</span>  <span class="c1"># all values - each level of the index has its own colon (:)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">points</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">:]</span>  <span class="c1"># all values - each level of the index has its own colon (:)</span>
 </pre></div>
 </div>
 </div>
@@ -3158,7 +3262,7 @@ Name: temp_cube, dtype: float64
 </div>
 <div class="section" id="more-on-extra-dimensions">
 <h3>More on extra dimensions<a class="headerlink" href="#more-on-extra-dimensions" title="Permalink to this headline">¶</a></h3>
-<p>In the previous square example, it’s very appealing to ditch the MultiIndex altogether and just work with a DataFrame, or even a simple numpy array. This is because the two indices represented rows and columns. A quick way to turn one representation into the other is the <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/reshaping.html"><code class="docutils literal notranslate"><span class="pre">stack()</span></code>\<code class="docutils literal notranslate"><span class="pre">unstack()</span></code></a> method:</p>
+<p>In the previous square example, it’s very appealing to ditch the MultiIndex altogether and just work with a dataframe, or even a simple NumPy array. This is because the two indices represented rows and columns. A quick way to turn one representation into the other is the <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/reshaping.html"><code class="docutils literal notranslate"><span class="pre">stack()</span></code>\<code class="docutils literal notranslate"><span class="pre">unstack()</span></code></a> method:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">points</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;rows&#39;</span><span class="p">,</span> <span class="s1">&#39;columns&#39;</span><span class="p">]</span>
@@ -3409,8 +3513,8 @@ dtype: float64
 </div>
 </div>
 </div>
-<p>The most common way to construct a MultiIndex, though, is to add to the existing index one of the columns of the DataFrame. We’ll see how it’s done below.</p>
-<p>Another important note is that with DataFrames, the column and row index is symmetric. In effect this means that  the columns could also contain a MultiIndex:</p>
+<p>The most common way to construct a MultiIndex, though, is to add to the existing index one of the columns of the dataframe. We’ll see how it’s done below.</p>
+<p>Another important note is that with dataframes, the column and row index is symmetric. In effect this means that  the columns could also contain a MultiIndex:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">([[</span><span class="mi">2013</span><span class="p">,</span> <span class="mi">2014</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]],</span>
@@ -3482,40 +3586,40 @@ dtype: float64
     <tr>
       <th rowspan="2" valign="top">2013</th>
       <th>1</th>
-      <td>61.0</td>
-      <td>36.7</td>
-      <td>43.0</td>
-      <td>34.5</td>
-      <td>44.0</td>
-      <td>36.0</td>
+      <td>47.0</td>
+      <td>37.2</td>
+      <td>38.0</td>
+      <td>37.7</td>
+      <td>34.0</td>
+      <td>36.2</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>49.0</td>
-      <td>37.4</td>
-      <td>42.0</td>
-      <td>37.8</td>
-      <td>35.0</td>
-      <td>36.9</td>
+      <td>41.0</td>
+      <td>37.3</td>
+      <td>53.0</td>
+      <td>37.2</td>
+      <td>44.0</td>
+      <td>37.9</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">2014</th>
       <th>1</th>
-      <td>40.0</td>
+      <td>37.0</td>
       <td>36.8</td>
-      <td>31.0</td>
-      <td>37.2</td>
-      <td>36.0</td>
+      <td>32.0</td>
+      <td>37.1</td>
+      <td>26.0</td>
       <td>37.0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>26.0</td>
-      <td>37.3</td>
       <td>29.0</td>
       <td>38.4</td>
-      <td>45.0</td>
-      <td>36.4</td>
+      <td>23.0</td>
+      <td>37.3</td>
+      <td>43.0</td>
+      <td>37.7</td>
     </tr>
   </tbody>
 </table>
@@ -3576,67 +3680,67 @@ dtype: float64
       <th rowspan="6" valign="top">2013</th>
       <th rowspan="3" valign="top">1</th>
       <th>Bob</th>
-      <td>33.0</td>
-      <td>38.1</td>
+      <td>28.0</td>
+      <td>37.1</td>
     </tr>
     <tr>
       <th>Guido</th>
-      <td>34.0</td>
-      <td>36.8</td>
+      <td>41.0</td>
+      <td>36.7</td>
     </tr>
     <tr>
       <th>Sue</th>
-      <td>30.0</td>
-      <td>36.2</td>
+      <td>37.0</td>
+      <td>37.2</td>
     </tr>
     <tr>
       <th rowspan="3" valign="top">2</th>
       <th>Bob</th>
-      <td>34.0</td>
-      <td>37.0</td>
+      <td>42.0</td>
+      <td>36.3</td>
     </tr>
     <tr>
       <th>Guido</th>
-      <td>21.0</td>
-      <td>38.0</td>
+      <td>63.0</td>
+      <td>37.4</td>
     </tr>
     <tr>
       <th>Sue</th>
-      <td>35.0</td>
-      <td>38.1</td>
+      <td>36.0</td>
+      <td>37.5</td>
     </tr>
     <tr>
       <th rowspan="6" valign="top">2014</th>
       <th rowspan="3" valign="top">1</th>
       <th>Bob</th>
-      <td>31.0</td>
-      <td>37.9</td>
+      <td>50.0</td>
+      <td>35.6</td>
     </tr>
     <tr>
       <th>Guido</th>
-      <td>35.0</td>
-      <td>38.3</td>
+      <td>47.0</td>
+      <td>37.9</td>
     </tr>
     <tr>
       <th>Sue</th>
-      <td>26.0</td>
-      <td>38.4</td>
+      <td>46.0</td>
+      <td>34.9</td>
     </tr>
     <tr>
       <th rowspan="3" valign="top">2</th>
       <th>Bob</th>
-      <td>37.0</td>
-      <td>36.8</td>
+      <td>41.0</td>
+      <td>35.1</td>
     </tr>
     <tr>
       <th>Guido</th>
-      <td>37.0</td>
-      <td>36.7</td>
+      <td>31.0</td>
+      <td>35.7</td>
     </tr>
     <tr>
       <th>Sue</th>
-      <td>28.0</td>
-      <td>35.4</td>
+      <td>57.0</td>
+      <td>38.1</td>
     </tr>
   </tbody>
 </table>
@@ -4115,40 +4219,40 @@ dtype: float64
     <tr>
       <th rowspan="2" valign="top">2013</th>
       <th>1</th>
-      <td>61.0</td>
-      <td>36.7</td>
-      <td>43.0</td>
-      <td>34.5</td>
-      <td>44.0</td>
-      <td>36.0</td>
+      <td>47.0</td>
+      <td>37.2</td>
+      <td>38.0</td>
+      <td>37.7</td>
+      <td>34.0</td>
+      <td>36.2</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>49.0</td>
-      <td>37.4</td>
-      <td>42.0</td>
-      <td>37.8</td>
-      <td>35.0</td>
-      <td>36.9</td>
+      <td>41.0</td>
+      <td>37.3</td>
+      <td>53.0</td>
+      <td>37.2</td>
+      <td>44.0</td>
+      <td>37.9</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">2014</th>
       <th>1</th>
-      <td>40.0</td>
+      <td>37.0</td>
       <td>36.8</td>
-      <td>31.0</td>
-      <td>37.2</td>
-      <td>36.0</td>
+      <td>32.0</td>
+      <td>37.1</td>
+      <td>26.0</td>
       <td>37.0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>26.0</td>
-      <td>37.3</td>
       <td>29.0</td>
       <td>38.4</td>
-      <td>45.0</td>
-      <td>36.4</td>
+      <td>23.0</td>
+      <td>37.3</td>
+      <td>43.0</td>
+      <td>37.7</td>
     </tr>
   </tbody>
 </table>
@@ -4197,73 +4301,73 @@ dtype: float64
       <th rowspan="6" valign="top">2013</th>
       <th rowspan="3" valign="top">1</th>
       <th>Bob</th>
-      <td>33.0</td>
-      <td>38.1</td>
+      <td>28.0</td>
+      <td>37.1</td>
     </tr>
     <tr>
       <th>Guido</th>
-      <td>34.0</td>
-      <td>36.8</td>
+      <td>41.0</td>
+      <td>36.7</td>
     </tr>
     <tr>
       <th>Sue</th>
-      <td>30.0</td>
-      <td>36.2</td>
+      <td>37.0</td>
+      <td>37.2</td>
     </tr>
     <tr>
       <th rowspan="3" valign="top">2</th>
       <th>Bob</th>
-      <td>34.0</td>
-      <td>37.0</td>
+      <td>42.0</td>
+      <td>36.3</td>
     </tr>
     <tr>
       <th>Guido</th>
-      <td>21.0</td>
-      <td>38.0</td>
+      <td>63.0</td>
+      <td>37.4</td>
     </tr>
     <tr>
       <th>Sue</th>
-      <td>35.0</td>
-      <td>38.1</td>
+      <td>36.0</td>
+      <td>37.5</td>
     </tr>
     <tr>
       <th rowspan="6" valign="top">2014</th>
       <th rowspan="3" valign="top">1</th>
       <th>Bob</th>
-      <td>31.0</td>
-      <td>37.9</td>
+      <td>50.0</td>
+      <td>35.6</td>
     </tr>
     <tr>
       <th>Guido</th>
-      <td>35.0</td>
-      <td>38.3</td>
+      <td>47.0</td>
+      <td>37.9</td>
     </tr>
     <tr>
       <th>Sue</th>
-      <td>26.0</td>
-      <td>38.4</td>
+      <td>46.0</td>
+      <td>34.9</td>
     </tr>
     <tr>
       <th rowspan="3" valign="top">2</th>
       <th>Bob</th>
-      <td>37.0</td>
-      <td>36.8</td>
+      <td>41.0</td>
+      <td>35.1</td>
     </tr>
     <tr>
       <th>Guido</th>
-      <td>37.0</td>
-      <td>36.7</td>
+      <td>31.0</td>
+      <td>35.7</td>
     </tr>
     <tr>
       <th>Sue</th>
-      <td>28.0</td>
-      <td>35.4</td>
+      <td>57.0</td>
+      <td>38.1</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<p>If all we wish to do is to examine a column, indexing is very easy. Don’t forget the DataFrame as dictionary analogy:</p>
+<p>If all we wish to do is to examine a column, indexing is very easy. Don’t forget the dataframe as dictionary analogy:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">health_data</span><span class="p">[</span><span class="s1">&#39;Guido&#39;</span><span class="p">]</span>  <span class="c1"># works for the column MultiIndex as expected</span>
@@ -4304,24 +4408,24 @@ dtype: float64
     <tr>
       <th rowspan="2" valign="top">2013</th>
       <th>1</th>
-      <td>43.0</td>
-      <td>34.5</td>
+      <td>38.0</td>
+      <td>37.7</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>42.0</td>
-      <td>37.8</td>
+      <td>53.0</td>
+      <td>37.2</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">2014</th>
       <th>1</th>
-      <td>31.0</td>
-      <td>37.2</td>
+      <td>32.0</td>
+      <td>37.1</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>29.0</td>
-      <td>38.4</td>
+      <td>23.0</td>
+      <td>37.3</td>
     </tr>
   </tbody>
 </table>
@@ -4335,18 +4439,18 @@ dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>year  visit  subject
-2013  1      Bob        33.0
-             Guido      34.0
-             Sue        30.0
-      2      Bob        34.0
-             Guido      21.0
-             Sue        35.0
-2014  1      Bob        31.0
-             Guido      35.0
-             Sue        26.0
-      2      Bob        37.0
-             Guido      37.0
-             Sue        28.0
+2013  1      Bob        28.0
+             Guido      41.0
+             Sue        37.0
+      2      Bob        42.0
+             Guido      63.0
+             Sue        36.0
+2014  1      Bob        50.0
+             Guido      47.0
+             Sue        46.0
+      2      Bob        41.0
+             Guido      31.0
+             Sue        57.0
 Name: HR, dtype: float64
 </pre></div>
 </div>
@@ -4360,8 +4464,8 @@ Name: HR, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HR      34.0
-Temp    36.8
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HR      41.0
+Temp    36.7
 Name: (2013, 1, Guido), dtype: float64
 </pre></div>
 </div>
@@ -4412,67 +4516,67 @@ Name: (2013, 1, Guido), dtype: float64
       <th rowspan="6" valign="top">2013</th>
       <th rowspan="3" valign="top">1</th>
       <th>Bob</th>
-      <td>33.0</td>
-      <td>38.1</td>
+      <td>28.0</td>
+      <td>37.1</td>
     </tr>
     <tr>
       <th>Guido</th>
-      <td>34.0</td>
-      <td>36.8</td>
+      <td>41.0</td>
+      <td>36.7</td>
     </tr>
     <tr>
       <th>Sue</th>
-      <td>30.0</td>
-      <td>36.2</td>
+      <td>37.0</td>
+      <td>37.2</td>
     </tr>
     <tr>
       <th rowspan="3" valign="top">2</th>
       <th>Bob</th>
-      <td>34.0</td>
-      <td>37.0</td>
+      <td>42.0</td>
+      <td>36.3</td>
     </tr>
     <tr>
       <th>Guido</th>
-      <td>21.0</td>
-      <td>38.0</td>
+      <td>63.0</td>
+      <td>37.4</td>
     </tr>
     <tr>
       <th>Sue</th>
-      <td>35.0</td>
-      <td>38.1</td>
+      <td>36.0</td>
+      <td>37.5</td>
     </tr>
     <tr>
       <th rowspan="6" valign="top">2014</th>
       <th rowspan="3" valign="top">1</th>
       <th>Bob</th>
-      <td>31.0</td>
-      <td>37.9</td>
+      <td>50.0</td>
+      <td>35.6</td>
     </tr>
     <tr>
       <th>Guido</th>
-      <td>35.0</td>
-      <td>38.3</td>
+      <td>47.0</td>
+      <td>37.9</td>
     </tr>
     <tr>
       <th>Sue</th>
-      <td>26.0</td>
-      <td>38.4</td>
+      <td>46.0</td>
+      <td>34.9</td>
     </tr>
     <tr>
       <th rowspan="3" valign="top">2</th>
       <th>Bob</th>
-      <td>37.0</td>
-      <td>36.8</td>
+      <td>41.0</td>
+      <td>35.1</td>
     </tr>
     <tr>
       <th>Guido</th>
-      <td>37.0</td>
-      <td>36.7</td>
+      <td>31.0</td>
+      <td>35.7</td>
     </tr>
     <tr>
       <th>Sue</th>
-      <td>28.0</td>
-      <td>35.4</td>
+      <td>57.0</td>
+      <td>38.1</td>
     </tr>
   </tbody>
 </table>
@@ -4487,7 +4591,7 @@ Name: (2013, 1, Guido), dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-79-55ad5b04417a&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-80-55ad5b04417a&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="n">health_data_row</span><span class="o">.</span><span class="n">loc</span><span class="p">[(:,</span> <span class="p">:,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">),</span> <span class="p">:]</span>  <span class="c1"># doesn&#39;t work</span>
                          <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -4496,7 +4600,7 @@ Name: (2013, 1, Guido), dtype: float64
 </div>
 </div>
 <p>This pickle is solved in two possible ways:</p>
-<p>First option is the <a class="reference external" href="https://www.programiz.com/python-programming/methods/built-in/slice">slice</a> object:</p>
+<p>First option is the <a class="reference external" href="https://www.programiz.com/python-programming/methods/built-in/slice"><code class="docutils literal notranslate"><span class="pre">slice</span></code></a> object:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bobs_data</span> <span class="o">=</span> <span class="p">(</span><span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">),</span> <span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">),</span> <span class="s1">&#39;Bob&#39;</span><span class="p">)</span>  <span class="c1"># all years, all visits, of Bob</span>
@@ -4507,10 +4611,10 @@ Name: (2013, 1, Guido), dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>year  visit  subject
-2013  1      Bob        33.0
-      2      Bob        34.0
-2014  1      Bob        31.0
-      2      Bob        37.0
+2013  1      Bob        28.0
+      2      Bob        42.0
+2014  1      Bob        50.0
+      2      Bob        41.0
 Name: HR, dtype: float64
 </pre></div>
 </div>
@@ -4525,20 +4629,20 @@ Name: HR, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>year  visit  subject
-2013  1      Bob        33.0
-             Guido      34.0
-      2      Bob        34.0
-             Guido      21.0
-2014  1      Bob        31.0
-             Guido      35.0
-      2      Bob        37.0
-             Guido      37.0
+2013  1      Bob        28.0
+             Guido      41.0
+      2      Bob        42.0
+             Guido      63.0
+2014  1      Bob        50.0
+             Guido      47.0
+      2      Bob        41.0
+             Guido      31.0
 Name: HR, dtype: float64
 </pre></div>
 </div>
 </div>
 </div>
-<p>Another option is the <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.IndexSlice.html">IndexSlice</a> object:</p>
+<p>Another option is the <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.IndexSlice.html"><code class="docutils literal notranslate"><span class="pre">IndexSlice</span></code></a> object:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">IndexSlice</span>
@@ -4583,27 +4687,27 @@ Name: HR, dtype: float64
       <th rowspan="2" valign="top">2013</th>
       <th>1</th>
       <th>Bob</th>
-      <td>33.0</td>
-      <td>38.1</td>
+      <td>28.0</td>
+      <td>37.1</td>
     </tr>
     <tr>
       <th>2</th>
       <th>Bob</th>
-      <td>34.0</td>
-      <td>37.0</td>
+      <td>42.0</td>
+      <td>36.3</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">2014</th>
       <th>1</th>
       <th>Bob</th>
-      <td>31.0</td>
-      <td>37.9</td>
+      <td>50.0</td>
+      <td>35.6</td>
     </tr>
     <tr>
       <th>2</th>
       <th>Bob</th>
-      <td>37.0</td>
-      <td>36.8</td>
+      <td>41.0</td>
+      <td>35.1</td>
     </tr>
   </tbody>
 </table>
@@ -4618,16 +4722,16 @@ Name: HR, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>year  visit  subject
-2013  1      Bob        38.1
-             Guido      36.8
-2014  1      Bob        37.9
-             Guido      38.3
+2013  1      Bob        37.1
+             Guido      36.7
+2014  1      Bob        35.6
+             Guido      37.9
 Name: Temp, dtype: float64
 </pre></div>
 </div>
 </div>
 </div>
-<p>Finally, there’s one more way to index into a <code class="docutils literal notranslate"><span class="pre">MultiIndex</span></code> which is very straight-forward and explicit - the <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.xs.html">cross-section</a>.</p>
+<p>Finally, there’s one more way to index into a <code class="docutils literal notranslate"><span class="pre">MultiIndex</span></code> which is very straight-forward and explicit; the <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.xs.html">cross-section</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">health_data_row</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="p">(</span><span class="mi">2013</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">level</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="s1">&#39;visit&#39;</span><span class="p">))</span>
@@ -4665,18 +4769,18 @@ Name: Temp, dtype: float64
   <tbody>
     <tr>
       <th>Bob</th>
-      <td>33.0</td>
-      <td>38.1</td>
+      <td>28.0</td>
+      <td>37.1</td>
     </tr>
     <tr>
       <th>Guido</th>
-      <td>34.0</td>
-      <td>36.8</td>
+      <td>41.0</td>
+      <td>36.7</td>
     </tr>
     <tr>
       <th>Sue</th>
-      <td>30.0</td>
-      <td>36.2</td>
+      <td>37.0</td>
+      <td>37.2</td>
     </tr>
   </tbody>
 </table>
@@ -4697,12 +4801,12 @@ Name: Temp, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>char  int
-a     1      0.632110
-      2      0.270747
-c     1      0.071052
-      2      0.856639
-b     1      0.954223
-      2      0.699795
+a     1      0.345445
+      2      0.954966
+c     1      0.083512
+      2      0.897906
+b     1      0.091821
+      2      0.110631
 dtype: float64
 </pre></div>
 </div>
@@ -4717,7 +4821,7 @@ dtype: float64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">UnsortedIndexError</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">86</span><span class="o">-</span><span class="mf">0e6568674</span><span class="n">d17</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">87</span><span class="o">-</span><span class="mf">0e6568674</span><span class="n">d17</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
 
 <span class="nn">/opt/hostedtoolcache/Python/3.8.9/x64/lib/python3.8/site-packages/pandas/core/series.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
@@ -4792,18 +4896,18 @@ dtype: float64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>char  int
-a     1      0.632110
-      2      0.270747
-b     1      0.954223
-      2      0.699795
-c     1      0.071052
-      2      0.856639
+a     1      0.345445
+      2      0.954966
+b     1      0.091821
+      2      0.110631
+c     1      0.083512
+      2      0.897906
 dtype: float64
 char  int
-a     1      0.632110
-      2      0.270747
-b     1      0.954223
-      2      0.699795
+a     1      0.345445
+      2      0.954966
+b     1      0.091821
+      2      0.110631
 dtype: float64
 </pre></div>
 </div>
@@ -5080,112 +5184,6 @@ dtype: float64
 </table>
 </div></div></div>
 </div>
-<div class="cell tag_remove-input tag_remove-output docutils container">
-</div>
-<div class="admonition-exercise-missing-data admonition">
-<p class="admonition-title">Exercise: Missing Data</p>
-<ol class="simple">
-<li><p>Create a vector of 10000 measurements from a 10-cycle sinus wave. Remember that a single period of sine starts at 0 and ends at 2<span class="math notranslate nohighlight">\(\pi\)</span>, so 10 periods span between 0 and 20<span class="math notranslate nohighlight">\(\pi\)</span>.</p></li>
-</ol>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n_cycles</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">n_samples</span> <span class="o">=</span> <span class="mi">10000</span>
-<span class="n">amplitude</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">phase</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span>
-<span class="n">end</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">n_cycles</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="n">n_samples</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">amplitude</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">phase</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details><ol class="simple">
-<li><p>Using <code class="docutils literal notranslate"><span class="pre">np.random.choice(replace=False)</span></code> sample 100 points from the wave and place them in a Series.</p></li>
-</ol>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">chosen_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;raw&#39;</span><span class="p">])</span>
-<span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">chosen_idx</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">chosen_idx</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</details><ol class="simple">
-<li><p>Plot the chosen points.</p></li>
-</ol>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig1</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Raw data pre-interpolation&#39;</span><span class="p">)</span>
-<span class="n">data</span><span class="o">.</span><span class="n">raw</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="figure align-default" style="width: 500px">
-<div class="cell_output docutils container">
-<img alt="../../_images/class_6_173_0.png" src="../../_images/class_6_173_0.png" />
-</div>
-</div>
-</div>
-</details><ol class="simple">
-<li><p>Interpolate the points using linear interpolation and plot them on a different graph.</p></li>
-</ol>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;lin_inter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">raw</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
-<span class="n">fig2</span><span class="p">,</span> <span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Linear interpolation&#39;</span><span class="p">)</span>
-<span class="n">data</span><span class="o">.</span><span class="n">lin_inter</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="figure align-default" style="width: 500px">
-<div class="cell_output docutils container">
-<img alt="../../_images/class_6_173_1.png" src="../../_images/class_6_173_1.png" />
-</div>
-</div>
-</div>
-</details><ol class="simple">
-<li><p>Interpolate the points using quadratic interpolation and plot them on a different graph.</p></li>
-</ol>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;quad_inter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">raw</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;quadratic&#39;</span><span class="p">)</span>
-<span class="n">fig3</span><span class="p">,</span> <span class="n">ax3</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax3</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Quadratic interpolation&#39;</span><span class="p">)</span>
-<span class="n">data</span><span class="o">.</span><span class="n">quad_inter</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax3</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="figure align-default" style="width: 500px">
-<div class="cell_output docutils container">
-<img alt="../../_images/class_6_173_2.png" src="../../_images/class_6_173_2.png" />
-</div>
-</div>
-</div>
-</details></div>
 <div class="admonition-exercise-replacing-values admonition">
 <p class="admonition-title">Exercise: Replacing Values</p>
 <div class="admonition hint">
@@ -5401,10 +5399,9 @@ Solution<div class="summary-down docutils">
 
       </div>
     </div>
-    
+  
   <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-
-    
+  None
   </body>
 </html>
