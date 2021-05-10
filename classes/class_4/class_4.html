@@ -182,6 +182,11 @@
      and Modeling
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_8/class_8.html">
+     Class 8: Testing and Test-Driven Development
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -699,8 +704,6 @@ numpy.float_power
     First array elements raised to powers from second array, element-wise.
 numpy.ma.exp
     Calculate the exponential of all elements in the input array.
-numpy.ma.mrecords.MaskedRecords.__new__
-    Create a new masked array from scratch.
 numpy.diag_indices
     Return the indices to access the main diagonal of an array.
 numpy.nested_iters
@@ -715,6 +718,8 @@ numpy.put_along_axis
     Put values into the destination array by matching 1d index and data slices.
 numpy.ma.choose
     Use an index array to construct a new array from a set of choices.
+numpy.ma.mrecords.MaskedRecords.__new__
+    Create a new masked array from scratch.
 numpy.ma.maximum
     Element-wise maximum of array elements.
 numpy.ma.minimum
@@ -737,12 +742,16 @@ numpy.ma.tests.test_subclassing.MSubArray.__new__
     Create a new masked array from scratch.
 numpy.core._multiarray_umath.clip
     Clip (limit) the values in an array.
+numpy.core.tests.test_overrides._new_duck_type_and_implements
+    Create a duck array type and implements functions.
 numpy.ma.tests.test_subclassing.SubMaskedArray.__new__
     Create a new masked array from scratch.
 numpy.ma.mrecords.fromrecords
     Creates a MaskedRecords from a list of records.
 numpy.core._multiarray_umath.empty_like
     Return a new array with the same shape and type as a given array.
+numpy.f2py.tests.test_array_from_pyobj.Array.has_shared_memory
+    Check that created array shares data with input array.
 numpy.core._dtype._construction_repr
     Creates a string repr of the dtype, excluding the &#39;dtype()&#39; part
 numpy.abs
@@ -911,8 +920,6 @@ numpy.ma.less
     Return the truth value of (x1 &lt; x2) element-wise.
 numpy.ma.log2
     Base-2 logarithm of `x`.
-numpy.ma.tests.test_subclassing.SubArray
-    ndarray(shape, dtype=float, buffer=None, offset=0,
 numpy.ma.sinh
     Hyperbolic sine, element-wise.
 numpy.greater_equal
@@ -949,6 +956,8 @@ numpy.ma.arctanh
     Inverse hyperbolic tangent element-wise.
 numpy.ma.greater
     Return the truth value of (x1 &gt; x2) element-wise.
+numpy.ma.tests.test_subclassing.SubArray
+    ndarray(shape, dtype=float, buffer=None, offset=0,
 numpy.ma.multiply
     Multiply arguments element-wise.
 numpy.ma.negative
@@ -981,7 +990,15 @@ numpy.ma.greater_equal
     Return the truth value of (x1 &gt;= x2) element-wise.
 numpy.core.tests.test_function_base.PhysicalQuantity2
     ndarray(shape, dtype=float, buffer=None, offset=0,
+numpy.lib.tests.test_stride_tricks.SimpleSubClass
+    ndarray(shape, dtype=float, buffer=None, offset=0,
 numpy.ma.tests.test_subclassing.ComplicatedSubArray
+    ndarray(shape, dtype=float, buffer=None, offset=0,
+numpy.lib.tests.test_stride_tricks.VerySimpleSubClass
+    ndarray(shape, dtype=float, buffer=None, offset=0,
+numpy.core.tests.test_multiarray.TestArrayPriority.Foo
+    ndarray(shape, dtype=float, buffer=None, offset=0,
+numpy.core.tests.test_multiarray.TestArrayPriority.Bar
     ndarray(shape, dtype=float, buffer=None, offset=0,
 numpy.testing._gen_alignment_data
     generator producing data with different alignment and offsets
@@ -1260,7 +1277,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>90 ms ± 1.61 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>94.7 ms ± 83.5 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -1277,7 +1294,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.15 ms ± 14.7 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.17 ms ± 6.12 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1510,7 +1527,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>503.79555980247164
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>492.6043817490305
 </pre></div>
 </div>
 </div>
@@ -1525,13 +1542,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>95.7 µs ± 1.53 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>97.9 µs ± 88.3 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.16 µs ± 446 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.96 µs ± 11.4 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.66 µs ± 313 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.02 µs ± 11.3 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1548,13 +1565,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>74 µs ± 2.2 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>75.5 µs ± 13.4 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.54 µs ± 79.9 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.92 µs ± 19.7 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.09 µs ± 63 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.17 µs ± 37.8 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1568,7 +1585,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.06561840710670519
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.00454646640123324
 </pre></div>
 </div>
 </div>
@@ -1581,10 +1598,10 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.18072152, 0.1868021 , 0.1146951 , 0.23433765],
-       [0.42219428, 0.45741098, 0.46787094, 0.30989343],
-       [0.62142158, 0.2400406 , 0.12892503, 0.33883179],
-       [0.12689075, 0.49453019, 0.33626055, 0.06561841]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.15900428, 0.02053518, 0.1857301 , 0.12830137],
+       [0.09593663, 0.1354069 , 0.00454647, 0.29075972],
+       [0.0165928 , 0.10542028, 0.04569207, 0.15146912],
+       [0.19517666, 0.05739145, 0.30359431, 0.39849339]])
 </pre></div>
 </div>
 </div>
@@ -1597,7 +1614,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.94927286, 0.9798618 , 0.97265783, 0.95294324])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.98974462, 0.86770668, 0.93195716, 0.98097637])
 </pre></div>
 </div>
 </div>
