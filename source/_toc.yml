@@ -11,6 +11,7 @@
     - file: classes/class_6/class_6
     - file: classes/class_7/class_7
     - file: classes/class_8/class_8
+    - file: classes/class_9/class_9
 - file: tutorials
   sections:
     - file: tutorials/python_setup
