@@ -25,6 +25,10 @@ jobs:
       run: |
         pip install -r requirements.txt
 
+    - name: Install python3-dev
+      run: |
+        apt install -y python3-dev
+
     # Build the book
     - name: Build the book
       run: |
