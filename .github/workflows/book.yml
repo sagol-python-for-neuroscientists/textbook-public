@@ -7,6 +7,7 @@ on:
     - main
     paths:
       - source/**
+      - .github/**
 
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
