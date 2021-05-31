@@ -1,0 +1,1064 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 10: Introduction to Machine Learning &#8212; Python for Neuroscience</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tutorials" href="../../tutorials.html" />
+    <link rel="prev" title="Class 9: Advanced and Performant Python" href="../class_9/class_9.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python for Neuroscience</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus.html">
+   Syllabus
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../contents.html">
+   Contents
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_0/class_0.html">
+     Class 0: Background and Basic Syntax
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_1/class_1.html">
+     Class 1: More Syntax and The Python Stack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_2/class_2.html">
+     Class 2: Virtual Environments and Object-oriented Programming (OOP)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_3/class_3.html">
+     Class 3: More OOP and Exception Handling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_4/class_4.html">
+     Class 4: The Scientific Stack - Part I:
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_5/class_5.html">
+     Class 5: The Scientific Stack - Part II:
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
+      </span>
+     </code>
+     and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_6/class_6.html">
+     Class 6: Advanced
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_7/class_7.html">
+     Class 7: More
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+     , Visualizations,
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     and Modeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_8/class_8.html">
+     Class 8: Testing and Test-Driven Development
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_9/class_9.html">
+     Class 9: Advanced and Performant Python
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Class 10: Introduction to Machine Learning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../tutorials.html">
+   Tutorials
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/python_setup.html">
+     General Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/create_git_repo.html">
+     Create a Git Repository
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../resources.html">
+   Resources
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/classes/class_10/class_10.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        
+        <a class="issues-button"
+            href="https://github.com/ZviBaratz/python_for_neuroscientists/issues/new?title=Issue%20on%20page%20%2Fclasses/class_10/class_10.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ZviBaratz/python_for_neuroscientists/main?urlpath=tree/source/classes/class_10/class_10.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-fruit-classification">
+   Example: Fruit Classification
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unsupervised-learning-example-the-iris-dataset">
+   Unsupervised Learning Example: The Iris Dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#choosing-the-right-algorithm">
+   Choosing the Right Algorithm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-solution-below">
+   Exercise solution below…
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="class-10-introduction-to-machine-learning">
+<h1>Class 10: Introduction to Machine Learning<a class="headerlink" href="#class-10-introduction-to-machine-learning" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Machine learning (ML) is the study of computer programs that can learn by example. The algorithm behind them can generalize from existing examples to other cases, unknown to it at the start. A classic example involves the classification of images of cats and dogs - the algorithm has a <em>training dataset</em> which consists of many images of cats and dogs, with their proper label. Following the training its given a new set of unseen images and we see how well it can classify these. Nowadays modern algorithms can achieve human-level performance in these types of tasks after not much training.</p>
+<p>ML is useful when we, as programmers, have a hard time defining the “rules” that the computer should follow when encountering new data. Let’s take speech-to-text as an example. We can create a large database mapping the “sound” of words to their corresponding text. But this simple database will have a hard time when a person with a different accent or pronunciation will say the same word, or when we say the same word in the past tense. These small but important deviations from the data in the database might suggest that this naive approach won’t work. Indeed, speech-to-text improved dramatically in recent years only due to new machine learning algorithms that were developed, specifically in the field of <em>deep learning</em>, which is a subset of ML that works using “neural networks” composed of individual units that “learn” the wanted input-output mapping.</p>
+<p>The two main types of algorithms in the ML field are <em>supervised</em> and <em>unsupervised</em> learning algorithms.</p>
+<p>In <strong>supervised</strong> algorithms, the machine tries to learn <em>target values</em> to assign to its inputs. Classification is a classic example - each image has a label, and we wish for the algorithm to learn some function that matches the input to the output label. If the output isn’t discrete, but continuous, this is a regression problem, but still supervised. Supervised learning always has a training dataset, many times labeled manually, that it starts its learning process from. It also has a “test” dataset, which is also labeled, with which we check the predictions of our model.</p>
+<p>There are also implicit labels - say I’m a Google employee, and I would like to know whether you were satisfied with the results returned by some query. One approach might be to check how long after following some of the links you returned to the search results. Short times might indicate a non-helpful result, and I could try and correct the algorithm to show less of this type of results in the future.</p>
+<p>The second type of alogrithms is <strong>unsupervised</strong> learning. The computer is given unlabeled inputs, and it has to “make sense” of it. It will cluster the data, find common features, patterns, etc., and finally will receive a “score” based on its output. After some training the score should improve and the algorithm will know where to place the next example it receives in that parameter space. A typical example is the recommendations of Amazon to its customers following a purchase. All you have as input are the products users looked-up and/or bought, and you try to create typical bundles of products to offer the rest of the users. If they’re in fact bought together, the algorithm receives a high score for that bundle, so it’ll try working with it again.</p>
+<p>Another example of unsupervised learning is a computer learning to play a video game, let’s say Mario. The computer will not understand how to play the game at the start, but it will know that it has to reach the highest score possible. High scores are given for completing a level in the fastest time and with the highest number of collected coins, so eventually the algorithm should understand how to improve its game by trial and error.</p>
+<p>In many cases, when we try to design our ML algorithm we’ll encounter the following steps:</p>
+<ol class="simple">
+<li><p>Representation of data: The way we present the data to the computer is important. For some datasets it’s trivial - images are inherently 2D matrices, electrode recordings from cells are vectors of voltage values - but other datasets can be trickier. For example, if we wish to learn the contents of emails, we can map each word as a key in a dictionary, with the value being the number of times it’s written in that mail. This representation discards the order of the words, but gives more “weight” to high-frequency words and sentences.</p></li>
+<li><p>Evaluation: What is the criterion that distinguishes good performance by the computer? If we’re training a classifier, this can be the percentage of correct predictions on test data.</p></li>
+<li><p>Optimization: Change parameters (“hyper-parameters”) given to the algorithm to see if results improve, and re-run the tests. If we’re trying to classify different types of spikes from a neuronal population, we should estimate the number of recorded components as 10, and give the parameter to the unsupervised learning algorithm as a starting point to guess the actual number of components in the data. If we actually had 15 cells which we recorded from, we better try to re-run the code with a different hyper-parameter - 15 - and see if results improve.</p></li>
+</ol>
+<p>Before we dive in and look at an example, I want to stress that we won’t be talking about the inner workings of machine learning algorithms. Instead we’ll focus on using these algorithms effectively. Moreover, we won’t discuss <em>most</em> available algorithms and approaches out there, since there are so many. This should give you a glimpse into the possibilities of this very broad topic.</p>
+</div>
+<div class="section" id="example-fruit-classification">
+<h2>Example: Fruit Classification<a class="headerlink" href="#example-fruit-classification" title="Permalink to this headline">¶</a></h2>
+<p>There are countless libraries that implement machine learning interfaces in the Python ecosystem, and everyday more and more are created. They diverge by their specific goals, implemented algorithms and API. The most popular library is <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code>, a part of the SciPy and PyData ecosystem. This means that it integrates seamlessly with <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">pandas</span></code> and <code class="docutils literal notranslate"><span class="pre">scipy</span></code>, among other important libraries. <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> (<code class="docutils literal notranslate"><span class="pre">sklearn</span></code>) has a Python API, but its internals are written in open-source, performant C++ - a critical demand for any machine learning algorithm. Other famous libraries include Google’s TensorFlow with Keras and PyTorch, but we won’t be discussing them in this course.</p>
+<p>The great example below is taken from Coursera’s course “Applied Machine Learning”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The data is available in a <code class="docutils literal notranslate"><span class="pre">.txt</span></code> format, which means we can read it with pandas’ <code class="docutils literal notranslate"><span class="pre">read_csv</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CSV_PATH</span> <span class="o">=</span> <span class="s2">&quot;fruit_data_with_colors.txt&quot;</span>
+
+<span class="n">fruits</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">CSV_PATH</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">fruits</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>fruit_label</th>
+      <th>fruit_name</th>
+      <th>fruit_subtype</th>
+      <th>mass</th>
+      <th>width</th>
+      <th>height</th>
+      <th>color_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>apple</td>
+      <td>granny_smith</td>
+      <td>192</td>
+      <td>8.4</td>
+      <td>7.3</td>
+      <td>0.55</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>apple</td>
+      <td>granny_smith</td>
+      <td>180</td>
+      <td>8.0</td>
+      <td>6.8</td>
+      <td>0.59</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>apple</td>
+      <td>granny_smith</td>
+      <td>176</td>
+      <td>7.4</td>
+      <td>7.2</td>
+      <td>0.60</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2</td>
+      <td>mandarin</td>
+      <td>mandarin</td>
+      <td>86</td>
+      <td>6.2</td>
+      <td>4.7</td>
+      <td>0.80</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2</td>
+      <td>mandarin</td>
+      <td>mandarin</td>
+      <td>84</td>
+      <td>6.0</td>
+      <td>4.6</td>
+      <td>0.79</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The dataset contains the mass, width, height and color of each fruit. The <code class="docutils literal notranslate"><span class="pre">fruit_label</span></code> column is equal in content to the <code class="docutils literal notranslate"><span class="pre">fruit_name</span></code> column, but we usually use numbers, rather than strings, as our labels. Conforming with “clean” data practices, rows indicate an item or object and columns indicate its features.</p>
+<p>We wish to train a classifier to identify different fruit based on <em>mass</em>, <em>width</em>, <em>height</em>, and <em>color_score</em>.</p>
+<p>Our first concern is to split up the dataset into a training dataset and a testing dataset. <code class="docutils literal notranslate"><span class="pre">sklearn</span></code>’s <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html"><code class="docutils literal notranslate"><span class="pre">train_test_split</span></code></a> does just that, and we’ll go with the default 25% test size:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">fruits</span><span class="p">[[</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="s1">&#39;mass&#39;</span><span class="p">,</span> <span class="s1">&#39;color_score&#39;</span><span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">fruits</span><span class="p">[</span><span class="s1">&#39;fruit_label&#39;</span><span class="p">]</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, let’s plot a scatter matrix to qualitatively assess the interaction between our predictors.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scatter</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span>
+                                     <span class="n">c</span><span class="o">=</span><span class="n">y_train</span><span class="p">,</span>
+                                     <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
+                                     <span class="n">s</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+                                     <span class="n">hist_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;bins&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">},</span>
+                                     <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/class_10_17_0.png" src="../../_images/class_10_17_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Seaborn can also make this plot even prettier</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;fruit_name&quot;</span><span class="p">,</span> <span class="nb">vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">,</span> <span class="s2">&quot;width&quot;</span><span class="p">,</span> <span class="s2">&quot;mass&quot;</span><span class="p">,</span> <span class="s2">&quot;color_score&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/class_10_18_0.png" src="../../_images/class_10_18_0.png" />
+</div>
+</div>
+<p>This scatter matrix, a prominent feature of <code class="docutils literal notranslate"><span class="pre">pandas</span></code> and <code class="docutils literal notranslate"><span class="pre">seaborn</span></code>, is a great way to summarize the distribution of and relationship between different variables.</p>
+<p>The diagonal is a histogram of all values for all of the parameters. This helps us see outliers in the data, which we might want to discard.</p>
+<p>The top triangle of the matrix is a transposition of the bottom triangle, meaning we can discard one of them entirely, or replace them with some other representation of the data. Each box is a scatter plot showing all items in our dataset. The colors indicate the different fruit type. The location of the circles is determined by the values of the pair of variables corresponding to each row and column.</p>
+<p>We can identify features that are more indicative than other to the type of fruit in question. For example, the scatter plot for <code class="docutils literal notranslate"><span class="pre">[mass,</span> <span class="pre">color_score]</span></code> shows a relatively good separation between the different target labels.</p>
+<p>We can also observe the data in 3D:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;width&#39;</span><span class="p">],</span> <span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;height&#39;</span><span class="p">],</span> <span class="n">X_train</span><span class="p">[</span><span class="s1">&#39;color_score&#39;</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">y_train</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;height&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;color_score&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/class_10_20_0.png" src="../../_images/class_10_20_0.png" />
+</div>
+</div>
+<p>The algorithm we’ll use to classify the data is “k-Nearest Neighbors” (kNN), which can be used both for classification (discrete) and for regression (continuous). This algorithm memorizes the entire training dataset, and when it encounters a new sample from the testing dataset it finds the <em>k</em> closest samples to the new data point. It takes the labels from the <code class="docutils literal notranslate"><span class="pre">k</span></code> samples it found and decides, usually based on a majority vote, what type of sample does the new test sample is.</p>
+<p>The “distance” between the new test sample and the existing samples is calculated in “feature-space”, i.e. the difference between each new parameter and the existing training point’s parameters. The smallest total difference points to the closest data point. Let’s visualize the feature-space for <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">=</span> <span class="pre">5</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">adspy_shared_utilities</span> <span class="kn">import</span> <span class="n">plot_knn_decision_boundary</span>
+
+<span class="n">plot_knn_decision_boundary</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="s2">&quot;uniform&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/class_10_22_0.png" src="../../_images/class_10_22_0.png" />
+</div>
+</div>
+<p>We see a representation of how would a kNN algorithm divide this (2D) feature-space. The colored areas are assigned to a specific label.</p>
+<p>We haven’t run our algorithm yet, though. So let’s do so now.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier()
+</pre></div>
+</div>
+</div>
+</div>
+<p>And… we’re done. The model is now trained with our training dataset. The “minkowski” metric is a fancy name for the more famous “Euclidean” metric (with <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">2</span></code>). This is the metric used to calculate the distance between new and existing points, and it’s a simple squared difference in all dimensions:</p>
+<div class="math notranslate nohighlight">
+\[
+d = \sqrt{(n - e)^2_{\text{width}} + (n - e)^2_{\text{height}} + ...}
+\]</div>
+<p>With <em>d</em> being the distance, <em>n</em> the new measurement and <em>e</em> the existing one.</p>
+<p>Let’s see how well we did using the previously-untouched test dataset:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5333333333333333
+</pre></div>
+</div>
+</div>
+</div>
+<p>53% success rate. Not too bad.</p>
+<p>We’re also interested in the choice for the value of <code class="docutils literal notranslate"><span class="pre">k</span></code>. Why did we choose 5? would a different <code class="docutils literal notranslate"><span class="pre">k</span></code> perform better? This is an essential part when dealing with ML models. We also change the hyper-parameters to see if we reached some sort of maximum.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">scores_k</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">k_range</span><span class="p">:</span>
+    <span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">k</span><span class="p">)</span>
+    <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">scores_k</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
+
+<span class="n">scores_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;$k$&quot;</span><span class="p">:</span> <span class="n">k_range</span><span class="p">,</span> <span class="s2">&quot;Score&quot;</span><span class="p">:</span> <span class="n">scores_k</span><span class="p">})</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">stripplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">scores_data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;$k$&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Score&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/class_10_31_0.png" src="../../_images/class_10_31_0.png" />
+</div>
+</div>
+<p>In our case <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">=</span> <span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">=</span> <span class="pre">6</span></code> are equally good. When the dataset is larger and the training process takes longer, we usually just sample a few <code class="docutils literal notranslate"><span class="pre">k</span></code>’s to make sure we’re not stuck in a local <code class="docutils literal notranslate"><span class="pre">k</span></code> minimum.</p>
+<p>We’d also want to see what happens when we increase the training dataset (and lower the test dataset, of course):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">training_size</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">number_of_trials</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">number_of_rows</span> <span class="o">=</span> <span class="n">training_size</span> <span class="o">*</span> <span class="n">number_of_trials</span>
+
+<span class="n">train_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Training Set Proportion&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">number_of_trials</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">),</span>
+                              <span class="s2">&quot;Trial&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">number_of_trials</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">),</span>
+                              <span class="s2">&quot;Score&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">number_of_trials</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)})</span>
+
+<span class="c1"># We&#39;ll generate 1000 samples per training dataset size to see how the distribution looks like</span>
+<span class="k">for</span> <span class="n">counter</span><span class="p">,</span> <span class="n">size</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">training_size</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">trial</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_trials</span><span class="p">):</span>
+        <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="o">=</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mi">1</span><span class="o">-</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+        <span class="n">real_row</span> <span class="o">=</span> <span class="n">trial</span> <span class="o">+</span> <span class="p">(</span><span class="n">counter</span> <span class="o">*</span> <span class="n">number_of_trials</span><span class="p">)</span>
+        <span class="n">train_results</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">real_row</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">counter</span><span class="p">,</span> <span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">train_results</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Training Set Proportion&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Score&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/class_10_33_0.png" src="../../_images/class_10_33_0.png" />
+</div>
+</div>
+<p>As expected, the higher the training dataset is, the better the accuracy we achieve.</p>
+<p>To wrap up the kNN algorithm, we’ll review the four things a kNN needs to be specified with:</p>
+<ol class="simple">
+<li><p>A distance metric - how to check which is the closest data point to our new testing point.</p></li>
+<li><p>How many “nearest” neighbors to look at?</p></li>
+<li><p>Weighting function on the neighbor points - in our case we didn’t use any function, but we could try to make the closer neighbors have more points.</p></li>
+<li><p>How to sum the votes of the neighbors - majority vote in our case.</p></li>
+</ol>
+</div>
+<div class="section" id="unsupervised-learning-example-the-iris-dataset">
+<h2>Unsupervised Learning Example: The Iris Dataset<a class="headerlink" href="#unsupervised-learning-example-the-iris-dataset" title="Permalink to this headline">¶</a></h2>
+<p>The second example I wish to show here is for a unsupervised learning procedure. We’ll again use a dataset with four dimensions, or four features per sample, called the Iris Dataset. It can be obtained with the Seaborn data visualization package as a Pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="n">iris</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;iris&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iris</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal_length</th>
+      <th>sepal_width</th>
+      <th>petal_length</th>
+      <th>petal_width</th>
+      <th>species</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>6.7</td>
+      <td>3.0</td>
+      <td>5.2</td>
+      <td>2.3</td>
+      <td>virginica</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>6.3</td>
+      <td>2.5</td>
+      <td>5.0</td>
+      <td>1.9</td>
+      <td>virginica</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>6.5</td>
+      <td>3.0</td>
+      <td>5.2</td>
+      <td>2.0</td>
+      <td>virginica</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>6.2</td>
+      <td>3.4</td>
+      <td>5.4</td>
+      <td>2.3</td>
+      <td>virginica</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>5.9</td>
+      <td>3.0</td>
+      <td>5.1</td>
+      <td>1.8</td>
+      <td>virginica</td>
+    </tr>
+  </tbody>
+</table>
+<p>150 rows × 5 columns</p>
+</div></div></div>
+</div>
+<p>A short examination of the data is always useful. We see the four mentioned features of the data, while the last column is the true species of that specific iris.</p>
+<p>Our goal is to first visualize the data. Due to our inherent difficulty in visualizing 4D objects, we’ll have to reduce the dimensionality of the data first. This can be done in a number of ways - let’s look at seaborn’s pair plot again:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">iris</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x7fa5944fbc10&gt;
+</pre></div>
+</div>
+<img alt="../../_images/class_10_41_1.png" src="../../_images/class_10_41_1.png" />
+</div>
+</div>
+<p>This gives us a nice overview of the data.</p>
+<p>We can also reduce the dimensionality of the data using some algorithm, of course. Its task is to find “new dimensions” that retain the essential features of the data. The algorithm we’ll use is PCA, or principle component analysis. While it’s not a ML algorithm, it shares many of its properties with ML algorithms, and it’s also useful as a basic attempt at classification - and thus it found its way into scikit-learn. After the visualization part we’ll cluster the data with a “real” unsupervised learning algorithm.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">X_iris</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;species&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># drop the labels of the data</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_iris</span><span class="p">)</span>  <span class="c1"># notice how the labels aren&#39;t specified</span>
+<span class="n">X_2D</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_iris</span><span class="p">)</span>  <span class="c1"># turn the data into a 2D np.ndarray</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Display the result with a scatter plot</span>
+<span class="n">data_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">PCA1</span><span class="o">=</span><span class="n">X_2D</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">PCA2</span><span class="o">=</span><span class="n">X_2D</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">species</span><span class="o">=</span><span class="n">iris</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">])</span>
+<span class="n">iris_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Happily, this worked out quite well. However, the same plot without the coloring used to specify the iris type would look rather convoluted. The left blob of data is distinct, but the other two are bunched together, and a-priori we would have a hard time telling which points belongs to each dataset:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">iris_results</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;PCA1&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;PCA2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;PCA1&#39;, ylabel=&#39;PCA2&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/class_10_46_1.png" src="../../_images/class_10_46_1.png" />
+</div>
+</div>
+<p>Assuming we have no labels, which is usually the case when using unsupervised algorithms, we want the output to tell us which point belongs to which iris type.</p>
+<p>We’ll use Gaussian Mixture Models (GMM), an extension of the relatively popular k-Means Clustering algorithm. The basic idea is to use algorithms like k-Means to find clusters in the data, but then it defines the “center” of the cluster and draws a circle around that center. Points near the edge of the circle are less likely to be a part of the cluster, which adds a probabilistic aspect to the classification of each point, something that k-Means lacks.</p>
+<p>GMMs are very popular and found their way into scikit-learn’s API:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.mixture</span> <span class="kn">import</span> <span class="n">GaussianMixture</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">GaussianMixture</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">covariance_type</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_iris</span><span class="p">)</span>  <span class="c1"># again, no labels are given</span>
+<span class="n">iris_results</span><span class="p">[</span><span class="s1">&#39;gmm_results&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_iris</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the results</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">iris_results</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;PCA1&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;PCA2&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;gmm_results&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;PCA1&#39;, ylabel=&#39;PCA2&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/class_10_49_1.png" src="../../_images/class_10_49_1.png" />
+</div>
+</div>
+<p>We see that the results are very similar to the true results seen above, which is nice. Let’s look at the error rate:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compare true and GMM results</span>
+<span class="n">convert_to_int</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;setosa&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;versicolor&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;virginica&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<span class="n">iris_results</span><span class="p">[</span><span class="s1">&#39;species_index&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iris_results</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">convert_to_int</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="n">rows_with_a_diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">((</span><span class="n">iris_results</span><span class="p">[</span><span class="s1">&#39;gmm_results&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">iris_results</span><span class="p">[</span><span class="s1">&#39;species_index&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The error proportion of the GMM is: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">rows_with_a_diff</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">iris_results</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The error proportion of the GMM is: 0.9666666666666667
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are many other examples of unsupervised learning algorithms. A very famous one is this neural network which learned to play Mario:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;qv6UVOQ0F44&quot;</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">450</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="450"
+    src="https://www.youtube.com/embed/qv6UVOQ0F44"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="choosing-the-right-algorithm">
+<h2>Choosing the Right Algorithm<a class="headerlink" href="#choosing-the-right-algorithm" title="Permalink to this headline">¶</a></h2>
+<p>One of the largest concerns when trying to deploy an ML model is to choose the right model from the get-go. While this can be difficult, the chart below might provide a hint on the way to do so.</p>
+<p><img alt="Cheat sheet" src="../../_images/ml_map.png" /></p>
+</div>
+<div class="section" id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+<p>The problem at hand is classifying images of digits to their correct numerical value. This is how it looks like:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_digits</span>
+<span class="n">digits</span> <span class="o">=</span> <span class="n">load_digits</span><span class="p">()</span>
+<span class="n">digits</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">shape</span>  <span class="c1"># 1797 digits, each image has 64 pixels</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1797, 8, 8)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;xticks&#39;</span><span class="p">:[],</span> <span class="s1">&#39;yticks&#39;</span><span class="p">:[]},</span>
+                         <span class="n">gridspec_kw</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">axes</span><span class="o">.</span><span class="n">flat</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;binary&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">target</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/class_10_60_0.png" src="../../_images/class_10_60_0.png" />
+</div>
+</div>
+<p>The important thing here is that the data was loaded using the <code class="docutils literal notranslate"><span class="pre">load_digits()</span></code> function, and the actual data resides under the <code class="docutils literal notranslate"><span class="pre">images</span></code> attributes.</p>
+<p>Create a training and testing dataset, find a suitable model using the cheat sheet, train it and evaluate its performance.</p>
+</div>
+<div class="section" id="exercise-solution-below">
+<h2>Exercise solution below…<a class="headerlink" href="#exercise-solution-below" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">LinearSVC</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="n">num_of_digits</span><span class="p">,</span> <span class="n">x_pix</span><span class="p">,</span> <span class="n">y_pix</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">flat_digits</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">num_of_digits</span><span class="p">,</span> <span class="n">x_pix</span> <span class="o">*</span> <span class="n">y_pix</span><span class="p">))</span>
+<span class="n">Xtrain</span><span class="p">,</span> <span class="n">Xtest</span><span class="p">,</span> <span class="n">ytrain</span><span class="p">,</span> <span class="n">ytest</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">flat_digits</span><span class="p">,</span> <span class="n">digits</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">svc</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">()</span>
+<span class="n">svc</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xtrain</span><span class="p">,</span> <span class="n">ytrain</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/sklearn/svm/_base.py:985: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(&quot;Liblinear failed to converge, increase &quot;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LinearSVC()
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">svc</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">Xtest</span><span class="p">,</span> <span class="n">ytest</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.94
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./classes/class_10"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../class_9/class_9.html" title="previous page">Class 9: Advanced and Performant Python</a>
+    <a class='right-next' id="next-link" href="../../tutorials.html" title="next page">Tutorials</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
