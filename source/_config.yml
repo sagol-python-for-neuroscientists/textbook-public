@@ -4,6 +4,7 @@ logo: logo.png
 
 execute:
   allow_errors: true
+  timeout: -1
 
 parse:
   myst_extended_syntax: true
