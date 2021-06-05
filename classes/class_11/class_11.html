@@ -1,0 +1,886 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 12: Git and More Python Libraries &#8212; Python for Neuroscience</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tutorials" href="../../tutorials.html" />
+    <link rel="prev" title="Class 10: Introduction to Machine Learning" href="../class_10/class_10.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python for Neuroscience</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus.html">
+   Syllabus
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../contents.html">
+   Contents
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_0/class_0.html">
+     Class 0: Background and Basic Syntax
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_1/class_1.html">
+     Class 1: More Syntax and The Python Stack
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_2/class_2.html">
+     Class 2: Virtual Environments and Object-oriented Programming (OOP)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_3/class_3.html">
+     Class 3: More OOP and Exception Handling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_4/class_4.html">
+     Class 4: The Scientific Stack - Part I:
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       numpy
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_5/class_5.html">
+     Class 5: The Scientific Stack - Part II:
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       matplotlib
+      </span>
+     </code>
+     and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_6/class_6.html">
+     Class 6: Advanced
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_7/class_7.html">
+     Class 7: More
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pandas
+      </span>
+     </code>
+     , Visualizations,
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xarray
+      </span>
+     </code>
+     and Modeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_8/class_8.html">
+     Class 8: Testing and Test-Driven Development
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_9/class_9.html">
+     Class 9: Advanced and Performant Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_10/class_10.html">
+     Class 10: Introduction to Machine Learning
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Class 12: Git and More Python Libraries
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../tutorials.html">
+   Tutorials
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/python_setup.html">
+     General Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../tutorials/create_git_repo.html">
+     Create a Git Repository
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../resources.html">
+   Resources
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/classes/class_11/class_11.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        
+        <a class="issues-button"
+            href="https://github.com/ZviBaratz/python_for_neuroscientists/issues/new?title=Issue%20on%20page%20%2Fclasses/class_11/class_11.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ZviBaratz/python_for_neuroscientists/main?urlpath=tree/source/classes/class_11/class_11.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Class 12: Git and More Python Libraries
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git">
+     Git
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#why-git">
+       Why git?
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-model">
+       The model
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#setting-up-a-repository">
+       Setting up a repository
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#commits">
+       Commits
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#branches">
+       Branches
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#use-cases">
+         Use cases
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#usage">
+         Usage
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#remotes">
+       Remotes
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#setting-up-a-remote-repository">
+         Setting up a remote repository
+        </a>
+        <ul class="nav section-nav flex-column">
+         <li class="toc-h5 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#create-a-repository-directly-in-github-com">
+           Create a repository directly in GitHub.com
+          </a>
+         </li>
+         <li class="toc-h5 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#create-a-local-repository-and-point-it-at-an-existing-remote-repo">
+           Create a local repository and point it at an existing remote repo
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#push-and-pull">
+         Push and pull
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#conflicts">
+         Conflicts
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#forks-and-pull-requests">
+       Forks and Pull Requests
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id2">
+         Usage
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#important-python-libraries-which-weren-t-mentioned">
+     Important Python Libraries Which Weren’t Mentioned
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dask">
+       Dask
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#dask-futures">
+         Dask.Futures
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#streamz">
+       Streamz
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fmri-processing">
+       fMRI Processing
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cuda-ecosystem">
+       CUDA Ecosystem
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#zarr">
+       Zarr
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#biopython-and-scikit-bio">
+       Biopython and Scikit-bio
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#statsmodels">
+       Statsmodels
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="class-12-git-and-more-python-libraries">
+<h1>Class 12: Git and More Python Libraries<a class="headerlink" href="#class-12-git-and-more-python-libraries" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="id1">
+<h1><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="git">
+<h2>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h2>
+<p>When we started using git, the basic intro I gave came down essentially to this:</p>
+<p><img alt="Git, from xkcd 1597" src="../../_images/git.png" /></p>
+<p>I did try to explain a little why we use it and how, but I essentially forced it upon you and made you memorize a few commands for it to work, and for your homework to be submitted. Today, we’ll try to dive a bit deeper and understand the “how” of git. This is because git is an immensely useful tool for our type of work, and it will be even more useful when we start hacking together a couple of weeks from now.</p>
+<div class="section" id="why-git">
+<h3>Why git?<a class="headerlink" href="#why-git" title="Permalink to this headline">¶</a></h3>
+<p>Version control software lets us:</p>
+<ol class="simple">
+<li><p>Write and manage the history of our codebase.</p></li>
+<li><p>Work on changes for our code without modifying the currently working copy.</p></li>
+<li><p>Collaborate with others easily.</p></li>
+</ol>
+<p>Reason #1 is important enough as is, but the other two really makes git shine above the rest of the options out there, and it’s also what made it so popular in the open source community.</p>
+<p>There are a <a class="reference external" href="https://www.daolf.com/posts/git-series-part-1/">variety</a> <a class="reference external" href="https://missing.csail.mit.edu/2020/version-control/">of</a> <a class="reference external" href="https://rachelcarmena.github.io/2018/12/12/how-to-teach-git.html">tutorials</a> <a class="reference external" href="https://smusamashah.github.io/explain-git-in-simple-words">on</a> <a class="reference external" href="https://git-scm.com/doc">git</a>. Some are also <a class="reference external" href="https://learngitbranching.js.org/">interactive</a>. The one below is aimed at working with VSCode’s integrated tools, and should also help you collaborate during the hackathon.</p>
+</div>
+<div class="section" id="the-model">
+<h3>The model<a class="headerlink" href="#the-model" title="Permalink to this headline">¶</a></h3>
+<p><img alt="Git composition" src="../../_images/git_lifecycle.png" /></p>
+<p>In a version-controlled project we have these three basic components:</p>
+<ol class="simple">
+<li><p><strong>Repository</strong>: the name for the entire collection of version-controlled files. We can have a local repository, i.e. one in our computer, a remote one, i.e. one on the cloud (like GitHub provides) or both. A repository contains both the standard files we’re working on, and a compressed copy of them inside the <code class="docutils literal notranslate"><span class="pre">.git</span></code> folder.</p></li>
+<li><p><strong>Working tree</strong>: the name given for the current state of the version-controlled folder, which might defer from the version that was previously captured and recorded. When the working tree is “clean” it means that there’s no such difference between the latest “snapshot” of the codebase, as resides inside the <code class="docutils literal notranslate"><span class="pre">.git</span></code> folder, and the copy currently visible to the user.</p></li>
+<li><p><strong>Index</strong>: an intermediate “staging” environment, the only place from which code can be inserted into the repository. This allows us to change many things, but only commit parts of them into the repository itself.</p></li>
+</ol>
+<p>The main idea behind git is to capture complete snapshots of the directory we’re tracking. Yes, the snapshots include everything that was present at that directory during that point of time and they’re complete, i.e. “decoding” them allows us to view the directory as it once was.</p>
+</div>
+<div class="section" id="setting-up-a-repository">
+<h3>Setting up a repository<a class="headerlink" href="#setting-up-a-repository" title="Permalink to this headline">¶</a></h3>
+<p>Any directory can be a git directory if it contains a <code class="docutils literal notranslate"><span class="pre">.git</span></code> folder with the proper subfolders (automatically generated, of course). The easiest way to create such a folder is to use the <code class="docutils literal notranslate"><span class="pre">init</span></code> command. If you open a folder which isn’t version controlled, VSCode will automatically offer to create a new git repository in it:</p>
+<p><img alt="Initialize a repo" src="../../_images/git_init.png" /></p>
+<p>If your directory is already version controlled, simply opening it in VSCode should work. If it’s not working, make sure you used the “Open Folder…” command to open VSCode. The folder containing the <code class="docutils literal notranslate"><span class="pre">.git</span></code> folder is the “top level” of your repository, and will automatically notice any changes in the subfolders of that folder. It’s usually not recommended to have several git projects inside a git-tracked folder. This means that if you have a “my_code_projects” folder which contains several other git-tracked folders, like HW assignments and other unrelated stuff, make sure that “my_code_projects” isn’t a git folder in itself, i.e. you shouldn’t have a <code class="docutils literal notranslate"><span class="pre">.git</span></code> folder in it. It’s technically possible to have “independent” git repositories inside others (they’re called sub-modules) but it’s usually not the right way to organize your projects.</p>
+<p>To conclude, once git is set the parent directory, as well as its sub-directories, will be tracked as long as there’s a <code class="docutils literal notranslate"><span class="pre">.git</span></code> folder in it. To remove <code class="docutils literal notranslate"><span class="pre">git</span></code> tracking from that specific folder, all you have to do is to remove the <code class="docutils literal notranslate"><span class="pre">.git</span></code> subfolder.</p>
+</div>
+<div class="section" id="commits">
+<h3>Commits<a class="headerlink" href="#commits" title="Permalink to this headline">¶</a></h3>
+<p>The act of committing a file is perhaps the most fundamental one in git, so let’s break it down. When a file in a git-tracked folder has different contents from what the git repository has in it (remember that it has copies of everything) the file will be recognized by git as a “changed” file. In git terms, it means that the copy of the file in the “working tree” is different than what’s in the repository. Of course, if we haven’t committed anything, and only initialized the repository, <strong>all</strong> files will have a different working copy than what git has in its repository, since git doesn’t recognized any of them. Let’s see how it looks like in VSCode:</p>
+<p><img alt="Working copy" src="../../_images/git_workcopy.png" /></p>
+<p>As you see, there are two options for this situation - either the file is completely new and doesn’t exist in the repository, and so it’s marked as “U” in git (“Untracked”) or it already existed there, but the current content is different than the one recorded in the repository (“M” for “Modified”).</p>
+<p>From the chart above we see that we need to add the files to the index, before committing them to the repository. Adding to the index, also known as “staging”, is done using the “git add” command, represented in VSCode with a “+” sign. We can either add all files to the index, or add one at a time.</p>
+<p><img alt="Add all" src="../../_images/git_add_all.png" />
+<img alt="Add one" src="../../_images/git_add_one.png" /></p>
+<p>The reason we might not add everything at once is that commits are used to convey messages, so if a file doesn’t fit the message a commit is saying, we can commit it sometime else. Also, at any given point in time we can be confident about changes in one file, but less confident about changes in another. Changes we believe in can be committed without much doubt, but temporary edits may be left out.</p>
+<p>Once files are staged they may be committed. Staged files have their own little dropdown area:</p>
+<p><img alt="Before committing" src="../../_images/git_staging.png" /></p>
+<p>The added file, marked with an “A”, can be committed by writing a commit message which describes what has changed and then by clicking the tick mark. Hovering over it will show a <code class="docutils literal notranslate"><span class="pre">-</span></code> sign that allows us to unstage it.</p>
+<p>Once committed the file will be “copied” to the git repository and saved there for future reference. We could go back in time to each commit quite easily using the “Timeline” feature on the bottom left of VSCode. Essentially commits are snapshots to the status of the repository at that particular instance. Each commit knows of its predecessor, so they form together a graph of progress for your repo. Due to these reasons it’s suggested to commit a lot and often. It’s very cheap to commit and it will provide you with a clear history of the changes in your repo. Changed a function’s signature? Commit. Added documentation? Commit. You basically commit everytime you feel like you feel the need to save the file (even though VSCode does that automatically).</p>
+</div>
+<div class="section" id="branches">
+<h3>Branches<a class="headerlink" href="#branches" title="Permalink to this headline">¶</a></h3>
+<p>Up to now we’ve discussed most of these things earlier this semester. Now we come to a very important feature of git that you (probably) haven’t been using, but that should help you iterate over your own code, and cooperate with others.</p>
+<p>Branches of repositories are different “working copies” of the same repository, which have a different commit history. Every git repo has at least one branch, usually called master, which signals to the coders that this branch is the main branch. This branch is but a label which is put to a commit - usually the last one - and says that this commit is the current “head” of the branch. The history of a branch is the history of the commits that came before the commit it’s currently pointing at.</p>
+<div class="section" id="use-cases">
+<h4>Use cases<a class="headerlink" href="#use-cases" title="Permalink to this headline">¶</a></h4>
+<p>Assume you’re changing something in an existing codebase, but you’re not exactly sure how will it pan out. Or you’re making a change that in the long run you’re certain will work, but it means that you have to “break” the current implementation, which will render the current codebase unusable until you’re done. If you ever found yourself in one of these situations then you should have probably used a branch.</p>
+<p>Branches let you not worry about changes you make, since you know you’ll always be one command away from going back to the safe confounds of your older repo version, the one that worked.</p>
+</div>
+<div class="section" id="usage">
+<h4>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h4>
+<p>Making new branches is easy, which is another incentive that makes git-based developers use it a lot. To make a new branch from VSCode, click “Checkout to..” and then choose “Create new branch…”. Type in the name of the branch - the name of the feature or the bug you’re fixing, usually - and press enter. You’ll be checked out to that branch, which means that your current work will be committed to that branch instead of the previous one. You’ll notice the name of the branch in the bottom left corner of your screen, next to the “fork” symbol.</p>
+</div>
+</div>
+<div class="section" id="remotes">
+<h3>Remotes<a class="headerlink" href="#remotes" title="Permalink to this headline">¶</a></h3>
+<p>A git repository can have many copies scattered around, and it’s very popular to host your git repositories in the cloud for backup and collaboration purposes. The most popular service for this purpose is the Microsoft-owned GitHub.com (GH), which hosts the codebases of many of the larger companies - Google, Microsoft, NSA - as well as millions of tiny, private user-owned repositories.</p>
+<p>Below we’ll look in more detail at some of the basic actions one can do with these cloud-based repositoties, which are called <em>“remotes”</em> in git lingo.</p>
+<div class="section" id="setting-up-a-remote-repository">
+<h4>Setting up a remote repository<a class="headerlink" href="#setting-up-a-remote-repository" title="Permalink to this headline">¶</a></h4>
+<p>Before you can do anything with a remote repository, you first have to set it up. There a few options for that:</p>
+<div class="section" id="create-a-repository-directly-in-github-com">
+<h5>Create a repository directly in GitHub.com<a class="headerlink" href="#create-a-repository-directly-in-github-com" title="Permalink to this headline">¶</a></h5>
+<p>This means that at the moment of its creation, the only copy of this repository which exists anywhere is on GH’s cloud. Since we usually don’t develop straight inside GH, we’ll first need a copy of this repository on our computer, and to have a direct “link” between our local copy and the online copy.</p>
+<p>Here’s how you create an online repo:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_online_first.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>Here’s how we download it - “clone” (the “Git: Clone” option window was opened using Ctrl + Shift + P):</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_clone.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>We now have a local copy of the repo and we’re ready to work.</p>
+</div>
+<div class="section" id="create-a-local-repository-and-point-it-at-an-existing-remote-repo">
+<h5>Create a local repository and point it at an existing remote repo<a class="headerlink" href="#create-a-local-repository-and-point-it-at-an-existing-remote-repo" title="Permalink to this headline">¶</a></h5>
+<p>If we already have a local repository which we now wish to back up online, we can connect it to some online repo using a few commands. It’s usually better if the online repo is brand new and has the same name of the local repo. Here’s an example (again, the “Git: Add Remote” was accessed using Ctrl + Shift + P):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Video</span><span class="p">(</span><span class="s1">&#39;github_from_local.mp4&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_from_local.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>These two options are equally valid and both will eventually generate a repository both on your computer and on the cloud.</p>
+<p>A repository can have several remotes it works with. In the example above I called the remote “origin”, as is customary, but it’s completely possible to add more remotes with different names and to push changes to them as well. Soon we’ll go through an example where our local repo will have one more needed remote.</p>
+</div>
+</div>
+<div class="section" id="push-and-pull">
+<h4>Push and pull<a class="headerlink" href="#push-and-pull" title="Permalink to this headline">¶</a></h4>
+<p>The most basic thing you can do with a remote repository is to pull data from it, or push to it. Pulling is done when we wish to sync with changes which are located on the cloud, but were uploaded there by someone else. In the hackathon, for example, it’s possible that some other students will change the repo’s file, and you’d like these changes to be inside your local copy as well - so you “pull” the changes from the cloud into your machine.</p>
+<p>Pushing is exactly the opposite - you’re publishing your work online for collaboration (or backup) purposes.</p>
+</div>
+<div class="section" id="conflicts">
+<h4>Conflicts<a class="headerlink" href="#conflicts" title="Permalink to this headline">¶</a></h4>
+<p>While conflicts may occur in any git repo, regardless of its remotes, they’re most relevant under this situation so we’ll go through them now. A conflict is a “disagreement” between two repos on the history of commits. In other words, two repos which are supposed to be identical have the same file but with different content. Please note that if your repository consists of <code class="docutils literal notranslate"><span class="pre">hello.txt</span></code> and the remote one consists of an identical copy of <code class="docutils literal notranslate"><span class="pre">hello.txt</span></code> and an extra <code class="docutils literal notranslate"><span class="pre">hi.txt</span></code> file, pulling it will not cause a conflict, since no harm will be done if we simply copy <code class="docutils literal notranslate"><span class="pre">hi.txt</span></code> to your own local copy. Here’s an example:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_pull_no_conf.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>New files will be pulled without any issues. Even if someone changed an existing file you have, but you haven’t made any changes to it - git will still happily update your own local copy:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_pull_no_issue.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>Conflics happen within existing files, when the remote and local copy have different copies of the same file, and both were edited. Let’s look at an example:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_conflict.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>In this example you see that the remote copy was updated independently by some other author, and I worked on my own local copy disregarding existing changes in the remote copy. When I try to pull the latest updates from the remote, git will tell me that we have conflict since our file histories don’t match. This conflict has to be resolved by deciding who wins, i.e. whose copy of <code class="docutils literal notranslate"><span class="pre">hi.txt</span></code> along with its history will keep on living in our repository.</p>
+<p>The conflict is visualize with the green and blue part, showing the “current change” (my copy) and the “incoming change” (remote’s work). Then I have to choose who’s work will I keep? “Accept Current Change” means that my copy prevails, while “Accept Incoming Change” means that other guy’s work will prevail. After I chose the preferred option the file is automatically edited and I can stage and commit this merge. Lastly I’m able to push back to the repo the conflict resolution, and indeed I see it online.</p>
+</div>
+</div>
+<div class="section" id="forks-and-pull-requests">
+<h3>Forks and Pull Requests<a class="headerlink" href="#forks-and-pull-requests" title="Permalink to this headline">¶</a></h3>
+<p>Forking in git is the act of taking a snapshot of a repository, and using it as a base for our own repository. The fork is “aware” that it was once a part of a different repository, but now it belongs to some other guy. When you fork a repo you’re saying something like “I’ll take it from here”, since your future work on the codebase will be completely isolated from work that keeps happening in the repo that you forked from.</p>
+<p>Forking is done when you wish to develop for a repository which you have no write permissions to, or when you wish to start a spin-off from some repo. For example, if I want to add a feature to <code class="docutils literal notranslate"><span class="pre">pandas</span></code> I can’t simply clone that repository to my computer, write some code and then push it back since it’s not my repo and I have no permissions. If anyone could push to any repo they cloned things would go crazy pretty fast. Instead, I’ll fork that repo, work on that forked copy and when I wish to introduce this feature to the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> devs I’ll make a <em>Pull Request</em> which showcases my changes. A pull request is a way to “connect” a fork to its origin repo; it’s an event which happens in the original repo in which the developers see that someone forked their codebase, changed something and now wishes to merge it back. They can review this change, perhaps ask for more clarifications and then merge it if they deem it worthy. An example of a pull request can be seen <a class="reference external" href="https://github.com/pandas-dev/pandas/pull/34631">here</a>.</p>
+<div class="section" id="id2">
+<h4>Usage<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>After forking a repository you receive its copy as a GH repo, and to do the actual coding work you need to clone it to your computer. This means that the local repository you’ll have has two repos which with it can interact - your fork and the original repo. We usually call your own fork the “origin” (just like we do in regular clones) and the original repo is called “upstream”. Let’s see it in action:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_fork.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>Here we showed the first part of the process - forking a repository and cloning it to our computer. You can see that the forked repository has a “forked from HagaiHargil/localrepo” header (around 0:24), which reminds you constantly of its upstream repo.</p>
+<p>Here’s how you create a pull request after editing something in your own local copy:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_pr.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>The last thing we might want to do is to update our local copy with the changes from the upstream repo, i.e. the original repo that we forked. We’ll do that whenever the original developers added new features which we also want in our own local copy, for example. To do that, we’ll add that original repo as an “upstream” remote in our own repo, and then we could pull from there. Here’s an example:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_upstream.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>As you noticed, after adding the remote (Ctrl + Shift + P) you still need to “fetch” the information from it, as it doesn’t happen automatically. Only after fetching, which is done once, you can pull from the upstream repo.</p>
+<p>There are a few other useful features of git, but we’ll stop here.</p>
+</div>
+</div>
+</div>
+<div class="section" id="important-python-libraries-which-weren-t-mentioned">
+<h2>Important Python Libraries Which Weren’t Mentioned<a class="headerlink" href="#important-python-libraries-which-weren-t-mentioned" title="Permalink to this headline">¶</a></h2>
+<p>The vastness of the Pythonic ocean can be overwhelming, but fortunately I’m (still) here to help. I’d like to mention a few other libraries which weren’t mentioned yet in the course.</p>
+<div class="section" id="dask">
+<h3><a class="reference external" href="https://dask.org/">Dask</a><a class="headerlink" href="#dask" title="Permalink to this headline">¶</a></h3>
+<p>Dask is a library for parallel computation on larger-than-memory datasets. It wraps many of the common data structures we’ve learned to love like lists, arrays and data frames and provides very similar APIs, but which scale to many cores and GPUs automatically.</p>
+<p>Dask offers both these core data structures, and a pipelining mechanism to control the execution of the computations that are done on the data.</p>
+<p>Happily I don’t even need to tell you how do these “new” data structures work, since they’re not even new per se - they’re copies of existing ones:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dask.dataframe</span> <span class="k">as</span> <span class="nn">dd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">dd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data.csv&quot;</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">user_id</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The only difference is the <code class="docutils literal notranslate"><span class="pre">.compute()</span></code> method at the end. We call it once we specified all computations that were supposed to happen on the object, and only when we call it they’re actually made. Before <code class="docutils literal notranslate"><span class="pre">compute()</span></code>ing, Dask create a graph which consists of all the functions we specified, checks which one can be done in parallel and then it executes them in the most efficient way possible.</p>
+<div class="section" id="dask-futures">
+<h4>Dask.Futures<a class="headerlink" href="#dask-futures" title="Permalink to this headline">¶</a></h4>
+<p>To run our entire pipeline in parallel, we can use the <a class="reference external" href="https://docs.dask.org/en/latest/futures.html"><code class="docutils literal notranslate"><span class="pre">Futures</span></code></a> module of Dask to have thread- or process-based parallelism. This is best achieved by running a local Dask “client”, enabled by the <a class="reference external" href="https://distributed.dask.org/en/latest/"><code class="docutils literal notranslate"><span class="pre">distributed</span></code></a> module. Assuming we have several functions which have to be called in a row, with a few that can be parallelized, we can write all functions and then call them in this manner:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>  <span class="c1"># start local workers as processes</span>
+<span class="c1"># or</span>
+<span class="c1"># client = Client(processes=False)  # start local workers as threads</span>
+
+<span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">increment</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># calls inc(10) in background thread or process</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">increment</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>  <span class="c1"># calls inc(20) in background thread or process</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">add</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">result</span><span class="p">(),</span> <span class="n">b</span><span class="o">.</span><span class="n">result</span><span class="p">()))</span>
+<span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/flavus/Projects/python_for_neuroscientists/textbook/venv/lib/python3.8/site-packages/distributed/node.py:160: UserWarning: Port 8787 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 36005 instead
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output text_html"><b>Future: increment</b> <font style="color: var(--jp-ui-font-color2, gray)">status: </font><font style="color: var(--jp-ui-font-color0, black)">finished</font>, <font style="color: var(--jp-ui-font-color2, gray)">type: </font>builtins.int, <font style="color: var(--jp-ui-font-color2, gray)">key: </font>increment-c422f1009b2da2431bf8eca2e349e8f7</div></div>
+</div>
+<p>To “block”, i.e. to force the code to execute up to now, we call result():</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+<span class="n">res</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
+</pre></div>
+</div>
+</div>
+</div>
+<p>We don’t need to wait for the results to arrive, we can assume they arrived and call the next function in line without callin <code class="docutils literal notranslate"><span class="pre">result()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">add</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># calls add on the results of a and </span>
+<span class="n">c</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32
+</pre></div>
+</div>
+</div>
+</div>
+<p>A Dask-based pipeline is a series of <code class="docutils literal notranslate"><span class="pre">submit()</span></code>s followed by a <code class="docutils literal notranslate"><span class="pre">result()</span></code>. The other ways to interact with this pipeline are described in the <a class="reference external" href="https://docs.dask.org/en/latest/futures.html">docs</a>.</p>
+</div>
+</div>
+<div class="section" id="streamz">
+<h3>Streamz<a class="headerlink" href="#streamz" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://streamz.readthedocs.io/en/latest/index.html">Streamz</a> is a handy library to work with streaming data, i.e. real time data. If you run live experiments and you need to read, process and output something immediately, then you’re probably better off with a library that helps you with the small details of handling the incoming bytestream.</p>
+<p>Streamz integrates flawlessly with pandas, numpy and the likes, but let’s look at a simpler example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">streamz</span> <span class="kn">import</span> <span class="n">Stream</span>
+
+<span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="n">source</span> <span class="o">=</span> <span class="n">Stream</span><span class="p">()</span>
+<span class="n">source</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">increment</span><span class="p">)</span><span class="o">.</span><span class="n">sink</span><span class="p">(</span><span class="nb">print</span><span class="p">)</span>
+
+<span class="n">source</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">source</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+11
+</pre></div>
+</div>
+</div>
+</div>
+<p>We initialized a <code class="docutils literal notranslate"><span class="pre">Stream</span></code> instance which has two main components:</p>
+<ol class="simple">
+<li><p>The functions that will process the data in steps.</p></li>
+<li><p>The inputs (inside the <code class="docutils literal notranslate"><span class="pre">emit()</span></code> method) that will be processed.</p></li>
+</ol>
+<p>This was a pretty simple stream - let’s look at something with “branching”:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">decrement</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="n">source</span> <span class="o">=</span> <span class="n">Stream</span><span class="p">()</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">increment</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">decrement</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">zip</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span><span class="o">.</span><span class="n">sink</span><span class="p">(</span><span class="nb">print</span><span class="p">)</span>
+<span class="n">source</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># 9 + 11</span>
+<span class="n">source</span><span class="o">.</span><span class="n">visualize</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20
+</pre></div>
+</div>
+<img alt="../../_images/class_11_76_1.png" src="../../_images/class_11_76_1.png" />
+</div>
+</div>
+<p>Streamz can do a whole lot of other things, including feedback, recursion and time-based processing.</p>
+</div>
+<div class="section" id="fmri-processing">
+<h3>fMRI Processing<a class="headerlink" href="#fmri-processing" title="Permalink to this headline">¶</a></h3>
+<p>If you’re passionate about fMRI and DTI studies, then you’ll be happy to learn that Python has <a class="reference external" href="https://nipy.org/"><code class="docutils literal notranslate"><span class="pre">nipy</span></code></a> to offer. It’s a collections of open source tools that can help with all stages of your fMRI study, including complex analysis pipelines and integration with third party tools like FSL.</p>
+</div>
+<div class="section" id="cuda-ecosystem">
+<h3>CUDA Ecosystem<a class="headerlink" href="#cuda-ecosystem" title="Permalink to this headline">¶</a></h3>
+<p>The graphical processing unit, or GPU, is a “special” processor inside your computer that is able to perform simple tasks very quickly. It’s very bad at replacing a standard computational processing unit (CPU), but it can add numbers really fast - much faster than the CPU - which can be very useful sometimes. A long time ago GPUs were only useful for the gaming industry, but since the rise of ML GPUs became super important and widespread, and today they can be found in most computers and servers. Using these GPUs effectively can speed up some computational pipelines by orders of magnitude.</p>
+<p>CUDA is a framework by nVidia, the largest GPU manufacturer, that assists in the integration of the GPU into your code. We won’t go into too much detail here but code that should be run on the GPU has to be compiled for that specific GPU beforehand, so something needs to do that work for us. CUDA helps in this regard, and once it’s installed on your machine it will be much easier to work effectively with your card.</p>
+<p>From the wide CUDA ecosystem you probably should know that <code class="docutils literal notranslate"><span class="pre">numba</span></code> can compile your code to use the GPU instead of the CPU, and that two other nVidia-based libraries can help you with other day to day tasks:</p>
+<ol class="simple">
+<li><p><a class="reference external" href="https://cupy.chainer.org/">CuPy</a> - the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> replacement. It’s designed so that you could replace your <code class="docutils literal notranslate"><span class="pre">np.array</span></code> calls with <code class="docutils literal notranslate"><span class="pre">cupy.array</span></code> calls and immediately receive access to your GPU’s memory and power.</p></li>
+<li><p><a class="reference external" href="https://github.com/rapidsai/cudf">CuDF</a> - the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> replacement. The idea is similar - replace <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s with the <code class="docutils literal notranslate"><span class="pre">cudf.DataFrame</span></code> for dataframes on the GPU.</p></li>
+</ol>
+<p>I won’t show any real code samples here because it won’t work if a GPU isn’t installed on your computer, but you can look at the linked docs for more details.</p>
+</div>
+<div class="section" id="zarr">
+<h3><a class="reference external" href="https://zarr.readthedocs.io/en/stable/index.html">Zarr</a><a class="headerlink" href="#zarr" title="Permalink to this headline">¶</a></h3>
+<p>When working with multidimensional arrays and their metadata and labels, writing them to disk and passing them between machines is always an issue. Numpy offers <code class="docutils literal notranslate"><span class="pre">np.save</span></code> and <code class="docutils literal notranslate"><span class="pre">np.savez</span></code> commands, but they’re limited in their metadata capabilities. A better option nowadays is the <a class="reference external" href="https://zarr.readthedocs.io/en/stable/"><code class="docutils literal notranslate"><span class="pre">zarr</span></code></a> format, which can save arrays of many types under different “directories” in the same file. Zarr also offers compression options and fast writing and reading capabilities.</p>
+</div>
+<div class="section" id="biopython-and-scikit-bio">
+<h3><a class="reference external" href="https://biopython.org/">Biopython</a> and <a class="reference external" href="http://scikit-bio.org/">Scikit-bio</a><a class="headerlink" href="#biopython-and-scikit-bio" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="statsmodels">
+<h3><a class="reference external" href="https://www.statsmodels.org/stable/index.html">Statsmodels</a><a class="headerlink" href="#statsmodels" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./classes/class_11"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../class_10/class_10.html" title="previous page">Class 10: Introduction to Machine Learning</a>
+    <a class='right-next' id="next-link" href="../../tutorials.html" title="next page">Tutorials</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
