@@ -18,4 +18,5 @@
   sections:
     - file: tutorials/python_setup
     - file: tutorials/create_git_repo
+    - file: tutorials/create_and_publish_pacakge
 - file: resources
