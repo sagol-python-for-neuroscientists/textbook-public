@@ -478,15 +478,15 @@
 <ul class="simple">
 <li><p>Generate a file called <code class="docutils literal notranslate"><span class="pre">MANIFEST.in</span></code> and write inside the following:</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">include</span> <span class="n">LICENSE</span> <span class="o">*.</span><span class="n">rst</span> <span class="o">*.</span><span class="n">toml</span> <span class="o">*.</span><span class="n">yml</span> <span class="o">*.</span><span class="n">yaml</span>
-<span class="c1"># Tests</span>
-<span class="n">recursive</span><span class="o">-</span><span class="n">include</span> <span class="n">tests</span> <span class="o">*.</span><span class="n">py</span>
-<span class="c1"># Documentation</span>
-<span class="n">recursive</span><span class="o">-</span><span class="n">include</span> <span class="n">docs</span> <span class="o">*.</span><span class="n">png</span>
-<span class="n">recursive</span><span class="o">-</span><span class="n">include</span> <span class="n">docs</span> <span class="o">*.</span><span class="n">svg</span>
-<span class="n">recursive</span><span class="o">-</span><span class="n">include</span> <span class="n">docs</span> <span class="o">*.</span><span class="n">py</span>
-<span class="n">recursive</span><span class="o">-</span><span class="n">include</span> <span class="n">docs</span> <span class="o">*.</span><span class="n">rst</span>
-<span class="n">prune</span> <span class="n">docs</span><span class="o">/</span><span class="n">_build</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">include</span> <span class="n">LICENSE</span> <span class="o">*.</span><span class="n">rst</span> <span class="o">*.</span><span class="n">toml</span> <span class="o">*.</span><span class="n">yml</span> <span class="o">*.</span><span class="n">yaml</span>
+    <span class="c1"># Tests</span>
+    <span class="n">recursive</span><span class="o">-</span><span class="n">include</span> <span class="n">tests</span> <span class="o">*.</span><span class="n">py</span>
+    <span class="c1"># Documentation</span>
+    <span class="n">recursive</span><span class="o">-</span><span class="n">include</span> <span class="n">docs</span> <span class="o">*.</span><span class="n">png</span>
+    <span class="n">recursive</span><span class="o">-</span><span class="n">include</span> <span class="n">docs</span> <span class="o">*.</span><span class="n">svg</span>
+    <span class="n">recursive</span><span class="o">-</span><span class="n">include</span> <span class="n">docs</span> <span class="o">*.</span><span class="n">py</span>
+    <span class="n">recursive</span><span class="o">-</span><span class="n">include</span> <span class="n">docs</span> <span class="o">*.</span><span class="n">rst</span>
+    <span class="n">prune</span> <span class="n">docs</span><span class="o">/</span><span class="n">_build</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -497,17 +497,17 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Generate a file called <code class="docutils literal notranslate"><span class="pre">.pypirc</span></code> and write inside the following:</p></li>
+<li><p>Generate a file called <code class="docutils literal notranslate"><span class="pre">.pypirc</span></code> in your home directory and write inside the following:</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">distutils</span><span class="p">]</span>
-<span class="n">index</span><span class="o">-</span><span class="n">servers</span><span class="o">=</span>
-    <span class="n">pypi</span>
-    <span class="n">test</span>
-<span class="p">[</span><span class="n">test</span><span class="p">]</span>
-<span class="n">repository</span> <span class="o">=</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">test</span><span class="o">.</span><span class="n">pypi</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">legacy</span><span class="o">/</span>
-<span class="n">username</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">your</span> <span class="n">test</span> <span class="n">user</span> <span class="n">name</span> <span class="n">goes</span> <span class="n">here</span><span class="o">&gt;</span>
-<span class="p">[</span><span class="n">pypi</span><span class="p">]</span>
-<span class="n">username</span> <span class="o">=</span> <span class="n">__token__</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="p">[</span><span class="n">distutils</span><span class="p">]</span>
+    <span class="n">index</span><span class="o">-</span><span class="n">servers</span><span class="o">=</span>
+        <span class="n">pypi</span>
+        <span class="n">test</span>
+    <span class="p">[</span><span class="n">test</span><span class="p">]</span>
+    <span class="n">repository</span> <span class="o">=</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">test</span><span class="o">.</span><span class="n">pypi</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">legacy</span><span class="o">/</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">your</span> <span class="n">test</span> <span class="n">user</span> <span class="n">name</span> <span class="n">goes</span> <span class="n">here</span><span class="o">&gt;</span>
+    <span class="p">[</span><span class="n">pypi</span><span class="p">]</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">__token__</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -516,47 +516,47 @@
 </li>
 <li><p>Add a <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> file with the following content:</p></li>
 </ol>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[metadata]</span>
-<span class="na">name</span> <span class="o">=</span> <span class="s">time_travel</span>
-<span class="na">version</span> <span class="o">=</span> <span class="s">0.0.1</span>
-<span class="na">author</span> <span class="o">=</span> <span class="s">Zvi Baratz</span>
-<span class="na">author_email</span> <span class="o">=</span> <span class="s">z.baratz@gmail.com</span>
-<span class="na">description</span> <span class="o">=</span> <span class="s">Travel in time using Python!</span>
-<span class="na">long_description</span> <span class="o">=</span> <span class="s">file: README.md, CHANGELOG.md, LICENSE</span>
-<span class="na">long_description_content_type</span> <span class="o">=</span> <span class="s">text/markdown</span>
-<span class="na">keywords</span> <span class="o">=</span> <span class="s">future, timetravel, example</span>
-<span class="na">url</span> <span class="o">=</span> <span class="s">https://github.com/ZviBaratz/time_travel</span>
-<span class="na">project_urls</span> <span class="o">=</span>
-    <span class="na">Bug Tracker</span> <span class="o">=</span> <span class="s">https://github.com/ZviBaratz/time_travel/issues</span>
-<span class="na">classifiers</span> <span class="o">=</span>
-    <span class="na">Programming Language :: Python :: 3</span>
-    <span class="na">License :: OSI Approved :: MIT License</span>
-    <span class="na">Operating System :: OS Independent</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span>    <span class="k">[metadata]</span>
+    <span class="na">name</span> <span class="o">=</span> <span class="s">time_travel</span>
+    <span class="na">version</span> <span class="o">=</span> <span class="s">0.0.1</span>
+    <span class="na">author</span> <span class="o">=</span> <span class="s">Zvi Baratz</span>
+    <span class="na">author_email</span> <span class="o">=</span> <span class="s">z.baratz@gmail.com</span>
+    <span class="na">description</span> <span class="o">=</span> <span class="s">Travel in time using Python!</span>
+    <span class="na">long_description</span> <span class="o">=</span> <span class="s">file: README.md, CHANGELOG.md, LICENSE</span>
+    <span class="na">long_description_content_type</span> <span class="o">=</span> <span class="s">text/markdown</span>
+    <span class="na">keywords</span> <span class="o">=</span> <span class="s">future, timetravel, example</span>
+    <span class="na">url</span> <span class="o">=</span> <span class="s">https://github.com/ZviBaratz/time_travel</span>
+    <span class="na">project_urls</span> <span class="o">=</span>
+        <span class="na">Bug Tracker</span> <span class="o">=</span> <span class="s">https://github.com/ZviBaratz/time_travel/issues</span>
+    <span class="na">classifiers</span> <span class="o">=</span>
+        <span class="na">Programming Language :: Python :: 3</span>
+        <span class="na">License :: OSI Approved :: MIT License</span>
+        <span class="na">Operating System :: OS Independent</span>
 
-<span class="k">[options]</span>
-<span class="na">package_dir</span> <span class="o">=</span>
-    <span class="o">=</span> <span class="s">src</span>
-<span class="na">packages</span> <span class="o">=</span> <span class="s">find:</span>
-<span class="na">python_requires</span> <span class="o">=</span> <span class="s">&gt;=3.6</span>
-<span class="na">install_requires</span> <span class="o">=</span>
-    <span class="na">numpy</span>
+    <span class="k">[options]</span>
+    <span class="na">package_dir</span> <span class="o">=</span>
+        <span class="o">=</span> <span class="s">src</span>
+    <span class="na">packages</span> <span class="o">=</span> <span class="s">find:</span>
+    <span class="na">python_requires</span> <span class="o">=</span> <span class="s">&gt;=3.6</span>
+    <span class="na">install_requires</span> <span class="o">=</span>
+        <span class="na">numpy</span>
 
-<span class="k">[options.extras_require]</span>
-<span class="na">dev</span> <span class="o">=</span> <span class="s">black flake8 pytest</span>
-<span class="na">dist</span> <span class="o">=</span> <span class="s">build twine</span>
-<span class="na">docs</span> <span class="o">=</span> <span class="s">mkdocs</span>
+    <span class="k">[options.extras_require]</span>
+    <span class="na">dev</span> <span class="o">=</span> <span class="s">black; flake8; pytest</span>
+    <span class="na">dist</span> <span class="o">=</span> <span class="s">build; twine</span>
+    <span class="na">docs</span> <span class="o">=</span> <span class="s">mkdocs</span>
 
-<span class="k">[options.packages.find]</span>
-<span class="na">where</span> <span class="o">=</span> <span class="s">src</span>
+    <span class="k">[options.packages.find]</span>
+    <span class="na">where</span> <span class="o">=</span> <span class="s">src</span>
 </pre></div>
 </div>
 <ol class="simple">
 <li><p>Add a <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> with the following content:</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">setuptools</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="kn">import</span> <span class="nn">setuptools</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">setuptools</span><span class="o">.</span><span class="n">setup</span><span class="p">()</span>
+    <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+        <span class="n">setuptools</span><span class="o">.</span><span class="n">setup</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Before we go any further let’s recap our latest steps: First, we’re defining configuration files for some of the tools we’ll be using, like <code class="docutils literal notranslate"><span class="pre">black</span></code> and <code class="docutils literal notranslate"><span class="pre">flake8</span></code>. These are definitely not a must, but they’re nice to have. Then we added an eerie-looking <code class="docutils literal notranslate"><span class="pre">MANIFEST.in</span></code> file which contains a bunch of incantations. This file define what will be packaged with our code besides the actual code, but I won’t go into  any further details. Lastly we added <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> and <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> files which are basically a configuration\metadata files that define how will our package be packaged.</p>

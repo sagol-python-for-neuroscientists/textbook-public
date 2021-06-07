@@ -525,15 +525,15 @@ Solution<div class="summary-down docutils">
 <p>There are numerous tools for creating and managing virtual environments with Python. In this course we will use <a class="reference external" href="https://docs.python.org/3/library/venv.html#module-venv"><code class="docutils literal notranslate"><span class="pre">venv</span></code></a>, which is one of Python’s built-in packages and is therefore a simple option that will always be available to you.</p>
 <p>Creating a new virtual environment with <code class="docutils literal notranslate"><span class="pre">venv</span></code> is as easy as running:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="008e3bec-d2ce-4a18-89c0-423d18cfc169" name="3d7f81da-7e71-49f1-9774-4a927d7fa317" type="radio">
-</input><label class="tabbed-label" for="008e3bec-d2ce-4a18-89c0-423d18cfc169">
+<input checked="checked" id="94531b3f-7d40-4a76-a5ac-01974ad745d8" name="70162a12-cccc-46c7-8f1f-5658d7069101" type="radio">
+</input><label class="tabbed-label" for="94531b3f-7d40-4a76-a5ac-01974ad745d8">
 Linux/macOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m venv /path/to/new/virtual/environment/
 </pre></div>
 </div>
 </div>
-<input id="0c23fb2b-beaa-4e49-9480-d320a67376b5" name="3d7f81da-7e71-49f1-9774-4a927d7fa317" type="radio">
-</input><label class="tabbed-label" for="0c23fb2b-beaa-4e49-9480-d320a67376b5">
+<input id="b4e96623-db8c-43cd-80fb-b02482bd98dc" name="70162a12-cccc-46c7-8f1f-5658d7069101" type="radio">
+</input><label class="tabbed-label" for="b4e96623-db8c-43cd-80fb-b02482bd98dc">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> C:\Python38\python -m venv C:\path\to\new\virtual\environment\
 </pre></div>
@@ -570,16 +570,16 @@ Windows</label><div class="tabbed-content docutils">
 <p>Activating a virtual environment means modifying your working environment to use a particular, isolated installation of Python (created in <a class="reference internal" href="#create"><span class="std std-ref">Creating a Virtual Environment</span></a>). This will normally also “override” some other related CLI tools with those installed within the virtual environment’s <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory (such as <code class="docutils literal notranslate"><span class="pre">pip</span></code>), and sometimes also change some OS-related environment variables.</p>
 <p>To activate the virtual environment and use the newly created isolated Python environment, simply run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="7973b988-9532-420f-9cad-c6a1241087f6" name="bf09d154-a602-4906-94e5-557c5fc3ab1c" type="radio">
-</input><label class="tabbed-label" for="7973b988-9532-420f-9cad-c6a1241087f6">
+<input checked="checked" id="872e14a0-0b37-4d1d-905a-8e69cdc525fe" name="5cb5a143-6ee1-4b3b-912b-43248972736b" type="radio">
+</input><label class="tabbed-label" for="872e14a0-0b37-4d1d-905a-8e69cdc525fe">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">source</span> &lt;venv&gt;/bin/activate
 </pre></div>
 </div>
 <p><em>* Replace <code class="docutils literal notranslate"><span class="pre">&lt;venv&gt;</span></code> with your virtual environment’s directory path.</em></p>
 </div>
-<input id="9a99ff19-3bbd-44eb-bc37-d59d8939f2dc" name="bf09d154-a602-4906-94e5-557c5fc3ab1c" type="radio">
-</input><label class="tabbed-label" for="9a99ff19-3bbd-44eb-bc37-d59d8939f2dc">
+<input id="e4170969-2c51-44e2-b5f6-e09ea7619148" name="5cb5a143-6ee1-4b3b-912b-43248972736b" type="radio">
+</input><label class="tabbed-label" for="e4170969-2c51-44e2-b5f6-e09ea7619148">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> <span class="p">&lt;</span>venv<span class="p">&gt;</span>\Scripts\activate
 </pre></div>
@@ -590,16 +590,16 @@ Windows</label><div class="tabbed-content docutils">
 <p>You should now see your virtual environment’s directory name used as a prefix (<code class="docutils literal notranslate"><span class="pre">(venv)</span></code>) in your terminal window.</p>
 <p>To validate the activation, run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="3e2262ec-25c7-47aa-9eed-19b9623e04d3" name="52caf8f8-9d51-406b-9fff-b040594ae6eb" type="radio">
-</input><label class="tabbed-label" for="3e2262ec-25c7-47aa-9eed-19b9623e04d3">
+<input checked="checked" id="2a5696b3-1e84-4c49-a0bb-3e634e0fd13e" name="0e249b44-3c6c-4018-ba0d-99645bd69e1c" type="radio">
+</input><label class="tabbed-label" for="2a5696b3-1e84-4c49-a0bb-3e634e0fd13e">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$ </span>which python
 <span class="go">&lt;venv&gt;/bin/python</span>
 </pre></div>
 </div>
 </div>
-<input id="3929f138-0968-4889-9072-d04384184d2c" name="52caf8f8-9d51-406b-9fff-b040594ae6eb" type="radio">
-</input><label class="tabbed-label" for="3929f138-0968-4889-9072-d04384184d2c">
+<input id="8f603433-a0d2-4d48-9576-057847f9a64d" name="0e249b44-3c6c-4018-ba0d-99645bd69e1c" type="radio">
+</input><label class="tabbed-label" for="8f603433-a0d2-4d48-9576-057847f9a64d">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">C:\&gt;</span> where python
 <span class="gp">&lt;venv&gt;</span>\Scripts\python
@@ -825,7 +825,7 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7fd70081a7f0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7f2ba8965a00&gt;
 </pre></div>
 </div>
 </div>
@@ -975,7 +975,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7fd70081aa00&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7f2ba8965820&gt;
 </pre></div>
 </div>
 </div>
