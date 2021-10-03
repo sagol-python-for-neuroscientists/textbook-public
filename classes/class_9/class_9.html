@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -46,7 +46,7 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -75,6 +75,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
@@ -84,7 +88,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -335,7 +339,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#generators">
@@ -770,7 +774,7 @@ c 20
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StopIteration</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="n">dd54763376f1</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">1877550269.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">new_range</span><span class="p">))</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> 
 <span class="ne">----&gt; </span><span class="mi">9</span> <span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">new_range</span><span class="p">))</span>
@@ -816,7 +820,7 @@ c 20
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object my_range at 0x7fb6d473fe40&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object my_range at 0x7fb3a427a200&gt;
 </pre></div>
 </div>
 </div>
@@ -831,7 +835,7 @@ c 20
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">8792</span><span class="n">b66651eb</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">2329712724.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">range2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
 
 <span class="ne">TypeError</span>: &#39;generator&#39; object is not subscriptable
@@ -859,7 +863,7 @@ c 20
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StopIteration</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">13</span><span class="o">-</span><span class="n">a4e913989eeb</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">3337243685.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">next</span><span class="p">(</span><span class="n">loop_range</span><span class="p">)</span>
 
 <span class="ne">StopIteration</span>: 
@@ -919,7 +923,7 @@ False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object &lt;genexpr&gt; at 0x7fb6d47564a0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object &lt;genexpr&gt; at 0x7fb3a427a580&gt;
 </pre></div>
 </div>
 </div>
@@ -1031,7 +1035,7 @@ Solution<div class="summary-down docutils">
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">20</span><span class="o">-</span><span class="mi">06</span><span class="n">d6587ee42e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">1446458673.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">f</span><span class="p">()</span>  <span class="c1"># doesn&#39;t work - we have one required argument to the function</span>
 
 <span class="ne">TypeError</span>: f() missing 1 required positional argument: &#39;required_argument&#39;
@@ -1303,8 +1307,8 @@ print_hello
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>It tooks the code 7.152557373046875e-07 milliseconds to run.
-It tooks the code 1.1920928955078125e-06 milliseconds to run.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>It tooks the code 1.430511474609375e-06 milliseconds to run.
+It tooks the code 1.430511474609375e-06 milliseconds to run.
 </pre></div>
 </div>
 </div>
@@ -1374,7 +1378,7 @@ It tooks the code 1.1920928955078125e-06 milliseconds to run.
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">37</span><span class="o">-</span><span class="n">d27b12743133</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">2766538973.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">one</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">two</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">])</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;three&#39;</span><span class="p">])</span>
@@ -1584,11 +1588,11 @@ g
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Numpy:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>88.3 ms ± 3.23 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>67 ms ± 459 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 Numba:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>129 ms ± 6.32 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>137 ms ± 1.56 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -1627,11 +1631,11 @@ Numba:
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Numpy:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>84 ms ± 1.01 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>67.7 ms ± 875 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 Numba:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>123 ms ± 1.84 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139 ms ± 3.03 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -1662,7 +1666,7 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>70.6 ms ± 1.77 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>75.4 ms ± 5.69 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -1728,10 +1732,10 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>35.7 ms ± 721 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>34 ms ± 559 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.09 ms ± 54.7 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.28 ms ± 19.6 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -1752,7 +1756,7 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.93 ms ± 120 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.47 ms ± 184 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -1782,7 +1786,7 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.79 ms ± 870 µs per loop (mean ± std. dev. of 7 runs, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.13 ms ± 1.02 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -1796,24 +1800,30 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/.pyxbld/temp.linux-x86_64-3.8/pyrex/cython_filter_demo/filter_array.c:620:10: fatal error: numpy/arrayobject.h: No such file or directory
+  620 | #include &quot;numpy/arrayobject.h&quot;
+      |          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+</pre></div>
+</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">DistutilsExecError</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/unixccompiler.py</span> in <span class="ni">_compile</span><span class="nt">(self, obj, src, ext, cc_args, extra_postargs, pp_opts)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/unixccompiler.py</span> in <span class="ni">_compile</span><span class="nt">(self, obj, src, ext, cc_args, extra_postargs, pp_opts)</span>
 <span class="g g-Whitespace">    </span><span class="mi">116</span>         <span class="k">try</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">117</span>             <span class="bp">self</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="n">compiler_so</span> <span class="o">+</span> <span class="n">cc_args</span> <span class="o">+</span> <span class="p">[</span><span class="n">src</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">obj</span><span class="p">]</span> <span class="o">+</span>
 <span class="g g-Whitespace">    </span><span class="mi">118</span>                        <span class="n">extra_postargs</span><span class="p">)</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/ccompiler.py</span> in <span class="ni">spawn</span><span class="nt">(self, cmd)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/ccompiler.py</span> in <span class="ni">spawn</span><span class="nt">(self, cmd)</span>
 <span class="g g-Whitespace">    </span><span class="mi">909</span>     <span class="k">def</span> <span class="nf">spawn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">):</span>
 <span class="ne">--&gt; </span><span class="mi">910</span>         <span class="n">spawn</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dry_run</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">911</span> 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/spawn.py</span> in <span class="ni">spawn</span><span class="nt">(cmd, search_path, verbose, dry_run)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/spawn.py</span> in <span class="ni">spawn</span><span class="nt">(cmd, search_path, verbose, dry_run)</span>
 <span class="g g-Whitespace">     </span><span class="mi">35</span>     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;posix&#39;</span><span class="p">:</span>
 <span class="ne">---&gt; </span><span class="mi">36</span>         <span class="n">_spawn_posix</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">search_path</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="n">dry_run</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">37</span>     <span class="k">elif</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;nt&#39;</span><span class="p">:</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/spawn.py</span> in <span class="ni">_spawn_posix</span><span class="nt">(cmd, search_path, verbose, dry_run)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/spawn.py</span> in <span class="ni">_spawn_posix</span><span class="nt">(cmd, search_path, verbose, dry_run)</span>
 <span class="g g-Whitespace">    </span><span class="mi">156</span>                         <span class="n">cmd</span> <span class="o">=</span> <span class="n">executable</span>
 <span class="ne">--&gt; </span><span class="mi">157</span>                     <span class="k">raise</span> <span class="n">DistutilsExecError</span><span class="p">(</span>
 <span class="g g-Whitespace">    </span><span class="mi">158</span>                           <span class="s2">&quot;command </span><span class="si">%r</span><span class="s2"> failed with exit status </span><span class="si">%d</span><span class="s2">&quot;</span>
@@ -1823,67 +1833,67 @@ Numba:
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
 <span class="ne">CompileError</span><span class="g g-Whitespace">                              </span>Traceback (most recent call last)
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/pyximport/pyximport.py</span> in <span class="ni">load_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, is_package, build_inplace, language_level, so_path)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyximport/pyximport.py</span> in <span class="ni">load_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, is_package, build_inplace, language_level, so_path)</span>
 <span class="g g-Whitespace">    </span><span class="mi">213</span>                 <span class="n">module_name</span> <span class="o">=</span> <span class="n">name</span>
 <span class="ne">--&gt; </span><span class="mi">214</span>             <span class="n">so_path</span> <span class="o">=</span> <span class="n">build_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="n">pyxfilename</span><span class="p">,</span> <span class="n">pyxbuild_dir</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">215</span>                                    <span class="n">inplace</span><span class="o">=</span><span class="n">build_inplace</span><span class="p">,</span> <span class="n">language_level</span><span class="o">=</span><span class="n">language_level</span><span class="p">)</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/pyximport/pyximport.py</span> in <span class="ni">build_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, inplace, language_level)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyximport/pyximport.py</span> in <span class="ni">build_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, inplace, language_level)</span>
 <span class="g g-Whitespace">    </span><span class="mi">185</span>     <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">pyxbuild</span>
 <span class="ne">--&gt; </span><span class="mi">186</span>     <span class="n">so_path</span> <span class="o">=</span> <span class="n">pyxbuild</span><span class="o">.</span><span class="n">pyx_to_dll</span><span class="p">(</span><span class="n">pyxfilename</span><span class="p">,</span> <span class="n">extension_mod</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">187</span>                                   <span class="n">build_in_temp</span><span class="o">=</span><span class="n">build_in_temp</span><span class="p">,</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/pyximport/pyxbuild.py</span> in <span class="ni">pyx_to_dll</span><span class="nt">(filename, ext, force_rebuild, build_in_temp, pyxbuild_dir, setup_args, reload_support, inplace)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyximport/pyxbuild.py</span> in <span class="ni">pyx_to_dll</span><span class="nt">(filename, ext, force_rebuild, build_in_temp, pyxbuild_dir, setup_args, reload_support, inplace)</span>
 <span class="g g-Whitespace">    </span><span class="mi">101</span>         <span class="n">obj_build_ext</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">get_command_obj</span><span class="p">(</span><span class="s2">&quot;build_ext&quot;</span><span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">102</span>         <span class="n">dist</span><span class="o">.</span><span class="n">run_commands</span><span class="p">()</span>
 <span class="g g-Whitespace">    </span><span class="mi">103</span>         <span class="n">so_path</span> <span class="o">=</span> <span class="n">obj_build_ext</span><span class="o">.</span><span class="n">get_outputs</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/dist.py</span> in <span class="ni">run_commands</span><span class="nt">(self)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/dist.py</span> in <span class="ni">run_commands</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">965</span>         <span class="k">for</span> <span class="n">cmd</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">commands</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">966</span>             <span class="bp">self</span><span class="o">.</span><span class="n">run_command</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">967</span> 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/dist.py</span> in <span class="ni">run_command</span><span class="nt">(self, command)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/dist.py</span> in <span class="ni">run_command</span><span class="nt">(self, command)</span>
 <span class="g g-Whitespace">    </span><span class="mi">984</span>         <span class="n">cmd_obj</span><span class="o">.</span><span class="n">ensure_finalized</span><span class="p">()</span>
 <span class="ne">--&gt; </span><span class="mi">985</span>         <span class="n">cmd_obj</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 <span class="g g-Whitespace">    </span><span class="mi">986</span>         <span class="bp">self</span><span class="o">.</span><span class="n">have_run</span><span class="p">[</span><span class="n">command</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py</span> in <span class="ni">run</span><span class="nt">(self)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py</span> in <span class="ni">run</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">185</span> 
 <span class="ne">--&gt; </span><span class="mi">186</span>         <span class="n">_build_ext</span><span class="o">.</span><span class="n">build_ext</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">187</span> 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/command/build_ext.py</span> in <span class="ni">run</span><span class="nt">(self)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/command/build_ext.py</span> in <span class="ni">run</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">339</span>         <span class="c1"># Now actually compile and link everything.</span>
 <span class="ne">--&gt; </span><span class="mi">340</span>         <span class="bp">self</span><span class="o">.</span><span class="n">build_extensions</span><span class="p">()</span>
 <span class="g g-Whitespace">    </span><span class="mi">341</span> 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py</span> in <span class="ni">build_extensions</span><span class="nt">(self)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py</span> in <span class="ni">build_extensions</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">194</span>         <span class="c1"># Call original build_extensions</span>
 <span class="ne">--&gt; </span><span class="mi">195</span>         <span class="n">_build_ext</span><span class="o">.</span><span class="n">build_ext</span><span class="o">.</span><span class="n">build_extensions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">196</span> 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/command/build_ext.py</span> in <span class="ni">build_extensions</span><span class="nt">(self)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/command/build_ext.py</span> in <span class="ni">build_extensions</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">448</span>         <span class="k">else</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">449</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_build_extensions_serial</span><span class="p">()</span>
 <span class="g g-Whitespace">    </span><span class="mi">450</span> 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/command/build_ext.py</span> in <span class="ni">_build_extensions_serial</span><span class="nt">(self)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/command/build_ext.py</span> in <span class="ni">_build_extensions_serial</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">473</span>             <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filter_build_errors</span><span class="p">(</span><span class="n">ext</span><span class="p">):</span>
 <span class="ne">--&gt; </span><span class="mi">474</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">build_extension</span><span class="p">(</span><span class="n">ext</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">475</span> 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/command/build_ext.py</span> in <span class="ni">build_extension</span><span class="nt">(self, ext)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/command/build_ext.py</span> in <span class="ni">build_extension</span><span class="nt">(self, ext)</span>
 <span class="g g-Whitespace">    </span><span class="mi">527</span> 
 <span class="ne">--&gt; </span><span class="mi">528</span>         <span class="n">objects</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compiler</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">sources</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">529</span>                                          <span class="n">output_dir</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">build_temp</span><span class="p">,</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/ccompiler.py</span> in <span class="ni">compile</span><span class="nt">(self, sources, output_dir, macros, include_dirs, debug, extra_preargs, extra_postargs, depends)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/ccompiler.py</span> in <span class="ni">compile</span><span class="nt">(self, sources, output_dir, macros, include_dirs, debug, extra_preargs, extra_postargs, depends)</span>
 <span class="g g-Whitespace">    </span><span class="mi">573</span>                 <span class="k">continue</span>
 <span class="ne">--&gt; </span><span class="mi">574</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_compile</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">ext</span><span class="p">,</span> <span class="n">cc_args</span><span class="p">,</span> <span class="n">extra_postargs</span><span class="p">,</span> <span class="n">pp_opts</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">575</span> 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/unixccompiler.py</span> in <span class="ni">_compile</span><span class="nt">(self, obj, src, ext, cc_args, extra_postargs, pp_opts)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/unixccompiler.py</span> in <span class="ni">_compile</span><span class="nt">(self, obj, src, ext, cc_args, extra_postargs, pp_opts)</span>
 <span class="g g-Whitespace">    </span><span class="mi">119</span>         <span class="k">except</span> <span class="n">DistutilsExecError</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">120</span>             <span class="k">raise</span> <span class="n">CompileError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">121</span> 
@@ -1893,108 +1903,108 @@ Numba:
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
 <span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">60</span><span class="o">-</span><span class="mi">0</span><span class="n">fa7310d79b4</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">2658039077.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">cython_filter_demo</span> <span class="kn">import</span> <span class="n">filter_array</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/pyximport/pyximport.py</span> in <span class="ni">load_module</span><span class="nt">(self, fullname)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyximport/pyximport.py</span> in <span class="ni">load_module</span><span class="nt">(self, fullname)</span>
 <span class="g g-Whitespace">    </span><span class="mi">457</span>         <span class="k">else</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">458</span>             <span class="c1">#print &quot;MODULE&quot;, fullname</span>
 <span class="ne">--&gt; </span><span class="mi">459</span>             <span class="n">module</span> <span class="o">=</span> <span class="n">load_module</span><span class="p">(</span><span class="n">fullname</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">460</span>                                  <span class="bp">self</span><span class="o">.</span><span class="n">pyxbuild_dir</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">461</span>                                  <span class="n">build_inplace</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">inplace</span><span class="p">,</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/pyximport/pyximport.py</span> in <span class="ni">load_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, is_package, build_inplace, language_level, so_path)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyximport/pyximport.py</span> in <span class="ni">load_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, is_package, build_inplace, language_level, so_path)</span>
 <span class="g g-Whitespace">    </span><span class="mi">229</span>                 <span class="n">name</span><span class="p">,</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_exception_only</span><span class="p">(</span><span class="o">*</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[:</span><span class="mi">2</span><span class="p">])))</span>
 <span class="g g-Whitespace">    </span><span class="mi">230</span>             <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">231</span>                 <span class="k">raise</span> <span class="n">exc</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">tb</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">232</span>             <span class="k">else</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">233</span>                 <span class="n">exec</span><span class="p">(</span><span class="s2">&quot;raise exc, None, tb&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;exc&#39;</span><span class="p">:</span> <span class="n">exc</span><span class="p">,</span> <span class="s1">&#39;tb&#39;</span><span class="p">:</span> <span class="n">tb</span><span class="p">})</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/pyximport/pyximport.py</span> in <span class="ni">load_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, is_package, build_inplace, language_level, so_path)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyximport/pyximport.py</span> in <span class="ni">load_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, is_package, build_inplace, language_level, so_path)</span>
 <span class="g g-Whitespace">    </span><span class="mi">212</span>             <span class="k">else</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">213</span>                 <span class="n">module_name</span> <span class="o">=</span> <span class="n">name</span>
 <span class="ne">--&gt; </span><span class="mi">214</span>             <span class="n">so_path</span> <span class="o">=</span> <span class="n">build_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="n">pyxfilename</span><span class="p">,</span> <span class="n">pyxbuild_dir</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">215</span>                                    <span class="n">inplace</span><span class="o">=</span><span class="n">build_inplace</span><span class="p">,</span> <span class="n">language_level</span><span class="o">=</span><span class="n">language_level</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">216</span>         <span class="n">mod</span> <span class="o">=</span> <span class="n">imp</span><span class="o">.</span><span class="n">load_dynamic</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">so_path</span><span class="p">)</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/pyximport/pyximport.py</span> in <span class="ni">build_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, inplace, language_level)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyximport/pyximport.py</span> in <span class="ni">build_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, inplace, language_level)</span>
 <span class="g g-Whitespace">    </span><span class="mi">184</span> 
 <span class="g g-Whitespace">    </span><span class="mi">185</span>     <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">pyxbuild</span>
 <span class="ne">--&gt; </span><span class="mi">186</span>     <span class="n">so_path</span> <span class="o">=</span> <span class="n">pyxbuild</span><span class="o">.</span><span class="n">pyx_to_dll</span><span class="p">(</span><span class="n">pyxfilename</span><span class="p">,</span> <span class="n">extension_mod</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">187</span>                                   <span class="n">build_in_temp</span><span class="o">=</span><span class="n">build_in_temp</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">188</span>                                   <span class="n">pyxbuild_dir</span><span class="o">=</span><span class="n">pyxbuild_dir</span><span class="p">,</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/pyximport/pyxbuild.py</span> in <span class="ni">pyx_to_dll</span><span class="nt">(filename, ext, force_rebuild, build_in_temp, pyxbuild_dir, setup_args, reload_support, inplace)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyximport/pyxbuild.py</span> in <span class="ni">pyx_to_dll</span><span class="nt">(filename, ext, force_rebuild, build_in_temp, pyxbuild_dir, setup_args, reload_support, inplace)</span>
 <span class="g g-Whitespace">    </span><span class="mi">100</span>     <span class="k">try</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">101</span>         <span class="n">obj_build_ext</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">get_command_obj</span><span class="p">(</span><span class="s2">&quot;build_ext&quot;</span><span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">102</span>         <span class="n">dist</span><span class="o">.</span><span class="n">run_commands</span><span class="p">()</span>
 <span class="g g-Whitespace">    </span><span class="mi">103</span>         <span class="n">so_path</span> <span class="o">=</span> <span class="n">obj_build_ext</span><span class="o">.</span><span class="n">get_outputs</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
 <span class="g g-Whitespace">    </span><span class="mi">104</span>         <span class="k">if</span> <span class="n">obj_build_ext</span><span class="o">.</span><span class="n">inplace</span><span class="p">:</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/dist.py</span> in <span class="ni">run_commands</span><span class="nt">(self)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/dist.py</span> in <span class="ni">run_commands</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">964</span>         <span class="s2">&quot;&quot;&quot;</span>
 <span class="g g-Whitespace">    </span><span class="mi">965</span><span class="s2">         for cmd in self.commands:</span>
 <span class="ne">--&gt; </span><span class="mi">966</span><span class="s2">             self.run_command(cmd)</span>
 <span class="g g-Whitespace">    </span><span class="mi">967</span><span class="s2"> </span>
 <span class="g g-Whitespace">    </span><span class="mi">968</span><span class="s2">     # -- Methods that operate on its Commands --------------------------</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/dist.py</span> in <span class="ni">run_command</span><span class="nt">(self, command)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/dist.py</span> in <span class="ni">run_command</span><span class="nt">(self, command)</span>
 <span class="g g-Whitespace">    </span><span class="mi">983</span><span class="s2">         cmd_obj = self.get_command_obj(command)</span>
 <span class="g g-Whitespace">    </span><span class="mi">984</span><span class="s2">         cmd_obj.ensure_finalized()</span>
 <span class="ne">--&gt; </span><span class="mi">985</span><span class="s2">         cmd_obj.run()</span>
 <span class="g g-Whitespace">    </span><span class="mi">986</span><span class="s2">         self.have_run[command] = 1</span>
 <span class="g g-Whitespace">    </span><span class="mi">987</span><span class="s2"> </span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py</span> in <span class="ni">run</span><span class="nt">(self)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py</span> in <span class="ni">run</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">184</span><span class="s2">             optimization.disable_optimization()</span>
 <span class="g g-Whitespace">    </span><span class="mi">185</span><span class="s2"> </span>
 <span class="ne">--&gt; </span><span class="mi">186</span><span class="s2">         _build_ext.build_ext.run(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">187</span><span class="s2"> </span>
 <span class="g g-Whitespace">    </span><span class="mi">188</span><span class="s2">     def build_extensions(self):</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/command/build_ext.py</span> in <span class="ni">run</span><span class="nt">(self)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/command/build_ext.py</span> in <span class="ni">run</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">338</span><span class="s2"> </span>
 <span class="g g-Whitespace">    </span><span class="mi">339</span><span class="s2">         # Now actually compile and link everything.</span>
 <span class="ne">--&gt; </span><span class="mi">340</span><span class="s2">         self.build_extensions()</span>
 <span class="g g-Whitespace">    </span><span class="mi">341</span><span class="s2"> </span>
 <span class="g g-Whitespace">    </span><span class="mi">342</span><span class="s2">     def check_extensions_list(self, extensions):</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py</span> in <span class="ni">build_extensions</span><span class="nt">(self)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py</span> in <span class="ni">build_extensions</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">193</span><span class="s2">             ext.sources = self.cython_sources(ext.sources, ext)</span>
 <span class="g g-Whitespace">    </span><span class="mi">194</span><span class="s2">         # Call original build_extensions</span>
 <span class="ne">--&gt; </span><span class="mi">195</span><span class="s2">         _build_ext.build_ext.build_extensions(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">196</span><span class="s2"> </span>
 <span class="g g-Whitespace">    </span><span class="mi">197</span><span class="s2">     def cython_sources(self, sources, extension):</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/command/build_ext.py</span> in <span class="ni">build_extensions</span><span class="nt">(self)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/command/build_ext.py</span> in <span class="ni">build_extensions</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">447</span><span class="s2">             self._build_extensions_parallel()</span>
 <span class="g g-Whitespace">    </span><span class="mi">448</span><span class="s2">         else:</span>
 <span class="ne">--&gt; </span><span class="mi">449</span><span class="s2">             self._build_extensions_serial()</span>
 <span class="g g-Whitespace">    </span><span class="mi">450</span><span class="s2"> </span>
 <span class="g g-Whitespace">    </span><span class="mi">451</span><span class="s2">     def _build_extensions_parallel(self):</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/command/build_ext.py</span> in <span class="ni">_build_extensions_serial</span><span class="nt">(self)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/command/build_ext.py</span> in <span class="ni">_build_extensions_serial</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">472</span><span class="s2">         for ext in self.extensions:</span>
 <span class="g g-Whitespace">    </span><span class="mi">473</span><span class="s2">             with self._filter_build_errors(ext):</span>
 <span class="ne">--&gt; </span><span class="mi">474</span><span class="s2">                 self.build_extension(ext)</span>
 <span class="g g-Whitespace">    </span><span class="mi">475</span><span class="s2"> </span>
 <span class="g g-Whitespace">    </span><span class="mi">476</span><span class="s2">     @contextlib.contextmanager</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/command/build_ext.py</span> in <span class="ni">build_extension</span><span class="nt">(self, ext)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/command/build_ext.py</span> in <span class="ni">build_extension</span><span class="nt">(self, ext)</span>
 <span class="g g-Whitespace">    </span><span class="mi">526</span><span class="s2">             macros.append((undef,))</span>
 <span class="g g-Whitespace">    </span><span class="mi">527</span><span class="s2"> </span>
 <span class="ne">--&gt; </span><span class="mi">528</span><span class="s2">         objects = self.compiler.compile(sources,</span>
 <span class="g g-Whitespace">    </span><span class="mi">529</span><span class="s2">                                          output_dir=self.build_temp,</span>
 <span class="g g-Whitespace">    </span><span class="mi">530</span><span class="s2">                                          macros=macros,</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/ccompiler.py</span> in <span class="ni">compile</span><span class="nt">(self, sources, output_dir, macros, include_dirs, debug, extra_preargs, extra_postargs, depends)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/ccompiler.py</span> in <span class="ni">compile</span><span class="nt">(self, sources, output_dir, macros, include_dirs, debug, extra_preargs, extra_postargs, depends)</span>
 <span class="g g-Whitespace">    </span><span class="mi">572</span><span class="s2">             except KeyError:</span>
 <span class="g g-Whitespace">    </span><span class="mi">573</span><span class="s2">                 continue</span>
 <span class="ne">--&gt; </span><span class="mi">574</span><span class="s2">             self._compile(obj, src, ext, cc_args, extra_postargs, pp_opts)</span>
 <span class="g g-Whitespace">    </span><span class="mi">575</span><span class="s2"> </span>
 <span class="g g-Whitespace">    </span><span class="mi">576</span><span class="s2">         # Return *all* object filenames, not just the ones we just built.</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/distutils/unixccompiler.py</span> in <span class="ni">_compile</span><span class="nt">(self, obj, src, ext, cc_args, extra_postargs, pp_opts)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/unixccompiler.py</span> in <span class="ni">_compile</span><span class="nt">(self, obj, src, ext, cc_args, extra_postargs, pp_opts)</span>
 <span class="g g-Whitespace">    </span><span class="mi">118</span><span class="s2">                        extra_postargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">119</span><span class="s2">         except DistutilsExecError as msg:</span>
 <span class="ne">--&gt; </span><span class="mi">120</span><span class="s2">             raise CompileError(msg)</span>
@@ -2015,33 +2025,38 @@ Numba:
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">61</span><span class="o">-</span><span class="n">e97b0dbb782b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">399082047.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;timeit&#39;</span><span class="p">,</span> <span class="s1">&#39;filter_array.filter_larger_cython(rands)&#39;</span><span class="p">)</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ni">run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2346</span>                 <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2347</span>             <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">2348</span>                 <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2349</span>             <span class="k">return</span> <span class="n">result</span>
-<span class="g g-Whitespace">   </span><span class="mi">2350</span> 
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ni">run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2349</span>                 <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2350</span>             <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2351</span>                 <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2352</span>             <span class="k">return</span> <span class="n">result</span>
+<span class="g g-Whitespace">   </span><span class="mi">2353</span> 
 
-<span class="nn">&lt;decorator-gen-53&gt;</span> in <span class="ni">timeit</span><span class="nt">(self, line, cell, local_ns)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/decorator.py</span> in <span class="ni">fun</span><span class="nt">(*args, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">230</span>             <span class="k">if</span> <span class="ow">not</span> <span class="n">kwsyntax</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">231</span>                 <span class="n">args</span><span class="p">,</span> <span class="n">kw</span> <span class="o">=</span> <span class="n">fix</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">kw</span><span class="p">,</span> <span class="n">sig</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">232</span>             <span class="k">return</span> <span class="n">caller</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">extras</span> <span class="o">+</span> <span class="n">args</span><span class="p">),</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">233</span>     <span class="n">fun</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="vm">__name__</span>
+<span class="g g-Whitespace">    </span><span class="mi">234</span>     <span class="n">fun</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="vm">__doc__</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/IPython/core/magic.py</span> in <span class="ni">&lt;lambda&gt;</span><span class="nt">(f, *a, **k)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/IPython/core/magic.py</span> in <span class="ni">&lt;lambda&gt;</span><span class="nt">(f, *a, **k)</span>
 <span class="g g-Whitespace">    </span><span class="mi">185</span>     <span class="c1"># but it&#39;s overkill for just that one bit of state.</span>
 <span class="g g-Whitespace">    </span><span class="mi">186</span>     <span class="k">def</span> <span class="nf">magic_deco</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
 <span class="ne">--&gt; </span><span class="mi">187</span>         <span class="n">call</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">f</span><span class="p">,</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">k</span><span class="p">:</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">k</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">188</span> 
 <span class="g g-Whitespace">    </span><span class="mi">189</span>         <span class="k">if</span> <span class="n">callable</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py</span> in <span class="ni">timeit</span><span class="nt">(self, line, cell, local_ns)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py</span> in <span class="ni">timeit</span><span class="nt">(self, line, cell, local_ns)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1167</span>             <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
 <span class="g g-Whitespace">   </span><span class="mi">1168</span>                 <span class="n">number</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="n">index</span>
 <span class="ne">-&gt; </span><span class="mi">1169</span>                 <span class="n">time_number</span> <span class="o">=</span> <span class="n">timer</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1170</span>                 <span class="k">if</span> <span class="n">time_number</span> <span class="o">&gt;=</span> <span class="mf">0.2</span><span class="p">:</span>
 <span class="g g-Whitespace">   </span><span class="mi">1171</span>                     <span class="k">break</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py</span> in <span class="ni">timeit</span><span class="nt">(self, number)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py</span> in <span class="ni">timeit</span><span class="nt">(self, number)</span>
 <span class="g g-Whitespace">    </span><span class="mi">167</span>         <span class="n">gc</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span>
 <span class="g g-Whitespace">    </span><span class="mi">168</span>         <span class="k">try</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">169</span>             <span class="n">timing</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inner</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="p">)</span>
@@ -2121,7 +2136,7 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>77.6 µs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>82.3 µs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -2133,7 +2148,7 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.5 µs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.7 µs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -3063,7 +3078,7 @@ r
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-89-22f66e6b8db7&gt;&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_2993/873515946.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="n">param3</span><span class="o">=</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="n">param4</span><span class="p">):</span>
                  <span class="o">^</span>
 <span class="ne">SyntaxError</span>: non-default argument follows default argument
@@ -3123,7 +3138,7 @@ r
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">92</span><span class="o">-</span><span class="n">b26121f2f7cb</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">440855898.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">b</span> <span class="o">=</span> <span class="n">ExampleTwo</span><span class="p">(</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
 
 <span class="nn">&lt;attrs generated init __main__.ExampleTwo&gt;</span> in <span class="ni">__init__</span><span class="nt">(self, param1, param2, param3, param4)</span>
@@ -3132,7 +3147,7 @@ r
 <span class="ne">---&gt; </span><span class="mi">10</span>         <span class="n">__attr_validator_param1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">__attr_param1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">param1</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span>         <span class="n">__attr_validator_param2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">__attr_param2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">param2</span><span class="p">)</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/attr/validators.py</span> in <span class="ni">__call__</span><span class="nt">(self, inst, attr, value)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/attr/validators.py</span> in <span class="ni">__call__</span><span class="nt">(self, inst, attr, value)</span>
 <span class="g g-Whitespace">     </span><span class="mi">33</span>         <span class="s2">&quot;&quot;&quot;</span>
 <span class="g g-Whitespace">     </span><span class="mi">34</span><span class="s2">         if not isinstance(value, self.type):</span>
 <span class="ne">---&gt; </span><span class="mi">35</span><span class="s2">             raise TypeError(</span>
@@ -3172,7 +3187,7 @@ r
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.8204214544247465 0.4592578261064414 0.34175675400569383 0.802074781111656 0.037607874551653375 0.2727152597807484 0.8868126143052489 0.38318794240179355 0.5739420293628092 0.9164422873802833] volt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.11291946500757 0.4917819112992936 0.4564628758861703 0.6851671521598431 0.6638682075882643 0.5254739111863826 0.050968790538124864 0.5791742762216341 0.2472901362777462 0.8528866039541462] volt
 </pre></div>
 </div>
 </div>
@@ -3184,7 +3199,7 @@ r
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1.640842908849493 0.9185156522128828 0.6835135080113877 1.604149562223312 0.07521574910330675 0.5454305195614968 1.7736252286104979 0.7663758848035871 1.1478840587256185 1.8328845747605667] volt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.22583893001514 0.9835638225985872 0.9129257517723406 1.3703343043196863 1.3277364151765285 1.0509478223727653 0.10193758107624973 1.1583485524432682 0.4945802725554924 1.7057732079082923] volt
 </pre></div>
 </div>
 </div>
@@ -3211,45 +3226,45 @@ r
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">DimensionalityError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">97</span><span class="o">-</span><span class="mi">8189</span><span class="n">ff88b4a0</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">804990995.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">amps</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;seconds&#39;</span><span class="p">)</span>  <span class="c1"># DimensionalityError</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/pint/quantity.py</span> in <span class="ni">to</span><span class="nt">(self, other, *contexts, **ctx_kwargs)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/quantity.py</span> in <span class="ni">to</span><span class="nt">(self, other, *contexts, **ctx_kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">658</span>         <span class="n">other</span> <span class="o">=</span> <span class="n">to_units_container</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_REGISTRY</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">659</span> 
 <span class="ne">--&gt; </span><span class="mi">660</span>         <span class="n">magnitude</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert_magnitude_not_inplace</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="o">*</span><span class="n">contexts</span><span class="p">,</span> <span class="o">**</span><span class="n">ctx_kwargs</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">661</span> 
 <span class="g g-Whitespace">    </span><span class="mi">662</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">magnitude</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/pint/quantity.py</span> in <span class="ni">_convert_magnitude_not_inplace</span><span class="nt">(self, other, *contexts, **ctx_kwargs)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/quantity.py</span> in <span class="ni">_convert_magnitude_not_inplace</span><span class="nt">(self, other, *contexts, **ctx_kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">607</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_REGISTRY</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_magnitude</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_units</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">608</span> 
 <span class="ne">--&gt; </span><span class="mi">609</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_REGISTRY</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_magnitude</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_units</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">610</span> 
 <span class="g g-Whitespace">    </span><span class="mi">611</span>     <span class="k">def</span> <span class="nf">_convert_magnitude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="o">*</span><span class="n">contexts</span><span class="p">,</span> <span class="o">**</span><span class="n">ctx_kwargs</span><span class="p">):</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/pint/registry.py</span> in <span class="ni">convert</span><span class="nt">(self, value, src, dst, inplace)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/registry.py</span> in <span class="ni">convert</span><span class="nt">(self, value, src, dst, inplace)</span>
 <span class="g g-Whitespace">    </span><span class="mi">945</span>             <span class="k">return</span> <span class="n">value</span>
 <span class="g g-Whitespace">    </span><span class="mi">946</span> 
 <span class="ne">--&gt; </span><span class="mi">947</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">948</span> 
 <span class="g g-Whitespace">    </span><span class="mi">949</span>     <span class="k">def</span> <span class="nf">_convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">check_dimensionality</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/pint/registry.py</span> in <span class="ni">_convert</span><span class="nt">(self, value, src, dst, inplace)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/registry.py</span> in <span class="ni">_convert</span><span class="nt">(self, value, src, dst, inplace)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1828</span>                 <span class="n">value</span><span class="p">,</span> <span class="n">src</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">_magnitude</span><span class="p">,</span> <span class="n">src</span><span class="o">.</span><span class="n">_units</span>
 <span class="g g-Whitespace">   </span><span class="mi">1829</span> 
 <span class="ne">-&gt; </span><span class="mi">1830</span>         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_convert</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1831</span> 
 <span class="g g-Whitespace">   </span><span class="mi">1832</span>     <span class="k">def</span> <span class="nf">_get_compatible_units</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_units</span><span class="p">,</span> <span class="n">group_or_system</span><span class="p">):</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/pint/registry.py</span> in <span class="ni">_convert</span><span class="nt">(self, value, src, dst, inplace)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/registry.py</span> in <span class="ni">_convert</span><span class="nt">(self, value, src, dst, inplace)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1431</span> 
 <span class="g g-Whitespace">   </span><span class="mi">1432</span>         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">src_offset_unit</span> <span class="ow">or</span> <span class="n">dst_offset_unit</span><span class="p">):</span>
 <span class="ne">-&gt; </span><span class="mi">1433</span>             <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_convert</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1434</span> 
 <span class="g g-Whitespace">   </span><span class="mi">1435</span>         <span class="n">src_dim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_dimensionality</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/pint/registry.py</span> in <span class="ni">_convert</span><span class="nt">(self, value, src, dst, inplace, check_dimensionality)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/registry.py</span> in <span class="ni">_convert</span><span class="nt">(self, value, src, dst, inplace, check_dimensionality)</span>
 <span class="g g-Whitespace">    </span><span class="mi">978</span>             <span class="c1"># then the conversion cannot be performed.</span>
 <span class="g g-Whitespace">    </span><span class="mi">979</span>             <span class="k">if</span> <span class="n">src_dim</span> <span class="o">!=</span> <span class="n">dst_dim</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">980</span>                 <span class="k">raise</span> <span class="n">DimensionalityError</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">src_dim</span><span class="p">,</span> <span class="n">dst_dim</span><span class="p">)</span>
@@ -3297,16 +3312,36 @@ r
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../class_8/class_8.html" title="previous page">Class 8: Testing and Test-Driven Development</a>
-    <a class='right-next' id="next-link" href="../class_10/class_10.html" title="next page">Class 10: Introduction to Machine Learning</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../class_8/class_8.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Class 8: Testing and Test-Driven Development</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../class_10/class_10.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Class 10: Introduction to Machine Learning</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
