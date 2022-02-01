@@ -1,44 +1,40 @@
 name: deploy-book
 
-# Only run this when the master branch changes
 on:
+  # Trigger the workflow on push to main branch
   push:
     branches:
-    - main
-    paths:
-      - source/**
-      - .github/**
+      - main
 
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
   deploy-book:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python-version: [3.8]
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    # Install dependencies
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.8
+      # Install dependencies
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
 
-    - name: Install dependencies
-      run: |
-        pip install --upgrade pip
-        pip install -r requirements.txt
+      # Build the book
+      - name: Build the book
+        run: |
+          jupyter-book build source
 
-    - name: Install python-dev
-      run: |
-        sudo apt install -y python-dev python3-dev
-
-    # Build the book
-    - name: Build the book
-      run: |
-        jupyter-book build source
-
-    # Push the book's HTML to github-pages
-    - name: GitHub Pages action
-      uses: peaceiris/actions-gh-pages@v3.6.1
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: source/_build/html
+      # Push the book's HTML to github-pages
+      - name: GitHub Pages action
+        uses: peaceiris/actions-gh-pages@v3.6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: source/_build/html
