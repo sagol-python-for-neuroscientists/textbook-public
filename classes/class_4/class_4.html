@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class 4: The Scientific Stack - Part I: numpy &#8212; Python for Neuroscience</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -45,7 +45,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -58,7 +58,10 @@
     <link rel="next" title="Class 5: The Scientific Stack - Part II: matplotlib and pandas" href="../class_5/class_5.html" />
     <link rel="prev" title="Class 3: More OOP and Exception Handling" href="../class_3/class_3.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -286,7 +289,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -298,7 +301,7 @@
     <div class="dropdown-buttons sourcebuttons">
         
         <a class="issues-button"
-            href="https://github.com/ZviBaratz/python_for_neuroscientists/issues/new?title=Issue%20on%20page%20%2Fclasses/class_4/class_4.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/sagol-python-for-neuroscientists/textbook-public/issues/new?title=Issue%20on%20page%20%2Fclasses/class_4/class_4.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -319,7 +322,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ZviBaratz/python_for_neuroscientists/main?urlpath=tree/source/classes/class_4/class_4.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/classes/class_4/class_4.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -334,7 +337,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -425,10 +428,104 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class 4: The Scientific Stack - Part I: numpy</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scientific-python">
+   Scientific Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction">
+     Introduction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy">
+     NumPy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-help">
+     Getting Help
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-arrays">
+     Creating Arrays
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-on-datatypes">
+     More on Datatypes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy-arrays-vs-lists">
+     NumPy Arrays vs. Lists
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#why-are-lists-slower">
+       Why are lists slower?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indexing-and-slicing">
+     Indexing and Slicing
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#view-vs-copy">
+       View vs. Copy
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aggregation">
+     Aggregation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fancy-indexing">
+     Fancy Indexing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sorting">
+     Sorting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concatenation">
+     Concatenation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="section" id="class-4-the-scientific-stack-part-i-numpy">
+  <div class="tex2jax_ignore mathjax_ignore section" id="class-4-the-scientific-stack-part-i-numpy">
 <h1>Class 4: The Scientific Stack - Part I: <code class="docutils literal notranslate"><span class="pre">numpy</span></code><a class="headerlink" href="#class-4-the-scientific-stack-part-i-numpy" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="scientific-python">
 <h2>Scientific Python<a class="headerlink" href="#scientific-python" title="Permalink to this headline">¶</a></h2>
@@ -684,6 +781,8 @@ numpy.sqrt
     Return the non-negative square-root of an array, element-wise.
 numpy.array_equiv
     Returns True if input arrays are shape consistent and all elements equal.
+numpy.dtype
+    Create a data type object.
 numpy.expm1
     Calculate ``exp(x) - 1`` for all elements in the array.
 numpy.isnan
@@ -699,7 +798,7 @@ numpy.power
 numpy.ufunc
     Functions that operate element by element on whole arrays.
 numpy.choose
-    Construct an array from an index array and a set of arrays to choose from.
+    Construct an array from an index array and a list of arrays to choose from.
 numpy.nditer
     Efficient multi-dimensional iterator object to iterate over arrays.
 numpy.maximum
@@ -712,6 +811,8 @@ numpy.full_like
     Return a full array with the same shape and type as a given array.
 numpy.ones_like
     Return an array of ones with the same shape and type as a given array.
+numpy.Datetime64
+    If created from a 64-bit integer, it represents an offset from
 numpy.bitwise_or
     Compute the bit-wise OR of two arrays element-wise.
 numpy.empty_like
@@ -741,13 +842,13 @@ numpy.chararray.tolist
 numpy.put_along_axis
     Put values into the destination array by matching 1d index and data slices.
 numpy.ma.choose
-    Use an index array to construct a new array from a set of choices.
-numpy.ma.mrecords.MaskedRecords.__new__
-    Create a new masked array from scratch.
+    Use an index array to construct a new array from a list of choices.
 numpy.ma.maximum
     Element-wise maximum of array elements.
 numpy.ma.minimum
     Element-wise minimum of array elements.
+numpy.ma.mrecords.MaskedRecords.__new__
+    Create a new masked array from scratch.
 numpy.savez_compressed
     Save several arrays into a single file in compressed ``.npz`` format.
 numpy.matlib.rand
@@ -944,18 +1045,18 @@ numpy.ma.less
     Return the truth value of (x1 &lt; x2) element-wise.
 numpy.ma.log2
     Base-2 logarithm of `x`.
-numpy.greater_equal
-    Return the truth value of (x1 &gt;= x2) element-wise.
 numpy.ma.sinh
     Hyperbolic sine, element-wise.
+numpy.greater_equal
+    Return the truth value of (x1 &gt;= x2) element-wise.
 numpy.ma.tanh
     Compute hyperbolic tangent element-wise.
 numpy.busdaycalendar
     A business day calendar object that efficiently stores information
-numpy.fft.ifftn
-    Compute the N-dimensional inverse discrete Fourier Transform.
 numpy.ma.equal
     Return (x1 == x2) element-wise.
+numpy.fft.ifftn
+    Compute the N-dimensional inverse discrete Fourier Transform.
 numpy.ma.floor
     Return the floor of the input, element-wise.
 numpy.ma.hypot
@@ -980,14 +1081,14 @@ numpy.ma.arctanh
     Inverse hyperbolic tangent element-wise.
 numpy.ma.greater
     Return the truth value of (x1 &gt; x2) element-wise.
-numpy.ma.tests.test_subclassing.SubArray
-    ndarray(shape, dtype=float, buffer=None, offset=0,
 numpy.ma.multiply
     Multiply arguments element-wise.
 numpy.ma.negative
     Numerical negative, element-wise.
 numpy.ma.subtract
     Subtract arguments, element-wise.
+numpy.ma.tests.test_subclassing.SubArray
+    ndarray(shape, dtype=float, buffer=None, offset=0,
 numpy.ma.conjugate
     Return the complex conjugate, element-wise.
 numpy.ma.not_equal
@@ -1301,7 +1402,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>88.7 ms ± 1.9 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>79.9 ms ± 574 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -1318,7 +1419,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.6 ms ± 102 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>984 µs ± 1.23 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1566,13 +1667,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>89.4 µs ± 672 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>83.3 µs ± 2.17 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.74 µs ± 101 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.17 µs ± 20.3 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.14 µs ± 65.8 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.85 µs ± 2.96 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1589,13 +1690,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>71.6 µs ± 1.06 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>66.7 µs ± 51.3 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.48 µs ± 129 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.13 µs ± 10 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.14 µs ± 18.6 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.97 µs ± 3.87 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1784,7 +1885,7 @@ np.sum result: 5
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2808</span><span class="o">/</span><span class="mf">1665608283.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1943</span><span class="o">/</span><span class="mf">1665608283.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">basic_array</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">basic_array</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">))</span>   <span class="c1"># doesn&#39;t work, &quot;and&quot; isn&#39;t used this way here</span>
 
 <span class="ne">ValueError</span>: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
@@ -2223,54 +2324,42 @@ Solution<div class="summary-down docutils">
 
               </div>
               
-        
             
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="../class_3/class_3.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Class 3: More OOP and Exception Handling</p>
-            </div>
-        </a>
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../class_3/class_3.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Class 3: More OOP and Exception Handling</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../class_5/class_5.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Class 5: The Scientific Stack - Part II: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code></p>
     </div>
-     <div id="next">
-        <a class="right-next" href="../class_5/class_5.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Class 5: The Scientific Stack - Part II: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code></p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi<br/>
-        
-            &copy; Copyright 2020.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

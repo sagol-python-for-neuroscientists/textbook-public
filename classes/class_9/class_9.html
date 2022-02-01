@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class 9: Advanced and Performant Python &#8212; Python for Neuroscience</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -45,7 +45,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -58,7 +58,10 @@
     <link rel="next" title="Class 10: Introduction to Machine Learning" href="../class_10/class_10.html" />
     <link rel="prev" title="Class 8: Testing and Test-Driven Development" href="../class_8/class_8.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -286,7 +289,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -298,7 +301,7 @@
     <div class="dropdown-buttons sourcebuttons">
         
         <a class="issues-button"
-            href="https://github.com/ZviBaratz/python_for_neuroscientists/issues/new?title=Issue%20on%20page%20%2Fclasses/class_9/class_9.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/sagol-python-for-neuroscientists/textbook-public/issues/new?title=Issue%20on%20page%20%2Fclasses/class_9/class_9.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -319,7 +322,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ZviBaratz/python_for_neuroscientists/main?urlpath=tree/source/classes/class_9/class_9.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/classes/class_9/class_9.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -334,7 +337,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -634,10 +637,313 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class 9: Advanced and Performant Python</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generators">
+   Generators
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generator-creation-and-iteration">
+     Generator Creation and Iteration
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#generator-expressions">
+       Generator Expressions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-cases">
+     Use cases
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#args-kwargs">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     *args
+    </span>
+   </code>
+   ,
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     **kwargs
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decorators">
+   Decorators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-useful-built-in-modules">
+   More Useful Built-in Modules
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#collections">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       collections
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#namedtuple">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         namedtuple
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#defaultdict">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         defaultdict
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#itertools">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Itertools
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#chained-iterables">
+       Chained iterables
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#permutations">
+       Permutations
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#combinations">
+       Combinations
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multiprocessing">
+   Multiprocessing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numba">
+   Numba
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cython">
+   Cython
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#memoization-caching">
+   Memoization (Caching)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-smells">
+   “Code Smells”
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#repetitive-code">
+     Repetitive code
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#long-functions-with-block-comments">
+     Long functions (with “block comments”)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objects-that-should-be-functions-functions-that-should-be-objects">
+     Objects that should be functions, functions that should be objects
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#long-list-of-arguments">
+       Long list of arguments
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#objects-with-either-one-or-two-methods">
+       Objects with either one or two methods
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#hard-to-explain">
+       Hard to explain
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#too-many-nested-levels">
+     Too many nested levels
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#early-returns">
+       Early returns
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#switch-like-statement-in-python">
+       Switch-like statement in Python
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software-design-principles">
+   Software Design Principles
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#object-orthogonality-and-encapsulation">
+     Object Orthogonality and Encapsulation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         Data
+        </span>
+       </code>
+       :
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#datacontainer">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         DataContainer
+        </span>
+       </code>
+       :
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classes-as-data-types-and-class-methods">
+     Classes as Data Types and Class Methods
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#typestates">
+     Typestates
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#helper-concepts-and-libraries">
+   Helper Concepts and Libraries
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code-formatting-styling-and-linting">
+     Code formatting, styling and linting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#type-annotations-and-mypy">
+     Type Annotations and MyPy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linters-pylint-flake8">
+     Linters (
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pylint
+      </span>
+     </code>
+     ,
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       flake8
+      </span>
+     </code>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enumerations">
+     Enumerations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attrs-classes-without-boilerplate">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       attrs
+      </span>
+     </code>
+     - Classes without boilerplate
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dimensionality-analysis-and-units">
+     Dimensionality analysis and units
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#design-vs-productivity">
+   Design vs. Productivity
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="section" id="class-9-advanced-and-performant-python">
+  <div class="tex2jax_ignore mathjax_ignore section" id="class-9-advanced-and-performant-python">
 <h1>Class 9: Advanced and Performant Python<a class="headerlink" href="#class-9-advanced-and-performant-python" title="Permalink to this headline">¶</a></h1>
 <p>One of the best things about Python is how easy it is to get started with. The syntax is clear, it has all the basic features, things work in a relatively intuitive way, life is good. But Python also supports very advanced features, which make coding with Python an enjoyable experience even after you think you’ve learned everything there is to know of the language. You can always dive a little deeper. You’re not required to, but you can.</p>
 <div class="section" id="generators">
@@ -774,7 +1080,7 @@ c 20
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StopIteration</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">1877550269.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2121</span><span class="o">/</span><span class="mf">1877550269.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">new_range</span><span class="p">))</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> 
 <span class="ne">----&gt; </span><span class="mi">9</span> <span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">new_range</span><span class="p">))</span>
@@ -820,7 +1126,7 @@ c 20
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object my_range at 0x7fb3a427a200&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object my_range at 0x7f9190834660&gt;
 </pre></div>
 </div>
 </div>
@@ -835,7 +1141,7 @@ c 20
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">2329712724.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2121</span><span class="o">/</span><span class="mf">2329712724.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">range2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
 
 <span class="ne">TypeError</span>: &#39;generator&#39; object is not subscriptable
@@ -863,7 +1169,7 @@ c 20
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StopIteration</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">3337243685.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2121</span><span class="o">/</span><span class="mf">3337243685.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">next</span><span class="p">(</span><span class="n">loop_range</span><span class="p">)</span>
 
 <span class="ne">StopIteration</span>: 
@@ -923,7 +1229,7 @@ False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object &lt;genexpr&gt; at 0x7fb3a427a580&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object &lt;genexpr&gt; at 0x7f9190834c10&gt;
 </pre></div>
 </div>
 </div>
@@ -1035,7 +1341,7 @@ Solution<div class="summary-down docutils">
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">1446458673.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2121</span><span class="o">/</span><span class="mf">1446458673.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">f</span><span class="p">()</span>  <span class="c1"># doesn&#39;t work - we have one required argument to the function</span>
 
 <span class="ne">TypeError</span>: f() missing 1 required positional argument: &#39;required_argument&#39;
@@ -1307,8 +1613,8 @@ print_hello
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>It tooks the code 1.430511474609375e-06 milliseconds to run.
-It tooks the code 1.430511474609375e-06 milliseconds to run.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>It tooks the code 4.76837158203125e-07 milliseconds to run.
+It tooks the code 7.152557373046875e-07 milliseconds to run.
 </pre></div>
 </div>
 </div>
@@ -1378,7 +1684,7 @@ It tooks the code 1.430511474609375e-06 milliseconds to run.
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">2766538973.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2121</span><span class="o">/</span><span class="mf">2766538973.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">one</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">two</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">])</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;three&#39;</span><span class="p">])</span>
@@ -1588,11 +1894,11 @@ g
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Numpy:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>67 ms ± 459 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>66.5 ms ± 17.8 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 Numba:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>137 ms ± 1.56 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>187 ms ± 47.8 µs per loop (mean ± std. dev. of 7 runs, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -1631,11 +1937,11 @@ Numba:
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Numpy:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>67.7 ms ± 875 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>66.5 ms ± 57.6 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 Numba:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139 ms ± 3.03 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>187 ms ± 65.5 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -1666,7 +1972,7 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>75.4 ms ± 5.69 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>96 ms ± 1.25 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -1732,10 +2038,10 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>34 ms ± 559 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30.9 ms ± 9.5 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.28 ms ± 19.6 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.69 ms ± 424 ns per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1756,7 +2062,7 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.47 ms ± 184 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.2 ms ± 5.89 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -1786,7 +2092,7 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.13 ms ± 1.02 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.51 ms ± 996 µs per loop (mean ± std. dev. of 7 runs, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -1800,8 +2106,8 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/.pyxbld/temp.linux-x86_64-3.8/pyrex/cython_filter_demo/filter_array.c:620:10: fatal error: numpy/arrayobject.h: No such file or directory
-  620 | #include &quot;numpy/arrayobject.h&quot;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/.pyxbld/temp.linux-x86_64-3.8/pyrex/cython_filter_demo/filter_array.c:681:10: fatal error: numpy/arrayobject.h: No such file or directory
+  681 | #include &quot;numpy/arrayobject.h&quot;
       |          ^~~~~~~~~~~~~~~~~~~~~
 compilation terminated.
 </pre></div>
@@ -1903,7 +2209,7 @@ compilation terminated.
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
 <span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">2658039077.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2121</span><span class="o">/</span><span class="mf">2658039077.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">cython_filter_demo</span> <span class="kn">import</span> <span class="n">filter_array</span>
 
 <span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyximport/pyximport.py</span> in <span class="ni">load_module</span><span class="nt">(self, fullname)</span>
@@ -2025,15 +2331,15 @@ compilation terminated.
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">399082047.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2121</span><span class="o">/</span><span class="mf">399082047.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;timeit&#39;</span><span class="p">,</span> <span class="s1">&#39;filter_array.filter_larger_cython(rands)&#39;</span><span class="p">)</span>
 
 <span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ni">run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2349</span>                 <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2350</span>             <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">2351</span>                 <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2352</span>             <span class="k">return</span> <span class="n">result</span>
-<span class="g g-Whitespace">   </span><span class="mi">2353</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2362</span>                 <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2363</span>             <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2364</span>                 <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2365</span>             <span class="k">return</span> <span class="n">result</span>
+<span class="g g-Whitespace">   </span><span class="mi">2366</span> 
 
 <span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/decorator.py</span> in <span class="ni">fun</span><span class="nt">(*args, **kw)</span>
 <span class="g g-Whitespace">    </span><span class="mi">230</span>             <span class="k">if</span> <span class="ow">not</span> <span class="n">kwsyntax</span><span class="p">:</span>
@@ -2050,11 +2356,11 @@ compilation terminated.
 <span class="g g-Whitespace">    </span><span class="mi">189</span>         <span class="k">if</span> <span class="n">callable</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
 
 <span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py</span> in <span class="ni">timeit</span><span class="nt">(self, line, cell, local_ns)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1167</span>             <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1168</span>                 <span class="n">number</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="n">index</span>
-<span class="ne">-&gt; </span><span class="mi">1169</span>                 <span class="n">time_number</span> <span class="o">=</span> <span class="n">timer</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1170</span>                 <span class="k">if</span> <span class="n">time_number</span> <span class="o">&gt;=</span> <span class="mf">0.2</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1171</span>                     <span class="k">break</span>
+<span class="g g-Whitespace">   </span><span class="mi">1178</span>             <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1179</span>                 <span class="n">number</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="n">index</span>
+<span class="ne">-&gt; </span><span class="mi">1180</span>                 <span class="n">time_number</span> <span class="o">=</span> <span class="n">timer</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1181</span>                 <span class="k">if</span> <span class="n">time_number</span> <span class="o">&gt;=</span> <span class="mf">0.2</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1182</span>                     <span class="k">break</span>
 
 <span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py</span> in <span class="ni">timeit</span><span class="nt">(self, number)</span>
 <span class="g g-Whitespace">    </span><span class="mi">167</span>         <span class="n">gc</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span>
@@ -2136,7 +2442,7 @@ compilation terminated.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>82.3 µs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>90.1 µs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -2148,7 +2454,7 @@ compilation terminated.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.7 µs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.4 µs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -2349,9 +2655,9 @@ compilation terminated.
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">my_func1</span><span class="p">()</span>
 <span class="n">switch</span> <span class="n">data</span><span class="p">:</span>
-    <span class="n">case</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
         <span class="n">my_func2</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-    <span class="n">case</span> <span class="mi">15</span><span class="p">:</span>
+    <span class="k">case</span> <span class="mi">15</span><span class="p">:</span>
         <span class="n">my_func3</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="c1"># etc...</span>
 </pre></div>
@@ -2391,10 +2697,10 @@ compilation terminated.
 <p class="admonition-title">Note</p>
 <p>Python 3.10 introduced switch statements, so if you <em>really</em> don’t want to use a dictionary go ahead and:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="n">match</span> <span class="n">x</span><span class="p">:</span>
-        <span class="n">case</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
+    <span class="k">match</span> <span class="n">x</span><span class="p">:</span>
+        <span class="k">case</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="mi">1</span>
-        <span class="n">case</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span>
+        <span class="k">case</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="mi">2</span>
 </pre></div>
 </div>
@@ -2742,7 +3048,7 @@ AttributeError: can&#39;t set attribute - properties can&#39;t (by default) be c
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Age(years=20, months=4, days=5)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Age(years=21, months=4, days=5)
 </pre></div>
 </div>
 </div>
@@ -3078,7 +3384,7 @@ r
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_2993/873515946.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_2121/873515946.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="n">param3</span><span class="o">=</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="n">param4</span><span class="p">):</span>
                  <span class="o">^</span>
 <span class="ne">SyntaxError</span>: non-default argument follows default argument
@@ -3138,7 +3444,7 @@ r
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">440855898.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2121</span><span class="o">/</span><span class="mf">440855898.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">b</span> <span class="o">=</span> <span class="n">ExampleTwo</span><span class="p">(</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
 
 <span class="nn">&lt;attrs generated init __main__.ExampleTwo&gt;</span> in <span class="ni">__init__</span><span class="nt">(self, param1, param2, param3, param4)</span>
@@ -3148,13 +3454,13 @@ r
 <span class="g g-Whitespace">     </span><span class="mi">11</span>         <span class="n">__attr_validator_param2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">__attr_param2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">param2</span><span class="p">)</span>
 
 <span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/attr/validators.py</span> in <span class="ni">__call__</span><span class="nt">(self, inst, attr, value)</span>
-<span class="g g-Whitespace">     </span><span class="mi">33</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">34</span><span class="s2">         if not isinstance(value, self.type):</span>
-<span class="ne">---&gt; </span><span class="mi">35</span><span class="s2">             raise TypeError(</span>
-<span class="g g-Whitespace">     </span><span class="mi">36</span><span class="s2">                 &quot;&#39;</span><span class="si">{name}</span><span class="s2">&#39; must be </span><span class="si">{type!r}</span><span class="s2"> (got </span><span class="si">{value!r}</span><span class="s2"> that is a &quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">37</span><span class="s2">                 &quot;</span><span class="si">{actual!r}</span><span class="s2">).&quot;.format(</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span><span class="s2">         if not isinstance(value, self.type):</span>
+<span class="ne">--&gt; </span><span class="mi">103</span><span class="s2">             raise TypeError(</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span><span class="s2">                 &quot;&#39;</span><span class="si">{name}</span><span class="s2">&#39; must be </span><span class="si">{type!r}</span><span class="s2"> (got </span><span class="si">{value!r}</span><span class="s2"> that is a &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span><span class="s2">                 &quot;</span><span class="si">{actual!r}</span><span class="s2">).&quot;.format(</span>
 
-<span class="ne">TypeError</span>: (&quot;&#39;param1&#39; must be &lt;class &#39;int&#39;&gt; (got 1.1 that is a &lt;class &#39;float&#39;&gt;).&quot;, Attribute(name=&#39;param1&#39;, default=NOTHING, validator=&lt;instance_of validator for type &lt;class &#39;int&#39;&gt;&gt;, repr=True, eq=True, order=True, hash=None, init=True, metadata=mappingproxy({}), type=None, converter=None, kw_only=False, inherited=False, on_setattr=None), &lt;class &#39;int&#39;&gt;, 1.1)
+<span class="ne">TypeError</span>: (&quot;&#39;param1&#39; must be &lt;class &#39;int&#39;&gt; (got 1.1 that is a &lt;class &#39;float&#39;&gt;).&quot;, Attribute(name=&#39;param1&#39;, default=NOTHING, validator=&lt;instance_of validator for type &lt;class &#39;int&#39;&gt;&gt;, repr=True, eq=True, eq_key=None, order=True, order_key=None, hash=None, init=True, metadata=mappingproxy({}), type=None, converter=None, kw_only=False, inherited=False, on_setattr=None), &lt;class &#39;int&#39;&gt;, 1.1)
 </pre></div>
 </div>
 </div>
@@ -3187,7 +3493,7 @@ r
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.11291946500757 0.4917819112992936 0.4564628758861703 0.6851671521598431 0.6638682075882643 0.5254739111863826 0.050968790538124864 0.5791742762216341 0.2472901362777462 0.8528866039541462] volt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.8638243140183633 0.1877098305195266 0.4750266728455048 0.8063898511784953 0.9271237232053596 0.1229478666298931 0.09739055666984897 0.03429665697892381 0.6273803869821707 0.19383919441773945] volt
 </pre></div>
 </div>
 </div>
@@ -3199,7 +3505,7 @@ r
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.22583893001514 0.9835638225985872 0.9129257517723406 1.3703343043196863 1.3277364151765285 1.0509478223727653 0.10193758107624973 1.1583485524432682 0.4945802725554924 1.7057732079082923] volt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1.7276486280367267 0.3754196610390532 0.9500533456910096 1.6127797023569905 1.8542474464107193 0.2458957332597862 0.19478111333969794 0.06859331395784762 1.2547607739643414 0.3876783888354789] volt
 </pre></div>
 </div>
 </div>
@@ -3226,50 +3532,50 @@ r
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">DimensionalityError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2993</span><span class="o">/</span><span class="mf">804990995.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2121</span><span class="o">/</span><span class="mf">804990995.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">amps</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;seconds&#39;</span><span class="p">)</span>  <span class="c1"># DimensionalityError</span>
 
 <span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/quantity.py</span> in <span class="ni">to</span><span class="nt">(self, other, *contexts, **ctx_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">658</span>         <span class="n">other</span> <span class="o">=</span> <span class="n">to_units_container</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_REGISTRY</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">659</span> 
-<span class="ne">--&gt; </span><span class="mi">660</span>         <span class="n">magnitude</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert_magnitude_not_inplace</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="o">*</span><span class="n">contexts</span><span class="p">,</span> <span class="o">**</span><span class="n">ctx_kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">661</span> 
-<span class="g g-Whitespace">    </span><span class="mi">662</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">magnitude</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">722</span>         <span class="n">other</span> <span class="o">=</span> <span class="n">to_units_container</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_REGISTRY</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">723</span> 
+<span class="ne">--&gt; </span><span class="mi">724</span>         <span class="n">magnitude</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert_magnitude_not_inplace</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="o">*</span><span class="n">contexts</span><span class="p">,</span> <span class="o">**</span><span class="n">ctx_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">725</span> 
+<span class="g g-Whitespace">    </span><span class="mi">726</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">magnitude</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
 
 <span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/quantity.py</span> in <span class="ni">_convert_magnitude_not_inplace</span><span class="nt">(self, other, *contexts, **ctx_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">607</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_REGISTRY</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_magnitude</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_units</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">608</span> 
-<span class="ne">--&gt; </span><span class="mi">609</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_REGISTRY</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_magnitude</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_units</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">610</span> 
-<span class="g g-Whitespace">    </span><span class="mi">611</span>     <span class="k">def</span> <span class="nf">_convert_magnitude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="o">*</span><span class="n">contexts</span><span class="p">,</span> <span class="o">**</span><span class="n">ctx_kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">671</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_REGISTRY</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_magnitude</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_units</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">672</span> 
+<span class="ne">--&gt; </span><span class="mi">673</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_REGISTRY</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_magnitude</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_units</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">674</span> 
+<span class="g g-Whitespace">    </span><span class="mi">675</span>     <span class="k">def</span> <span class="nf">_convert_magnitude</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="o">*</span><span class="n">contexts</span><span class="p">,</span> <span class="o">**</span><span class="n">ctx_kwargs</span><span class="p">):</span>
 
 <span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/registry.py</span> in <span class="ni">convert</span><span class="nt">(self, value, src, dst, inplace)</span>
-<span class="g g-Whitespace">    </span><span class="mi">945</span>             <span class="k">return</span> <span class="n">value</span>
-<span class="g g-Whitespace">    </span><span class="mi">946</span> 
-<span class="ne">--&gt; </span><span class="mi">947</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">948</span> 
-<span class="g g-Whitespace">    </span><span class="mi">949</span>     <span class="k">def</span> <span class="nf">_convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">check_dimensionality</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1001</span>             <span class="k">return</span> <span class="n">value</span>
+<span class="g g-Whitespace">   </span><span class="mi">1002</span> 
+<span class="ne">-&gt; </span><span class="mi">1003</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1004</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1005</span>     <span class="k">def</span> <span class="nf">_convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">check_dimensionality</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 
 <span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/registry.py</span> in <span class="ni">_convert</span><span class="nt">(self, value, src, dst, inplace)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1828</span>                 <span class="n">value</span><span class="p">,</span> <span class="n">src</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">_magnitude</span><span class="p">,</span> <span class="n">src</span><span class="o">.</span><span class="n">_units</span>
-<span class="g g-Whitespace">   </span><span class="mi">1829</span> 
-<span class="ne">-&gt; </span><span class="mi">1830</span>         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_convert</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1831</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1832</span>     <span class="k">def</span> <span class="nf">_get_compatible_units</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_units</span><span class="p">,</span> <span class="n">group_or_system</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1915</span>                 <span class="n">value</span><span class="p">,</span> <span class="n">src</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">_magnitude</span><span class="p">,</span> <span class="n">src</span><span class="o">.</span><span class="n">_units</span>
+<span class="g g-Whitespace">   </span><span class="mi">1916</span> 
+<span class="ne">-&gt; </span><span class="mi">1917</span>         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_convert</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1918</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1919</span>     <span class="k">def</span> <span class="nf">_get_compatible_units</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_units</span><span class="p">,</span> <span class="n">group_or_system</span><span class="p">):</span>
 
 <span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/registry.py</span> in <span class="ni">_convert</span><span class="nt">(self, value, src, dst, inplace)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1431</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1432</span>         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">src_offset_unit</span> <span class="ow">or</span> <span class="n">dst_offset_unit</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">1433</span>             <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_convert</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1434</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1435</span>         <span class="n">src_dim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_dimensionality</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1516</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1517</span>         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">src_offset_unit</span> <span class="ow">or</span> <span class="n">dst_offset_unit</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1518</span>             <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_convert</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1519</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1520</span>         <span class="n">src_dim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_dimensionality</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
 
 <span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/registry.py</span> in <span class="ni">_convert</span><span class="nt">(self, value, src, dst, inplace, check_dimensionality)</span>
-<span class="g g-Whitespace">    </span><span class="mi">978</span>             <span class="c1"># then the conversion cannot be performed.</span>
-<span class="g g-Whitespace">    </span><span class="mi">979</span>             <span class="k">if</span> <span class="n">src_dim</span> <span class="o">!=</span> <span class="n">dst_dim</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">980</span>                 <span class="k">raise</span> <span class="n">DimensionalityError</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">src_dim</span><span class="p">,</span> <span class="n">dst_dim</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">981</span> 
-<span class="g g-Whitespace">    </span><span class="mi">982</span>         <span class="c1"># Here src and dst have only multiplicative units left. Thus we can</span>
+<span class="g g-Whitespace">   </span><span class="mi">1034</span>             <span class="c1"># then the conversion cannot be performed.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1035</span>             <span class="k">if</span> <span class="n">src_dim</span> <span class="o">!=</span> <span class="n">dst_dim</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1036</span>                 <span class="k">raise</span> <span class="n">DimensionalityError</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">src_dim</span><span class="p">,</span> <span class="n">dst_dim</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1037</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1038</span>         <span class="c1"># Here src and dst have only multiplicative units left. Thus we can</span>
 
 <span class="ne">DimensionalityError</span>: Cannot convert from &#39;volt / ohm&#39; ([current]) to &#39;second&#39; ([time])
 </pre></div>
@@ -3311,54 +3617,42 @@ r
 
               </div>
               
-        
             
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="../class_8/class_8.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Class 8: Testing and Test-Driven Development</p>
-            </div>
-        </a>
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../class_8/class_8.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Class 8: Testing and Test-Driven Development</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../class_10/class_10.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Class 10: Introduction to Machine Learning</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="../class_10/class_10.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Class 10: Introduction to Machine Learning</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi<br/>
-        
-            &copy; Copyright 2020.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

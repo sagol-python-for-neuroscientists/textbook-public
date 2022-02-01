@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class 0: Background and Basic Syntax &#8212; Python for Neuroscience</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -45,7 +45,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -58,7 +58,10 @@
     <link rel="next" title="Class 1: More Syntax and The Python Stack" href="../class_1/class_1.html" />
     <link rel="prev" title="Contents" href="../../contents.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -286,7 +289,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -298,7 +301,7 @@
     <div class="dropdown-buttons sourcebuttons">
         
         <a class="issues-button"
-            href="https://github.com/ZviBaratz/python_for_neuroscientists/issues/new?title=Issue%20on%20page%20%2Fclasses/class_0/class_0.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/sagol-python-for-neuroscientists/textbook-public/issues/new?title=Issue%20on%20page%20%2Fclasses/class_0/class_0.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -319,7 +322,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ZviBaratz/python_for_neuroscientists/main?urlpath=tree/source/classes/class_0/class_0.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/classes/class_0/class_0.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -334,7 +337,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -552,13 +555,234 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class 0: Background and Basic Syntax</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-to-python">
+   Introduction to Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#foreword">
+     Foreword
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#what-is-this-course-all-about">
+       What is this course all about?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#what-s-in-store-for-this-class">
+       What’s in store for this class?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#what-can-you-do-with-python">
+       What can you do with Python?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#why-python">
+       Why Python?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#who-s-behind-python">
+       Who’s behind Python?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#python-2-vs-python-3">
+       Python 2 vs. Python 3
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-basics">
+     The Basics
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#how-does-python-work-internally">
+       How does Python work internally?
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#whitespaces-and-brackets">
+       Whitespaces and Brackets
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#general-syntax">
+       General Syntax
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#types">
+       Types
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#type-coersion">
+         Type Coersion
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#variables">
+       Variables
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#naming">
+         Naming
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#string-operations">
+       String operations
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions">
+     Functions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#defining-functions">
+       Defining Functions
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#things-to-notice">
+         Things to notice:
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-structures">
+     Data Structures
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lists-tuples-dictionaries-and-sets">
+       Lists, Tuples, Dictionaries and Sets
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#lists">
+         Lists
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#slicing">
+         Slicing
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#list-use-cases">
+         List use-cases
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tuples">
+       Tuples
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#tuple-use-cases">
+         Tuple use-cases
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dictionaries">
+       Dictionaries
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sets">
+       Sets
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#set-use-cases">
+       Set use-cases
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#flow-control-if-and-for">
+     Flow Control:
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       if
+      </span>
+     </code>
+     and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exercises">
+       Exercises
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1-the-enigma">
+     Exercise 1: The Enigma
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-list-slicer">
+     Exercise 2: List Slicer
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="section" id="class-0-background-and-basic-syntax">
+  <div class="tex2jax_ignore mathjax_ignore section" id="class-0-background-and-basic-syntax">
 <h1>Class 0: Background and Basic Syntax<a class="headerlink" href="#class-0-background-and-basic-syntax" title="Permalink to this headline">¶</a></h1>
 <div class="dropdown admonition">
-<p class="admonition-title"> Administration</p>
+<p class="admonition-title">Administration</p>
 <ul class="simple">
 <li><p>Classes are composed of a frontal lecture and some personal work.</p></li>
 <li><p>Final grade:</p>
@@ -569,8 +793,8 @@
 </li>
 <li><p>Feel free to contact us at:</p>
 <ul>
-<li><p>zvibaratz&#64;mail.tau.ac.il</p></li>
-<li><p>hershkovitz1&#64;mail.tau.ac.il</p></li>
+<li><p><a class="reference external" href="mailto:zvibaratz&#37;&#52;&#48;mail&#46;tau&#46;ac&#46;il">zvibaratz<span>&#64;</span>mail<span>&#46;</span>tau<span>&#46;</span>ac<span>&#46;</span>il</a></p></li>
+<li><p><a class="reference external" href="mailto:hershkovitz1&#37;&#52;&#48;mail&#46;tau&#46;ac&#46;il">hershkovitz1<span>&#64;</span>mail<span>&#46;</span>tau<span>&#46;</span>ac<span>&#46;</span>il</a></p></li>
 </ul>
 </li>
 <li><p>Other than the first assignment, homework will be submitted via GitHub (for more information, see the <a class="reference internal" href="../../intro.html"><span class="doc">Introduction</span></a> and <a class="reference external" href="https://github.com/sagol-python-for-neuroscientists/course_site_2021/blob/master/SubmissionGuidelines.md">Submission Guidelines</a>).</p></li>
@@ -1229,7 +1453,7 @@ It might seem like a dramatic difference from your programming language of choic
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2653</span><span class="o">/</span><span class="mf">2894341234.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1803</span><span class="o">/</span><span class="mf">2894341234.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># But</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Notice the &quot;ValueError&quot; exception we received, one of many exceptions we&#39;ll encounter...</span>
@@ -1316,8 +1540,8 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 </div>
-<div class="admonition">
-<p class="admonition-title"> Nested Functions</p>
+<div class="admonition-nested-functions admonition">
+<p class="admonition-title">Nested Functions</p>
 <p>Try not to define functions within other functions. While it’s technically possible, it’s almost never the right thing to do.</p>
 </div>
 </div>
@@ -1354,7 +1578,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7fc2b09b81f0&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7fa1dc77b550&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1418,9 +1642,9 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The original list:
-[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7fc2b09b81f0&gt;, -100]
+[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7fa1dc77b550&gt;, -100]
 l[0]: 1
-l[5]: &lt;function always_return_2 at 0x7fc2b09b81f0&gt;
+l[5]: &lt;function always_return_2 at 0x7fa1dc77b550&gt;
 l[0:2]: [1, &#39;2&#39;]
 </pre></div>
 </div>
@@ -1434,7 +1658,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7fc2b09b81f0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7fa1dc77b550&gt;
 </pre></div>
 </div>
 </div>
@@ -1514,7 +1738,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7fc2b09b81f0&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7fa1dc77b550&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
 </pre></div>
 </div>
 </div>
@@ -1527,7 +1751,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7fc2b09b81f0&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7fa1dc77b550&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1568,7 +1792,7 @@ l[0:2]: [1, &#39;2&#39;]
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2653</span><span class="o">/</span><span class="mf">1598351701.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1803</span><span class="o">/</span><span class="mf">1598351701.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">a_tuple</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># immutable!</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># So .append() doesn&#39;t work, for example. Once created they will remain constant.</span>
 
@@ -1712,12 +1936,12 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;c&#39;, &#39;a&#39;, &#39;e&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;e&#39;, &#39;c&#39;}
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2653</span><span class="o">/</span><span class="mf">2069258087.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1803</span><span class="o">/</span><span class="mf">2069258087.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">set2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">}</span>
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="nb">print</span><span class="p">(</span><span class="n">set2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -1737,7 +1961,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, &#39;a&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, 2, 1}
 </pre></div>
 </div>
 </div>
@@ -1751,13 +1975,13 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0, 1, &#39;a&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0, &#39;a&#39;, 1}
 </pre></div>
 </div>
 </div>
 </div>
-<div class="dropdown tip admonition">
-<p class="admonition-title"> Solution</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Solution</p>
 <p>In Python, <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> are in fact identical to <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span></code> (respetively).</p>
 </div>
 <div class="cell docutils container">
@@ -1777,7 +2001,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2653</span><span class="o">/</span><span class="mf">3989893146.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1803</span><span class="o">/</span><span class="mf">3989893146.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Mutable types can&#39;t be inserted to a set</span>
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">set5</span><span class="o">.</span><span class="n">add</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
@@ -1817,10 +2041,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 4}
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> ∪ {3, 4, 5, 6} = {1, 2, 3, 4, 5, 6}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, 3, 4} ∪ {3, 4, 5, 6} = {1, 2, 3, 4, 5, 6}
 </pre></div>
 </div>
 </div>
@@ -1871,8 +2092,8 @@ list_without_dups = list(set(list_with_dups))
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
 </div>
-<div class="dropdown tip admonition">
-<p class="admonition-title"> Solution</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Solution</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">enigma_code</span><span class="p">(</span><span class="n">letters</span><span class="p">,</span> <span class="n">table</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Encode\decode the letters using the table. </span>
 <span class="sd">    </span>
@@ -1903,8 +2124,8 @@ list_without_dups = list(set(list_with_dups))
 <div class="section" id="exercise-2-list-slicer">
 <h3>Exercise 2: List Slicer<a class="headerlink" href="#exercise-2-list-slicer" title="Permalink to this headline">¶</a></h3>
 <p>Write a function that slices a list in two parts and returns them. If the list contains an odd number of elements the first slice of the two should contain more items.</p>
-<div class="dropdown tip admonition">
-<p class="admonition-title"> Solution</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Solution</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">slicer</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Slices the given list into two parts.</span>
 <span class="sd">    </span>
@@ -1956,54 +2177,42 @@ list_without_dups = list(set(list_with_dups))
 
               </div>
               
-        
             
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="../../contents.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Contents</p>
-            </div>
-        </a>
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../../contents.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Contents</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../class_1/class_1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Class 1: More Syntax and The Python Stack</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="../class_1/class_1.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Class 1: More Syntax and The Python Stack</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi<br/>
-        
-            &copy; Copyright 2020.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

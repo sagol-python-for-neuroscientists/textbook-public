@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Creating and Publishing a Python Library &#8212; Python for Neuroscience</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -45,7 +45,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -58,7 +58,10 @@
     <link rel="next" title="Resources" href="../resources.html" />
     <link rel="prev" title="Create a Git Repository" href="create_git_repo.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -286,7 +289,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -298,7 +301,7 @@
     <div class="dropdown-buttons sourcebuttons">
         
         <a class="issues-button"
-            href="https://github.com/ZviBaratz/python_for_neuroscientists/issues/new?title=Issue%20on%20page%20%2Ftutorials/create_and_publish_pacakge.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/sagol-python-for-neuroscientists/textbook-public/issues/new?title=Issue%20on%20page%20%2Ftutorials/create_and_publish_pacakge.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -319,7 +322,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ZviBaratz/python_for_neuroscientists/main?urlpath=tree/source/tutorials/create_and_publish_pacakge.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/tutorials/create_and_publish_pacakge.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -334,7 +337,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -386,10 +389,65 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Creating and Publishing a Python Library</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#naive-solution">
+   Naive Solution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-libraries-from-the-ground-up">
+   Python Libraries from the Ground Up
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scaffolding">
+     Scaffolding
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#environment-and-dependencies">
+     Environment and dependencies
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-and-publish">
+     Build and publish!
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documentation-and-readthedocs">
+     Documentation and ReadTheDocs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#continuous-integration">
+     Continuous Integration
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="section" id="creating-and-publishing-a-python-library">
+  <div class="tex2jax_ignore mathjax_ignore section" id="creating-and-publishing-a-python-library">
 <h1>Creating and Publishing a Python Library<a class="headerlink" href="#creating-and-publishing-a-python-library" title="Permalink to this headline">¶</a></h1>
 <p>Early in the course we showed how easy it is to download packages from PyPI (Python Package Index), the official repository for all Python pacakges. This class will discuss process of creating and publishing a library to the outer world, which is a bit more complicated than downloading a package, but not by much.</p>
 <div class="section" id="naive-solution">
@@ -520,38 +578,38 @@
 </li>
 <li><p>Add a <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> file with the following content:</p></li>
 </ol>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span>    <span class="k">[metadata]</span>
-    <span class="na">name</span> <span class="o">=</span> <span class="s">time_travel</span>
-    <span class="na">version</span> <span class="o">=</span> <span class="s">0.0.1</span>
-    <span class="na">author</span> <span class="o">=</span> <span class="s">Zvi Baratz</span>
-    <span class="na">author_email</span> <span class="o">=</span> <span class="s">z.baratz@gmail.com</span>
-    <span class="na">description</span> <span class="o">=</span> <span class="s">Travel in time using Python!</span>
-    <span class="na">long_description</span> <span class="o">=</span> <span class="s">file: README.md, CHANGELOG.md, LICENSE</span>
-    <span class="na">long_description_content_type</span> <span class="o">=</span> <span class="s">text/markdown</span>
-    <span class="na">keywords</span> <span class="o">=</span> <span class="s">future, timetravel, example</span>
-    <span class="na">url</span> <span class="o">=</span> <span class="s">https://github.com/ZviBaratz/time_travel</span>
-    <span class="na">project_urls</span> <span class="o">=</span>
-        <span class="na">Bug Tracker</span> <span class="o">=</span> <span class="s">https://github.com/ZviBaratz/time_travel/issues</span>
-    <span class="na">classifiers</span> <span class="o">=</span>
-        <span class="na">Programming Language :: Python :: 3</span>
-        <span class="na">License :: OSI Approved :: MIT License</span>
-        <span class="na">Operating System :: OS Independent</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">[metadata]</span><span class="w"></span>
+<span class="w">    </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">time_travel</span><span class="w"></span>
+<span class="w">    </span><span class="na">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0.0.1</span><span class="w"></span>
+<span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Zvi Baratz</span><span class="w"></span>
+<span class="w">    </span><span class="na">author_email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">z.baratz@gmail.com</span><span class="w"></span>
+<span class="w">    </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Travel in time using Python!</span><span class="w"></span>
+<span class="w">    </span><span class="na">long_description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">file: README.md, CHANGELOG.md, LICENSE</span><span class="w"></span>
+<span class="w">    </span><span class="na">long_description_content_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">text/markdown</span><span class="w"></span>
+<span class="w">    </span><span class="na">keywords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">future, timetravel, example</span><span class="w"></span>
+<span class="w">    </span><span class="na">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://github.com/ZviBaratz/time_travel</span><span class="w"></span>
+<span class="w">    </span><span class="na">project_urls</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">        </span><span class="na">Bug Tracker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">https://github.com/ZviBaratz/time_travel/issues</span><span class="w"></span>
+<span class="w">    </span><span class="na">classifiers</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">        </span><span class="na">Programming Language :: Python :: 3</span><span class="w"></span>
+<span class="w">        </span><span class="na">License :: OSI Approved :: MIT License</span><span class="w"></span>
+<span class="w">        </span><span class="na">Operating System :: OS Independent</span><span class="w"></span>
 
-    <span class="k">[options]</span>
-    <span class="na">package_dir</span> <span class="o">=</span>
-        <span class="o">=</span> <span class="s">src</span>
-    <span class="na">packages</span> <span class="o">=</span> <span class="s">find:</span>
-    <span class="na">python_requires</span> <span class="o">=</span> <span class="s">&gt;=3.6</span>
-    <span class="na">install_requires</span> <span class="o">=</span>
-        <span class="na">numpy</span>
+<span class="w">    </span><span class="k">[options]</span><span class="w"></span>
+<span class="w">    </span><span class="na">package_dir</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s">src</span><span class="w"></span>
+<span class="w">    </span><span class="na">packages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">find:</span><span class="w"></span>
+<span class="w">    </span><span class="na">python_requires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&gt;=3.6</span><span class="w"></span>
+<span class="w">    </span><span class="na">install_requires</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">        </span><span class="na">numpy</span><span class="w"></span>
 
-    <span class="k">[options.extras_require]</span>
-    <span class="na">dev</span> <span class="o">=</span> <span class="s">black; flake8; pytest</span>
-    <span class="na">dist</span> <span class="o">=</span> <span class="s">build; twine</span>
-    <span class="na">docs</span> <span class="o">=</span> <span class="s">mkdocs</span>
+<span class="w">    </span><span class="k">[options.extras_require]</span><span class="w"></span>
+<span class="w">    </span><span class="na">dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">black; flake8; pytest</span><span class="w"></span>
+<span class="w">    </span><span class="na">dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">build; twine</span><span class="w"></span>
+<span class="w">    </span><span class="na">docs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">mkdocs</span><span class="w"></span>
 
-    <span class="k">[options.packages.find]</span>
-    <span class="na">where</span> <span class="o">=</span> <span class="s">src</span>
+<span class="w">    </span><span class="k">[options.packages.find]</span><span class="w"></span>
+<span class="w">    </span><span class="na">where</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">src</span><span class="w"></span>
 </pre></div>
 </div>
 <ol class="simple">
@@ -658,54 +716,42 @@ jobs:
 
               </div>
               
-        
             
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="create_git_repo.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Create a Git Repository</p>
-            </div>
-        </a>
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="create_git_repo.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Create a Git Repository</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../resources.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Resources</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="../resources.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Resources</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi<br/>
-        
-            &copy; Copyright 2020.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

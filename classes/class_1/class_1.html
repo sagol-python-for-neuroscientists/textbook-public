@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class 1: More Syntax and The Python Stack &#8212; Python for Neuroscience</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -45,7 +45,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -58,7 +58,10 @@
     <link rel="next" title="Class 2: Virtual Environments and Object-oriented Programming (OOP)" href="../class_2/class_2.html" />
     <link rel="prev" title="Class 0: Background and Basic Syntax" href="../class_0/class_0.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -286,7 +289,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -298,7 +301,7 @@
     <div class="dropdown-buttons sourcebuttons">
         
         <a class="issues-button"
-            href="https://github.com/ZviBaratz/python_for_neuroscientists/issues/new?title=Issue%20on%20page%20%2Fclasses/class_1/class_1.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/sagol-python-for-neuroscientists/textbook-public/issues/new?title=Issue%20on%20page%20%2Fclasses/class_1/class_1.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -319,7 +322,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ZviBaratz/python_for_neuroscientists/main?urlpath=tree/source/classes/class_1/class_1.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/classes/class_1/class_1.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -334,7 +337,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -546,10 +549,225 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Class 1: More Syntax and The Python Stack</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review">
+   Review
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conditionals-and-iteration">
+   Conditionals and Iteration
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-if-statement">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       if
+      </span>
+     </code>
+     Statement
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#iteration">
+     Iteration
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#for-loop">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       for
+      </span>
+     </code>
+     loop
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#while-loop">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       while
+      </span>
+     </code>
+     Loop
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#break-and-continue">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       break
+      </span>
+     </code>
+     and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       continue
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formatting">
+   Formatting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comprehensions">
+   Comprehensions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#function-default-arguments-and-types">
+   Function Default Arguments and Types
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#type-hinting">
+     Type hinting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-input-output">
+   File Input/Output
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-python-stack">
+   The Python Stack
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-run-python">
+     How to Run Python?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#how-does-matlab-do-it">
+       How does MATLAB do it?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integrated-development-environment-ide">
+     Integrated Development Environment (IDE)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#spyder">
+       Spyder
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pycharm">
+       PyCharm
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#visual-studio-code">
+       Visual Studio Code
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-notebook">
+     Jupyter Notebook
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-control">
+   Version Control
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction">
+     Introduction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git-fundamentals-using-vscode-and-github">
+     Git Fundamentals (Using VSCode and GitHub)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-module-system">
+   The Module System
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#namespaces">
+     Namespaces
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-default-python-namespace">
+     The Default Python Namespace
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pip-and-external-modules">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     pip
+    </span>
+   </code>
+   and External Modules
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparison-with-matlab-s-approach">
+     Comparison with MATLAB’s approach
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-structure">
+   File Structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scripts-and-functions">
+   Scripts and Functions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="section" id="class-1-more-syntax-and-the-python-stack">
+  <div class="tex2jax_ignore mathjax_ignore section" id="class-1-more-syntax-and-the-python-stack">
 <h1>Class 1: More Syntax and The Python Stack<a class="headerlink" href="#class-1-more-syntax-and-the-python-stack" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="review">
 <h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
@@ -1079,7 +1297,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32.3 µs ± 707 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27.3 µs ± 10.9 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1095,7 +1313,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>37.6 µs ± 1.03 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30.6 µs ± 9.81 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1428,9 +1646,9 @@ Solution<div class="summary-down docutils">
 <li><p>my_project/</p>
 <ul>
 <li><p>__init__.py</p></li>
-<li><p>code.py</p></li>
+<li><p><a class="reference external" href="http://code.py">code.py</a></p></li>
 <li><p>requirements.txt</p></li>
-<li><p>README.md</p></li>
+<li><p><a class="reference external" href="http://README.md">README.md</a></p></li>
 </ul>
 </li>
 </ul>
@@ -1441,7 +1659,7 @@ Solution<div class="summary-down docutils">
 <li><p><strong>Initialize Git</strong>: Click the <img src="vsc_vcs.png" alt="VSC Version Control" width="30" style="display:inline"></img> icon (or Ctrl+Shift+G G), and then “Initialize Repository”.<br /><img alt="VSC Git init" src="../../_images/vsc_git_init.png" /><br /></p></li>
 <li><p><strong>Stage</strong>: Next, we need to tell Git which files to track, which is called “staging” the files. Currently, we see our files and folders under the “Changes” headline, which means that these files are new to Git (since its previous snapshot of our repository is really a “clean slate” without any files).<br /><img alt="VSC VCS Changes" src="../../_images/vsc_git_changes.png" /><br />There’s a <span style="color:green"><strong>U</strong></span> next to each file signifying that it’s “<span style="color:green"><strong>U</strong></span>ntracked”, i.e. Git has no prior records of this file. To start tracking the files, we can click the “+” button appearing next to the <span style="color:green"><strong>U</strong></span> when we hover over the file. <img alt="VSC Git Stage" src="../../_images/vsc_git_stage.png" /><br />Alternatively, if we just want to add all files to the Git archive, we can click the “+” on the “Changes” line (again, visible when we hover with the mouse on it). Go ahead and stage all files. You should see them under a new headline: “Staged Changes”, and showing an <span style="color:green"><strong>A</strong></span> for “<span style="color:green"><strong>A</strong></span>dded”. <img alt="VSC Git Staged" src="../../_images/vsc_git_staged.png" /> Now Git knows what’s inside the <code class="docutils literal notranslate"><span class="pre">my_project</span></code> folder, all files are tracked, but it hasn’t captured a snapshot of the repository status quite yet. To do that, we’ll need to “commit” the current state of the repository (repo). <br /><br /></p></li>
 <li><p><strong>Commit</strong>: Committing essentially means creating a snapshot of our codebase which we can name, label, describe, and go back to. We always commit changes along with a concise message. The message goes in the line above “Staged Changes” - write “Initial commit” (it’s good enough for the purposes of the tutorial). <img alt="VSC Initial Commit" src="../../_images/vsc_first_commit.png" /> Now we can commit by clicking the ✓ checkmark in the line above (or Ctrl+Enter while in the commit message textbox). So far, we merely created a local repo in our computer. If the whole folder is erased, our backups and commit history go away with it as well. <br /><br /></p></li>
-<li><p><strong>Push</strong>: To make an online backup of a repository, we need to first set a “remote” (i.e. a remote location containing a copy of the repository). If you don’t already have a <a class="reference external" href="https://www.github.com">GitHub</a> account, create one, and then create a new repository: <img alt="GitHub New Repo" src="../../_images/github_new_repo.png" /> Give the repo a descriptive name create it. Now that you have a remote location to use (should be: https://github.com/&lt;your-user-name&gt;/&lt;repo-name&gt;), head back to VSCode and in the “Source Control” options select “Add remote”: <img alt="VSC Add Remote" src="../../_images/vsc_add_remote.png" /> and finally we are ready to “push” our changes: <img alt="VSC Git Push" src="../../_images/vsc_git_push.png" /></p></li>
+<li><p><strong>Push</strong>: To make an online backup of a repository, we need to first set a “remote” (i.e. a remote location containing a copy of the repository). If you don’t already have a <a class="reference external" href="https://www.github.com">GitHub</a> account, create one, and then create a new repository: <img alt="GitHub New Repo" src="../../_images/github_new_repo.png" /> Give the repo a descriptive name create it. Now that you have a remote location to use (should be: <a class="reference external" href="https://github.com/">https://github.com/</a>&lt;your-user-name&gt;/&lt;repo-name&gt;), head back to VSCode and in the “Source Control” options select “Add remote”: <img alt="VSC Add Remote" src="../../_images/vsc_add_remote.png" /> and finally we are ready to “push” our changes: <img alt="VSC Git Push" src="../../_images/vsc_git_push.png" /></p></li>
 </ol>
 <p>Congratulations! You’ve published your first code repository! Whether you find it trivial or confusing, you’ve made a huge step towards creating software that will not only work better for you, but also for others.</p>
 </div>
@@ -1512,7 +1730,7 @@ But outside of it, a=1
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2673</span><span class="o">/</span><span class="mf">4108605943.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1821</span><span class="o">/</span><span class="mf">4108605943.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">cos</span>  <span class="c1"># we probably want math.cos, but we didn&#39;t import it, so we got a NameError</span>
 
 <span class="ne">NameError</span>: name &#39;cos&#39; is not defined
@@ -1565,7 +1783,7 @@ But outside of it, a=1
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b&#39;&lt;!doctype html&gt;&lt;html itemscope=&quot;&quot; itemtype=&quot;http://schema.org/WebPage&quot; lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta content=&quot;Search the world\&#39;s information, including webpages, images, videos and more. Google has many special features to help you find exactly what you\&#39;re looking for.&quot; name=&quot;description&quot;&gt;&lt;meta content=&quot;noodp&quot; name=&quot;robots&quot;&gt;&lt;meta content=&quot;text/html; charset=UTF-8&quot; http-equiv=&quot;Content-Type&quot;&gt;&lt;meta content=&quot;/logos/doodles/2021/dr-maria-de-los-angeles-alvarino-gonzalezs-105th-birthday-6753651837109097-l.png&quot; itemprop=&quot;image&quot;&gt;&lt;meta content=&quot;Dr. Mar\xeda de los \xc1ngeles Alvari\xf1o Gonz\xe1lez\&#39;s 105th Birthday&quot; property=&quot;twitter:title&quot;&gt;&lt;meta content=&quot;Dr. Mar\xeda de los \xc1ngeles Alvari\xf1o Gonz\xe1lez\&#39;s 105th Birthday! #GoogleDoodle&quot; property=&quot;twitter:description&quot;&gt;&lt;meta content=&quot;Dr. Mar\xeda de los \xc1ngeles Alvari\xf1o Gonz\xe1lez\&#39;s 105th Birthday! #GoogleDoodle&quot; property=&quot;og:description&quot;&gt;&lt;meta content=&quot;summary_large_image&quot; property=&quot;twitter:card&quot;&gt;&lt;meta content=&quot;@GoogleDoodles&quot; property=&quot;twitter:site&quot;&gt;&lt;meta content=&quot;https://www.google.com/logos/doodles/2021/dr-maria-de-los-angeles-alvarino-gonzalezs-105th-birthday-6753651837109097-2x.png&quot; property=&quot;twitter:image&quot;&gt;&lt;meta content=&quot;https://www.google.com/logos/doodles/2021/dr-maria-de-los-angeles-alvarino-gonzalezs-105th-birthday-6753651837109097-2x.png&quot; property=&quot;og:image&quot;&gt;&lt;meta content=&quot;1000&quot; property=&quot;og:image:width&quot;&gt;&lt;meta content=&quot;400&quot; property=&quot;og:image:height&quot;&gt;&lt;title&gt;Google&lt;/title&gt;&lt;script nonce=&quot;mhsJfeYE1oG8opVgQDeCbQ==&quot;&gt;(function(){window.google={kEI:\&#39;8VlZYcfiOvyq5NoPs4W4qA4\&#39;,kEXPI:\&#39;0,1302536,56873,6058,207,4804,2316,383,246,5,1354,4936,314,1122516,1197728,673,328866,51224,16114,28684,17572,4858,1362,9291,3026,17582,4020,978,13125,103,3847,4192,6430,1142,17902,2778,919,5081,887,706,1279,2212,530,149,1103,840,1983,3,4311,109,3405,606,2024,1776,520,14670,3227,2846,6,4811,7543,5096,14396,1924,908,2,941,15324,432,3,1590,1,5445,148,11323,2652,4,1528,2304,1236,5226,577,74,1983,2626,2013,6575,4928,3824,3050,2658,7184,173,30,3877,7535,4521,638,37,1457,15351,1435,5827,2530,4094,3138,6,908,3,3541,1,5349,9367,1,1807,283,38,874,5992,3472,8874,2332,769,8,1,655,617,1715,2,9212,627,4,32,4,4143,1244,4,683,442,342,255,55,4,2811,123,1557,744,5852,9321,544,598,1160,1312,7768,2719,3708,2,835,3,120,5353,4149,486,1892,1712,1,8,7753,4568,2578,3132,549,2069,939,980,3,1376,1265,52,39,1,175,2391,488,719,3,753,723,38,2,872,7,3531,1370,287,315,112,118,893,3895,292,540,255,543,2053,2111,30,1,8,756,39,414,46,43,1120,374,81,35,15,196,109,578,723,50,178,587,95,274,964,138,1083,197,356,2211,1199,514,112,356,120,294,268,95,148,2,1020,5,11,262,129,56,222,372,346,316,1510,617,4,2,40,422,2,33,1758,81,398,4,312,4,13,385,555,111,356,343,5560143,3904,446,160,1802730,4193978,2800697,882,444,1,2,80,1,1796,1,9,2553,1,748,141,795,563,1,4265,1,1,2,1331,4142,2609,155,17,13,72,139,4,2,20,2,169,13,19,46,5,39,96,548,29,2,2,1,2,1,2,2,7,4,1,2,2,2,2,2,2,353,513,186,1,1,158,3,2,2,2,2,2,4,2,3,3,269,442,66,34,9,12,4,9,16,87,5,46,1,4,1,4,1,4,2,2,11,3,38,6,8,10,3,23953895,2773819,1267532,338,3,2414,448,2,1041,9,1434,1516,293,1534,887,849,1570,801216\&#39;,kBL:\&#39;rkvc\&#39;};google.sn=\&#39;webhp\&#39;;google.kHL=\&#39;en\&#39;;})();(function(){\nvar f=this||self;var h,k=[];function l(a){for(var b;a&amp;&amp;(!a.getAttribute||!(b=a.getAttribute(&quot;eid&quot;)));)a=a.parentNode;return b||h}function m(a){for(var b=null;a&amp;&amp;(!a.getAttribute||!(b=a.getAttribute(&quot;leid&quot;)));)a=a.parentNode;return b}\nfunction n(a,b,c,d,g){var e=&quot;&quot;;c||-1!==b.search(&quot;&amp;ei=&quot;)||(e=&quot;&amp;ei=&quot;+l(d),-1===b.search(&quot;&amp;lei=&quot;)&amp;&amp;(d=m(d))&amp;&amp;(e+=&quot;&amp;lei=&quot;+d));d=&quot;&quot;;!c&amp;&amp;f._cshid&amp;&amp;-1===b.search(&quot;&amp;cshid=&quot;)&amp;&amp;&quot;slh&quot;!==a&amp;&amp;(d=&quot;&amp;cshid=&quot;+f._cshid);c=c||&quot;/&quot;+(g||&quot;gen_204&quot;)+&quot;?atyp=i&amp;ct=&quot;+a+&quot;&amp;cad=&quot;+b+e+&quot;&amp;zx=&quot;+Date.now()+d;/^http:/i.test(c)&amp;&amp;&quot;https:&quot;===window.location.protocol&amp;&amp;(google.ml&amp;&amp;google.ml(Error(&quot;a&quot;),!1,{src:c,glmm:1}),c=&quot;&quot;);return c};h=google.kEI;google.getEI=l;google.getLEI=m;google.ml=function(){return null};google.log=function(a,b,c,d,g){if(c=n(a,b,c,d,g)){a=new Image;var e=k.length;k[e]=a;a.onerror=a.onload=a.onabort=function(){delete k[e]};a.src=c}};google.logUrl=n;}).call(this);(function(){\ngoogle.y={};google.sy=[];google.x=function(a,b){if(a)var c=a.id;else{do c=Math.random();while(google.y[c])}google.y[c]=[a,b];return!1};google.sx=function(a){google.sy.push(a)};google.lm=[];google.plm=function(a){google.lm.push.apply(google.lm,a)};google.lq=[];google.load=function(a,b,c){google.lq.push([[a],b,c])};google.loadAll=function(a,b){google.lq.push([a,b])};google.bx=!1;google.lx=function(){};}).call(this);google.f={};(function(){\ndocument.documentElement.addEventListener(&quot;submit&quot;,function(b){var a;if(a=b.target){var c=a.getAttribute(&quot;data-submitfalse&quot;);a=&quot;1&quot;===c||&quot;q&quot;===c&amp;&amp;!a.elements.q.value?!0:!1}else a=!1;a&amp;&amp;(b.preventDefault(),b.stopPropagation())},!0);document.documentElement.addEventListener(&quot;click&quot;,function(b){var a;a:{for(a=b.target;a&amp;&amp;a!==document.documentElement;a=a.parentElement)if(&quot;A&quot;===a.tagName){a=&quot;1&quot;===a.getAttribute(&quot;data-nohref&quot;);break a}a=!1}a&amp;&amp;b.preventDefault()},!0);}).call(this);&lt;/script&gt;&lt;style&gt;#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}\n&lt;/style&gt;&lt;style&gt;body,td,a,p,.h{font-family:arial,sans-serif}body{margin:0;overflow-y:scroll}#gog{padding:3px 8px 0}td{line-height:.8em}.gac_m td{line-height:17px}form{margin-bottom:20px}.h{color:#1558d6}em{font-weight:bold;font-style:normal}.lst{height:25px;width:496px}.gsfi,.lst{font:18px arial,sans-serif}.gsfs{font:17px arial,sans-serif}.ds{display:inline-box;display:inline-block;margin:3px 0 4px;margin-left:4px}input{font-family:inherit}body{background:#fff;color:#000}a{color:#4b11a8;text-decoration:none}a:hover,a:active{text-decoration:underline}.fl a{color:#1558d6}a:visited{color:#4b11a8}.sblc{padding-top:5px}.sblc a{display:block;margin:2px 0;margin-left:13px;font-size:11px}.lsbb{background:#f8f9fa;border:solid 1px;border-color:#dadce0 #70757a #70757a #dadce0;height:30px}.lsbb{display:block}#WqQANb a{display:inline-block;margin:0 12px}.lsb{background:url(/images/nav_logo229.png) 0 -261px repeat-x;border:none;color:#000;cursor:pointer;height:30px;margin:0;outline:0;font:15px arial,sans-serif;vertical-align:top}.lsb:active{background:#dadce0}.lst:focus{outline:none}&lt;/style&gt;&lt;script nonce=&quot;mhsJfeYE1oG8opVgQDeCbQ==&quot;&gt;(function(){window.google.erd={sp:\&#39;hp\&#39;,jsr:0,bv:1453};\nvar f=this||self;var g,h,k=null!==(g=f.mei)&amp;&amp;void 0!==g?g:1,l=null!==(h=f.sdo)&amp;&amp;void 0!==h?h:!0,n=0,p,q=google.erd,t=q.jsr;google.ml=function(a,b,e,m,d){d=void 0===d?2:d;b&amp;&amp;(p=a&amp;&amp;a.message);if(google.dl)return google.dl(a,d,e),null;if(0&gt;t){window.console&amp;&amp;console.error(a,e);if(-2===t)throw a;b=!1}else b=!a||!a.message||&quot;Error loading script&quot;===a.message||n&gt;=k&amp;&amp;!m?!1:!0;if(!b)return null;n++;e=e||{};b=encodeURIComponent;var c=&quot;/gen_204?atyp=i&amp;ei=&quot;+b(google.kEI);google.kEXPI&amp;&amp;(c+=&quot;&amp;jexpid=&quot;+b(google.kEXPI));c+=&quot;&amp;srcpg=&quot;+b(q.sp)+&quot;&amp;jsr=&quot;+b(q.jsr)+&quot;&amp;bver=&quot;+b(q.bv)+(&quot;&amp;jsel=&quot;+d);c+=&quot;&amp;sn=&quot;+b(google.sn);for(var r in e)c+=&quot;&amp;&quot;,c+=b(r),c+=&quot;=&quot;,c+=b(e[r]);c=c+&quot;&amp;emsg=&quot;+b(a.name+&quot;: &quot;+a.message);c=c+&quot;&amp;jsst=&quot;+b(a.stack||&quot;N/A&quot;);12288&lt;=c.length&amp;&amp;(c=c.substr(0,12288));a=c;m||google.log(0,&quot;&quot;,a);return a};window.onerror=function(a,b,e,m,d){p!==a&amp;&amp;google.ml(d instanceof Error?d:Error(a),!1,void 0,!1,0);p=null;l&amp;&amp;n&gt;=k&amp;&amp;(window.onerror=null)};})();&lt;/script&gt;&lt;/head&gt;&lt;body bgcolor=&quot;#fff&quot;&gt;&lt;script nonce=&quot;mhsJfeYE1oG8opVgQDeCbQ==&quot;&gt;(function(){var src=\&#39;/images/nav_logo229.png\&#39;;var iesg=false;document.body.onload = function(){window.n &amp;&amp; window.n();if (document.images){new Image().src=src;}\nif (!iesg){document.f&amp;&amp;document.f.q.focus();document.gbqf&amp;&amp;document.gbqf.q.focus();}\n}\n})();&lt;/script&gt;&lt;div id=&quot;mngb&quot;&gt;&lt;div id=gbar&gt;&lt;nobr&gt;&lt;b class=gb1&gt;Search&lt;/b&gt; &lt;a class=gb1 href=&quot;https://www.google.com/imghp?hl=en&amp;tab=wi&quot;&gt;Images&lt;/a&gt; &lt;a class=gb1 href=&quot;https://maps.google.com/maps?hl=en&amp;tab=wl&quot;&gt;Maps&lt;/a&gt; &lt;a class=gb1 href=&quot;https://play.google.com/?hl=en&amp;tab=w8&quot;&gt;Play&lt;/a&gt; &lt;a class=gb1 href=&quot;https://www.youtube.com/?gl=US&amp;tab=w1&quot;&gt;YouTube&lt;/a&gt; &lt;a class=gb1 href=&quot;https://news.google.com/?tab=wn&quot;&gt;News&lt;/a&gt; &lt;a class=gb1 href=&quot;https://mail.google.com/mail/?tab=wm&quot;&gt;Gmail&lt;/a&gt; &lt;a class=gb1 href=&quot;https://drive.google.com/?tab=wo&quot;&gt;Drive&lt;/a&gt; &lt;a class=gb1 style=&quot;text-decoration:none&quot; href=&quot;https://www.google.com/intl/en/about/products?tab=wh&quot;&gt;&lt;u&gt;More&lt;/u&gt; &amp;raquo;&lt;/a&gt;&lt;/nobr&gt;&lt;/div&gt;&lt;div id=guser width=100%&gt;&lt;nobr&gt;&lt;span id=gbn class=gbi&gt;&lt;/span&gt;&lt;span id=gbf class=gbf&gt;&lt;/span&gt;&lt;span id=gbe&gt;&lt;/span&gt;&lt;a href=&quot;http://www.google.com/history/optout?hl=en&quot; class=gb4&gt;Web History&lt;/a&gt; | &lt;a  href=&quot;/preferences?hl=en&quot; class=gb4&gt;Settings&lt;/a&gt; | &lt;a target=_top id=gb_70 href=&quot;https://accounts.google.com/ServiceLogin?hl=en&amp;passive=true&amp;continue=https://www.google.com/&amp;ec=GAZAAQ&quot; class=gb4&gt;Sign in&lt;/a&gt;&lt;/nobr&gt;&lt;/div&gt;&lt;div class=gbh style=left:0&gt;&lt;/div&gt;&lt;div class=gbh style=right:0&gt;&lt;/div&gt;&lt;/div&gt;&lt;center&gt;&lt;br clear=&quot;all&quot; id=&quot;lgpd&quot;&gt;&lt;div id=&quot;lga&quot;&gt;&lt;a href=&quot;/search?ie=UTF-8&amp;amp;q=Mar%C3%ADa+de+los+%C3%81ngeles+Alvari%C3%B1o+Gonz%C3%A1lez&amp;amp;oi=ddle&amp;amp;ct=174788366&amp;amp;hl=en&amp;amp;si=AHuW2sQZFdBHViraJ0qVcZmKs3uQ9808tlfa6WaMUCmyCIfaylL5Qu1DVZr1Jjul77MdwfYpPYFyNyc2ArVRNQJePP7Xh5WrFwglt-q1XYz_YfLE6ik7_H8v521O97YyFe91Wywu2FH_Ew-nzHLz9MiPLFUtkG3tdQ%3D%3D&amp;amp;sa=X&amp;amp;ved=0ahUKEwiHn9Gl2q3zAhV8FVkFHbMCDuUQPQgD&quot;&gt;&lt;img alt=&quot;Dr. Mar\xeda de los \xc1ngeles Alvari\xf1o Gonz\xe1lez\&#39;s 105th Birthday&quot; border=&quot;0&quot; height=&quot;200&quot; src=&quot;/logos/doodles/2021/dr-maria-de-los-angeles-alvarino-gonzalezs-105th-birthday-6753651837109097-l.png&quot; title=&quot;Dr. Mar\xeda de los \xc1ngeles Alvari\xf1o Gonz\xe1lez\&#39;s 105th Birthday&quot; width=&quot;500&quot; id=&quot;hplogo&quot;&gt;&lt;br&gt;&lt;/a&gt;&lt;br&gt;&lt;/div&gt;&lt;form action=&quot;/search&quot; name=&quot;f&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr valign=&quot;top&quot;&gt;&lt;td width=&quot;25%&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td align=&quot;center&quot; nowrap=&quot;&quot;&gt;&lt;input name=&quot;ie&quot; value=&quot;ISO-8859-1&quot; type=&quot;hidden&quot;&gt;&lt;input value=&quot;en&quot; name=&quot;hl&quot; type=&quot;hidden&quot;&gt;&lt;input name=&quot;source&quot; type=&quot;hidden&quot; value=&quot;hp&quot;&gt;&lt;input name=&quot;biw&quot; type=&quot;hidden&quot;&gt;&lt;input name=&quot;bih&quot; type=&quot;hidden&quot;&gt;&lt;div class=&quot;ds&quot; style=&quot;height:32px;margin:4px 0&quot;&gt;&lt;input class=&quot;lst&quot; style=&quot;margin:0;padding:5px 8px 0 6px;vertical-align:top;color:#000&quot; autocomplete=&quot;off&quot; value=&quot;&quot; title=&quot;Google Search&quot; maxlength=&quot;2048&quot; name=&quot;q&quot; size=&quot;57&quot;&gt;&lt;/div&gt;&lt;br style=&quot;line-height:0&quot;&gt;&lt;span class=&quot;ds&quot;&gt;&lt;span class=&quot;lsbb&quot;&gt;&lt;input class=&quot;lsb&quot; value=&quot;Google Search&quot; name=&quot;btnG&quot; type=&quot;submit&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;ds&quot;&gt;&lt;span class=&quot;lsbb&quot;&gt;&lt;input class=&quot;lsb&quot; id=&quot;tsuid1&quot; value=&quot;I\&#39;m Feeling Lucky&quot; name=&quot;btnI&quot; type=&quot;submit&quot;&gt;&lt;script nonce=&quot;mhsJfeYE1oG8opVgQDeCbQ==&quot;&gt;(function(){var id=\&#39;tsuid1\&#39;;document.getElementById(id).onclick = function(){if (this.form.q.value){this.checked = 1;if (this.form.iflsig)this.form.iflsig.disabled = false;}\nelse top.location=\&#39;/doodles/\&#39;;};})();&lt;/script&gt;&lt;input value=&quot;ALs-wAMAAAAAYVloAcMIUQCenv-0Si1zQiaR_QHSHsCA&quot; name=&quot;iflsig&quot; type=&quot;hidden&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;fl sblc&quot; align=&quot;left&quot; nowrap=&quot;&quot; width=&quot;25%&quot;&gt;&lt;a href=&quot;/advanced_search?hl=en&amp;amp;authuser=0&quot;&gt;Advanced search&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;input id=&quot;gbv&quot; name=&quot;gbv&quot; type=&quot;hidden&quot; value=&quot;1&quot;&gt;&lt;script nonce=&quot;mhsJfeYE1oG8opVgQDeCbQ==&quot;&gt;(function(){\nvar a,b=&quot;1&quot;;if(document&amp;&amp;document.getElementById)if(&quot;undefined&quot;!=typeof XMLHttpRequest)b=&quot;2&quot;;else if(&quot;undefined&quot;!=typeof ActiveXObject){var c,d,e=[&quot;MSXML2.XMLHTTP.6.0&quot;,&quot;MSXML2.XMLHTTP.3.0&quot;,&quot;MSXML2.XMLHTTP&quot;,&quot;Microsoft.XMLHTTP&quot;];for(c=0;d=e[c++];)try{new ActiveXObject(d),b=&quot;2&quot;}catch(h){}}a=b;if(&quot;2&quot;==a&amp;&amp;-1==location.search.indexOf(&quot;&amp;gbv=2&quot;)){var f=google.gbvu,g=document.getElementById(&quot;gbv&quot;);g&amp;&amp;(g.value=a);f&amp;&amp;window.setTimeout(function(){location.href=f},0)};}).call(this);&lt;/script&gt;&lt;/form&gt;&lt;div id=&quot;gac_scont&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size:83%;min-height:3.5em&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;span id=&quot;footer&quot;&gt;&lt;div style=&quot;font-size:10pt&quot;&gt;&lt;div style=&quot;margin:19px auto;text-align:center&quot; id=&quot;WqQANb&quot;&gt;&lt;a href=&quot;/intl/en/ads/&quot;&gt;Advertising\xa0Programs&lt;/a&gt;&lt;a href=&quot;/services/&quot;&gt;Business Solutions&lt;/a&gt;&lt;a href=&quot;/intl/en/about.html&quot;&gt;About Google&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot;font-size:8pt;color:#70757a&quot;&gt;&amp;copy; 2021 - &lt;a href=&quot;/intl/en/policies/privacy/&quot;&gt;Privacy&lt;/a&gt; - &lt;a href=&quot;/intl/en/policies/terms/&quot;&gt;Terms&lt;/a&gt;&lt;/p&gt;&lt;/span&gt;&lt;/center&gt;&lt;script nonce=&quot;mhsJfeYE1oG8opVgQDeCbQ==&quot;&gt;(function(){window.google.cdo={height:757,width:1440};(function(){\nvar a=window.innerWidth,b=window.innerHeight;if(!a||!b){var c=window.document,d=&quot;CSS1Compat&quot;==c.compatMode?c.documentElement:c.body;a=d.clientWidth;b=d.clientHeight}a&amp;&amp;b&amp;&amp;(a!=google.cdo.width||b!=google.cdo.height)&amp;&amp;google.log(&quot;&quot;,&quot;&quot;,&quot;/client_204?&amp;atyp=i&amp;biw=&quot;+a+&quot;&amp;bih=&quot;+b+&quot;&amp;ei=&quot;+google.kEI);}).call(this);})();&lt;/script&gt; &lt;script nonce=&quot;mhsJfeYE1oG8opVgQDeCbQ==&quot;&gt;(function(){google.xjs={ck:\&#39;\&#39;,cs:\&#39;\&#39;,excm:[]};})();&lt;/script&gt;  &lt;script nonce=&quot;mhsJfeYE1oG8opVgQDeCbQ==&quot;&gt;(function(){var u=\&#39;/xjs/_/js/k\\x3dxjs.hp.en_US.tVAc2EkajFc.O/am\\x3dAPgEWA/d\\x3d1/ed\\x3d1/rs\\x3dACT90oFNOyVenEazCmSlcZkE0n7R9wj2UQ/m\\x3dsb_he,d\&#39;;\nvar e=this||self,f=function(a){return a};var g;var l=function(a,b){this.g=b===h?a:&quot;&quot;};l.prototype.toString=function(){return this.g+&quot;&quot;};var h={};\nfunction m(){var a=u;google.lx=function(){n(a);google.lx=function(){}};google.bx||google.lx()}\nfunction n(a){google.timers&amp;&amp;google.timers.load&amp;&amp;google.tick&amp;&amp;google.tick(&quot;load&quot;,&quot;xjsls&quot;);var b=document;var c=&quot;SCRIPT&quot;;&quot;application/xhtml+xml&quot;===b.contentType&amp;&amp;(c=c.toLowerCase());c=b.createElement(c);if(void 0===g){b=null;var k=e.trustedTypes;if(k&amp;&amp;k.createPolicy){try{b=k.createPolicy(&quot;goog#html&quot;,{createHTML:f,createScript:f,createScriptURL:f})}catch(p){e.console&amp;&amp;e.console.error(p.message)}g=b}else g=b}a=(b=g)?b.createScriptURL(a):a;a=new l(a,h);c.src=a instanceof l&amp;&amp;a.constructor===l?a.g:&quot;type_error:TrustedResourceUrl&quot;;var d;a=(c.ownerDocument&amp;&amp;c.ownerDocument.defaultView||window).document;(d=(b=null===(d=a.querySelector)||void 0===d?void 0:d.call(a,&quot;script[nonce]&quot;))?b.nonce||b.getAttribute(&quot;nonce&quot;)||&quot;&quot;:&quot;&quot;)&amp;&amp;c.setAttribute(&quot;nonce&quot;,d);document.body.appendChild(c);google.psa=!0};setTimeout(function(){m()},0);})();(function(){window.google.xjsu=\&#39;/xjs/_/js/k\\x3dxjs.hp.en_US.tVAc2EkajFc.O/am\\x3dAPgEWA/d\\x3d1/ed\\x3d1/rs\\x3dACT90oFNOyVenEazCmSlcZkE0n7R9wj2UQ/m\\x3dsb_he,d\&#39;;})();function _DumpException(e){throw e;}\nfunction _F_installCss(c){}\n(function(){google.jl={attn:false,blt:\&#39;none\&#39;,chnk:0,dw:false,dwu:false,emtn:0,end:0,ine:false,lls:\&#39;default\&#39;,pdt:0,rep:0,snet:true,strt:0,ubm:false,uwp:true};})();(function(){var pmc=\&#39;{\\x22d\\x22:{},\\x22sb_he\\x22:{\\x22agen\\x22:false,\\x22cgen\\x22:false,\\x22client\\x22:\\x22heirloom-hp\\x22,\\x22dh\\x22:true,\\x22dhqt\\x22:true,\\x22ds\\x22:\\x22\\x22,\\x22ffql\\x22:\\x22en\\x22,\\x22fl\\x22:true,\\x22host\\x22:\\x22google.com\\x22,\\x22isbh\\x22:28,\\x22jsonp\\x22:true,\\x22msgs\\x22:{\\x22cibl\\x22:\\x22Clear Search\\x22,\\x22dym\\x22:\\x22Did you mean:\\x22,\\x22lcky\\x22:\\x22I\\\\u0026#39;m Feeling Lucky\\x22,\\x22lml\\x22:\\x22Learn more\\x22,\\x22oskt\\x22:\\x22Input tools\\x22,\\x22psrc\\x22:\\x22This search was removed from your \\\\u003Ca href\\x3d\\\\\\x22/history\\\\\\x22\\\\u003EWeb History\\\\u003C/a\\\\u003E\\x22,\\x22psrl\\x22:\\x22Remove\\x22,\\x22sbit\\x22:\\x22Search by image\\x22,\\x22srch\\x22:\\x22Google Search\\x22},\\x22ovr\\x22:{},\\x22pq\\x22:\\x22\\x22,\\x22refpd\\x22:true,\\x22rfs\\x22:[],\\x22sbas\\x22:\\x220 3px 8px 0 rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.08)\\x22,\\x22sbpl\\x22:16,\\x22sbpr\\x22:16,\\x22scd\\x22:10,\\x22stok\\x22:\\x226E7n9ErsoB7953b7zoYpEW0jBGA\\x22,\\x22uhde\\x22:false}}\&#39;;google.pmc=JSON.parse(pmc);})();&lt;/script&gt;        &lt;/body&gt;&lt;/html&gt;&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b&#39;&lt;!doctype html&gt;&lt;html itemscope=&quot;&quot; itemtype=&quot;http://schema.org/WebPage&quot; lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta content=&quot;Search the world\&#39;s information, including webpages, images, videos and more. Google has many special features to help you find exactly what you\&#39;re looking for.&quot; name=&quot;description&quot;&gt;&lt;meta content=&quot;noodp&quot; name=&quot;robots&quot;&gt;&lt;meta content=&quot;text/html; charset=UTF-8&quot; http-equiv=&quot;Content-Type&quot;&gt;&lt;meta content=&quot;/logos/doodles/2022/lunar-new-year-2022-multiple-countries-6753651837109349.3-law.gif&quot; itemprop=&quot;image&quot;&gt;&lt;meta content=&quot;Lunar New Year 2022&quot; property=&quot;twitter:title&quot;&gt;&lt;meta content=&quot;Happy Lunar New Year! #GoogleDoodle&quot; property=&quot;twitter:description&quot;&gt;&lt;meta content=&quot;Happy Lunar New Year! #GoogleDoodle&quot; property=&quot;og:description&quot;&gt;&lt;meta content=&quot;summary_large_image&quot; property=&quot;twitter:card&quot;&gt;&lt;meta content=&quot;@GoogleDoodles&quot; property=&quot;twitter:site&quot;&gt;&lt;meta content=&quot;https://www.google.com/logos/doodles/2022/lunar-new-year-2022-multiple-countries-6753651837109349-2xa.gif&quot; property=&quot;twitter:image&quot;&gt;&lt;meta content=&quot;https://www.google.com/logos/doodles/2022/lunar-new-year-2022-multiple-countries-6753651837109349-2xa.gif&quot; property=&quot;og:image&quot;&gt;&lt;meta content=&quot;1000&quot; property=&quot;og:image:width&quot;&gt;&lt;meta content=&quot;400&quot; property=&quot;og:image:height&quot;&gt;&lt;meta content=&quot;https://www.google.com/logos/doodles/2022/lunar-new-year-2022-multiple-countries-6753651837109349-2xa.gif&quot; property=&quot;og:url&quot;&gt;&lt;meta content=&quot;video.other&quot; property=&quot;og:type&quot;&gt;&lt;title&gt;Google&lt;/title&gt;&lt;script nonce=&quot;qZnbNuELl7gNtRRS03/8ig==&quot;&gt;(function(){window.google={kEI:\&#39;MXj5YfmfDPfY0PEPp_eZ-AE\&#39;,kEXPI:\&#39;0,1302536,56873,6058,207,4804,2316,383,246,5,1354,4013,923,314,1122516,1197719,682,380089,16115,17444,11240,17572,4858,1362,284,9006,3022,2822,1930,12835,4020,978,13228,3847,4192,6430,22741,5081,1593,1279,2742,149,1103,840,1983,213,4101,108,3406,606,2023,1777,520,14670,3227,2845,7,5599,11851,14396,1924,908,2,940,2615,12710,432,3,1590,1,5445,148,11323,2652,4,1253,275,2304,7039,74,4610,5805,9820,1714,3050,2658,6536,821,30,1677,9736,2215,2305,675,1457,15351,1435,5767,2590,4094,4052,3,3541,1,14262,449,2096,6906,14676,3765,2,14022,1931,442,342,255,2993,1557,743,5853,9865,598,1160,5679,1020,2381,2718,14887,1662,1694,1,8,6716,1056,4568,2577,3681,6723,1,11904,4788,439,815,11921,5175,876,2830,1539,2794,2204,2083,98,292,293,452,667,1840,2,2,1,1508,1500,489,2166,1296,4358,5279,236,387,87,315,1,2,3769,53,873,1464,843,621,938,10,1,436,692,2,49,304,6960,86,62,113,1675,509,2869,5,395,71,945,568,64,166,1,2,3,126,56,2,2260,355,138,959,598,2995,1044,737,258,1203,1132,1435,621,756,38,2339,6,850,322,14,1480,19,1019,1328,2,283,2,97,827,821,1605,5491116,99,3,847,8797062,882,444,1,2,80,1,1796,1,9,2553,1,748,141,795,563,1,4265,1,1,2,1331,4142,2609,155,17,13,72,139,4,2,20,2,169,13,19,46,5,39,96,548,29,2,2,1,2,1,2,2,7,4,1,2,2,2,2,2,2,353,513,186,1,1,158,3,2,2,2,2,2,4,2,3,3,269,1601,141,204,131,67,13,1,2,7,20,4,4,4,6,4,23652694,299820,4041689,3,3905,9,1435,159,1358,4726,3,927,1735,421,2392,46,1057,645,771181\&#39;,kBL:\&#39;vOnp\&#39;};google.sn=\&#39;webhp\&#39;;google.kHL=\&#39;en\&#39;;})();(function(){\nvar f=this||self;var h,k=[];function l(a){for(var b;a&amp;&amp;(!a.getAttribute||!(b=a.getAttribute(&quot;eid&quot;)));)a=a.parentNode;return b||h}function m(a){for(var b=null;a&amp;&amp;(!a.getAttribute||!(b=a.getAttribute(&quot;leid&quot;)));)a=a.parentNode;return b}\nfunction n(a,b,c,d,g){var e=&quot;&quot;;c||-1!==b.search(&quot;&amp;ei=&quot;)||(e=&quot;&amp;ei=&quot;+l(d),-1===b.search(&quot;&amp;lei=&quot;)&amp;&amp;(d=m(d))&amp;&amp;(e+=&quot;&amp;lei=&quot;+d));d=&quot;&quot;;!c&amp;&amp;f._cshid&amp;&amp;-1===b.search(&quot;&amp;cshid=&quot;)&amp;&amp;&quot;slh&quot;!==a&amp;&amp;(d=&quot;&amp;cshid=&quot;+f._cshid);c=c||&quot;/&quot;+(g||&quot;gen_204&quot;)+&quot;?atyp=i&amp;ct=&quot;+a+&quot;&amp;cad=&quot;+b+e+&quot;&amp;zx=&quot;+Date.now()+d;/^http:/i.test(c)&amp;&amp;&quot;https:&quot;===window.location.protocol&amp;&amp;(google.ml&amp;&amp;google.ml(Error(&quot;a&quot;),!1,{src:c,glmm:1}),c=&quot;&quot;);return c};h=google.kEI;google.getEI=l;google.getLEI=m;google.ml=function(){return null};google.log=function(a,b,c,d,g){if(c=n(a,b,c,d,g)){a=new Image;var e=k.length;k[e]=a;a.onerror=a.onload=a.onabort=function(){delete k[e]};a.src=c}};google.logUrl=n;}).call(this);(function(){\ngoogle.y={};google.sy=[];google.x=function(a,b){if(a)var c=a.id;else{do c=Math.random();while(google.y[c])}google.y[c]=[a,b];return!1};google.sx=function(a){google.sy.push(a)};google.lm=[];google.plm=function(a){google.lm.push.apply(google.lm,a)};google.lq=[];google.load=function(a,b,c){google.lq.push([[a],b,c])};google.loadAll=function(a,b){google.lq.push([a,b])};google.bx=!1;google.lx=function(){};}).call(this);google.f={};(function(){\ndocument.documentElement.addEventListener(&quot;submit&quot;,function(b){var a;if(a=b.target){var c=a.getAttribute(&quot;data-submitfalse&quot;);a=&quot;1&quot;===c||&quot;q&quot;===c&amp;&amp;!a.elements.q.value?!0:!1}else a=!1;a&amp;&amp;(b.preventDefault(),b.stopPropagation())},!0);document.documentElement.addEventListener(&quot;click&quot;,function(b){var a;a:{for(a=b.target;a&amp;&amp;a!==document.documentElement;a=a.parentElement)if(&quot;A&quot;===a.tagName){a=&quot;1&quot;===a.getAttribute(&quot;data-nohref&quot;);break a}a=!1}a&amp;&amp;b.preventDefault()},!0);}).call(this);&lt;/script&gt;&lt;style&gt;#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}\n&lt;/style&gt;&lt;style&gt;body,td,a,p,.h{font-family:arial,sans-serif}body{margin:0;overflow-y:scroll}#gog{padding:3px 8px 0}td{line-height:.8em}.gac_m td{line-height:17px}form{margin-bottom:20px}.h{color:#1558d6}em{font-weight:bold;font-style:normal}.lst{height:25px;width:496px}.gsfi,.lst{font:18px arial,sans-serif}.gsfs{font:17px arial,sans-serif}.ds{display:inline-box;display:inline-block;margin:3px 0 4px;margin-left:4px}input{font-family:inherit}body{background:#fff;color:#000}a{color:#4b11a8;text-decoration:none}a:hover,a:active{text-decoration:underline}.fl a{color:#1558d6}a:visited{color:#4b11a8}.sblc{padding-top:5px}.sblc a{display:block;margin:2px 0;margin-left:13px;font-size:11px}.lsbb{background:#f8f9fa;border:solid 1px;border-color:#dadce0 #70757a #70757a #dadce0;height:30px}.lsbb{display:block}#WqQANb a{display:inline-block;margin:0 12px}.lsb{background:url(/images/nav_logo229.png) 0 -261px repeat-x;border:none;color:#000;cursor:pointer;height:30px;margin:0;outline:0;font:15px arial,sans-serif;vertical-align:top}.lsb:active{background:#dadce0}.lst:focus{outline:none}&lt;/style&gt;&lt;script nonce=&quot;qZnbNuELl7gNtRRS03/8ig==&quot;&gt;(function(){window.google.erd={jsr:1,bv:1524,de:true};\nvar f=this||self;var g,h,k=null!==(g=f.mei)&amp;&amp;void 0!==g?g:1,l=null!==(h=f.sdo)&amp;&amp;void 0!==h?h:!0,p=0,q,r=google.erd,u=r.jsr;google.ml=function(a,b,d,m,c){c=void 0===c?2:c;b&amp;&amp;(q=a&amp;&amp;a.message);if(google.dl)return google.dl(a,c,d),null;if(0&gt;u){window.console&amp;&amp;console.error(a,d);if(-2===u)throw a;b=!1}else b=!a||!a.message||&quot;Error loading script&quot;===a.message||p&gt;=k&amp;&amp;!m?!1:!0;if(!b)return null;p++;d=d||{};var e=c;c=encodeURIComponent;b=&quot;/gen_204?atyp=i&amp;ei=&quot;+c(google.kEI);google.kEXPI&amp;&amp;(b+=&quot;&amp;jexpid=&quot;+c(google.kEXPI));b+=&quot;&amp;srcpg=&quot;+c(google.sn)+&quot;&amp;jsr=&quot;+c(r.jsr)+&quot;&amp;bver=&quot;+c(r.bv)+(&quot;&amp;jsel=&quot;+e);e=a.lineNumber;void 0!==e&amp;&amp;(b+=&quot;&amp;line=&quot;+\ne);var n=a.fileName;n&amp;&amp;(b+=&quot;&amp;script=&quot;+c(n),e&amp;&amp;n===window.location.href&amp;&amp;(e=document.documentElement.outerHTML.split(&quot;\\n&quot;)[e],b+=&quot;&amp;cad=&quot;+c(e?e.substring(0,300):&quot;No script found.&quot;)));for(var t in d)b+=&quot;&amp;&quot;,b+=c(t),b+=&quot;=&quot;,b+=c(d[t]);b=b+&quot;&amp;emsg=&quot;+c(a.name+&quot;: &quot;+a.message);b=b+&quot;&amp;jsst=&quot;+c(a.stack||&quot;N/A&quot;);12288&lt;=b.length&amp;&amp;(b=b.substr(0,12288));a=b;m||google.log(0,&quot;&quot;,a);return a};window.onerror=function(a,b,d,m,c){q!==a&amp;&amp;(a=c instanceof Error?c:Error(a),void 0===d||&quot;lineNumber&quot;in a||(a.lineNumber=d),void 0===b||&quot;fileName&quot;in a||(a.fileName=b),google.ml(a,!1,void 0,!1,&quot;SyntaxError&quot;===a.name||&quot;SyntaxError&quot;===a.message.substring(0,11)?2:0));q=null;l&amp;&amp;p&gt;=k&amp;&amp;(window.onerror=null)};})();&lt;/script&gt;&lt;/head&gt;&lt;body bgcolor=&quot;#fff&quot;&gt;&lt;script nonce=&quot;qZnbNuELl7gNtRRS03/8ig==&quot;&gt;(function(){var src=\&#39;/images/nav_logo229.png\&#39;;var iesg=false;document.body.onload = function(){window.n &amp;&amp; window.n();if (document.images){new Image().src=src;}\nif (!iesg){document.f&amp;&amp;document.f.q.focus();document.gbqf&amp;&amp;document.gbqf.q.focus();}\n}\n})();&lt;/script&gt;&lt;div id=&quot;mngb&quot;&gt;&lt;div id=gbar&gt;&lt;nobr&gt;&lt;b class=gb1&gt;Search&lt;/b&gt; &lt;a class=gb1 href=&quot;https://www.google.com/imghp?hl=en&amp;tab=wi&quot;&gt;Images&lt;/a&gt; &lt;a class=gb1 href=&quot;https://maps.google.com/maps?hl=en&amp;tab=wl&quot;&gt;Maps&lt;/a&gt; &lt;a class=gb1 href=&quot;https://play.google.com/?hl=en&amp;tab=w8&quot;&gt;Play&lt;/a&gt; &lt;a class=gb1 href=&quot;https://www.youtube.com/?gl=US&amp;tab=w1&quot;&gt;YouTube&lt;/a&gt; &lt;a class=gb1 href=&quot;https://news.google.com/?tab=wn&quot;&gt;News&lt;/a&gt; &lt;a class=gb1 href=&quot;https://mail.google.com/mail/?tab=wm&quot;&gt;Gmail&lt;/a&gt; &lt;a class=gb1 href=&quot;https://drive.google.com/?tab=wo&quot;&gt;Drive&lt;/a&gt; &lt;a class=gb1 style=&quot;text-decoration:none&quot; href=&quot;https://www.google.com/intl/en/about/products?tab=wh&quot;&gt;&lt;u&gt;More&lt;/u&gt; &amp;raquo;&lt;/a&gt;&lt;/nobr&gt;&lt;/div&gt;&lt;div id=guser width=100%&gt;&lt;nobr&gt;&lt;span id=gbn class=gbi&gt;&lt;/span&gt;&lt;span id=gbf class=gbf&gt;&lt;/span&gt;&lt;span id=gbe&gt;&lt;/span&gt;&lt;a href=&quot;http://www.google.com/history/optout?hl=en&quot; class=gb4&gt;Web History&lt;/a&gt; | &lt;a  href=&quot;/preferences?hl=en&quot; class=gb4&gt;Settings&lt;/a&gt; | &lt;a target=_top id=gb_70 href=&quot;https://accounts.google.com/ServiceLogin?hl=en&amp;passive=true&amp;continue=https://www.google.com/&amp;ec=GAZAAQ&quot; class=gb4&gt;Sign in&lt;/a&gt;&lt;/nobr&gt;&lt;/div&gt;&lt;div class=gbh style=left:0&gt;&lt;/div&gt;&lt;div class=gbh style=right:0&gt;&lt;/div&gt;&lt;/div&gt;&lt;center&gt;&lt;br clear=&quot;all&quot; id=&quot;lgpd&quot;&gt;&lt;div id=&quot;lga&quot;&gt;&lt;a href=&quot;/search?ie=UTF-8&amp;amp;q=Lunar+New+Year&amp;amp;oi=ddle&amp;amp;ct=207425234&amp;amp;hl=en&amp;amp;si=ANhW_NrKgb9KF2LuF5CJvuab92e29NecxpFzQ7uRPhKzYf8-FUf-CtbJGrE-U8BHDnE4Zrd-51SkP2iwsKoObXJFnHFiFzVk1nWuQYvsHm_efhkblZ-iVwU%3D&amp;amp;sa=X&amp;amp;ved=0ahUKEwi5_PLRjd_1AhV3LDQIHad7Bh8QPQgD&quot;&gt;&lt;img alt=&quot;Lunar New Year 2022&quot; border=&quot;0&quot; height=&quot;200&quot; src=&quot;/logos/doodles/2022/lunar-new-year-2022-multiple-countries-6753651837109349.3-law.gif&quot; title=&quot;Lunar New Year 2022&quot; width=&quot;500&quot; id=&quot;hplogo&quot;&gt;&lt;br&gt;&lt;/a&gt;&lt;br&gt;&lt;/div&gt;&lt;form action=&quot;/search&quot; name=&quot;f&quot;&gt;&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr valign=&quot;top&quot;&gt;&lt;td width=&quot;25%&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td align=&quot;center&quot; nowrap=&quot;&quot;&gt;&lt;input name=&quot;ie&quot; value=&quot;ISO-8859-1&quot; type=&quot;hidden&quot;&gt;&lt;input value=&quot;en&quot; name=&quot;hl&quot; type=&quot;hidden&quot;&gt;&lt;input name=&quot;source&quot; type=&quot;hidden&quot; value=&quot;hp&quot;&gt;&lt;input name=&quot;biw&quot; type=&quot;hidden&quot;&gt;&lt;input name=&quot;bih&quot; type=&quot;hidden&quot;&gt;&lt;div class=&quot;ds&quot; style=&quot;height:32px;margin:4px 0&quot;&gt;&lt;input class=&quot;lst&quot; style=&quot;margin:0;padding:5px 8px 0 6px;vertical-align:top;color:#000&quot; autocomplete=&quot;off&quot; value=&quot;&quot; title=&quot;Google Search&quot; maxlength=&quot;2048&quot; name=&quot;q&quot; size=&quot;57&quot;&gt;&lt;/div&gt;&lt;br style=&quot;line-height:0&quot;&gt;&lt;span class=&quot;ds&quot;&gt;&lt;span class=&quot;lsbb&quot;&gt;&lt;input class=&quot;lsb&quot; value=&quot;Google Search&quot; name=&quot;btnG&quot; type=&quot;submit&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;ds&quot;&gt;&lt;span class=&quot;lsbb&quot;&gt;&lt;input class=&quot;lsb&quot; id=&quot;tsuid1&quot; value=&quot;I\&#39;m Feeling Lucky&quot; name=&quot;btnI&quot; type=&quot;submit&quot;&gt;&lt;script nonce=&quot;qZnbNuELl7gNtRRS03/8ig==&quot;&gt;(function(){var id=\&#39;tsuid1\&#39;;document.getElementById(id).onclick = function(){if (this.form.q.value){this.checked = 1;if (this.form.iflsig)this.form.iflsig.disabled = false;}\nelse top.location=\&#39;/doodles/\&#39;;};})();&lt;/script&gt;&lt;input value=&quot;AHkkrS4AAAAAYfmGQfvYSU0hRkvCFe_sezpxTm2TedjO&quot; name=&quot;iflsig&quot; type=&quot;hidden&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;fl sblc&quot; align=&quot;left&quot; nowrap=&quot;&quot; width=&quot;25%&quot;&gt;&lt;a href=&quot;/advanced_search?hl=en&amp;amp;authuser=0&quot;&gt;Advanced search&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;input id=&quot;gbv&quot; name=&quot;gbv&quot; type=&quot;hidden&quot; value=&quot;1&quot;&gt;&lt;script nonce=&quot;qZnbNuELl7gNtRRS03/8ig==&quot;&gt;(function(){\nvar a,b=&quot;1&quot;;if(document&amp;&amp;document.getElementById)if(&quot;undefined&quot;!=typeof XMLHttpRequest)b=&quot;2&quot;;else if(&quot;undefined&quot;!=typeof ActiveXObject){var c,d,e=[&quot;MSXML2.XMLHTTP.6.0&quot;,&quot;MSXML2.XMLHTTP.3.0&quot;,&quot;MSXML2.XMLHTTP&quot;,&quot;Microsoft.XMLHTTP&quot;];for(c=0;d=e[c++];)try{new ActiveXObject(d),b=&quot;2&quot;}catch(h){}}a=b;if(&quot;2&quot;==a&amp;&amp;-1==location.search.indexOf(&quot;&amp;gbv=2&quot;)){var f=google.gbvu,g=document.getElementById(&quot;gbv&quot;);g&amp;&amp;(g.value=a);f&amp;&amp;window.setTimeout(function(){location.href=f},0)};}).call(this);&lt;/script&gt;&lt;/form&gt;&lt;div id=&quot;gac_scont&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size:83%;min-height:3.5em&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;span id=&quot;footer&quot;&gt;&lt;div style=&quot;font-size:10pt&quot;&gt;&lt;div style=&quot;margin:19px auto;text-align:center&quot; id=&quot;WqQANb&quot;&gt;&lt;a href=&quot;/intl/en/ads/&quot;&gt;Advertising\xa0Programs&lt;/a&gt;&lt;a href=&quot;/services/&quot;&gt;Business Solutions&lt;/a&gt;&lt;a href=&quot;/intl/en/about.html&quot;&gt;About Google&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot;font-size:8pt;color:#70757a&quot;&gt;&amp;copy; 2022 - &lt;a href=&quot;/intl/en/policies/privacy/&quot;&gt;Privacy&lt;/a&gt; - &lt;a href=&quot;/intl/en/policies/terms/&quot;&gt;Terms&lt;/a&gt;&lt;/p&gt;&lt;/span&gt;&lt;/center&gt;&lt;script nonce=&quot;qZnbNuELl7gNtRRS03/8ig==&quot;&gt;(function(){window.google.cdo={height:757,width:1440};(function(){\nvar a=window.innerWidth,b=window.innerHeight;if(!a||!b){var c=window.document,d=&quot;CSS1Compat&quot;==c.compatMode?c.documentElement:c.body;a=d.clientWidth;b=d.clientHeight}a&amp;&amp;b&amp;&amp;(a!=google.cdo.width||b!=google.cdo.height)&amp;&amp;google.log(&quot;&quot;,&quot;&quot;,&quot;/client_204?&amp;atyp=i&amp;biw=&quot;+a+&quot;&amp;bih=&quot;+b+&quot;&amp;ei=&quot;+google.kEI);}).call(this);})();&lt;/script&gt; &lt;script nonce=&quot;qZnbNuELl7gNtRRS03/8ig==&quot;&gt;(function(){google.xjs={ck:\&#39;\&#39;,cs:\&#39;\&#39;,excm:[]};})();&lt;/script&gt;  &lt;script nonce=&quot;qZnbNuELl7gNtRRS03/8ig==&quot;&gt;(function(){var u=\&#39;/xjs/_/js/k\\x3dxjs.hp.en_US.S2E8UfJ62EM.O/am\\x3dAPAEAEACkA/d\\x3d1/ed\\x3d1/esmo\\x3d1/rs\\x3dACT90oFaNvUAuIdaIGdVEGUqAqVRVgOozA/m\\x3dsb_he,d\&#39;;\nvar e=this||self,f=function(a){return a};var g;var l=function(a,b){this.g=b===h?a:&quot;&quot;};l.prototype.toString=function(){return this.g+&quot;&quot;};var h={};\nfunction m(){var a=u;google.lx=function(){n(a);google.lx=function(){}};google.bx||google.lx()}\nfunction n(a){google.timers&amp;&amp;google.timers.load&amp;&amp;google.tick&amp;&amp;google.tick(&quot;load&quot;,&quot;xjsls&quot;);var b=document;var c=&quot;SCRIPT&quot;;&quot;application/xhtml+xml&quot;===b.contentType&amp;&amp;(c=c.toLowerCase());c=b.createElement(c);if(void 0===g){b=null;var k=e.trustedTypes;if(k&amp;&amp;k.createPolicy){try{b=k.createPolicy(&quot;goog#html&quot;,{createHTML:f,createScript:f,createScriptURL:f})}catch(p){e.console&amp;&amp;e.console.error(p.message)}g=b}else g=b}a=(b=g)?b.createScriptURL(a):a;a=new l(a,h);c.src=a instanceof l&amp;&amp;a.constructor===l?a.g:&quot;type_error:TrustedResourceUrl&quot;;var d;a=(c.ownerDocument&amp;&amp;c.ownerDocument.defaultView||window).document;(d=(b=null===(d=a.querySelector)||void 0===d?void 0:d.call(a,&quot;script[nonce]&quot;))?b.nonce||b.getAttribute(&quot;nonce&quot;)||&quot;&quot;:&quot;&quot;)&amp;&amp;c.setAttribute(&quot;nonce&quot;,d);document.body.appendChild(c);google.psa=!0};google.xjsu=u;setTimeout(function(){m()},0);})();function _DumpException(e){throw e;}\nfunction _F_installCss(c){}\n(function(){google.jl={attn:false,blt:\&#39;none\&#39;,chnk:0,dw:false,dwu:true,emtn:0,end:0,ine:false,lls:\&#39;default\&#39;,pdt:0,rep:0,snet:true,strt:0,ubm:false,uwp:true};})();(function(){var pmc=\&#39;{\\x22d\\x22:{},\\x22sb_he\\x22:{\\x22agen\\x22:true,\\x22cgen\\x22:true,\\x22client\\x22:\\x22heirloom-hp\\x22,\\x22dh\\x22:true,\\x22dhqt\\x22:true,\\x22ds\\x22:\\x22\\x22,\\x22ffql\\x22:\\x22en\\x22,\\x22fl\\x22:true,\\x22host\\x22:\\x22google.com\\x22,\\x22isbh\\x22:28,\\x22jsonp\\x22:true,\\x22msgs\\x22:{\\x22cibl\\x22:\\x22Clear Search\\x22,\\x22dym\\x22:\\x22Did you mean:\\x22,\\x22lcky\\x22:\\x22I\\\\u0026#39;m Feeling Lucky\\x22,\\x22lml\\x22:\\x22Learn more\\x22,\\x22oskt\\x22:\\x22Input tools\\x22,\\x22psrc\\x22:\\x22This search was removed from your \\\\u003Ca href\\x3d\\\\\\x22/history\\\\\\x22\\\\u003EWeb History\\\\u003C/a\\\\u003E\\x22,\\x22psrl\\x22:\\x22Remove\\x22,\\x22sbit\\x22:\\x22Search by image\\x22,\\x22srch\\x22:\\x22Google Search\\x22},\\x22ovr\\x22:{},\\x22pq\\x22:\\x22\\x22,\\x22refpd\\x22:true,\\x22rfs\\x22:[],\\x22sbas\\x22:\\x220 3px 8px 0 rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.08)\\x22,\\x22sbpl\\x22:16,\\x22sbpr\\x22:16,\\x22scd\\x22:10,\\x22stok\\x22:\\x22pLB3klg7Vz7m1ARYbzb7xzotTPA\\x22,\\x22uhde\\x22:false}}\&#39;;google.pmc=JSON.parse(pmc);})();&lt;/script&gt;        &lt;/body&gt;&lt;/html&gt;&#39;
 </pre></div>
 </div>
 </div>
@@ -1715,54 +1933,42 @@ But outside of it, a=1
 
               </div>
               
-        
             
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="../class_0/class_0.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Class 0: Background and Basic Syntax</p>
-            </div>
-        </a>
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../class_0/class_0.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Class 0: Background and Basic Syntax</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../class_2/class_2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Class 2: Virtual Environments and Object-oriented Programming (OOP)</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="../class_2/class_2.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Class 2: Virtual Environments and Object-oriented Programming (OOP)</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi<br/>
-        
-            &copy; Copyright 2020.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
