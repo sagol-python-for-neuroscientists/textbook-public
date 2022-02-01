@@ -1,5 +1,4 @@
 (resources)=
-
 # Resources
 
 Please suggest pull requests with useful websites and PDFs that you find during the semester.

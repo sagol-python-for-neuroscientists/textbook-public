@@ -1,16 +1,14 @@
 title: Python for Neuroscience
 author: Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi
 logo: logo.png
+exclude_patterns: ["**/*_skip.ipynb*"]
 
 execute:
   allow_errors: true
   timeout: -1
 
-parse:
-  myst_extended_syntax: true
-
 repository:
-  url: https://github.com/ZviBaratz/python_for_neuroscientists
+  url: https://github.com/sagol-python-for-neuroscientists/textbook-public
   path_to_book: source/
   branch: main
 
@@ -28,5 +26,3 @@ launch_buttons:
 latex:
   latex_documents:
     targetname: book.tex
-
-exclude_patterns: ["**/*_skip.ipynb*"]
