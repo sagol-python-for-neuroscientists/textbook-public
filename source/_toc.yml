@@ -1,24 +1,24 @@
 format: jb-book
 root: intro
 chapters:
-  - file: syllabus
-  - file: contents
-    sections:
-      - file: classes/class_0/class_0
-      - file: classes/class_1/class_1
-      - file: classes/class_2/class_2
-      - file: classes/class_3/class_3
-      - file: classes/class_4/class_4
-      - file: classes/class_5/class_5
-      - file: classes/class_6/class_6
-      - file: classes/class_7/class_7
-      - file: classes/class_8/class_8
-      - file: classes/class_9/class_9
-      - file: classes/class_10/class_10
-      - file: classes/class_11/class_11
-  - file: tutorials
-    sections:
-      - file: tutorials/python_setup
-      - file: tutorials/create_git_repo
-      - file: tutorials/create_and_publish_pacakge
-  - file: resources
+- file: syllabus
+- file: contents
+  sections:
+  - file: classes/class_0/class_0
+  - file: classes/class_1/class_1
+  - file: classes/class_2/class_2
+  - file: classes/class_3/class_3
+  - file: classes/class_4/class_4
+  - file: classes/class_5/class_5
+  - file: classes/class_6/class_6
+  - file: classes/class_7/class_7
+  - file: classes/class_8/class_8
+  - file: classes/class_9/class_9
+  - file: classes/class_10/class_10
+  - file: classes/class_11/class_11
+- file: tutorials
+  sections:
+  - file: tutorials/python_setup
+  - file: tutorials/create_git_repo
+  - file: tutorials/create_and_publish_pacakge
+- file: resources
