@@ -41,9 +41,12 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script >let toggleHintShow = 'Click to show';</script>
+    <script >let toggleHintHide = 'Click to hide';</script>
+    <script >let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -1453,7 +1456,7 @@ It might seem like a dramatic difference from your programming language of choic
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1803</span><span class="o">/</span><span class="mf">2894341234.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1805</span><span class="o">/</span><span class="mf">2894341234.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># But</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Notice the &quot;ValueError&quot; exception we received, one of many exceptions we&#39;ll encounter...</span>
@@ -1578,7 +1581,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7fa1dc77b550&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f0e4c54f8b0&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1642,9 +1645,9 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The original list:
-[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7fa1dc77b550&gt;, -100]
+[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f0e4c54f8b0&gt;, -100]
 l[0]: 1
-l[5]: &lt;function always_return_2 at 0x7fa1dc77b550&gt;
+l[5]: &lt;function always_return_2 at 0x7f0e4c54f8b0&gt;
 l[0:2]: [1, &#39;2&#39;]
 </pre></div>
 </div>
@@ -1658,7 +1661,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7fa1dc77b550&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7f0e4c54f8b0&gt;
 </pre></div>
 </div>
 </div>
@@ -1738,7 +1741,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7fa1dc77b550&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7f0e4c54f8b0&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
 </pre></div>
 </div>
 </div>
@@ -1751,7 +1754,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7fa1dc77b550&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7f0e4c54f8b0&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1792,7 +1795,7 @@ l[0:2]: [1, &#39;2&#39;]
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1803</span><span class="o">/</span><span class="mf">1598351701.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1805</span><span class="o">/</span><span class="mf">1598351701.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">a_tuple</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># immutable!</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># So .append() doesn&#39;t work, for example. Once created they will remain constant.</span>
 
@@ -1936,12 +1939,12 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;e&#39;, &#39;c&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;c&#39;, &#39;a&#39;, &#39;e&#39;}
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1803</span><span class="o">/</span><span class="mf">2069258087.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1805</span><span class="o">/</span><span class="mf">2069258087.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">set2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">}</span>
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="nb">print</span><span class="p">(</span><span class="n">set2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -1961,7 +1964,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, 2, 1}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, &#39;a&#39;}
 </pre></div>
 </div>
 </div>
@@ -1975,7 +1978,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0, &#39;a&#39;, 1}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0, 1, &#39;a&#39;}
 </pre></div>
 </div>
 </div>
@@ -2001,7 +2004,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1803</span><span class="o">/</span><span class="mf">3989893146.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1805</span><span class="o">/</span><span class="mf">3989893146.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Mutable types can&#39;t be inserted to a set</span>
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">set5</span><span class="o">.</span><span class="n">add</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>

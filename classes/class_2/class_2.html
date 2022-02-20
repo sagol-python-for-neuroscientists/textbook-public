@@ -41,9 +41,12 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script >let toggleHintShow = 'Click to show';</script>
+    <script >let toggleHintHide = 'Click to hide';</script>
+    <script >let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -659,15 +662,15 @@ Solution<div class="summary-down docutils">
 <p>There are numerous tools for creating and managing virtual environments with Python. In this course we will use <a class="reference external" href="https://docs.python.org/3/library/venv.html#module-venv"><code class="docutils literal notranslate"><span class="pre">venv</span></code></a>, which is one of Python’s built-in packages and is therefore a simple option that will always be available to you.</p>
 <p>Creating a new virtual environment with <code class="docutils literal notranslate"><span class="pre">venv</span></code> is as easy as running:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="280a097f-e227-41d6-88fa-61e83c845f70" name="ef89f0ef-cd08-4a6f-b1bf-e612c722b197" type="radio">
-</input><label class="tabbed-label" for="280a097f-e227-41d6-88fa-61e83c845f70">
+<input checked="checked" id="bc559ab6-5886-45db-ae4f-be8306409fe3" name="963ff641-038d-4ba8-9074-0dff4edf5fcc" type="radio">
+</input><label class="tabbed-label" for="bc559ab6-5886-45db-ae4f-be8306409fe3">
 Linux/macOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m venv /path/to/new/virtual/environment/
 </pre></div>
 </div>
 </div>
-<input id="a856944f-7661-4ec7-bbfa-ce9cb77a5bce" name="ef89f0ef-cd08-4a6f-b1bf-e612c722b197" type="radio">
-</input><label class="tabbed-label" for="a856944f-7661-4ec7-bbfa-ce9cb77a5bce">
+<input id="fd4ae308-233d-4234-a6b2-44bee16192cb" name="963ff641-038d-4ba8-9074-0dff4edf5fcc" type="radio">
+</input><label class="tabbed-label" for="fd4ae308-233d-4234-a6b2-44bee16192cb">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> C:\Python38\python -m venv C:\path\to\new\virtual\environment\
 </pre></div>
@@ -704,16 +707,16 @@ Windows</label><div class="tabbed-content docutils">
 <p>Activating a virtual environment means modifying your working environment to use a particular, isolated installation of Python (created in <a class="reference internal" href="#create"><span class="std std-ref">Creating a Virtual Environment</span></a>). This will normally also “override” some other related CLI tools with those installed within the virtual environment’s <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory (such as <code class="docutils literal notranslate"><span class="pre">pip</span></code>), and sometimes also change some OS-related environment variables.</p>
 <p>To activate the virtual environment and use the newly created isolated Python environment, simply run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="cf809bef-db2b-4db2-87c5-3181394a8da2" name="d6beab8e-59b0-418e-8549-becd4361fb4c" type="radio">
-</input><label class="tabbed-label" for="cf809bef-db2b-4db2-87c5-3181394a8da2">
+<input checked="checked" id="8b2ce182-a297-4a2e-84bb-2d29115de123" name="5d1fa889-49a7-4bcc-9121-b57cc52dae6c" type="radio">
+</input><label class="tabbed-label" for="8b2ce182-a297-4a2e-84bb-2d29115de123">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">source</span> &lt;venv&gt;/bin/activate
 </pre></div>
 </div>
 <p><em>* Replace <code class="docutils literal notranslate"><span class="pre">&lt;venv&gt;</span></code> with your virtual environment’s directory path.</em></p>
 </div>
-<input id="9d3f0abf-3ac8-46f0-bd5c-1cff31f63829" name="d6beab8e-59b0-418e-8549-becd4361fb4c" type="radio">
-</input><label class="tabbed-label" for="9d3f0abf-3ac8-46f0-bd5c-1cff31f63829">
+<input id="18b37054-7080-4a35-ad66-aad8970fcac7" name="5d1fa889-49a7-4bcc-9121-b57cc52dae6c" type="radio">
+</input><label class="tabbed-label" for="18b37054-7080-4a35-ad66-aad8970fcac7">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> <span class="p">&lt;</span>venv<span class="p">&gt;</span>\Scripts\activate
 </pre></div>
@@ -724,16 +727,16 @@ Windows</label><div class="tabbed-content docutils">
 <p>You should now see your virtual environment’s directory name used as a prefix (<code class="docutils literal notranslate"><span class="pre">(venv)</span></code>) in your terminal window.</p>
 <p>To validate the activation, run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="cd722165-e1c9-442f-b50c-7b6f0c50adf1" name="70631d09-75a0-4613-98e9-2cbd3f325728" type="radio">
-</input><label class="tabbed-label" for="cd722165-e1c9-442f-b50c-7b6f0c50adf1">
+<input checked="checked" id="4c558dcb-4ee2-4f4a-abab-394ce0db645d" name="cc6a9144-fb08-4994-9727-e1512de64bfe" type="radio">
+</input><label class="tabbed-label" for="4c558dcb-4ee2-4f4a-abab-394ce0db645d">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$ </span>which python
 <span class="go">&lt;venv&gt;/bin/python</span>
 </pre></div>
 </div>
 </div>
-<input id="f66f9743-b5f7-42f7-a76c-1e8edd029883" name="70631d09-75a0-4613-98e9-2cbd3f325728" type="radio">
-</input><label class="tabbed-label" for="f66f9743-b5f7-42f7-a76c-1e8edd029883">
+<input id="702ed589-46c0-4c93-a00a-e45aa893b78c" name="cc6a9144-fb08-4994-9727-e1512de64bfe" type="radio">
+</input><label class="tabbed-label" for="702ed589-46c0-4c93-a00a-e45aa893b78c">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">C:\&gt;</span> where python
 <span class="gp">&lt;venv&gt;</span>\Scripts\python
@@ -959,7 +962,7 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7f6b2c263a60&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7fdfe8b11340&gt;
 </pre></div>
 </div>
 </div>
@@ -1109,7 +1112,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7f6b2c21be80&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7fdfe8b110a0&gt;
 </pre></div>
 </div>
 </div>
@@ -1260,7 +1263,7 @@ After:	p.x: 20, p.y: 10
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1905</span><span class="o">/</span><span class="mf">4233481389.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1901</span><span class="o">/</span><span class="mf">4233481389.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># This doesn&#39;t work, look at the number of arguments:</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">p</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 
@@ -1340,7 +1343,7 @@ p.x: 20, p.y: 10
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1905</span><span class="o">/</span><span class="mf">2578023657.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1901</span><span class="o">/</span><span class="mf">2578023657.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
 
 <span class="ne">TypeError</span>: __init__() missing 2 required positional arguments: &#39;x&#39; and &#39;y&#39;
@@ -1578,7 +1581,7 @@ Solution<div class="summary-down docutils">
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1905</span><span class="o">/</span><span class="mf">231619521.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1901</span><span class="o">/</span><span class="mf">231619521.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">shopping_list_a</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">shopping_list_b</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">shopping_list_a</span> <span class="o">+</span> <span class="n">shopping_list_b</span><span class="p">)</span>
@@ -1691,10 +1694,10 @@ Solution<div class="summary-down docutils">
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1905</span><span class="o">/</span><span class="mf">923953624.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1901</span><span class="o">/</span><span class="mf">923953624.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">shopping_list_a</span> <span class="o">+</span> <span class="mi">1</span>
 
-<span class="nn">/tmp/ipykernel_1905/1386105984.py</span> in <span class="ni">__add__</span><span class="nt">(self, other)</span>
+<span class="nn">/tmp/ipykernel_1901/1386105984.py</span> in <span class="ni">__add__</span><span class="nt">(self, other)</span>
 <span class="g g-Whitespace">     </span><span class="mi">58</span>         <span class="s2">&quot;&quot;&quot;</span>
 <span class="g g-Whitespace">     </span><span class="mi">59</span><span class="s2">         return ShoppingList(</span>
 <span class="ne">---&gt; </span><span class="mi">60</span><span class="s2">             vegetables=self.vegetables + other.vegetables,</span>
