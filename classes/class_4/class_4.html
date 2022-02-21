@@ -1405,7 +1405,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>81 ms ± 862 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>88.8 ms ± 2.71 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -1422,7 +1422,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>977 µs ± 1.21 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.14 ms ± 20.6 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1670,13 +1670,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>82.4 µs ± 851 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>95.6 µs ± 1.58 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.36 µs ± 13.3 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.56 µs ± 176 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.81 µs ± 2.58 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.29 µs ± 18.3 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1693,13 +1693,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>65.4 µs ± 61 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>77.4 µs ± 799 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.04 µs ± 15.3 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.63 µs ± 60.6 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.93 µs ± 11.5 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.22 µs ± 65.4 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1888,7 +1888,7 @@ np.sum result: 5
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1941</span><span class="o">/</span><span class="mf">1665608283.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1899</span><span class="o">/</span><span class="mf">1665608283.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">basic_array</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">basic_array</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">))</span>   <span class="c1"># doesn&#39;t work, &quot;and&quot; isn&#39;t used this way here</span>
 
 <span class="ne">ValueError</span>: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
