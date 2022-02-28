@@ -49,15 +49,14 @@
     <script src="../../_static/togglebutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Class 3: More OOP and Exception Handling" href="../class_3/class_3.html" />
@@ -662,15 +661,15 @@ Solution<div class="summary-down docutils">
 <p>There are numerous tools for creating and managing virtual environments with Python. In this course we will use <a class="reference external" href="https://docs.python.org/3/library/venv.html#module-venv"><code class="docutils literal notranslate"><span class="pre">venv</span></code></a>, which is one of Python’s built-in packages and is therefore a simple option that will always be available to you.</p>
 <p>Creating a new virtual environment with <code class="docutils literal notranslate"><span class="pre">venv</span></code> is as easy as running:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="305d25d1-3960-454c-9ead-582fa6ae95b0" name="88d9dd60-90b6-498d-9ee4-b0749b8d7a6b" type="radio">
-</input><label class="tabbed-label" for="305d25d1-3960-454c-9ead-582fa6ae95b0">
+<input checked="checked" id="1a86bba4-0ad1-41e3-8893-8260d2b05e2f" name="ac574729-4b99-471c-b206-df1a44f8f5f3" type="radio">
+</input><label class="tabbed-label" for="1a86bba4-0ad1-41e3-8893-8260d2b05e2f">
 Linux/macOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m venv /path/to/new/virtual/environment/
 </pre></div>
 </div>
 </div>
-<input id="0acab6a9-f3d5-447f-b337-fae134033d6b" name="88d9dd60-90b6-498d-9ee4-b0749b8d7a6b" type="radio">
-</input><label class="tabbed-label" for="0acab6a9-f3d5-447f-b337-fae134033d6b">
+<input id="41785db8-1b20-431a-b629-3362a0400399" name="ac574729-4b99-471c-b206-df1a44f8f5f3" type="radio">
+</input><label class="tabbed-label" for="41785db8-1b20-431a-b629-3362a0400399">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> C:\Python38\python -m venv C:\path\to\new\virtual\environment\
 </pre></div>
@@ -707,16 +706,16 @@ Windows</label><div class="tabbed-content docutils">
 <p>Activating a virtual environment means modifying your working environment to use a particular, isolated installation of Python (created in <a class="reference internal" href="#create"><span class="std std-ref">Creating a Virtual Environment</span></a>). This will normally also “override” some other related CLI tools with those installed within the virtual environment’s <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory (such as <code class="docutils literal notranslate"><span class="pre">pip</span></code>), and sometimes also change some OS-related environment variables.</p>
 <p>To activate the virtual environment and use the newly created isolated Python environment, simply run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="c3855575-1823-4f1f-ac35-756632eb63b8" name="fdb262af-4fb8-4768-8ad1-4feb1705325f" type="radio">
-</input><label class="tabbed-label" for="c3855575-1823-4f1f-ac35-756632eb63b8">
+<input checked="checked" id="932a3b35-efec-4875-be8a-a03c3b2db032" name="edde8aa6-8842-49ec-ae93-27308ba78433" type="radio">
+</input><label class="tabbed-label" for="932a3b35-efec-4875-be8a-a03c3b2db032">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">source</span> &lt;venv&gt;/bin/activate
 </pre></div>
 </div>
 <p><em>* Replace <code class="docutils literal notranslate"><span class="pre">&lt;venv&gt;</span></code> with your virtual environment’s directory path.</em></p>
 </div>
-<input id="f63b57b1-612f-4ad1-a066-ff7bfc14b792" name="fdb262af-4fb8-4768-8ad1-4feb1705325f" type="radio">
-</input><label class="tabbed-label" for="f63b57b1-612f-4ad1-a066-ff7bfc14b792">
+<input id="014eea3b-7510-4c40-a683-740baeaa1329" name="edde8aa6-8842-49ec-ae93-27308ba78433" type="radio">
+</input><label class="tabbed-label" for="014eea3b-7510-4c40-a683-740baeaa1329">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> <span class="p">&lt;</span>venv<span class="p">&gt;</span>\Scripts\activate
 </pre></div>
@@ -727,16 +726,16 @@ Windows</label><div class="tabbed-content docutils">
 <p>You should now see your virtual environment’s directory name used as a prefix (<code class="docutils literal notranslate"><span class="pre">(venv)</span></code>) in your terminal window.</p>
 <p>To validate the activation, run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="9a1598e3-9469-40cc-a6fd-cf2a8fc07884" name="4573cef1-6a09-41d2-9a1d-86c04e1a55df" type="radio">
-</input><label class="tabbed-label" for="9a1598e3-9469-40cc-a6fd-cf2a8fc07884">
+<input checked="checked" id="e7e29824-e1ee-4e9d-958b-76f736de8db9" name="6d236d5f-fe16-41de-93b7-82da504f928d" type="radio">
+</input><label class="tabbed-label" for="e7e29824-e1ee-4e9d-958b-76f736de8db9">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$ </span>which python
 <span class="go">&lt;venv&gt;/bin/python</span>
 </pre></div>
 </div>
 </div>
-<input id="85f6708f-a1a3-4115-b3d3-94467376d985" name="4573cef1-6a09-41d2-9a1d-86c04e1a55df" type="radio">
-</input><label class="tabbed-label" for="85f6708f-a1a3-4115-b3d3-94467376d985">
+<input id="06b7d44f-0bc6-45c1-b2dd-da742ee44833" name="6d236d5f-fe16-41de-93b7-82da504f928d" type="radio">
+</input><label class="tabbed-label" for="06b7d44f-0bc6-45c1-b2dd-da742ee44833">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">C:\&gt;</span> where python
 <span class="gp">&lt;venv&gt;</span>\Scripts\python
@@ -962,7 +961,7 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7f496ec5cc70&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7f216fb4d970&gt;
 </pre></div>
 </div>
 </div>
@@ -1112,7 +1111,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7f496cb84940&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7f216faf62b0&gt;
 </pre></div>
 </div>
 </div>
@@ -1263,7 +1262,7 @@ After:	p.x: 20, p.y: 10
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1861</span><span class="o">/</span><span class="mf">4233481389.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="nn">Input In [18],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># This doesn&#39;t work, look at the number of arguments:</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">p</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 
@@ -1343,7 +1342,7 @@ p.x: 20, p.y: 10
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1861</span><span class="o">/</span><span class="mf">2578023657.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="nn">Input In [21],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
 
 <span class="ne">TypeError</span>: __init__() missing 2 required positional arguments: &#39;x&#39; and &#39;y&#39;
@@ -1581,7 +1580,7 @@ Solution<div class="summary-down docutils">
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1861</span><span class="o">/</span><span class="mf">231619521.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="nn">Input In [28],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">shopping_list_a</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">shopping_list_b</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">shopping_list_a</span> <span class="o">+</span> <span class="n">shopping_list_b</span><span class="p">)</span>
@@ -1694,15 +1693,22 @@ Solution<div class="summary-down docutils">
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1861</span><span class="o">/</span><span class="mf">923953624.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="nn">Input In [31],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">shopping_list_a</span> <span class="o">+</span> <span class="mi">1</span>
 
-<span class="nn">/tmp/ipykernel_1861/1386105984.py</span> in <span class="ni">__add__</span><span class="nt">(self, other)</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">59</span><span class="s2">         return ShoppingList(</span>
-<span class="ne">---&gt; </span><span class="mi">60</span><span class="s2">             vegetables=self.vegetables + other.vegetables,</span>
-<span class="g g-Whitespace">     </span><span class="mi">61</span><span class="s2">             fruit=self.fruit + other.fruit,</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span><span class="s2">             bread=self.bread + other.bread,</span>
+<span class="nn">Input In [29],</span> in <span class="ni">ShoppingList.__add__</span><span class="nt">(self, other)</span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">ShoppingList</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ShoppingList</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span><span class="sd">     Combines two shopping lists and returns the result.</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span><span class="sd">         Combined shopping list</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span>     <span class="k">return</span> <span class="n">ShoppingList</span><span class="p">(</span>
+<span class="ne">---&gt; </span><span class="mi">60</span>         <span class="n">vegetables</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">vegetables</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span>         <span class="n">fruit</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">fruit</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">fruit</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span>         <span class="n">bread</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">bread</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">bread</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">63</span>     <span class="p">)</span>
 
 <span class="ne">AttributeError</span>: &#39;int&#39; object has no attribute &#39;vegetables&#39;
 </pre></div>

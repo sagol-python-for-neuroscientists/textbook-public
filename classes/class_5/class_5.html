@@ -49,15 +49,14 @@
     <script src="../../_static/togglebutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Class 6: Advanced pandas" href="../class_6/class_6.html" />
@@ -1010,7 +1009,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb7dd1278e0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fbf4e3015e0&gt;]
 </pre></div>
 </div>
 <img alt="../../_images/class_5_9_1.png" src="../../_images/class_5_9_1.png" />
@@ -1253,7 +1252,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;__header__&#39;: b&#39;MATLAB 5.0 MAT-file Platform: posix, Created on: Mon Feb 21 15:35:49 2022&#39;,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;__header__&#39;: b&#39;MATLAB 5.0 MAT-file Platform: posix, Created on: Mon Feb 28 15:46:47 2022&#39;,
  &#39;__version__&#39;: &#39;1.0&#39;,
  &#39;__globals__&#39;: [],
  &#39;a&#39;: array([[1., 1., 1.],
@@ -1319,7 +1318,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2.74067821 1.45506265]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3.0595213  1.50487538]
 </pre></div>
 </div>
 </div>
@@ -1347,7 +1346,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ttest_indResult(statistic=-2.9334490647696607, pvalue=0.00409433392503078)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ttest_indResult(statistic=-2.654322367602893, pvalue=0.009147534993377846)
 </pre></div>
 </div>
 <img alt="../../_images/class_5_43_1.png" src="../../_images/class_5_43_1.png" />
@@ -1380,7 +1379,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>356 ns ± 6.32 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>256 ns ± 0.1 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1392,7 +1391,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>794 µs ± 4.31 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>636 µs ± 561 ns per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1437,7 +1436,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1645457759.7149394
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1646063215.467182
 </pre></div>
 </div>
 </div>
@@ -2335,29 +2334,29 @@ Columns:	Index([&#39;population&#39;, &#39;medals&#39;], dtype=&#39;object&#39;)
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.371424</td>
-      <td>0.781648</td>
-      <td>0.508255</td>
-      <td>0.858920</td>
-      <td>0.732008</td>
-      <td>0.107407</td>
-      <td>0.920550</td>
-      <td>0.797265</td>
-      <td>0.121125</td>
-      <td>0.408053</td>
+      <td>0.316313</td>
+      <td>0.154043</td>
+      <td>0.315939</td>
+      <td>0.965120</td>
+      <td>0.112597</td>
+      <td>0.192768</td>
+      <td>0.165324</td>
+      <td>0.737112</td>
+      <td>0.996049</td>
+      <td>0.196754</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.797389</td>
-      <td>0.495959</td>
-      <td>0.741251</td>
-      <td>0.484665</td>
-      <td>0.619948</td>
-      <td>0.729605</td>
-      <td>0.118598</td>
-      <td>0.713470</td>
-      <td>0.195875</td>
-      <td>0.782542</td>
+      <td>0.989764</td>
+      <td>0.679252</td>
+      <td>0.193269</td>
+      <td>0.441549</td>
+      <td>0.690015</td>
+      <td>0.906056</td>
+      <td>0.709224</td>
+      <td>0.775506</td>
+      <td>0.001615</td>
+      <td>0.642167</td>
     </tr>
   </tbody>
 </table>
@@ -2634,99 +2633,117 @@ Name: three, dtype: float64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1948</span><span class="o">/</span><span class="mf">1688064587.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="nn">Input In [62],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">_</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="s1">&#39;one&#39;</span><span class="p">)</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/plotting/_core.py</span> in <span class="ni">__call__</span><span class="nt">(self, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">970</span>                     <span class="n">data</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">label_name</span>
-<span class="g g-Whitespace">    </span><span class="mi">971</span> 
-<span class="ne">--&gt; </span><span class="mi">972</span>         <span class="k">return</span> <span class="n">plot_backend</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="n">kind</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">973</span> 
-<span class="g g-Whitespace">    </span><span class="mi">974</span>     <span class="fm">__call__</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="vm">__doc__</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/plotting/_core.py:972,</span> in <span class="ni">PlotAccessor.__call__</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">969</span>             <span class="n">label_name</span> <span class="o">=</span> <span class="n">label_kw</span> <span class="ow">or</span> <span class="n">data</span><span class="o">.</span><span class="n">columns</span>
+<span class="g g-Whitespace">    </span><span class="mi">970</span>             <span class="n">data</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">label_name</span>
+<span class="ne">--&gt; </span><span class="mi">972</span> <span class="k">return</span> <span class="n">plot_backend</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="n">kind</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/plotting/_matplotlib/__init__.py</span> in <span class="ni">plot</span><span class="nt">(data, kind, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">69</span>             <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;ax&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="s2">&quot;left_ax&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">70</span>     <span class="n">plot_obj</span> <span class="o">=</span> <span class="n">PLOT_CLASSES</span><span class="p">[</span><span class="n">kind</span><span class="p">](</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">71</span>     <span class="n">plot_obj</span><span class="o">.</span><span class="n">generate</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span>     <span class="n">plot_obj</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">73</span>     <span class="k">return</span> <span class="n">plot_obj</span><span class="o">.</span><span class="n">result</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/plotting/_matplotlib/__init__.py:71,</span> in <span class="ni">plot</span><span class="nt">(data, kind, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">69</span>         <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;ax&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="s2">&quot;left_ax&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">70</span> <span class="n">plot_obj</span> <span class="o">=</span> <span class="n">PLOT_CLASSES</span><span class="p">[</span><span class="n">kind</span><span class="p">](</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">71</span> <span class="n">plot_obj</span><span class="o">.</span><span class="n">generate</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span> <span class="n">plot_obj</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">73</span> <span class="k">return</span> <span class="n">plot_obj</span><span class="o">.</span><span class="n">result</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/plotting/_matplotlib/core.py</span> in <span class="ni">generate</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">327</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_compute_plot_data</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">328</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_setup_subplots</span><span class="p">()</span>
-<span class="ne">--&gt; </span><span class="mi">329</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_make_plot</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">330</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_add_table</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">331</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_make_legend</span><span class="p">()</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/plotting/_matplotlib/core.py:329,</span> in <span class="ni">MPLPlot.generate</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_plot_data</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span> <span class="bp">self</span><span class="o">.</span><span class="n">_setup_subplots</span><span class="p">()</span>
+<span class="ne">--&gt; </span><span class="mi">329</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_plot</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">330</span> <span class="bp">self</span><span class="o">.</span><span class="n">_add_table</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">331</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_legend</span><span class="p">()</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/plotting/_matplotlib/core.py</span> in <span class="ni">_make_plot</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1224</span>             <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">label</span>
-<span class="g g-Whitespace">   </span><span class="mi">1225</span> 
-<span class="ne">-&gt; </span><span class="mi">1226</span>             <span class="n">newlines</span> <span class="o">=</span> <span class="n">plotf</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1227</span>                 <span class="n">ax</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1228</span>                 <span class="n">x</span><span class="p">,</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/plotting/_matplotlib/core.py:1226,</span> in <span class="ni">LinePlot._make_plot</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1223</span> <span class="n">label</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mark_right_label</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1224</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">label</span>
+<span class="ne">-&gt; </span><span class="mi">1226</span> <span class="n">newlines</span> <span class="o">=</span> <span class="n">plotf</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1227</span>     <span class="n">ax</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1228</span>     <span class="n">x</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1229</span>     <span class="n">y</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1230</span>     <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1231</span>     <span class="n">column_num</span><span class="o">=</span><span class="n">i</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1232</span>     <span class="n">stacking_id</span><span class="o">=</span><span class="n">stacking_id</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1233</span>     <span class="n">is_errorbar</span><span class="o">=</span><span class="n">is_errorbar</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1234</span>     <span class="o">**</span><span class="n">kwds</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1235</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1236</span> <span class="bp">self</span><span class="o">.</span><span class="n">_append_legend_handles_labels</span><span class="p">(</span><span class="n">newlines</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1238</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_ts_plot</span><span class="p">():</span>
+<span class="g g-Whitespace">   </span><span class="mi">1239</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1240</span>     <span class="c1"># reset of xlim should be used for ts data</span>
+<span class="g g-Whitespace">   </span><span class="mi">1241</span>     <span class="c1"># TODO: GH28021, should find a way to change view limit on xaxis</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/plotting/_matplotlib/core.py</span> in <span class="ni">_plot</span><span class="nt">(cls, ax, x, y, style, column_num, stacking_id, **kwds)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1254</span>             <span class="bp">cls</span><span class="o">.</span><span class="n">_initialize_stacker</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">stacking_id</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
-<span class="g g-Whitespace">   </span><span class="mi">1255</span>         <span class="n">y_values</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_get_stacked_values</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">stacking_id</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">])</span>
-<span class="ne">-&gt; </span><span class="mi">1256</span>         <span class="n">lines</span> <span class="o">=</span> <span class="n">MPLPlot</span><span class="o">.</span><span class="n">_plot</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y_values</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1257</span>         <span class="bp">cls</span><span class="o">.</span><span class="n">_update_stacker</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">stacking_id</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1258</span>         <span class="k">return</span> <span class="n">lines</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/plotting/_matplotlib/core.py:1256,</span> in <span class="ni">LinePlot._plot</span><span class="nt">(cls, ax, x, y, style, column_num, stacking_id, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1254</span>     <span class="bp">cls</span><span class="o">.</span><span class="n">_initialize_stacker</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">stacking_id</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1255</span> <span class="n">y_values</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_get_stacked_values</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">stacking_id</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">])</span>
+<span class="ne">-&gt; </span><span class="mi">1256</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">MPLPlot</span><span class="o">.</span><span class="n">_plot</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y_values</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1257</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_update_stacker</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">stacking_id</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1258</span> <span class="k">return</span> <span class="n">lines</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/plotting/_matplotlib/converter.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">90</span>         <span class="k">with</span> <span class="n">pandas_converters</span><span class="p">():</span>
-<span class="ne">---&gt; </span><span class="mi">91</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span> 
-<span class="g g-Whitespace">     </span><span class="mi">93</span>     <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">wrapper</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/plotting/_matplotlib/converter.py:91,</span> in <span class="ni">register_pandas_matplotlib_converters.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">88</span> <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">89</span> <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">90</span>     <span class="k">with</span> <span class="n">pandas_converters</span><span class="p">():</span>
+<span class="ne">---&gt; </span><span class="mi">91</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/plotting/_matplotlib/core.py</span> in <span class="ni">_plot</span><span class="nt">(cls, ax, x, y, style, is_errorbar, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">749</span>             <span class="k">if</span> <span class="s2">&quot;yerr&quot;</span> <span class="ow">in</span> <span class="n">kwds</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">750</span>                 <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;yerr&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;yerr&quot;</span><span class="p">))</span>
-<span class="ne">--&gt; </span><span class="mi">751</span>             <span class="k">return</span> <span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">752</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">753</span>             <span class="c1"># prevent style kwarg from going to errorbar, where it is unsupported</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/plotting/_matplotlib/core.py:751,</span> in <span class="ni">MPLPlot._plot</span><span class="nt">(cls, ax, x, y, style, is_errorbar, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">749</span>     <span class="k">if</span> <span class="s2">&quot;yerr&quot;</span> <span class="ow">in</span> <span class="n">kwds</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">750</span>         <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;yerr&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;yerr&quot;</span><span class="p">))</span>
+<span class="ne">--&gt; </span><span class="mi">751</span>     <span class="k">return</span> <span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">752</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">753</span>     <span class="c1"># prevent style kwarg from going to errorbar, where it is unsupported</span>
+<span class="g g-Whitespace">    </span><span class="mi">754</span>     <span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">style</span><span class="p">)</span> <span class="k">if</span> <span class="n">style</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/__init__.py</span> in <span class="ni">inner</span><span class="nt">(ax, data, *args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1410</span>     <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1411</span>         <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1412</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="n">sanitize_sequence</span><span class="p">,</span> <span class="n">args</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1413</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1414</span>         <span class="n">bound</span> <span class="o">=</span> <span class="n">new_sig</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/__init__.py:1412,</span> in <span class="ni">_preprocess_data.&lt;locals&gt;.inner</span><span class="nt">(ax, data, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1409</span> <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1410</span> <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1411</span>     <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1412</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="n">sanitize_sequence</span><span class="p">,</span> <span class="n">args</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1414</span>     <span class="n">bound</span> <span class="o">=</span> <span class="n">new_sig</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1415</span>     <span class="n">auto_label</span> <span class="o">=</span> <span class="p">(</span><span class="n">bound</span><span class="o">.</span><span class="n">arguments</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">label_namer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1416</span>                   <span class="ow">or</span> <span class="n">bound</span><span class="o">.</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">label_namer</span><span class="p">))</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/axes/_axes.py</span> in <span class="ni">errorbar</span><span class="nt">(self, x, y, yerr, xerr, fmt, ecolor, elinewidth, capsize, barsabove, lolims, uplims, xlolims, xuplims, errorevery, capthick, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3465</span>             <span class="n">low</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="n">dep</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">row_stack</span><span class="p">([</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">lolims</span><span class="p">),</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">uplims</span><span class="p">])</span> <span class="o">*</span> <span class="n">err</span>
-<span class="g g-Whitespace">   </span><span class="mi">3466</span> 
-<span class="ne">-&gt; </span><span class="mi">3467</span>             <span class="n">barcols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lines_func</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">3468</span>                 <span class="o">*</span><span class="n">apply_mask</span><span class="p">([</span><span class="n">indep</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">],</span> <span class="n">everymask</span><span class="p">),</span> <span class="o">**</span><span class="n">eb_lines_style</span><span class="p">))</span>
-<span class="g g-Whitespace">   </span><span class="mi">3469</span>             <span class="c1"># Normal errorbars for points without upper/lower limits.</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/axes/_axes.py:3467,</span> in <span class="ni">Axes.errorbar</span><span class="nt">(self, x, y, yerr, xerr, fmt, ecolor, elinewidth, capsize, barsabove, lolims, uplims, xlolims, xuplims, errorevery, capthick, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3461</span> <span class="c1"># This is like</span>
+<span class="g g-Whitespace">   </span><span class="mi">3462</span> <span class="c1">#     elow, ehigh = np.broadcast_to(...)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3463</span> <span class="c1">#     return dep - elow * ~lolims, dep + ehigh * ~uplims</span>
+<span class="g g-Whitespace">   </span><span class="mi">3464</span> <span class="c1"># except that broadcast_to would strip units.</span>
+<span class="g g-Whitespace">   </span><span class="mi">3465</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="n">dep</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">row_stack</span><span class="p">([</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">lolims</span><span class="p">),</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">uplims</span><span class="p">])</span> <span class="o">*</span> <span class="n">err</span>
+<span class="ne">-&gt; </span><span class="mi">3467</span> <span class="n">barcols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lines_func</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">3468</span>     <span class="o">*</span><span class="n">apply_mask</span><span class="p">([</span><span class="n">indep</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">],</span> <span class="n">everymask</span><span class="p">),</span> <span class="o">**</span><span class="n">eb_lines_style</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">3469</span> <span class="c1"># Normal errorbars for points without upper/lower limits.</span>
+<span class="g g-Whitespace">   </span><span class="mi">3470</span> <span class="n">nolims</span> <span class="o">=</span> <span class="o">~</span><span class="p">(</span><span class="n">lolims</span> <span class="o">|</span> <span class="n">uplims</span><span class="p">)</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/__init__.py</span> in <span class="ni">inner</span><span class="nt">(ax, data, *args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1410</span>     <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1411</span>         <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1412</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="n">sanitize_sequence</span><span class="p">,</span> <span class="n">args</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1413</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1414</span>         <span class="n">bound</span> <span class="o">=</span> <span class="n">new_sig</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/__init__.py:1412,</span> in <span class="ni">_preprocess_data.&lt;locals&gt;.inner</span><span class="nt">(ax, data, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1409</span> <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1410</span> <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1411</span>     <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1412</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="n">sanitize_sequence</span><span class="p">,</span> <span class="n">args</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1414</span>     <span class="n">bound</span> <span class="o">=</span> <span class="n">new_sig</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1415</span>     <span class="n">auto_label</span> <span class="o">=</span> <span class="p">(</span><span class="n">bound</span><span class="o">.</span><span class="n">arguments</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">label_namer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1416</span>                   <span class="ow">or</span> <span class="n">bound</span><span class="o">.</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">label_namer</span><span class="p">))</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/axes/_axes.py</span> in <span class="ni">vlines</span><span class="nt">(self, x, ymin, ymax, colors, linestyles, label, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1140</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1141</span>         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1142</span>             <span class="n">minx</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1143</span>             <span class="n">maxx</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1144</span>             <span class="n">miny</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">ymin</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">ymax</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/matplotlib/axes/_axes.py:1142,</span> in <span class="ni">Axes.vlines</span><span class="nt">(self, x, ymin, ymax, colors, linestyles, label, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1139</span> <span class="n">lines</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1141</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1142</span>     <span class="n">minx</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1143</span>     <span class="n">maxx</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1144</span>     <span class="n">miny</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">ymin</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">ymax</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/numpy/ma/core.py</span> in <span class="ni">min</span><span class="nt">(self, axis, out, fill_value, keepdims)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5698</span>         <span class="c1"># No explicit output</span>
-<span class="g g-Whitespace">   </span><span class="mi">5699</span>         <span class="k">if</span> <span class="n">out</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">5700</span>             <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filled</span><span class="p">(</span><span class="n">fill_value</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">5701</span>                 <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
-<span class="g g-Whitespace">   </span><span class="mi">5702</span>             <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">ndim</span><span class="p">:</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/numpy/ma/core.py:5700,</span> in <span class="ni">MaskedArray.min</span><span class="nt">(self, axis, out, fill_value, keepdims)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5698</span> <span class="c1"># No explicit output</span>
+<span class="g g-Whitespace">   </span><span class="mi">5699</span> <span class="k">if</span> <span class="n">out</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">5700</span>     <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filled</span><span class="p">(</span><span class="n">fill_value</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">5701</span>         <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">5702</span>     <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">ndim</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5703</span>         <span class="c1"># Set the mask</span>
+<span class="g g-Whitespace">   </span><span class="mi">5704</span>         <span class="n">result</span><span class="o">.</span><span class="n">__setmask__</span><span class="p">(</span><span class="n">newmask</span><span class="p">)</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/numpy/core/_methods.py</span> in <span class="ni">_amin</span><span class="nt">(a, axis, out, keepdims, initial, where)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/numpy/core/_methods.py:44,</span> in <span class="ni">_amin</span><span class="nt">(a, axis, out, keepdims, initial, where)</span>
 <span class="g g-Whitespace">     </span><span class="mi">42</span> <span class="k">def</span> <span class="nf">_amin</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 <span class="g g-Whitespace">     </span><span class="mi">43</span>           <span class="n">initial</span><span class="o">=</span><span class="n">_NoValue</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="ne">---&gt; </span><span class="mi">44</span>     <span class="k">return</span> <span class="n">umr_minimum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">keepdims</span><span class="p">,</span> <span class="n">initial</span><span class="p">,</span> <span class="n">where</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">45</span> 
-<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="k">def</span> <span class="nf">_sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 
 <span class="ne">TypeError</span>: &#39;&lt;=&#39; not supported between instances of &#39;int&#39; and &#39;str&#39;
 </pre></div>
@@ -3453,41 +3470,43 @@ Name: a, dtype: object
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3620</span>             <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3621</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3622</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/core/indexes/base.py:3621,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3620</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3621</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3622</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/_libs/index.pyx:136,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/_libs/index.pyx:163,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
 
-<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:5198,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
 
-<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:5206,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
 
 <span class="ne">KeyError</span>: 1
 
 <span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
 
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1948</span><span class="o">/</span><span class="mf">2796142012.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># we fail, since the key &quot;1&quot; isn&#39;t in the columns</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># df2[10] - this also fails</span>
+<span class="nn">Input In [78],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/core/frame.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3503</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3504</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">3505</span>             <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3506</span>             <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">3507</span>                 <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/core/frame.py:3505,</span> in <span class="ni">DataFrame.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3503</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3504</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">3505</span> <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3506</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">3507</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3621</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3622</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3623</span>                 <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
-<span class="g g-Whitespace">   </span><span class="mi">3624</span>             <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3625</span>                 <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/core/indexes/base.py:3623,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3621</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3622</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3623</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">3624</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3625</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3626</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3627</span>     <span class="c1">#  the TypeError.</span>
+<span class="g g-Whitespace">   </span><span class="mi">3628</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 
 <span class="ne">KeyError</span>: 1
 </pre></div>
@@ -3651,63 +3670,63 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.177005</td>
-      <td>0.216152</td>
-      <td>0.524354</td>
+      <td>0.008715</td>
+      <td>0.800703</td>
+      <td>0.711603</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.172680</td>
-      <td>0.950520</td>
-      <td>0.785452</td>
+      <td>0.381809</td>
+      <td>0.966329</td>
+      <td>0.873666</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>0.381534</td>
-      <td>0.140194</td>
-      <td>0.609995</td>
+      <td>0.185142</td>
+      <td>0.402580</td>
+      <td>0.914101</td>
     </tr>
     <tr>
       <th>d</th>
-      <td>0.096988</td>
-      <td>0.757407</td>
-      <td>0.024820</td>
+      <td>0.691836</td>
+      <td>0.893545</td>
+      <td>0.813935</td>
     </tr>
     <tr>
       <th>e</th>
-      <td>0.686299</td>
-      <td>0.410957</td>
-      <td>0.774396</td>
+      <td>0.193959</td>
+      <td>0.791784</td>
+      <td>0.431748</td>
     </tr>
     <tr>
       <th>f</th>
-      <td>0.761601</td>
-      <td>0.065251</td>
-      <td>0.507897</td>
+      <td>0.799739</td>
+      <td>0.413500</td>
+      <td>0.367325</td>
     </tr>
     <tr>
       <th>g</th>
-      <td>0.555891</td>
-      <td>0.713471</td>
-      <td>0.072993</td>
+      <td>0.842779</td>
+      <td>0.926514</td>
+      <td>0.466871</td>
     </tr>
     <tr>
       <th>h</th>
-      <td>0.212356</td>
-      <td>0.360841</td>
-      <td>0.854415</td>
+      <td>0.983755</td>
+      <td>0.332571</td>
+      <td>0.453219</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>0.063695</td>
-      <td>0.234309</td>
-      <td>0.493581</td>
+      <td>0.029979</td>
+      <td>0.527705</td>
+      <td>0.117870</td>
     </tr>
     <tr>
       <th>j</th>
-      <td>0.691034</td>
-      <td>0.700191</td>
-      <td>0.178511</td>
+      <td>0.644300</td>
+      <td>0.765718</td>
+      <td>0.452020</td>
     </tr>
   </tbody>
 </table>
@@ -3723,16 +3742,16 @@ Name: Population, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.17700453, 0.21615206, 0.52435389],
-       [0.17267971, 0.95052006, 0.7854516 ],
-       [0.38153428, 0.14019421, 0.60999462],
-       [0.09698779, 0.75740676, 0.02482008],
-       [0.68629904, 0.41095705, 0.77439588],
-       [0.76160134, 0.06525115, 0.5078967 ],
-       [0.55589073, 0.71347051, 0.07299254],
-       [0.21235566, 0.36084074, 0.85441472],
-       [0.06369488, 0.23430936, 0.49358051],
-       [0.69103413, 0.7001911 , 0.17851091]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.00871476, 0.80070302, 0.71160303],
+       [0.38180889, 0.96632942, 0.87366623],
+       [0.18514186, 0.40257993, 0.9141005 ],
+       [0.69183648, 0.89354461, 0.81393498],
+       [0.19395859, 0.7917843 , 0.43174757],
+       [0.7997391 , 0.41349974, 0.36732474],
+       [0.84277891, 0.92651373, 0.46687144],
+       [0.98375506, 0.33257123, 0.45321879],
+       [0.02997949, 0.52770486, 0.11786973],
+       [0.64429972, 0.76571834, 0.45202002]])
 </pre></div>
 </div>
 </div>
@@ -3775,73 +3794,73 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.177005</td>
-      <td>0.216152</td>
-      <td>0.524354</td>
-      <td>0.701358</td>
+      <td>0.008715</td>
+      <td>0.800703</td>
+      <td>0.711603</td>
+      <td>0.720318</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.172680</td>
-      <td>0.950520</td>
-      <td>0.785452</td>
-      <td>0.958131</td>
+      <td>0.381809</td>
+      <td>0.966329</td>
+      <td>0.873666</td>
+      <td>1.255475</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>0.381534</td>
-      <td>0.140194</td>
-      <td>0.609995</td>
-      <td>0.991529</td>
+      <td>0.185142</td>
+      <td>0.402580</td>
+      <td>0.914101</td>
+      <td>1.099242</td>
     </tr>
     <tr>
       <th>d</th>
-      <td>0.096988</td>
-      <td>0.757407</td>
-      <td>0.024820</td>
-      <td>0.121808</td>
+      <td>0.691836</td>
+      <td>0.893545</td>
+      <td>0.813935</td>
+      <td>1.505771</td>
     </tr>
     <tr>
       <th>e</th>
-      <td>0.686299</td>
-      <td>0.410957</td>
-      <td>0.774396</td>
-      <td>1.460695</td>
+      <td>0.193959</td>
+      <td>0.791784</td>
+      <td>0.431748</td>
+      <td>0.625706</td>
     </tr>
     <tr>
       <th>f</th>
-      <td>0.761601</td>
-      <td>0.065251</td>
-      <td>0.507897</td>
-      <td>1.269498</td>
+      <td>0.799739</td>
+      <td>0.413500</td>
+      <td>0.367325</td>
+      <td>1.167064</td>
     </tr>
     <tr>
       <th>g</th>
-      <td>0.555891</td>
-      <td>0.713471</td>
-      <td>0.072993</td>
-      <td>0.628883</td>
+      <td>0.842779</td>
+      <td>0.926514</td>
+      <td>0.466871</td>
+      <td>1.309650</td>
     </tr>
     <tr>
       <th>h</th>
-      <td>0.212356</td>
-      <td>0.360841</td>
-      <td>0.854415</td>
-      <td>1.066770</td>
+      <td>0.983755</td>
+      <td>0.332571</td>
+      <td>0.453219</td>
+      <td>1.436974</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>0.063695</td>
-      <td>0.234309</td>
-      <td>0.493581</td>
-      <td>0.557275</td>
+      <td>0.029979</td>
+      <td>0.527705</td>
+      <td>0.117870</td>
+      <td>0.147849</td>
     </tr>
     <tr>
       <th>j</th>
-      <td>0.691034</td>
-      <td>0.700191</td>
-      <td>0.178511</td>
-      <td>0.869545</td>
+      <td>0.644300</td>
+      <td>0.765718</td>
+      <td>0.452020</td>
+      <td>1.096320</td>
     </tr>
   </tbody>
 </table>
@@ -3901,73 +3920,73 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.176082</td>
-      <td>0.214473</td>
-      <td>0.500654</td>
-      <td>0.645256</td>
+      <td>0.008715</td>
+      <td>0.717846</td>
+      <td>0.653049</td>
+      <td>0.659624</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.171823</td>
-      <td>0.813718</td>
-      <td>0.707145</td>
-      <td>0.818118</td>
+      <td>0.372600</td>
+      <td>0.822805</td>
+      <td>0.766688</td>
+      <td>0.950697</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>0.372345</td>
-      <td>0.139735</td>
-      <td>0.572863</td>
-      <td>0.836864</td>
+      <td>0.184086</td>
+      <td>0.391793</td>
+      <td>0.792014</td>
+      <td>0.890863</td>
     </tr>
     <tr>
       <th>d</th>
-      <td>0.096836</td>
-      <td>0.687039</td>
-      <td>0.024818</td>
-      <td>0.121507</td>
+      <td>0.637952</td>
+      <td>0.779298</td>
+      <td>0.726995</td>
+      <td>0.997887</td>
     </tr>
     <tr>
       <th>e</th>
-      <td>0.633678</td>
-      <td>0.399487</td>
-      <td>0.699284</td>
-      <td>0.993945</td>
+      <td>0.192745</td>
+      <td>0.711608</td>
+      <td>0.418459</td>
+      <td>0.585670</td>
     </tr>
     <tr>
       <th>f</th>
-      <td>0.690081</td>
-      <td>0.065205</td>
-      <td>0.486341</td>
-      <td>0.954952</td>
+      <td>0.717174</td>
+      <td>0.401817</td>
+      <td>0.359120</td>
+      <td>0.919601</td>
     </tr>
     <tr>
       <th>g</th>
-      <td>0.527700</td>
-      <td>0.654462</td>
-      <td>0.072928</td>
-      <td>0.588242</td>
+      <td>0.746495</td>
+      <td>0.799531</td>
+      <td>0.450095</td>
+      <td>0.966095</td>
     </tr>
     <tr>
       <th>h</th>
-      <td>0.210763</td>
-      <td>0.353061</td>
-      <td>0.754187</td>
-      <td>0.875645</td>
+      <td>0.832583</td>
+      <td>0.326474</td>
+      <td>0.437862</td>
+      <td>0.991059</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>0.063652</td>
-      <td>0.232171</td>
-      <td>0.473782</td>
-      <td>0.528876</td>
+      <td>0.029975</td>
+      <td>0.503552</td>
+      <td>0.117597</td>
+      <td>0.147311</td>
     </tr>
     <tr>
       <th>j</th>
-      <td>0.637334</td>
-      <td>0.644364</td>
-      <td>0.177564</td>
-      <td>0.764035</td>
+      <td>0.600639</td>
+      <td>0.693055</td>
+      <td>0.436784</td>
+      <td>0.889532</td>
     </tr>
   </tbody>
 </table>
@@ -4030,45 +4049,45 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>2018-01-31</th>
-      <td>0.416533</td>
-      <td>-0.590950</td>
-      <td>0.619436</td>
-      <td>-0.950175</td>
+      <td>-1.049429</td>
+      <td>-0.067474</td>
+      <td>0.255769</td>
+      <td>-1.584511</td>
     </tr>
     <tr>
       <th>2018-02-28</th>
-      <td>0.148206</td>
-      <td>0.812507</td>
-      <td>0.070332</td>
-      <td>0.412774</td>
+      <td>-0.884022</td>
+      <td>0.693010</td>
+      <td>-1.774997</td>
+      <td>-0.739918</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
-      <td>0.153455</td>
-      <td>1.137626</td>
+      <td>0.086124</td>
+      <td>0.122475</td>
       <td>NaN</td>
-      <td>0.268800</td>
+      <td>0.083177</td>
     </tr>
     <tr>
       <th>2018-04-30</th>
-      <td>-1.980725</td>
-      <td>-0.412699</td>
-      <td>0.064312</td>
-      <td>0.478362</td>
+      <td>0.624674</td>
+      <td>0.334263</td>
+      <td>2.250720</td>
+      <td>0.280704</td>
     </tr>
     <tr>
       <th>2018-05-31</th>
-      <td>-1.257698</td>
-      <td>0.200349</td>
-      <td>2.213652</td>
-      <td>-0.130259</td>
+      <td>0.921022</td>
+      <td>0.323676</td>
+      <td>-1.639189</td>
+      <td>-1.520628</td>
     </tr>
     <tr>
       <th>2018-06-30</th>
-      <td>0.604488</td>
-      <td>-0.928039</td>
-      <td>0.018621</td>
-      <td>-0.809128</td>
+      <td>-0.826815</td>
+      <td>-1.029765</td>
+      <td>1.204293</td>
+      <td>0.805144</td>
     </tr>
   </tbody>
 </table>
@@ -4121,24 +4140,24 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>2018-01-31</th>
-      <td>0</td>
-      <td>-0.590950</td>
-      <td>0.619436</td>
-      <td>-0.950175</td>
+      <td>-1</td>
+      <td>-0.067474</td>
+      <td>0.255769</td>
+      <td>-1.584511</td>
     </tr>
     <tr>
       <th>2018-02-28</th>
       <td>0</td>
-      <td>0.812507</td>
-      <td>0.070332</td>
-      <td>0.412774</td>
+      <td>0.693010</td>
+      <td>-1.774997</td>
+      <td>-0.739918</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
       <td>0</td>
-      <td>1.137626</td>
+      <td>0.122475</td>
       <td>NaN</td>
-      <td>0.268800</td>
+      <td>0.083177</td>
     </tr>
   </tbody>
 </table>
@@ -4185,52 +4204,52 @@ Name: Population, dtype: float64
     </tr>
     <tr>
       <th>mean</th>
-      <td>-0.333333</td>
-      <td>0.036466</td>
-      <td>0.597271</td>
-      <td>-0.121604</td>
+      <td>-0.166667</td>
+      <td>0.062697</td>
+      <td>0.059319</td>
+      <td>-0.446005</td>
     </tr>
     <tr>
       <th>std</th>
-      <td>0.516398</td>
-      <td>0.820649</td>
-      <td>0.936713</td>
-      <td>0.625656</td>
+      <td>0.408248</td>
+      <td>0.592139</td>
+      <td>1.760784</td>
+      <td>0.991051</td>
     </tr>
     <tr>
       <th>min</th>
       <td>-1.000000</td>
-      <td>-0.928039</td>
-      <td>0.018621</td>
-      <td>-0.950175</td>
+      <td>-1.029765</td>
+      <td>-1.774997</td>
+      <td>-1.584511</td>
     </tr>
     <tr>
       <th>25%</th>
-      <td>-0.750000</td>
-      <td>-0.546387</td>
-      <td>0.064312</td>
-      <td>-0.639411</td>
+      <td>0.000000</td>
+      <td>-0.019987</td>
+      <td>-1.639189</td>
+      <td>-1.325450</td>
     </tr>
     <tr>
       <th>50%</th>
       <td>0.000000</td>
-      <td>-0.106175</td>
-      <td>0.070332</td>
-      <td>0.069271</td>
+      <td>0.223075</td>
+      <td>0.255769</td>
+      <td>-0.328370</td>
     </tr>
     <tr>
       <th>75%</th>
       <td>0.000000</td>
-      <td>0.659467</td>
-      <td>0.619436</td>
-      <td>0.376781</td>
+      <td>0.331616</td>
+      <td>1.204293</td>
+      <td>0.231322</td>
     </tr>
     <tr>
       <th>max</th>
       <td>0.000000</td>
-      <td>1.137626</td>
-      <td>2.213652</td>
-      <td>0.478362</td>
+      <td>0.693010</td>
+      <td>2.250720</td>
+      <td>0.805144</td>
     </tr>
   </tbody>
 </table>
@@ -4276,46 +4295,46 @@ Name: Population, dtype: float64
   </thead>
   <tbody>
     <tr>
-      <th>2018-06-30</th>
-      <td>0</td>
-      <td>-0.928039</td>
-      <td>0.018621</td>
-      <td>-0.809128</td>
-    </tr>
-    <tr>
-      <th>2018-04-30</th>
-      <td>-1</td>
-      <td>-0.412699</td>
-      <td>0.064312</td>
-      <td>0.478362</td>
-    </tr>
-    <tr>
       <th>2018-02-28</th>
       <td>0</td>
-      <td>0.812507</td>
-      <td>0.070332</td>
-      <td>0.412774</td>
-    </tr>
-    <tr>
-      <th>2018-01-31</th>
-      <td>0</td>
-      <td>-0.590950</td>
-      <td>0.619436</td>
-      <td>-0.950175</td>
+      <td>0.693010</td>
+      <td>-1.774997</td>
+      <td>-0.739918</td>
     </tr>
     <tr>
       <th>2018-05-31</th>
+      <td>0</td>
+      <td>0.323676</td>
+      <td>-1.639189</td>
+      <td>-1.520628</td>
+    </tr>
+    <tr>
+      <th>2018-01-31</th>
       <td>-1</td>
-      <td>0.200349</td>
-      <td>2.213652</td>
-      <td>-0.130259</td>
+      <td>-0.067474</td>
+      <td>0.255769</td>
+      <td>-1.584511</td>
+    </tr>
+    <tr>
+      <th>2018-06-30</th>
+      <td>0</td>
+      <td>-1.029765</td>
+      <td>1.204293</td>
+      <td>0.805144</td>
+    </tr>
+    <tr>
+      <th>2018-04-30</th>
+      <td>0</td>
+      <td>0.334263</td>
+      <td>2.250720</td>
+      <td>0.280704</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
       <td>0</td>
-      <td>1.137626</td>
+      <td>0.122475</td>
       <td>NaN</td>
-      <td>0.268800</td>
+      <td>0.083177</td>
     </tr>
   </tbody>
 </table>
@@ -4359,45 +4378,45 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>2018-01-31</th>
-      <td>0</td>
-      <td>-0.590950</td>
-      <td>0.619436</td>
-      <td>-0.950175</td>
+      <td>-1</td>
+      <td>-0.067474</td>
+      <td>0.255769</td>
+      <td>-1.584511</td>
     </tr>
     <tr>
       <th>2018-02-28</th>
       <td>0</td>
-      <td>0.812507</td>
-      <td>0.070332</td>
-      <td>0.412774</td>
+      <td>0.693010</td>
+      <td>-1.774997</td>
+      <td>-0.739918</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
       <td>0</td>
-      <td>1.137626</td>
+      <td>0.122475</td>
       <td>NaN</td>
-      <td>0.268800</td>
+      <td>0.083177</td>
     </tr>
     <tr>
       <th>2018-04-30</th>
-      <td>-1</td>
-      <td>-0.412699</td>
-      <td>0.064312</td>
-      <td>0.478362</td>
+      <td>0</td>
+      <td>0.334263</td>
+      <td>2.250720</td>
+      <td>0.280704</td>
     </tr>
     <tr>
       <th>2018-05-31</th>
-      <td>-1</td>
-      <td>0.200349</td>
-      <td>2.213652</td>
-      <td>-0.130259</td>
+      <td>0</td>
+      <td>0.323676</td>
+      <td>-1.639189</td>
+      <td>-1.520628</td>
     </tr>
     <tr>
       <th>2018-06-30</th>
       <td>0</td>
-      <td>-0.928039</td>
-      <td>0.018621</td>
-      <td>-0.809128</td>
+      <td>-1.029765</td>
+      <td>1.204293</td>
+      <td>0.805144</td>
     </tr>
   </tbody>
 </table>
@@ -4436,46 +4455,46 @@ Name: Population, dtype: float64
   </thead>
   <tbody>
     <tr>
-      <th>2018-06-30</th>
-      <td>0</td>
-      <td>-0.928039</td>
-      <td>0.018621</td>
-      <td>-0.809128</td>
-    </tr>
-    <tr>
-      <th>2018-04-30</th>
-      <td>-1</td>
-      <td>-0.412699</td>
-      <td>0.064312</td>
-      <td>0.478362</td>
-    </tr>
-    <tr>
       <th>2018-02-28</th>
       <td>0</td>
-      <td>0.812507</td>
-      <td>0.070332</td>
-      <td>0.412774</td>
-    </tr>
-    <tr>
-      <th>2018-01-31</th>
-      <td>0</td>
-      <td>-0.590950</td>
-      <td>0.619436</td>
-      <td>-0.950175</td>
+      <td>0.693010</td>
+      <td>-1.774997</td>
+      <td>-0.739918</td>
     </tr>
     <tr>
       <th>2018-05-31</th>
+      <td>0</td>
+      <td>0.323676</td>
+      <td>-1.639189</td>
+      <td>-1.520628</td>
+    </tr>
+    <tr>
+      <th>2018-01-31</th>
       <td>-1</td>
-      <td>0.200349</td>
-      <td>2.213652</td>
-      <td>-0.130259</td>
+      <td>-0.067474</td>
+      <td>0.255769</td>
+      <td>-1.584511</td>
+    </tr>
+    <tr>
+      <th>2018-06-30</th>
+      <td>0</td>
+      <td>-1.029765</td>
+      <td>1.204293</td>
+      <td>0.805144</td>
+    </tr>
+    <tr>
+      <th>2018-04-30</th>
+      <td>0</td>
+      <td>0.334263</td>
+      <td>2.250720</td>
+      <td>0.280704</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
       <td>0</td>
-      <td>1.137626</td>
+      <td>0.122475</td>
       <td>NaN</td>
-      <td>0.268800</td>
+      <td>0.083177</td>
     </tr>
   </tbody>
 </table>
@@ -4492,7 +4511,7 @@ Name: Population, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8125067948286447
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.06747397125212845
 </pre></div>
 </div>
 </div>
@@ -4505,7 +4524,7 @@ Name: Population, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.27306955623190177
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.2953882346084447
 </pre></div>
 </div>
 </div>
@@ -4548,78 +4567,78 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>-0.147540</td>
-      <td>-0.197319</td>
+      <td>-0.869192</td>
+      <td>0.101886</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-0.967646</td>
-      <td>0.245437</td>
+      <td>0.746935</td>
+      <td>-0.445300</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.900733</td>
-      <td>0.186392</td>
+      <td>0.301697</td>
+      <td>0.089051</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.155415</td>
-      <td>0.664628</td>
+      <td>-0.138237</td>
+      <td>0.583014</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>-0.258989</td>
-      <td>-0.788070</td>
+      <td>-0.095503</td>
+      <td>0.484137</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>-0.190579</td>
-      <td>0.777428</td>
+      <td>-0.666888</td>
+      <td>0.553741</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>-0.189576</td>
-      <td>-0.728302</td>
+      <td>0.725035</td>
+      <td>-0.352648</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>-0.279082</td>
-      <td>0.820522</td>
+      <td>0.463302</td>
+      <td>-0.580658</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.663475</td>
-      <td>0.689140</td>
+      <td>0.543401</td>
+      <td>-0.020245</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>-0.122979</td>
-      <td>-0.423592</td>
+      <td>-0.961945</td>
+      <td>-0.628275</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>-0.679341</td>
-      <td>-0.879311</td>
+      <td>0.777578</td>
+      <td>-0.781395</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>-0.400706</td>
-      <td>0.960900</td>
+      <td>-0.335045</td>
+      <td>-0.728813</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>0.412062</td>
-      <td>-0.004664</td>
+      <td>0.272668</td>
+      <td>-0.122356</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>0.931227</td>
-      <td>0.412204</td>
+      <td>-0.795507</td>
+      <td>-0.306234</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>-0.581775</td>
-      <td>0.847052</td>
+      <td>-0.112119</td>
+      <td>-0.675868</td>
     </tr>
   </tbody>
 </table>
@@ -4661,78 +4680,78 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.147540</td>
-      <td>0.197319</td>
+      <td>0.869192</td>
+      <td>0.101886</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.967646</td>
-      <td>0.245437</td>
+      <td>0.746935</td>
+      <td>0.445300</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.900733</td>
-      <td>0.186392</td>
+      <td>0.301697</td>
+      <td>0.089051</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.155415</td>
-      <td>0.664628</td>
+      <td>0.138237</td>
+      <td>0.583014</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.258989</td>
-      <td>0.788070</td>
+      <td>0.095503</td>
+      <td>0.484137</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.190579</td>
-      <td>0.777428</td>
+      <td>0.666888</td>
+      <td>0.553741</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.189576</td>
-      <td>0.728302</td>
+      <td>0.725035</td>
+      <td>0.352648</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.279082</td>
-      <td>0.820522</td>
+      <td>0.463302</td>
+      <td>0.580658</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.663475</td>
-      <td>0.689140</td>
+      <td>0.543401</td>
+      <td>0.020245</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>0.122979</td>
-      <td>0.423592</td>
+      <td>0.961945</td>
+      <td>0.628275</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>0.679341</td>
-      <td>0.879311</td>
+      <td>0.777578</td>
+      <td>0.781395</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>0.400706</td>
-      <td>0.960900</td>
+      <td>0.335045</td>
+      <td>0.728813</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>0.412062</td>
-      <td>0.004664</td>
+      <td>0.272668</td>
+      <td>0.122356</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>0.931227</td>
-      <td>0.412204</td>
+      <td>0.795507</td>
+      <td>0.306234</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>0.581775</td>
-      <td>0.847052</td>
+      <td>0.112119</td>
+      <td>0.675868</td>
     </tr>
   </tbody>
 </table>
@@ -4782,63 +4801,63 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.197319</td>
+      <td>0.101886</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.245437</td>
+      <td>0.445300</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.186392</td>
+      <td>0.089051</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.664628</td>
+      <td>0.583014</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.788070</td>
+      <td>0.484137</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.777428</td>
+      <td>0.553741</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.728302</td>
+      <td>0.352648</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.820522</td>
+      <td>0.580658</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.689140</td>
+      <td>0.020245</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>0.423592</td>
+      <td>0.628275</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>0.879311</td>
+      <td>0.781395</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>0.960900</td>
+      <td>0.728813</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>0.004664</td>
+      <td>0.122356</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>0.412204</td>
+      <td>0.306234</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>0.847052</td>
+      <td>0.675868</td>
     </tr>
   </tbody>
 </table>
