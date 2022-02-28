@@ -1,9 +1,14 @@
 (resources)=
+
 # Resources
 
 Please suggest pull requests with useful websites and PDFs that you find during the semester.
 
 ## Python
+
+### Course-related
+
+- [Assignments' Repository](https://github.com/sagol-python-for-neuroscientists/course_site_2022)
 
 ### Basics
 
