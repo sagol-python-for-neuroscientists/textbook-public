@@ -1,7 +1,7 @@
 # Python for Neuroscientists
 
 - [Course book](https://sagol-python-for-neuroscientists.github.io/textbook-public/intro.html)
-- [Homework assignments repository](https://github.com/sagol-python-for-neuroscientists/course_site_2021.git)
+- [Homework assignments repository](https://github.com/sagol-python-for-neuroscientists/course_site_2022.git)
 
 For any questions, feel free to contact us by:
 
