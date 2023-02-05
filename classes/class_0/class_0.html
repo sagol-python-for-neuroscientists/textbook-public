@@ -134,11 +134,6 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../class_3/class_3.html">
-     Class 3: More OOP and Exception Handling
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../class_4/class_4.html">
      Class 4: The Scientific Stack - Part I:
      <code class="docutils literal notranslate">
@@ -1455,9 +1450,10 @@ It might seem like a dramatic difference from your programming language of choic
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">Input In [35],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">35</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># But</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Notice the &quot;ValueError&quot; exception we received, one of many exceptions we&#39;ll encounter...</span>
 
 <span class="ne">ValueError</span>: could not convert string to float: &#39;Hello, world!&#39;
 </pre></div>
@@ -1481,7 +1477,7 @@ It might seem like a dramatic difference from your programming language of choic
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multiprint</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="n">repetitions</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Prints the *statement* multiplied by *repetitions* &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Prints the *statement* multiplied by *repetitions* &quot;&quot;&quot;</span>
     <span class="n">multistatement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">*</span> <span class="n">repetitions</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">multistatement</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">multistatement</span>
@@ -1579,7 +1575,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7fe8088370d0&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f4af892b790&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1643,9 +1639,9 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The original list:
-[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7fe8088370d0&gt;, -100]
+[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f4af892b790&gt;, -100]
 l[0]: 1
-l[5]: &lt;function always_return_2 at 0x7fe8088370d0&gt;
+l[5]: &lt;function always_return_2 at 0x7f4af892b790&gt;
 l[0:2]: [1, &#39;2&#39;]
 </pre></div>
 </div>
@@ -1659,7 +1655,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7fe8088370d0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7f4af892b790&gt;
 </pre></div>
 </div>
 </div>
@@ -1739,7 +1735,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7fe8088370d0&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7f4af892b790&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
 </pre></div>
 </div>
 </div>
@@ -1752,7 +1748,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7fe8088370d0&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7f4af892b790&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1793,8 +1789,9 @@ l[0:2]: [1, &#39;2&#39;]
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [56],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">a_tuple</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">56</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">a_tuple</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># immutable!</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># So .append() doesn&#39;t work, for example. Once created they will remain constant.</span>
 
 <span class="ne">TypeError</span>: &#39;tuple&#39; object does not support item assignment
 </pre></div>
@@ -1936,15 +1933,16 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;c&#39;, &#39;e&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;e&#39;, &#39;c&#39;}
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [63],</span> in <span class="ni">&lt;cell line: 6&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">63</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">set1</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">set2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">}</span>
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="nb">print</span><span class="p">(</span><span class="n">set2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Unordered!</span>
 
 <span class="ne">TypeError</span>: &#39;set&#39; object is not subscriptable
 </pre></div>
@@ -2000,7 +1998,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [66],</span> in <span class="ni">&lt;cell line: 6&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">66</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">set5</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Mutable types can&#39;t be inserted to a set</span>
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">set5</span><span class="o">.</span><span class="n">add</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
@@ -2069,7 +2067,7 @@ list_without_dups = list(set(list_with_dups))
 <h3>Exercise 1: The Enigma<a class="headerlink" href="#exercise-1-the-enigma" title="Permalink to this headline">¶</a></h3>
 <p>The Enigma code worked by subtituting each letter with a different one. Write an encoder function which receives the letters to encode and the pairs of letters that are used for the code. The function’s signature should look something like:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">enigma_code</span><span class="p">(</span><span class="n">letters</span><span class="p">,</span> <span class="n">table</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Encode\decode the letters using the table. </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Encode\decode the letters using the table. </span>
 <span class="sd">    </span>
 <span class="sd">    If a letter in letters isn&#39;t found in table,</span>
 <span class="sd">    None is returned.</span>
@@ -2094,7 +2092,7 @@ list_without_dups = list(set(list_with_dups))
 <div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">enigma_code</span><span class="p">(</span><span class="n">letters</span><span class="p">,</span> <span class="n">table</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Encode\decode the letters using the table. </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Encode\decode the letters using the table. </span>
 <span class="sd">    </span>
 <span class="sd">    If a letter in letters isn&#39;t found in table,</span>
 <span class="sd">    None is returned.</span>
@@ -2126,7 +2124,7 @@ list_without_dups = list(set(list_with_dups))
 <div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">slicer</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Slices the given list into two parts.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Slices the given list into two parts.</span>
 <span class="sd">    </span>
 <span class="sd">    If the number of elements is even, the first list will always</span>
 <span class="sd">    be longer.</span>

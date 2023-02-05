@@ -134,11 +134,6 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../class_3/class_3.html">
-     Class 3: More OOP and Exception Handling
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../class_4/class_4.html">
      Class 4: The Scientific Stack - Part I:
      <code class="docutils literal notranslate">
@@ -1042,7 +1037,7 @@ c 20
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a list of items from 0 to n.</span>
 <span class="sd">    </span>
 <span class="sd">    Parameters</span>
@@ -1082,7 +1077,7 @@ c 20
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StopIteration</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
-<span class="nn">Input In [8],</span> in <span class="ni">&lt;cell line: 9&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">9</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">new_range</span><span class="p">))</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">new_range</span><span class="p">))</span>
 <span class="ne">----&gt; </span><span class="mi">9</span> <span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">new_range</span><span class="p">))</span>
@@ -1128,7 +1123,7 @@ c 20
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object my_range at 0x7f7664130cf0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object my_range at 0x7f9108088f20&gt;
 </pre></div>
 </div>
 </div>
@@ -1143,7 +1138,7 @@ c 20
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [11],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">range2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
 
 <span class="ne">TypeError</span>: &#39;generator&#39; object is not subscriptable
@@ -1171,7 +1166,7 @@ c 20
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StopIteration</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
-<span class="nn">Input In [13],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">next</span><span class="p">(</span><span class="n">loop_range</span><span class="p">)</span>
 
 <span class="ne">StopIteration</span>: 
@@ -1231,7 +1226,7 @@ False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object &lt;genexpr&gt; at 0x7f76641305f0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object &lt;genexpr&gt; at 0x7f9108088ba0&gt;
 </pre></div>
 </div>
 </div>
@@ -1276,7 +1271,7 @@ Solution<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">generate_n_fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generates the first n Fibonacci numbers.</span>
 <span class="sd">    </span>
 <span class="sd">    Parameters</span>
@@ -1301,7 +1296,7 @@ Solution<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">generate_fibonacci</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Fibonacci sequence generator.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
@@ -1343,8 +1338,8 @@ Solution<div class="summary-down docutils">
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [20],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">f</span><span class="p">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">f</span><span class="p">()</span>  <span class="c1"># doesn&#39;t work - we have one required argument to the function</span>
 
 <span class="ne">TypeError</span>: f() missing 1 required positional argument: &#39;required_argument&#39;
 </pre></div>
@@ -1496,7 +1491,7 @@ kw2 b
     <span class="k">def</span> <span class="nf">inner_func</span><span class="p">(</span><span class="n">argument</span><span class="p">):</span>
         <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">argument</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;It tooks the code </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="si">}</span><span class="s2"> milliseconds to run.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;It tooks the code </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">start_time</span><span class="si">}</span><span class="s2"> milliseconds to run.&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">result</span>
     <span class="k">return</span> <span class="n">inner_func</span>
 </pre></div>
@@ -1507,7 +1502,7 @@ kw2 b
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Runs the func functions and prints &#39;hi&#39; at the end &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Runs the func functions and prints &#39;hi&#39; at the end &quot;&quot;&quot;</span>
     <span class="n">func</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hi&quot;</span><span class="p">)</span>
     
@@ -1572,7 +1567,7 @@ print_hello
     <span class="k">def</span> <span class="nf">inner_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;It tooks the code </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="si">}</span><span class="s2"> milliseconds to run.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;It tooks the code </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">start_time</span><span class="si">}</span><span class="s2"> milliseconds to run.&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">result</span>
     <span class="k">return</span> <span class="n">inner_func</span>
 </pre></div>
@@ -1615,8 +1610,8 @@ print_hello
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>It tooks the code 9.5367431640625e-07 milliseconds to run.
-It tooks the code 1.1920928955078125e-06 milliseconds to run.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>It tooks the code 7.152557373046875e-07 milliseconds to run.
+It tooks the code 7.152557373046875e-07 milliseconds to run.
 </pre></div>
 </div>
 </div>
@@ -1686,7 +1681,7 @@ It tooks the code 1.1920928955078125e-06 milliseconds to run.
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">Input In [37],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">37</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">one</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">two</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">])</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;three&#39;</span><span class="p">])</span>
@@ -1896,11 +1891,11 @@ g
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Numpy:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>83 ms ± 1.04 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>63.9 ms ± 14.3 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 Numba:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>133 ms ± 3.43 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>144 ms ± 105 µs per loop (mean ± std. dev. of 7 runs, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -1939,11 +1934,11 @@ Numba:
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Numpy:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>84 ms ± 2.43 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>63.9 ms ± 29.6 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 Numba:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>128 ms ± 2.07 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>144 ms ± 704 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -1974,7 +1969,7 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>68.1 ms ± 1.28 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>72.7 ms ± 532 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -2040,10 +2035,10 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>34.6 ms ± 555 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30.6 ms ± 24 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.03 ms ± 43 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.7 ms ± 198 ns per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -2064,7 +2059,7 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.38 ms ± 52.9 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.54 ms ± 8.2 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -2094,7 +2089,7 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.59 ms ± 828 µs per loop (mean ± std. dev. of 7 runs, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.81 ms ± 656 µs per loop (mean ± std. dev. of 7 runs, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -2108,30 +2103,30 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/.pyxbld/temp.linux-x86_64-3.8/pyrex/cython_filter_demo/filter_array.c:687:10: fatal error: numpy/arrayobject.h: No such file or directory
-  687 | #include &quot;numpy/arrayobject.h&quot;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/.pyxbld/temp.linux-x86_64-3.8/pyrex/cython_filter_demo/filter_array.c:746:10: fatal error: numpy/arrayobject.h: No such file or directory
+  746 | #include &quot;numpy/arrayobject.h&quot;
       |          ^~~~~~~~~~~~~~~~~~~~~
 compilation terminated.
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">DistutilsExecError</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/unixccompiler.py:117,</span> in <span class="ni">UnixCCompiler._compile</span><span class="nt">(self, obj, src, ext, cc_args, extra_postargs, pp_opts)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/unixccompiler.py:117,</span> in <span class="ni">UnixCCompiler._compile</span><span class="nt">(self, obj, src, ext, cc_args, extra_postargs, pp_opts)</span>
 <span class="g g-Whitespace">    </span><span class="mi">116</span> <span class="k">try</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">117</span>     <span class="bp">self</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="n">compiler_so</span> <span class="o">+</span> <span class="n">cc_args</span> <span class="o">+</span> <span class="p">[</span><span class="n">src</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">obj</span><span class="p">]</span> <span class="o">+</span>
 <span class="g g-Whitespace">    </span><span class="mi">118</span>                <span class="n">extra_postargs</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">119</span> <span class="k">except</span> <span class="n">DistutilsExecError</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/ccompiler.py:910,</span> in <span class="ni">CCompiler.spawn</span><span class="nt">(self, cmd)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/ccompiler.py:910,</span> in <span class="ni">CCompiler.spawn</span><span class="nt">(self, cmd)</span>
 <span class="g g-Whitespace">    </span><span class="mi">909</span> <span class="k">def</span> <span class="nf">spawn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd</span><span class="p">):</span>
 <span class="ne">--&gt; </span><span class="mi">910</span>     <span class="n">spawn</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dry_run</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/spawn.py:36,</span> in <span class="ni">spawn</span><span class="nt">(cmd, search_path, verbose, dry_run)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/spawn.py:36,</span> in <span class="ni">spawn</span><span class="nt">(cmd, search_path, verbose, dry_run)</span>
 <span class="g g-Whitespace">     </span><span class="mi">35</span> <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;posix&#39;</span><span class="p">:</span>
 <span class="ne">---&gt; </span><span class="mi">36</span>     <span class="n">_spawn_posix</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">search_path</span><span class="p">,</span> <span class="n">dry_run</span><span class="o">=</span><span class="n">dry_run</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">37</span> <span class="k">elif</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;nt&#39;</span><span class="p">:</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/spawn.py:157,</span> in <span class="ni">_spawn_posix</span><span class="nt">(cmd, search_path, verbose, dry_run)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/spawn.py:157,</span> in <span class="ni">_spawn_posix</span><span class="nt">(cmd, search_path, verbose, dry_run)</span>
 <span class="g g-Whitespace">    </span><span class="mi">156</span>             <span class="n">cmd</span> <span class="o">=</span> <span class="n">executable</span>
 <span class="ne">--&gt; </span><span class="mi">157</span>         <span class="k">raise</span> <span class="n">DistutilsExecError</span><span class="p">(</span>
 <span class="g g-Whitespace">    </span><span class="mi">158</span>               <span class="s2">&quot;command </span><span class="si">%r</span><span class="s2"> failed with exit status </span><span class="si">%d</span><span class="s2">&quot;</span>
@@ -2143,13 +2138,13 @@ compilation terminated.
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
 <span class="ne">CompileError</span><span class="g g-Whitespace">                              </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyximport/pyximport.py:214,</span> in <span class="ni">load_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, is_package, build_inplace, language_level, so_path)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pyximport/pyximport.py:214,</span> in <span class="ni">load_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, is_package, build_inplace, language_level, so_path)</span>
 <span class="g g-Whitespace">    </span><span class="mi">213</span>         <span class="n">module_name</span> <span class="o">=</span> <span class="n">name</span>
 <span class="ne">--&gt; </span><span class="mi">214</span>     <span class="n">so_path</span> <span class="o">=</span> <span class="n">build_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="n">pyxfilename</span><span class="p">,</span> <span class="n">pyxbuild_dir</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">215</span>                            <span class="n">inplace</span><span class="o">=</span><span class="n">build_inplace</span><span class="p">,</span> <span class="n">language_level</span><span class="o">=</span><span class="n">language_level</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">216</span> <span class="n">mod</span> <span class="o">=</span> <span class="n">imp</span><span class="o">.</span><span class="n">load_dynamic</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">so_path</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyximport/pyximport.py:186,</span> in <span class="ni">build_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, inplace, language_level)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pyximport/pyximport.py:186,</span> in <span class="ni">build_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, inplace, language_level)</span>
 <span class="g g-Whitespace">    </span><span class="mi">185</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">pyxbuild</span>
 <span class="ne">--&gt; </span><span class="mi">186</span> <span class="n">so_path</span> <span class="o">=</span> <span class="n">pyxbuild</span><span class="o">.</span><span class="n">pyx_to_dll</span><span class="p">(</span><span class="n">pyxfilename</span><span class="p">,</span> <span class="n">extension_mod</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">187</span>                               <span class="n">build_in_temp</span><span class="o">=</span><span class="n">build_in_temp</span><span class="p">,</span>
@@ -2159,41 +2154,41 @@ compilation terminated.
 <span class="g g-Whitespace">    </span><span class="mi">191</span>                               <span class="n">reload_support</span><span class="o">=</span><span class="n">pyxargs</span><span class="o">.</span><span class="n">reload_support</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">192</span> <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">so_path</span><span class="p">),</span> <span class="s2">&quot;Cannot find: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">so_path</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyximport/pyxbuild.py:102,</span> in <span class="ni">pyx_to_dll</span><span class="nt">(filename, ext, force_rebuild, build_in_temp, pyxbuild_dir, setup_args, reload_support, inplace)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pyximport/pyxbuild.py:102,</span> in <span class="ni">pyx_to_dll</span><span class="nt">(filename, ext, force_rebuild, build_in_temp, pyxbuild_dir, setup_args, reload_support, inplace)</span>
 <span class="g g-Whitespace">    </span><span class="mi">101</span> <span class="n">obj_build_ext</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">get_command_obj</span><span class="p">(</span><span class="s2">&quot;build_ext&quot;</span><span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">102</span> <span class="n">dist</span><span class="o">.</span><span class="n">run_commands</span><span class="p">()</span>
 <span class="g g-Whitespace">    </span><span class="mi">103</span> <span class="n">so_path</span> <span class="o">=</span> <span class="n">obj_build_ext</span><span class="o">.</span><span class="n">get_outputs</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/dist.py:966,</span> in <span class="ni">Distribution.run_commands</span><span class="nt">(self)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/dist.py:966,</span> in <span class="ni">Distribution.run_commands</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">965</span> <span class="k">for</span> <span class="n">cmd</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">commands</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">966</span>     <span class="bp">self</span><span class="o">.</span><span class="n">run_command</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/dist.py:985,</span> in <span class="ni">Distribution.run_command</span><span class="nt">(self, command)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/dist.py:985,</span> in <span class="ni">Distribution.run_command</span><span class="nt">(self, command)</span>
 <span class="g g-Whitespace">    </span><span class="mi">984</span> <span class="n">cmd_obj</span><span class="o">.</span><span class="n">ensure_finalized</span><span class="p">()</span>
 <span class="ne">--&gt; </span><span class="mi">985</span> <span class="n">cmd_obj</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 <span class="g g-Whitespace">    </span><span class="mi">986</span> <span class="bp">self</span><span class="o">.</span><span class="n">have_run</span><span class="p">[</span><span class="n">command</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py:186,</span> in <span class="ni">old_build_ext.run</span><span class="nt">(self)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py:186,</span> in <span class="ni">old_build_ext.run</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">184</span>     <span class="n">optimization</span><span class="o">.</span><span class="n">disable_optimization</span><span class="p">()</span>
 <span class="ne">--&gt; </span><span class="mi">186</span> <span class="n">_build_ext</span><span class="o">.</span><span class="n">build_ext</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/command/build_ext.py:340,</span> in <span class="ni">build_ext.run</span><span class="nt">(self)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/command/build_ext.py:340,</span> in <span class="ni">build_ext.run</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">339</span> <span class="c1"># Now actually compile and link everything.</span>
 <span class="ne">--&gt; </span><span class="mi">340</span> <span class="bp">self</span><span class="o">.</span><span class="n">build_extensions</span><span class="p">()</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py:195,</span> in <span class="ni">old_build_ext.build_extensions</span><span class="nt">(self)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py:195,</span> in <span class="ni">old_build_ext.build_extensions</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">194</span> <span class="c1"># Call original build_extensions</span>
 <span class="ne">--&gt; </span><span class="mi">195</span> <span class="n">_build_ext</span><span class="o">.</span><span class="n">build_ext</span><span class="o">.</span><span class="n">build_extensions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/command/build_ext.py:449,</span> in <span class="ni">build_ext.build_extensions</span><span class="nt">(self)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/command/build_ext.py:449,</span> in <span class="ni">build_ext.build_extensions</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">448</span> <span class="k">else</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">449</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_build_extensions_serial</span><span class="p">()</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/command/build_ext.py:474,</span> in <span class="ni">build_ext._build_extensions_serial</span><span class="nt">(self)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/command/build_ext.py:474,</span> in <span class="ni">build_ext._build_extensions_serial</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">473</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filter_build_errors</span><span class="p">(</span><span class="n">ext</span><span class="p">):</span>
 <span class="ne">--&gt; </span><span class="mi">474</span>     <span class="bp">self</span><span class="o">.</span><span class="n">build_extension</span><span class="p">(</span><span class="n">ext</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/command/build_ext.py:528,</span> in <span class="ni">build_ext.build_extension</span><span class="nt">(self, ext)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/command/build_ext.py:528,</span> in <span class="ni">build_ext.build_extension</span><span class="nt">(self, ext)</span>
 <span class="g g-Whitespace">    </span><span class="mi">526</span>     <span class="n">macros</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">undef</span><span class="p">,))</span>
 <span class="ne">--&gt; </span><span class="mi">528</span> <span class="n">objects</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compiler</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">sources</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">529</span>                                  <span class="n">output_dir</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">build_temp</span><span class="p">,</span>
@@ -2205,12 +2200,12 @@ compilation terminated.
 <span class="g g-Whitespace">    </span><span class="mi">536</span> <span class="c1"># XXX outdated variable, kept here in case third-part code</span>
 <span class="g g-Whitespace">    </span><span class="mi">537</span> <span class="c1"># needs it.</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/ccompiler.py:574,</span> in <span class="ni">CCompiler.compile</span><span class="nt">(self, sources, output_dir, macros, include_dirs, debug, extra_preargs, extra_postargs, depends)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/ccompiler.py:574,</span> in <span class="ni">CCompiler.compile</span><span class="nt">(self, sources, output_dir, macros, include_dirs, debug, extra_preargs, extra_postargs, depends)</span>
 <span class="g g-Whitespace">    </span><span class="mi">573</span>         <span class="k">continue</span>
 <span class="ne">--&gt; </span><span class="mi">574</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_compile</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">ext</span><span class="p">,</span> <span class="n">cc_args</span><span class="p">,</span> <span class="n">extra_postargs</span><span class="p">,</span> <span class="n">pp_opts</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">576</span> <span class="c1"># Return *all* object filenames, not just the ones we just built.</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/unixccompiler.py:120,</span> in <span class="ni">UnixCCompiler._compile</span><span class="nt">(self, obj, src, ext, cc_args, extra_postargs, pp_opts)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/unixccompiler.py:120,</span> in <span class="ni">UnixCCompiler._compile</span><span class="nt">(self, obj, src, ext, cc_args, extra_postargs, pp_opts)</span>
 <span class="g g-Whitespace">    </span><span class="mi">119</span> <span class="k">except</span> <span class="n">DistutilsExecError</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">120</span>     <span class="k">raise</span> <span class="n">CompileError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 
@@ -2219,10 +2214,10 @@ compilation terminated.
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
 <span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="nn">Input In [60],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">60</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">cython_filter_demo</span> <span class="kn">import</span> <span class="n">filter_array</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyximport/pyximport.py:459,</span> in <span class="ni">PyxLoader.load_module</span><span class="nt">(self, fullname)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pyximport/pyximport.py:459,</span> in <span class="ni">PyxLoader.load_module</span><span class="nt">(self, fullname)</span>
 <span class="g g-Whitespace">    </span><span class="mi">456</span>     <span class="n">module</span><span class="o">.</span><span class="n">__path__</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">]</span>
 <span class="g g-Whitespace">    </span><span class="mi">457</span> <span class="k">else</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">458</span>     <span class="c1">#print &quot;MODULE&quot;, fullname</span>
@@ -2232,7 +2227,7 @@ compilation terminated.
 <span class="g g-Whitespace">    </span><span class="mi">462</span>                          <span class="n">language_level</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">language_level</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">463</span> <span class="k">return</span> <span class="n">module</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyximport/pyximport.py:231,</span> in <span class="ni">load_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, is_package, build_inplace, language_level, so_path)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pyximport/pyximport.py:231,</span> in <span class="ni">load_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, is_package, build_inplace, language_level, so_path)</span>
 <span class="g g-Whitespace">    </span><span class="mi">228</span> <span class="n">exc</span> <span class="o">=</span> <span class="ne">ImportError</span><span class="p">(</span><span class="s2">&quot;Building module </span><span class="si">%s</span><span class="s2"> failed: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span>
 <span class="g g-Whitespace">    </span><span class="mi">229</span>     <span class="n">name</span><span class="p">,</span> <span class="n">traceback</span><span class="o">.</span><span class="n">format_exception_only</span><span class="p">(</span><span class="o">*</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[:</span><span class="mi">2</span><span class="p">])))</span>
 <span class="g g-Whitespace">    </span><span class="mi">230</span> <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
@@ -2240,7 +2235,7 @@ compilation terminated.
 <span class="g g-Whitespace">    </span><span class="mi">232</span> <span class="k">else</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">233</span>     <span class="n">exec</span><span class="p">(</span><span class="s2">&quot;raise exc, None, tb&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;exc&#39;</span><span class="p">:</span> <span class="n">exc</span><span class="p">,</span> <span class="s1">&#39;tb&#39;</span><span class="p">:</span> <span class="n">tb</span><span class="p">})</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyximport/pyximport.py:214,</span> in <span class="ni">load_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, is_package, build_inplace, language_level, so_path)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pyximport/pyximport.py:214,</span> in <span class="ni">load_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, is_package, build_inplace, language_level, so_path)</span>
 <span class="g g-Whitespace">    </span><span class="mi">212</span>     <span class="k">else</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">213</span>         <span class="n">module_name</span> <span class="o">=</span> <span class="n">name</span>
 <span class="ne">--&gt; </span><span class="mi">214</span>     <span class="n">so_path</span> <span class="o">=</span> <span class="n">build_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="n">pyxfilename</span><span class="p">,</span> <span class="n">pyxbuild_dir</span><span class="p">,</span>
@@ -2248,7 +2243,7 @@ compilation terminated.
 <span class="g g-Whitespace">    </span><span class="mi">216</span> <span class="n">mod</span> <span class="o">=</span> <span class="n">imp</span><span class="o">.</span><span class="n">load_dynamic</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">so_path</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">217</span> <span class="k">if</span> <span class="n">is_package</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="s1">&#39;__path__&#39;</span><span class="p">):</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyximport/pyximport.py:186,</span> in <span class="ni">build_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, inplace, language_level)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pyximport/pyximport.py:186,</span> in <span class="ni">build_module</span><span class="nt">(name, pyxfilename, pyxbuild_dir, inplace, language_level)</span>
 <span class="g g-Whitespace">    </span><span class="mi">183</span> <span class="n">build_in_temp</span> <span class="o">=</span> <span class="n">sargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;build_in_temp&#39;</span><span class="p">,</span><span class="n">build_in_temp</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">185</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">pyxbuild</span>
 <span class="ne">--&gt; </span><span class="mi">186</span> <span class="n">so_path</span> <span class="o">=</span> <span class="n">pyxbuild</span><span class="o">.</span><span class="n">pyx_to_dll</span><span class="p">(</span><span class="n">pyxfilename</span><span class="p">,</span> <span class="n">extension_mod</span><span class="p">,</span>
@@ -2260,7 +2255,7 @@ compilation terminated.
 <span class="g g-Whitespace">    </span><span class="mi">192</span> <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">so_path</span><span class="p">),</span> <span class="s2">&quot;Cannot find: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">so_path</span>
 <span class="g g-Whitespace">    </span><span class="mi">194</span> <span class="n">junkpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">so_path</span><span class="p">),</span> <span class="n">name</span><span class="o">+</span><span class="s2">&quot;_*&quot;</span><span class="p">)</span> <span class="c1">#very dangerous with --inplace ? yes, indeed, trying to eat my files ;)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pyximport/pyxbuild.py:102,</span> in <span class="ni">pyx_to_dll</span><span class="nt">(filename, ext, force_rebuild, build_in_temp, pyxbuild_dir, setup_args, reload_support, inplace)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pyximport/pyxbuild.py:102,</span> in <span class="ni">pyx_to_dll</span><span class="nt">(filename, ext, force_rebuild, build_in_temp, pyxbuild_dir, setup_args, reload_support, inplace)</span>
 <span class="g g-Whitespace">    </span><span class="mi">100</span> <span class="k">try</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">101</span>     <span class="n">obj_build_ext</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">get_command_obj</span><span class="p">(</span><span class="s2">&quot;build_ext&quot;</span><span class="p">)</span>
 <span class="ne">--&gt; </span><span class="mi">102</span>     <span class="n">dist</span><span class="o">.</span><span class="n">run_commands</span><span class="p">()</span>
@@ -2270,47 +2265,47 @@ compilation terminated.
 <span class="g g-Whitespace">    </span><span class="mi">106</span>         <span class="c1"># when --inplace ; see http://bugs.python.org/issue5977</span>
 <span class="g g-Whitespace">    </span><span class="mi">107</span>         <span class="c1"># workaround:</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/dist.py:966,</span> in <span class="ni">Distribution.run_commands</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">961</span> <span class="sd">&quot;&quot;&quot;Run each command that was seen on the setup script command line.</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/dist.py:966,</span> in <span class="ni">Distribution.run_commands</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">961</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Run each command that was seen on the setup script command line.</span>
 <span class="g g-Whitespace">    </span><span class="mi">962</span><span class="sd"> Uses the list of commands found and cache of command objects</span>
 <span class="g g-Whitespace">    </span><span class="mi">963</span><span class="sd"> created by &#39;get_command_obj()&#39;.</span>
 <span class="g g-Whitespace">    </span><span class="mi">964</span><span class="sd"> &quot;&quot;&quot;</span>
 <span class="g g-Whitespace">    </span><span class="mi">965</span> <span class="k">for</span> <span class="n">cmd</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">commands</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">966</span>     <span class="bp">self</span><span class="o">.</span><span class="n">run_command</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/dist.py:985,</span> in <span class="ni">Distribution.run_command</span><span class="nt">(self, command)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/dist.py:985,</span> in <span class="ni">Distribution.run_command</span><span class="nt">(self, command)</span>
 <span class="g g-Whitespace">    </span><span class="mi">983</span> <span class="n">cmd_obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_command_obj</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">984</span> <span class="n">cmd_obj</span><span class="o">.</span><span class="n">ensure_finalized</span><span class="p">()</span>
 <span class="ne">--&gt; </span><span class="mi">985</span> <span class="n">cmd_obj</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 <span class="g g-Whitespace">    </span><span class="mi">986</span> <span class="bp">self</span><span class="o">.</span><span class="n">have_run</span><span class="p">[</span><span class="n">command</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py:186,</span> in <span class="ni">old_build_ext.run</span><span class="nt">(self)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py:186,</span> in <span class="ni">old_build_ext.run</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">182</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cython_gdb</span> <span class="ow">or</span> <span class="p">[</span><span class="mi">1</span> <span class="k">for</span> <span class="n">ext</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">extensions</span>
 <span class="g g-Whitespace">    </span><span class="mi">183</span>                              <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">ext</span><span class="p">,</span> <span class="s1">&#39;cython_gdb&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)]:</span>
 <span class="g g-Whitespace">    </span><span class="mi">184</span>     <span class="n">optimization</span><span class="o">.</span><span class="n">disable_optimization</span><span class="p">()</span>
 <span class="ne">--&gt; </span><span class="mi">186</span> <span class="n">_build_ext</span><span class="o">.</span><span class="n">build_ext</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/command/build_ext.py:340,</span> in <span class="ni">build_ext.run</span><span class="nt">(self)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/command/build_ext.py:340,</span> in <span class="ni">build_ext.run</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">337</span>     <span class="bp">self</span><span class="o">.</span><span class="n">compiler</span><span class="o">.</span><span class="n">set_link_objects</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">link_objects</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">339</span> <span class="c1"># Now actually compile and link everything.</span>
 <span class="ne">--&gt; </span><span class="mi">340</span> <span class="bp">self</span><span class="o">.</span><span class="n">build_extensions</span><span class="p">()</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py:195,</span> in <span class="ni">old_build_ext.build_extensions</span><span class="nt">(self)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/Cython/Distutils/old_build_ext.py:195,</span> in <span class="ni">old_build_ext.build_extensions</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">193</span>     <span class="n">ext</span><span class="o">.</span><span class="n">sources</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cython_sources</span><span class="p">(</span><span class="n">ext</span><span class="o">.</span><span class="n">sources</span><span class="p">,</span> <span class="n">ext</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">194</span> <span class="c1"># Call original build_extensions</span>
 <span class="ne">--&gt; </span><span class="mi">195</span> <span class="n">_build_ext</span><span class="o">.</span><span class="n">build_ext</span><span class="o">.</span><span class="n">build_extensions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/command/build_ext.py:449,</span> in <span class="ni">build_ext.build_extensions</span><span class="nt">(self)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/command/build_ext.py:449,</span> in <span class="ni">build_ext.build_extensions</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">447</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_build_extensions_parallel</span><span class="p">()</span>
 <span class="g g-Whitespace">    </span><span class="mi">448</span> <span class="k">else</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">449</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_build_extensions_serial</span><span class="p">()</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/command/build_ext.py:474,</span> in <span class="ni">build_ext._build_extensions_serial</span><span class="nt">(self)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/command/build_ext.py:474,</span> in <span class="ni">build_ext._build_extensions_serial</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">472</span> <span class="k">for</span> <span class="n">ext</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">extensions</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">473</span>     <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filter_build_errors</span><span class="p">(</span><span class="n">ext</span><span class="p">):</span>
 <span class="ne">--&gt; </span><span class="mi">474</span>         <span class="bp">self</span><span class="o">.</span><span class="n">build_extension</span><span class="p">(</span><span class="n">ext</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/command/build_ext.py:528,</span> in <span class="ni">build_ext.build_extension</span><span class="nt">(self, ext)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/command/build_ext.py:528,</span> in <span class="ni">build_ext.build_extension</span><span class="nt">(self, ext)</span>
 <span class="g g-Whitespace">    </span><span class="mi">525</span> <span class="k">for</span> <span class="n">undef</span> <span class="ow">in</span> <span class="n">ext</span><span class="o">.</span><span class="n">undef_macros</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">526</span>     <span class="n">macros</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">undef</span><span class="p">,))</span>
 <span class="ne">--&gt; </span><span class="mi">528</span> <span class="n">objects</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compiler</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">sources</span><span class="p">,</span>
@@ -2324,14 +2319,14 @@ compilation terminated.
 <span class="g g-Whitespace">    </span><span class="mi">537</span> <span class="c1"># needs it.</span>
 <span class="g g-Whitespace">    </span><span class="mi">538</span> <span class="bp">self</span><span class="o">.</span><span class="n">_built_objects</span> <span class="o">=</span> <span class="n">objects</span><span class="p">[:]</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/ccompiler.py:574,</span> in <span class="ni">CCompiler.compile</span><span class="nt">(self, sources, output_dir, macros, include_dirs, debug, extra_preargs, extra_postargs, depends)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/ccompiler.py:574,</span> in <span class="ni">CCompiler.compile</span><span class="nt">(self, sources, output_dir, macros, include_dirs, debug, extra_preargs, extra_postargs, depends)</span>
 <span class="g g-Whitespace">    </span><span class="mi">572</span>     <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">573</span>         <span class="k">continue</span>
 <span class="ne">--&gt; </span><span class="mi">574</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_compile</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">ext</span><span class="p">,</span> <span class="n">cc_args</span><span class="p">,</span> <span class="n">extra_postargs</span><span class="p">,</span> <span class="n">pp_opts</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">576</span> <span class="c1"># Return *all* object filenames, not just the ones we just built.</span>
 <span class="g g-Whitespace">    </span><span class="mi">577</span> <span class="k">return</span> <span class="n">objects</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/distutils/unixccompiler.py:120,</span> in <span class="ni">UnixCCompiler._compile</span><span class="nt">(self, obj, src, ext, cc_args, extra_postargs, pp_opts)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/distutils/unixccompiler.py:120,</span> in <span class="ni">UnixCCompiler._compile</span><span class="nt">(self, obj, src, ext, cc_args, extra_postargs, pp_opts)</span>
 <span class="g g-Whitespace">    </span><span class="mi">117</span>     <span class="bp">self</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="n">compiler_so</span> <span class="o">+</span> <span class="n">cc_args</span> <span class="o">+</span> <span class="p">[</span><span class="n">src</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">obj</span><span class="p">]</span> <span class="o">+</span>
 <span class="g g-Whitespace">    </span><span class="mi">118</span>                <span class="n">extra_postargs</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">119</span> <span class="k">except</span> <span class="n">DistutilsExecError</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
@@ -2351,23 +2346,23 @@ compilation terminated.
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [61],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">61</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;timeit&#39;</span><span class="p">,</span> <span class="s1">&#39;filter_array.filter_larger_cython(rands)&#39;</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py:2294,</span> in <span class="ni">InteractiveShell.run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2292</span>     <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2293</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">2294</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2295</span> <span class="k">return</span> <span class="n">result</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py:2369,</span> in <span class="ni">InteractiveShell.run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2367</span>     <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2368</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2369</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2370</span> <span class="k">return</span> <span class="n">result</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py:1162,</span> in <span class="ni">ExecutionMagics.timeit</span><span class="nt">(self, line, cell, local_ns)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py:1162,</span> in <span class="ni">ExecutionMagics.timeit</span><span class="nt">(self, line, cell, local_ns)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1160</span> <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
 <span class="g g-Whitespace">   </span><span class="mi">1161</span>     <span class="n">number</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="n">index</span>
 <span class="ne">-&gt; </span><span class="mi">1162</span>     <span class="n">time_number</span> <span class="o">=</span> <span class="n">timer</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1163</span>     <span class="k">if</span> <span class="n">time_number</span> <span class="o">&gt;=</span> <span class="mf">0.2</span><span class="p">:</span>
 <span class="g g-Whitespace">   </span><span class="mi">1164</span>         <span class="k">break</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py:156,</span> in <span class="ni">Timer.timeit</span><span class="nt">(self, number)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/IPython/core/magics/execution.py:156,</span> in <span class="ni">Timer.timeit</span><span class="nt">(self, number)</span>
 <span class="g g-Whitespace">    </span><span class="mi">154</span> <span class="n">gc</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span>
 <span class="g g-Whitespace">    </span><span class="mi">155</span> <span class="k">try</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">156</span>     <span class="n">timing</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inner</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="p">)</span>
@@ -2390,7 +2385,7 @@ compilation terminated.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the *n*th Fibonacci sequence element.</span>
 <span class="sd">    </span>
 <span class="sd">    Parameters</span>
@@ -2419,7 +2414,7 @@ compilation terminated.
 
 <span class="nd">@functools</span><span class="o">.</span><span class="n">lru_cache</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the *n*th Fibonacci sequence element.</span>
 <span class="sd">    </span>
 <span class="sd">    Parameters</span>
@@ -2447,7 +2442,7 @@ compilation terminated.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>39.3 µs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>41.1 µs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -2459,7 +2454,7 @@ compilation terminated.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.1 µs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.2 µs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -2497,7 +2492,7 @@ compilation terminated.
 
 
 <span class="k">def</span> <span class="nf">normalize_image</span><span class="p">(</span><span class="n">image</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Receives an image in the form of a numpy array, makes </span>
 <span class="sd">    it positive and normalizes it between 0 and 1.</span>
 <span class="sd">    </span>
@@ -2727,7 +2722,7 @@ compilation terminated.
 
 
 <span class="k">class</span> <span class="nc">Data</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Simple container for DataFrames and their metadata &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Simple container for DataFrames and their metadata &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arr1</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">arr2</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">date</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">ser1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">ser2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">arr2</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">)</span>
@@ -2738,7 +2733,7 @@ compilation terminated.
 
             
 <span class="k">class</span> <span class="nc">ProcessData</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Pipeline to process twin Data instances &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Pipeline to process twin Data instances &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data1</span><span class="p">:</span> <span class="n">Data</span><span class="p">,</span> <span class="n">data2</span><span class="p">:</span> <span class="n">Data</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data1</span> <span class="o">=</span> <span class="n">data1</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data2</span> <span class="o">=</span> <span class="n">data2</span>
@@ -2763,7 +2758,7 @@ compilation terminated.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Data</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Simple container for DataFrames and their metadata &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Simple container for DataFrames and their metadata &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arr1</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">arr2</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">date</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_ser1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_ser2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">arr2</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">)</span>
@@ -2774,7 +2769,7 @@ compilation terminated.
         
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Returns the actual data variables as an iterable&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Returns the actual data variables as an iterable&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_ser1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ser2</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">result</span>
     
@@ -2787,7 +2782,7 @@ compilation terminated.
 
 
 <span class="k">class</span> <span class="nc">DataContainer</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Holds, in order, instances of Data &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Holds, in order, instances of Data &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datas</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_data</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_metadata</span> <span class="o">=</span> <span class="p">{}</span>
@@ -2885,14 +2880,14 @@ AttributeError: can&#39;t set attribute - properties can&#39;t (by default) be c
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ProcessData</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Pipeline to process twin Data instances &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Pipeline to process twin Data instances &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_container</span><span class="p">:</span> <span class="n">DataContainer</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data_container</span> <span class="o">=</span> <span class="n">data_container</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">data_container</span><span class="o">.</span><span class="n">metadata</span>
         
     <span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Mock processing pipeline &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Mock processing pipeline &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;sum&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_container</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
         <span class="n">means</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_container</span><span class="o">.</span><span class="n">data</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">means</span>
@@ -2917,14 +2912,14 @@ AttributeError: can&#39;t set attribute - properties can&#39;t (by default) be c
 
 
 <span class="k">class</span> <span class="nc">Grade</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Represenets a single grade.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_verify_grade</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_verify_grade</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]):</span>
-        <span class="sd">&quot;&quot;&quot;Verifies that the given grade holds up to our standards&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Verifies that the given grade holds up to our standards&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;too low&#39;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
@@ -2949,7 +2944,7 @@ AttributeError: can&#39;t set attribute - properties can&#39;t (by default) be c
 <span class="n">DAYS_OUT_OF_RANGE</span> <span class="o">=</span> <span class="s2">&quot;Days should be an integer between 1 and 31, received </span><span class="si">{days}</span><span class="s2">&quot;</span>
 
 <span class="k">class</span> <span class="nc">Age</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Represents the age of a person.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">years</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">months</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">days</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
@@ -2984,7 +2979,7 @@ AttributeError: can&#39;t set attribute - properties can&#39;t (by default) be c
 
 
 <span class="k">class</span> <span class="nc">Age</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Represents the age of a person.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     
@@ -2992,7 +2987,7 @@ AttributeError: can&#39;t set attribute - properties can&#39;t (by default) be c
     
     <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_str</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">date_str</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Instantiate from a string containing a date in the standard ISO format. &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Instantiate from a string containing a date in the standard ISO format. &quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="n">date_str</span><span class="p">)</span>
         <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
@@ -3002,7 +2997,7 @@ AttributeError: can&#39;t set attribute - properties can&#39;t (by default) be c
         
     <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_dob</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">dob</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Instatiates from a datetime.date or a datetime.datetime object &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Instatiates from a datetime.date or a datetime.datetime object &quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">years</span> <span class="o">=</span> <span class="n">dob</span><span class="o">.</span><span class="n">year</span>
             <span class="n">months</span> <span class="o">=</span> <span class="n">dob</span><span class="o">.</span><span class="n">month</span>
@@ -3037,7 +3032,7 @@ AttributeError: can&#39;t set attribute - properties can&#39;t (by default) be c
             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>       
         
     <span class="k">def</span> <span class="nf">get_dob</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Returns the date of birth &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Returns the date of birth &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cur_year</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">years</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">months</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">days</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3053,7 +3048,7 @@ AttributeError: can&#39;t set attribute - properties can&#39;t (by default) be c
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Age(years=21, months=4, days=5)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Age(years=22, months=4, days=5)
 </pre></div>
 </div>
 </div>
@@ -3073,23 +3068,23 @@ AttributeError: can&#39;t set attribute - properties can&#39;t (by default) be c
 
 <span class="c1"># Helper types</span>
 <span class="k">class</span> <span class="nc">Name</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; First and last name &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; First and last name &quot;&quot;&quot;</span>
     <span class="c1"># Implementation omitted</span>
 
 
 <span class="k">class</span> <span class="nc">Age</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Special age type &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Special age type &quot;&quot;&quot;</span>
     <span class="c1"># Implementation omitted</span>
 
 
 <span class="k">class</span> <span class="nc">FmriResult</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Results from an fMRI scan &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Results from an fMRI scan &quot;&quot;&quot;</span>
     <span class="c1"># Implementation omitted</span>
 
 
 <span class="c1"># Volunteer types    </span>
 <span class="k">class</span> <span class="nc">Volunteer</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Base class for all volunteers in my project &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Base class for all volunteers in my project &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">Name</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="n">Age</span><span class="p">,</span> <span class="n">call_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> <span class="n">vol_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
@@ -3100,21 +3095,21 @@ AttributeError: can&#39;t set attribute - properties can&#39;t (by default) be c
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, age </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2">, first called at </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">call_date</span><span class="si">}</span><span class="s2">.&quot;</span>
         
     <span class="k">def</span> <span class="nf">update_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">records</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Add the instance to the dataframe containing the rest of the data &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Add the instance to the dataframe containing the rest of the data &quot;&quot;&quot;</span>
         <span class="n">record</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">call_date</span><span class="p">,</span> 
                                <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">)])</span>
         <span class="n">records</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">records</span>
     
     <span class="k">def</span> <span class="nf">remove_from_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">records</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Remove the instance from the student records &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Remove the instance from the student records &quot;&quot;&quot;</span>
         <span class="n">idx</span> <span class="o">=</span> <span class="n">records</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span>
         <span class="n">records</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">records</span>
 
     
 <span class="k">class</span> <span class="nc">PreScanOne</span><span class="p">(</span><span class="n">Volunteer</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Volunteer before the first session &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Volunteer before the first session &quot;&quot;&quot;</span>
     <span class="n">loc</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># ordinal place in hierarchy</span>
     
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">Name</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="n">Age</span><span class="p">,</span> <span class="n">call_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> <span class="n">vol_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> 
@@ -3123,13 +3118,13 @@ AttributeError: can&#39;t set attribute - properties can&#39;t (by default) be c
         <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">scan_one_date</span><span class="o">=</span><span class="n">scan_one_date</span><span class="p">)</span>
         
     <span class="k">def</span> <span class="nf">advance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">:</span> <span class="n">FmriResult</span><span class="p">,</span> <span class="n">next_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">time</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Advance a PreScanOne to a PostScanOne &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Advance a PreScanOne to a PostScanOne &quot;&quot;&quot;</span>
         <span class="n">new</span> <span class="o">=</span> <span class="n">PostScanOne</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">next_date</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">new</span>
     
 
 <span class="k">class</span> <span class="nc">PostScanOne</span><span class="p">(</span><span class="n">Volunteer</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Volunteer after the first session &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Volunteer after the first session &quot;&quot;&quot;</span>
     <span class="n">loc</span> <span class="o">=</span> <span class="mi">1</span>
     
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pre_volunteer</span><span class="p">:</span> <span class="n">PreScanOne</span><span class="p">,</span> <span class="n">scan_one_data</span><span class="p">:</span> <span class="n">FmriResult</span><span class="p">,</span> 
@@ -3140,14 +3135,14 @@ AttributeError: can&#39;t set attribute - properties can&#39;t (by default) be c
         <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;scan_two_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">scan_two_date</span>
     
     <span class="k">def</span> <span class="nf">advance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">:</span> <span class="n">FmriResult</span><span class="p">,</span> <span class="n">next_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">time</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Advance a PostScanOne to a PreScanTwo &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Advance a PostScanOne to a PreScanTwo &quot;&quot;&quot;</span>
         <span class="n">new</span> <span class="o">=</span> <span class="n">PreScanTwo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">next_date</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">new</span>
 
 
 <span class="c1"># Examples of generic methods that use this interface</span>
 <span class="k">def</span> <span class="nf">advance_volunteer</span><span class="p">(</span><span class="n">old_vol</span><span class="p">,</span> <span class="n">results</span><span class="p">:</span> <span class="n">FmriResult</span><span class="p">,</span> <span class="n">records</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Move volunteer to next step in the experiment, returning the new </span>
 <span class="sd">    instance and records.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -3158,7 +3153,7 @@ AttributeError: can&#39;t set attribute - properties can&#39;t (by default) be c
 
 
 <span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">records</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Run the same processing function over all fMRI data &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Run the same processing function over all fMRI data &quot;&quot;&quot;</span>
     <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">vol</span> <span class="ow">in</span> <span class="n">records</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
@@ -3192,7 +3187,7 @@ AttributeError: can&#39;t set attribute - properties can&#39;t (by default) be c
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Dict</span>
 
 <span class="k">def</span> <span class="nf">doer_of_stuffs</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">c</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;ccc&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Does stuff to a, b, and c.</span>
 <span class="sd">    Returns: A tuple of a string and a dictionary mapping ints to floats</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -3235,7 +3230,7 @@ AttributeError: can&#39;t set attribute - properties can&#39;t (by default) be c
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_or_sub</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Simple addition\subtraction &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Simple addition\subtraction &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="k">if</span> <span class="n">add</span> <span class="k">else</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
 </pre></div>
 </div>
@@ -3383,13 +3378,13 @@ r
         <span class="bp">self</span><span class="o">.</span><span class="n">param4</span> <span class="o">=</span> <span class="n">param4</span>
     
     <span class="k">def</span> <span class="nf">my_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Do stuff &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Do stuff &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">89</span><span class="p">]</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">89</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="n">param3</span><span class="o">=</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="n">param4</span><span class="p">):</span>
                  <span class="o">^</span>
 <span class="ne">SyntaxError</span>: non-default argument follows default argument
@@ -3413,7 +3408,7 @@ r
     <span class="n">param4</span> <span class="o">=</span> <span class="n">attr</span><span class="o">.</span><span class="n">ib</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="n">attr</span><span class="o">.</span><span class="n">Factory</span><span class="p">(</span><span class="nb">list</span><span class="p">))</span>
     
     <span class="k">def</span> <span class="nf">my_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; Do stuff &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Do stuff &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
 
@@ -3449,7 +3444,7 @@ r
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [92],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">92</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">b</span> <span class="o">=</span> <span class="n">ExampleTwo</span><span class="p">(</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
 
 <span class="nn">File &lt;attrs generated init __main__.ExampleTwo&gt;:10,</span> in <span class="ni">__init__</span><span class="nt">(self, param1, param2, param3, param4)</span>
@@ -3458,8 +3453,8 @@ r
 <span class="ne">---&gt; </span><span class="mi">10</span>     <span class="n">__attr_validator_param1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">__attr_param1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">param1</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">__attr_validator_param2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">__attr_param2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">param2</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/attr/validators.py:103,</span> in <span class="ni">_InstanceOfValidator.__call__</span><span class="nt">(self, inst, attr, value)</span>
-<span class="g g-Whitespace">     </span><span class="mi">99</span> <span class="sd">&quot;&quot;&quot;</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/attr/validators.py:103,</span> in <span class="ni">_InstanceOfValidator.__call__</span><span class="nt">(self, inst, attr, value)</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="g g-Whitespace">    </span><span class="mi">100</span><span class="sd"> We use a callable class to be able to change the ``__repr__``.</span>
 <span class="g g-Whitespace">    </span><span class="mi">101</span><span class="sd"> &quot;&quot;&quot;</span>
 <span class="g g-Whitespace">    </span><span class="mi">102</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">):</span>
@@ -3509,7 +3504,7 @@ r
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.7007967702978262 0.19741232596574187 0.07524094418909011 0.3561537582421409 0.18432190323869635 0.3645915590129989 0.4111980708923684 0.4388513464596915 0.7005974785662764 0.04303213857737809] volt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.6843807342971315 0.8804850324894938 0.4688340490471917 0.46424810135025985 0.5246666491161558 0.6865439600539927 0.6015581099035153 0.46556494883221355 0.5717887154429652 0.2610606631388219] volt
 </pre></div>
 </div>
 </div>
@@ -3521,7 +3516,7 @@ r
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1.4015935405956523 0.39482465193148375 0.15048188837818022 0.7123075164842818 0.3686438064773927 0.7291831180259978 0.8223961417847367 0.877702692919383 1.4011949571325528 0.08606427715475617] volt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1.368761468594263 1.7609700649789877 0.9376680980943835 0.9284962027005197 1.0493332982323116 1.3730879201079853 1.2031162198070307 0.9311298976644271 1.1435774308859303 0.5221213262776438] volt
 </pre></div>
 </div>
 </div>
@@ -3548,52 +3543,52 @@ r
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">DimensionalityError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="nn">Input In [97],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">amps</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;seconds&#39;</span><span class="p">)</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">97</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">amps</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;seconds&#39;</span><span class="p">)</span>  <span class="c1"># DimensionalityError</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/quantity.py:716,</span> in <span class="ni">Quantity.to</span><span class="nt">(self, other, *contexts, **ctx_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">699</span> <span class="sd">&quot;&quot;&quot;Return Quantity rescaled to different units.</span>
-<span class="g g-Whitespace">    </span><span class="mi">700</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span><span class="sd"> Parameters</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pint/facets/plain/quantity.py:522,</span> in <span class="ni">PlainQuantity.to</span><span class="nt">(self, other, *contexts, **ctx_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">505</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Return PlainQuantity rescaled to different units.</span>
+<span class="g g-Whitespace">    </span><span class="mi">506</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">507</span><span class="sd"> Parameters</span>
 <span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">712</span><span class="sd"> pint.Quantity</span>
-<span class="g g-Whitespace">    </span><span class="mi">713</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">714</span> <span class="n">other</span> <span class="o">=</span> <span class="n">to_units_container</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_REGISTRY</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">716</span> <span class="n">magnitude</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert_magnitude_not_inplace</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="o">*</span><span class="n">contexts</span><span class="p">,</span> <span class="o">**</span><span class="n">ctx_kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">718</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">magnitude</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">518</span><span class="sd"> pint.PlainQuantity</span>
+<span class="g g-Whitespace">    </span><span class="mi">519</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">520</span> <span class="n">other</span> <span class="o">=</span> <span class="n">to_units_container</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_REGISTRY</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">522</span> <span class="n">magnitude</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert_magnitude_not_inplace</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="o">*</span><span class="n">contexts</span><span class="p">,</span> <span class="o">**</span><span class="n">ctx_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">524</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">magnitude</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/quantity.py:665,</span> in <span class="ni">Quantity._convert_magnitude_not_inplace</span><span class="nt">(self, other, *contexts, **ctx_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">662</span>     <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_REGISTRY</span><span class="o">.</span><span class="n">context</span><span class="p">(</span><span class="o">*</span><span class="n">contexts</span><span class="p">,</span> <span class="o">**</span><span class="n">ctx_kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">663</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_REGISTRY</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_magnitude</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_units</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">665</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_REGISTRY</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_magnitude</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_units</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pint/facets/plain/quantity.py:471,</span> in <span class="ni">PlainQuantity._convert_magnitude_not_inplace</span><span class="nt">(self, other, *contexts, **ctx_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">468</span>     <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_REGISTRY</span><span class="o">.</span><span class="n">context</span><span class="p">(</span><span class="o">*</span><span class="n">contexts</span><span class="p">,</span> <span class="o">**</span><span class="n">ctx_kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">469</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_REGISTRY</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_magnitude</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_units</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">471</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_REGISTRY</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_magnitude</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_units</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/registry.py:1044,</span> in <span class="ni">BaseRegistry.convert</span><span class="nt">(self, value, src, dst, inplace)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1041</span> <span class="k">if</span> <span class="n">src</span> <span class="o">==</span> <span class="n">dst</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1042</span>     <span class="k">return</span> <span class="n">value</span>
-<span class="ne">-&gt; </span><span class="mi">1044</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pint/facets/plain/registry.py:911,</span> in <span class="ni">PlainRegistry.convert</span><span class="nt">(self, value, src, dst, inplace)</span>
+<span class="g g-Whitespace">    </span><span class="mi">908</span> <span class="k">if</span> <span class="n">src</span> <span class="o">==</span> <span class="n">dst</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">909</span>     <span class="k">return</span> <span class="n">value</span>
+<span class="ne">--&gt; </span><span class="mi">911</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/registry.py:1959,</span> in <span class="ni">ContextRegistry._convert</span><span class="nt">(self, value, src, dst, inplace)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1955</span>             <span class="n">src</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_active_ctx</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">src</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1957</span>         <span class="n">value</span><span class="p">,</span> <span class="n">src</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">_magnitude</span><span class="p">,</span> <span class="n">src</span><span class="o">.</span><span class="n">_units</span>
-<span class="ne">-&gt; </span><span class="mi">1959</span> <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_convert</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pint/facets/context/registry.py:393,</span> in <span class="ni">ContextRegistry._convert</span><span class="nt">(self, value, src, dst, inplace)</span>
+<span class="g g-Whitespace">    </span><span class="mi">389</span>             <span class="n">src</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_active_ctx</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">src</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">391</span>         <span class="n">value</span><span class="p">,</span> <span class="n">src</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">_magnitude</span><span class="p">,</span> <span class="n">src</span><span class="o">.</span><span class="n">_units</span>
+<span class="ne">--&gt; </span><span class="mi">393</span> <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_convert</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/registry.py:1566,</span> in <span class="ni">NonMultiplicativeRegistry._convert</span><span class="nt">(self, value, src, dst, inplace)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1561</span>     <span class="k">raise</span> <span class="n">DimensionalityError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1562</span>         <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">extra_msg</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot; - In destination units, </span><span class="si">{</span><span class="n">ex</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1563</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1565</span> <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">src_offset_unit</span> <span class="ow">or</span> <span class="n">dst_offset_unit</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">1566</span>     <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_convert</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1568</span> <span class="n">src_dim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_dimensionality</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1569</span> <span class="n">dst_dim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_dimensionality</span><span class="p">(</span><span class="n">dst</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pint/facets/nonmultiplicative/registry.py:206,</span> in <span class="ni">NonMultiplicativeRegistry._convert</span><span class="nt">(self, value, src, dst, inplace)</span>
+<span class="g g-Whitespace">    </span><span class="mi">201</span>     <span class="k">raise</span> <span class="n">DimensionalityError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">202</span>         <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">extra_msg</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot; - In destination units, </span><span class="si">{</span><span class="n">ex</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">203</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">205</span> <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">src_offset_unit</span> <span class="ow">or</span> <span class="n">dst_offset_unit</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">206</span>     <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_convert</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">inplace</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">208</span> <span class="n">src_dim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_dimensionality</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">209</span> <span class="n">dst_dim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_dimensionality</span><span class="p">(</span><span class="n">dst</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pint/registry.py:1077,</span> in <span class="ni">BaseRegistry._convert</span><span class="nt">(self, value, src, dst, inplace, check_dimensionality)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1074</span>     <span class="c1"># If the source and destination dimensionality are different,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1075</span>     <span class="c1"># then the conversion cannot be performed.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1076</span>     <span class="k">if</span> <span class="n">src_dim</span> <span class="o">!=</span> <span class="n">dst_dim</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1077</span>         <span class="k">raise</span> <span class="n">DimensionalityError</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">src_dim</span><span class="p">,</span> <span class="n">dst_dim</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1079</span> <span class="c1"># Here src and dst have only multiplicative units left. Thus we can</span>
-<span class="g g-Whitespace">   </span><span class="mi">1080</span> <span class="c1"># convert with a factor.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1081</span> <span class="n">factor</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_root_units</span><span class="p">(</span><span class="n">src</span> <span class="o">/</span> <span class="n">dst</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/pint/facets/plain/registry.py:944,</span> in <span class="ni">PlainRegistry._convert</span><span class="nt">(self, value, src, dst, inplace, check_dimensionality)</span>
+<span class="g g-Whitespace">    </span><span class="mi">941</span>     <span class="c1"># If the source and destination dimensionality are different,</span>
+<span class="g g-Whitespace">    </span><span class="mi">942</span>     <span class="c1"># then the conversion cannot be performed.</span>
+<span class="g g-Whitespace">    </span><span class="mi">943</span>     <span class="k">if</span> <span class="n">src_dim</span> <span class="o">!=</span> <span class="n">dst_dim</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">944</span>         <span class="k">raise</span> <span class="n">DimensionalityError</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">src_dim</span><span class="p">,</span> <span class="n">dst_dim</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">946</span> <span class="c1"># Here src and dst have only multiplicative units left. Thus we can</span>
+<span class="g g-Whitespace">    </span><span class="mi">947</span> <span class="c1"># convert with a factor.</span>
+<span class="g g-Whitespace">    </span><span class="mi">948</span> <span class="n">factor</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_root_units</span><span class="p">(</span><span class="n">src</span> <span class="o">/</span> <span class="n">dst</span><span class="p">)</span>
 
 <span class="ne">DimensionalityError</span>: Cannot convert from &#39;volt / ohm&#39; ([current]) to &#39;second&#39; ([time])
 </pre></div>

@@ -59,7 +59,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Class 3: More OOP and Exception Handling" href="../class_3/class_3.html" />
+    <link rel="next" title="&lt;no title&gt;" href="../class_3/class_3.html" />
     <link rel="prev" title="Class 1: More Syntax and The Python Stack" href="../class_1/class_1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -133,11 +133,6 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Class 2: Virtual Environments and Object-oriented Programming (OOP)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_3/class_3.html">
-     Class 3: More OOP and Exception Handling
     </a>
    </li>
    <li class="toctree-l2">
@@ -661,15 +656,15 @@ Solution<div class="summary-down docutils">
 <p>There are numerous tools for creating and managing virtual environments with Python. In this course we will use <a class="reference external" href="https://docs.python.org/3/library/venv.html#module-venv"><code class="docutils literal notranslate"><span class="pre">venv</span></code></a>, which is one of Python’s built-in packages and is therefore a simple option that will always be available to you.</p>
 <p>Creating a new virtual environment with <code class="docutils literal notranslate"><span class="pre">venv</span></code> is as easy as running:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="48d06873-5455-45e5-8e79-19afe3fa8748" name="c1d6b4c1-eb44-40cb-a8f5-df653075b7f2" type="radio">
-</input><label class="tabbed-label" for="48d06873-5455-45e5-8e79-19afe3fa8748">
+<input checked="checked" id="ef6e0c46-b36f-446f-bf8b-b03d819cf247" name="98410ee8-2c21-4e8c-9568-25fecf7ec375" type="radio">
+</input><label class="tabbed-label" for="ef6e0c46-b36f-446f-bf8b-b03d819cf247">
 Linux/macOS</label><div class="tabbed-content docutils">
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3 -m venv /path/to/new/virtual/environment/
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>/path/to/new/virtual/environment/
 </pre></div>
 </div>
 </div>
-<input id="b3e4c3ce-7f9e-4de7-8e74-9591942f351b" name="c1d6b4c1-eb44-40cb-a8f5-df653075b7f2" type="radio">
-</input><label class="tabbed-label" for="b3e4c3ce-7f9e-4de7-8e74-9591942f351b">
+<input id="ee211dd6-8b2b-4c86-a1c9-e4b2187971c8" name="98410ee8-2c21-4e8c-9568-25fecf7ec375" type="radio">
+</input><label class="tabbed-label" for="ee211dd6-8b2b-4c86-a1c9-e4b2187971c8">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> C:\Python38\python -m venv C:\path\to\new\virtual\environment\
 </pre></div>
@@ -706,16 +701,16 @@ Windows</label><div class="tabbed-content docutils">
 <p>Activating a virtual environment means modifying your working environment to use a particular, isolated installation of Python (created in <a class="reference internal" href="#create"><span class="std std-ref">Creating a Virtual Environment</span></a>). This will normally also “override” some other related CLI tools with those installed within the virtual environment’s <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory (such as <code class="docutils literal notranslate"><span class="pre">pip</span></code>), and sometimes also change some OS-related environment variables.</p>
 <p>To activate the virtual environment and use the newly created isolated Python environment, simply run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="c87d3e47-a037-48b3-9c96-2041cac3e4d3" name="78f2d82e-5c85-4e22-871e-a438df325d20" type="radio">
-</input><label class="tabbed-label" for="c87d3e47-a037-48b3-9c96-2041cac3e4d3">
+<input checked="checked" id="3a7ad70b-11d5-4926-8660-02553212dfde" name="690babd4-fad9-4a3c-a90f-ecbf0fd4ee64" type="radio">
+</input><label class="tabbed-label" for="3a7ad70b-11d5-4926-8660-02553212dfde">
 Linux/MacOS</label><div class="tabbed-content docutils">
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">source</span> &lt;venv&gt;/bin/activate
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">source</span><span class="w"> </span>&lt;venv&gt;/bin/activate
 </pre></div>
 </div>
 <p><em>* Replace <code class="docutils literal notranslate"><span class="pre">&lt;venv&gt;</span></code> with your virtual environment’s directory path.</em></p>
 </div>
-<input id="7a0ba54f-ccfc-4408-9bba-cfeb47231b8b" name="78f2d82e-5c85-4e22-871e-a438df325d20" type="radio">
-</input><label class="tabbed-label" for="7a0ba54f-ccfc-4408-9bba-cfeb47231b8b">
+<input id="9b0f362b-da1f-46bd-9587-183d7fe1dadf" name="690babd4-fad9-4a3c-a90f-ecbf0fd4ee64" type="radio">
+</input><label class="tabbed-label" for="9b0f362b-da1f-46bd-9587-183d7fe1dadf">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> <span class="p">&lt;</span>venv<span class="p">&gt;</span>\Scripts\activate
 </pre></div>
@@ -726,16 +721,16 @@ Windows</label><div class="tabbed-content docutils">
 <p>You should now see your virtual environment’s directory name used as a prefix (<code class="docutils literal notranslate"><span class="pre">(venv)</span></code>) in your terminal window.</p>
 <p>To validate the activation, run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="dffb0a5b-29b3-43e9-a69e-21cad8fd3428" name="df53b79e-d5ff-4521-87aa-35ebe168b148" type="radio">
-</input><label class="tabbed-label" for="dffb0a5b-29b3-43e9-a69e-21cad8fd3428">
+<input checked="checked" id="e2b0e136-5b45-4f9c-a2d1-b1f432bc147f" name="091ba849-a8e8-4c79-998f-cdcb8e471227" type="radio">
+</input><label class="tabbed-label" for="e2b0e136-5b45-4f9c-a2d1-b1f432bc147f">
 Linux/MacOS</label><div class="tabbed-content docutils">
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$ </span>which python
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$ </span>which<span class="w"> </span>python
 <span class="go">&lt;venv&gt;/bin/python</span>
 </pre></div>
 </div>
 </div>
-<input id="6fcf57ac-a0ea-495c-abd0-8c21664acccd" name="df53b79e-d5ff-4521-87aa-35ebe168b148" type="radio">
-</input><label class="tabbed-label" for="6fcf57ac-a0ea-495c-abd0-8c21664acccd">
+<input id="b0099245-e6d2-4695-b54f-15710ddbdb72" name="091ba849-a8e8-4c79-998f-cdcb8e471227" type="radio">
+</input><label class="tabbed-label" for="b0099245-e6d2-4695-b54f-15710ddbdb72">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">C:\&gt;</span> where python
 <span class="gp">&lt;venv&gt;</span>\Scripts\python
@@ -819,7 +814,7 @@ Windows</label><div class="tabbed-content docutils">
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">list_multiplier</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Multiply two lists element-wise.</span>
 <span class="sd">    </span>
 <span class="sd">    Parameters</span>
@@ -847,7 +842,7 @@ Windows</label><div class="tabbed-content docutils">
 <p>Procedural programming allows us to group and order our code base into small units, called functions or <strong>procedures</strong>, that have a specific, defined task.</p>
 <p>It usually contains a “wrapper” script that defines the order of running for these functions:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run_pipeline</span><span class="p">(</span><span class="n">foldername</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Main data pipeline script.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Main data pipeline script.&quot;&quot;&quot;</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">get_user_input</span><span class="p">(</span><span class="n">foldername</span><span class="p">)</span>
     <span class="n">data_without_fieldnames</span> <span class="o">=</span> <span class="n">extract_fieldnames</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="n">columnar_data</span> <span class="o">=</span> <span class="n">generate_columns</span><span class="p">(</span><span class="n">data_without_fieldnames</span><span class="p">,</span> <span class="n">num_of_columns</span><span class="p">)</span>
@@ -886,7 +881,7 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 <p>We might do:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">na_concentration</span><span class="o">=</span><span class="mf">0.3</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Multiplies data by the Na concentration.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Multiplies data by the Na concentration.&quot;&quot;&quot;</span>
     <span class="n">scaled_data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">*</span> <span class="n">na_concentration</span>
 </pre></div>
 </div>
@@ -904,7 +899,7 @@ Windows</label><div class="tabbed-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">NA_CONCENTRATION</span> <span class="o">=</span> <span class="mf">0.4</span>
 
 <span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">na_concentration</span><span class="o">=</span><span class="n">NA_CONCENTRATION</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Multiplies data by the Na concentration.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Multiplies data by the Na concentration.&quot;&quot;&quot;</span>
     <span class="n">scaled_data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">*</span> <span class="n">na_concentration</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">b</span> <span class="o">*</span> <span class="n">c</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">a</span>
@@ -938,7 +933,7 @@ Windows</label><div class="tabbed-content docutils">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Introducing the class keyword:</span>
 <span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a point in a 2D space.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents a point in a 2D space.&quot;&quot;&quot;</span>
     <span class="k">pass</span>
 
 <span class="n">Point</span>
@@ -961,7 +956,7 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7ff968ef5580&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7f3d30db28e0&gt;
 </pre></div>
 </div>
 </div>
@@ -999,7 +994,7 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;A case of a pointy Point at </span><span class="si">{</span><span class="p">(</span><span class="n">blank</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">blank</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;A case of a pointy Point at </span><span class="si">{</span><span class="p">(</span><span class="n">blank</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">blank</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -1012,7 +1007,7 @@ Windows</label><div class="tabbed-content docutils">
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_point</span><span class="p">(</span><span class="n">p</span><span class="p">:</span> <span class="n">Point</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Print a Point object.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Print a Point object.</span>
 <span class="sd">    </span>
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -1024,7 +1019,7 @@ Windows</label><div class="tabbed-content docutils">
 <span class="sd">    str</span>
 <span class="sd">        Point coordinates</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="n">print_point</span><span class="p">(</span><span class="n">blank</span><span class="p">)</span>
 </pre></div>
@@ -1049,7 +1044,7 @@ Solution<div class="summary-down docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
 <span class="k">def</span> <span class="nf">calculate_distance</span><span class="p">(</span><span class="n">p1</span><span class="p">:</span> <span class="n">Point</span><span class="p">,</span> <span class="n">p2</span><span class="p">:</span> <span class="n">Point</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the Cartesian distance between two points.</span>
 
 <span class="sd">    Parameters</span>
@@ -1084,7 +1079,7 @@ Solution<div class="summary-down docutils">
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Rectangle model.</span>
 <span class="sd">    </span>
 <span class="sd">    Attributes</span>
@@ -1111,7 +1106,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7ff968efeeb0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7f3d30d6e280&gt;
 </pre></div>
 </div>
 </div>
@@ -1120,7 +1115,7 @@ Solution<div class="summary-down docutils">
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_center</span><span class="p">(</span><span class="n">rect</span><span class="p">:</span> <span class="n">Rectangle</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Point</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    Return a Point instance with coordinates pointing to the center of the Rectangle.</span>
 <span class="sd">    </span>
 <span class="sd">    Parameters</span>
@@ -1153,7 +1148,7 @@ Solution<div class="summary-down docutils">
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">grow_rectangle</span><span class="p">(</span><span class="n">rect</span><span class="p">:</span> <span class="n">Rectangle</span><span class="p">,</span> <span class="n">dwidth</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">dheight</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Take a Rectangle instance and grow it by (*dwidth*, *dheight*).</span>
 
 <span class="sd">    Parameters</span>
@@ -1207,10 +1202,10 @@ Solution<div class="summary-down docutils">
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;A 2D point.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A 2D point.&quot;&quot;&quot;</span>
     
     <span class="k">def</span> <span class="nf">transpose</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># The first argument to a method is always the calling instance itself (self)</span>
-        <span class="sd">&quot;&quot;&quot;Trasnposes by flipping x and y&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Trasnposes by flipping x and y&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
@@ -1262,7 +1257,7 @@ After:	p.x: 20, p.y: 10
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [18],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># This doesn&#39;t work, look at the number of arguments:</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">p</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 
@@ -1291,10 +1286,10 @@ After:	p.x: 20, p.y: 10
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;A 2D point.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A 2D point.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize a new Point instance.</span>
 
 <span class="sd">        Parameters</span>
@@ -1308,7 +1303,7 @@ After:	p.x: 20, p.y: 10
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
 
     <span class="k">def</span> <span class="nf">transpose</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Trasnposes by flipping *x* and *y*.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span>
@@ -1342,7 +1337,7 @@ p.x: 20, p.y: 10
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [21],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
 
 <span class="ne">TypeError</span>: __init__() missing 2 required positional arguments: &#39;x&#39; and &#39;y&#39;
@@ -1355,13 +1350,13 @@ p.x: 20, p.y: 10
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Representation of a rectangle in Cartesian space based on the</span>
 <span class="sd">    bottom left corner and the sizes of its sides.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">corner</span><span class="p">:</span> <span class="n">Point</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">10</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize a Rectangle instance.</span>
 
 <span class="sd">        Parameters</span>
@@ -1378,7 +1373,7 @@ p.x: 20, p.y: 10
         <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
 
     <span class="k">def</span> <span class="nf">find_center</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Point</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return a Point to the center of the Rectangle box.</span>
 
 <span class="sd">        Returns</span>
@@ -1391,7 +1386,7 @@ p.x: 20, p.y: 10
         <span class="k">return</span> <span class="n">Point</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">grow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dwidth</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">dheight</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Change this instance&#39;s size by (*dwidth*, *dheight*).</span>
 
 <span class="sd">        Parameters</span>
@@ -1403,7 +1398,7 @@ p.x: 20, p.y: 10
         <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">+=</span> <span class="n">dheight</span>
 
     <span class="k">def</span> <span class="nf">move_to_origin</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Moves the center of the rectangle to (0, 0).&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Moves the center of the rectangle to (0, 0).&quot;&quot;&quot;</span>
         <span class="n">center</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_center</span><span class="p">()</span>
         <span class="n">centered</span> <span class="o">=</span> <span class="n">center</span><span class="o">.</span><span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">center</span><span class="o">.</span><span class="n">y</span> <span class="o">==</span> <span class="mi">0</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">centered</span><span class="p">:</span>
@@ -1440,7 +1435,7 @@ p.x: 20, p.y: 10
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corner</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">rect</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">corner</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="n">center</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">find_center</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The center of the rectange is </span><span class="si">{</span><span class="p">(</span><span class="n">center</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">center</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The center of the rectange is </span><span class="si">{</span><span class="p">(</span><span class="n">center</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">center</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1455,7 +1450,7 @@ p.x: 20, p.y: 10
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rect</span><span class="o">.</span><span class="n">move_to_origin</span><span class="p">()</span>
 <span class="n">new_center</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">find_center</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The center of the moved rectange is </span><span class="si">{</span><span class="p">(</span><span class="n">new_center</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">new_center</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The center of the moved rectange is </span><span class="si">{</span><span class="p">(</span><span class="n">new_center</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">new_center</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1482,10 +1477,10 @@ p.x: 20, p.y: 10
         <span class="n">n_items</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">fruit</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bread</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">        Shopping List:</span>
-<span class="s2">            Vegetabels: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span><span class="si">}</span><span class="s2"></span>
-<span class="s2">            Fruits: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">fruit</span><span class="si">}</span><span class="s2"></span>
-<span class="s2">            Bread: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">bread</span><span class="si">}</span><span class="s2"></span>
-<span class="s2">            Total items: </span><span class="si">{</span><span class="n">n_items</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">            Vegetabels: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span><span class="si">}</span>
+<span class="s2">            Fruits: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">fruit</span><span class="si">}</span>
+<span class="s2">            Bread: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">bread</span><span class="si">}</span>
+<span class="s2">            Total items: </span><span class="si">{</span><span class="n">n_items</span><span class="si">}</span>
 <span class="s2">        &quot;&quot;&quot;</span>
 </pre></div>
 </div>
@@ -1527,10 +1522,10 @@ Solution<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;A 2D point.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A 2D point.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize a new Point instance.</span>
 
 <span class="sd">        Parameters</span>
@@ -1544,7 +1539,7 @@ Solution<div class="summary-down docutils">
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
     
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the string representation of this instance.</span>
 <span class="sd">        </span>
 <span class="sd">        Returns</span>
@@ -1555,7 +1550,7 @@ Solution<div class="summary-down docutils">
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">)&quot;</span>
 
     <span class="k">def</span> <span class="nf">transpose</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Trasnposes by flipping *x* and *y*.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span>
@@ -1580,7 +1575,7 @@ Solution<div class="summary-down docutils">
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [28],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">28</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">shopping_list_a</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">shopping_list_b</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">shopping_list_a</span> <span class="o">+</span> <span class="n">shopping_list_b</span><span class="p">)</span>
@@ -1595,10 +1590,10 @@ Solution<div class="summary-down docutils">
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ShoppingList</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a shopping list.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents a shopping list.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vegetables</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">fruit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">bread</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize a ShoppingList instance.</span>
 
 <span class="sd">        Parameters</span>
@@ -1615,7 +1610,7 @@ Solution<div class="summary-down docutils">
         <span class="bp">self</span><span class="o">.</span><span class="n">bread</span> <span class="o">=</span> <span class="n">bread</span>
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return a string representation of this instance.</span>
 
 <span class="sd">        Returns</span>
@@ -1626,15 +1621,15 @@ Solution<div class="summary-down docutils">
         <span class="n">n_items</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">fruit</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bread</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">        Shopping List:</span>
-<span class="s2">            Vegetabels: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span><span class="si">}</span><span class="s2"></span>
-<span class="s2">            Fruits: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">fruit</span><span class="si">}</span><span class="s2"></span>
-<span class="s2">            Bread: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">bread</span><span class="si">}</span><span class="s2"></span>
-<span class="s2">            Total items: </span><span class="si">{</span><span class="n">n_items</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">            Vegetabels: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span><span class="si">}</span>
+<span class="s2">            Fruits: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">fruit</span><span class="si">}</span>
+<span class="s2">            Bread: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">bread</span><span class="si">}</span>
+<span class="s2">            Total items: </span><span class="si">{</span><span class="n">n_items</span><span class="si">}</span>
 <span class="s2">        &quot;&quot;&quot;</span>
 
     <span class="c1"># ----- New method below: ------</span>
     <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">ShoppingList</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ShoppingList</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Combines two shopping lists and returns the result.</span>
 
 <span class="sd">        Notes</span>
@@ -1693,12 +1688,12 @@ Solution<div class="summary-down docutils">
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">Input In [31],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">31</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">shopping_list_a</span> <span class="o">+</span> <span class="mi">1</span>
 
-<span class="nn">Input In [29],</span> in <span class="ni">ShoppingList.__add__</span><span class="nt">(self, other)</span>
+<span class="nn">Cell In[29], line 60,</span> in <span class="ni">ShoppingList.__add__</span><span class="nt">(self, other)</span>
 <span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">ShoppingList</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ShoppingList</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="g g-Whitespace">     </span><span class="mi">42</span><span class="sd">     Combines two shopping lists and returns the result.</span>
 <span class="g g-Whitespace">     </span><span class="mi">43</span><span class="sd"> </span>
 <span class="sd">   (...)</span>
@@ -1729,12 +1724,12 @@ Solution<div class="summary-down docutils">
 
 
 <span class="k">class</span> <span class="nc">ShoppingList</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a shopping list.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents a shopping list.&quot;&quot;&quot;</span>
     
     <span class="o">...</span>
     
     <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">ShoppingList</span><span class="p">,</span> <span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ShoppingList</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Combines two shopping lists or adds *other* to all item categories</span>
 <span class="sd">        (if an *int* is provided).</span>
 
@@ -1802,7 +1797,7 @@ Solution<div class="summary-down docutils">
 
 
 <span class="k">class</span> <span class="nc">Vector</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Models a 1D vector array, assuming the inputs are valid.</span>
 
 <span class="sd">    Notes</span>
@@ -1812,7 +1807,7 @@ Solution<div class="summary-down docutils">
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize a new `Vector` instance.</span>
 
 <span class="sd">        Attributes</span>
@@ -1824,7 +1819,7 @@ Solution<div class="summary-down docutils">
         <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Allows us to call len() on the vector.</span>
 
 <span class="sd">        Returns</span>
@@ -1835,7 +1830,7 @@ Solution<div class="summary-down docutils">
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span>
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns a string representation of the instance.</span>
 
 <span class="sd">        Returns</span>
@@ -1846,7 +1841,7 @@ Solution<div class="summary-down docutils">
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="si">}</span><span class="s2"> with </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="si">}</span><span class="s2"> elements&quot;</span>
 
     <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Vector</span><span class="p">,</span> <span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Vector</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Left-add a Vector to an integer or another vector.</span>
 
 <span class="sd">        Parameters</span>
@@ -1885,7 +1880,7 @@ Solution<div class="summary-down docutils">
             <span class="p">)</span>
 
     <span class="k">def</span> <span class="fm">__gt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">Vector</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Enables using `&gt;` between two vectors.</span>
 
 <span class="sd">        Parameters</span>
@@ -1961,7 +1956,7 @@ Solution<div class="summary-down docutils">
     <a class='right-next' id="next-link" href="../class_3/class_3.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Class 3: More OOP and Exception Handling</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

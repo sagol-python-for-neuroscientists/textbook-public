@@ -58,7 +58,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Class 5: The Scientific Stack - Part II: matplotlib and pandas" href="../class_5/class_5.html" />
-    <link rel="prev" title="Class 3: More OOP and Exception Handling" href="../class_3/class_3.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="../class_3/class_3.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -131,11 +131,6 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../class_2/class_2.html">
      Class 2: Virtual Environments and Object-oriented Programming (OOP)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_3/class_3.html">
-     Class 3: More OOP and Exception Handling
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -588,8 +583,8 @@ NDim:	 1
 </div>
 </div>
 <p>We’ve instantiated an array by calling the <code class="docutils literal notranslate"><span class="pre">np.array()</span></code> function on an iterable. This will create a one-dimensional <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array, or <em>vector</em>. This is the first important difference from MATLAB. In MATLAB, all arrays are by default <em>n</em>-dimensional. If you write:</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="n">a</span><span class="p">(:,</span><span class="w"> </span><span class="p">:,</span><span class="w"> </span><span class="p">:,</span><span class="w"> </span><span class="p">:,</span><span class="w"> </span><span class="p">:,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="n">a</span><span class="p">(:,</span><span class="w"> </span><span class="p">:,</span><span class="w"> </span><span class="p">:,</span><span class="w"> </span><span class="p">:,</span><span class="w"> </span><span class="p">:,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span>
 </pre></div>
 </div>
 <p>then you just received a 6-dimensional array. NumPy doesn’t allow that. The dimensions of an array are generally the dimensions it had when it was created. You can always use <code class="docutils literal notranslate"><span class="pre">reshape()</span></code>, like MATLAB, to define the exact number of dimensions you wish to have. You can also use <code class="docutils literal notranslate"><span class="pre">newaxis()</span></code> to add an axis, as we’ll see below. But these options still keep the number of elements in the array the same, they just re-order them.</p>
@@ -721,18 +716,30 @@ numpy.memmap
     Create a memory-map to an array stored in a *binary* file on disk.
 numpy.diagflat
     Create a two-dimensional array with the flattened input as a diagonal.
+numpy.char.array
+    Create a `chararray`.
 numpy.fromiter
     Create a new 1-dimensional array from an iterable object.
 numpy.partition
     Return a partitioned copy of an array.
+numpy.from_dlpack
+    Create a NumPy array from an object implementing the ``__dlpack__``
+numpy.rec.fromarrays
+    Create a record array from a (flat) list of arrays
 numpy.ctypeslib.as_array
     Create a numpy array from a ctypes array or POINTER.
 numpy.ma.diagflat
     Create a two-dimensional array with the flattened input as a diagonal.
 numpy.ma.make_mask
     Create a boolean mask from an array.
+numpy.rec.fromfile
+    Create an array from binary file data
+numpy.rec.fromstring
+    Create a record array from binary data
 numpy.lib.Arrayterator
     Buffered iterator for big arrays.
+numpy.rec.fromrecords
+    Create a recarray from a list of records in text form.
 numpy.ctypeslib.as_ctypes
     Create and return a ctypes object from a numpy array.  Actually
 numpy.ma.mrecords.fromarrays
@@ -813,12 +820,16 @@ numpy.full_like
     Return a full array with the same shape and type as a given array.
 numpy.ones_like
     Return an array of ones with the same shape and type as a given array.
-numpy.Datetime64
-    If created from a 64-bit integer, it represents an offset from
 numpy.bitwise_or
     Compute the bit-wise OR of two arrays element-wise.
+numpy.datetime64
+    If created from a 64-bit integer, it represents an offset from
 numpy.empty_like
     Return a new array with the same shape and type as a given array.
+numpy.rec.array
+    Construct a record array from a wide-variety of objects.
+numpy.frombuffer
+    Interpret a buffer as a 1-dimensional array.
 numpy.zeros_like
     Return an array of zeros with the same shape and type as a given array.
 numpy.asarray_chkfinite
@@ -829,42 +840,50 @@ numpy.bitwise_xor
     Compute the bit-wise XOR of two arrays element-wise.
 numpy.float_power
     First array elements raised to powers from second array, element-wise.
-numpy.ma.exp
-    Calculate the exponential of all elements in the input array.
 numpy.diag_indices
     Return the indices to access the main diagonal of an array.
+numpy.ma.exp
+    Calculate the exponential of all elements in the input array.
 numpy.nested_iters
     Create nditers for use in nested loops
 numpy.ma.sqrt
     Return the non-negative square-root of an array, element-wise.
 numpy.ma.log10
     Return the base 10 logarithm of the input array, element-wise.
-numpy.chararray.tolist
-    a.tolist()
 numpy.put_along_axis
     Put values into the destination array by matching 1d index and data slices.
+numpy.chararray.tolist
+    a.tolist()
 numpy.ma.choose
     Use an index array to construct a new array from a list of choices.
 numpy.ma.maximum
     Element-wise maximum of array elements.
 numpy.ma.minimum
     Element-wise minimum of array elements.
-numpy.ma.mrecords.MaskedRecords.__new__
-    Create a new masked array from scratch.
 numpy.savez_compressed
     Save several arrays into a single file in compressed ``.npz`` format.
 numpy.matlib.rand
     Return a matrix of random values with given shape.
 numpy.datetime_as_string
     Convert an array of datetimes into an array of strings.
+numpy.ma.mrecords.MaskedRecords.__new__
+    Create a new masked array from scratch.
+numpy.ma.ones_like
+    Return an array of ones with the same shape and type as a given array.
 numpy.ma.bitwise_or
     Compute the bit-wise OR of two arrays element-wise.
+numpy.ma.frombuffer
+    Interpret a buffer as a 1-dimensional array.
+numpy.ma.zeros_like
+    Return an array of zeros with the same shape and type as a given array.
 numpy.ma.bitwise_and
     Compute the bit-wise AND of two arrays element-wise.
 numpy.ma.bitwise_xor
     Compute the bit-wise XOR of two arrays element-wise.
 numpy.ma.make_mask_none
     Return a boolean mask of the given shape, filled with False.
+numpy.core.tests.test_umath.interesting_binop_operands
+    Helper to create &quot;interesting&quot; operands to cover common code paths:
 numpy.ma.tests.test_subclassing.MSubArray.__new__
     Create a new masked array from scratch.
 numpy.core._multiarray_umath.clip
@@ -875,10 +894,10 @@ numpy.ma.tests.test_subclassing.SubMaskedArray.__new__
     Create a new masked array from scratch.
 numpy.ma.mrecords.fromrecords
     Creates a MaskedRecords from a list of records.
-numpy.core._multiarray_umath.empty_like
-    Return a new array with the same shape and type as a given array.
 numpy.f2py.tests.test_array_from_pyobj.Array.has_shared_memory
     Check that created array shares data with input array.
+numpy.core._multiarray_umath.empty_like
+    Return a new array with the same shape and type as a given array.
 numpy.core._dtype._construction_repr
     Creates a string repr of the dtype, excluding the &#39;dtype()&#39; part
 numpy.abs
@@ -887,12 +906,10 @@ numpy.add
     Add arguments element-wise.
 numpy.cos
     Cosine element-wise.
-numpy.lib.recfunctions.require_fields
-    Casts a structured array to a new dtype using assignment by field-name.
 numpy.log
     Natural logarithm, element-wise.
 numpy.mod
-    Return element-wise remainder of division.
+    Returns the element-wise remainder of division.
 numpy.sin
     Trigonometric sine, element-wise.
 numpy.tan
@@ -906,11 +923,13 @@ numpy.cosh
 numpy.fabs
     Compute the absolute values element-wise.
 numpy.fmod
-    Return the element-wise remainder of division.
+    Returns the element-wise remainder of division.
 numpy.less
     Return the truth value of (x1 &lt; x2) element-wise.
 numpy.log2
     Base-2 logarithm of `x`.
+numpy.lib.recfunctions.require_fields
+    Casts a structured array to a new dtype using assignment by field-name.
 numpy.sign
     Returns an element-wise indication of the sign of a number.
 numpy.sinh
@@ -919,8 +938,6 @@ numpy.tanh
     Compute hyperbolic tangent element-wise.
 numpy.equal
     Return (x1 == x2) element-wise.
-numpy.core._multiarray_umath.datetime_as_string
-    Convert an array of datetimes into an array of strings.
 numpy.floor
     Return the floor of the input, element-wise.
 numpy.frexp
@@ -942,9 +959,11 @@ numpy.arctan
 numpy.around
     Evenly round to the given number of decimals.
 numpy.divide
-    Returns a true division of the inputs, element-wise.
+    Divide arguments element-wise.
 numpy.divmod
     Return element-wise quotient and remainder simultaneously.
+numpy.core._multiarray_umath.datetime_as_string
+    Convert an array of datetimes into an array of strings.
 numpy.source
     Print or write to a file the source code for a NumPy object.
 numpy.square
@@ -976,7 +995,7 @@ numpy.copysign
 numpy.diagonal
     Return specified diagonals.
 numpy.isfinite
-    Test element-wise for finiteness (not infinity or not Not a Number).
+    Test element-wise for finiteness (not infinity and not Not a Number).
 numpy.multiply
     Multiply arguments element-wise.
 numpy.negative
@@ -1017,6 +1036,8 @@ numpy.logical_xor
     Compute the truth value of x1 XOR x2, element-wise.
 numpy.right_shift
     Shift the bits of an integer to the right.
+numpy.floor_divide
+    Return the largest integer smaller or equal to the division of the inputs.
 numpy.ma.abs
     Calculate the absolute value element-wise.
 numpy.ma.add
@@ -1026,39 +1047,37 @@ numpy.ma.cos
 numpy.ma.log
     Natural logarithm, element-wise.
 numpy.ma.mod
-    Return element-wise remainder of division.
-numpy.floor_divide
-    Return the largest integer smaller or equal to the division of the inputs.
+    Returns the element-wise remainder of division.
 numpy.ma.sin
     Trigonometric sine, element-wise.
 numpy.ma.tan
     Compute tangent element-wise.
+numpy.greater_equal
+    Return the truth value of (x1 &gt;= x2) element-wise.
 numpy.ma.ceil
     Return the ceiling of the input, element-wise.
-numpy.ma.cosh
-    Hyperbolic cosine, element-wise.
 numpy.fft.ifft
     Compute the one-dimensional inverse discrete Fourier Transform.
+numpy.ma.cosh
+    Hyperbolic cosine, element-wise.
 numpy.ma.fabs
     Compute the absolute values element-wise.
 numpy.ma.fmod
-    Return the element-wise remainder of division.
+    Returns the element-wise remainder of division.
 numpy.ma.less
     Return the truth value of (x1 &lt; x2) element-wise.
 numpy.ma.log2
     Base-2 logarithm of `x`.
 numpy.ma.sinh
     Hyperbolic sine, element-wise.
-numpy.greater_equal
-    Return the truth value of (x1 &gt;= x2) element-wise.
 numpy.ma.tanh
     Compute hyperbolic tangent element-wise.
 numpy.busdaycalendar
     A business day calendar object that efficiently stores information
-numpy.ma.equal
-    Return (x1 == x2) element-wise.
 numpy.fft.ifftn
     Compute the N-dimensional inverse discrete Fourier Transform.
+numpy.ma.equal
+    Return (x1 == x2) element-wise.
 numpy.ma.floor
     Return the floor of the input, element-wise.
 numpy.ma.hypot
@@ -1070,9 +1089,7 @@ numpy.ma.arcsin
 numpy.ma.arctan
     Trigonometric inverse tangent, element-wise.
 numpy.ma.divide
-    Returns a true division of the inputs, element-wise.
-numpy.lib.recfunctions.unstructured_to_structured
-    Converts an n-D unstructured array into an (n-1)-D structured array.
+    Divide arguments element-wise.
 numpy.ma.arccosh
     Inverse hyperbolic cosine, element-wise.
 numpy.ma.arcsinh
@@ -1083,26 +1100,28 @@ numpy.ma.arctanh
     Inverse hyperbolic tangent element-wise.
 numpy.ma.greater
     Return the truth value of (x1 &gt; x2) element-wise.
+numpy.lib.recfunctions.unstructured_to_structured
+    Converts an n-D unstructured array into an (n-1)-D structured array.
 numpy.ma.multiply
     Multiply arguments element-wise.
 numpy.ma.negative
     Numerical negative, element-wise.
 numpy.ma.subtract
     Subtract arguments, element-wise.
-numpy.ma.tests.test_subclassing.SubArray
-    ndarray(shape, dtype=float, buffer=None, offset=0,
 numpy.ma.conjugate
     Return the complex conjugate, element-wise.
 numpy.ma.not_equal
     Return (x1 != x2) element-wise.
 numpy.ma.remainder
-    Return element-wise remainder of division.
+    Returns the element-wise remainder of division.
 numpy.ma.empty_like
     empty_like(prototype, dtype=None, order=&#39;K&#39;, subok=True, shape=None)
 numpy.ma.less_equal
     Return the truth value of (x1 &lt;= x2) element-wise.
 numpy.ma.logical_or
     Compute the truth value of x1 OR x2 element-wise.
+numpy.ma.tests.test_subclassing.SubArray
+    ndarray(shape, dtype=float, buffer=None, offset=0,
 numpy.ma.logical_and
     Compute the truth value of x1 AND x2 element-wise.
 numpy.ma.logical_not
@@ -1110,7 +1129,7 @@ numpy.ma.logical_not
 numpy.ma.logical_xor
     Compute the truth value of x1 XOR x2, element-wise.
 numpy.ma.true_divide
-    Returns a true division of the inputs, element-wise.
+    Divide arguments element-wise.
 numpy.ma.floor_divide
     Return the largest integer smaller or equal to the division of the inputs.
 numpy.ma.greater_equal
@@ -1119,16 +1138,14 @@ numpy.core.tests.test_function_base.PhysicalQuantity2
     ndarray(shape, dtype=float, buffer=None, offset=0,
 numpy.lib.tests.test_stride_tricks.SimpleSubClass
     ndarray(shape, dtype=float, buffer=None, offset=0,
-numpy.ma.tests.test_subclassing.ComplicatedSubArray
-    ndarray(shape, dtype=float, buffer=None, offset=0,
-numpy.lib.tests.test_stride_tricks.VerySimpleSubClass
-    ndarray(shape, dtype=float, buffer=None, offset=0,
 numpy.core.tests.test_multiarray.TestArrayPriority.Foo
     ndarray(shape, dtype=float, buffer=None, offset=0,
 numpy.core.tests.test_multiarray.TestArrayPriority.Bar
     ndarray(shape, dtype=float, buffer=None, offset=0,
-numpy.testing._gen_alignment_data
-    generator producing data with different alignment and offsets
+numpy.ma.tests.test_subclassing.ComplicatedSubArray
+    ndarray(shape, dtype=float, buffer=None, offset=0,
+numpy.lib.tests.test_stride_tricks.VerySimpleSubClass
+    ndarray(shape, dtype=float, buffer=None, offset=0,
 numpy.random.RandomState.rand
     Random values in a given shape.
 numpy.random.Generator.permuted
@@ -1404,7 +1421,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>91.7 ms ± 3.11 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>82.6 ms ± 1.07 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -1421,7 +1438,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.49 ms ± 53.5 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>772 µs ± 4.59 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1669,13 +1686,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>90.7 µs ± 2.39 µs per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>85 µs ± 22 ns per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.66 µs ± 172 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.22 µs ± 34.7 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.42 µs ± 154 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.88 µs ± 8.92 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1692,13 +1709,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>72.2 µs ± 2.65 µs per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>62.4 µs ± 10.8 ns per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.37 µs ± 125 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.17 µs ± 79.2 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.44 µs ± 35.1 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.79 µs ± 10.4 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1887,8 +1904,8 @@ np.sum result: 5
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">Input In [59],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">basic_array</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">basic_array</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">59</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">basic_array</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">basic_array</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">))</span>   <span class="c1"># doesn&#39;t work, &quot;and&quot; isn&#39;t used this way here</span>
 
 <span class="ne">ValueError</span>: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
 </pre></div>
@@ -2333,7 +2350,7 @@ Solution<div class="summary-down docutils">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Class 3: More OOP and Exception Handling</p>
+            <p class="prev-next-title">&lt;no title&gt;</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../class_5/class_5.html" title="next page">
