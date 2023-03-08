@@ -8,7 +8,7 @@ General questions, both technical and Python-related, can be posted to the ["Dis
 Asking questions in the "Discussions" tab is highly encouraged, since it allows other students to see both the issue, which they will probably run into at some point, and the answer for it. In case you still prefer to contact us directly, feel free to do so at:
 
 - Zvi Baratz - [zvibaratz@mail.tau.ac.il](mailto:zvibaratz@mail.tau.ac.il)
-- Gal Ben-Zvi - [hershkovitz1@mail.tau.ac.il](mailto:hershkovitz1@mail.tau.ac.il)
+- Gal Kepler - [hershkovitz1@mail.tau.ac.il](mailto:hershkovitz1@mail.tau.ac.il)
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/sagol-python-for-neuroscientists/textbook-public/main/source/good_luck.jpg" alt="Good luck!" />
