@@ -1,3 +1,4 @@
+myst_nb~=1.1
 altair~=4.1
 bokeh~=2.3
 cython~=0.29
