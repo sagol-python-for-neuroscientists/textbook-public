@@ -3,13 +3,11 @@
 - [Course book](https://sagol-python-for-neuroscientists.github.io/textbook-public/intro.html)
 - [Homework assignments repository](https://github.com/sagol-python-for-neuroscientists/course_site_2023.git)
 
-For any questions, feel free to contact us by:
+For any questions, feel free to contact me by:
 
 - Leaving an _issue_ (second left tab of the repository). _Highly encouraged_
-- via email:
-  - [Zvi Baratz](mailto:zvibaratz@mail.tau.ac.il)
-  - [Gal Kepler](mailto:hershkovitz1@mail.tau.ac.il)
+- via [email](mailto:galkepler@gmail.com) (Gal Kepler).
 
 <p align="center">
-  <img src="https://i.redd.it/uafkeky6huc11.jpg">
+  <img src="https://external-preview.redd.it/LhqnOrIijEcnC9LUUOyiUVsue1oso7Ru7vH6tt5FECg.jpg?auto=webp&s=dfdd5d8a87e45ede7f70b53f127b90744dfabdef">
 </p>
