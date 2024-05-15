@@ -1,497 +1,448 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Class 8: Testing and Test-Driven Development &#8212; Python for Neuroscience</title>
-    
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >let toggleHintShow = 'Click to show';</script>
-    <script >let toggleHintHide = 'Click to hide';</script>
-    <script >let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'classes/class_8/class_8';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Class 9: Advanced and Performant Python" href="../class_9/class_9.html" />
     <link rel="prev" title="Class 7: More pandas, Visualizations, xarray and Modeling" href="../class_7/class_7.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Python for Neuroscience</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
-   Introduction
-  </a>
- </li>
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Python for Neuroscience - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Python for Neuroscience - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../syllabus.html">Syllabus</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../contents.html">Contents</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../class_0/class_0.html">Class 0: Background and Basic Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_1/class_1.html">Class 1: More Syntax and The Python Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_2/class_2.html">Class 2: Virtual Environments and Object-oriented Programming (OOP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_3/class_3.html">Class 3: More OOP and Exception Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_4/class_4.html">Class 4: The Scientific Stack - Part I: <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_5/class_5.html">Class 5: The Scientific Stack - Part II: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_6/class_6.html">Class 6: Advanced <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_7/class_7.html">Class 7: More <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, Visualizations, <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and Modeling</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Class 8: Testing and Test-Driven Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_9/class_9.html">Class 9: Advanced and Performant Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_10/class_10.html">Class 10: Introduction to Machine Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_11/class_11.html">Class 11: Git and More Python Libraries</a></li>
+
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../syllabus.html">
-   Syllabus
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../../contents.html">
-   Contents
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_0/class_0.html">
-     Class 0: Background and Basic Syntax
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_1/class_1.html">
-     Class 1: More Syntax and The Python Stack
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_2/class_2.html">
-     Class 2: Virtual Environments and Object-oriented Programming (OOP)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_4/class_4.html">
-     Class 4: The Scientific Stack - Part I:
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       numpy
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_5/class_5.html">
-     Class 5: The Scientific Stack - Part II:
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       matplotlib
-      </span>
-     </code>
-     and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_6/class_6.html">
-     Class 6: Advanced
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_7/class_7.html">
-     Class 7: More
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-     , Visualizations,
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       xarray
-      </span>
-     </code>
-     and Modeling
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Class 8: Testing and Test-Driven Development
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_9/class_9.html">
-     Class 9: Advanced and Performant Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_10/class_10.html">
-     Class 10: Introduction to Machine Learning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_11/class_11.html">
-     Class 11: Git and More Python Libraries
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials.html">
-   Tutorials
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/python_setup.html">
-     General Setup
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/create_git_repo.html">
-     Create a Git Repository
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/create_and_publish_pacakge.html">
-     Creating and Publishing a Python Library
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../resources.html">
-   Resources
-  </a>
- </li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/python_setup.html">General Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/create_git_repo.html">Create a Git Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/create_and_publish_pacakge.html">Creating and Publishing a Python Library</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources.html">Resources</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/classes/class_8/class_8.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <a class="issues-button"
-            href="https://github.com/sagol-python-for-neuroscientists/textbook-public/issues/new?title=Issue%20on%20page%20%2Fclasses/class_8/class_8.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/classes/class_8/class_8.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
+<a href="https://github.com/sagol-python-for-neuroscientists/textbook-public/issues/new?title=Issue%20on%20page%20%2Fclasses/class_8/class_8.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/classes/class_8/class_8.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/classes/class_8/class_8.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Class 8: Testing and Test-Driven Development</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-implications-of-writing-untested-code">
-     The Implications of Writing Untested Code
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#public-trust-in-research">
-       Public Trust in Research
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#testing">
-   Testing
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-solution">
-   The Solution
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#short-demo">
-     Short Demo
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#back-to-the-normalization-example">
-     Back to the normalization example
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#integration-testing">
-     Integration Testing
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-implications-of-writing-untested-code">The Implications of Writing Untested Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#public-trust-in-research">Public Trust in Research</a></li>
 </ul>
-
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-solution">The Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-demo">Short Demo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#back-to-the-normalization-example">Back to the normalization example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-testing">Integration Testing</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Class 8: Testing and Test-Driven Development</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-implications-of-writing-untested-code">
-     The Implications of Writing Untested Code
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#public-trust-in-research">
-       Public Trust in Research
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#testing">
-   Testing
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-solution">
-   The Solution
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#short-demo">
-     Short Demo
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#back-to-the-normalization-example">
-     Back to the normalization example
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#integration-testing">
-     Integration Testing
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="class-8-testing-and-test-driven-development">
-<h1>Class 8: Testing and Test-Driven Development<a class="headerlink" href="#class-8-testing-and-test-driven-development" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="class-8-testing-and-test-driven-development">
+<h1>Class 8: Testing and Test-Driven Development<a class="headerlink" href="#class-8-testing-and-test-driven-development" title="Permalink to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>We’ve mentioned how writing object-oriented code might be considered an industry standard (in terms of code quality), and yet in practice it is still a somewhat niche skill in the academic environment. Another such often neglected common practice is <em>testing</em>. In this lesson, we will learn the basic concepts underlying writing tests for your code in Python.</p>
-<div class="section" id="the-implications-of-writing-untested-code">
-<h3>The Implications of Writing Untested Code<a class="headerlink" href="#the-implications-of-writing-untested-code" title="Permalink to this headline">¶</a></h3>
+<section id="the-implications-of-writing-untested-code">
+<h3>The Implications of Writing Untested Code<a class="headerlink" href="#the-implications-of-writing-untested-code" title="Permalink to this heading">#</a></h3>
 <p>This is a somewhat sensitive subject, and while beyond the scope of the course material, I wanted to share one relatively neutral example:</p>
 <p><a class="reference external" href="https://link.springer.com/article/10.3758/s13423-018-1489-7">This article</a> from 2018 checking how a dynamic image of a circle affects the understanding of speech, employed many modern open-science practices, as described <a class="reference external" href="https://elemental.medium.com/when-science-needs-self-correcting-a130eacb4235">here</a>; pre-registration, <a class="reference external" href="https://osf.io/bnvea/">data availablity, source code availability</a>, and even peer replication. Unfortunately, the article as published in 2018 is completely wrong. The original conclusion was that these dynamic circles improved the understanding of what was said, while the truth is they worsened it. The fault lied in a very simple mistake in the source code, still visible due to the author’s comment (line ~25 in the link above), which resulted in opposite results.</p>
 <p>Looking at it after the correction, every responsible programmer would immediately know this code would never be accepted to any code base in any company, i.e. make it to “production”. In many cases, the code very much demonstrates the opposition to numerous basic programming paradigms, e.g.:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Everything is one large script.</p></li>
 <li><p>Variables are given uninformative and confusing names.</p></li>
 <li><p>Too many comments, zero functions.</p></li>
 <li><p>Lots of commented out lines of code.</p></li>
 </ol>
 <p>In my opinion, it is important we learn to value our research and the responsibility assumed in publishing it no less than any company would with its products.</p>
-<div class="section" id="public-trust-in-research">
-<h4>Public Trust in Research<a class="headerlink" href="#public-trust-in-research" title="Permalink to this headline">¶</a></h4>
+<section id="public-trust-in-research">
+<h4>Public Trust in Research<a class="headerlink" href="#public-trust-in-research" title="Permalink to this heading">#</a></h4>
 <p>Another famous example from the COVID-19 outbreak is the code used for official epidemiological simulations in the UK. The code was <a class="reference external" href="https://github.com/mrc-ide/covid-sim/">made public</a> and turned out to be a huge mess. It even prompted a huge discussion all across the internet (and in the <a class="reference external" href="https://github.com/mrc-ide/covid-sim/issues/165">repo itself</a>) with people urging officials to not take any action that was suggested by results of this simulation.</p>
 <p>The “truth” of the matter, if there is such one, is much more complex. The code, originally a 15k LOC <code class="docutils literal notranslate"><span class="pre">.c</span></code> file - revolves around a model that was created in 2005 and used in many important scientific publications. These publications were peer-reviewed, and the articles themselves are considered very helpful and important in their respective field. The code had very few tests, but the scientists who wrote it “tested” their code in a more intuitive manner - they gave simple inputs for which they knew the expected answer for. They also visualized many of the results the model generated to make sure nothing suspicious is happening.</p>
 <p>The scientists released their code to the public with good intentions, advocating “open science”, but received a very unwelcoming response from the community, especially from software engineers. These types of reactions really don’t encourage more scientists and labs to release their code to the public space, which ultimately is the right thing to do. In this case, many people started helping with the refactoring process, including people like <a class="reference external" href="https://en.wikipedia.org/wiki/John_Carmack">John Carmack</a>. This process uncovered bugs and made the code more readable and hopefully a bit more trustworthy, but there’s still much more work to do.</p>
 <p>So, how can we do better? There are basic, simple tools we can acquire as researchers that make a large difference. We’ve touched on we should design our code and mentioned concepts such as <em>parameterization</em> and <em>encapsulation</em>. We’ve also emphasized the importance of <em>readability</em> and including expansive <em>documentation</em>. Another one of the tools is testing, and if you learn to integrate it adequately into your coding process it will dramatically elevate the quality of your work.</p>
-</div>
-</div>
-</div>
-<div class="section" id="testing">
-<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this heading">#</a></h2>
 <p>Tests are (usually) short pieces of code designed to assert that a small portion of your program does what you intend it to do.</p>
 <p>For example, if I have a class designed to perform calculations on some dataframe that was created somewhere else, perhaps by adding some of its columns together, averaging them out and displaying the result, then I wish for my code to be correct and deterministic, in a sense that a single, defined input will always give the same correct output.</p>
 <p>This isn’t trivial even for the most basic functions in Python. Let’s look at a simple normalization function:</p>
@@ -538,7 +489,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>…</p>
 <p>…Or can we?</p>
 <p>What issues does this function have? We’ll start from the more basic ones, and slowly dive deeper.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>The docstring is lacking, to say the least.</p></li>
 <li><p>Variable names are awful.</p></li>
 <li><p>It uses the Pythonic <code class="docutils literal notranslate"><span class="pre">min</span></code> and <code class="docutils literal notranslate"><span class="pre">max</span></code> functions instead of numpy’s <code class="docutils literal notranslate"><span class="pre">min</span></code> and <code class="docutils literal notranslate"><span class="pre">max</span></code>. This will lead to a reduction in performance, but also it has different behavior for certain inputs.</p></li>
@@ -554,9 +505,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p>The second reason is Python’s dynamic nature, or <em>duck-typing.</em> If you want to enforce a function to only accept inputs of a single type, <em>you</em> must be the one writing these assertions, either outside or inside the function. For example, a function that adds two numbers needs a <code class="docutils literal notranslate"><span class="pre">isinstance(value,</span> <span class="pre">(int,</span> <span class="pre">float))</span></code> somewhere near its top to avoid these mistakes. Statically-typed languages, like C, define a type for each variable. A function adding two integers simply cannot accept a non-integer input.</p>
 <p>Python’s dynamic nature is a blessing on many occasions, but it can sometimes be a real pain. This nature is the second important reason to write tests to our code. Many cases that in other programming languages would’ve resulted in a simple <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>, can cause major bugs in Python due to wrong input types.</p>
 <p><img alt="QA Engineer" src="https://cdn.shopify.com/s/files/1/2233/3607/products/DynamicImageHandler_a14afc94-6602-4f5c-86bd-faf17eb7a2d0_2000x.png?v=1513957861" /></p>
-</div>
-<div class="section" id="the-solution">
-<h2>The Solution<a class="headerlink" href="#the-solution" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="the-solution">
+<h2>The Solution<a class="headerlink" href="#the-solution" title="Permalink to this heading">#</a></h2>
 <p>As I’m sure you’ve gathered by now, we want you to write tests. Let’s examine the iterative process that produces code and tests. We’ll go back to the min-max scaling example later, we’ll start with a more simple function. For now, let’s assume we have two positive integers we wish to add together, perhaps the result of some complicated pipeline, which means we would also like to validate that this condition is in fact satisfied.</p>
 <p>What would our code look like? What about something like:</p>
 <div class="cell docutils container">
@@ -618,8 +569,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Test functions always start with <code class="docutils literal notranslate"><span class="pre">test_</span></code>.</p>
 </div>
 <p>Above you see an example of using assertions in tests, which works seamlessly with <a class="reference external" href="https://docs.pytest.org/en/6.2.x/"><code class="docutils literal notranslate"><span class="pre">pytest</span></code></a>, the library we’ve been using to run tests in the homework assignments. Pytest looks for these asserts and executes them in a smart manner, which helps us in writing very concise and clear tests. We can easily run a Python file or module containing test functions by calling the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> command-line interface.</p>
-<div class="section" id="short-demo">
-<h3>Short Demo<a class="headerlink" href="#short-demo" title="Permalink to this headline">¶</a></h3>
+<section id="short-demo">
+<h3>Short Demo<a class="headerlink" href="#short-demo" title="Permalink to this heading">#</a></h3>
 <p>After running these two simple tests and seeing they passed we remembered we also coded another functionality to our <code class="docutils literal notranslate"><span class="pre">combine_results()</span></code> function - the way it raises a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> when it encounters negative numbers. We would like to verify that it indeed raises an exception (and the correct one) when it encounters these illegal inputs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -738,13 +689,13 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="admonition-input-type-testing-exercise-1 admonition">
 <p class="admonition-title">Input Type Testing Exercise 1</p>
 <p>Write three functions to test that a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> is raised for strings, lists and <code class="docutils literal notranslate"><span class="pre">None</span></code> values.</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_str_input</span><span class="p">():</span>
     <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
         <span class="n">combine_results</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -785,7 +736,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <p>The decorator function, starting with <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>, receives two inputs:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>The names of all function arguments you wish to parametrize.</p></li>
 <li><p>The arguments that should be given to the function, as a list of tuples, where each tuple has the length of the needed arguments.</p></li>
 </ol>
@@ -796,13 +747,13 @@ Solution<div class="summary-down docutils">
 <ul class="simple">
 <li><p>Fix <code class="docutils literal notranslate"><span class="pre">combine_results()</span></code> to raise the expected <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> for boolean input values.</p></li>
 </ul>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BAD_TYPE_MESSAGE</span> <span class="o">=</span> <span class="s2">&quot;Invalid input: (</span><span class="si">{value_1}</span><span class="s2">, </span><span class="si">{value_2}</span><span class="s2">)! Only integers are accepted.&quot;</span>
 <span class="n">NEGATIVE_INPUT_MESSAGE</span> <span class="o">=</span> <span class="s2">&quot;Invalid input: (</span><span class="si">{value_1}</span><span class="s2">, </span><span class="si">{value_2}</span><span class="s2">)! Negative result detected.&quot;</span>
 
@@ -843,13 +794,13 @@ Solution<div class="summary-down docutils">
 </details><ul class="simple">
 <li><p>Use the <code class="docutils literal notranslate"><span class="pre">pytest.mark.parametrize()</span></code> decorator to write concise tests for valid inputs, inputs that are expected to raise a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>, and inputs that are expected to raise a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>.</p></li>
 </ul>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TYPEERROR_INPUTS</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="p">([],</span> <span class="mi">1</span><span class="p">),</span> <span class="p">([],</span> <span class="s2">&quot;!&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="p">()),</span> <span class="p">({},</span> <span class="mi">2</span><span class="p">),</span>
                     <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="p">{</span><span class="mi">1</span><span class="p">}),</span> <span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
 <span class="n">VALID_INPUTS</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">100000</span><span class="p">,</span> <span class="mi">200000</span><span class="p">,</span> <span class="mi">100000</span> <span class="o">+</span> <span class="mi">200000</span><span class="p">)]</span>
@@ -882,7 +833,7 @@ Solution<div class="summary-down docutils">
 </details></div>
 <p>We could perhaps continue a bit more, but I think that the principle is clear.</p>
 <p>Before moving on to a more difficult example, let’s examine a few more features of tests:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>The test functions have <strong>no docstring, very long names, and a concise body</strong>. This allows them to be very readable, fast to execute, and very low chance that they themselves will contain any bugs.</p></li>
 <li><p>Writing tests <strong>forces us to design an “API”</strong> of the function. API stands for application programming interface, and it’s usually a property of large libraries, but here we mean that after writing the tests, the function can only output something meaningful only if you use it in a very strict way, which is great. This makes sure that bugs won’t just spread throughout the execution, but will stop at some point.</p></li>
 <li><p>There are many <strong>more lines of of testing code than of the actual function</strong> that’s being tested. This is usually a sign of good coding practices.</p></li>
@@ -891,9 +842,9 @@ Solution<div class="summary-down docutils">
 <li><p>Tests should be run as often as possible, to make sure that your changes aren’t affecting the existing behavior of your code.</p></li>
 <li><p>You should try very hard to <strong>“translate” bugs into tests</strong>. These might be the most important tests you’ll write.</p></li>
 </ol>
-</div>
-<div class="section" id="back-to-the-normalization-example">
-<h3>Back to the normalization example<a class="headerlink" href="#back-to-the-normalization-example" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="back-to-the-normalization-example">
+<h3>Back to the normalization example<a class="headerlink" href="#back-to-the-normalization-example" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">normalize_array</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
@@ -906,7 +857,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <p>Above, we have the previous normalization function that we wrote. It’s less obvious how to test it due to a couple of reasons:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>It’s very hard to calculate the correct result for any arbitrary input, at least without effectively rewriting the tested function, since the mathematical operation here isn’t as trivial as in the previous <code class="docutils literal notranslate"><span class="pre">combine_results</span></code> example.</p></li>
 <li><p>It’s not as easy to create the inputs, and what exactly are the allowed input shapes and types?</p></li>
 </ol>
@@ -952,7 +903,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <p>A couple of things to note:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>We specifically wrote an array that should remain exactly the same, this is the easiest example.</p></li>
 <li><p>To test array equality we actually want to traverse the array and test that each element is identical to its partner. We also want to make sure that the shape and data types are identical. Numpy helps with that using its built-in <code class="docutils literal notranslate"><span class="pre">testing</span></code> module.</p></li>
 <li><p>Floating point arrays may differ by a tiny bit (on the order of 1e-6) and still be considered equal for many use cases. In the above function we’re asserting true equality, but often times (like below) we’ll use <code class="docutils literal notranslate"><span class="pre">test_array_almost_equal</span></code> instead.</p></li>
@@ -991,13 +942,13 @@ Solution<div class="summary-down docutils">
 <li><p>Returned data type matches the input array’s data type.</p></li>
 <li><p>Returned shape matched the input array’s shape.</p></li>
 </ul>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="n">SHAPES</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)]</span>
 
@@ -1036,7 +987,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2312/2147493839.py:19: RuntimeWarning: invalid value encountered in divide
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2213/2147493839.py:19: RuntimeWarning: invalid value encountered in divide
   return arr / arr.max()
 </pre></div>
 </div>
@@ -1052,18 +1003,32 @@ Solution<div class="summary-down docutils">
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">result</span> <span class="o">=</span> <span class="n">normalize_array</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_almost_equal</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]))</span>
 
-    <span class="p">[</span><span class="o">...</span> <span class="n">skipping</span> <span class="n">hidden</span> <span class="mi">2</span> <span class="n">frame</span><span class="p">]</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/contextlib.py:75,</span> in <span class="ni">ContextDecorator.__call__.&lt;locals&gt;.inner</span><span class="nt">(*args, **kwds)</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span> <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">73</span> <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span>     <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_recreate_cm</span><span class="p">():</span>
+<span class="ne">---&gt; </span><span class="mi">75</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.16/x64/lib/python3.8/site-packages/numpy/testing/_private/utils.py:745,</span> in <span class="ni">assert_array_compare.&lt;locals&gt;.func_assert_same_pos</span><span class="nt">(x, y, func, hasval)</span>
-<span class="g g-Whitespace">    </span><span class="mi">740</span> <span class="k">if</span> <span class="n">bool_</span><span class="p">(</span><span class="n">x_id</span> <span class="o">==</span> <span class="n">y_id</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">True</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">741</span>     <span class="n">msg</span> <span class="o">=</span> <span class="n">build_err_msg</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span>
-<span class="g g-Whitespace">    </span><span class="mi">742</span>                         <span class="n">err_msg</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">x and y </span><span class="si">%s</span><span class="s1"> location mismatch:&#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">743</span>                         <span class="o">%</span> <span class="p">(</span><span class="n">hasval</span><span class="p">),</span> <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">header</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">744</span>                         <span class="n">names</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">),</span> <span class="n">precision</span><span class="o">=</span><span class="n">precision</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">745</span>     <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">746</span> <span class="c1"># If there is a scalar, then here we know the array has the same</span>
-<span class="g g-Whitespace">    </span><span class="mi">747</span> <span class="c1"># flag as it everywhere, so we should return the scalar flag.</span>
-<span class="g g-Whitespace">    </span><span class="mi">748</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x_id</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span> <span class="ow">or</span> <span class="n">x_id</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="p">[</span><span class="o">...</span> <span class="n">skipping</span> <span class="n">hidden</span> <span class="mi">1</span> <span class="n">frame</span><span class="p">]</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/contextlib.py:75,</span> in <span class="ni">ContextDecorator.__call__.&lt;locals&gt;.inner</span><span class="nt">(*args, **kwds)</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span> <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">73</span> <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span>     <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_recreate_cm</span><span class="p">():</span>
+<span class="ne">---&gt; </span><span class="mi">75</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+
+    <span class="p">[</span><span class="o">...</span> <span class="n">skipping</span> <span class="n">hidden</span> <span class="mi">1</span> <span class="n">frame</span><span class="p">]</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/numpy/testing/_private/utils.py:753,</span> in <span class="ni">assert_array_compare.&lt;locals&gt;.func_assert_same_pos</span><span class="nt">(x, y, func, hasval)</span>
+<span class="g g-Whitespace">    </span><span class="mi">748</span> <span class="k">if</span> <span class="n">bool_</span><span class="p">(</span><span class="n">x_id</span> <span class="o">==</span> <span class="n">y_id</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">749</span>     <span class="n">msg</span> <span class="o">=</span> <span class="n">build_err_msg</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span>
+<span class="g g-Whitespace">    </span><span class="mi">750</span>                         <span class="n">err_msg</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">x and y </span><span class="si">%s</span><span class="s1"> location mismatch:&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">751</span>                         <span class="o">%</span> <span class="p">(</span><span class="n">hasval</span><span class="p">),</span> <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">header</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">752</span>                         <span class="n">names</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">),</span> <span class="n">precision</span><span class="o">=</span><span class="n">precision</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">753</span>     <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">754</span> <span class="c1"># If there is a scalar, then here we know the array has the same</span>
+<span class="g g-Whitespace">    </span><span class="mi">755</span> <span class="c1"># flag as it everywhere, so we should return the scalar flag.</span>
+<span class="g g-Whitespace">    </span><span class="mi">756</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x_id</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span> <span class="ow">or</span> <span class="n">x_id</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 
 <span class="ne">AssertionError</span>: 
 <span class="n">Arrays</span> <span class="n">are</span> <span class="ow">not</span> <span class="n">almost</span> <span class="n">equal</span> <span class="n">to</span> <span class="mi">6</span> <span class="n">decimals</span>
@@ -1128,7 +1093,7 @@ Solution<div class="summary-down docutils">
 </div>
 <p>Great! Another potential bug squashed.</p>
 <p>One more special input type remains - NaNs. What do we expect to happen? There are three ways to deal with NaNs, as we know:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Using NaN-aware functions instead of the standard ones, and then NaNs can live happily with other values.</p></li>
 <li><p>Replace them with a sentinel value (0, some large number, etc.).</p></li>
 <li><p>Remove them altogether.</p></li>
@@ -1224,9 +1189,9 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 <p>At this point we can say we’re done. 16 tests for this function seems about right. We can do better (spoiler alert! wait for a couple of lessons from now!), but I believe that the importance of tests came across.</p>
-</div>
-<div class="section" id="integration-testing">
-<h3>Integration Testing<a class="headerlink" href="#integration-testing" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="integration-testing">
+<h3>Integration Testing<a class="headerlink" href="#integration-testing" title="Permalink to this heading">#</a></h3>
 <p>Unit tests repeatedly tests functions or methods your write under different inputs, and are the backbone of any reliable test suit. However, unit tests are not enough, since they don’t check the interface between the different functions and classes in your application.</p>
 <p>Integration tests are larger, heavier tests that take at least two components, or units, of your application, and makes sure that they interact well with each other.</p>
 <p>Obviously, if we start taking each two consecutive functions and write an integration test for that pair, and then continue with all three consecutive functions and write these integration tests, and so on - we’ll never finish writing the damn application. That’s why integration testing is used at crucial junctions of our application, between major classes for example.</p>
@@ -1241,13 +1206,13 @@ Solution<div class="summary-down docutils">
 </ul>
 </div>
 <p><em>Don’t try to implement things in a performant way with fancy algorithms. The focus here is the unit tests and test-driven development.</em></p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">generate_fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the Fibonacci series up to some n.</span>
@@ -1304,13 +1269,13 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 </details><p>Add tests for your new function.</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TestFib</span><span class="p">:</span>
     <span class="n">fib</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">])</span>
     <span class="n">primes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">])</span>
@@ -1347,9 +1312,9 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 </details></div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1363,7 +1328,7 @@ Solution<div class="summary-down docutils">
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./classes/class_8"
         },
         predefinedOutput: true
@@ -1371,44 +1336,115 @@ Solution<div class="summary-down docutils">
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../class_7/class_7.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Class 7: More <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, Visualizations, <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and Modeling</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../class_7/class_7.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Class 7: More <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, Visualizations, <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and Modeling</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../class_9/class_9.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../class_9/class_9.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Class 9: Advanced and Performant Python</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-implications-of-writing-untested-code">The Implications of Writing Untested Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#public-trust-in-research">Public Trust in Research</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-solution">The Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-demo">Short Demo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#back-to-the-normalization-example">Back to the normalization example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-testing">Integration Testing</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
 
-      </div>
-    </div>
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

@@ -1,536 +1,433 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Class 4: The Scientific Stack - Part I: numpy &#8212; Python for Neuroscience</title>
-    
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >let toggleHintShow = 'Click to show';</script>
-    <script >let toggleHintHide = 'Click to hide';</script>
-    <script >let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'classes/class_4/class_4';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Class 5: The Scientific Stack - Part II: matplotlib and pandas" href="../class_5/class_5.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="../class_3/class_3.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="prev" title="Class 3: More OOP and Exception Handling" href="../class_3/class_3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Python for Neuroscience</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
-   Introduction
-  </a>
- </li>
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Python for Neuroscience - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Python for Neuroscience - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../syllabus.html">Syllabus</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../contents.html">Contents</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../class_0/class_0.html">Class 0: Background and Basic Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_1/class_1.html">Class 1: More Syntax and The Python Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_2/class_2.html">Class 2: Virtual Environments and Object-oriented Programming (OOP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_3/class_3.html">Class 3: More OOP and Exception Handling</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Class 4: The Scientific Stack - Part I: <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_5/class_5.html">Class 5: The Scientific Stack - Part II: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_6/class_6.html">Class 6: Advanced <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_7/class_7.html">Class 7: More <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, Visualizations, <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and Modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_8/class_8.html">Class 8: Testing and Test-Driven Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_9/class_9.html">Class 9: Advanced and Performant Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_10/class_10.html">Class 10: Introduction to Machine Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_11/class_11.html">Class 11: Git and More Python Libraries</a></li>
+
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../syllabus.html">
-   Syllabus
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../../contents.html">
-   Contents
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_0/class_0.html">
-     Class 0: Background and Basic Syntax
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_1/class_1.html">
-     Class 1: More Syntax and The Python Stack
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_2/class_2.html">
-     Class 2: Virtual Environments and Object-oriented Programming (OOP)
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Class 4: The Scientific Stack - Part I:
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       numpy
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_5/class_5.html">
-     Class 5: The Scientific Stack - Part II:
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       matplotlib
-      </span>
-     </code>
-     and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_6/class_6.html">
-     Class 6: Advanced
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_7/class_7.html">
-     Class 7: More
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-     , Visualizations,
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       xarray
-      </span>
-     </code>
-     and Modeling
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_8/class_8.html">
-     Class 8: Testing and Test-Driven Development
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_9/class_9.html">
-     Class 9: Advanced and Performant Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_10/class_10.html">
-     Class 10: Introduction to Machine Learning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class_11/class_11.html">
-     Class 11: Git and More Python Libraries
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials.html">
-   Tutorials
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/python_setup.html">
-     General Setup
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/create_git_repo.html">
-     Create a Git Repository
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/create_and_publish_pacakge.html">
-     Creating and Publishing a Python Library
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../resources.html">
-   Resources
-  </a>
- </li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/python_setup.html">General Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/create_git_repo.html">Create a Git Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/create_and_publish_pacakge.html">Creating and Publishing a Python Library</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources.html">Resources</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/classes/class_4/class_4.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <a class="issues-button"
-            href="https://github.com/sagol-python-for-neuroscientists/textbook-public/issues/new?title=Issue%20on%20page%20%2Fclasses/class_4/class_4.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/classes/class_4/class_4.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
+<a href="https://github.com/sagol-python-for-neuroscientists/textbook-public/issues/new?title=Issue%20on%20page%20%2Fclasses/class_4/class_4.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/classes/class_4/class_4.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/classes/class_4/class_4.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Class 4: The Scientific Stack - Part I: numpy</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scientific-python">
-   Scientific Python
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     Introduction
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#numpy">
-     NumPy
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#getting-help">
-     Getting Help
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-arrays">
-     Creating Arrays
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#more-on-datatypes">
-     More on Datatypes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#numpy-arrays-vs-lists">
-     NumPy Arrays vs. Lists
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#why-are-lists-slower">
-       Why are lists slower?
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#indexing-and-slicing">
-     Indexing and Slicing
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#view-vs-copy">
-       View vs. Copy
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#aggregation">
-     Aggregation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fancy-indexing">
-     Fancy Indexing
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sorting">
-     Sorting
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#concatenation">
-     Concatenation
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scientific-python">Scientific Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">NumPy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-help">Getting Help</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-arrays">Creating Arrays</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-datatypes">More on Datatypes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays-vs-lists">NumPy Arrays vs. Lists</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#why-are-lists-slower">Why are lists slower?</a></li>
 </ul>
-
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-and-slicing">Indexing and Slicing</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#view-vs-copy">View vs. Copy</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregation">Aggregation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fancy-indexing">Fancy Indexing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting">Sorting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenation">Concatenation</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Class 4: The Scientific Stack - Part I: numpy</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scientific-python">
-   Scientific Python
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     Introduction
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#numpy">
-     NumPy
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#getting-help">
-     Getting Help
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-arrays">
-     Creating Arrays
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#more-on-datatypes">
-     More on Datatypes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#numpy-arrays-vs-lists">
-     NumPy Arrays vs. Lists
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#why-are-lists-slower">
-       Why are lists slower?
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#indexing-and-slicing">
-     Indexing and Slicing
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#view-vs-copy">
-       View vs. Copy
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#aggregation">
-     Aggregation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fancy-indexing">
-     Fancy Indexing
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sorting">
-     Sorting
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#concatenation">
-     Concatenation
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="class-4-the-scientific-stack-part-i-numpy">
-<h1>Class 4: The Scientific Stack - Part I: <code class="docutils literal notranslate"><span class="pre">numpy</span></code><a class="headerlink" href="#class-4-the-scientific-stack-part-i-numpy" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="scientific-python">
-<h2>Scientific Python<a class="headerlink" href="#scientific-python" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="introduction">
-<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="class-4-the-scientific-stack-part-i-numpy">
+<h1>Class 4: The Scientific Stack - Part I: <code class="docutils literal notranslate"><span class="pre">numpy</span></code><a class="headerlink" href="#class-4-the-scientific-stack-part-i-numpy" title="Permalink to this heading">#</a></h1>
+<section id="scientific-python">
+<h2>Scientific Python<a class="headerlink" href="#scientific-python" title="Permalink to this heading">#</a></h2>
+<section id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h3>
 <p><img alt="The scientific Python stack" src="../../_images/scientific_python.jpg" /></p>
 <p>The onion-like scientific stack of Python is composed of the most important packages used in the Python scientific world. Here’s a quick overview of the most important names in the stack, before we dive in deep:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><a class="reference external" href="https://ipython.org/">IPython</a>: A REPL, much like the command window in MATLAB. Lets you write Python on the fly, debug and check the performance of your code, and much (much!) more.</p></li>
 <li><p><a class="reference external" href="https://jupyter.org/">Jupyter</a>: Notebooks designed for data exploration. Write code and see its output immediately, with useful rich text (Markdown) annotations to accompany it (just like this notebook!).</p></li>
 <li><p><a class="reference external" href="https://numpy.org/doc/stable/">NumPy</a>: Standard implementation of multi-dimensional arrays in Python.</p></li>
@@ -540,13 +437,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><a class="reference external" href="http://seaborn.pydata.org/">seaborn</a>: Smart visualizations of tabular data.</p></li>
 </ol>
 <p>This scientific stack is one of the main reasons that empowered Python in recent years to the prominent role it has today. Throughout the course you will become familiar with all of the aforementioned tools, and more.</p>
-</div>
-<div class="section" id="numpy">
-<h3>NumPy<a class="headerlink" href="#numpy" title="Permalink to this headline">¶</a></h3>
-<div class="margin sidebar">
+</section>
+<section id="numpy">
+<h3>NumPy<a class="headerlink" href="#numpy" title="Permalink to this heading">#</a></h3>
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p><a class="reference external" href="https://docs.scipy.org/doc/numpy/user/numpy-for-matlab-users.html">This</a> page contains a thorough comparison of similar functions in MATLAB and <code class="docutils literal notranslate"><span class="pre">numpy</span></code>. If you want to use MATLAB’s <code class="docutils literal notranslate"><span class="pre">find</span></code> function and can’t seem to find a counterpart in NumPy (it’s <code class="docutils literal notranslate"><span class="pre">nonzero</span></code>, BTW), or if you wish to see how do different arithmetic functions compare between the two, that page can be of great assistance.</p>
-</div>
+</aside>
 <p>NumPy is the de-facto implementation of arrays in Python. They’re very similar to MATLAB arrays (and to other implementations in other programming languages).</p>
 <p>Although <code class="docutils literal notranslate"><span class="pre">numpy</span></code> is used extensively in the Python eco-system, it doesn’t come with the Python standard library, which means you have to install it first. Activate your environment and run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">numpy</span></code> from the command line (inside VSCode, for example). Only then you can follow the rest of the class.</p>
 <div class="cell docutils container">
@@ -699,9 +596,9 @@ The len of the array is 2 - which corresponds to the shape of the 0th dimension.
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="getting-help">
-<h3>Getting Help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="getting-help">
+<h3>Getting Help<a class="headerlink" href="#getting-help" title="Permalink to this heading">#</a></h3>
 <p>NumPy has a ton of features, and to get around it we can use <code class="docutils literal notranslate"><span class="pre">lookfor</span></code> and the <code class="docutils literal notranslate"><span class="pre">?</span></code> sign, besides the official reference on the internet:</p>
 <div class="cell tag_output_scroll docutils container">
 <div class="cell_input docutils container">
@@ -788,6 +685,8 @@ numpy.sort
     Return a sorted copy of an array.
 numpy.sqrt
     Return the non-negative square-root of an array, element-wise.
+numpy.void
+    Create a new structured or unstructured void scalar.
 numpy.array_equiv
     Returns True if input arrays are shape consistent and all elements equal.
 numpy.dtype
@@ -814,6 +713,8 @@ numpy.maximum
     Element-wise maximum of array elements.
 numpy.minimum
     Element-wise minimum of array elements.
+numpy.meshgrid
+    Return coordinate matrices from coordinate vectors.
 numpy.swapaxes
     Interchange two axes of an array.
 numpy.full_like
@@ -824,10 +725,10 @@ numpy.bitwise_or
     Compute the bit-wise OR of two arrays element-wise.
 numpy.datetime64
     If created from a 64-bit integer, it represents an offset from
-numpy.empty_like
-    Return a new array with the same shape and type as a given array.
 numpy.rec.array
     Construct a record array from a wide-variety of objects.
+numpy.empty_like
+    Return a new array with the same shape and type as a given array.
 numpy.frombuffer
     Interpret a buffer as a 1-dimensional array.
 numpy.zeros_like
@@ -854,6 +755,8 @@ numpy.put_along_axis
     Put values into the destination array by matching 1d index and data slices.
 numpy.chararray.tolist
     a.tolist()
+numpy.ma.mrecords.MaskedRecords.__new__
+    Create a new masked array from scratch.
 numpy.ma.choose
     Use an index array to construct a new array from a list of choices.
 numpy.ma.maximum
@@ -866,8 +769,6 @@ numpy.matlib.rand
     Return a matrix of random values with given shape.
 numpy.datetime_as_string
     Convert an array of datetimes into an array of strings.
-numpy.ma.mrecords.MaskedRecords.__new__
-    Create a new masked array from scratch.
 numpy.ma.ones_like
     Return an array of ones with the same shape and type as a given array.
 numpy.ma.bitwise_or
@@ -882,24 +783,14 @@ numpy.ma.bitwise_xor
     Compute the bit-wise XOR of two arrays element-wise.
 numpy.ma.make_mask_none
     Return a boolean mask of the given shape, filled with False.
-numpy.core.tests.test_umath.interesting_binop_operands
-    Helper to create &quot;interesting&quot; operands to cover common code paths:
 numpy.ma.tests.test_subclassing.MSubArray.__new__
     Create a new masked array from scratch.
-numpy.core._multiarray_umath.clip
-    Clip (limit) the values in an array.
-numpy.core.tests.test_overrides._new_duck_type_and_implements
-    Create a duck array type and implements functions.
 numpy.ma.tests.test_subclassing.SubMaskedArray.__new__
     Create a new masked array from scratch.
 numpy.ma.mrecords.fromrecords
     Creates a MaskedRecords from a list of records.
 numpy.f2py.tests.test_array_from_pyobj.Array.has_shared_memory
     Check that created array shares data with input array.
-numpy.core._multiarray_umath.empty_like
-    Return a new array with the same shape and type as a given array.
-numpy.core._dtype._construction_repr
-    Creates a string repr of the dtype, excluding the &#39;dtype()&#39; part
 numpy.abs
     Calculate the absolute value element-wise.
 numpy.add
@@ -910,6 +801,8 @@ numpy.log
     Natural logarithm, element-wise.
 numpy.mod
     Returns the element-wise remainder of division.
+numpy.lib.recfunctions.require_fields
+    Casts a structured array to a new dtype using assignment by field-name.
 numpy.sin
     Trigonometric sine, element-wise.
 numpy.tan
@@ -928,8 +821,6 @@ numpy.less
     Return the truth value of (x1 &lt; x2) element-wise.
 numpy.log2
     Base-2 logarithm of `x`.
-numpy.lib.recfunctions.require_fields
-    Casts a structured array to a new dtype using assignment by field-name.
 numpy.sign
     Returns an element-wise indication of the sign of a number.
 numpy.sinh
@@ -962,8 +853,6 @@ numpy.divide
     Divide arguments element-wise.
 numpy.divmod
     Return element-wise quotient and remainder simultaneously.
-numpy.core._multiarray_umath.datetime_as_string
-    Convert an array of datetimes into an array of strings.
 numpy.source
     Print or write to a file the source code for a NumPy object.
 numpy.square
@@ -1090,6 +979,10 @@ numpy.ma.arctan
     Trigonometric inverse tangent, element-wise.
 numpy.ma.divide
     Divide arguments element-wise.
+numpy.lib.recfunctions.unstructured_to_structured
+    Converts an n-D unstructured array into an (n-1)-D structured array.
+numpy.ma.tests.test_subclassing.SubArray
+    ndarray(shape, dtype=float, buffer=None, offset=0,
 numpy.ma.arccosh
     Inverse hyperbolic cosine, element-wise.
 numpy.ma.arcsinh
@@ -1100,8 +993,6 @@ numpy.ma.arctanh
     Inverse hyperbolic tangent element-wise.
 numpy.ma.greater
     Return the truth value of (x1 &gt; x2) element-wise.
-numpy.lib.recfunctions.unstructured_to_structured
-    Converts an n-D unstructured array into an (n-1)-D structured array.
 numpy.ma.multiply
     Multiply arguments element-wise.
 numpy.ma.negative
@@ -1120,8 +1011,6 @@ numpy.ma.less_equal
     Return the truth value of (x1 &lt;= x2) element-wise.
 numpy.ma.logical_or
     Compute the truth value of x1 OR x2 element-wise.
-numpy.ma.tests.test_subclassing.SubArray
-    ndarray(shape, dtype=float, buffer=None, offset=0,
 numpy.ma.logical_and
     Compute the truth value of x1 AND x2 element-wise.
 numpy.ma.logical_not
@@ -1134,13 +1023,7 @@ numpy.ma.floor_divide
     Return the largest integer smaller or equal to the division of the inputs.
 numpy.ma.greater_equal
     Return the truth value of (x1 &gt;= x2) element-wise.
-numpy.core.tests.test_function_base.PhysicalQuantity2
-    ndarray(shape, dtype=float, buffer=None, offset=0,
 numpy.lib.tests.test_stride_tricks.SimpleSubClass
-    ndarray(shape, dtype=float, buffer=None, offset=0,
-numpy.core.tests.test_multiarray.TestArrayPriority.Foo
-    ndarray(shape, dtype=float, buffer=None, offset=0,
-numpy.core.tests.test_multiarray.TestArrayPriority.Bar
     ndarray(shape, dtype=float, buffer=None, offset=0,
 numpy.ma.tests.test_subclassing.ComplicatedSubArray
     ndarray(shape, dtype=float, buffer=None, offset=0,
@@ -1161,9 +1044,9 @@ numpy.random.Generator.permuted
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="creating-arrays">
-<h3>Creating Arrays<a class="headerlink" href="#creating-arrays" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="creating-arrays">
+<h3>Creating Arrays<a class="headerlink" href="#creating-arrays" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># similar to MATLAB&#39;s 0:9 (and to Python&#39;s range())</span>
@@ -1357,13 +1240,13 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 <p class="admonition-title">Note</p>
 <p>NumPy does contain a matrix-like array - <code class="docutils literal notranslate"><span class="pre">np.matrix('1</span> <span class="pre">2;</span> <span class="pre">3</span> <span class="pre">4')</span></code>, which behaves like a linear algebra 2D matrix (see <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.matrix.html"><code class="docutils literal notranslate"><span class="pre">np.matrix</span></code></a>), but its use is discouraged.</p>
 </div>
-</div>
-<div class="section" id="more-on-datatypes">
-<h3>More on Datatypes<a class="headerlink" href="#more-on-datatypes" title="Permalink to this headline">¶</a></h3>
-<div class="margin sidebar">
+</section>
+<section id="more-on-datatypes">
+<h3>More on Datatypes<a class="headerlink" href="#more-on-datatypes" title="Permalink to this heading">#</a></h3>
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>For more information about <code class="docutils literal notranslate"><span class="pre">dtype</span></code>s, see the <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.dtypes.html">Data type objects (dtypes)</a> section in NumPy’s official documentation.</p>
-</div>
+</aside>
 <p>While <code class="docutils literal notranslate"><span class="pre">numpy</span></code> doesn’t require you to actively think of the data type of each of your arrays, it’s a useful habit to have. The existing data types in <code class="docutils literal notranslate"><span class="pre">numpy</span></code> are:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1383,14 +1266,14 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 <p>Many array creation and handling methods have a <code class="docutils literal notranslate"><span class="pre">dtype</span></code> keyword argument, that allow you to specify the required output’s data type easily.</p>
 <p>Python will issue a <code class="docutils literal notranslate"><span class="pre">RuntimeWarning</span></code> whenever an “unsafe” conversion of data type will occur, for example from <code class="docutils literal notranslate"><span class="pre">np.float64</span></code> to <code class="docutils literal notranslate"><span class="pre">np.float32</span></code>.</p>
-</div>
-<div class="section" id="numpy-arrays-vs-lists">
-<h3>NumPy Arrays vs. Lists<a class="headerlink" href="#numpy-arrays-vs-lists" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="numpy-arrays-vs-lists">
+<h3>NumPy Arrays vs. Lists<a class="headerlink" href="#numpy-arrays-vs-lists" title="Permalink to this heading">#</a></h3>
 <p>You might have asked yourselves by this point what’s the difference between lists and <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays. In other words, if Python already has an array-like data structure, why does it need another one?</p>
 <p>Lists are truly amazing, but their flexibility comes at a cost. You won’t notice it when you’re writing some short script, but when you start working with real datasets you notice that their performance is lacking.</p>
 <p>Naive iteration over lists is good enough when the lists contain up to a few thousands of elements, but somewhere after this invisible threshold you will start to notice the runtimes of your app turning very slow.</p>
-<div class="section" id="why-are-lists-slower">
-<h4>Why are lists slower?<a class="headerlink" href="#why-are-lists-slower" title="Permalink to this headline">¶</a></h4>
+<section id="why-are-lists-slower">
+<h4>Why are lists slower?<a class="headerlink" href="#why-are-lists-slower" title="Permalink to this heading">#</a></h4>
 <p>Lists are slower due to their implementation. Because a list has to be heterogeneous, a list is actually an object containing references to other objects, which are the elements of the data contained in the list. This nesting can go on even deeper, since elements of lists can be other lists, or other complex data types.</p>
 <p>Iterating over such a complicated objects contains a lot of “overhead”, i.e. time the interpreter tries to figure out what is it actually facing - is this current value an integer? A float? A dictionary of tuples?</p>
 <p><img alt="Numpy arrays versus lists" src="../../_images/array_vs_list.png" /></p>
@@ -1421,7 +1304,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>99 ms ± 501 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>65.2 ms ± 2.98 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -1438,7 +1321,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>926 µs ± 15.8 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>489 µs ± 2.59 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1471,10 +1354,10 @@ Numpy array size (1M elements, MB): 4.0
 <p>Each element has to weigh 4 bytes, or 32 bits. This means that the <code class="docutils literal notranslate"><span class="pre">np.arange()</span></code> function generates by default <code class="docutils literal notranslate"><span class="pre">int32</span></code> values.</p>
 </div>
 <p>Lower memory usage can help us pack larger array in the computer’s working memory (RAM), and it will also improve the performance of the underlying code.</p>
-</div>
-</div>
-<div class="section" id="indexing-and-slicing">
-<h3>Indexing and Slicing<a class="headerlink" href="#indexing-and-slicing" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="indexing-and-slicing">
+<h3>Indexing and Slicing<a class="headerlink" href="#indexing-and-slicing" title="Permalink to this heading">#</a></h3>
 <p>Indexing <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays is very much what you’d expect it to be.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1576,8 +1459,8 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 </div>
-<div class="section" id="view-vs-copy">
-<h4>View vs. Copy<a class="headerlink" href="#view-vs-copy" title="Permalink to this headline">¶</a></h4>
+<section id="view-vs-copy">
+<h4>View vs. Copy<a class="headerlink" href="#view-vs-copy" title="Permalink to this heading">#</a></h4>
 <p>In Python, slicing creates a view of an object, not a copy:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1659,10 +1542,10 @@ Numpy array size (1M elements, MB): 4.0
 <p>This behavior allows NumPy to save time and memory. It will usually go unnoticed during day-to-day use. Occasionally, however, it can result in ugly bugs which are hard to locate.</p>
 <p>Let’s look at a summary of 2D indexing:</p>
 <p><img alt="Numpy indexing" src="../../_images/numpy_indexing.png" /></p>
-</div>
-</div>
-<div class="section" id="aggregation">
-<h3>Aggregation<a class="headerlink" href="#aggregation" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="aggregation">
+<h3>Aggregation<a class="headerlink" href="#aggregation" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">1_000</span><span class="p">)</span>
@@ -1686,13 +1569,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>101 µs ± 2.33 µs per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>73.2 µs ± 308 ns per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.7 µs ± 50.7 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.17 µs ± 21.6 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.16 µs ± 38.8 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.57 µs ± 4.7 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1709,13 +1592,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>77.9 µs ± 1.82 µs per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>46.8 µs ± 376 ns per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.76 µs ± 106 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.01 µs ± 5.6 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.1 µs ± 54.4 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.51 µs ± 3.43 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1773,9 +1656,9 @@ Numpy array size (1M elements, MB): 4.0
 </pre></div>
 </div>
 <p>Most of them have an object-oriented version, i.e. <code class="docutils literal notranslate"><span class="pre">arr.var()</span></code>, and a procedural version, i.e. <code class="docutils literal notranslate"><span class="pre">np.var(arr)</span></code>.</p>
-</div>
-<div class="section" id="fancy-indexing">
-<h3>Fancy Indexing<a class="headerlink" href="#fancy-indexing" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="fancy-indexing">
+<h3>Fancy Indexing<a class="headerlink" href="#fancy-indexing" title="Permalink to this heading">#</a></h3>
 <p>In NumPy, indexing an array with a different array is called “fancy” indexing. Perhaps confusingly, it creates a copy, not a view.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1912,9 +1795,9 @@ np.sum result: 5
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="sorting">
-<h3>Sorting<a class="headerlink" href="#sorting" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="sorting">
+<h3>Sorting<a class="headerlink" href="#sorting" title="Permalink to this heading">#</a></h3>
 <p>Again we face a condition in which Python has its own <code class="docutils literal notranslate"><span class="pre">sort</span></code> functions, but numpy’s <code class="docutils literal notranslate"><span class="pre">np.sort()</span></code> are much better suited for arrays. We can either sort in-place, or have a new object back:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1956,9 +1839,9 @@ np.sum result: 5
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="concatenation">
-<h3>Concatenation<a class="headerlink" href="#concatenation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="concatenation">
+<h3>Concatenation<a class="headerlink" href="#concatenation" title="Permalink to this heading">#</a></h3>
 <p>Concatenation (and splitting) in <code class="docutils literal notranslate"><span class="pre">numpy</span></code> works as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2063,16 +1946,16 @@ np.sum result: 5
 <div class="attention admonition">
 <p class="admonition-title">Familiarization Exercise</p>
 <p>Create two random 3D arrays, at least 3x3x3 in size. The first should have random integers between 0 and 100, while the second should contain floating points numbers drawn from the normal distribution, with mean -1 and standard deviation of 2</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>What are the default datatypes of integer and floating-point arrays in NumPy?</p></li>
 </ol>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">high</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span>
@@ -2085,31 +1968,31 @@ Solution<div class="summary-down docutils">
 </pre></div>
 </div>
 </div>
-</details><ol class="simple">
+</details><ol class="arabic simple" start="2">
 <li><p>Center the distribution of the first integer array around 0, with minimal and maximal values ranging between -1 and 1.</p></li>
 </ol>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">array_1</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">array_1</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="mi">2</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">centered_array_1</span> <span class="o">=</span> <span class="p">(</span><span class="n">array_1</span> <span class="o">-</span> <span class="n">middle</span><span class="p">)</span> <span class="o">/</span> <span class="n">middle</span>
 </pre></div>
 </div>
 </div>
-</details><ol class="simple">
+</details><ol class="arabic simple" start="3">
 <li><p>Calculate the mean and standard deviation of each array along the last axis, and the sum along the second axis. Use the object-oriented implementation of these functions.</p></li>
 </ol>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">array_1 (integers) stats:&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mean:</span><span class="se">\t</span><span class="si">{</span><span class="n">array_1</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s2">STD:</span><span class="se">\n</span><span class="si">{</span><span class="n">array_1</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">Sum:</span><span class="se">\n</span><span class="si">{</span><span class="n">array_1</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">array_2 (normal distribution) stats:&quot;</span><span class="p">)</span>
@@ -2201,14 +2084,14 @@ Solution<div class="summary-down docutils">
 <p class="admonition-title">Iteration Exercise</p>
 <p>Find and return the indices of the two random arrays only where <strong>both elements</strong> satisfy <code class="docutils literal notranslate"><span class="pre">-0.5</span> <span class="pre">&lt;=</span> <span class="pre">value</span> <span class="pre">&lt;=</span> <span class="pre">0.5</span></code>. Do so in at least two distinct ways. These can include element-wise iteration, masked-arrays, and more.</p>
 <p>Time the execution of the script using the IPython <code class="docutils literal notranslate"><span class="pre">%%timeit</span></code> magic if you have this tool near at hand.</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Using element-wise iteration:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Using element-wise iteration:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">%%</span><span class="n">timeit</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">values</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">array_1</span><span class="o">.</span><span class="n">flat</span><span class="p">,</span> <span class="n">array_2</span><span class="o">.</span><span class="n">flat</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
@@ -2219,7 +2102,7 @@ Solution<div class="summary-down docutils">
 <span class="go">4.55 ms ± 150 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)</span>
 </pre></div>
 </div>
-<p class="card-text">Using a mask:</p>
+<p class="sd-card-text">Using a mask:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">%%</span><span class="n">timeit</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mask_1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">&lt;=</span> <span class="n">array_1</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">array_1</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="mf">0.5</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mask_2</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">&lt;=</span> <span class="n">array_2</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">array_2</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="mf">0.5</span><span class="p">)</span>
@@ -2233,61 +2116,61 @@ Solution<div class="summary-down docutils">
 </details></div>
 <div class="attention admonition">
 <p class="admonition-title">Broadcasting Exercise</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Create a vector with length 100, filled with ones, and a 2D zero-filled array with its last dimension with size of 100.</p></li>
 </ol>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
-</details><ol class="simple">
+</details><ol class="arabic simple" start="2">
 <li><p>Using <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.tile.html"><code class="docutils literal notranslate"><span class="pre">np.tile()</span></code></a>, add the vector and the array.</p></li>
 </ol>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tiled_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">vec</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ans_tiled</span> <span class="o">=</span> <span class="n">mat</span> <span class="o">+</span> <span class="n">tiled_vec</span>
 </pre></div>
 </div>
 </div>
-</details><ol class="simple">
+</details><ol class="arabic simple" start="3">
 <li><p>Did you have to use <code class="docutils literal notranslate"><span class="pre">np.tile()</span></code> in this case? What feature of <code class="docutils literal notranslate"><span class="pre">numpy</span></code> allows this?</p></li>
 </ol>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Array broadcasting enables the same behavior:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Array broadcasting enables the same behavior:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ans_simple</span> <span class="o">=</span> <span class="n">mat</span> <span class="o">+</span> <span class="n">vec</span>
 </pre></div>
 </div>
 </div>
-</details><ol class="simple">
+</details><ol class="arabic simple" start="4">
 <li><p>What happens to the non-tiled addition when the first dimension of the matrix is 100? Why?</p></li>
 </ol>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mat_transposed</span> <span class="o">=</span> <span class="n">mat</span><span class="o">.</span><span class="n">T</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mat_transposed</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="go">(100, 10)</span>
@@ -2300,26 +2183,26 @@ Solution<div class="summary-down docutils">
 <span class="go">ValueError: operands could not be broadcast together with shapes (100,10) (100,) </span>
 </pre></div>
 </div>
-<p class="card-text">Broadcasting is done over the last dimension.</p>
+<p class="sd-card-text">Broadcasting is done over the last dimension.</p>
 </div>
-</details><ol class="simple">
+</details><ol class="arabic simple" start="5">
 <li><p><em>Bonus: How can one add the matrix (in its new shape) and vector without <code class="docutils literal notranslate"><span class="pre">np.tile()</span></code>?</em></p></li>
 </ol>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ans_newaxis</span> <span class="o">=</span> <span class="n">mat_transposed</span> <span class="o">+</span> <span class="n">vec</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </details></div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2333,7 +2216,7 @@ Solution<div class="summary-down docutils">
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./classes/class_4"
         },
         predefinedOutput: true
@@ -2341,44 +2224,121 @@ Solution<div class="summary-down docutils">
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../class_3/class_3.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">&lt;no title&gt;</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../class_3/class_3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Class 3: More OOP and Exception Handling</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../class_5/class_5.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../class_5/class_5.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Class 5: The Scientific Stack - Part II: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code></p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scientific-python">Scientific Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">NumPy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-help">Getting Help</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-arrays">Creating Arrays</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-datatypes">More on Datatypes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays-vs-lists">NumPy Arrays vs. Lists</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#why-are-lists-slower">Why are lists slower?</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-and-slicing">Indexing and Slicing</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#view-vs-copy">View vs. Copy</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregation">Aggregation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fancy-indexing">Fancy Indexing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting">Sorting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenation">Concatenation</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
 
-      </div>
-    </div>
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

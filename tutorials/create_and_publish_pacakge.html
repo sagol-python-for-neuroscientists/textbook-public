@@ -1,468 +1,432 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Creating and Publishing a Python Library &#8212; Python for Neuroscience</title>
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >let toggleHintShow = 'Click to show';</script>
-    <script >let toggleHintHide = 'Click to hide';</script>
-    <script >let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/create_and_publish_pacakge';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Resources" href="../resources.html" />
     <link rel="prev" title="Create a Git Repository" href="create_git_repo.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Python for Neuroscience</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Introduction
-  </a>
- </li>
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Python for Neuroscience - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Python for Neuroscience - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../contents.html">Contents</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../classes/class_0/class_0.html">Class 0: Background and Basic Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/class_1/class_1.html">Class 1: More Syntax and The Python Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/class_2/class_2.html">Class 2: Virtual Environments and Object-oriented Programming (OOP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/class_3/class_3.html">Class 3: More OOP and Exception Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/class_4/class_4.html">Class 4: The Scientific Stack - Part I: <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/class_5/class_5.html">Class 5: The Scientific Stack - Part II: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/class_6/class_6.html">Class 6: Advanced <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/class_7/class_7.html">Class 7: More <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, Visualizations, <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and Modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/class_8/class_8.html">Class 8: Testing and Test-Driven Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/class_9/class_9.html">Class 9: Advanced and Performant Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/class_10/class_10.html">Class 10: Introduction to Machine Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classes/class_11/class_11.html">Class 11: Git and More Python Libraries</a></li>
+
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../syllabus.html">
-   Syllabus
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../contents.html">
-   Contents
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../classes/class_0/class_0.html">
-     Class 0: Background and Basic Syntax
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../classes/class_1/class_1.html">
-     Class 1: More Syntax and The Python Stack
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../classes/class_2/class_2.html">
-     Class 2: Virtual Environments and Object-oriented Programming (OOP)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../classes/class_4/class_4.html">
-     Class 4: The Scientific Stack - Part I:
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       numpy
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../classes/class_5/class_5.html">
-     Class 5: The Scientific Stack - Part II:
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       matplotlib
-      </span>
-     </code>
-     and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../classes/class_6/class_6.html">
-     Class 6: Advanced
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../classes/class_7/class_7.html">
-     Class 7: More
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       pandas
-      </span>
-     </code>
-     , Visualizations,
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       xarray
-      </span>
-     </code>
-     and Modeling
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../classes/class_8/class_8.html">
-     Class 8: Testing and Test-Driven Development
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../classes/class_9/class_9.html">
-     Class 9: Advanced and Performant Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../classes/class_10/class_10.html">
-     Class 10: Introduction to Machine Learning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../classes/class_11/class_11.html">
-     Class 11: Git and More Python Libraries
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../tutorials.html">
-   Tutorials
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="python_setup.html">
-     General Setup
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="create_git_repo.html">
-     Create a Git Repository
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Creating and Publishing a Python Library
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../resources.html">
-   Resources
-  </a>
- </li>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../tutorials.html">Tutorials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="python_setup.html">General Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_git_repo.html">Create a Git Repository</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Creating and Publishing a Python Library</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/tutorials/create_and_publish_pacakge.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <a class="issues-button"
-            href="https://github.com/sagol-python-for-neuroscientists/textbook-public/issues/new?title=Issue%20on%20page%20%2Ftutorials/create_and_publish_pacakge.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/tutorials/create_and_publish_pacakge.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
+<a href="https://github.com/sagol-python-for-neuroscientists/textbook-public/issues/new?title=Issue%20on%20page%20%2Ftutorials/create_and_publish_pacakge.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/tutorials/create_and_publish_pacakge.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tutorials/create_and_publish_pacakge.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Creating and Publishing a Python Library</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naive-solution">
-   Naive Solution
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python-libraries-from-the-ground-up">
-   Python Libraries from the Ground Up
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#scaffolding">
-     Scaffolding
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#environment-and-dependencies">
-     Environment and dependencies
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#build-and-publish">
-     Build and publish!
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#documentation-and-readthedocs">
-     Documentation and ReadTheDocs
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#continuous-integration">
-     Continuous Integration
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-solution">Naive Solution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-libraries-from-the-ground-up">Python Libraries from the Ground Up</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scaffolding">Scaffolding</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-and-dependencies">Environment and dependencies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-and-publish">Build and publish!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-and-readthedocs">Documentation and ReadTheDocs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-integration">Continuous Integration</a></li>
 </ul>
-
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Creating and Publishing a Python Library</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naive-solution">
-   Naive Solution
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python-libraries-from-the-ground-up">
-   Python Libraries from the Ground Up
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#scaffolding">
-     Scaffolding
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#environment-and-dependencies">
-     Environment and dependencies
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#build-and-publish">
-     Build and publish!
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#documentation-and-readthedocs">
-     Documentation and ReadTheDocs
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#continuous-integration">
-     Continuous Integration
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="creating-and-publishing-a-python-library">
-<h1>Creating and Publishing a Python Library<a class="headerlink" href="#creating-and-publishing-a-python-library" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="creating-and-publishing-a-python-library">
+<h1>Creating and Publishing a Python Library<a class="headerlink" href="#creating-and-publishing-a-python-library" title="Permalink to this heading">#</a></h1>
 <p>Early in the course we showed how easy it is to download packages from PyPI (Python Package Index), the official repository for all Python pacakges. This class will discuss process of creating and publishing a library to the outer world, which is a bit more complicated than downloading a package, but not by much.</p>
-<div class="section" id="naive-solution">
-<h2>Naive Solution<a class="headerlink" href="#naive-solution" title="Permalink to this headline">¶</a></h2>
+<section id="naive-solution">
+<h2>Naive Solution<a class="headerlink" href="#naive-solution" title="Permalink to this heading">#</a></h2>
 <p>The simplest way to share our code is to send a <code class="docutils literal notranslate"><span class="pre">.py</span></code> file to someone by mail. If the receiver has a Python interpreter installed, he can just run the file by writing <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">new_file.py</span></code> in his command line. This has a few short-comings:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>The script was written in a specific Python version. You might have to make sure that your receiver has the same Python version.</p></li>
 <li><p>If it’s more than one script, you have to bundle scripts together and make sure they remain in the same directory when run.</p></li>
 <li><p>Nearly all scripts have dependencies. There’s no way to verify that the receiver truly has all the dependencies and is using the same version of dependencies that you’re using.</p></li>
 <li><p>If the original script is using code not written in Python, like Cython code or other C\C++ modules, you need to build these scripts in place - you can’t rely on them working on the target computer.</p></li>
 </ol>
 <p>These issues, along with the relative ease with which one can publish Python code online, support a more robust approach to code sharing.</p>
-</div>
-<div class="section" id="python-libraries-from-the-ground-up">
-<h2>Python Libraries from the Ground Up<a class="headerlink" href="#python-libraries-from-the-ground-up" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="python-libraries-from-the-ground-up">
+<h2>Python Libraries from the Ground Up<a class="headerlink" href="#python-libraries-from-the-ground-up" title="Permalink to this heading">#</a></h2>
 <p>There are a few “layers” for Python projects and libraries. The basic layers one can encounter in each Python (and software) project are source-code organization and version control. This tutorial will guide you through the process of creating a full-blown project, including PyPI publishing and test-suite support. If you’re aiming at something lighter you can just drop some of the components used here.</p>
 <p>Features of this project include:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>GitHub integration</p></li>
 <li><p>Continuous Integration via GitHub Actions</p></li>
 <li><p>Semantic versioning support</p></li>
@@ -470,10 +434,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Automatic documentation generation</p></li>
 </ol>
 <p>Many of these features can be generated using <a class="reference external" href="https://cookiecutter.readthedocs.io/en/1.7.2/index.html"><code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code></a> but we’ll avoid that for now. Once we understand what’s going on under the hood we might prefer using <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> instead of going through these manual steps. This guide is heavily based on a <a class="reference external" href="https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/">famous blog post</a>.</p>
-<div class="section" id="scaffolding">
-<h3>Scaffolding<a class="headerlink" href="#scaffolding" title="Permalink to this headline">¶</a></h3>
+<section id="scaffolding">
+<h3>Scaffolding<a class="headerlink" href="#scaffolding" title="Permalink to this heading">#</a></h3>
 <p>I’ll be assuming that we’re creating a new project, but these steps can easily be adapted if you wish to convert an existing project.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Make a new directory with the project’s name. We’ll use “Parse Stuff” as our project name here, so this directory may be called <code class="docutils literal notranslate"><span class="pre">ParseStuff</span></code>, <code class="docutils literal notranslate"><span class="pre">parseStuff</span></code>, <code class="docutils literal notranslate"><span class="pre">parse_stuff</span></code> or really any other name.</p></li>
 <li><p>Open it in VSCode using “Open Folder…”.</p></li>
 <li><p>Generate several basic files that we’ll fill in later:</p>
@@ -492,11 +456,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Copy the link to the repo (the one ending with <code class="docutils literal notranslate"><span class="pre">.git</span></code>) and go back to VSCode. Press Ctrl+Shift+P and write “Git: Add Remote”. Paste the link, insert “<code class="docutils literal notranslate"><span class="pre">origin</span></code>” as the repo name and confirm other dialogue boxes.</p></li>
 <li><p>If everything worked then you should be able to push by clicking the “…” icon and choosing the “Push” option. Make sure your code was indeed uploaded to the repo.</p></li>
 </ol>
-</div>
-<div class="section" id="environment-and-dependencies">
-<h3>Environment and dependencies<a class="headerlink" href="#environment-and-dependencies" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="environment-and-dependencies">
+<h3>Environment and dependencies<a class="headerlink" href="#environment-and-dependencies" title="Permalink to this heading">#</a></h3>
 <p>We have a folder but the project really isn’t a project quite yet, and we also didn’t do anything quite new yet. Let’s do some Python-related work:</p>
-<ol>
+<ol class="arabic">
 <li><p>Create a new environment and activate it: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-n</span> <span class="pre">parsestuff</span> <span class="pre">python=3.8</span></code>. Once it’s done write <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">parsestuff</span></code>.</p></li>
 <li><p>Install several key dependencies. You can add to this list any dependencies you know you’ll have for the actual code: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">build</span> <span class="pre">twine</span> <span class="pre">black</span> <span class="pre">flake8</span> <span class="pre">pytest</span></code></p></li>
 <li><p>Add configuration files. These files configure the behavior of the tools we just installed, so it’s OK if you don’t completely understand every written word here.</p>
@@ -609,7 +573,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="w">    </span><span class="na">where</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">src</span>
 </pre></div>
 </div>
-<ol class="simple">
+<ol class="arabic simple" start="5">
 <li><p>Add a <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> with the following content:</p></li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="kn">import</span> <span class="nn">setuptools</span>
@@ -619,9 +583,9 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 <p>Before we go any further let’s recap our latest steps: First, we’re defining configuration files for some of the tools we’ll be using, like <code class="docutils literal notranslate"><span class="pre">black</span></code> and <code class="docutils literal notranslate"><span class="pre">flake8</span></code>. These are definitely not a must, but they’re nice to have. Then we added an eerie-looking <code class="docutils literal notranslate"><span class="pre">MANIFEST.in</span></code> file which contains a bunch of incantations. This file define what will be packaged with our code besides the actual code, but I won’t go into  any further details. Lastly we added <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> and <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> files which are basically a configuration\metadata files that define how will our package be packaged.</p>
-</div>
-<div class="section" id="build-and-publish">
-<h3>Build and publish!<a class="headerlink" href="#build-and-publish" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="build-and-publish">
+<h3>Build and publish!<a class="headerlink" href="#build-and-publish" title="Permalink to this heading">#</a></h3>
 <p>Before doing more advanced stuff, let’s see if it builds. Building a package means generating a file that can be more easily shared with others, since this file (or files) contain metadata regarding our dependencies, Python version, and more. Every time we build we first have to remove the <code class="docutils literal notranslate"><span class="pre">dist</span></code> folder into which we’ll build our package. Since this is the first time we’re building, we don’t have this folder yet, but don’t forget to do it next time. To build, write in the command line (when you’re at the top project directory):</p>
 <p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">build</span></code></p>
 <p>If everything was successful, you should see a new <code class="docutils literal notranslate"><span class="pre">dist</span></code> and two files there - a <code class="docutils literal notranslate"><span class="pre">wheel</span></code> file and a <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code> file. These files can be shared and installed with <code class="docutils literal notranslate"><span class="pre">pip</span></code> on other computers, but the package can’t be installed from the web yet. To do that we’ll have to upload them to PyPI. Before doing that it’s advised that you should make a new virtual environment and see if they can be installled.</p>
@@ -632,20 +596,20 @@ const thebe_selector_output = ".output, .cell_output"
 <p>If it can be imported, and your page online in the testing area looks fine, then we’re ready to upload it to the “real” PyPI. Write:</p>
 <p><code class="docutils literal notranslate"><span class="pre">twine</span> <span class="pre">upload</span> <span class="pre">-r</span> <span class="pre">pypi</span> <span class="pre">dist/parse_stuff*</span></code></p>
 <p>and witness the wonder. Easy, right? :)</p>
-</div>
-<div class="section" id="documentation-and-readthedocs">
-<h3>Documentation and ReadTheDocs<a class="headerlink" href="#documentation-and-readthedocs" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="documentation-and-readthedocs">
+<h3>Documentation and ReadTheDocs<a class="headerlink" href="#documentation-and-readthedocs" title="Permalink to this heading">#</a></h3>
 <p>Documenting your project is extremely important. Besides having comments in your code and helpful docstrings, you sometimes also want more high-level material regarding installation and usage of your pacakge. This info should go in the <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder that was generated earlier. The idea is to build a website from markdown (<code class="docutils literal notranslate"><span class="pre">.md</span></code>) files. Please consult the <a class="reference external" href="https://www.mkdocs.org/">MkDocs website</a> for more details.</p>
 <p>If our project is on PyPI, we also want our documentation to have a website. ReadTheDocs is a website that happily hosts the documentation for your code. It will automatically fetch whatever’s in your <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder and display it in a nice-looking website.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Create an account <a class="reference external" href="https://readthedocs.org">there</a> and log into it.</p></li>
 <li><p>Go to your dashboard and Import a repository from the “My Projects” pulldown.</p></li>
 <li><p>Inside GitHub, select Settings -&gt; Webhooks and turn on the ReadTheDocs hook.</p></li>
 </ol>
 <p>Your docs will update online every time you update them and push the changes to GitHub. They’re probably currently quite dull, but you should add more documents to the <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder sooner rather than later.</p>
-</div>
-<div class="section" id="continuous-integration">
-<h3>Continuous Integration<a class="headerlink" href="#continuous-integration" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="continuous-integration">
+<h3>Continuous Integration<a class="headerlink" href="#continuous-integration" title="Permalink to this heading">#</a></h3>
 <p>CI is used to automatically test your code whenever you push something to GitHub. It works by pulling the latest commit from your GitHub into its servers. It then builds an environment identical to the one you have in your computer, installs your package and runs the tests for that package. Lastly it generates a detailed error report if one or more of your tests failed. This section is - again - based on a <a class="reference external" href="https://hynek.me/articles/python-github-actions/">famous blog post</a>.</p>
 <p>The easiest CI tool available today is GitHub actions. It’s integrated inside GitHub and allows you monitor the execution easily. To set it up, go to the “Actions” tab in your GH repo and click “Skip this and setup a workflow yourself”. Delete the template and paste this instead:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span>---
@@ -687,9 +651,9 @@ jobs:
 </div>
 <p>To conclude this part, “…click the green “Start commit” button in the top right and make sure you select the “Create a new branch for this commit and start a pull request.” radio button. Give the branch a memorable name (e.g. github-actions) and subsequently click “Create pull request”.”</p>
 <p>These changes are only updated in our web repo. We’ll need to pull them in order to see them locally.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -703,7 +667,7 @@ jobs:
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./tutorials"
         },
         predefinedOutput: true
@@ -711,44 +675,110 @@ jobs:
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="create_git_repo.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Create a Git Repository</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="create_git_repo.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Create a Git Repository</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../resources.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../resources.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Resources</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naive-solution">Naive Solution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-libraries-from-the-ground-up">Python Libraries from the Ground Up</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scaffolding">Scaffolding</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#environment-and-dependencies">Environment and dependencies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-and-publish">Build and publish!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-and-readthedocs">Documentation and ReadTheDocs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-integration">Continuous Integration</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
 
-      </div>
-    </div>
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Hagai Hargil, Zvi Baratz, Gal Ben-Zvi
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
