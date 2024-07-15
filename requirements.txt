@@ -1,10 +1,10 @@
 myst_nb
 myst-parser
 altair~=4.1
-bokeh~=2.3
+bokeh~=3.5
 cython~=0.29
 distributed~=2021.5
-holoviews~=1.14
+holoviews~=1.19
 jupyter-book
 matplotlib
 numba~=0.53
