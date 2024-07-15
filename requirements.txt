@@ -1,7 +1,7 @@
 myst_nb
 myst-parser
 altair~=4.1
-bokeh~=3.5
+bokeh
 cython~=0.29
 distributed~=2021.5
 holoviews~=1.19
