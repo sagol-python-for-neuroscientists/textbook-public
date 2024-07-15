@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Class 11: Git and More Python Libraries &#8212; Python for Neuroscience</title>
   
@@ -15,54 +14,50 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'classes/class_11/class_11';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -77,28 +72,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -120,12 +110,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -141,6 +139,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../../intro.html">
@@ -159,7 +159,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -171,7 +182,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../syllabus.html">Syllabus</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../contents.html">Contents</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../contents.html">Contents</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../class_0/class_0.html">Class 0: Background and Basic Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_1/class_1.html">Class 1: More Syntax and The Python Stack</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_2/class_2.html">Class 2: Virtual Environments and Object-oriented Programming (OOP)</a></li>
@@ -186,13 +197,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Class 11: Git and More Python Libraries</a></li>
 
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/python_setup.html">General Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/create_git_repo.html">Create a Git Repository</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/create_and_publish_pacakge.html">Creating and Publishing a Python Library</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../resources.html">Resources</a></li>
 </ul>
 
@@ -209,7 +220,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -218,14 +229,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -250,14 +261,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/classes/class_11/class_11.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -349,10 +360,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -360,14 +371,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -441,20 +452,20 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="class-11-git-and-more-python-libraries">
-<h1>Class 11: Git and More Python Libraries<a class="headerlink" href="#class-11-git-and-more-python-libraries" title="Permalink to this heading">#</a></h1>
+<h1>Class 11: Git and More Python Libraries<a class="headerlink" href="#class-11-git-and-more-python-libraries" title="Link to this heading">#</a></h1>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<h1><a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="git">
-<h2>Git<a class="headerlink" href="#git" title="Permalink to this heading">#</a></h2>
+<h2>Git<a class="headerlink" href="#git" title="Link to this heading">#</a></h2>
 <p>When we started using git, the basic intro I gave came down essentially to this:</p>
 <p><img alt="Git, from xkcd 1597" src="../../_images/git.png" /></p>
 <p>I did try to explain a little why we use it and how, but I essentially forced it upon you and made you memorize a few commands for it to work, and for your homework to be submitted. Today, we’ll try to dive a bit deeper and understand the “how” of git. This is because git is an immensely useful tool for our type of work, and it will be even more useful when we start hacking together a couple of weeks from now.</p>
 <section id="why-git">
-<h3>Why git?<a class="headerlink" href="#why-git" title="Permalink to this heading">#</a></h3>
+<h3>Why git?<a class="headerlink" href="#why-git" title="Link to this heading">#</a></h3>
 <p>Version control software lets us:</p>
 <ol class="arabic simple">
 <li><p>Write and manage the history of our codebase.</p></li>
@@ -465,7 +476,7 @@ document.write(`
 <p>There are a <a class="reference external" href="https://www.daolf.com/posts/git-series-part-1/">variety</a> <a class="reference external" href="https://missing.csail.mit.edu/2020/version-control/">of</a> <a class="reference external" href="https://rachelcarmena.github.io/2018/12/12/how-to-teach-git.html">tutorials</a> <a class="reference external" href="https://smusamashah.github.io/explain-git-in-simple-words">on</a> <a class="reference external" href="https://git-scm.com/doc">git</a>. Some are also <a class="reference external" href="https://learngitbranching.js.org/">interactive</a>. The one below is aimed at working with VSCode’s integrated tools, and should also help you collaborate during the hackathon.</p>
 </section>
 <section id="the-model">
-<h3>The model<a class="headerlink" href="#the-model" title="Permalink to this heading">#</a></h3>
+<h3>The model<a class="headerlink" href="#the-model" title="Link to this heading">#</a></h3>
 <p><img alt="Git composition" src="../../_images/git_lifecycle.png" /></p>
 <p>In a version-controlled project we have these three basic components:</p>
 <ol class="arabic simple">
@@ -476,14 +487,14 @@ document.write(`
 <p>The main idea behind git is to capture complete snapshots of the directory we’re tracking. Yes, the snapshots include everything that was present at that directory during that point of time and they’re complete, i.e. “decoding” them allows us to view the directory as it once was.</p>
 </section>
 <section id="setting-up-a-repository">
-<h3>Setting up a repository<a class="headerlink" href="#setting-up-a-repository" title="Permalink to this heading">#</a></h3>
+<h3>Setting up a repository<a class="headerlink" href="#setting-up-a-repository" title="Link to this heading">#</a></h3>
 <p>Any directory can be a git directory if it contains a <code class="docutils literal notranslate"><span class="pre">.git</span></code> folder with the proper subfolders (automatically generated, of course). The easiest way to create such a folder is to use the <code class="docutils literal notranslate"><span class="pre">init</span></code> command. If you open a folder which isn’t version controlled, VSCode will automatically offer to create a new git repository in it:</p>
 <p><img alt="Initialize a repo" src="../../_images/git_init.png" /></p>
 <p>If your directory is already version controlled, simply opening it in VSCode should work. If it’s not working, make sure you used the “Open Folder…” command to open VSCode. The folder containing the <code class="docutils literal notranslate"><span class="pre">.git</span></code> folder is the “top level” of your repository, and will automatically notice any changes in the subfolders of that folder. It’s usually not recommended to have several git projects inside a git-tracked folder. This means that if you have a “my_code_projects” folder which contains several other git-tracked folders, like HW assignments and other unrelated stuff, make sure that “my_code_projects” isn’t a git folder in itself, i.e. you shouldn’t have a <code class="docutils literal notranslate"><span class="pre">.git</span></code> folder in it. It’s technically possible to have “independent” git repositories inside others (they’re called sub-modules) but it’s usually not the right way to organize your projects.</p>
 <p>To conclude, once git is set the parent directory, as well as its sub-directories, will be tracked as long as there’s a <code class="docutils literal notranslate"><span class="pre">.git</span></code> folder in it. To remove <code class="docutils literal notranslate"><span class="pre">git</span></code> tracking from that specific folder, all you have to do is to remove the <code class="docutils literal notranslate"><span class="pre">.git</span></code> subfolder.</p>
 </section>
 <section id="commits">
-<h3>Commits<a class="headerlink" href="#commits" title="Permalink to this heading">#</a></h3>
+<h3>Commits<a class="headerlink" href="#commits" title="Link to this heading">#</a></h3>
 <p>The act of committing a file is perhaps the most fundamental one in git, so let’s break it down. When a file in a git-tracked folder has different contents from what the git repository has in it (remember that it has copies of everything) the file will be recognized by git as a “changed” file. In git terms, it means that the copy of the file in the “working tree” is different than what’s in the repository. Of course, if we haven’t committed anything, and only initialized the repository, <strong>all</strong> files will have a different working copy than what git has in its repository, since git doesn’t recognized any of them. Let’s see how it looks like in VSCode:</p>
 <p><img alt="Working copy" src="../../_images/git_workcopy.png" /></p>
 <p>As you see, there are two options for this situation - either the file is completely new and doesn’t exist in the repository, and so it’s marked as “U” in git (“Untracked”) or it already existed there, but the current content is different than the one recorded in the repository (“M” for “Modified”).</p>
@@ -497,28 +508,28 @@ document.write(`
 <p>Once committed the file will be “copied” to the git repository and saved there for future reference. We could go back in time to each commit quite easily using the “Timeline” feature on the bottom left of VSCode. Essentially commits are snapshots to the status of the repository at that particular instance. Each commit knows of its predecessor, so they form together a graph of progress for your repo. Due to these reasons it’s suggested to commit a lot and often. It’s very cheap to commit and it will provide you with a clear history of the changes in your repo. Changed a function’s signature? Commit. Added documentation? Commit. You basically commit everytime you feel like you feel the need to save the file (even though VSCode does that automatically).</p>
 </section>
 <section id="branches">
-<h3>Branches<a class="headerlink" href="#branches" title="Permalink to this heading">#</a></h3>
+<h3>Branches<a class="headerlink" href="#branches" title="Link to this heading">#</a></h3>
 <p>Up to now we’ve discussed most of these things earlier this semester. Now we come to a very important feature of git that you (probably) haven’t been using, but that should help you iterate over your own code, and cooperate with others.</p>
 <p>Branches of repositories are different “working copies” of the same repository, which have a different commit history. Every git repo has at least one branch, usually called master, which signals to the coders that this branch is the main branch. This branch is but a label which is put to a commit - usually the last one - and says that this commit is the current “head” of the branch. The history of a branch is the history of the commits that came before the commit it’s currently pointing at.</p>
 <section id="use-cases">
-<h4>Use cases<a class="headerlink" href="#use-cases" title="Permalink to this heading">#</a></h4>
+<h4>Use cases<a class="headerlink" href="#use-cases" title="Link to this heading">#</a></h4>
 <p>Assume you’re changing something in an existing codebase, but you’re not exactly sure how will it pan out. Or you’re making a change that in the long run you’re certain will work, but it means that you have to “break” the current implementation, which will render the current codebase unusable until you’re done. If you ever found yourself in one of these situations then you should have probably used a branch.</p>
 <p>Branches let you not worry about changes you make, since you know you’ll always be one command away from going back to the safe confounds of your older repo version, the one that worked.</p>
 </section>
 <section id="usage">
-<h4>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h4>
+<h4>Usage<a class="headerlink" href="#usage" title="Link to this heading">#</a></h4>
 <p>Making new branches is easy, which is another incentive that makes git-based developers use it a lot. To make a new branch from VSCode, click “Checkout to..” and then choose “Create new branch…”. Type in the name of the branch - the name of the feature or the bug you’re fixing, usually - and press enter. You’ll be checked out to that branch, which means that your current work will be committed to that branch instead of the previous one. You’ll notice the name of the branch in the bottom left corner of your screen, next to the “fork” symbol.</p>
 </section>
 </section>
 <section id="remotes">
-<h3>Remotes<a class="headerlink" href="#remotes" title="Permalink to this heading">#</a></h3>
+<h3>Remotes<a class="headerlink" href="#remotes" title="Link to this heading">#</a></h3>
 <p>A git repository can have many copies scattered around, and it’s very popular to host your git repositories in the cloud for backup and collaboration purposes. The most popular service for this purpose is the Microsoft-owned <a class="reference external" href="http://GitHub.com">GitHub.com</a> (GH), which hosts the codebases of many of the larger companies - Google, Microsoft, NSA - as well as millions of tiny, private user-owned repositories.</p>
 <p>Below we’ll look in more detail at some of the basic actions one can do with these cloud-based repositoties, which are called <em>“remotes”</em> in git lingo.</p>
 <section id="setting-up-a-remote-repository">
-<h4>Setting up a remote repository<a class="headerlink" href="#setting-up-a-remote-repository" title="Permalink to this heading">#</a></h4>
+<h4>Setting up a remote repository<a class="headerlink" href="#setting-up-a-remote-repository" title="Link to this heading">#</a></h4>
 <p>Before you can do anything with a remote repository, you first have to set it up. There a few options for that:</p>
 <section id="create-a-repository-directly-in-github-com">
-<h5>Create a repository directly in <a class="reference external" href="http://GitHub.com">GitHub.com</a><a class="headerlink" href="#create-a-repository-directly-in-github-com" title="Permalink to this heading">#</a></h5>
+<h5>Create a repository directly in <a class="reference external" href="http://GitHub.com">GitHub.com</a><a class="headerlink" href="#create-a-repository-directly-in-github-com" title="Link to this heading">#</a></h5>
 <p>This means that at the moment of its creation, the only copy of this repository which exists anywhere is on GH’s cloud. Since we usually don’t develop straight inside GH, we’ll first need a copy of this repository on our computer, and to have a direct “link” between our local copy and the online copy.</p>
 <p>Here’s how you create an online repo:</p>
 <div class="cell tag_remove-input docutils container">
@@ -537,7 +548,7 @@ document.write(`
 <p>We now have a local copy of the repo and we’re ready to work.</p>
 </section>
 <section id="create-a-local-repository-and-point-it-at-an-existing-remote-repo">
-<h5>Create a local repository and point it at an existing remote repo<a class="headerlink" href="#create-a-local-repository-and-point-it-at-an-existing-remote-repo" title="Permalink to this heading">#</a></h5>
+<h5>Create a local repository and point it at an existing remote repo<a class="headerlink" href="#create-a-local-repository-and-point-it-at-an-existing-remote-repo" title="Link to this heading">#</a></h5>
 <p>If we already have a local repository which we now wish to back up online, we can connect it to some online repo using a few commands. It’s usually better if the online repo is brand new and has the same name of the local repo. Here’s an example (again, the “Git: Add Remote” was accessed using Ctrl + Shift + P):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -555,12 +566,12 @@ document.write(`
 </section>
 </section>
 <section id="push-and-pull">
-<h4>Push and pull<a class="headerlink" href="#push-and-pull" title="Permalink to this heading">#</a></h4>
+<h4>Push and pull<a class="headerlink" href="#push-and-pull" title="Link to this heading">#</a></h4>
 <p>The most basic thing you can do with a remote repository is to pull data from it, or push to it. Pulling is done when we wish to sync with changes which are located on the cloud, but were uploaded there by someone else. In the hackathon, for example, it’s possible that some other students will change the repo’s file, and you’d like these changes to be inside your local copy as well - so you “pull” the changes from the cloud into your machine.</p>
 <p>Pushing is exactly the opposite - you’re publishing your work online for collaboration (or backup) purposes.</p>
 </section>
 <section id="conflicts">
-<h4>Conflicts<a class="headerlink" href="#conflicts" title="Permalink to this heading">#</a></h4>
+<h4>Conflicts<a class="headerlink" href="#conflicts" title="Link to this heading">#</a></h4>
 <p>While conflicts may occur in any git repo, regardless of its remotes, they’re most relevant under this situation so we’ll go through them now. A conflict is a “disagreement” between two repos on the history of commits. In other words, two repos which are supposed to be identical have the same file but with different content. Please note that if your repository consists of <code class="docutils literal notranslate"><span class="pre">hello.txt</span></code> and the remote one consists of an identical copy of <code class="docutils literal notranslate"><span class="pre">hello.txt</span></code> and an extra <code class="docutils literal notranslate"><span class="pre">hi.txt</span></code> file, pulling it will not cause a conflict, since no harm will be done if we simply copy <code class="docutils literal notranslate"><span class="pre">hi.txt</span></code> to your own local copy. Here’s an example:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -587,11 +598,11 @@ document.write(`
 </section>
 </section>
 <section id="forks-and-pull-requests">
-<h3>Forks and Pull Requests<a class="headerlink" href="#forks-and-pull-requests" title="Permalink to this heading">#</a></h3>
+<h3>Forks and Pull Requests<a class="headerlink" href="#forks-and-pull-requests" title="Link to this heading">#</a></h3>
 <p>Forking in git is the act of taking a snapshot of a repository, and using it as a base for our own repository. The fork is “aware” that it was once a part of a different repository, but now it belongs to some other guy. When you fork a repo you’re saying something like “I’ll take it from here”, since your future work on the codebase will be completely isolated from work that keeps happening in the repo that you forked from.</p>
 <p>Forking is done when you wish to develop for a repository which you have no write permissions to, or when you wish to start a spin-off from some repo. For example, if I want to add a feature to <code class="docutils literal notranslate"><span class="pre">pandas</span></code> I can’t simply clone that repository to my computer, write some code and then push it back since it’s not my repo and I have no permissions. If anyone could push to any repo they cloned things would go crazy pretty fast. Instead, I’ll fork that repo, work on that forked copy and when I wish to introduce this feature to the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> devs I’ll make a <em>Pull Request</em> which showcases my changes. A pull request is a way to “connect” a fork to its origin repo; it’s an event which happens in the original repo in which the developers see that someone forked their codebase, changed something and now wishes to merge it back. They can review this change, perhaps ask for more clarifications and then merge it if they deem it worthy. An example of a pull request can be seen <a class="reference external" href="https://github.com/pandas-dev/pandas/pull/34631">here</a>.</p>
 <section id="id2">
-<h4>Usage<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<h4>Usage<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <p>After forking a repository you receive its copy as a GH repo, and to do the actual coding work you need to clone it to your computer. This means that the local repository you’ll have has two repos which with it can interact - your fork and the original repo. We usually call your own fork the “origin” (just like we do in regular clones) and the original repo is called “upstream”. Let’s see it in action:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -620,10 +631,10 @@ document.write(`
 </section>
 </section>
 <section id="important-python-libraries-which-weren-t-mentioned">
-<h2>Important Python Libraries Which Weren’t Mentioned<a class="headerlink" href="#important-python-libraries-which-weren-t-mentioned" title="Permalink to this heading">#</a></h2>
+<h2>Important Python Libraries Which Weren’t Mentioned<a class="headerlink" href="#important-python-libraries-which-weren-t-mentioned" title="Link to this heading">#</a></h2>
 <p>The vastness of the Pythonic ocean can be overwhelming, but fortunately I’m (still) here to help. I’d like to mention a few other libraries which weren’t mentioned yet in the course.</p>
 <section id="dask">
-<h3><a class="reference external" href="https://dask.org/">Dask</a><a class="headerlink" href="#dask" title="Permalink to this heading">#</a></h3>
+<h3><a class="reference external" href="https://dask.org/">Dask</a><a class="headerlink" href="#dask" title="Link to this heading">#</a></h3>
 <p>Dask is a library for parallel computation on larger-than-memory datasets. It wraps many of the common data structures we’ve learned to love like lists, arrays and data frames and provides very similar APIs, but which scale to many cores and GPUs automatically.</p>
 <p>Dask offers both these core data structures, and a pipelining mechanism to control the execution of the computations that are done on the data.</p>
 <p>Happily I don’t even need to tell you how do these “new” data structures work, since they’re not even new per se - they’re copies of existing ones:</p>
@@ -635,7 +646,7 @@ document.write(`
 </div>
 <p>The only difference is the <code class="docutils literal notranslate"><span class="pre">.compute()</span></code> method at the end. We call it once we specified all computations that were supposed to happen on the object, and only when we call it they’re actually made. Before <code class="docutils literal notranslate"><span class="pre">compute()</span></code>ing, Dask create a graph which consists of all the functions we specified, checks which one can be done in parallel and then it executes them in the most efficient way possible.</p>
 <section id="dask-futures">
-<h4>Dask.Futures<a class="headerlink" href="#dask-futures" title="Permalink to this heading">#</a></h4>
+<h4>Dask.Futures<a class="headerlink" href="#dask-futures" title="Link to this heading">#</a></h4>
 <p>To run our entire pipeline in parallel, we can use the <a class="reference external" href="https://docs.dask.org/en/latest/futures.html"><code class="docutils literal notranslate"><span class="pre">Futures</span></code></a> module of Dask to have thread- or process-based parallelism. This is best achieved by running a local Dask “client”, enabled by the <a class="reference external" href="https://distributed.dask.org/en/latest/"><code class="docutils literal notranslate"><span class="pre">distributed</span></code></a> module. Assuming we have several functions which have to be called in a row, with a few that can be parallelized, we can write all functions and then call them in this manner:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -699,7 +710,7 @@ Hosting the HTTP server on port 36005 instead
 </section>
 </section>
 <section id="streamz">
-<h3>Streamz<a class="headerlink" href="#streamz" title="Permalink to this heading">#</a></h3>
+<h3>Streamz<a class="headerlink" href="#streamz" title="Link to this heading">#</a></h3>
 <p><a class="reference external" href="https://streamz.readthedocs.io/en/latest/index.html">Streamz</a> is a handy library to work with streaming data, i.e. real time data. If you run live experiments and you need to read, process and output something immediately, then you’re probably better off with a library that helps you with the small details of handling the incoming bytestream.</p>
 <p>Streamz integrates flawlessly with pandas, numpy and the likes, but let’s look at a simpler example:</p>
 <div class="cell docutils container">
@@ -754,11 +765,11 @@ Hosting the HTTP server on port 36005 instead
 <p>Streamz can do a whole lot of other things, including feedback, recursion and time-based processing.</p>
 </section>
 <section id="fmri-processing">
-<h3>fMRI Processing<a class="headerlink" href="#fmri-processing" title="Permalink to this heading">#</a></h3>
+<h3>fMRI Processing<a class="headerlink" href="#fmri-processing" title="Link to this heading">#</a></h3>
 <p>If you’re passionate about fMRI and DTI studies, then you’ll be happy to learn that Python has <a class="reference external" href="https://nipy.org/"><code class="docutils literal notranslate"><span class="pre">nipy</span></code></a> to offer. It’s a collections of open source tools that can help with all stages of your fMRI study, including complex analysis pipelines and integration with third party tools like FSL.</p>
 </section>
 <section id="cuda-ecosystem">
-<h3>CUDA Ecosystem<a class="headerlink" href="#cuda-ecosystem" title="Permalink to this heading">#</a></h3>
+<h3>CUDA Ecosystem<a class="headerlink" href="#cuda-ecosystem" title="Link to this heading">#</a></h3>
 <p>The graphical processing unit, or GPU, is a “special” processor inside your computer that is able to perform simple tasks very quickly. It’s very bad at replacing a standard computational processing unit (CPU), but it can add numbers really fast - much faster than the CPU - which can be very useful sometimes. A long time ago GPUs were only useful for the gaming industry, but since the rise of ML GPUs became super important and widespread, and today they can be found in most computers and servers. Using these GPUs effectively can speed up some computational pipelines by orders of magnitude.</p>
 <p>CUDA is a framework by nVidia, the largest GPU manufacturer, that assists in the integration of the GPU into your code. We won’t go into too much detail here but code that should be run on the GPU has to be compiled for that specific GPU beforehand, so something needs to do that work for us. CUDA helps in this regard, and once it’s installed on your machine it will be much easier to work effectively with your card.</p>
 <p>From the wide CUDA ecosystem you probably should know that <code class="docutils literal notranslate"><span class="pre">numba</span></code> can compile your code to use the GPU instead of the CPU, and that two other nVidia-based libraries can help you with other day to day tasks:</p>
@@ -769,14 +780,14 @@ Hosting the HTTP server on port 36005 instead
 <p>I won’t show any real code samples here because it won’t work if a GPU isn’t installed on your computer, but you can look at the linked docs for more details.</p>
 </section>
 <section id="zarr">
-<h3><a class="reference external" href="https://zarr.readthedocs.io/en/stable/index.html">Zarr</a><a class="headerlink" href="#zarr" title="Permalink to this heading">#</a></h3>
+<h3><a class="reference external" href="https://zarr.readthedocs.io/en/stable/index.html">Zarr</a><a class="headerlink" href="#zarr" title="Link to this heading">#</a></h3>
 <p>When working with multidimensional arrays and their metadata and labels, writing them to disk and passing them between machines is always an issue. Numpy offers <code class="docutils literal notranslate"><span class="pre">np.save</span></code> and <code class="docutils literal notranslate"><span class="pre">np.savez</span></code> commands, but they’re limited in their metadata capabilities. A better option nowadays is the <a class="reference external" href="https://zarr.readthedocs.io/en/stable/"><code class="docutils literal notranslate"><span class="pre">zarr</span></code></a> format, which can save arrays of many types under different “directories” in the same file. Zarr also offers compression options and fast writing and reading capabilities.</p>
 </section>
 <section id="biopython-and-scikit-bio">
-<h3><a class="reference external" href="https://biopython.org/">Biopython</a> and <a class="reference external" href="http://scikit-bio.org/">Scikit-bio</a><a class="headerlink" href="#biopython-and-scikit-bio" title="Permalink to this heading">#</a></h3>
+<h3><a class="reference external" href="https://biopython.org/">Biopython</a> and <a class="reference external" href="http://scikit-bio.org/">Scikit-bio</a><a class="headerlink" href="#biopython-and-scikit-bio" title="Link to this heading">#</a></h3>
 </section>
 <section id="statsmodels">
-<h3><a class="reference external" href="https://www.statsmodels.org/stable/index.html">Statsmodels</a><a class="headerlink" href="#statsmodels" title="Permalink to this heading">#</a></h3>
+<h3><a class="reference external" href="https://www.statsmodels.org/stable/index.html">Statsmodels</a><a class="headerlink" href="#statsmodels" title="Link to this heading">#</a></h3>
 <p>Particularly useful for people migrating from R.</p>
 </section>
 </section>
@@ -809,7 +820,7 @@ Hosting the HTTP server on port 36005 instead
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -838,6 +849,7 @@ Hosting the HTTP server on port 36005 instead
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -913,7 +925,7 @@ By Gal Kepler, Zvi Baratz, Dr. Hagai Hargil
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -937,8 +949,8 @@ By Gal Kepler, Zvi Baratz, Dr. Hagai Hargil
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

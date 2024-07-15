@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Class 2: Virtual Environments and Object-oriented Programming (OOP) &#8212; Python for Neuroscience</title>
   
@@ -15,54 +14,50 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'classes/class_2/class_2';</script>
@@ -79,28 +74,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -122,12 +112,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -143,6 +141,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../../intro.html">
@@ -161,7 +161,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -173,7 +184,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../syllabus.html">Syllabus</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../contents.html">Contents</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../contents.html">Contents</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../class_0/class_0.html">Class 0: Background and Basic Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_1/class_1.html">Class 1: More Syntax and The Python Stack</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Class 2: Virtual Environments and Object-oriented Programming (OOP)</a></li>
@@ -188,13 +199,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../class_11/class_11.html">Class 11: Git and More Python Libraries</a></li>
 
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/python_setup.html">General Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/create_git_repo.html">Create a Git Repository</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/create_and_publish_pacakge.html">Creating and Publishing a Python Library</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../resources.html">Resources</a></li>
 </ul>
 
@@ -211,7 +222,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -220,14 +231,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -252,14 +263,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/classes/class_2/class_2.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -351,10 +362,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -362,14 +373,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -422,22 +433,18 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="class-2-virtual-environments-and-object-oriented-programming-oop">
-<h1>Class 2: Virtual Environments and Object-oriented Programming (OOP)<a class="headerlink" href="#class-2-virtual-environments-and-object-oriented-programming-oop" title="Permalink to this heading">#</a></h1>
+<h1>Class 2: Virtual Environments and Object-oriented Programming (OOP)<a class="headerlink" href="#class-2-virtual-environments-and-object-oriented-programming-oop" title="Link to this heading">#</a></h1>
 <section id="review">
-<h2>Review<a class="headerlink" href="#review" title="Permalink to this heading">#</a></h2>
+<h2>Review<a class="headerlink" href="#review" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Describe the function of the <code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> statements.</p></li>
 </ul>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Within the context of a loop, <code class="docutils literal notranslate"><span class="pre">continue</span></code> is used to invoke an immediate progression to the next step, and <code class="docutils literal notranslate"><span class="pre">break</span></code> is used to terminate the loop before the iterator is exhausted.</p>
 </div>
 </details><ul class="simple">
@@ -445,11 +452,7 @@ Solution<div class="sd-summary-down docutils">
 </ul>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Type hinting is implemented by adding <code class="docutils literal notranslate"><span class="pre">:</span> <span class="pre">&lt;type&gt;</span></code> to a variable or function argument’s definition. Any type can be used, and Python’s built-in <code class="docutils literal notranslate"><span class="pre">typing</span></code> module enables creating fine-grained type hints.</p>
 </div>
 </details><ul class="simple">
@@ -457,11 +460,7 @@ Solution<div class="sd-summary-down docutils">
 </ul>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The recommended way to implement a simple file I/O operation in Python is by combining the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function with a context manager clause (<code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">...</span> <span class="pre">as</span> <span class="pre">file_object:</span></code>). This way we don’t have to concern ourselves with closing the file.</p>
 <p class="sd-card-text">For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/path/to/file.txt&quot;</span>
@@ -473,16 +472,16 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </details></section>
 <section id="virtual-environments">
-<h2>Virtual Environments<a class="headerlink" href="#virtual-environments" title="Permalink to this heading">#</a></h2>
+<h2>Virtual Environments<a class="headerlink" href="#virtual-environments" title="Link to this heading">#</a></h2>
 <p>The basic idea is that <strong>every Python project you have should be contained within an isolated environment</strong>, which includes the interpreter and any libraries (i.e. external Python packages) that are needed for that specific project.</p>
 <section id="why-do-we-need-virtual-environments">
-<h3>Why do we need virtual environments?<a class="headerlink" href="#why-do-we-need-virtual-environments" title="Permalink to this heading">#</a></h3>
+<h3>Why do we need virtual environments?<a class="headerlink" href="#why-do-we-need-virtual-environments" title="Link to this heading">#</a></h3>
 <p>Once a project accumulates a number of dependencies (external Python packages used in your code), asserting compatibility between all components become tricky (see <a class="reference external" href="https://en.wikipedia.org/wiki/Dependency_hell"><strong>“dependency hell”</strong></a>). Python libraries are updated regularly, and each released version may introduce new bug fixes and features, or remove functionality that was flagged as depracated. Code that was written using one version of some external package will not necessarily run successfully using a different version. Virtual environments allow us to create as many isolated environments as we’d like, each containing only the libraries we need, and in the exact versions that guarantee compatibility.</p>
 <p><img alt="Summary of environments and namespaces" src="../../_images/envs.png" /></p>
 <p>If this concept feels a little vague, don’t be too worried. Once you’ve created a couple of virtual environments you’ll get it in no time.</p>
 </section>
 <section id="creating-a-virtual-environment">
-<span id="create"></span><h3>Creating a Virtual Environment<a class="headerlink" href="#creating-a-virtual-environment" title="Permalink to this heading">#</a></h3>
+<span id="create"></span><h3>Creating a Virtual Environment<a class="headerlink" href="#creating-a-virtual-environment" title="Link to this heading">#</a></h3>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>To learn more about other available virtual environment management tools, see the <a class="reference internal" href="../../resources.html#resources-venv"><span class="std std-ref">Virtual Environments</span></a> section under <a class="reference internal" href="../../resources.html#resources"><span class="std std-ref">resources</span></a>.</p>
@@ -491,12 +490,12 @@ Solution<div class="sd-summary-down docutils">
 <p>Creating a new virtual environment with <code class="docutils literal notranslate"><span class="pre">venv</span></code> is as easy as running:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-0">
+<label class="sd-tab-label" for="sd-tab-item-0">
 Linux/macOS</label><div class="sd-tab-content docutils">
 <p>python3 -m venv /path/to/new/virtual/environment/</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-1">
+<label class="sd-tab-label" for="sd-tab-item-1">
 Windows</label><div class="sd-tab-content docutils">
 <p>C:\Python38\python -m venv C:\path\to\new\virtual\environment\</p>
 </div>
@@ -504,7 +503,7 @@ Windows</label><div class="sd-tab-content docutils">
 <p>We are calling <code class="docutils literal notranslate"><span class="pre">&lt;python</span> <span class="pre">binary&gt;</span> <span class="pre">-m</span></code> to execute the <code class="docutils literal notranslate"><span class="pre">venv</span></code> module as a script and pass it the path in which it should create the new virtual environment.</p>
 </section>
 <section id="the-virtual-environment-directory">
-<h3>The Virtual Environment Directory<a class="headerlink" href="#the-virtual-environment-directory" title="Permalink to this heading">#</a></h3>
+<h3>The Virtual Environment Directory<a class="headerlink" href="#the-virtual-environment-directory" title="Link to this heading">#</a></h3>
 <p>Looking at the newly created virtual environment’s directory tree, please note the following files and folders:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>venv
 ├── bin/
@@ -527,18 +526,18 @@ Windows</label><div class="sd-tab-content docutils">
 </ul>
 </section>
 <section id="activating-the-virtual-environment">
-<h3>Activating the Virtual Environment<a class="headerlink" href="#activating-the-virtual-environment" title="Permalink to this heading">#</a></h3>
+<h3>Activating the Virtual Environment<a class="headerlink" href="#activating-the-virtual-environment" title="Link to this heading">#</a></h3>
 <p>Activating a virtual environment means modifying your working environment to use a particular, isolated installation of Python (created in <a class="reference internal" href="#create"><span class="std std-ref">Creating a Virtual Environment</span></a>). This will normally also “override” some other related CLI tools with those installed within the virtual environment’s <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory (such as <code class="docutils literal notranslate"><span class="pre">pip</span></code>), and sometimes also change some OS-related environment variables.</p>
 <p>To activate the virtual environment and use the newly created isolated Python environment, simply run:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-2">
+<label class="sd-tab-label" for="sd-tab-item-2">
 Linux/MacOS</label><div class="sd-tab-content docutils">
 <p>source <venv>/bin/activate</p>
 <p><em>* Replace <code class="docutils literal notranslate"><span class="pre">&lt;venv&gt;</span></code> with your virtual environment’s directory path.</em></p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-3">
+<label class="sd-tab-label" for="sd-tab-item-3">
 Windows</label><div class="sd-tab-content docutils">
 <p>C:&gt; <venv>\Scripts\activate</p>
 <p><em>* Replace <code class="docutils literal notranslate"><span class="pre">&lt;venv&gt;</span></code> with your virtual environment’s directory path.</em></p>
@@ -548,13 +547,13 @@ Windows</label><div class="sd-tab-content docutils">
 <p>To validate the activation, run:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
+<label class="sd-tab-label" for="sd-tab-item-4">
 Linux/MacOS</label><div class="sd-tab-content docutils">
 <p>(venv) $ which python
 <venv>/bin/python</p>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
+<label class="sd-tab-label" for="sd-tab-item-5">
 Windows</label><div class="sd-tab-content docutils">
 <p>(venv) C:&gt; where python
 <venv>\Scripts\python</p>
@@ -581,9 +580,9 @@ Windows</label><div class="sd-tab-content docutils">
 </section>
 </section>
 <section id="object-oriented-programming-part-1">
-<h2>Object-Oriented Programming: Part 1<a class="headerlink" href="#object-oriented-programming-part-1" title="Permalink to this heading">#</a></h2>
+<h2>Object-Oriented Programming: Part 1<a class="headerlink" href="#object-oriented-programming-part-1" title="Link to this heading">#</a></h2>
 <section id="introduction">
-<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h3>
+<h3>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h3>
 <p>There are three main programming paradigms in use in mainstream programming languages:</p>
 <ul class="simple">
 <li><p>Procedural</p></li>
@@ -593,8 +592,8 @@ Windows</label><div class="sd-tab-content docutils">
 <p>While the <em>functional</em> paradigm is very interesting, we will not be discussing it in this course. You can read about Haskell, OCaml, F# and other functional programming languages wherever you get your information from.</p>
 </section>
 <section id="procedural-programming">
-<h3>Procedural Programming<a class="headerlink" href="#procedural-programming" title="Permalink to this heading">#</a></h3>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=wEDOQP_flk0"><img alt="Procedural Programming PB&amp;J" src="http://img.youtube.com/vi/wEDOQP_flk0/0.jpg" /></a></p>
+<h3>Procedural Programming<a class="headerlink" href="#procedural-programming" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=wEDOQP_flk0" title="Video Title"><img alt="Procedural Programming PB&amp;J" src="http://img.youtube.com/vi/wEDOQP_flk0/0.jpg" /></a></p>
 <p>The <em>procedural</em> paradigm is the most widely used paradigm… in the academia. And it’s probably the one you’re most familiar with from your work with MATLAB.</p>
 <p>For example, if we wanted to write a naive script that multiplies the elements in two lists, we could write something like:</p>
 <div class="cell docutils container">
@@ -735,13 +734,13 @@ Windows</label><div class="sd-tab-content docutils">
 <p>While procedural programming works great for most simple tasks, it might be considered inferior when writing code that is meant to scale and be collaborated on.</p>
 </section>
 <section id="classes-and-objects">
-<h3>Classes and Objects<a class="headerlink" href="#classes-and-objects" title="Permalink to this heading">#</a></h3>
+<h3>Classes and Objects<a class="headerlink" href="#classes-and-objects" title="Link to this heading">#</a></h3>
 <p>Classes are user-defined types. Just like <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">dict</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code> and the rest of the standard types, Python allows us to create our own types.</p>
 <p>Objects are <em>instances</em> of classes, they’re an instance of a type we made. Actually, all instances of all types are objects in Python. It means that every variable and function in Python are, by themselves, an instance of a type. A function you make is an instance of the <code class="docutils literal notranslate"><span class="pre">function</span></code> type, for example. We’ll get to this during later stages of the course.</p>
 <p>Classes are a type of abstraction we create with our code. A variable is the most simple type of abstraction - it’s a <em>thing</em> that is closely tied to a “real value” in a very simple relationship: My variable <span class="math notranslate nohighlight">\(x\)</span> represents the value <span class="math notranslate nohighlight">\(y\)</span>.</p>
 <p>Classes are more abstract - they don’t relate to a specific value directly, but rather they try to convey an idea of an object.</p>
 <section id="example-i-the-point-class">
-<h4>Example I: The <code class="docutils literal notranslate"><span class="pre">Point</span></code> Class<a class="headerlink" href="#example-i-the-point-class" title="Permalink to this heading">#</a></h4>
+<h4>Example I: The <code class="docutils literal notranslate"><span class="pre">Point</span></code> Class<a class="headerlink" href="#example-i-the-point-class" title="Link to this heading">#</a></h4>
 <p>To show what we mean by “our own type”, we’ll define the <code class="docutils literal notranslate"><span class="pre">Point</span></code> type.</p>
 <p>So, what is a point?</p>
 <ul class="simple">
@@ -778,7 +777,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7f6e886173d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7fbc0cc88dc0&gt;
 </pre></div>
 </div>
 </div>
@@ -858,11 +857,7 @@ Windows</label><div class="sd-tab-content docutils">
 <p>Write the <code class="docutils literal notranslate"><span class="pre">calculate_distance()</span></code> function that takes two points (<code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code>) and returns the Cartesian distance between them.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
 <span class="k">def</span> <span class="nf">calculate_distance</span><span class="p">(</span><span class="n">p1</span><span class="p">:</span> <span class="n">Point</span><span class="p">,</span> <span class="n">p2</span><span class="p">:</span> <span class="n">Point</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
@@ -890,7 +885,7 @@ Solution<div class="sd-summary-down docutils">
 </details></div>
 </section>
 <section id="example-ii-rectangles">
-<h4>Example II: Rectangles<a class="headerlink" href="#example-ii-rectangles" title="Permalink to this heading">#</a></h4>
+<h4>Example II: Rectangles<a class="headerlink" href="#example-ii-rectangles" title="Link to this heading">#</a></h4>
 <p>Take a minute to think how you would implement a <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> class.</p>
 <p>Here are a couple of options:</p>
 <ul class="simple">
@@ -928,7 +923,7 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7f6e88617100&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7fbc0cc885e0&gt;
 </pre></div>
 </div>
 </div>
@@ -1015,7 +1010,7 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </section>
 <section id="methods">
-<h4>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">#</a></h4>
+<h4>Methods<a class="headerlink" href="#methods" title="Link to this heading">#</a></h4>
 <p>We really haven’t done object-oriented programming yet. Our objects currently contain only data (as attributes), and we wrote independent functions to manipulate them as required. <em>Methods</em> are functions bound to objects, describing actions they can do, or that can be done to them.</p>
 <p>For example, a real-world car can drive. So a <code class="docutils literal notranslate"><span class="pre">Car</span></code> object should have a <code class="docutils literal notranslate"><span class="pre">drive()</span></code> method. It should also have a <code class="docutils literal notranslate"><span class="pre">park()</span></code> method, and a couple of attributes, like <code class="docutils literal notranslate"><span class="pre">number_of_wheels</span></code>, <code class="docutils literal notranslate"><span class="pre">manufacturer</span></code> and <code class="docutils literal notranslate"><span class="pre">model</span></code>.</p>
 <p>As we’ll see in a second, the only difference between methods and functions is that methods are a part of an object, and they only make sense the context of that object or an instance of it. A <code class="docutils literal notranslate"><span class="pre">park()</span></code> method has no meaning when we try to run it on a <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code>.</p>
@@ -1083,7 +1078,7 @@ After:	p.x: 20, p.y: 10
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># This doesn&#39;t work, look at the number of arguments:</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">p</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 
-<span class="ne">TypeError</span>: transpose() takes 1 positional argument but 2 were given
+<span class="ne">TypeError</span>: Point.transpose() takes 1 positional argument but 2 were given
 </pre></div>
 </div>
 </div>
@@ -1098,7 +1093,7 @@ After:	p.x: 20, p.y: 10
 <p>First, it would be nice if we could make this process shorter. Second, the Point instance is really unusable unless it has both attributes <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code> set, so we want to make sure that we don’t have a Point without both <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>. This is accomplished by the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method.</p>
 </section>
 <section id="the-init-method">
-<h4>The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> Method<a class="headerlink" href="#the-init-method" title="Permalink to this heading">#</a></h4>
+<h4>The <code class="docutils literal notranslate"><span class="pre">__init__</span></code> Method<a class="headerlink" href="#the-init-method" title="Link to this heading">#</a></h4>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p><code class="docutils literal notranslate"><span class="pre">__init__()</span></code> is one example of a <em>dunder</em> method. <em>dunder</em> is short for <em>double underscore</em> and generally implies an internal (structural) part of the class itself.</p>
@@ -1162,7 +1157,7 @@ p.x: 20, p.y: 10
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
 
-<span class="ne">TypeError</span>: __init__() missing 2 required positional arguments: &#39;x&#39; and &#39;y&#39;
+<span class="ne">TypeError</span>: Point.__init__() missing 2 required positional arguments: &#39;x&#39; and &#39;y&#39;
 </pre></div>
 </div>
 </div>
@@ -1285,7 +1280,7 @@ p.x: 20, p.y: 10
 <p>Note how the object modifies itself and acts upon itself using its methods. We’re not modifying the internal parts of the instance ourselves, we let the methods do it for us.</p>
 </section>
 <section id="the-str-method">
-<h4>The <code class="docutils literal notranslate"><span class="pre">__str__</span></code> Method<a class="headerlink" href="#the-str-method" title="Permalink to this heading">#</a></h4>
+<h4>The <code class="docutils literal notranslate"><span class="pre">__str__</span></code> Method<a class="headerlink" href="#the-str-method" title="Link to this heading">#</a></h4>
 <p>Another interesting <em>dunder</em> (<em>“double underscore”</em>) method is the <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method, which defines what an instance of the class will show when invoked with the <code class="docutils literal notranslate"><span class="pre">print(class_instance)</span></code> command. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1338,11 +1333,7 @@ p.x: 20, p.y: 10
 <p>Implement a <code class="docutils literal notranslate"><span class="pre">__str__()</span></code> method for the <code class="docutils literal notranslate"><span class="pre">Point</span></code> class from earlier.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A 2D point.&quot;&quot;&quot;</span>
 
@@ -1383,7 +1374,7 @@ Solution<div class="sd-summary-down docutils">
 </details></div>
 </section>
 <section id="operator-overloading">
-<h4>Operator Overloading<a class="headerlink" href="#operator-overloading" title="Permalink to this heading">#</a></h4>
+<h4>Operator Overloading<a class="headerlink" href="#operator-overloading" title="Link to this heading">#</a></h4>
 <p>One of the most interesting properties of Python (although it’s not unique to it) is <a class="reference external" href="https://en.wikipedia.org/wiki/Operator_overloading">operator overloading</a>. It means that we can force our self-declared types (i.e. classes) to behave in a certain way with the standard mathematical operations.</p>
 <p>We’ll use the ShoppingList class as an example. Say we want to <strong>add</strong> two different shopping lists. Naively, we might just try the following:</p>
 <div class="cell docutils container">
@@ -1537,11 +1528,7 @@ Solution<div class="sd-summary-down docutils">
 <p>Modify the <code class="docutils literal notranslate"><span class="pre">__add__()</span></code> method so that if <em>other</em> is an integer, it will simply add that number to all items in the shopping list.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span>
 
 
@@ -1598,7 +1585,7 @@ Solution<div class="sd-summary-down docutils">
 </section>
 </section>
 <section id="summary">
-<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h3>
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
 <p>OOP is the most important programming paradigm for you to master on your Python journey. Some problems fit this paradigm hand in glove, however, it’s not the “ultimate” answer to any design difficulty you have. Some problems <em>can</em> be solved by using intricate objects and multiple inheritance, but in reality they’re much simpler when solved using a procedural design. Remember to write code that humans, and especially your future self, can read and understand.</p>
 <p>With that being said, throughout this course I prefer you write too many objects over writing too few. Whether you’ll be writing new objects every day or not, you will certainly be using them any time you write Python code, and creating classes will nurture your confidence when doing so.</p>
 <div class="attention admonition">
@@ -1610,11 +1597,7 @@ Solution<div class="sd-summary-down docutils">
 </ol>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterable</span>
 
 
@@ -1770,7 +1753,7 @@ Solution<div class="sd-summary-down docutils">
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1799,6 +1782,7 @@ Solution<div class="sd-summary-down docutils">
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1853,7 +1837,7 @@ By Gal Kepler, Zvi Baratz, Dr. Hagai Hargil
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -1877,8 +1861,8 @@ By Gal Kepler, Zvi Baratz, Dr. Hagai Hargil
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

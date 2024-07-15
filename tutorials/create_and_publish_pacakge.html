@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Creating and Publishing a Python Library &#8212; Python for Neuroscience</title>
   
@@ -15,54 +14,50 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/create_and_publish_pacakge';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -77,28 +72,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -120,12 +110,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -141,6 +139,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -159,7 +159,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -171,7 +182,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../contents.html">Contents</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../contents.html">Contents</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../classes/class_0/class_0.html">Class 0: Background and Basic Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../classes/class_1/class_1.html">Class 1: More Syntax and The Python Stack</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../classes/class_2/class_2.html">Class 2: Virtual Environments and Object-oriented Programming (OOP)</a></li>
@@ -186,13 +197,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../classes/class_11/class_11.html">Class 11: Git and More Python Libraries</a></li>
 
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../tutorials.html">Tutorials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../tutorials.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="python_setup.html">General Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="create_git_repo.html">Create a Git Repository</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Creating and Publishing a Python Library</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
 </ul>
 
@@ -209,7 +220,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -218,14 +229,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -250,14 +261,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/tutorials/create_and_publish_pacakge.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -349,10 +360,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -360,14 +371,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -406,13 +417,13 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="creating-and-publishing-a-python-library">
-<h1>Creating and Publishing a Python Library<a class="headerlink" href="#creating-and-publishing-a-python-library" title="Permalink to this heading">#</a></h1>
+<h1>Creating and Publishing a Python Library<a class="headerlink" href="#creating-and-publishing-a-python-library" title="Link to this heading">#</a></h1>
 <p>Early in the course we showed how easy it is to download packages from PyPI (Python Package Index), the official repository for all Python pacakges. This class will discuss process of creating and publishing a library to the outer world, which is a bit more complicated than downloading a package, but not by much.</p>
 <section id="naive-solution">
-<h2>Naive Solution<a class="headerlink" href="#naive-solution" title="Permalink to this heading">#</a></h2>
+<h2>Naive Solution<a class="headerlink" href="#naive-solution" title="Link to this heading">#</a></h2>
 <p>The simplest way to share our code is to send a <code class="docutils literal notranslate"><span class="pre">.py</span></code> file to someone by mail. If the receiver has a Python interpreter installed, he can just run the file by writing <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">new_file.py</span></code> in his command line. This has a few short-comings:</p>
 <ol class="arabic simple">
 <li><p>The script was written in a specific Python version. You might have to make sure that your receiver has the same Python version.</p></li>
@@ -423,7 +434,7 @@ document.write(`
 <p>These issues, along with the relative ease with which one can publish Python code online, support a more robust approach to code sharing.</p>
 </section>
 <section id="python-libraries-from-the-ground-up">
-<h2>Python Libraries from the Ground Up<a class="headerlink" href="#python-libraries-from-the-ground-up" title="Permalink to this heading">#</a></h2>
+<h2>Python Libraries from the Ground Up<a class="headerlink" href="#python-libraries-from-the-ground-up" title="Link to this heading">#</a></h2>
 <p>There are a few “layers” for Python projects and libraries. The basic layers one can encounter in each Python (and software) project are source-code organization and version control. This tutorial will guide you through the process of creating a full-blown project, including PyPI publishing and test-suite support. If you’re aiming at something lighter you can just drop some of the components used here.</p>
 <p>Features of this project include:</p>
 <ol class="arabic simple">
@@ -435,7 +446,7 @@ document.write(`
 </ol>
 <p>Many of these features can be generated using <a class="reference external" href="https://cookiecutter.readthedocs.io/en/1.7.2/index.html"><code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code></a> but we’ll avoid that for now. Once we understand what’s going on under the hood we might prefer using <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> instead of going through these manual steps. This guide is heavily based on a <a class="reference external" href="https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/">famous blog post</a>.</p>
 <section id="scaffolding">
-<h3>Scaffolding<a class="headerlink" href="#scaffolding" title="Permalink to this heading">#</a></h3>
+<h3>Scaffolding<a class="headerlink" href="#scaffolding" title="Link to this heading">#</a></h3>
 <p>I’ll be assuming that we’re creating a new project, but these steps can easily be adapted if you wish to convert an existing project.</p>
 <ol class="arabic simple">
 <li><p>Make a new directory with the project’s name. We’ll use “Parse Stuff” as our project name here, so this directory may be called <code class="docutils literal notranslate"><span class="pre">ParseStuff</span></code>, <code class="docutils literal notranslate"><span class="pre">parseStuff</span></code>, <code class="docutils literal notranslate"><span class="pre">parse_stuff</span></code> or really any other name.</p></li>
@@ -458,7 +469,7 @@ document.write(`
 </ol>
 </section>
 <section id="environment-and-dependencies">
-<h3>Environment and dependencies<a class="headerlink" href="#environment-and-dependencies" title="Permalink to this heading">#</a></h3>
+<h3>Environment and dependencies<a class="headerlink" href="#environment-and-dependencies" title="Link to this heading">#</a></h3>
 <p>We have a folder but the project really isn’t a project quite yet, and we also didn’t do anything quite new yet. Let’s do some Python-related work:</p>
 <ol class="arabic">
 <li><p>Create a new environment and activate it: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-n</span> <span class="pre">parsestuff</span> <span class="pre">python=3.8</span></code>. Once it’s done write <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">parsestuff</span></code>.</p></li>
@@ -585,7 +596,7 @@ document.write(`
 <p>Before we go any further let’s recap our latest steps: First, we’re defining configuration files for some of the tools we’ll be using, like <code class="docutils literal notranslate"><span class="pre">black</span></code> and <code class="docutils literal notranslate"><span class="pre">flake8</span></code>. These are definitely not a must, but they’re nice to have. Then we added an eerie-looking <code class="docutils literal notranslate"><span class="pre">MANIFEST.in</span></code> file which contains a bunch of incantations. This file define what will be packaged with our code besides the actual code, but I won’t go into  any further details. Lastly we added <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> and <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> files which are basically a configuration\metadata files that define how will our package be packaged.</p>
 </section>
 <section id="build-and-publish">
-<h3>Build and publish!<a class="headerlink" href="#build-and-publish" title="Permalink to this heading">#</a></h3>
+<h3>Build and publish!<a class="headerlink" href="#build-and-publish" title="Link to this heading">#</a></h3>
 <p>Before doing more advanced stuff, let’s see if it builds. Building a package means generating a file that can be more easily shared with others, since this file (or files) contain metadata regarding our dependencies, Python version, and more. Every time we build we first have to remove the <code class="docutils literal notranslate"><span class="pre">dist</span></code> folder into which we’ll build our package. Since this is the first time we’re building, we don’t have this folder yet, but don’t forget to do it next time. To build, write in the command line (when you’re at the top project directory):</p>
 <p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">build</span></code></p>
 <p>If everything was successful, you should see a new <code class="docutils literal notranslate"><span class="pre">dist</span></code> and two files there - a <code class="docutils literal notranslate"><span class="pre">wheel</span></code> file and a <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code> file. These files can be shared and installed with <code class="docutils literal notranslate"><span class="pre">pip</span></code> on other computers, but the package can’t be installed from the web yet. To do that we’ll have to upload them to PyPI. Before doing that it’s advised that you should make a new virtual environment and see if they can be installled.</p>
@@ -598,7 +609,7 @@ document.write(`
 <p>and witness the wonder. Easy, right? :)</p>
 </section>
 <section id="documentation-and-readthedocs">
-<h3>Documentation and ReadTheDocs<a class="headerlink" href="#documentation-and-readthedocs" title="Permalink to this heading">#</a></h3>
+<h3>Documentation and ReadTheDocs<a class="headerlink" href="#documentation-and-readthedocs" title="Link to this heading">#</a></h3>
 <p>Documenting your project is extremely important. Besides having comments in your code and helpful docstrings, you sometimes also want more high-level material regarding installation and usage of your pacakge. This info should go in the <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder that was generated earlier. The idea is to build a website from markdown (<code class="docutils literal notranslate"><span class="pre">.md</span></code>) files. Please consult the <a class="reference external" href="https://www.mkdocs.org/">MkDocs website</a> for more details.</p>
 <p>If our project is on PyPI, we also want our documentation to have a website. ReadTheDocs is a website that happily hosts the documentation for your code. It will automatically fetch whatever’s in your <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder and display it in a nice-looking website.</p>
 <ol class="arabic simple">
@@ -609,44 +620,44 @@ document.write(`
 <p>Your docs will update online every time you update them and push the changes to GitHub. They’re probably currently quite dull, but you should add more documents to the <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder sooner rather than later.</p>
 </section>
 <section id="continuous-integration">
-<h3>Continuous Integration<a class="headerlink" href="#continuous-integration" title="Permalink to this heading">#</a></h3>
+<h3>Continuous Integration<a class="headerlink" href="#continuous-integration" title="Link to this heading">#</a></h3>
 <p>CI is used to automatically test your code whenever you push something to GitHub. It works by pulling the latest commit from your GitHub into its servers. It then builds an environment identical to the one you have in your computer, installs your package and runs the tests for that package. Lastly it generates a detailed error report if one or more of your tests failed. This section is - again - based on a <a class="reference external" href="https://hynek.me/articles/python-github-actions/">famous blog post</a>.</p>
 <p>The easiest CI tool available today is GitHub actions. It’s integrated inside GitHub and allows you monitor the execution easily. To set it up, go to the “Actions” tab in your GH repo and click “Skip this and setup a workflow yourself”. Delete the template and paste this instead:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span>---
-name: CI
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CI</span>
 
-on:
-  push:
-    branches: [&quot;master&quot;]
-  pull_request:
-    branches: [&quot;master&quot;]
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;master&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;master&quot;</span><span class="p p-Indicator">]</span>
 
-jobs:
-  tests:
-    name: &quot;Python ${{ matrix.python-version }}&quot;
-    runs-on: &quot;ubuntu-latest&quot;
-    env:
-      USING_COVERAGE: &#39;3.6,3.8&#39;
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">tests</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Python</span><span class="nv"> </span><span class="s">${{</span><span class="nv"> </span><span class="s">matrix.python-version</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ubuntu-latest&quot;</span>
+<span class="w">    </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">USING_COVERAGE</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.6,3.8&#39;</span>
 
-    strategy:
-      matrix:
-        python-version: [&quot;3.6&quot;, &quot;3.7&quot;, &quot;3.8&quot;]
+<span class="w">    </span><span class="nt">strategy</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">matrix</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;3.6&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;3.7&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;3.8&quot;</span><span class="p p-Indicator">]</span>
 
-    steps:
-      - uses: &quot;actions/checkout@v2&quot;
-      - uses: &quot;actions/setup-python@v1&quot;
-        with:
-          python-version: &quot;${{ matrix.python-version }}&quot;
-      - name: &quot;Install dependencies&quot;
-        run: |
-          set -xe
-          python -VV
-          python -m site
-          python -m pip install --upgrade pip setuptools wheel
-          python -m pip install --upgrade pytest
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;actions/checkout@v2&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;actions/setup-python@v1&quot;</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${{</span><span class="nv"> </span><span class="s">matrix.python-version</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Install</span><span class="nv"> </span><span class="s">dependencies&quot;</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">set -xe</span>
+<span class="w">          </span><span class="no">python -VV</span>
+<span class="w">          </span><span class="no">python -m site</span>
+<span class="w">          </span><span class="no">python -m pip install --upgrade pip setuptools wheel</span>
+<span class="w">          </span><span class="no">python -m pip install --upgrade pytest</span>
 
-      - name: &quot;Run pytest&quot;
-        run: &quot;python -m pytest&quot;`
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Run</span><span class="nv"> </span><span class="s">pytest&quot;</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python</span><span class="nv"> </span><span class="s">-m</span><span class="nv"> </span><span class="s">pytest&quot;</span><span class="err">`</span>
 </pre></div>
 </div>
 <p>To conclude this part, “…click the green “Start commit” button in the top right and make sure you select the “Create a new branch for this commit and start a pull request.” radio button. Give the branch a memorable name (e.g. github-actions) and subsequently click “Create pull request”.”</p>
@@ -682,7 +693,7 @@ jobs:
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -711,6 +722,7 @@ jobs:
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -751,7 +763,7 @@ By Gal Kepler, Zvi Baratz, Dr. Hagai Hargil
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -775,8 +787,8 @@ By Gal Kepler, Zvi Baratz, Dr. Hagai Hargil
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Class 5: The Scientific Stack - Part II: matplotlib and pandas &#8212; Python for Neuroscience</title>
   
@@ -15,54 +14,50 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'classes/class_5/class_5';</script>
@@ -79,28 +74,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -122,12 +112,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -143,6 +141,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../../intro.html">
@@ -161,7 +161,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -173,7 +184,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../syllabus.html">Syllabus</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../contents.html">Contents</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../contents.html">Contents</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../class_0/class_0.html">Class 0: Background and Basic Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_1/class_1.html">Class 1: More Syntax and The Python Stack</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_2/class_2.html">Class 2: Virtual Environments and Object-oriented Programming (OOP)</a></li>
@@ -188,13 +199,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../class_11/class_11.html">Class 11: Git and More Python Libraries</a></li>
 
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/python_setup.html">General Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/create_git_repo.html">Create a Git Repository</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/create_and_publish_pacakge.html">Creating and Publishing a Python Library</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../resources.html">Resources</a></li>
 </ul>
 
@@ -211,7 +222,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -220,14 +231,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -252,14 +263,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/classes/class_5/class_5.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -351,10 +362,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -362,14 +373,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -462,15 +473,15 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="class-5-the-scientific-stack-part-ii-matplotlib-and-pandas">
-<h1>Class 5: The Scientific Stack - Part II: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#class-5-the-scientific-stack-part-ii-matplotlib-and-pandas" title="Permalink to this heading">#</a></h1>
+<h1>Class 5: The Scientific Stack - Part II: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#class-5-the-scientific-stack-part-ii-matplotlib-and-pandas" title="Link to this heading">#</a></h1>
 <div class="cell tag_remove-input docutils container">
 </div>
 <p>In our previous class we discussed NumPy, which in many ways is the cornerstone of the scientific ecosystem of Python. Besides NumPy, there are a few additional libraries which every scientific Python user should know. In this class we will discuss <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
 <section id="data-visualization-with-matplotlib">
-<h2>Data Visualization with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#data-visualization-with-matplotlib" title="Permalink to this heading">#</a></h2>
+<h2>Data Visualization with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#data-visualization-with-matplotlib" title="Link to this heading">#</a></h2>
 <p>The most widely-used plotting library in the Python ecosystem is <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>. It has a number of strong alternatives and complimentary libraries, e.g. <code class="docutils literal notranslate"><span class="pre">bokeh</span></code> and <code class="docutils literal notranslate"><span class="pre">seaborn</span></code>, but in terms of raw features it still has no real contenders.</p>
 <p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> allows for <em>very</em> complicated data visualizations, and has two parallel implementations, a procedural one, and an object-oriented one. The procedural one resembles the MATLAB plotting interface very much, allowing for a very quick transition for MATLAB veterans. Evidently, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> was initially inspired by MATLAB’s approach to visualization.</p>
 <blockquote>
@@ -490,9 +501,9 @@ document.write(`
 <p>You’ll often come across notebooks with the code <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> executed in some cell preceding plot generation. This command used to be required in order to set <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>’s backend configuration to <em>inline</em>, which would enable the inclusion of plots within the notebook (rather than pop-up windows). While still a common practice, it no longer makes any significant difference in general use.</p>
 </div>
 <section id="procedural-implementation-examples">
-<h3>Procedural Implementation Examples<a class="headerlink" href="#procedural-implementation-examples" title="Permalink to this heading">#</a></h3>
+<h3>Procedural Implementation Examples<a class="headerlink" href="#procedural-implementation-examples" title="Link to this heading">#</a></h3>
 <section id="line-plot">
-<h4>Line plot<a class="headerlink" href="#line-plot" title="Permalink to this heading">#</a></h4>
+<h4>Line plot<a class="headerlink" href="#line-plot" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
@@ -500,10 +511,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f0c34545a60&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f6c9aeafb20&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/c30c96f29db8ff6762dca6c7b94ddb04bf4017401e6f84aff9d367083d9e2d98.png" src="../../_images/c30c96f29db8ff6762dca6c7b94ddb04bf4017401e6f84aff9d367083d9e2d98.png" />
+<img alt="../../_images/47ea90c2e047af77c31d79c244e9761a0007acb205fbf8d324d3b18f9eef6642.png" src="../../_images/47ea90c2e047af77c31d79c244e9761a0007acb205fbf8d324d3b18f9eef6642.png" />
 </div>
 </div>
 <div class="admonition note">
@@ -515,7 +526,7 @@ document.write(`
 </div>
 </section>
 <section id="scatter-plot">
-<h4>Scatter plot<a class="headerlink" href="#scatter-plot" title="Permalink to this heading">#</a></h4>
+<h4>Scatter plot<a class="headerlink" href="#scatter-plot" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
@@ -523,12 +534,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/6bb34da96c0d860d16171c3c3a4ccba74a6f0945e9201b02bd95b0086b10818a.png" src="../../_images/6bb34da96c0d860d16171c3c3a4ccba74a6f0945e9201b02bd95b0086b10818a.png" />
+<img alt="../../_images/652381658907ebba006eef27bea7a8a86ab9c3b3887b6d69a324d15818fe1025.png" src="../../_images/652381658907ebba006eef27bea7a8a86ab9c3b3887b6d69a324d15818fe1025.png" />
 </div>
 </div>
 </section>
 <section id="histogram">
-<h4>Histogram<a class="headerlink" href="#histogram" title="Permalink to this heading">#</a></h4>
+<h4>Histogram<a class="headerlink" href="#histogram" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">10e4</span><span class="p">))</span> <span class="c1"># random numbers from normal distribution</span>
@@ -540,13 +551,13 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/8d24eb19c0cb806d8cb90d034ea9ee55b465e53d98570d0a4dfaaeee40bb1567.png" src="../../_images/8d24eb19c0cb806d8cb90d034ea9ee55b465e53d98570d0a4dfaaeee40bb1567.png" />
+<img alt="../../_images/a49eafb47a1c485768dfed06a3281935ff37e1a8e090a7900cda4ad5ba178fa0.png" src="../../_images/a49eafb47a1c485768dfed06a3281935ff37e1a8e090a7900cda4ad5ba178fa0.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="object-oriented-examples">
-<h3>Object-oriented Examples<a class="headerlink" href="#object-oriented-examples" title="Permalink to this heading">#</a></h3>
+<h3>Object-oriented Examples<a class="headerlink" href="#object-oriented-examples" title="Link to this heading">#</a></h3>
 <p>This time, we will start things off by instantiating the <a class="reference external" href="https://matplotlib.org/3.1.0/api/_as_gen/matplotlib.pyplot.figure.html"><code class="docutils literal notranslate"><span class="pre">Figure</span></code></a> object using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>’s <a class="reference external" href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.subplots.html"><code class="docutils literal notranslate"><span class="pre">subplots()</span></code></a> function:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 </pre></div>
@@ -558,7 +569,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="multiple-plots">
-<h4>Multiple plots<a class="headerlink" href="#multiple-plots" title="Permalink to this heading">#</a></h4>
+<h4>Multiple plots<a class="headerlink" href="#multiple-plots" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
@@ -569,7 +580,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d657c51d958581fd71242adb09bd1eb5028c1e1f70ecf58e2a046fd93f3c64a1.png" src="../../_images/d657c51d958581fd71242adb09bd1eb5028c1e1f70ecf58e2a046fd93f3c64a1.png" />
+<img alt="../../_images/2a0803b84b0a2108c0ddc1be66172a7340e80e6edd8e10119e5a702e52cb144e.png" src="../../_images/2a0803b84b0a2108c0ddc1be66172a7340e80e6edd8e10119e5a702e52cb144e.png" />
 </div>
 </div>
 <p>To save a plot we could use the <code class="docutils literal notranslate"><span class="pre">Figure</span></code> object’s <a class="reference external" href="https://matplotlib.org/3.1.0/api/_as_gen/matplotlib.figure.Figure.html?highlight=savefig#matplotlib.figure.Figure.savefig"><code class="docutils literal notranslate"><span class="pre">savefig()</span></code></a> method:</p>
@@ -612,12 +623,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/c4445832fe7aec55d79c4ad2a868af3d1aba4a2da672ad0127b6bd5cc5ea895a.png" src="../../_images/c4445832fe7aec55d79c4ad2a868af3d1aba4a2da672ad0127b6bd5cc5ea895a.png" />
+<img alt="../../_images/295418a9d1144a5f5121babdc478c4445d753fdfbf524a423da2682d4b9965ff.png" src="../../_images/295418a9d1144a5f5121babdc478c4445d753fdfbf524a423da2682d4b9965ff.png" />
 </div>
 </div>
 </section>
 <section id="multiple-axes">
-<h4>Multiple Axes<a class="headerlink" href="#multiple-axes" title="Permalink to this heading">#</a></h4>
+<h4>Multiple Axes<a class="headerlink" href="#multiple-axes" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1_000</span><span class="p">)</span>
@@ -631,7 +642,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/c19385415a137d993e2de1fc1451f3f56b6880fe2d1487fb53d783cf3d48b944.png" src="../../_images/c19385415a137d993e2de1fc1451f3f56b6880fe2d1487fb53d783cf3d48b944.png" />
+<img alt="../../_images/2d6dfabb7e124f75daed507edbfb883896749ea5ba22d9d15790b90bcd60a129.png" src="../../_images/2d6dfabb7e124f75daed507edbfb883896749ea5ba22d9d15790b90bcd60a129.png" />
 </div>
 </div>
 <p>Note that “axes” is a <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> instance, and that in order to draw on a specific axis (plot), we start by calling the specific axis according to it’s location on the array.</p>
@@ -664,7 +675,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/e211f221a5ca12a5a797528d226ee7e13023744db113db0104b4e48e948be4bb.png" src="../../_images/e211f221a5ca12a5a797528d226ee7e13023744db113db0104b4e48e948be4bb.png" />
+<img alt="../../_images/34441ec78068bacc5a5faa7687f75ec2d2518db65f6768911805b330fa37be5c.png" src="../../_images/34441ec78068bacc5a5faa7687f75ec2d2518db65f6768911805b330fa37be5c.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -687,7 +698,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/a8a7f05eb302065df6509928ef4eca507be14d4eb694586806e26247ae1f5401.png" src="../../_images/a8a7f05eb302065df6509928ef4eca507be14d4eb694586806e26247ae1f5401.png" />
+<img alt="../../_images/de3956e87848fb31c370df9dea6413cc26aaada48025204567f577932565dffc.png" src="../../_images/de3956e87848fb31c370df9dea6413cc26aaada48025204567f577932565dffc.png" />
 </div>
 </div>
 <p>Using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>’s <a class="reference external" href="https://matplotlib.org/3.3.2/api/style_api.html#module-matplotlib.style"><code class="docutils literal notranslate"><span class="pre">style</span></code></a> objects open up a world of possibilities.</p>
@@ -715,20 +726,20 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/1047ef89b85c0841a1b50615a38542722cd7c2f5998e78db8522422a3cbb5b64.png" src="../../_images/1047ef89b85c0841a1b50615a38542722cd7c2f5998e78db8522422a3cbb5b64.png" />
+<img alt="../../_images/01802a78107840635998ba7ec2b7e24ef7bbea70f7d3f302eee2ec7d0fb0f9ba.png" src="../../_images/01802a78107840635998ba7ec2b7e24ef7bbea70f7d3f302eee2ec7d0fb0f9ba.png" />
 </div>
 </div>
 </section>
 </section>
 </section>
 <section id="scipy">
-<h2>SciPy<a class="headerlink" href="#scipy" title="Permalink to this heading">#</a></h2>
+<h2>SciPy<a class="headerlink" href="#scipy" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://www.scipy.org/">SciPy</a> is a large library consisting of many smaller modules, each targeting a single field of scientific computing.</p>
 <p>Available modules include <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy.linalg</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy.fftpack</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy.signal</span></code> and many more.</p>
 <p>Because of its extremely wide scope of available use-cases, we won’t go through all of them. All you need to do is to remember that many functions that you’re used to find in different MATLAB toolboxes are located somewhere in SciPy.</p>
 <p>Below you’ll find a few particularly interesting use-cases.</p>
 <section id="mat-files-input-output">
-<h3><em>.mat</em> files input\output<a class="headerlink" href="#mat-files-input-output" title="Permalink to this heading">#</a></h3>
+<h3><em>.mat</em> files input\output<a class="headerlink" href="#mat-files-input-output" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">io</span> <span class="k">as</span> <span class="n">spio</span>
@@ -743,7 +754,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;__header__&#39;: b&#39;MATLAB 5.0 MAT-file Platform: posix, Created on: Mon Jul 15 06:11:17 2024&#39;,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;__header__&#39;: b&#39;MATLAB 5.0 MAT-file Platform: posix, Created on: Mon Jul 15 06:40:48 2024&#39;,
  &#39;__version__&#39;: &#39;1.0&#39;,
  &#39;__globals__&#39;: [],
  &#39;a&#39;: array([[1., 1., 1.],
@@ -755,7 +766,7 @@ document.write(`
 </div>
 </section>
 <section id="linear-algebra">
-<h3>Linear algebra<a class="headerlink" href="#linear-algebra" title="Permalink to this heading">#</a></h3>
+<h3>Linear algebra<a class="headerlink" href="#linear-algebra" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">linalg</span>
@@ -772,7 +783,7 @@ document.write(`
 </div>
 </div>
 <section id="curve-fitting">
-<h4>Curve fitting<a class="headerlink" href="#curve-fitting" title="Permalink to this heading">#</a></h4>
+<h4>Curve fitting<a class="headerlink" href="#curve-fitting" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">optimize</span>
@@ -799,7 +810,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/18cb31f650508a24343993ff4f11e3c2e6ff9716a24c8d6881e3b7a06f6a15a1.png" src="../../_images/18cb31f650508a24343993ff4f11e3c2e6ff9716a24c8d6881e3b7a06f6a15a1.png" />
+<img alt="../../_images/cced6646427f1fbeb5c6466e6d8c5da3d84a4f223072c5d8ba0ed84cb47767b8.png" src="../../_images/cced6646427f1fbeb5c6466e6d8c5da3d84a4f223072c5d8ba0ed84cb47767b8.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -809,7 +820,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3.26649711 1.5032432 ]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2.58567359 1.52735965]
 </pre></div>
 </div>
 </div>
@@ -817,7 +828,7 @@ document.write(`
 </section>
 </section>
 <section id="statistics">
-<h3>Statistics<a class="headerlink" href="#statistics" title="Permalink to this heading">#</a></h3>
+<h3>Statistics<a class="headerlink" href="#statistics" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
@@ -837,20 +848,20 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ttest_indResult(statistic=-3.1354602015548703, pvalue=0.0022105503110747445)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TtestResult(statistic=np.float64(-4.075467580437346), pvalue=np.float64(8.794984005566539e-05), df=np.float64(108.0))
 </pre></div>
 </div>
-<img alt="../../_images/08e1b9eacadeeb47f867edd4d1324eb350812deb158de1c396e8550dadf258dc.png" src="../../_images/08e1b9eacadeeb47f867edd4d1324eb350812deb158de1c396e8550dadf258dc.png" />
+<img alt="../../_images/c721277df7b059e7ab1fd27b87af61c841d9b91e7502e65096641c2289b80b8e.png" src="../../_images/c721277df7b059e7ab1fd27b87af61c841d9b91e7502e65096641c2289b80b8e.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="ipython">
-<h2>IPython<a class="headerlink" href="#ipython" title="Permalink to this heading">#</a></h2>
+<h2>IPython<a class="headerlink" href="#ipython" title="Link to this heading">#</a></h2>
 <p>IPython is the REPL in which this text is written in. As stated, it’s the most popular “command window” of Python. When most Python programmers wish to write and execute a small Python script, they won’t use the regular Python interpreter, accessible with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">my_file.py</span></code>. Instead, they will run it with IPython since it has more features. For instance, the popular MATLAB feature which saves the variables that returned from the script you ran is accessible when running a script as <code class="docutils literal notranslate"><span class="pre">ipython</span> <span class="pre">-i</span> <span class="pre">my_file.py</span></code>.</p>
 <p>Let’s examine some of IPython’s other features, accessible by using the <code class="docutils literal notranslate"><span class="pre">%</span></code> <a class="reference external" href="https://ipython.readthedocs.io/en/stable/interactive/magics.html"><em>magic</em></a> operator before writing your actual code:</p>
 <section id="timeit-micro-benchmarking">
-<h3><code class="docutils literal notranslate"><span class="pre">%%timeit</span></code> - micro-benchmarking<a class="headerlink" href="#timeit-micro-benchmarking" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">%%timeit</span></code> - micro-benchmarking<a class="headerlink" href="#timeit-micro-benchmarking" title="Link to this heading">#</a></h3>
 <p><em>Time execution of a Python statement or expression.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -870,7 +881,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>244 ns ± 1.88 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>248 ns ± 0.815 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -882,14 +893,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>500 µs ± 7.34 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>451 μs ± 1.81 μs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="prun-benchmark-each-function-line">
-<h3><code class="docutils literal notranslate"><span class="pre">%%prun</span></code> - benchmark each function line<a class="headerlink" href="#prun-benchmark-each-function-line" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">%%prun</span></code> - benchmark each function line<a class="headerlink" href="#prun-benchmark-each-function-line" title="Link to this heading">#</a></h3>
 <p><em>Run a statement through the python code profiler.</em></p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -918,7 +929,7 @@ document.write(`
 </div>
 </section>
 <section id="run-run-external-script">
-<h3><code class="docutils literal notranslate"><span class="pre">%run</span></code> - run external script<a class="headerlink" href="#run-run-external-script" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">%run</span></code> - run external script<a class="headerlink" href="#run-run-external-script" title="Link to this heading">#</a></h3>
 <p><em>Run the named file inside IPython as a program.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -927,32 +938,32 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1721023884.5875309
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1721025654.3298528
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="matplotlib-notebook-inline">
-<h3><code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">[notebook\inline]</span></code><a class="headerlink" href="#matplotlib-notebook-inline" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">[notebook\inline]</span></code><a class="headerlink" href="#matplotlib-notebook-inline" title="Link to this heading">#</a></h3>
 <p><em>Easily display <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> figures inside the notebook and set up matplotlib to work interactively.</em></p>
 </section>
 <section id="reset">
-<h3><code class="docutils literal notranslate"><span class="pre">%reset</span></code><a class="headerlink" href="#reset" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">%reset</span></code><a class="headerlink" href="#reset" title="Link to this heading">#</a></h3>
 <p><em>Resets the namespace by removing all names defined by the user, if called without arguments, or by removing some types of objects, such as everything currently in IPython’s In[] and Out[] containers (see the parameters for details).</em></p>
 </section>
 <section id="latex-support">
-<h3>LaTeX support<a class="headerlink" href="#latex-support" title="Permalink to this heading">#</a></h3>
+<h3>LaTeX support<a class="headerlink" href="#latex-support" title="Link to this heading">#</a></h3>
 <p>Render the cell as <span class="math notranslate nohighlight">\(\LaTeX\)</span>:</p>
 <p><span class="math notranslate nohighlight">\(a^2 + b^2 = c^2\)</span></p>
 <p><span class="math notranslate nohighlight">\(e^{i\pi} + 1 = 0\)</span></p>
 </section>
 </section>
 <section id="scikit-image">
-<h2><code class="docutils literal notranslate"><span class="pre">scikit-image</span></code><a class="headerlink" href="#scikit-image" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">scikit-image</span></code><a class="headerlink" href="#scikit-image" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://scikit-image.org/"><code class="docutils literal notranslate"><span class="pre">scikit-image</span></code></a> is one of the main image processing libraries in Python. We’ll look at it in greater interest later in the semester, but for now let’s examine some of its algorithms:</p>
 <section id="edge-detection-using-a-sobel-filter">
-<h3>Edge detection using a <a class="reference external" href="https://scikit-image.org/docs/dev/api/skimage.filters.html#skimage.filters.sobel">Sobel filter</a>.<a class="headerlink" href="#edge-detection-using-a-sobel-filter" title="Permalink to this heading">#</a></h3>
+<h3>Edge detection using a <a class="reference external" href="https://scikit-image.org/docs/dev/api/skimage.filters.html#skimage.filters.sobel">Sobel filter</a>.<a class="headerlink" href="#edge-detection-using-a-sobel-filter" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">data</span><span class="p">,</span> <span class="n">io</span><span class="p">,</span> <span class="n">filters</span>
@@ -974,12 +985,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/c29c98feeb27d2604380de414ffe09e8662519b02d017dca3027bfc92a160dca.png" src="../../_images/c29c98feeb27d2604380de414ffe09e8662519b02d017dca3027bfc92a160dca.png" />
+<img alt="../../_images/cfd234628326ae87569be6499eaf090d85544a1a0872ca5a8cdb74a9710c0937.png" src="../../_images/cfd234628326ae87569be6499eaf090d85544a1a0872ca5a8cdb74a9710c0937.png" />
 </div>
 </div>
 </section>
 <section id="segmentation-using-a-random-walker-algorithm">
-<h3>Segmentation using a <a class="reference external" href="https://scikit-image.org/docs/dev/auto_examples/segmentation/plot_random_walker_segmentation.html">“random walker” algorithm</a><a class="headerlink" href="#segmentation-using-a-random-walker-algorithm" title="Permalink to this heading">#</a></h3>
+<h3>Segmentation using a <a class="reference external" href="https://scikit-image.org/docs/dev/auto_examples/segmentation/plot_random_walker_segmentation.html">“random walker” algorithm</a><a class="headerlink" href="#segmentation-using-a-random-walker-algorithm" title="Link to this heading">#</a></h3>
 <div class="dropdown admonition">
 <p class="admonition-title">Further reading</p>
 <p>The random walker algorithm determines the segmentation of an image from a set of markers labeling several phases (2 or more). An anisotropic diffusion equation is solved with tracers initiated at the markers’ position. The local diffusivity coefficient is greater if neighboring pixels have similar values, so that diffusion is difficult across high gradients. The label of each unknown pixel is attributed to the label of the known marker that has the highest probability to be reached first during this diffusion process.<br />
@@ -1025,12 +1036,23 @@ In this example, two phases are clearly visible, but the data are too noisy to p
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/8741ccb7cbaa2e320daf89e0ab7e9b173cf41fb91030c2c94ccdd7b34cd5fd13.png" src="../../_images/8741ccb7cbaa2e320daf89e0ab7e9b173cf41fb91030c2c94ccdd7b34cd5fd13.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">skimage</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Generate noisy synthetic data</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">data1</span> <span class="o">=</span> <span class="n">skimage</span><span class="o">.</span><span class="n">img_as_float</span><span class="p">(</span><span class="n">binary_blobs</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>  <span class="c1"># data</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">data1</span> <span class="o">+=</span> <span class="mf">0.35</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="o">*</span><span class="n">data1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># added noise</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">markers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">data1</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: binary_blobs() got an unexpected keyword argument &#39;seed&#39;
+</pre></div>
+</div>
 </div>
 </div>
 </section>
 <section id="template-matching">
-<h3>Template matching<a class="headerlink" href="#template-matching" title="Permalink to this heading">#</a></h3>
+<h3>Template matching<a class="headerlink" href="#template-matching" title="Link to this heading">#</a></h3>
 <div class="dropdown admonition">
 <p class="admonition-title">Further reading</p>
 <p>We use template matching to identify the occurrence of an image patch (in this case, a sub-image centered on a single coin). Here, we return a single match (the exact same coin), so the maximum value in the match_template result corresponds to the coin location. The other coins look similar, and thus have local maxima; if you expect multiple matches, you should use a proper peak-finding function.
@@ -1086,13 +1108,13 @@ The <code class="docutils literal notranslate"><span class="pre">match_template(
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/379611470a0974df2f68cc6c45dc2de693a726bf9385173fef790132cf6dc884.png" src="../../_images/379611470a0974df2f68cc6c45dc2de693a726bf9385173fef790132cf6dc884.png" />
+<img alt="../../_images/3beccaaa8eb360bd8de5f1ec7baacb59525044684987c7282185394a9505ad98.png" src="../../_images/3beccaaa8eb360bd8de5f1ec7baacb59525044684987c7282185394a9505ad98.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="exercise-matplotlib-s-object-oriented-interface">
-<h2>Exercise: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>’s Object-oriented Interface<a class="headerlink" href="#exercise-matplotlib-s-object-oriented-interface" title="Permalink to this heading">#</a></h2>
+<h2>Exercise: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>’s Object-oriented Interface<a class="headerlink" href="#exercise-matplotlib-s-object-oriented-interface" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Create 1000 normally-distributed points. Histogram them. Overlay the histogram with a dashed line showing the theoretical normal distribution we would expect from the data.</p></li>
 </ol>
@@ -1117,7 +1139,7 @@ The <code class="docutils literal notranslate"><span class="pre">match_template(
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../../_images/27b6be555df9efd627e2cd0f1524ee2b1a5634cede129e4fdb6a15903ed38c88.png" src="../../_images/27b6be555df9efd627e2cd0f1524ee2b1a5634cede129e4fdb6a15903ed38c88.png" />
+<img alt="../../_images/17f88b9136418ccd61e285654ca3b3961e7e91ca8a646752aa4ef1a02e971875.png" src="../../_images/17f88b9136418ccd61e285654ca3b3961e7e91ca8a646752aa4ef1a02e971875.png" />
 </div>
 </div>
 <ol class="arabic simple" start="2">
@@ -1138,7 +1160,7 @@ The <code class="docutils literal notranslate"><span class="pre">match_template(
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../../_images/11190211c38b8bc575b4345b4a63d298270a08f24a64aad15337a262ca590936.png" src="../../_images/11190211c38b8bc575b4345b4a63d298270a08f24a64aad15337a262ca590936.png" />
+<img alt="../../_images/41f48786fb96691d7b87b3abd0a7b64207ca2a25e0c47f9e6e639497b908a92d.png" src="../../_images/41f48786fb96691d7b87b3abd0a7b64207ca2a25e0c47f9e6e639497b908a92d.png" />
 </div>
 </div>
 <ol class="arabic simple" start="3">
@@ -1175,26 +1197,26 @@ The <code class="docutils literal notranslate"><span class="pre">match_template(
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../../_images/50c9a00288b310b05a4ec1909f22124b767e0d73aaee481242e3018d1f6f1308.png" src="../../_images/50c9a00288b310b05a4ec1909f22124b767e0d73aaee481242e3018d1f6f1308.png" />
+<img alt="../../_images/212782e3151186a3fb199b2965881af9985723e41d1bd8d4aeae0e6045c8782b.png" src="../../_images/212782e3151186a3fb199b2965881af9985723e41d1bd8d4aeae0e6045c8782b.png" />
 </div>
 </div>
 </section>
 <section id="data-analysis-with-pandas">
-<h2>Data Analysis with <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#data-analysis-with-pandas" title="Permalink to this heading">#</a></h2>
+<h2>Data Analysis with <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#data-analysis-with-pandas" title="Link to this heading">#</a></h2>
 <p><img alt="pandas" src="../../_images/pandas.jpeg" /></p>
 <p>A large part of what makes Python so popular nowadays is <a class="reference external" href="https://pandas.pydata.org/"><code class="docutils literal notranslate"><span class="pre">pandas</span></code></a>, or the “Python data analysis library”.</p>
 <p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> has been around since 2008, and while in itself it’s built on the solid foundations of <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, it introduced a vast array of important features that can hardly be found anywhere outside of the Python ecosystem. If you can’t find a function that does what you’re trying to do in the documentation, there’s probably a StackOverflow answer or blog-post somewhere with a proposed implementation. Frankly, if you can’t find even that, it might be a good time to stop and make sure you 100% understand what you’re trying to do and why the implementation you have in mind is the “correct” way to do it. Only when and if you reach a positive conclusion, implement it yourself.</p>
 <p>The general priniciple in working with <code class="docutils literal notranslate"><span class="pre">pandas</span></code> is to first look up in its immense codebase (via its docs). or somewhere online, an existing function that does exactly what you’re looking for, and if you can’t - only then should you implement it youself.</p>
 <p>Much of the discussion below is taken from the <a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a>, by Jake VanderPlas. Be sure to check it out if you need further help with one of the topics.</p>
 <section id="the-need-for-pandas">
-<h3>The need for <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#the-need-for-pandas" title="Permalink to this heading">#</a></h3>
+<h3>The need for <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#the-need-for-pandas" title="Link to this heading">#</a></h3>
 <p>With only <em>clean</em> data in the world, <code class="docutils literal notranslate"><span class="pre">pandas</span></code> wouldn’t be as necessary. By clean we mean that all of our data was sampled properly, without any missing data points. We also mean that the data is homogeneous, i.e. of a single type (floats, ints), and one-dimensional.</p>
 <p>An example of this simple data might be an electrophysiological measurement of a neuron’s votlage over time, a calcium trace of a single imaged neuron and other simple cases such as these.</p>
 <p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> provide flexibility for our numerical computing tasks via its two main data types: <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> and <code class="docutils literal notranslate"><span class="pre">Series</span></code>, which are multi-puporse data containers with very useful features, which you’ll soon learn about.</p>
 <p>Mastering <code class="docutils literal notranslate"><span class="pre">pandas</span></code> is one of the most important goals of this course. Your work as scientists will be greatly simplified if you’ll feel comfortable in the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> jungle.</p>
 </section>
 <section id="series">
-<h3>Series<a class="headerlink" href="#series" title="Permalink to this heading">#</a></h3>
+<h3>Series<a class="headerlink" href="#series" title="Link to this heading">#</a></h3>
 <p>A <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html">Series</a> is generalization of a simple <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array. It’s the basic building block of <code class="docutils literal notranslate"><span class="pre">pandas</span></code> objects.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1238,8 +1260,8 @@ Its class:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;PandasArray&gt;
-[50.0, 100.0, 150.0, 200.0]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;NumpyExtensionArray&gt;
+[np.float64(50.0), np.float64(100.0), np.float64(150.0), np.float64(200.0)]
 Length: 4, dtype: float64
 </pre></div>
 </div>
@@ -1266,7 +1288,7 @@ Length: 4, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(100.0)
 </pre></div>
 </div>
 </div>
@@ -1311,7 +1333,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(3)
 </pre></div>
 </div>
 </div>
@@ -1334,7 +1356,7 @@ dtype: int64
 </div>
 <p>The index of a series is one of its most important features. It also strengthens the analogy of a series to an enhanced Python dictionary. The main difference between a series and a dictionary lies in its <em>vectorization</em> - data inside a series can be processed in a vectorized manner, just like you would act upon a standard <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array.</p>
 <section id="series-instantiation">
-<h4>Series Instantiation<a class="headerlink" href="#series-instantiation" title="Permalink to this heading">#</a></h4>
+<h4>Series Instantiation<a class="headerlink" href="#series-instantiation" title="Link to this heading">#</a></h4>
 <p>Simplest form:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1518,7 +1540,7 @@ Name: Unnamed, dtype: int64
 </section>
 </section>
 <section id="dataframe">
-<h3>DataFrame<a class="headerlink" href="#dataframe" title="Permalink to this heading">#</a></h3>
+<h3>DataFrame<a class="headerlink" href="#dataframe" title="Link to this heading">#</a></h3>
 <p>A <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> is a concatenation of multiple <code class="docutils literal notranslate"><span class="pre">Series</span></code> objects that share the same index. It’s a generalization of a two dimensional <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array.</p>
 <p>You can also think of it as a dictionary of <code class="docutils literal notranslate"><span class="pre">Series</span></code> objects, as a database table, or a spreadsheet.</p>
 <p>Due to its flexibility, <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> is the more widely used data structure.</p>
@@ -1579,7 +1601,7 @@ Columns:	Index([&#39;population&#39;, &#39;medals&#39;], dtype=&#39;object&#39;)
 </div>
 </div>
 <section id="instantiation">
-<h4>Instantiation<a class="headerlink" href="#instantiation" title="Permalink to this heading">#</a></h4>
+<h4>Instantiation<a class="headerlink" href="#instantiation" title="Link to this heading">#</a></h4>
 <p>Creating a dataframe can be done in one of several ways:</p>
 <ul class="simple">
 <li><p>Dictionary of 1D numpy arrays, lists, dictionaries or Series</p></li>
@@ -1843,29 +1865,29 @@ Columns:	Index([&#39;population&#39;, &#39;medals&#39;], dtype=&#39;object&#39;)
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.63951</td>
-      <td>0.254863</td>
-      <td>0.263891</td>
-      <td>0.429023</td>
-      <td>0.774311</td>
-      <td>0.226356</td>
-      <td>0.508567</td>
-      <td>0.934941</td>
-      <td>0.334051</td>
-      <td>0.883568</td>
+      <td>0.655209</td>
+      <td>0.026719</td>
+      <td>0.963769</td>
+      <td>0.159402</td>
+      <td>0.888283</td>
+      <td>0.323449</td>
+      <td>0.971959</td>
+      <td>0.446086</td>
+      <td>0.292644</td>
+      <td>0.803283</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.79226</td>
-      <td>0.347339</td>
-      <td>0.633221</td>
-      <td>0.038404</td>
-      <td>0.432521</td>
-      <td>0.039142</td>
-      <td>0.191261</td>
-      <td>0.905674</td>
-      <td>0.153216</td>
-      <td>0.900364</td>
+      <td>0.533491</td>
+      <td>0.187965</td>
+      <td>0.397492</td>
+      <td>0.168707</td>
+      <td>0.357629</td>
+      <td>0.730250</td>
+      <td>0.727586</td>
+      <td>0.928804</td>
+      <td>0.210713</td>
+      <td>0.932150</td>
     </tr>
   </tbody>
 </table>
@@ -1874,7 +1896,7 @@ Columns:	Index([&#39;population&#39;, &#39;medals&#39;], dtype=&#39;object&#39;)
 </section>
 </section>
 <section id="columnar-operations">
-<h3>Columnar Operations<a class="headerlink" href="#columnar-operations" title="Permalink to this heading">#</a></h3>
+<h3>Columnar Operations<a class="headerlink" href="#columnar-operations" title="Link to this heading">#</a></h3>
 <p>If we continue with the dictionary analogy, we can observe how intuitive the operations on series and dataframe columns can be:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2137,7 +2159,7 @@ Name: three, dtype: float64
 </div>
 </section>
 <section id="simple-plotting">
-<h3>Simple plotting<a class="headerlink" href="#simple-plotting" title="Permalink to this heading">#</a></h3>
+<h3>Simple plotting<a class="headerlink" href="#simple-plotting" title="Link to this heading">#</a></h3>
 <p>You can plot dataframes and series objects quite easily using the <code class="docutils literal notranslate"><span class="pre">plot()</span></code> method:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2146,7 +2168,7 @@ Name: three, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/0e4e30361ff55586fbc9115c968f950a8eb1d7dc3ccb2e5cf49647695b9b9cc3.png" src="../../_images/0e4e30361ff55586fbc9115c968f950a8eb1d7dc3ccb2e5cf49647695b9b9cc3.png" />
+<img alt="../../_images/d14147b0edd75acb9362bc44ca06bffb88c4341817506a6196c112c7ca388a2b.png" src="../../_images/d14147b0edd75acb9362bc44ca06bffb88c4341817506a6196c112c7ca388a2b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2156,12 +2178,12 @@ Name: three, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/a94b0588eab07e42c4a5793f5ccfc6b30f2cfd6e3fbb76332a09b84738f80a7b.png" src="../../_images/a94b0588eab07e42c4a5793f5ccfc6b30f2cfd6e3fbb76332a09b84738f80a7b.png" />
+<img alt="../../_images/43a7489b59e0697cb0663eaac1abb243b3776ad0af21d01670e2049c14f8e89b.png" src="../../_images/43a7489b59e0697cb0663eaac1abb243b3776ad0af21d01670e2049c14f8e89b.png" />
 </div>
 </div>
 <p>More plotting methods will be shown in class 8.</p>
 <section id="the-assign-method">
-<h4>The <code class="docutils literal notranslate"><span class="pre">assign</span></code> method<a class="headerlink" href="#the-assign-method" title="Permalink to this heading">#</a></h4>
+<h4>The <code class="docutils literal notranslate"><span class="pre">assign</span></code> method<a class="headerlink" href="#the-assign-method" title="Link to this heading">#</a></h4>
 <p>There’s a more powerful way to insert a column into a dataframe, using the assign method:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2243,7 +2265,7 @@ Name: three, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/a2f5d59da05778961941719742dabc5c2988ea571ebe545cd6481d333a5a0c5d.png" src="../../_images/a2f5d59da05778961941719742dabc5c2988ea571ebe545cd6481d333a5a0c5d.png" />
+<img alt="../../_images/88f4b042a5712f898ce9c726010bb056fc42daad31817c21d1091dc099dfeaa2.png" src="../../_images/88f4b042a5712f898ce9c726010bb056fc42daad31817c21d1091dc099dfeaa2.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note that the DataFrame itself didn&#39;t change:
 
             population  medals  rel_medals  area
@@ -2267,10 +2289,10 @@ Australia        73.7      19    0.257802    45
 </section>
 </section>
 <section id="indexing">
-<h3>Indexing<a class="headerlink" href="#indexing" title="Permalink to this heading">#</a></h3>
+<h3>Indexing<a class="headerlink" href="#indexing" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> indexing can be seem complicated at times due to its high flexibility. However, its relative importance should motivate you to overcome this initial barrier.</p>
 <p>The <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html"><code class="docutils literal notranslate"><span class="pre">pandas</span></code> documentation</a> summarizes it in the following manner:</p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Operation</p></th>
 <th class="head"><p>Syntax</p></th>
@@ -2300,6 +2322,7 @@ Australia        73.7      19    0.257802    45
 </tr>
 </tbody>
 </table>
+</div>
 <p>Another helpful summary is the following:</p>
 <ul class="simple">
 <li><p>Like lists, you can index by integer position (<code class="docutils literal notranslate"><span class="pre">df.iloc[intloc]</span></code>).</p></li>
@@ -2375,7 +2398,7 @@ Australia        73.7      19    0.257802    45
 </div></div></div>
 </div>
 <section id="loc">
-<h4><code class="docutils literal notranslate"><span class="pre">.loc</span></code><a class="headerlink" href="#loc" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">.loc</span></code><a class="headerlink" href="#loc" title="Link to this heading">#</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">.loc</span></code> is primarily label based, but may also be used with a boolean array. <code class="docutils literal notranslate"><span class="pre">.loc</span></code> will raise <code class="docutils literal notranslate"><span class="pre">KeyError</span></code> when the items are not found. Allowed inputs are:</p>
 <ul class="simple">
 <li><p>A single label, e.g. 5 or ‘a’, (note that 5 is interpreted as a label of the index. This use is not an integer position along the index)</p></li>
@@ -2509,14 +2532,14 @@ Name: a, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.True_
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="iloc">
-<h4><code class="docutils literal notranslate"><span class="pre">.iloc</span></code><a class="headerlink" href="#iloc" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">.iloc</span></code><a class="headerlink" href="#iloc" title="Link to this heading">#</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">.iloc</span></code> is primarily integer position based (from 0 to length-1 of the axis), but may also be used with a boolean array. <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> will raise <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> if a requested indexer is out-of-bounds, except slice indexers which allow out-of-bounds indexing. (this conforms with Python/<code class="docutils literal notranslate"><span class="pre">numpy</span></code> slice semantics). Allowed inputs are:</p>
 <ul class="simple">
 <li><p>An integer, e.g. <code class="docutils literal notranslate"><span class="pre">5</span></code></p></li>
@@ -2697,7 +2720,7 @@ Name: a, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(3.0)
 </pre></div>
 </div>
 </div>
@@ -2868,18 +2891,18 @@ Name: a, dtype: object
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/pandas/core/indexes/base.py:3653,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3652</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3653</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3654</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/pandas/core/indexes/base.py:3805,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3804</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3805</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3806</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/pandas/_libs/index.pyx:147,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+<span class="nn">File index.pyx:167,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/pandas/_libs/index.pyx:176,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+<span class="nn">File index.pyx:196,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
 
-<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:7080,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:7081,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
 
-<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:7088,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:7089,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
 
 <span class="ne">KeyError</span>: 1
 
@@ -2890,22 +2913,25 @@ Name: a, dtype: object
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># we fail, since the key &quot;1&quot; isn&#39;t in the columns</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># df2[10] - this also fails</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/pandas/core/frame.py:3761,</span> in <span class="ni">DataFrame.__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3759</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3760</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">3761</span> <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3762</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">3763</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/pandas/core/frame.py:4102,</span> in <span class="ni">DataFrame.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4100</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">4101</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">4102</span> <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4103</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">4104</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/pandas/core/indexes/base.py:3655,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3653</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3654</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3655</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
-<span class="g g-Whitespace">   </span><span class="mi">3656</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3657</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
-<span class="g g-Whitespace">   </span><span class="mi">3658</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
-<span class="g g-Whitespace">   </span><span class="mi">3659</span>     <span class="c1">#  the TypeError.</span>
-<span class="g g-Whitespace">   </span><span class="mi">3660</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/pandas/core/indexes/base.py:3812,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3807</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">casted_key</span><span class="p">,</span> <span class="nb">slice</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">3808</span>         <span class="nb">isinstance</span><span class="p">(</span><span class="n">casted_key</span><span class="p">,</span> <span class="n">abc</span><span class="o">.</span><span class="n">Iterable</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3809</span>         <span class="ow">and</span> <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">slice</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3810</span>     <span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">3811</span>         <span class="k">raise</span> <span class="n">InvalidIndexError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">3812</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">3813</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3814</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3815</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3816</span>     <span class="c1">#  the TypeError.</span>
+<span class="g g-Whitespace">   </span><span class="mi">3817</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 
 <span class="ne">KeyError</span>: 1
 </pre></div>
@@ -2916,11 +2942,11 @@ Name: a, dtype: object
 </section>
 </section>
 <section id="indexing-with-query-and-where">
-<h3>Indexing with <code class="docutils literal notranslate"><span class="pre">query</span></code> and <code class="docutils literal notranslate"><span class="pre">where</span></code><a class="headerlink" href="#indexing-with-query-and-where" title="Permalink to this heading">#</a></h3>
+<h3>Indexing with <code class="docutils literal notranslate"><span class="pre">query</span></code> and <code class="docutils literal notranslate"><span class="pre">where</span></code><a class="headerlink" href="#indexing-with-query-and-where" title="Link to this heading">#</a></h3>
 </section>
 </section>
 <section id="exercise-pandas-indexing">
-<h2>Exercise: Pandas Indexing<a class="headerlink" href="#exercise-pandas-indexing" title="Permalink to this heading">#</a></h2>
+<h2>Exercise: Pandas Indexing<a class="headerlink" href="#exercise-pandas-indexing" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -3056,7 +3082,7 @@ Name: Population, dtype: float64
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<img alt="../../_images/64959cceb1a2f889071fa91cdf8cc9994309fb48827d99a3a221c6ba9414312e.png" src="../../_images/64959cceb1a2f889071fa91cdf8cc9994309fb48827d99a3a221c6ba9414312e.png" />
+<img alt="../../_images/6a405413adc02b64a82dfef08ba4d139bf2635b808549012804ac0455ccbc805.png" src="../../_images/6a405413adc02b64a82dfef08ba4d139bf2635b808549012804ac0455ccbc805.png" />
 </div>
 </details>
 </div>
@@ -3122,63 +3148,63 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.663401</td>
-      <td>0.490818</td>
-      <td>0.429858</td>
+      <td>0.351823</td>
+      <td>0.229252</td>
+      <td>0.011055</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.787548</td>
-      <td>0.314741</td>
-      <td>0.615520</td>
+      <td>0.315490</td>
+      <td>0.733534</td>
+      <td>0.070176</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>0.902408</td>
-      <td>0.399637</td>
-      <td>0.276708</td>
+      <td>0.715872</td>
+      <td>0.287606</td>
+      <td>0.980983</td>
     </tr>
     <tr>
       <th>d</th>
-      <td>0.266864</td>
-      <td>0.142733</td>
-      <td>0.920572</td>
+      <td>0.304549</td>
+      <td>0.036654</td>
+      <td>0.667453</td>
     </tr>
     <tr>
       <th>e</th>
-      <td>0.063195</td>
-      <td>0.007602</td>
-      <td>0.460606</td>
+      <td>0.116095</td>
+      <td>0.205122</td>
+      <td>0.089174</td>
     </tr>
     <tr>
       <th>f</th>
-      <td>0.415705</td>
-      <td>0.126130</td>
-      <td>0.577865</td>
+      <td>0.456523</td>
+      <td>0.700778</td>
+      <td>0.152654</td>
     </tr>
     <tr>
       <th>g</th>
-      <td>0.893658</td>
-      <td>0.631152</td>
-      <td>0.676825</td>
+      <td>0.929846</td>
+      <td>0.725214</td>
+      <td>0.018311</td>
     </tr>
     <tr>
       <th>h</th>
-      <td>0.621496</td>
-      <td>0.069484</td>
-      <td>0.255241</td>
+      <td>0.972828</td>
+      <td>0.539777</td>
+      <td>0.157296</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>0.853996</td>
-      <td>0.712374</td>
-      <td>0.229273</td>
+      <td>0.962203</td>
+      <td>0.412146</td>
+      <td>0.775518</td>
     </tr>
     <tr>
       <th>j</th>
-      <td>0.860729</td>
-      <td>0.086746</td>
-      <td>0.453864</td>
+      <td>0.334634</td>
+      <td>0.473760</td>
+      <td>0.538935</td>
     </tr>
   </tbody>
 </table>
@@ -3206,16 +3232,16 @@ Name: Population, dtype: float64
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.66340087, 0.49081796, 0.42985849],
-       [0.78754769, 0.31474071, 0.61551989],
-       [0.90240847, 0.39963669, 0.2767076 ],
-       [0.26686434, 0.14273299, 0.92057235],
-       [0.06319516, 0.00760196, 0.46060628],
-       [0.41570451, 0.12613006, 0.57786455],
-       [0.89365804, 0.6311517 , 0.6768251 ],
-       [0.6214958 , 0.06948424, 0.25524055],
-       [0.85399614, 0.71237398, 0.229273  ],
-       [0.86072899, 0.08674562, 0.45386401]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.35182288, 0.22925208, 0.01105509],
+       [0.31548961, 0.73353445, 0.07017605],
+       [0.7158721 , 0.28760559, 0.98098343],
+       [0.30454926, 0.03665357, 0.66745343],
+       [0.11609459, 0.20512215, 0.08917431],
+       [0.45652316, 0.7007776 , 0.15265413],
+       [0.9298456 , 0.72521431, 0.01831106],
+       [0.97282818, 0.53977744, 0.15729558],
+       [0.9622026 , 0.41214604, 0.77551752],
+       [0.33463386, 0.47376033, 0.53893471]])
 </pre></div>
 </div>
 </div>
@@ -3270,73 +3296,73 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.663401</td>
-      <td>0.490818</td>
-      <td>0.429858</td>
-      <td>1.093259</td>
+      <td>0.351823</td>
+      <td>0.229252</td>
+      <td>0.011055</td>
+      <td>0.362878</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.787548</td>
-      <td>0.314741</td>
-      <td>0.615520</td>
-      <td>1.403068</td>
+      <td>0.315490</td>
+      <td>0.733534</td>
+      <td>0.070176</td>
+      <td>0.385666</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>0.902408</td>
-      <td>0.399637</td>
-      <td>0.276708</td>
-      <td>1.179116</td>
+      <td>0.715872</td>
+      <td>0.287606</td>
+      <td>0.980983</td>
+      <td>1.696856</td>
     </tr>
     <tr>
       <th>d</th>
-      <td>0.266864</td>
-      <td>0.142733</td>
-      <td>0.920572</td>
-      <td>1.187437</td>
+      <td>0.304549</td>
+      <td>0.036654</td>
+      <td>0.667453</td>
+      <td>0.972003</td>
     </tr>
     <tr>
       <th>e</th>
-      <td>0.063195</td>
-      <td>0.007602</td>
-      <td>0.460606</td>
-      <td>0.523801</td>
+      <td>0.116095</td>
+      <td>0.205122</td>
+      <td>0.089174</td>
+      <td>0.205269</td>
     </tr>
     <tr>
       <th>f</th>
-      <td>0.415705</td>
-      <td>0.126130</td>
-      <td>0.577865</td>
-      <td>0.993569</td>
+      <td>0.456523</td>
+      <td>0.700778</td>
+      <td>0.152654</td>
+      <td>0.609177</td>
     </tr>
     <tr>
       <th>g</th>
-      <td>0.893658</td>
-      <td>0.631152</td>
-      <td>0.676825</td>
-      <td>1.570483</td>
+      <td>0.929846</td>
+      <td>0.725214</td>
+      <td>0.018311</td>
+      <td>0.948157</td>
     </tr>
     <tr>
       <th>h</th>
-      <td>0.621496</td>
-      <td>0.069484</td>
-      <td>0.255241</td>
-      <td>0.876736</td>
+      <td>0.972828</td>
+      <td>0.539777</td>
+      <td>0.157296</td>
+      <td>1.130124</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>0.853996</td>
-      <td>0.712374</td>
-      <td>0.229273</td>
-      <td>1.083269</td>
+      <td>0.962203</td>
+      <td>0.412146</td>
+      <td>0.775518</td>
+      <td>1.737720</td>
     </tr>
     <tr>
       <th>j</th>
-      <td>0.860729</td>
-      <td>0.086746</td>
-      <td>0.453864</td>
-      <td>1.314593</td>
+      <td>0.334634</td>
+      <td>0.473760</td>
+      <td>0.538935</td>
+      <td>0.873569</td>
     </tr>
   </tbody>
 </table>
@@ -3367,7 +3393,7 @@ Name: Population, dtype: float64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;one&#39;, ylabel=&#39;five&#39;&gt;
 </pre></div>
 </div>
-<img alt="../../_images/401decab528863ab31c10d4d40f9cd9a76a355a1dde4950c6b6284b4455f96b7.png" src="../../_images/401decab528863ab31c10d4d40f9cd9a76a355a1dde4950c6b6284b4455f96b7.png" />
+<img alt="../../_images/cf169c569865e10ff60eef0bf332ea824b04cd3110aab396be87109dc42d51cb.png" src="../../_images/cf169c569865e10ff60eef0bf332ea824b04cd3110aab396be87109dc42d51cb.png" />
 </div>
 </details>
 </div>
@@ -3420,73 +3446,73 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.615800</td>
-      <td>0.471347</td>
-      <td>0.416742</td>
-      <td>0.888130</td>
+      <td>0.344610</td>
+      <td>0.227249</td>
+      <td>0.011055</td>
+      <td>0.354966</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.708625</td>
-      <td>0.309570</td>
-      <td>0.577383</td>
-      <td>0.985966</td>
+      <td>0.310282</td>
+      <td>0.669499</td>
+      <td>0.070118</td>
+      <td>0.376176</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>0.784822</td>
-      <td>0.389084</td>
-      <td>0.273190</td>
-      <td>0.924269</td>
+      <td>0.656276</td>
+      <td>0.283657</td>
+      <td>0.831045</td>
+      <td>0.992065</td>
     </tr>
     <tr>
       <th>d</th>
-      <td>0.263708</td>
-      <td>0.142249</td>
-      <td>0.795948</td>
-      <td>0.927413</td>
+      <td>0.299863</td>
+      <td>0.036645</td>
+      <td>0.618988</td>
+      <td>0.826016</td>
     </tr>
     <tr>
       <th>e</th>
-      <td>0.063153</td>
-      <td>0.007602</td>
-      <td>0.444491</td>
-      <td>0.500176</td>
+      <td>0.115834</td>
+      <td>0.203687</td>
+      <td>0.089056</td>
+      <td>0.203830</td>
     </tr>
     <tr>
       <th>f</th>
-      <td>0.403835</td>
-      <td>0.125796</td>
-      <td>0.546236</td>
-      <td>0.837979</td>
+      <td>0.440830</td>
+      <td>0.644812</td>
+      <td>0.152062</td>
+      <td>0.572193</td>
     </tr>
     <tr>
       <th>g</th>
-      <td>0.779369</td>
-      <td>0.590075</td>
-      <td>0.626321</td>
-      <td>1.000000</td>
+      <td>0.801528</td>
+      <td>0.663296</td>
+      <td>0.018310</td>
+      <td>0.812342</td>
     </tr>
     <tr>
       <th>h</th>
-      <td>0.582252</td>
-      <td>0.069428</td>
-      <td>0.252478</td>
-      <td>0.768655</td>
+      <td>0.826481</td>
+      <td>0.513945</td>
+      <td>0.156648</td>
+      <td>0.904465</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>0.753912</td>
-      <td>0.653632</td>
-      <td>0.227270</td>
-      <td>0.883494</td>
+      <td>0.820453</td>
+      <td>0.400577</td>
+      <td>0.700086</td>
+      <td>0.986101</td>
     </tr>
     <tr>
       <th>j</th>
-      <td>0.758318</td>
-      <td>0.086637</td>
-      <td>0.438442</td>
-      <td>0.967359</td>
+      <td>0.328423</td>
+      <td>0.456236</td>
+      <td>0.513222</td>
+      <td>0.766625</td>
     </tr>
   </tbody>
 </table>
@@ -3513,7 +3539,7 @@ Name: Population, dtype: float64
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2018-01-31&#39;, &#39;2018-02-28&#39;, &#39;2018-03-31&#39;, &#39;2018-04-30&#39;,
                &#39;2018-05-31&#39;, &#39;2018-06-30&#39;],
-              dtype=&#39;datetime64[ns]&#39;, freq=&#39;M&#39;)
+              dtype=&#39;datetime64[ns]&#39;, freq=&#39;ME&#39;)
 </pre></div>
 </div>
 </div>
@@ -3567,45 +3593,45 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>2018-01-31</th>
-      <td>-0.166282</td>
-      <td>-1.898058</td>
-      <td>-0.668047</td>
-      <td>0.129612</td>
+      <td>1.263749</td>
+      <td>0.185992</td>
+      <td>0.593903</td>
+      <td>-0.194059</td>
     </tr>
     <tr>
       <th>2018-02-28</th>
-      <td>0.434370</td>
-      <td>-1.227996</td>
-      <td>-0.127738</td>
-      <td>0.591643</td>
+      <td>0.381039</td>
+      <td>0.153558</td>
+      <td>-0.773040</td>
+      <td>-0.398871</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
-      <td>0.590949</td>
-      <td>-1.079714</td>
+      <td>0.369971</td>
+      <td>0.640691</td>
       <td>NaN</td>
-      <td>1.257887</td>
+      <td>0.367016</td>
     </tr>
     <tr>
       <th>2018-04-30</th>
-      <td>-1.009031</td>
-      <td>0.214330</td>
-      <td>1.597491</td>
-      <td>-1.685788</td>
+      <td>-0.697571</td>
+      <td>0.553025</td>
+      <td>0.902395</td>
+      <td>-0.878604</td>
     </tr>
     <tr>
       <th>2018-05-31</th>
-      <td>2.132212</td>
-      <td>1.060912</td>
-      <td>-1.510453</td>
-      <td>-0.054414</td>
+      <td>-0.773136</td>
+      <td>-1.772036</td>
+      <td>0.038489</td>
+      <td>-0.320334</td>
     </tr>
     <tr>
       <th>2018-06-30</th>
-      <td>-0.303988</td>
-      <td>0.280737</td>
-      <td>2.311159</td>
-      <td>0.923214</td>
+      <td>0.004451</td>
+      <td>-0.179264</td>
+      <td>-0.229834</td>
+      <td>-1.867134</td>
     </tr>
   </tbody>
 </table>
@@ -3676,24 +3702,24 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>2018-01-31</th>
-      <td>0</td>
-      <td>-1.898058</td>
-      <td>-0.668047</td>
-      <td>0.129612</td>
+      <td>1</td>
+      <td>0.185992</td>
+      <td>0.593903</td>
+      <td>-0.194059</td>
     </tr>
     <tr>
       <th>2018-02-28</th>
       <td>0</td>
-      <td>-1.227996</td>
-      <td>-0.127738</td>
-      <td>0.591643</td>
+      <td>0.153558</td>
+      <td>-0.773040</td>
+      <td>-0.398871</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
       <td>0</td>
-      <td>-1.079714</td>
+      <td>0.640691</td>
       <td>NaN</td>
-      <td>1.257887</td>
+      <td>0.367016</td>
     </tr>
   </tbody>
 </table>
@@ -3753,51 +3779,51 @@ Name: Population, dtype: float64
     <tr>
       <th>mean</th>
       <td>0.166667</td>
-      <td>-0.441632</td>
-      <td>0.320482</td>
-      <td>0.193692</td>
+      <td>-0.069672</td>
+      <td>0.106382</td>
+      <td>-0.548664</td>
     </tr>
     <tr>
       <th>std</th>
-      <td>0.983192</td>
-      <td>1.127514</td>
-      <td>1.590909</td>
-      <td>1.041267</td>
+      <td>0.408248</td>
+      <td>0.885169</td>
+      <td>0.663767</td>
+      <td>0.759738</td>
     </tr>
     <tr>
       <th>min</th>
-      <td>-1.000000</td>
-      <td>-1.898058</td>
-      <td>-1.510453</td>
-      <td>-1.685788</td>
+      <td>0.000000</td>
+      <td>-1.772036</td>
+      <td>-0.773040</td>
+      <td>-1.867134</td>
     </tr>
     <tr>
       <th>25%</th>
       <td>0.000000</td>
-      <td>-1.190926</td>
-      <td>-0.668047</td>
-      <td>-0.008408</td>
+      <td>-0.096059</td>
+      <td>-0.229834</td>
+      <td>-0.758671</td>
     </tr>
     <tr>
       <th>50%</th>
       <td>0.000000</td>
-      <td>-0.432692</td>
-      <td>-0.127738</td>
-      <td>0.360628</td>
+      <td>0.169775</td>
+      <td>0.038489</td>
+      <td>-0.359603</td>
     </tr>
     <tr>
       <th>75%</th>
       <td>0.000000</td>
-      <td>0.264135</td>
-      <td>1.597491</td>
-      <td>0.840321</td>
+      <td>0.461267</td>
+      <td>0.593903</td>
+      <td>-0.225628</td>
     </tr>
     <tr>
       <th>max</th>
-      <td>2.000000</td>
-      <td>1.060912</td>
-      <td>2.311159</td>
-      <td>1.257887</td>
+      <td>1.000000</td>
+      <td>0.640691</td>
+      <td>0.902395</td>
+      <td>0.367016</td>
     </tr>
   </tbody>
 </table>
@@ -3855,46 +3881,46 @@ Name: Population, dtype: float64
   </thead>
   <tbody>
     <tr>
-      <th>2018-05-31</th>
-      <td>2</td>
-      <td>1.060912</td>
-      <td>-1.510453</td>
-      <td>-0.054414</td>
-    </tr>
-    <tr>
-      <th>2018-01-31</th>
-      <td>0</td>
-      <td>-1.898058</td>
-      <td>-0.668047</td>
-      <td>0.129612</td>
-    </tr>
-    <tr>
       <th>2018-02-28</th>
       <td>0</td>
-      <td>-1.227996</td>
-      <td>-0.127738</td>
-      <td>0.591643</td>
-    </tr>
-    <tr>
-      <th>2018-04-30</th>
-      <td>-1</td>
-      <td>0.214330</td>
-      <td>1.597491</td>
-      <td>-1.685788</td>
+      <td>0.153558</td>
+      <td>-0.773040</td>
+      <td>-0.398871</td>
     </tr>
     <tr>
       <th>2018-06-30</th>
       <td>0</td>
-      <td>0.280737</td>
-      <td>2.311159</td>
-      <td>0.923214</td>
+      <td>-0.179264</td>
+      <td>-0.229834</td>
+      <td>-1.867134</td>
+    </tr>
+    <tr>
+      <th>2018-05-31</th>
+      <td>0</td>
+      <td>-1.772036</td>
+      <td>0.038489</td>
+      <td>-0.320334</td>
+    </tr>
+    <tr>
+      <th>2018-01-31</th>
+      <td>1</td>
+      <td>0.185992</td>
+      <td>0.593903</td>
+      <td>-0.194059</td>
+    </tr>
+    <tr>
+      <th>2018-04-30</th>
+      <td>0</td>
+      <td>0.553025</td>
+      <td>0.902395</td>
+      <td>-0.878604</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
       <td>0</td>
-      <td>-1.079714</td>
+      <td>0.640691</td>
       <td>NaN</td>
-      <td>1.257887</td>
+      <td>0.367016</td>
     </tr>
   </tbody>
 </table>
@@ -3950,45 +3976,45 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>2018-01-31</th>
-      <td>0</td>
-      <td>-1.898058</td>
-      <td>-0.668047</td>
-      <td>0.129612</td>
+      <td>1</td>
+      <td>0.185992</td>
+      <td>0.593903</td>
+      <td>-0.194059</td>
     </tr>
     <tr>
       <th>2018-02-28</th>
       <td>0</td>
-      <td>-1.227996</td>
-      <td>-0.127738</td>
-      <td>0.591643</td>
+      <td>0.153558</td>
+      <td>-0.773040</td>
+      <td>-0.398871</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
       <td>0</td>
-      <td>-1.079714</td>
+      <td>0.640691</td>
       <td>NaN</td>
-      <td>1.257887</td>
+      <td>0.367016</td>
     </tr>
     <tr>
       <th>2018-04-30</th>
-      <td>-1</td>
-      <td>0.214330</td>
-      <td>1.597491</td>
-      <td>-1.685788</td>
+      <td>0</td>
+      <td>0.553025</td>
+      <td>0.902395</td>
+      <td>-0.878604</td>
     </tr>
     <tr>
       <th>2018-05-31</th>
-      <td>2</td>
-      <td>1.060912</td>
-      <td>-1.510453</td>
-      <td>-0.054414</td>
+      <td>0</td>
+      <td>-1.772036</td>
+      <td>0.038489</td>
+      <td>-0.320334</td>
     </tr>
     <tr>
       <th>2018-06-30</th>
       <td>0</td>
-      <td>0.280737</td>
-      <td>2.311159</td>
-      <td>0.923214</td>
+      <td>-0.179264</td>
+      <td>-0.229834</td>
+      <td>-1.867134</td>
     </tr>
   </tbody>
 </table>
@@ -4039,46 +4065,46 @@ Name: Population, dtype: float64
   </thead>
   <tbody>
     <tr>
-      <th>2018-05-31</th>
-      <td>2</td>
-      <td>1.060912</td>
-      <td>-1.510453</td>
-      <td>-0.054414</td>
-    </tr>
-    <tr>
-      <th>2018-01-31</th>
-      <td>0</td>
-      <td>-1.898058</td>
-      <td>-0.668047</td>
-      <td>0.129612</td>
-    </tr>
-    <tr>
       <th>2018-02-28</th>
       <td>0</td>
-      <td>-1.227996</td>
-      <td>-0.127738</td>
-      <td>0.591643</td>
-    </tr>
-    <tr>
-      <th>2018-04-30</th>
-      <td>-1</td>
-      <td>0.214330</td>
-      <td>1.597491</td>
-      <td>-1.685788</td>
+      <td>0.153558</td>
+      <td>-0.773040</td>
+      <td>-0.398871</td>
     </tr>
     <tr>
       <th>2018-06-30</th>
       <td>0</td>
-      <td>0.280737</td>
-      <td>2.311159</td>
-      <td>0.923214</td>
+      <td>-0.179264</td>
+      <td>-0.229834</td>
+      <td>-1.867134</td>
+    </tr>
+    <tr>
+      <th>2018-05-31</th>
+      <td>0</td>
+      <td>-1.772036</td>
+      <td>0.038489</td>
+      <td>-0.320334</td>
+    </tr>
+    <tr>
+      <th>2018-01-31</th>
+      <td>1</td>
+      <td>0.185992</td>
+      <td>0.593903</td>
+      <td>-0.194059</td>
+    </tr>
+    <tr>
+      <th>2018-04-30</th>
+      <td>0</td>
+      <td>0.553025</td>
+      <td>0.902395</td>
+      <td>-0.878604</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
       <td>0</td>
-      <td>-1.079714</td>
+      <td>0.640691</td>
       <td>NaN</td>
-      <td>1.257887</td>
+      <td>0.367016</td>
     </tr>
   </tbody>
 </table>
@@ -4107,7 +4133,7 @@ Name: Population, dtype: float64
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1.2279964462737263
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(-1.7720361429665796)
 </pre></div>
 </div>
 </div>
@@ -4132,7 +4158,7 @@ Name: Population, dtype: float64
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.24623092029327723
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2480577409668402)
 </pre></div>
 </div>
 </div>
@@ -4187,78 +4213,78 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.115959</td>
-      <td>-0.946475</td>
+      <td>-0.531198</td>
+      <td>0.526576</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-0.188140</td>
-      <td>0.279715</td>
+      <td>-0.773819</td>
+      <td>-0.589976</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.022887</td>
-      <td>-0.254687</td>
+      <td>0.787623</td>
+      <td>-0.307764</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>-0.367875</td>
-      <td>0.497684</td>
+      <td>-0.195913</td>
+      <td>0.551597</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>-0.327100</td>
-      <td>0.600330</td>
+      <td>-0.024577</td>
+      <td>0.758896</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>-0.354470</td>
-      <td>0.941697</td>
+      <td>0.607583</td>
+      <td>-0.759554</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>-0.127324</td>
-      <td>0.046823</td>
+      <td>0.480282</td>
+      <td>-0.251620</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.289334</td>
-      <td>0.353563</td>
+      <td>-0.514182</td>
+      <td>0.634497</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.687663</td>
-      <td>0.692216</td>
+      <td>-0.596389</td>
+      <td>0.181150</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>-0.449794</td>
-      <td>-0.042888</td>
+      <td>-0.013488</td>
+      <td>-0.879607</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>0.940302</td>
-      <td>-0.642384</td>
+      <td>-0.793087</td>
+      <td>-0.668226</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>0.224368</td>
-      <td>0.254942</td>
+      <td>-0.911001</td>
+      <td>0.284309</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>0.354266</td>
-      <td>0.662523</td>
+      <td>-0.378476</td>
+      <td>0.140194</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>-0.031713</td>
-      <td>0.782747</td>
+      <td>-0.921270</td>
+      <td>-0.736530</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>-0.586413</td>
-      <td>0.948087</td>
+      <td>-0.564813</td>
+      <td>0.598428</td>
     </tr>
   </tbody>
 </table>
@@ -4312,78 +4338,78 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.115959</td>
-      <td>0.946475</td>
+      <td>0.531198</td>
+      <td>0.526576</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.188140</td>
-      <td>0.279715</td>
+      <td>0.773819</td>
+      <td>0.589976</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.022887</td>
-      <td>0.254687</td>
+      <td>0.787623</td>
+      <td>0.307764</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.367875</td>
-      <td>0.497684</td>
+      <td>0.195913</td>
+      <td>0.551597</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.327100</td>
-      <td>0.600330</td>
+      <td>0.024577</td>
+      <td>0.758896</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.354470</td>
-      <td>0.941697</td>
+      <td>0.607583</td>
+      <td>0.759554</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.127324</td>
-      <td>0.046823</td>
+      <td>0.480282</td>
+      <td>0.251620</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.289334</td>
-      <td>0.353563</td>
+      <td>0.514182</td>
+      <td>0.634497</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.687663</td>
-      <td>0.692216</td>
+      <td>0.596389</td>
+      <td>0.181150</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>0.449794</td>
-      <td>0.042888</td>
+      <td>0.013488</td>
+      <td>0.879607</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>0.940302</td>
-      <td>0.642384</td>
+      <td>0.793087</td>
+      <td>0.668226</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>0.224368</td>
-      <td>0.254942</td>
+      <td>0.911001</td>
+      <td>0.284309</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>0.354266</td>
-      <td>0.662523</td>
+      <td>0.378476</td>
+      <td>0.140194</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>0.031713</td>
-      <td>0.782747</td>
+      <td>0.921270</td>
+      <td>0.736530</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>0.586413</td>
-      <td>0.948087</td>
+      <td>0.564813</td>
+      <td>0.598428</td>
     </tr>
   </tbody>
 </table>
@@ -4451,63 +4477,63 @@ Name: Population, dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.946475</td>
+      <td>0.526576</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.279715</td>
+      <td>0.589976</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.254687</td>
+      <td>0.307764</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.497684</td>
+      <td>0.551597</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.600330</td>
+      <td>0.758896</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.941697</td>
+      <td>0.759554</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.046823</td>
+      <td>0.251620</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.353563</td>
+      <td>0.634497</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.692216</td>
+      <td>0.181150</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>0.042888</td>
+      <td>0.879607</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>0.642384</td>
+      <td>0.668226</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>0.254942</td>
+      <td>0.284309</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>0.662523</td>
+      <td>0.140194</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>0.782747</td>
+      <td>0.736530</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>0.948087</td>
+      <td>0.598428</td>
     </tr>
   </tbody>
 </table>
@@ -4544,7 +4570,7 @@ Name: Population, dtype: float64
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -4573,6 +4599,7 @@ Name: Population, dtype: float64
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -4667,7 +4694,7 @@ By Gal Kepler, Zvi Baratz, Dr. Hagai Hargil
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -4691,8 +4718,8 @@ By Gal Kepler, Zvi Baratz, Dr. Hagai Hargil
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

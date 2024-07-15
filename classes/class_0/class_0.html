@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Class 0: Background and Basic Syntax &#8212; Python for Neuroscience</title>
   
@@ -15,54 +14,50 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'classes/class_0/class_0';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -77,28 +72,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -120,12 +110,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -141,6 +139,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../../intro.html">
@@ -159,7 +159,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -171,7 +182,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../syllabus.html">Syllabus</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../contents.html">Contents</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../contents.html">Contents</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Class 0: Background and Basic Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_1/class_1.html">Class 1: More Syntax and The Python Stack</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_2/class_2.html">Class 2: Virtual Environments and Object-oriented Programming (OOP)</a></li>
@@ -186,13 +197,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../class_11/class_11.html">Class 11: Git and More Python Libraries</a></li>
 
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/python_setup.html">General Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/create_git_repo.html">Create a Git Repository</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/create_and_publish_pacakge.html">Creating and Publishing a Python Library</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../resources.html">Resources</a></li>
 </ul>
 
@@ -209,7 +220,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -218,14 +229,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -250,14 +261,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/classes/class_0/class_0.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -349,10 +360,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -360,14 +371,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -453,10 +464,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="class-0-background-and-basic-syntax">
-<h1>Class 0: Background and Basic Syntax<a class="headerlink" href="#class-0-background-and-basic-syntax" title="Permalink to this heading">#</a></h1>
+<h1>Class 0: Background and Basic Syntax<a class="headerlink" href="#class-0-background-and-basic-syntax" title="Link to this heading">#</a></h1>
 <div class="dropdown admonition">
 <p class="admonition-title">Administration</p>
 <ul class="simple">
@@ -472,11 +483,11 @@ document.write(`
 </ul>
 </div>
 <section id="introduction-to-python">
-<h2>Introduction to Python<a class="headerlink" href="#introduction-to-python" title="Permalink to this heading">#</a></h2>
+<h2>Introduction to Python<a class="headerlink" href="#introduction-to-python" title="Link to this heading">#</a></h2>
 <section id="foreword">
-<h3>Foreword<a class="headerlink" href="#foreword" title="Permalink to this heading">#</a></h3>
+<h3>Foreword<a class="headerlink" href="#foreword" title="Link to this heading">#</a></h3>
 <section id="what-is-this-course-all-about">
-<h4>What is this course all about?<a class="headerlink" href="#what-is-this-course-all-about" title="Permalink to this heading">#</a></h4>
+<h4>What is this course all about?<a class="headerlink" href="#what-is-this-course-all-about" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p>Learning to program with a fully-featured programming language.</p>
 <ul class="simple">
@@ -507,7 +518,7 @@ document.write(`
 </ol>
 </section>
 <section id="what-s-in-store-for-this-class">
-<h4>What’s in store for this class?<a class="headerlink" href="#what-s-in-store-for-this-class" title="Permalink to this heading">#</a></h4>
+<h4>What’s in store for this class?<a class="headerlink" href="#what-s-in-store-for-this-class" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>What’s Python?</p></li>
 <li><p>Why Python?</p></li>
@@ -517,7 +528,7 @@ document.write(`
 </ul>
 </section>
 <section id="what-can-you-do-with-python">
-<h4>What can you do with Python?<a class="headerlink" href="#what-can-you-do-with-python" title="Permalink to this heading">#</a></h4>
+<h4>What can you do with Python?<a class="headerlink" href="#what-can-you-do-with-python" title="Link to this heading">#</a></h4>
 <p><img alt="antigravity" src="../../_images/antigravity.png" /></p>
 <ul class="simple">
 <li><p>99% of what MATLAB does, and often better</p>
@@ -536,14 +547,14 @@ document.write(`
 </ul>
 </section>
 <section id="why-python">
-<h4>Why Python?<a class="headerlink" href="#why-python" title="Permalink to this heading">#</a></h4>
+<h4>Why Python?<a class="headerlink" href="#why-python" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Open source software</p></li>
 <li><p>Fully-featured language</p></li>
 <li><p>Widely adopted</p></li>
 <li><p>Easy to use but also allows for advanced programming paradigms</p></li>
 <li><p>In continuous development</p></li>
-<li><p><a class="reference external" href="https://insights.stackoverflow.com/trends?tags=python%2Cr%2Cmatlab&amp;utm_source=so-owned&amp;utm_medium=blog&amp;utm_campaign=gen-blog&amp;utm_content=blog-link&amp;utm_term=incredible-growth-python">Active</a> and <a class="reference external" href="https://madnight.github.io/githut/">accessible</a> community</p></li>
+<li><p><a class="reference external" href="https://insights.stackoverflow.com/trends?tags=python%2Cr%2Cmatlab&amp;amp;utm_source=so-owned&amp;amp;utm_medium=blog&amp;amp;utm_campaign=gen-blog&amp;amp;utm_content=blog-link&amp;amp;utm_term=incredible-growth-python">Active</a> and <a class="reference external" href="https://madnight.github.io/githut/">accessible</a> community</p></li>
 </ul>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
@@ -552,7 +563,7 @@ document.write(`
 </aside>
 </section>
 <section id="who-s-behind-python">
-<h4>Who’s behind Python?<a class="headerlink" href="#who-s-behind-python" title="Permalink to this heading">#</a></h4>
+<h4>Who’s behind Python?<a class="headerlink" href="#who-s-behind-python" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Python was created in the early 90’s by <a class="reference external" href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido van Russom</a>.</p></li>
 <li><p>In 2018 he left the role of <a class="reference external" href="https://en.wikipedia.org/wiki/Benevolent_dictator_for_life">Benevolent Dictator for Life (BDFL)</a>, and now Python is governed by a selected board of Core Developers.</p></li>
@@ -562,7 +573,7 @@ document.write(`
 </ul>
 </section>
 <section id="python-2-vs-python-3">
-<h4>Python 2 vs. Python 3<a class="headerlink" href="#python-2-vs-python-3" title="Permalink to this heading">#</a></h4>
+<h4>Python 2 vs. Python 3<a class="headerlink" href="#python-2-vs-python-3" title="Link to this heading">#</a></h4>
 <p>If you’ve googled Python you probably read something about Python 2 and Python 3.</p>
 <ul class="simple">
 <li><p>In short, Python 3 is a non-backwards-compatible upgrade to Python 2, and was released in the end of 2008.</p></li>
@@ -572,9 +583,9 @@ document.write(`
 </section>
 </section>
 <section id="the-basics">
-<h3>The Basics<a class="headerlink" href="#the-basics" title="Permalink to this heading">#</a></h3>
+<h3>The Basics<a class="headerlink" href="#the-basics" title="Link to this heading">#</a></h3>
 <section id="how-does-python-work-internally">
-<h4>How does Python work internally?<a class="headerlink" href="#how-does-python-work-internally" title="Permalink to this heading">#</a></h4>
+<h4>How does Python work internally?<a class="headerlink" href="#how-does-python-work-internally" title="Link to this heading">#</a></h4>
 <p>Python is an <em>interpreted</em> language, like MATLAB. This means that you don’t have to compile your code to make it run - the Python <em>interpreter</em> does that for you.</p>
 <p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Interpreter_(computing)">interpreter</a> goes (generally) line-by-line, parsing your expressions and statements to produce <strong>C</strong> code, a process known as <em>transpilation</em>. The C code is eventually compiled into machine code that is then fed into the processor.</p>
 <p>The interpreter can parse either code we write in an editor, or code that was written in a command prompt:</p>
@@ -585,7 +596,7 @@ document.write(`
 <p>For a more detailed comparison of Python and MATLAB, see <a class="reference external" href="https://www.enthought.com/transitioning-from-matlab-to-python-a-reference-guide/">this</a> transition guide as well as <a class="reference external" href="https://realpython.com/matlab-vs-python/">this</a> article.</p>
 </section>
 <section id="whitespaces-and-brackets">
-<h4>Whitespaces and Brackets<a class="headerlink" href="#whitespaces-and-brackets" title="Permalink to this heading">#</a></h4>
+<h4>Whitespaces and Brackets<a class="headerlink" href="#whitespaces-and-brackets" title="Link to this heading">#</a></h4>
 <p>Whitespaces in the beginning of lines are important in Python, since they symbolize the start of a new <a class="reference external" href="https://en.wikipedia.org/wiki/Scope_(computer_science)">scope</a>, or a new area in the source code (like a function or an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. Here are two lines of simple Python code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
 <span class="gp">&gt;&gt;&gt; </span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
@@ -623,7 +634,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </section>
 <section id="general-syntax">
-<h4>General Syntax<a class="headerlink" href="#general-syntax" title="Permalink to this heading">#</a></h4>
+<h4>General Syntax<a class="headerlink" href="#general-syntax" title="Link to this heading">#</a></h4>
 <p>Before diving into all the different variable types and how to use them, let’s get a general feel for Python’s basic syntax.</p>
 <p>Numbers:</p>
 <div class="cell docutils container">
@@ -849,7 +860,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </section>
 <section id="types">
-<h4>Types<a class="headerlink" href="#types" title="Permalink to this heading">#</a></h4>
+<h4>Types<a class="headerlink" href="#types" title="Link to this heading">#</a></h4>
 <p>Types and data structures are essential in all programming languages. The type of any given new variable you create is the first decision you make about it (be it explicitly or implicitly), and it is an important one.</p>
 <p>Python has many types that you might have not heard of if you’ve only used MATLAB, but once you will get to know and use them you will not be able to remember how you’ve written code without them.</p>
 <div class="cell docutils container">
@@ -926,7 +937,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 <section id="type-coersion">
-<h5>Type Coersion<a class="headerlink" href="#type-coersion" title="Permalink to this heading">#</a></h5>
+<h5>Type Coersion<a class="headerlink" href="#type-coersion" title="Link to this heading">#</a></h5>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
@@ -1002,14 +1013,14 @@ It might seem like a dramatic difference from your programming language of choic
 </section>
 </section>
 <section id="variables">
-<h4>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h4>
+<h4>Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>No need to declare the type in advance (just like MATLAB).</p></li>
 <li><p>Variables can change types (“dynamically typed”).</p></li>
 <li><p>No (day-to-day) memory concerns (garbage collected).</p></li>
 </ul>
 <section id="naming">
-<h5>Naming<a class="headerlink" href="#naming" title="Permalink to this heading">#</a></h5>
+<h5>Naming<a class="headerlink" href="#naming" title="Link to this heading">#</a></h5>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>
@@ -1033,7 +1044,7 @@ It might seem like a dramatic difference from your programming language of choic
 </section>
 </section>
 <section id="string-operations">
-<h4>String operations<a class="headerlink" href="#string-operations" title="Permalink to this heading">#</a></h4>
+<h4>String operations<a class="headerlink" href="#string-operations" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Everything in Python is an object, which means we can do stuff like:</p></li>
 </ul>
@@ -1079,7 +1090,7 @@ It might seem like a dramatic difference from your programming language of choic
 </section>
 </section>
 <section id="functions">
-<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h3>
+<h3>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>We’ve already seen a couple of functions:</p>
 <ul>
@@ -1147,7 +1158,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 <section id="defining-functions">
-<h4>Defining Functions<a class="headerlink" href="#defining-functions" title="Permalink to this heading">#</a></h4>
+<h4>Defining Functions<a class="headerlink" href="#defining-functions" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multiprint</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="n">repetitions</span><span class="p">):</span>
@@ -1160,7 +1171,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 <section id="things-to-notice">
-<h5>Things to notice:<a class="headerlink" href="#things-to-notice" title="Permalink to this heading">#</a></h5>
+<h5>Things to notice:<a class="headerlink" href="#things-to-notice" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">def</span></code> is a reserved keyword.</p></li>
 <li><p>Indentation - no brackets, no <code class="docutils literal notranslate"><span class="pre">end</span></code>, just colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>) followed by 4 spaces.</p></li>
@@ -1219,12 +1230,12 @@ It might seem like a dramatic difference from your programming language of choic
 </section>
 </section>
 <section id="data-structures">
-<h3>Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this heading">#</a></h3>
+<h3>Data Structures<a class="headerlink" href="#data-structures" title="Link to this heading">#</a></h3>
 <section id="lists-tuples-dictionaries-and-sets">
-<h4>Lists, Tuples, Dictionaries and Sets<a class="headerlink" href="#lists-tuples-dictionaries-and-sets" title="Permalink to this heading">#</a></h4>
+<h4>Lists, Tuples, Dictionaries and Sets<a class="headerlink" href="#lists-tuples-dictionaries-and-sets" title="Link to this heading">#</a></h4>
 <p>Python has several built-in data containers. You should familiarize yourself with them, since each of them has its own use cases.</p>
 <section id="lists">
-<h5>Lists<a class="headerlink" href="#lists" title="Permalink to this heading">#</a></h5>
+<h5>Lists<a class="headerlink" href="#lists" title="Link to this heading">#</a></h5>
 <p>As basic as they are important:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1249,7 +1260,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7fb180267790&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f72b8e9e680&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1288,7 +1299,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </section>
 <section id="slicing">
-<h5>Slicing<a class="headerlink" href="#slicing" title="Permalink to this heading">#</a></h5>
+<h5>Slicing<a class="headerlink" href="#slicing" title="Link to this heading">#</a></h5>
 <p>Many data structures support indexing:</p>
 <p><img alt="Slicing" src="../../_images/slicing.png" /></p>
 <ul class="simple">
@@ -1313,9 +1324,9 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The original list:
-[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7fb180267790&gt;, -100]
+[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f72b8e9e680&gt;, -100]
 l[0]: 1
-l[5]: &lt;function always_return_2 at 0x7fb180267790&gt;
+l[5]: &lt;function always_return_2 at 0x7f72b8e9e680&gt;
 l[0:2]: [1, &#39;2&#39;]
 </pre></div>
 </div>
@@ -1329,7 +1340,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7fb180267790&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7f72b8e9e680&gt;
 </pre></div>
 </div>
 </div>
@@ -1409,7 +1420,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7fb180267790&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7f72b8e9e680&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
 </pre></div>
 </div>
 </div>
@@ -1422,14 +1433,14 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7fb180267790&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7f72b8e9e680&gt;, -100]
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="list-use-cases">
-<h5>List use-cases<a class="headerlink" href="#list-use-cases" title="Permalink to this heading">#</a></h5>
+<h5>List use-cases<a class="headerlink" href="#list-use-cases" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>All-purpose, simple vector container for items.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">.append()</span></code> method is very convienient.</p></li>
@@ -1438,7 +1449,7 @@ l[0:2]: [1, &#39;2&#39;]
 </section>
 </section>
 <section id="tuples">
-<h4>Tuples<a class="headerlink" href="#tuples" title="Permalink to this heading">#</a></h4>
+<h4>Tuples<a class="headerlink" href="#tuples" title="Link to this heading">#</a></h4>
 <p>Very similar to lists, but are immutable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1473,7 +1484,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <section id="tuple-use-cases">
-<h5>Tuple use-cases<a class="headerlink" href="#tuple-use-cases" title="Permalink to this heading">#</a></h5>
+<h5>Tuple use-cases<a class="headerlink" href="#tuple-use-cases" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>Immutable lists.</p></li>
 <li><p>Return values from functions.</p></li>
@@ -1482,7 +1493,7 @@ l[0:2]: [1, &#39;2&#39;]
 </section>
 </section>
 <section id="dictionaries">
-<h4>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this heading">#</a></h4>
+<h4>Dictionaries<a class="headerlink" href="#dictionaries" title="Link to this heading">#</a></h4>
 <p>Python’s hash maps (<code class="docutils literal notranslate"><span class="pre">containers.Map</span></code> in MATLAB)</p>
 <ul class="simple">
 <li><p>Structure is <code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">value</span></code>.</p></li>
@@ -1592,7 +1603,7 @@ l[0:2]: [1, &#39;2&#39;]
 <p>Dictionaries have useful methods, such as <code class="docutils literal notranslate"><span class="pre">.pop()</span></code>, <code class="docutils literal notranslate"><span class="pre">.keys()</span></code> and more. We’ll explore them throughout the semester.</p>
 </section>
 <section id="sets">
-<h4>Sets<a class="headerlink" href="#sets" title="Permalink to this heading">#</a></h4>
+<h4>Sets<a class="headerlink" href="#sets" title="Link to this heading">#</a></h4>
 <p>A set is an unordered mutable data container which forces its items to be immutable and unique.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1719,7 +1730,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </section>
 <section id="set-use-cases">
-<h4>Set use-cases<a class="headerlink" href="#set-use-cases" title="Permalink to this heading">#</a></h4>
+<h4>Set use-cases<a class="headerlink" href="#set-use-cases" title="Link to this heading">#</a></h4>
 <p>Sets are less popular, and are mainly used to drop duplicates from lists. Set operations like intersection can also come in handy in some occasions.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>list_with_dups = [1, 2, 3, 4, 4, 5]
 list_without_dups = list(set(list_with_dups))
@@ -1728,9 +1739,9 @@ list_without_dups = list(set(list_with_dups))
 </section>
 </section>
 <section id="flow-control-if-and-for">
-<h3>Flow Control: <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#flow-control-if-and-for" title="Permalink to this heading">#</a></h3>
+<h3>Flow Control: <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code><a class="headerlink" href="#flow-control-if-and-for" title="Link to this heading">#</a></h3>
 <section id="exercises">
-<h4>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h4>
+<h4>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h4>
 <p>Below are a couple of exercises that will introduce to you Python’s <code class="docutils literal notranslate"><span class="pre">if</span></code> statements and the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. Their solution is right below.</p>
 <p>To get a working Python session quickly, go to <a class="reference external" href="https://repl.it/">repl.it</a>, click on the blue “new repl” button on the top-left part of the screen, choose Python and click “Create Repl”, which should direct you to a screen as seen below. You don’t need to sign up!</p>
 <p><img alt="Repl.it UI" src="../../_images/replit_ui.png" /></p>
@@ -1738,7 +1749,7 @@ list_without_dups = list(set(list_with_dups))
 </section>
 </section>
 <section id="exercise-1-the-enigma">
-<h3>Exercise 1: The Enigma<a class="headerlink" href="#exercise-1-the-enigma" title="Permalink to this heading">#</a></h3>
+<h3>Exercise 1: The Enigma<a class="headerlink" href="#exercise-1-the-enigma" title="Link to this heading">#</a></h3>
 <p>The Enigma code worked by subtituting each letter with a different one. Write an encoder function which receives the letters to encode and the pairs of letters that are used for the code. The function’s signature should look something like:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">enigma_code</span><span class="p">(</span><span class="n">letters</span><span class="p">,</span> <span class="n">table</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Encode\decode the letters using the table. </span>
@@ -1793,7 +1804,7 @@ list_without_dups = list(set(list_with_dups))
 </div>
 </section>
 <section id="exercise-2-list-slicer">
-<h3>Exercise 2: List Slicer<a class="headerlink" href="#exercise-2-list-slicer" title="Permalink to this heading">#</a></h3>
+<h3>Exercise 2: List Slicer<a class="headerlink" href="#exercise-2-list-slicer" title="Link to this heading">#</a></h3>
 <p>Write a function that slices a list in two parts and returns them. If the list contains an odd number of elements the first slice of the two should contain more items.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>
@@ -1853,7 +1864,7 @@ list_without_dups = list(set(list_with_dups))
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1882,6 +1893,7 @@ list_without_dups = list(set(list_with_dups))
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1969,7 +1981,7 @@ By Gal Kepler, Zvi Baratz, Dr. Hagai Hargil
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -1993,8 +2005,8 @@ By Gal Kepler, Zvi Baratz, Dr. Hagai Hargil
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
