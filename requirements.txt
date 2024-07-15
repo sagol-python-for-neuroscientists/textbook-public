@@ -4,7 +4,7 @@ altair~=4.1
 bokeh
 cython~=0.29
 distributed~=2021.5
-holoviews~=1.19
+holoviews~=1.19.1
 jupyter-book
 matplotlib
 numba~=0.53
