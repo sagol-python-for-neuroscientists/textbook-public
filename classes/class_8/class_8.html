@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Class 8: Testing and Test-Driven Development &#8212; Python for Neuroscience</title>
+    <title>Class 8a: Testing, Test-Driven Development &#8212; Python for Neuroscience</title>
   
   
   
@@ -193,7 +193,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../class_5/class_5.html">Class 5: The Scientific Stack - Part II: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_6/class_6.html">Class 6: Advanced <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_7/class_7.html">Class 7: More <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, Visualizations, <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and Modeling</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Class 8: Testing and Test-Driven Development</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Class 8a: Testing, Test-Driven Development</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="../class_9/class_9.html">Class 9: Advanced and Performant Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_10/class_10.html">Class 10: Introduction to Machine Learning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_11/class_11.html">Class 11: Git and More Python Libraries</a></li>
@@ -391,7 +392,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Class 8: Testing and Test-Driven Development</h1>
+    <h1>Class 8a: Testing, Test-Driven Development</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -401,6 +402,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Class 8a: Testing, Test-Driven Development</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-implications-of-writing-untested-code">The Implications of Writing Untested Code</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#public-trust-in-research">Public Trust in Research</a></li>
@@ -416,6 +418,14 @@ document.write(`
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#class-8b-linting-formatting">Class 8b: Linting &amp; Formatting</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linting">Linting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting">Formatting:</a></li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -426,8 +436,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="class-8-testing-and-test-driven-development">
-<h1>Class 8: Testing and Test-Driven Development<a class="headerlink" href="#class-8-testing-and-test-driven-development" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="class-8a-testing-test-driven-development">
+<h1>Class 8a: Testing, Test-Driven Development<a class="headerlink" href="#class-8a-testing-test-driven-development" title="Link to this heading">#</a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>We’ve mentioned how writing object-oriented code might be considered an industry standard (in terms of code quality), and yet in practice it is still a somewhat niche skill in the academic environment. Another such often neglected common practice is <em>testing</em>. In this lesson, we will learn the basic concepts underlying writing tests for your code in Python.</p>
@@ -982,7 +992,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2171/2147493839.py:19: RuntimeWarning: invalid value encountered in divide
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2112/2147493839.py:19: RuntimeWarning: invalid value encountered in divide
   return arr / arr.max()
 </pre></div>
 </div>
@@ -1309,6 +1319,23 @@ document.write(`
 </section>
 </section>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="class-8b-linting-formatting">
+<h1>Class 8b: Linting &amp; Formatting<a class="headerlink" href="#class-8b-linting-formatting" title="Link to this heading">#</a></h1>
+<p>(Or how to keep your code up-to-standards)</p>
+<section id="linting">
+<h2>Linting<a class="headerlink" href="#linting" title="Link to this heading">#</a></h2>
+<p>The word “lint” means fluff (fibers and dirt), hinting at the action being performed – “cleaning” and optimizing the code. In general, a linter is a tool designed to identify logical (execution issues, “bugs”) and stylistic errors in a way that allows for the identification and correction of code parts likely to cause errors or that are not written according to the conventions of the programming language being used.</p>
+<p>For example, in Python, a linter can identify unused variables (which won’t cause a runtime error), unmatched parentheses, variables that are used but not defined (which will cause runtime errors), etc. The linter also highlights these errors in a way that hints at the type of error by emphasizing the parts of the code causing it (moreover, a message describing the type of error will appear in a small window if you hover over the highlighted piece of code).</p>
+<p>There are many types of linters for Python, differing in the types of errors they identify and fix. For example, some linters identify both logical and stylistic errors (like <a class="reference external" href="https://pylint.readthedocs.io/en/stable/">Pylint</a>), while others identify only one type of error (logical or stylistic, like PyFlakes or pycodestyle, respectively). Additionally, there are combo-linters (multi-linters?) that combine the functionalities of several different linters (like <a class="reference external" href="https://flake8.pycqa.org/en/latest/">Flake8</a> and <a class="reference external" href="https://klen.github.io/pylama/">Pylama</a>). From my experience, <a class="reference external" href="https://pylint.readthedocs.io/en/stable/">Pylint</a> and <a class="reference external" href="https://flake8.pycqa.org/en/latest/">Flake8</a> are the most popular.</p>
+</section>
+<section id="formatting">
+<h2>Formatting:<a class="headerlink" href="#formatting" title="Link to this heading">#</a></h2>
+<p>As the name suggests, formatting organizes the code. Its main purpose is to arrange the code uniformly so that all code related to a project is written under the same stylistic conventions (spaces between operators and variables, number of spaces defining a “tab”, maximum number of characters per line before splitting it, etc.). Generally, it’s important to use a formatter to style the code because it allows us to maintain uniformity and readability, which helps when collaborating with fellow programmers on the same piece of code or project.</p>
+<p>There are several tools available for formatting as well (formatters?), each offering a different approach to styling. For example, <a class="reference external" href="https://black.readthedocs.io/en/stable/">Black</a>, one of the most popular formatters, does not arrange imported packages in a specific order, although <a class="reference external" href="https://peps.python.org/pep-0008/">PEP8</a> (the official style guide for Python code) has several rules for ordering imports. Conversely, <a class="reference external" href="https://pycqa.github.io/isort/">isort</a> focuses solely on the task of arranging imports in the code. In fact, there has been an almost 4 years-long discussion about integrating import sorting into <a class="reference external" href="https://black.readthedocs.io/en/stable/">Black</a>’s functionality, but it was <a class="reference external" href="https://github.com/psf/black/issues/333#issuecomment-1153637034">decided to keep them apart at the end</a>.</p>
+<p>Additionally, there are other formatters like autopep8 and <a class="reference external" href="https://github.com/google/yapf">YAPF</a> (short for Yet Another Python Formatter, kudos for the name), which are more similar to Black but operate under different assumptions about the code and focus on different aspects of it.
+Finally, although the dry definition of the formatter’s task falls under the linter’s tasks, each excels in its field and is sensitive to different types of stylistic issues in the code. So, rather than differing from each other, they complement each other and help us write code that works properly (linting), in a readable and efficient manner (linting and formatting).</p>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1374,6 +1401,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Class 8a: Testing, Test-Driven Development</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-implications-of-writing-untested-code">The Implications of Writing Untested Code</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#public-trust-in-research">Public Trust in Research</a></li>
@@ -1389,6 +1417,14 @@ document.write(`
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#class-8b-linting-formatting">Class 8b: Linting &amp; Formatting</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linting">Linting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting">Formatting:</a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>

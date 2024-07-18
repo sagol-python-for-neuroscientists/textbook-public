@@ -191,7 +191,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../class_5/class_5.html">Class 5: The Scientific Stack - Part II: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_6/class_6.html">Class 6: Advanced <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_7/class_7.html">Class 7: More <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, Visualizations, <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and Modeling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../class_8/class_8.html">Class 8: Testing and Test-Driven Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_8/class_8.html">Class 8a: Testing, Test-Driven Development</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="../class_9/class_9.html">Class 9: Advanced and Performant Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_10/class_10.html">Class 10: Introduction to Machine Learning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_11/class_11.html">Class 11: Git and More Python Libraries</a></li>
@@ -1260,7 +1261,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f72b8e9e680&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f627860e680&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1324,9 +1325,9 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The original list:
-[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f72b8e9e680&gt;, -100]
+[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f627860e680&gt;, -100]
 l[0]: 1
-l[5]: &lt;function always_return_2 at 0x7f72b8e9e680&gt;
+l[5]: &lt;function always_return_2 at 0x7f627860e680&gt;
 l[0:2]: [1, &#39;2&#39;]
 </pre></div>
 </div>
@@ -1340,7 +1341,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7f72b8e9e680&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7f627860e680&gt;
 </pre></div>
 </div>
 </div>
@@ -1420,7 +1421,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7f72b8e9e680&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7f627860e680&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
 </pre></div>
 </div>
 </div>
@@ -1433,7 +1434,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7f72b8e9e680&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7f627860e680&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1618,7 +1619,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;e&#39;, &#39;a&#39;, &#39;c&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;c&#39;, &#39;e&#39;}
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
@@ -1643,7 +1644,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, &#39;a&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, 1, 2}
 </pre></div>
 </div>
 </div>
@@ -1657,7 +1658,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0, 1, &#39;a&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, 1, 0}
 </pre></div>
 </div>
 </div>

@@ -193,7 +193,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../class_5/class_5.html">Class 5: The Scientific Stack - Part II: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_6/class_6.html">Class 6: Advanced <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_7/class_7.html">Class 7: More <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, Visualizations, <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and Modeling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../class_8/class_8.html">Class 8: Testing and Test-Driven Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_8/class_8.html">Class 8a: Testing, Test-Driven Development</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="../class_9/class_9.html">Class 9: Advanced and Performant Python</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Class 10: Introduction to Machine Learning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_11/class_11.html">Class 11: Git and More Python Libraries</a></li>
@@ -1111,11 +1112,11 @@ d = \sqrt{(n - e)^2_{\text{width}} + (n - e)^2_{\text{height}} + ...}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1925/541414424.py:17: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value &#39;0.8&#39; has dtype incompatible with float32, please explicitly cast to a compatible dtype first.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1912/541414424.py:17: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value &#39;0.8&#39; has dtype incompatible with float32, please explicitly cast to a compatible dtype first.
   train_results.loc[real_row, :] = (size, counter, knn.score(X_test, y_test))
 </pre></div>
 </div>
-<img alt="../../_images/bcbabbbd73ec8bb512a2b51c97fd867902fdfe0963b6f0d3298808404c7aef0e.png" src="../../_images/bcbabbbd73ec8bb512a2b51c97fd867902fdfe0963b6f0d3298808404c7aef0e.png" />
+<img alt="../../_images/f0e5e3e8bfe09c82aa6068d447c20cb63a5e6e661d71e47f91252ce2f3a77c77.png" src="../../_images/f0e5e3e8bfe09c82aa6068d447c20cb63a5e6e661d71e47f91252ce2f3a77c77.png" />
 </div>
 </div>
 <p>As expected, the higher the training dataset is, the better the accuracy we achieve.</p>
@@ -1274,7 +1275,7 @@ d = \sqrt{(n - e)^2_{\text{width}} + (n - e)^2_{\text{height}} + ...}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x7fd26f0be0b0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x7f8f6da8e0e0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/396a0d6976a2c4bfa2b37ea8fc8e2ed5676a1fae4ce68eedb988443152717f0e.png" src="../../_images/396a0d6976a2c4bfa2b37ea8fc8e2ed5676a1fae4ce68eedb988443152717f0e.png" />
@@ -1342,7 +1343,7 @@ d = \sqrt{(n - e)^2_{\text{width}} + (n - e)^2_{\text{height}} + ...}
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;PCA1&#39;, ylabel=&#39;PCA2&#39;&gt;
 </pre></div>
 </div>
-<img alt="../../_images/ea5f49b16f55c411da8f5f4718786735b8129131117aafc20b69c7fbbce3d3df.png" src="../../_images/ea5f49b16f55c411da8f5f4718786735b8129131117aafc20b69c7fbbce3d3df.png" />
+<img alt="../../_images/bf257ef19814f64a141f5d7494cc628f468453e9cf10c5f559688e1c2b96f9ad.png" src="../../_images/bf257ef19814f64a141f5d7494cc628f468453e9cf10c5f559688e1c2b96f9ad.png" />
 </div>
 </div>
 <p>We see that the results are very similar to the true results seen above, which is nice. Let’s look at the error rate:</p>
@@ -1357,7 +1358,7 @@ d = \sqrt{(n - e)^2_{\text{width}} + (n - e)^2_{\text{height}} + ...}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The error proportion of the GMM is: 0.9666666666666667
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The error proportion of the GMM is: 0.03333333333333333
 </pre></div>
 </div>
 </div>

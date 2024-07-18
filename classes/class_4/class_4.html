@@ -191,7 +191,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../class_5/class_5.html">Class 5: The Scientific Stack - Part II: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_6/class_6.html">Class 6: Advanced <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_7/class_7.html">Class 7: More <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, Visualizations, <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and Modeling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../class_8/class_8.html">Class 8: Testing and Test-Driven Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_8/class_8.html">Class 8a: Testing, Test-Driven Development</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="../class_9/class_9.html">Class 9: Advanced and Performant Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_10/class_10.html">Class 10: Introduction to Machine Learning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_11/class_11.html">Class 11: Git and More Python Libraries</a></li>
@@ -922,7 +923,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>52 ms ± 562 μs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>52.5 ms ± 880 μs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -939,7 +940,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>483 μs ± 3.43 μs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>486 μs ± 1.94 μs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1172,7 +1173,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(502.99529053411084)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(504.46821668382256)
 </pre></div>
 </div>
 </div>
@@ -1187,13 +1188,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>68.4 μs ± 115 ns per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>68.6 μs ± 782 ns per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3 μs ± 15.6 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.11 μs ± 69.9 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.57 μs ± 2.28 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.57 μs ± 14.4 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1210,13 +1211,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>44.9 μs ± 303 ns per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>46 μs ± 129 ns per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.89 μs ± 5.23 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.87 μs ± 14.5 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.51 μs ± 1.95 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.54 μs ± 3.96 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1230,7 +1231,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.001831904646111382)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0032745222512378103)
 </pre></div>
 </div>
 </div>
@@ -1243,10 +1244,10 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.07627513, 0.08957756, 0.0699554 , 0.0018319 ],
-       [0.26793178, 0.26795086, 0.25483548, 0.01546965],
-       [0.10861339, 0.26910072, 0.02083774, 0.11811008],
-       [0.73450016, 0.1013652 , 0.13227628, 0.0493499 ]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.2511897 , 0.05370408, 0.0650522 , 0.19789234],
+       [0.11645447, 0.13574828, 0.31285471, 0.00327452],
+       [0.12429136, 0.01670715, 0.02594906, 0.02577156],
+       [0.05609477, 0.21816302, 0.68139599, 0.60151199]])
 </pre></div>
 </div>
 </div>
@@ -1259,7 +1260,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.99512881, 0.90079875, 0.94346155, 0.96883275])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.9205974 , 0.99109454, 0.90960222, 0.99936224])
 </pre></div>
 </div>
 </div>
