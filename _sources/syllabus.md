@@ -14,7 +14,7 @@ __Final Grade:__
 * 40% - Homework assignments - one submission is skippable (not the first).
 * 60% - Final project (hackathon).
 
-Each 3-hour lecture will start with an oral presentation, followed by individual work in the computer lab.
+Each 3-hour lecture will start with an oral presentation, followed by individual work.
 To summarize I'll present solutions to the class exercises and we'll discuss some of the difficulties you encountered.
 
 Main topics of the course will include:
