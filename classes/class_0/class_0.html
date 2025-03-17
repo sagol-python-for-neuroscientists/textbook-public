@@ -28,14 +28,13 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -1162,7 +1161,7 @@ It might seem like a dramatic difference from your programming language of choic
 <h4>Defining Functions<a class="headerlink" href="#defining-functions" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multiprint</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="n">repetitions</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">multiprint</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="n">repetitions</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Prints the *statement* multiplied by *repetitions* &quot;&quot;&quot;</span>
     <span class="n">multistatement</span> <span class="o">=</span> <span class="n">statement</span> <span class="o">*</span> <span class="n">repetitions</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">multistatement</span><span class="p">)</span>
@@ -1183,7 +1182,7 @@ It might seem like a dramatic difference from your programming language of choic
 <p>Functions can have also zero arguments:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">always_return_2</span><span class="p">():</span>  <span class="c1"># numbers in function names (again, not at the start)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">always_return_2</span><span class="p">():</span>  <span class="c1"># numbers in function names (again, not at the start)</span>
     <span class="k">return</span> <span class="mi">2</span>
 </pre></div>
 </div>
@@ -1217,7 +1216,7 @@ It might seem like a dramatic difference from your programming language of choic
 <p>If you want to return more than one item for a function, wrap it in a tuple.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">return_two_items</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">return_two_items</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1261,7 +1260,7 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f627860e680&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f3100368ee0&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1325,9 +1324,9 @@ It might seem like a dramatic difference from your programming language of choic
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The original list:
-[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f627860e680&gt;, -100]
+[1, &#39;2&#39;, &#39;3&#39;, 4.0, True, &lt;function always_return_2 at 0x7f3100368ee0&gt;, -100]
 l[0]: 1
-l[5]: &lt;function always_return_2 at 0x7f627860e680&gt;
+l[5]: &lt;function always_return_2 at 0x7f3100368ee0&gt;
 l[0:2]: [1, &#39;2&#39;]
 </pre></div>
 </div>
@@ -1341,7 +1340,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7f627860e680&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ----- &lt;function always_return_2 at 0x7f3100368ee0&gt;
 </pre></div>
 </div>
 </div>
@@ -1421,7 +1420,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7f627860e680&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-100, &lt;function always_return_2 at 0x7f3100368ee0&gt;, True, 4.0, &#39;3&#39;, &#39;2&#39;, 1]
 </pre></div>
 </div>
 </div>
@@ -1434,7 +1433,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7f627860e680&gt;, -100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;2&#39;, 4.0, True, &lt;function always_return_2 at 0x7f3100368ee0&gt;, -100]
 </pre></div>
 </div>
 </div>
@@ -1619,7 +1618,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;c&#39;, &#39;e&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;c&#39;, &#39;e&#39;, &#39;a&#39;}
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
@@ -1644,7 +1643,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, 1, 2}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1, 2, &#39;a&#39;}
 </pre></div>
 </div>
 </div>
@@ -1658,7 +1657,7 @@ l[0:2]: [1, &#39;2&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, 1, 0}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0, 1, &#39;a&#39;}
 </pre></div>
 </div>
 </div>
@@ -1752,7 +1751,7 @@ list_without_dups = list(set(list_with_dups))
 <section id="exercise-1-the-enigma">
 <h3>Exercise 1: The Enigma<a class="headerlink" href="#exercise-1-the-enigma" title="Link to this heading">#</a></h3>
 <p>The Enigma code worked by subtituting each letter with a different one. Write an encoder function which receives the letters to encode and the pairs of letters that are used for the code. The function’s signature should look something like:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">enigma_code</span><span class="p">(</span><span class="n">letters</span><span class="p">,</span> <span class="n">table</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">enigma_code</span><span class="p">(</span><span class="n">letters</span><span class="p">,</span> <span class="n">table</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Encode\decode the letters using the table. </span>
 <span class="sd">    </span>
 <span class="sd">    If a letter in letters isn&#39;t found in table,</span>
@@ -1777,7 +1776,7 @@ list_without_dups = list(set(list_with_dups))
 </div>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">enigma_code</span><span class="p">(</span><span class="n">letters</span><span class="p">,</span> <span class="n">table</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">enigma_code</span><span class="p">(</span><span class="n">letters</span><span class="p">,</span> <span class="n">table</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Encode\decode the letters using the table. </span>
 <span class="sd">    </span>
 <span class="sd">    If a letter in letters isn&#39;t found in table,</span>
@@ -1809,7 +1808,7 @@ list_without_dups = list(set(list_with_dups))
 <p>Write a function that slices a list in two parts and returns them. If the list contains an odd number of elements the first slice of the two should contain more items.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">slicer</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">slicer</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Slices the given list into two parts.</span>
 <span class="sd">    </span>
 <span class="sd">    If the number of elements is even, the first list will always</span>

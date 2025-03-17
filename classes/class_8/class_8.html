@@ -28,14 +28,13 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -469,9 +468,9 @@ document.write(`
 <p>This isn’t trivial even for the most basic functions in Python. Let’s look at a simple normalization function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="k">def</span> <span class="nf">normalize_array</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">normalize_array</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Normalizes array&quot;&quot;&quot;</span>
     <span class="n">minimum</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="n">no_min</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">minimum</span>
@@ -536,7 +535,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NEGATIVE_INPUT_MESSAGE</span> <span class="o">=</span> <span class="s2">&quot;Invalid input: (</span><span class="si">{value_1}</span><span class="s2">, </span><span class="si">{value_2}</span><span class="s2">)! Negative result detected.&quot;</span>
 
 
-<span class="k">def</span> <span class="nf">combine_results</span><span class="p">(</span><span class="n">value_1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value_2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">combine_results</span><span class="p">(</span><span class="n">value_1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value_2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the result of adding the two preceding analyses results together.</span>
 <span class="sd">    </span>
@@ -566,13 +565,13 @@ document.write(`
 <p>That’s a good start! We defined the inputs, output type and even added a check that sees that the numbers are indeed positive. The next step, after I have a working skeleton of my implementation, is to test it. To do so I’ll start writing a few tests:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_basic_addition</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test_basic_addition</span><span class="p">():</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">combine_results</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
     <span class="n">expected</span> <span class="o">=</span> <span class="mi">6</span>
     <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="n">expected</span>
 
     
-<span class="k">def</span> <span class="nf">test_large_number_additions</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_large_number_additions</span><span class="p">():</span>
     <span class="n">value_1</span> <span class="o">=</span> <span class="mi">1_000_000</span>
     <span class="n">value_2</span> <span class="o">=</span> <span class="mi">2_000_001</span>
     <span class="n">expected</span> <span class="o">=</span> <span class="n">value_1</span> <span class="o">+</span> <span class="n">value_2</span>
@@ -595,15 +594,15 @@ document.write(`
 <p>After running these two simple tests and seeing they passed we remembered we also coded another functionality to our <code class="docutils literal notranslate"><span class="pre">combine_results()</span></code> function - the way it raises a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> when it encounters negative numbers. We would like to verify that it indeed raises an exception (and the correct one) when it encounters these illegal inputs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
 
 
-<span class="k">def</span> <span class="nf">test_negative_argument_1</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_negative_argument_1</span><span class="p">():</span>
     <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">combine_results</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">test_negative_argument_2</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_negative_argument_2</span><span class="p">():</span>
     <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">combine_results</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
         
@@ -621,7 +620,7 @@ document.write(`
 <span class="n">FLOAT_INPUT_MESSAGE</span> <span class="o">=</span> <span class="s2">&quot;Invalid input: (</span><span class="si">{value_1}</span><span class="s2">, </span><span class="si">{value_2}</span><span class="s2">)! Floating point result detected.&quot;</span>
 
 
-<span class="k">def</span> <span class="nf">combine_results</span><span class="p">(</span><span class="n">value_1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value_2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">combine_results</span><span class="p">(</span><span class="n">value_1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value_2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the result of adding the two preceding analyses results together.</span>
 <span class="sd">    </span>
@@ -655,7 +654,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_float_argument</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test_float_argument</span><span class="p">():</span>
     <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
         <span class="n">combine_results</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
     <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
@@ -674,7 +673,7 @@ document.write(`
 <span class="n">NEGATIVE_INPUT_MESSAGE</span> <span class="o">=</span> <span class="s2">&quot;Invalid input: (</span><span class="si">{value_1}</span><span class="s2">, </span><span class="si">{value_2}</span><span class="s2">)! Negative result detected.&quot;</span>
 
 
-<span class="k">def</span> <span class="nf">combine_results</span><span class="p">(</span><span class="n">value_1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value_2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">combine_results</span><span class="p">(</span><span class="n">value_1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value_2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the result of adding the two preceding analyses results together.</span>
 <span class="sd">    </span>
@@ -713,17 +712,17 @@ document.write(`
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_str_input</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test_str_input</span><span class="p">():</span>
     <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
         <span class="n">combine_results</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
         
-<span class="k">def</span> <span class="nf">test_none_input</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_none_input</span><span class="p">():</span>
     <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
         <span class="n">combine_results</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
         
-<span class="k">def</span> <span class="nf">test_list_input</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_list_input</span><span class="p">():</span>
     <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
         <span class="n">combine_results</span><span class="p">([],</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -745,7 +744,7 @@ document.write(`
 <span class="p">]</span>
 
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;value_1, value_2&quot;</span><span class="p">,</span> <span class="n">TYPEERROR_INPUTS</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">test_invalid_input_raises_typeerror</span><span class="p">(</span><span class="n">value_1</span><span class="p">,</span> <span class="n">value_2</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_invalid_input_raises_typeerror</span><span class="p">(</span><span class="n">value_1</span><span class="p">,</span> <span class="n">value_2</span><span class="p">):</span>
     <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
         <span class="n">combine_results</span><span class="p">(</span><span class="n">value_1</span><span class="p">,</span> <span class="n">value_2</span><span class="p">)</span>
 </pre></div>
@@ -771,7 +770,7 @@ document.write(`
 <span class="n">NEGATIVE_INPUT_MESSAGE</span> <span class="o">=</span> <span class="s2">&quot;Invalid input: (</span><span class="si">{value_1}</span><span class="s2">, </span><span class="si">{value_2}</span><span class="s2">)! Negative result detected.&quot;</span>
 
 
-<span class="k">def</span> <span class="nf">combine_results</span><span class="p">(</span><span class="n">value_1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value_2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">combine_results</span><span class="p">(</span><span class="n">value_1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value_2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the result of adding the two preceding analyses results together.</span>
 <span class="sd">    </span>
@@ -817,13 +816,13 @@ document.write(`
 
 
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;value_1, value_2, expected&#39;</span><span class="p">,</span> <span class="n">VALID_INPUTS</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">test_valid_inputs</span><span class="p">(</span><span class="n">value_1</span><span class="p">,</span> <span class="n">value_2</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_valid_inputs</span><span class="p">(</span><span class="n">value_1</span><span class="p">,</span> <span class="n">value_2</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">combine_results</span><span class="p">(</span><span class="n">value_1</span><span class="p">,</span> <span class="n">value_2</span><span class="p">)</span>
     <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="n">expected</span>
 
 
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;value_1, value_2&#39;</span><span class="p">,</span> <span class="n">VALUEERROR_INPUTS</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">test_negative_input_raises_valueerror</span><span class="p">(</span><span class="n">value_1</span><span class="p">,</span> <span class="n">value_2</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_negative_input_raises_valueerror</span><span class="p">(</span><span class="n">value_1</span><span class="p">,</span> <span class="n">value_2</span><span class="p">):</span>
     <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
         <span class="n">combine_results</span><span class="p">(</span><span class="n">value_1</span><span class="p">,</span> <span class="n">value_2</span><span class="p">)</span>
     <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>        
@@ -831,7 +830,7 @@ document.write(`
 
 
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;value_1, value_2&quot;</span><span class="p">,</span> <span class="n">TYPEERROR_INPUTS</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">test_invalid_input_raises_typeerror</span><span class="p">(</span><span class="n">value_1</span><span class="p">,</span> <span class="n">value_2</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_invalid_input_raises_typeerror</span><span class="p">(</span><span class="n">value_1</span><span class="p">,</span> <span class="n">value_2</span><span class="p">):</span>
     <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
         <span class="n">combine_results</span><span class="p">(</span><span class="n">value_1</span><span class="p">,</span> <span class="n">value_2</span><span class="p">)</span>
     <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
@@ -856,7 +855,7 @@ document.write(`
 <h3>Back to the normalization example<a class="headerlink" href="#back-to-the-normalization-example" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">normalize_array</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">normalize_array</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Normalizes array&quot;&quot;&quot;</span>
     <span class="n">minimum</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="n">no_min</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">minimum</span>
@@ -874,7 +873,7 @@ document.write(`
 <p>To start off our attempt we’ll re-write the function itself using 100% numpy-based code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">normalize_array</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">normalize_array</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Normalizes an array to the range [0, 1].</span>
 <span class="sd">    </span>
@@ -900,7 +899,7 @@ document.write(`
 <p>The best way to know if it’s working is not to run it, but to run it inside a test environment. Let’s do that:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_norm_normalized</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test_norm_normalized</span><span class="p">():</span>
     <span class="n">inp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.</span><span class="p">])</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">normalize_array</span><span class="p">(</span><span class="n">inp</span><span class="p">)</span>
     <span class="n">truth</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -920,14 +919,14 @@ document.write(`
 <p>What else can we do? Let’s write a few more tests:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_norm_simple</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test_norm_simple</span><span class="p">():</span>
     <span class="n">inp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">])</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">normalize_array</span><span class="p">(</span><span class="n">inp</span><span class="p">)</span>
     <span class="n">truth</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
     <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_almost_equal</span><span class="p">(</span><span class="n">truth</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
     
 
-<span class="k">def</span> <span class="nf">test_norm_simple_negative</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_norm_simple_negative</span><span class="p">():</span>
     <span class="n">inp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.</span><span class="p">])</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">normalize_array</span><span class="p">(</span><span class="n">inp</span><span class="p">)</span>
     <span class="n">truth</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
@@ -957,20 +956,20 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="n">SHAPES</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)]</span>
 
-<span class="k">def</span> <span class="nf">test_norm_min_max</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_norm_min_max</span><span class="p">():</span>
     <span class="n">rand_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">normalize_array</span><span class="p">(</span><span class="n">rand_arr</span><span class="p">)</span>
     <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">==</span> <span class="mf">1.0</span>
     <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">==</span> <span class="mf">0.0</span>
 
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;dtype&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">])</span>
-<span class="k">def</span> <span class="nf">test_norm_dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_norm_dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">):</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">normalize_array</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
     <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">dtype</span>
 
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;shape&#39;</span><span class="p">,</span> <span class="n">SHAPES</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">test_norm_shapes</span><span class="p">(</span><span class="n">shape</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_norm_shapes</span><span class="p">(</span><span class="n">shape</span><span class="p">):</span>
     <span class="n">rand_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">shape</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">normalize_array</span><span class="p">(</span><span class="n">rand_arr</span><span class="p">)</span>
     <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">shape</span>
@@ -982,7 +981,7 @@ document.write(`
 <p>Let’s write a test with 0 in the input and see what happens:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_norm_zero_is_max</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test_norm_zero_is_max</span><span class="p">():</span>
     <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">normalize_array</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
     <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_almost_equal</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]))</span>
@@ -992,7 +991,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2112/2147493839.py:19: RuntimeWarning: invalid value encountered in divide
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2196/2147493839.py:19: RuntimeWarning: invalid value encountered in divide
   return arr / arr.max()
 </pre></div>
 </div>
@@ -1008,39 +1007,39 @@ document.write(`
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">result</span> <span class="o">=</span> <span class="n">normalize_array</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_almost_equal</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]))</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/contextlib.py:79,</span> in <span class="ni">ContextDecorator.__call__.&lt;locals&gt;.inner</span><span class="nt">(*args, **kwds)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.16/x64/lib/python3.10/contextlib.py:79,</span> in <span class="ni">ContextDecorator.__call__.&lt;locals&gt;.inner</span><span class="nt">(*args, **kwds)</span>
 <span class="g g-Whitespace">     </span><span class="mi">76</span> <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">77</span> <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">77</span> <span class="k">def</span><span class="w"> </span><span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
 <span class="g g-Whitespace">     </span><span class="mi">78</span>     <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_recreate_cm</span><span class="p">():</span>
 <span class="ne">---&gt; </span><span class="mi">79</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/numpy/_utils/__init__.py:85,</span> in <span class="ni">_rename_parameter.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.16/x64/lib/python3.10/site-packages/numpy/_utils/__init__.py:85,</span> in <span class="ni">_rename_parameter.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
 <span class="g g-Whitespace">     </span><span class="mi">83</span>             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">84</span>         <span class="n">kwargs</span><span class="p">[</span><span class="n">new_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">old_name</span><span class="p">)</span>
 <span class="ne">---&gt; </span><span class="mi">85</span> <span class="k">return</span> <span class="n">fun</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
     <span class="p">[</span><span class="o">...</span> <span class="n">skipping</span> <span class="n">hidden</span> <span class="mi">1</span> <span class="n">frame</span><span class="p">]</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/contextlib.py:79,</span> in <span class="ni">ContextDecorator.__call__.&lt;locals&gt;.inner</span><span class="nt">(*args, **kwds)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.16/x64/lib/python3.10/contextlib.py:79,</span> in <span class="ni">ContextDecorator.__call__.&lt;locals&gt;.inner</span><span class="nt">(*args, **kwds)</span>
 <span class="g g-Whitespace">     </span><span class="mi">76</span> <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">77</span> <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">77</span> <span class="k">def</span><span class="w"> </span><span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
 <span class="g g-Whitespace">     </span><span class="mi">78</span>     <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_recreate_cm</span><span class="p">():</span>
 <span class="ne">---&gt; </span><span class="mi">79</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 
     <span class="p">[</span><span class="o">...</span> <span class="n">skipping</span> <span class="n">hidden</span> <span class="mi">1</span> <span class="n">frame</span><span class="p">]</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/numpy/testing/_private/utils.py:745,</span> in <span class="ni">assert_array_compare.&lt;locals&gt;.func_assert_same_pos</span><span class="nt">(x, y, func, hasval)</span>
-<span class="g g-Whitespace">    </span><span class="mi">738</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">bool</span><span class="p">(</span><span class="n">x_id</span> <span class="o">==</span> <span class="n">y_id</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">True</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">739</span>     <span class="n">msg</span> <span class="o">=</span> <span class="n">build_err_msg</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">740</span>         <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span>
-<span class="g g-Whitespace">    </span><span class="mi">741</span>         <span class="n">err_msg</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="si">%s</span><span class="s1"> location mismatch:&#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">742</span>         <span class="o">%</span> <span class="p">(</span><span class="n">hasval</span><span class="p">),</span> <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">header</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">743</span>         <span class="n">names</span><span class="o">=</span><span class="n">names</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">744</span>         <span class="n">precision</span><span class="o">=</span><span class="n">precision</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">745</span>     <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">746</span> <span class="c1"># If there is a scalar, then here we know the array has the same</span>
-<span class="g g-Whitespace">    </span><span class="mi">747</span> <span class="c1"># flag as it everywhere, so we should return the scalar flag.</span>
-<span class="g g-Whitespace">    </span><span class="mi">748</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x_id</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span> <span class="ow">or</span> <span class="n">x_id</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.16/x64/lib/python3.10/site-packages/numpy/testing/_private/utils.py:749,</span> in <span class="ni">assert_array_compare.&lt;locals&gt;.func_assert_same_pos</span><span class="nt">(x, y, func, hasval)</span>
+<span class="g g-Whitespace">    </span><span class="mi">742</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">bool</span><span class="p">(</span><span class="n">x_id</span> <span class="o">==</span> <span class="n">y_id</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">743</span>     <span class="n">msg</span> <span class="o">=</span> <span class="n">build_err_msg</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">744</span>         <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span>
+<span class="g g-Whitespace">    </span><span class="mi">745</span>         <span class="n">err_msg</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="si">%s</span><span class="s1"> location mismatch:&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">746</span>         <span class="o">%</span> <span class="p">(</span><span class="n">hasval</span><span class="p">),</span> <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">header</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">747</span>         <span class="n">names</span><span class="o">=</span><span class="n">names</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">748</span>         <span class="n">precision</span><span class="o">=</span><span class="n">precision</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">749</span>     <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">750</span> <span class="c1"># If there is a scalar, then here we know the array has the same</span>
+<span class="g g-Whitespace">    </span><span class="mi">751</span> <span class="c1"># flag as it everywhere, so we should return the scalar flag.</span>
+<span class="g g-Whitespace">    </span><span class="mi">752</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x_id</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)</span> <span class="ow">or</span> <span class="n">x_id</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 
 <span class="ne">AssertionError</span>: 
 <span class="n">Arrays</span> <span class="n">are</span> <span class="ow">not</span> <span class="n">almost</span> <span class="n">equal</span> <span class="n">to</span> <span class="mi">6</span> <span class="n">decimals</span>
@@ -1056,7 +1055,7 @@ document.write(`
 <p>How can we correct this behavior? Currently, if the minimal value is 0 we’ll have no issues, and if the maximal value is 0 we also won’t have any issues, since we subtract the minimal value from the entire array which will change the maximal value. So let’s add a check that see whether we’re about to divide by zero.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">normalize_array</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">normalize_array</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Normalizes an array to the range [0, 1].</span>
 <span class="sd">    </span>
 <span class="sd">    The maximal element will be 1 and the minimal 0, while the </span>
@@ -1085,13 +1084,13 @@ document.write(`
 <p>How does the test run now?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_norm_zero_is_max</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test_norm_zero_is_max</span><span class="p">():</span>
     <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">normalize_array</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
     <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_almost_equal</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">test_norm_identical_is_zeroed</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_norm_identical_is_zeroed</span><span class="p">():</span>
     <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">10.</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">normalize_array</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
     <span class="n">expected</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
@@ -1114,7 +1113,7 @@ document.write(`
 <p>Due to the origin of our data we believe it’s fine to simply replace NaNs, <code class="docutils literal notranslate"><span class="pre">inf</span></code>s and such with 0, so we’ll add that line to our function and then write a couple more tests.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">normalize_array</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">normalize_array</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Normalizes an array to the range [0, 1].</span>
 <span class="sd">    </span>
 <span class="sd">    The maximal element will be 1 and the minimal 0, while the </span>
@@ -1141,14 +1140,14 @@ document.write(`
     <span class="k">return</span> <span class="n">arr</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">max_</span><span class="p">,</span> <span class="mf">0.</span><span class="p">)</span> <span class="k">else</span> <span class="n">arr</span> <span class="o">/</span> <span class="n">max_</span>
 
 
-<span class="k">def</span> <span class="nf">test_norm_with_nan</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_norm_with_nan</span><span class="p">():</span>
     <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">normalize_array</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
     <span class="n">truth</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.</span><span class="p">])</span>
     <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_almost_equal</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">truth</span><span class="p">)</span> 
 
     
-<span class="k">def</span> <span class="nf">test_norm_all_nans</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_norm_all_nans</span><span class="p">():</span>
     <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]])</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">normalize_array</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
     <span class="n">truth</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]])</span>
@@ -1187,7 +1186,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_snapshots</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test_snapshots</span><span class="p">():</span>
     <span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;tests_demo/normalize_array/snapshot_05_2020.npz&#39;</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
     <span class="n">num_of_snaps</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
@@ -1221,7 +1220,7 @@ document.write(`
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">generate_fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">generate_fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the Fibonacci series up to some n.</span>
 <span class="sd">    </span>
@@ -1237,7 +1236,7 @@ document.write(`
         <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vals</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">result</span><span class="p">[:</span><span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">])</span>
 
-<span class="k">def</span> <span class="nf">generate_primes</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_primes</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns the prime numbers series up to some n.</span>
 <span class="sd">    </span>
@@ -1259,7 +1258,7 @@ document.write(`
         <span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">generate_differences</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_differences</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Run the comparison of the series.</span>
 
@@ -1280,37 +1279,37 @@ document.write(`
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TestFib</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">TestFib</span><span class="p">:</span>
     <span class="n">fib</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">])</span>
     <span class="n">primes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">])</span>
 
     <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;inp&#39;</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="p">{},])</span>
-    <span class="k">def</span> <span class="nf">test_invalid_inp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_invalid_inp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inp</span><span class="p">):</span>
         <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
             <span class="n">generate_differences</span><span class="p">(</span><span class="n">inp</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">test_fib_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_fib_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">generate_fibonacci</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
         <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fib</span><span class="p">[:</span><span class="mi">4</span><span class="p">])</span>
 
-    <span class="k">def</span> <span class="nf">test_fib_single</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_fib_single</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">generate_fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
         <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">]))</span>
 
-    <span class="k">def</span> <span class="nf">test_primes_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_primes_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">generate_primes</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
         <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">primes</span><span class="p">[:</span><span class="mi">6</span><span class="p">])</span>
 
-    <span class="k">def</span> <span class="nf">test_primes_single</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_primes_single</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">generate_primes</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
         <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">])</span>
 
     <span class="c1"># Integration tests</span>
-    <span class="k">def</span> <span class="nf">test_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">generate_differences</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
         <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">fib</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">primes</span><span class="p">),</span> <span class="n">result</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">test_zero</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_zero</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">generate_differences</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span>
 </pre></div>
 </div>

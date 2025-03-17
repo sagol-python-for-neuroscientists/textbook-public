@@ -28,14 +28,13 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -448,7 +447,7 @@ document.write(`
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Some of the features described below only work with pandas &gt;= 1.0.0. Make sure you have the latest pandas installation when running this notebook. To check the version of your pandas (or any other package), import it and print its <code class="docutils literal notranslate"><span class="pre">__version__</span></code> attribute:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 <span class="go">&#39;1.2.0&#39;</span>
 </pre></div>
@@ -460,8 +459,8 @@ document.write(`
 <p>One option is pandas’ index alignment, the property that makes sure that each value will have the same index throughout the entire computation process.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 
 <span class="n">A</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
@@ -815,7 +814,7 @@ dtype = int
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">vals1</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
 <span class="nn">File ~/Projects/courses/python_for_neuroscientists/textbook-public/venv/lib/python3.10/site-packages/numpy/core/_methods.py:49,</span> in <span class="ni">_sum</span><span class="nt">(a, axis, dtype, out, keepdims, initial, where)</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="k">def</span> <span class="nf">_sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="k">def</span><span class="w"> </span><span class="nf">_sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 <span class="g g-Whitespace">     </span><span class="mi">48</span>          <span class="n">initial</span><span class="o">=</span><span class="n">_NoValue</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="ne">---&gt; </span><span class="mi">49</span>     <span class="k">return</span> <span class="n">umr_sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">keepdims</span><span class="p">,</span> <span class="n">initial</span><span class="p">,</span> <span class="n">where</span><span class="p">)</span>
 
@@ -4841,7 +4840,7 @@ dtype: float64
 <span class="g g-Whitespace">   </span><span class="mi">4283</span> <span class="k">return</span> <span class="n">indexer</span>
 
 <span class="nn">File ~/Projects/courses/python_for_neuroscientists/textbook-public/venv/lib/python3.10/site-packages/pandas/core/indexes/base.py:6662,</span> in <span class="ni">Index.slice_indexer</span><span class="nt">(self, start, end, step)</span>
-<span class="g g-Whitespace">   </span><span class="mi">6618</span> <span class="k">def</span> <span class="nf">slice_indexer</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">6618</span> <span class="k">def</span><span class="w"> </span><span class="nf">slice_indexer</span><span class="p">(</span>
 <span class="g g-Whitespace">   </span><span class="mi">6619</span>     <span class="bp">self</span><span class="p">,</span>
 <span class="g g-Whitespace">   </span><span class="mi">6620</span>     <span class="n">start</span><span class="p">:</span> <span class="n">Hashable</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <span class="g g-Whitespace">   </span><span class="mi">6621</span>     <span class="n">end</span><span class="p">:</span> <span class="n">Hashable</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -4881,7 +4880,7 @@ dtype: float64
 <span class="ne">-&gt; </span><span class="mi">2848</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_partial_tup_index</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="n">side</span><span class="p">)</span>
 
 <span class="nn">File ~/Projects/courses/python_for_neuroscientists/textbook-public/venv/lib/python3.10/site-packages/pandas/core/indexes/multi.py:2908,</span> in <span class="ni">MultiIndex._partial_tup_index</span><span class="nt">(self, tup, side)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2906</span> <span class="k">def</span> <span class="nf">_partial_tup_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tup</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">side</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="s2">&quot;right&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;left&quot;</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">2906</span> <span class="k">def</span><span class="w"> </span><span class="nf">_partial_tup_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tup</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">side</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="s2">&quot;right&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;left&quot;</span><span class="p">):</span>
 <span class="g g-Whitespace">   </span><span class="mi">2907</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lexsort_depth</span><span class="p">:</span>
 <span class="ne">-&gt; </span><span class="mi">2908</span>         <span class="k">raise</span> <span class="n">UnsortedIndexError</span><span class="p">(</span>
 <span class="g g-Whitespace">   </span><span class="mi">2909</span>             <span class="sa">f</span><span class="s2">&quot;Key length (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span><span class="si">}</span><span class="s2">) was greater than MultiIndex lexsort depth &quot;</span>
