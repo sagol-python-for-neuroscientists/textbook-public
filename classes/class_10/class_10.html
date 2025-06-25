@@ -620,7 +620,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.17/x64/lib/python3.10/site-packages/IPython/core/events.py:82: UserWarning: Creating legend with loc=&quot;best&quot; can be slow with large amounts of data.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/IPython/core/events.py:82: UserWarning: Creating legend with loc=&quot;best&quot; can be slow with large amounts of data.
   func(*args, **kwargs)
 </pre></div>
 </div>
@@ -819,9 +819,7 @@ clickable and can be expanded/collapsed.
 /* Toggleable content - dropdown */
 
 #sk-container-id-1 div.sk-toggleable__content {
-  max-height: 0;
-  max-width: 0;
-  overflow: hidden;
+  display: none;
   text-align: left;
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-0);
@@ -847,9 +845,9 @@ clickable and can be expanded/collapsed.
 
 #sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {
   /* Expand drop-down */
-  max-height: 200px;
-  max-width: 100%;
-  overflow: auto;
+  display: block;
+  width: 100%;
+  overflow: visible;
 }
 
 #sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
@@ -1054,7 +1052,203 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>KNeighborsClassifier()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>KNeighborsClassifier</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.neighbors.KNeighborsClassifier.html">?<span>Documentation for KNeighborsClassifier</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>KNeighborsClassifier()</pre></div> </div></div></div></div></div></div>
+
+.estimator-table summary {
+    padding: .5rem;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+.estimator-table details[open] {
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    padding-bottom: 0.3rem;
+}
+
+.estimator-table .parameters-table {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.estimator-table .parameters-table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.estimator-table .parameters-table tr:nth-child(even) {
+    background-color: #f6f6f6;
+}
+
+.estimator-table .parameters-table tr:hover {
+    background-color: #e0e0e0;
+}
+
+.estimator-table table td {
+    border: 1px solid rgba(106, 105, 104, 0.232);
+}
+
+.user-set td {
+    color:rgb(255, 94, 0);
+    text-align: left;
+}
+
+.user-set td.value pre {
+    color:rgb(255, 94, 0) !important;
+    background-color: transparent !important;
+}
+
+.default td {
+    color: black;
+    text-align: left;
+}
+
+.user-set td i,
+.default td i {
+    color: black;
+}
+
+.copy-paste-icon {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjUgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTIwOCAwTDMzMi4xIDBjMTIuNyAwIDI0LjkgNS4xIDMzLjkgMTQuMWw2Ny45IDY3LjljOSA5IDE0LjEgMjEuMiAxNC4xIDMzLjlMNDQ4IDMzNmMwIDI2LjUtMjEuNSA0OC00OCA0OGwtMTkyIDBjLTI2LjUgMC00OC0yMS41LTQ4LTQ4bDAtMjg4YzAtMjYuNSAyMS41LTQ4IDQ4LTQ4ek00OCAxMjhsODAgMCAwIDY0LTY0IDAgMCAyNTYgMTkyIDAgMC0zMiA2NCAwIDAgNDhjMCAyNi41LTIxLjUgNDgtNDggNDhMNDggNTEyYy0yNi41IDAtNDgtMjEuNS00OC00OEwwIDE3NmMwLTI2LjUgMjEuNS00OCA0OC00OHoiLz48L3N2Zz4=);
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    background-position: 0;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+</style><body><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>KNeighborsClassifier()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>KNeighborsClassifier</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.7/modules/generated/sklearn.neighbors.KNeighborsClassifier.html">?<span>Documentation for KNeighborsClassifier</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted" data-param-prefix="">
+        <div class="estimator-table">
+            <details>
+                <summary>Parameters</summary>
+                <table class="parameters-table">
+                  <tbody>
+                    
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('n_neighbors',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">n_neighbors&nbsp;</td>
+            <td class="value">5</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('weights',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">weights&nbsp;</td>
+            <td class="value">&#x27;uniform&#x27;</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('algorithm',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">algorithm&nbsp;</td>
+            <td class="value">&#x27;auto&#x27;</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('leaf_size',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">leaf_size&nbsp;</td>
+            <td class="value">30</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('p',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">p&nbsp;</td>
+            <td class="value">2</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('metric',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">metric&nbsp;</td>
+            <td class="value">&#x27;minkowski&#x27;</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('metric_params',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">metric_params&nbsp;</td>
+            <td class="value">None</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('n_jobs',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">n_jobs&nbsp;</td>
+            <td class="value">None</td>
+        </tr>
+    
+                  </tbody>
+                </table>
+            </details>
+        </div>
+    </div></div></div></div></div><script>function copyToClipboard(text, element) {
+    // Get the parameter prefix from the closest toggleable content
+    const toggleableContent = element.closest('.sk-toggleable__content');
+    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
+    const fullParamName = paramPrefix ? `${paramPrefix}${text}` : text;
+
+    const originalStyle = element.style;
+    const computedStyle = window.getComputedStyle(element);
+    const originalWidth = computedStyle.width;
+    const originalHTML = element.innerHTML.replace('Copied!', '');
+
+    navigator.clipboard.writeText(fullParamName)
+        .then(() => {
+            element.style.width = originalWidth;
+            element.style.color = 'green';
+            element.innerHTML = "Copied!";
+
+            setTimeout(() => {
+                element.innerHTML = originalHTML;
+                element.style = originalStyle;
+            }, 2000);
+        })
+        .catch(err => {
+            console.error('Failed to copy:', err);
+            element.style.color = 'red';
+            element.innerHTML = "Failed!";
+            setTimeout(() => {
+                element.innerHTML = originalHTML;
+                element.style = originalStyle;
+            }, 2000);
+        });
+    return false;
+}
+
+document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
+    const toggleableContent = element.closest('.sk-toggleable__content');
+    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
+    const paramName = element.parentElement.nextElementSibling.textContent.trim();
+    const fullParamName = paramPrefix ? `${paramPrefix}${paramName}` : paramName;
+
+    element.setAttribute('title', fullParamName);
+});
+</script></body></div></div>
 </div>
 <p>And… we’re done. The model is now trained with our training dataset. The “minkowski” metric is a fancy name for the more famous “Euclidean” metric (with <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">2</span></code>). This is the metric used to calculate the distance between new and existing points, and it’s a simple squared difference in all dimensions:</p>
 <div class="math notranslate nohighlight">
@@ -1123,11 +1317,11 @@ d = \sqrt{(n - e)^2_{\text{width}} + (n - e)^2_{\text{height}} + ...}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2120/541414424.py:17: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value &#39;0.8&#39; has dtype incompatible with float32, please explicitly cast to a compatible dtype first.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2099/541414424.py:17: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value &#39;0.8&#39; has dtype incompatible with float32, please explicitly cast to a compatible dtype first.
   train_results.loc[real_row, :] = (size, counter, knn.score(X_test, y_test))
 </pre></div>
 </div>
-<img alt="../../_images/c215df5afcbdadb2c47aea7e7242940364002f2e3e6548f51fef0ad45e95e564.png" src="../../_images/c215df5afcbdadb2c47aea7e7242940364002f2e3e6548f51fef0ad45e95e564.png" />
+<img alt="../../_images/fda4ceddc53037547c0e537137a257fc9a326ec8ce56f9c46f097adfa04b8a20.png" src="../../_images/fda4ceddc53037547c0e537137a257fc9a326ec8ce56f9c46f097adfa04b8a20.png" />
 </div>
 </div>
 <p>As expected, the higher the training dataset is, the better the accuracy we achieve.</p>
@@ -1286,7 +1480,7 @@ d = \sqrt{(n - e)^2_{\text{width}} + (n - e)^2_{\text{height}} + ...}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x7f2d6c50ca60&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x7f9ad18226e0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/3848e887805484d707d4e91435e9e7ac98291bd76bf9eb0e74f0af46cb0e6db7.png" src="../../_images/3848e887805484d707d4e91435e9e7ac98291bd76bf9eb0e74f0af46cb0e6db7.png" />
@@ -1354,7 +1548,7 @@ d = \sqrt{(n - e)^2_{\text{width}} + (n - e)^2_{\text{height}} + ...}
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;PCA1&#39;, ylabel=&#39;PCA2&#39;&gt;
 </pre></div>
 </div>
-<img alt="../../_images/04a47e1a53ef48cd42d03b201c49fae56ebf9938fcd474f47a97f63a9e4ddbfc.png" src="../../_images/04a47e1a53ef48cd42d03b201c49fae56ebf9938fcd474f47a97f63a9e4ddbfc.png" />
+<img alt="../../_images/e8160580e9bf2a915a0ec01c2f3e623284d757a4e131a6b997dce0c6d3cdbd9c.png" src="../../_images/e8160580e9bf2a915a0ec01c2f3e623284d757a4e131a6b997dce0c6d3cdbd9c.png" />
 </div>
 </div>
 <p>We see that the results are very similar to the true results seen above, which is nice. Let’s look at the error rate:</p>
@@ -1369,7 +1563,7 @@ d = \sqrt{(n - e)^2_{\text{width}} + (n - e)^2_{\text{height}} + ...}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The error proportion of the GMM is: 0.03333333333333333
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The error proportion of the GMM is: 0.9666666666666667
 </pre></div>
 </div>
 </div>
@@ -1635,9 +1829,7 @@ clickable and can be expanded/collapsed.
 /* Toggleable content - dropdown */
 
 #sk-container-id-2 div.sk-toggleable__content {
-  max-height: 0;
-  max-width: 0;
-  overflow: hidden;
+  display: none;
   text-align: left;
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-0);
@@ -1663,9 +1855,9 @@ clickable and can be expanded/collapsed.
 
 #sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {
   /* Expand drop-down */
-  max-height: 200px;
-  max-width: 100%;
-  overflow: auto;
+  display: block;
+  width: 100%;
+  overflow: visible;
 }
 
 #sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
@@ -1870,7 +2062,243 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearSVC()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LinearSVC</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.svm.LinearSVC.html">?<span>Documentation for LinearSVC</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>LinearSVC()</pre></div> </div></div></div></div></div></div>
+
+.estimator-table summary {
+    padding: .5rem;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+.estimator-table details[open] {
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    padding-bottom: 0.3rem;
+}
+
+.estimator-table .parameters-table {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.estimator-table .parameters-table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.estimator-table .parameters-table tr:nth-child(even) {
+    background-color: #f6f6f6;
+}
+
+.estimator-table .parameters-table tr:hover {
+    background-color: #e0e0e0;
+}
+
+.estimator-table table td {
+    border: 1px solid rgba(106, 105, 104, 0.232);
+}
+
+.user-set td {
+    color:rgb(255, 94, 0);
+    text-align: left;
+}
+
+.user-set td.value pre {
+    color:rgb(255, 94, 0) !important;
+    background-color: transparent !important;
+}
+
+.default td {
+    color: black;
+    text-align: left;
+}
+
+.user-set td i,
+.default td i {
+    color: black;
+}
+
+.copy-paste-icon {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjUgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTIwOCAwTDMzMi4xIDBjMTIuNyAwIDI0LjkgNS4xIDMzLjkgMTQuMWw2Ny45IDY3LjljOSA5IDE0LjEgMjEuMiAxNC4xIDMzLjlMNDQ4IDMzNmMwIDI2LjUtMjEuNSA0OC00OCA0OGwtMTkyIDBjLTI2LjUgMC00OC0yMS41LTQ4LTQ4bDAtMjg4YzAtMjYuNSAyMS41LTQ4IDQ4LTQ4ek00OCAxMjhsODAgMCAwIDY0LTY0IDAgMCAyNTYgMTkyIDAgMC0zMiA2NCAwIDAgNDhjMCAyNi41LTIxLjUgNDgtNDggNDhMNDggNTEyYy0yNi41IDAtNDgtMjEuNS00OC00OEwwIDE3NmMwLTI2LjUgMjEuNS00OCA0OC00OHoiLz48L3N2Zz4=);
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    background-position: 0;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+</style><body><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearSVC()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LinearSVC</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.7/modules/generated/sklearn.svm.LinearSVC.html">?<span>Documentation for LinearSVC</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted" data-param-prefix="">
+        <div class="estimator-table">
+            <details>
+                <summary>Parameters</summary>
+                <table class="parameters-table">
+                  <tbody>
+                    
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('penalty',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">penalty&nbsp;</td>
+            <td class="value">&#x27;l2&#x27;</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('loss',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">loss&nbsp;</td>
+            <td class="value">&#x27;squared_hinge&#x27;</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('dual',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">dual&nbsp;</td>
+            <td class="value">&#x27;auto&#x27;</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('tol',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">tol&nbsp;</td>
+            <td class="value">0.0001</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('C',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">C&nbsp;</td>
+            <td class="value">1.0</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('multi_class',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">multi_class&nbsp;</td>
+            <td class="value">&#x27;ovr&#x27;</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('fit_intercept',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">fit_intercept&nbsp;</td>
+            <td class="value">True</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('intercept_scaling',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">intercept_scaling&nbsp;</td>
+            <td class="value">1</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('class_weight',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">class_weight&nbsp;</td>
+            <td class="value">None</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('verbose',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">verbose&nbsp;</td>
+            <td class="value">0</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('random_state',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">random_state&nbsp;</td>
+            <td class="value">None</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('max_iter',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">max_iter&nbsp;</td>
+            <td class="value">1000</td>
+        </tr>
+    
+                  </tbody>
+                </table>
+            </details>
+        </div>
+    </div></div></div></div></div><script>function copyToClipboard(text, element) {
+    // Get the parameter prefix from the closest toggleable content
+    const toggleableContent = element.closest('.sk-toggleable__content');
+    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
+    const fullParamName = paramPrefix ? `${paramPrefix}${text}` : text;
+
+    const originalStyle = element.style;
+    const computedStyle = window.getComputedStyle(element);
+    const originalWidth = computedStyle.width;
+    const originalHTML = element.innerHTML.replace('Copied!', '');
+
+    navigator.clipboard.writeText(fullParamName)
+        .then(() => {
+            element.style.width = originalWidth;
+            element.style.color = 'green';
+            element.innerHTML = "Copied!";
+
+            setTimeout(() => {
+                element.innerHTML = originalHTML;
+                element.style = originalStyle;
+            }, 2000);
+        })
+        .catch(err => {
+            console.error('Failed to copy:', err);
+            element.style.color = 'red';
+            element.innerHTML = "Failed!";
+            setTimeout(() => {
+                element.innerHTML = originalHTML;
+                element.style = originalStyle;
+            }, 2000);
+        });
+    return false;
+}
+
+document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
+    const toggleableContent = element.closest('.sk-toggleable__content');
+    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
+    const paramName = element.parentElement.nextElementSibling.textContent.trim();
+    const fullParamName = paramPrefix ? `${paramPrefix}${paramName}` : paramName;
+
+    element.setAttribute('title', fullParamName);
+});
+</script></body></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
