@@ -1317,11 +1317,13 @@ d = \sqrt{(n - e)^2_{\text{width}} + (n - e)^2_{\text{height}} + ...}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2113/541414424.py:17: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value &#39;0.8&#39; has dtype incompatible with float32, please explicitly cast to a compatible dtype first.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2185/541414424.py:17: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value &#39;0.8&#39; has dtype incompatible with float32, please explicitly cast to a compatible dtype first.
   train_results.loc[real_row, :] = (size, counter, knn.score(X_test, y_test))
+/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/pandas/core/dtypes/astype.py:135: RuntimeWarning: invalid value encountered in cast
+  return arr.astype(dtype, copy=copy)
 </pre></div>
 </div>
-<img alt="../../_images/547215dbcf8d2fc2b802e181824f002ebbe9fdf16daa11ac3f5f241dd8b3828a.png" src="../../_images/547215dbcf8d2fc2b802e181824f002ebbe9fdf16daa11ac3f5f241dd8b3828a.png" />
+<img alt="../../_images/ba7505714e5dff984ac086085ab195c8c9796728dfc721321e70e3cf4bbfb125.png" src="../../_images/ba7505714e5dff984ac086085ab195c8c9796728dfc721321e70e3cf4bbfb125.png" />
 </div>
 </div>
 <p>As expected, the higher the training dataset is, the better the accuracy we achieve.</p>
@@ -1480,7 +1482,7 @@ d = \sqrt{(n - e)^2_{\text{width}} + (n - e)^2_{\text{height}} + ...}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x7f510a1aa230&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x7ff1921e7550&gt;
 </pre></div>
 </div>
 <img alt="../../_images/3848e887805484d707d4e91435e9e7ac98291bd76bf9eb0e74f0af46cb0e6db7.png" src="../../_images/3848e887805484d707d4e91435e9e7ac98291bd76bf9eb0e74f0af46cb0e6db7.png" />
