@@ -57,11 +57,9 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'classes/class_11/class_11';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'classes/class_11/class_11 copy';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Tutorials" href="../../tutorials.html" />
-    <link rel="prev" title="Class 10: Introduction to Machine Learning" href="../class_10/class_10.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,6 +122,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -179,9 +179,9 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../syllabus.html">Syllabus</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../contents.html">Contents</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../contents.html">Contents</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../class_0/class_0.html">Class 0: Background and Basic Syntax</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_1/class_1.html">Class 1: More Syntax and The Python Stack</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_2/class_2.html">Class 2: Virtual Environments and Object-oriented Programming (OOP)</a></li>
@@ -195,7 +195,7 @@
 
 <li class="toctree-l2"><a class="reference internal" href="../class_9/class_9.html">Class 9: Advanced and Performant Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_10/class_10.html">Class 10: Introduction to Machine Learning</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Class 11: Git and More Python Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_11.html">Class 11: Git and More Python Libraries</a></li>
 
 </ul>
 </details></li>
@@ -260,7 +260,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/classes/class_11/class_11.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/sagol-python-for-neuroscientists/textbook-public/main?urlpath=tree/source/classes/class_11/class_11 copy.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -280,7 +280,7 @@
 
 
 
-<a href="https://github.com/sagol-python-for-neuroscientists/textbook-public/issues/new?title=Issue%20on%20page%20%2Fclasses/class_11/class_11.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/sagol-python-for-neuroscientists/textbook-public/issues/new?title=Issue%20on%20page%20%2Fclasses/class_11/class_11 copy.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -306,7 +306,7 @@
       
       
       
-      <li><a href="../../_sources/classes/class_11/class_11.ipynb" target="_blank"
+      <li><a href="../../_sources/classes/class_11/class_11 copy.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -535,17 +535,36 @@ document.write(`
 <p>Here’s how you create an online repo:</p>
 <video width="800" height="600" controls>
   <source src="github_online_first.mp4" type="video/mp4">
-</video><p>Here’s how we download it - “clone” (the “Git: Clone” option window was opened using Ctrl + Shift + P):</p>
-<video width="800" height="600" controls>
-  <source src="github_clone.mp4" type="video/mp4">
-</video><p>We now have a local copy of the repo and we’re ready to work.</p>
+</video><div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_online_first.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>Here’s how we download it - “clone” (the “Git: Clone” option window was opened using Ctrl + Shift + P):</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_clone.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>We now have a local copy of the repo and we’re ready to work.</p>
 </section>
 <section id="create-a-local-repository-and-point-it-at-an-existing-remote-repo">
 <h5>Create a local repository and point it at an existing remote repo<a class="headerlink" href="#create-a-local-repository-and-point-it-at-an-existing-remote-repo" title="Link to this heading">#</a></h5>
 <p>If we already have a local repository which we now wish to back up online, we can connect it to some online repo using a few commands. It’s usually better if the online repo is brand new and has the same name of the local repo. Here’s an example (again, the “Git: Add Remote” was accessed using Ctrl + Shift + P):</p>
-<video width="800" height="600" controls>
-  <source src="github_from_local.mp4" type="video/mp4">
-</video><p>These two options are equally valid and both will eventually generate a repository both on your computer and on the cloud.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Video</span><span class="p">(</span><span class="s1">&#39;github_from_local.mp4&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_from_local.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>These two options are equally valid and both will eventually generate a repository both on your computer and on the cloud.</p>
 <p>A repository can have several remotes it works with. In the example above I called the remote “origin”, as is customary, but it’s completely possible to add more remotes with different names and to push changes to them as well. Soon we’ll go through an example where our local repo will have one more needed remote.</p>
 </section>
 </section>
@@ -557,15 +576,27 @@ document.write(`
 <section id="conflicts">
 <h4>Conflicts<a class="headerlink" href="#conflicts" title="Link to this heading">#</a></h4>
 <p>While conflicts may occur in any git repo, regardless of its remotes, they’re most relevant under this situation so we’ll go through them now. A conflict is a “disagreement” between two repos on the history of commits. In other words, two repos which are supposed to be identical have the same file but with different content. Please note that if your repository consists of <code class="docutils literal notranslate"><span class="pre">hello.txt</span></code> and the remote one consists of an identical copy of <code class="docutils literal notranslate"><span class="pre">hello.txt</span></code> and an extra <code class="docutils literal notranslate"><span class="pre">hi.txt</span></code> file, pulling it will not cause a conflict, since no harm will be done if we simply copy <code class="docutils literal notranslate"><span class="pre">hi.txt</span></code> to your own local copy. Here’s an example:</p>
-<video width="800" height="600" controls>
-  <source src="github_pull_no_conf.mp4" type="video/mp4">
-</video><p>New files will be pulled without any issues. Even if someone changed an existing file you have, but you haven’t made any changes to it - git will still happily update your own local copy:</p>
-<video width="800" height="600" controls>
-  <source src="github_pull_no_issue.mp4" type="video/mp4">
-</video><p>Conflics happen within existing files, when the remote and local copy have different copies of the same file, and both were edited. Let’s look at an example:</p>
-<video width="800" height="600" controls>
-  <source src="github_conflict.mp4" type="video/mp4">
-</video><p>In this example you see that the remote copy was updated independently by some other author, and I worked on my own local copy disregarding existing changes in the remote copy. When I try to pull the latest updates from the remote, git will tell me that we have conflict since our file histories don’t match. This conflict has to be resolved by deciding who wins, i.e. whose copy of <code class="docutils literal notranslate"><span class="pre">hi.txt</span></code> along with its history will keep on living in our repository.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_pull_no_conf.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>New files will be pulled without any issues. Even if someone changed an existing file you have, but you haven’t made any changes to it - git will still happily update your own local copy:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_pull_no_issue.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>Conflics happen within existing files, when the remote and local copy have different copies of the same file, and both were edited. Let’s look at an example:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_conflict.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>In this example you see that the remote copy was updated independently by some other author, and I worked on my own local copy disregarding existing changes in the remote copy. When I try to pull the latest updates from the remote, git will tell me that we have conflict since our file histories don’t match. This conflict has to be resolved by deciding who wins, i.e. whose copy of <code class="docutils literal notranslate"><span class="pre">hi.txt</span></code> along with its history will keep on living in our repository.</p>
 <p>The conflict is visualize with the green and blue part, showing the “current change” (my copy) and the “incoming change” (remote’s work). Then I have to choose who’s work will I keep? “Accept Current Change” means that my copy prevails, while “Accept Incoming Change” means that other guy’s work will prevail. After I chose the preferred option the file is automatically edited and I can stage and commit this merge. Lastly I’m able to push back to the repo the conflict resolution, and indeed I see it online.</p>
 </section>
 </section>
@@ -576,16 +607,28 @@ document.write(`
 <section id="id2">
 <h4>Usage<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <p>After forking a repository you receive its copy as a GH repo, and to do the actual coding work you need to clone it to your computer. This means that the local repository you’ll have has two repos which with it can interact - your fork and the original repo. We usually call your own fork the “origin” (just like we do in regular clones) and the original repo is called “upstream”. Let’s see it in action:</p>
-<video width="800" height="600" controls>
-  <source src="github_fork.mp4" type="video/mp4">
-</video><p>Here we showed the first part of the process - forking a repository and cloning it to our computer. You can see that the forked repository has a “forked from HagaiHargil/localrepo” header (around 0:24), which reminds you constantly of its upstream repo.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_fork.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>Here we showed the first part of the process - forking a repository and cloning it to our computer. You can see that the forked repository has a “forked from HagaiHargil/localrepo” header (around 0:24), which reminds you constantly of its upstream repo.</p>
 <p>Here’s how you create a pull request after editing something in your own local copy:</p>
-<video width="800" height="600" controls>
-  <source src="github_pr.mp4" type="video/mp4">
-</video><p>The last thing we might want to do is to update our local copy with the changes from the upstream repo, i.e. the original repo that we forked. We’ll do that whenever the original developers added new features which we also want in our own local copy, for example. To do that, we’ll add that original repo as an “upstream” remote in our own repo, and then we could pull from there. Here’s an example:</p>
-<video width="800" height="600" controls>
-  <source src="github_upstream.mp4" type="video/mp4">
-</video><p>As you noticed, after adding the remote (Ctrl + Shift + P) you still need to “fetch” the information from it, as it doesn’t happen automatically. Only after fetching, which is done once, you can pull from the upstream repo.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_pr.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>The last thing we might want to do is to update our local copy with the changes from the upstream repo, i.e. the original repo that we forked. We’ll do that whenever the original developers added new features which we also want in our own local copy, for example. To do that, we’ll add that original repo as an “upstream” remote in our own repo, and then we could pull from there. Here’s an example:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="github_upstream.mp4" controls  width="800"  height="600">
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+<p>As you noticed, after adding the remote (Ctrl + Shift + P) you still need to “fetch” the information from it, as it doesn’t happen automatically. Only after fetching, which is done once, you can pull from the upstream repo.</p>
 <p>There are a few other useful features of git, but we’ll stop here.</p>
 </section>
 </section>
@@ -724,7 +767,7 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20
 </pre></div>
 </div>
-<img alt="../../_images/69c99f1c50684a2a7f5b6c307d6709e0b03fb189432834060561af529270a0fb.png" src="../../_images/69c99f1c50684a2a7f5b6c307d6709e0b03fb189432834060561af529270a0fb.png" />
+<img alt="../../_images/d4b560128b60c4a86c67287056797448d29e5462aa7ccb2890c4439059cc638e.png" src="../../_images/d4b560128b60c4a86c67287056797448d29e5462aa7ccb2890c4439059cc638e.png" />
 </div>
 </div>
 <p>Streamz can do a whole lot of other things, including feedback, recursion and time-based processing.</p>
@@ -788,24 +831,6 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../class_10/class_10.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Class 10: Introduction to Machine Learning</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../../tutorials.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tutorials</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
