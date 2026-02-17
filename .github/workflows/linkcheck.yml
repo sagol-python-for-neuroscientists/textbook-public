@@ -1,0 +1,32 @@
+name: Check Links
+
+on:
+  schedule:
+    - cron: "0 8 * * 1"  # Every Monday at 08:00 UTC
+  workflow_dispatch:      # Allow manual runs
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check links
+        run: jupyter-book build source/ --builder linkcheck
+        continue-on-error: true
+
+      - name: Upload link report
+        uses: actions/upload-artifact@v4
+        with:
+          name: linkcheck-report
+          path: source/_build/linkcheck/
+          retention-days: 30
