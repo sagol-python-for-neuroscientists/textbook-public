@@ -1,28 +1,12 @@
-# Jupyter files
-**/.ipynb_checkpoints/**
-
-# Build
-source/_build
-
-# Virtual environment
-venv
-
-# Temporary directories
-# TODO: Remove after updating book
-tmp
-extra_material
-
-# VSCode configuration files
-.vscode
-
-
-# Artifacts
-source/classes/class_5/*.mat
-source/classes/class_5/*.pdf
-
-# Student submissions
-students*
-
-# Dask file_list_type_2
-**/*.lock
-**/*.dirlock
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+.ipynb_checkpoints/
+_build/
+venv/
+example_venv/
+.env
