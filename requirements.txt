@@ -5,7 +5,7 @@ bokeh
 cython
 distributed
 holoviews
-jupyter-book
+jupyter-book<2
 matplotlib
 numba
 numpy
