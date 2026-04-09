@@ -25,11 +25,12 @@ Main topics of the course will include:
 1. Data structures (lists, tuples, sets, dictionaries), functions, iterations, and file I/O.
 2. Virtual environments and Object-Oriented Programming.
 3. Inheritance, exception handling, and file system navigation with pathlib.
-4. The Scientific Stack I — NumPy.
-5. The Scientific Stack II — pandas and matplotlib.
-6. The Scientific Stack III — Advanced pandas and xarray.
-7. Data visualization and higher-dimensional data (matplotlib, altair, bokeh, seaborn).
-8. Unit testing, linting, and code quality.
-9. Performance optimization and software design (Cython, Numba, type hints, enums).
-10. Machine learning with scikit-learn.
-11. Advanced Git and the Python ecosystem.
+4. Agentic AI — LLMs, tools, and best practices for research.
+5. The Scientific Stack I — NumPy.
+6. The Scientific Stack II — pandas and matplotlib.
+7. The Scientific Stack III — Advanced pandas and xarray.
+8. Data visualization and higher-dimensional data (matplotlib, altair, bokeh, seaborn).
+9. Unit testing, linting, and code quality.
+10. Performance optimization and software design (Cython, Numba, type hints, enums).
+11. Machine learning with scikit-learn.
+12. Advanced Git and the Python ecosystem.

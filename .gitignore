@@ -10,3 +10,7 @@ _build/
 venv/
 example_venv/
 .env
+
+
+CLAUDE.md
+.claude

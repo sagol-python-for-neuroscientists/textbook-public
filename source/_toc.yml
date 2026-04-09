@@ -11,12 +11,13 @@ chapters:
   - file: classes/class_4/class_4
   - file: classes/class_5/class_5
   - file: classes/class_6/class_6
-  - file: classes/class_7a/class_7a
-  - file: classes/class_7b/class_7b
-  - file: classes/class_8/class_8
+  - file: classes/class_7/class_7
+  - file: classes/class_8a/class_8a
+  - file: classes/class_8b/class_8b
   - file: classes/class_9/class_9
   - file: classes/class_10/class_10
   - file: classes/class_11/class_11
+  - file: classes/class_12/class_12
 - file: tutorials
   sections:
   - file: tutorials/python_setup
