@@ -177,7 +177,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../class_1/class_1.html">Class 1: More Syntax and The Python Stack</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_2/class_2.html">Class 2: Virtual Environments and Object-oriented Programming (OOP)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_3/class_3.html">Class 3: More OOP and Exception Handling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../class_4/class_4.html">Class 4: Agentic AI — LLMs, Tools, and Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../class_4/class_4.html">Class 4: Agentic AI — From Zero to Hero</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_5/class_5.html">Class 5: The Scientific Stack - Part I: <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_6/class_6.html">Class 6: The Scientific Stack - Part II: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_7/class_7.html">Class 7: Advanced <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
@@ -646,7 +646,7 @@ c 20
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object my_range at 0x7fd2f86bd3c0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object my_range at 0x7fc0f81453c0&gt;
 </pre></div>
 </div>
 </div>
@@ -749,7 +749,7 @@ False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object &lt;genexpr&gt; at 0x7fd2f81f98a0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object &lt;genexpr&gt; at 0x7fc0e89398a0&gt;
 </pre></div>
 </div>
 </div>
@@ -1125,8 +1125,8 @@ print_hello
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>It tooks the code 9.5367431640625e-07 milliseconds to run.
-It tooks the code 1.430511474609375e-06 milliseconds to run.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>It tooks the code 4.76837158203125e-07 milliseconds to run.
+It tooks the code 7.152557373046875e-07 milliseconds to run.
 </pre></div>
 </div>
 </div>
@@ -1406,11 +1406,11 @@ g
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Numpy:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>39.8 ms ± 338 μs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>33.3 ms ± 78.2 μs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 Numba:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>94.2 ms ± 131 μs per loop (mean ± std. dev. of 7 runs, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>94.1 ms ± 115 μs per loop (mean ± std. dev. of 7 runs, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -1449,11 +1449,11 @@ Numba:
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Numpy:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>41.1 ms ± 2.45 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>33.5 ms ± 263 μs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 Numba:
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>94.4 ms ± 227 μs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>94.2 ms ± 68.1 μs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -1484,7 +1484,7 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25 ms ± 2.38 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24.1 ms ± 455 μs per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -1550,10 +1550,10 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16.2 ms ± 445 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>16.2 ms ± 191 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ms ± 365 ns per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 ms ± 296 ns per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1574,7 +1574,7 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.32 ms ± 88.1 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.21 ms ± 2.84 μs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -1604,7 +1604,7 @@ Numba:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.78 ms ± 676 μs per loop (mean ± std. dev. of 7 runs, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.7 ms ± 625 μs per loop (mean ± std. dev. of 7 runs, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -1964,7 +1964,7 @@ compilation terminated.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>21.8 μs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>21.7 μs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -1976,7 +1976,7 @@ compilation terminated.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.76 μs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.74 μs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -3022,7 +3022,7 @@ r
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.9353860506508931 0.13614898332158676 0.19911138185270694 0.7599107119519035 0.12233081036785753 0.3498087067838731 0.14898105772809855 0.669783422564175 0.7392403435826785 0.10003435679010098] volt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.4129568835157501 0.9909256110279552 0.09618790246586706 0.08674737548122136 0.33192789846472137 0.8993759424635381 0.24931784346239882 0.5705172299564358 0.9044020904258713 0.9707749915761392] volt
 </pre></div>
 </div>
 </div>
@@ -3034,7 +3034,7 @@ r
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1.8707721013017862 0.2722979666431735 0.3982227637054139 1.519821423903807 0.24466162073571507 0.6996174135677462 0.2979621154561971 1.33956684512835 1.478480687165357 0.20006871358020195] volt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.8259137670315002 1.9818512220559104 0.19237580493173412 0.1734947509624427 0.6638557969294427 1.7987518849270763 0.49863568692479765 1.1410344599128717 1.8088041808517425 1.9415499831522784] volt
 </pre></div>
 </div>
 </div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Class 4: Agentic AI — LLMs, Tools, and Best Practices &#8212; Python for Neuroscience</title>
+    <title>Class 4: Agentic AI — From Zero to Hero &#8212; Python for Neuroscience</title>
   
   
   
@@ -175,7 +175,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../class_1/class_1.html">Class 1: More Syntax and The Python Stack</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_2/class_2.html">Class 2: Virtual Environments and Object-oriented Programming (OOP)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_3/class_3.html">Class 3: More OOP and Exception Handling</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Class 4: Agentic AI — LLMs, Tools, and Best Practices</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Class 4: Agentic AI — From Zero to Hero</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_5/class_5.html">Class 5: The Scientific Stack - Part I: <code class="docutils literal notranslate"><span class="pre">numpy</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_6/class_6.html">Class 6: The Scientific Stack - Part II: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../class_7/class_7.html">Class 7: Advanced <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a></li>
@@ -376,7 +376,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Class 4: Agentic AI — LLMs, Tools, and Best Practices</h1>
+    <h1>Class 4: Agentic AI — From Zero to Hero</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -386,27 +386,74 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-large-language-model">What is a Large Language Model?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#next-token-prediction">Next-Token Prediction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#training-pipeline">Training Pipeline</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-llms-make-mistakes">Why LLMs Make Mistakes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ai-coding-revolution">The AI Coding Revolution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-how-llms-work-and-why-they-fail">Part 1: How LLMs Work (and Why They Fail)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tokens-the-building-blocks">Tokens — The Building Blocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-core-mechanism-next-token-prediction">The Core Mechanism: Next-Token Prediction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-training-pipeline">The Training Pipeline</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#failure-mode-1-hallucination">Failure Mode 1: Hallucination</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#failure-mode-2-sycophancy">Failure Mode 2: Sycophancy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#failure-mode-3-context-window-limits">Failure Mode 3: Context-Window Limits</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#failure-mode-4-no-self-verification">Failure Mode 4: No Self-Verification</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#popular-agentic-ai-tools">Popular Agentic AI Tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-the-agentic-ai-landscape">Part 2: The Agentic AI Landscape</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-makes-a-tool-agentic">What Makes a Tool “Agentic”?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tool-comparison-as-of-mid-2025">Tool Comparison (as of mid-2025)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#claude-code">Claude Code</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gemini-cli">Gemini CLI</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github-copilot">GitHub Copilot</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cursor-and-windsurf">Cursor and Windsurf</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chatgpt-gpt-4o-advanced-data-analysis">ChatGPT / GPT-4o Advanced Data Analysis</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-principles">General Principles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software-engineering">Software Engineering</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#research-specific-guidance">Research-Specific Guidance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-getting-started-with-claude-code">Part 3: Getting Started with Claude Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites-and-installation">Prerequisites and Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#your-first-session">Your First Session</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#essential-commands-and-keyboard-shortcuts">Essential Commands and Keyboard Shortcuts</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-setting-up-your-project">Part 4: Setting Up Your Project</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-claude-md-file-your-project-s-briefing-document">The <code class="docutils literal notranslate"><span class="pre">CLAUDE.md</span></code> File — Your Project’s Briefing Document</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-to-keep-out-of-claude-md">What to Keep Out of <code class="docutils literal notranslate"><span class="pre">CLAUDE.md</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#permission-modes">Permission Modes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-integration">Git Integration</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5-the-core-workflow">Part 5: The Core Workflow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-golden-cycle">The Golden Cycle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-ask-well">Step 1: Ask Well</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-plan-mode-the-most-important-feature">Step 2: Plan Mode — The Most Important Feature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-execute-and-monitor">Step 3: Execute and Monitor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-review-the-diff">Step 4: Review the Diff</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-test">Step 5: Test</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-commit">Step 6: Commit</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-6-advanced-features">Part 6: Advanced Features</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hooks-automate-your-quality-checks">Hooks — Automate Your Quality Checks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mcp-servers-extending-the-agent-s-reach">MCP Servers — Extending the Agent’s Reach</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extended-thinking-slow-down-for-hard-problems">Extended Thinking — Slow Down for Hard Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-7-best-practices">Part 7: Best Practices</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-principles">General Principles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software-engineering">Software Engineering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#research-specific-best-practices">Research-Specific Best Practices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#research-statistics-and-citations">Research: Statistics and Citations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-8-common-pitfalls">Part 8: Common Pitfalls</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-9-exercises">Part 9: Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-install-and-explore">Exercise 1: Install and Explore</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-write-a-claude-md">Exercise 2: Write a CLAUDE.md</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-the-full-cycle">Exercise 3: The Full Cycle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-spot-the-hallucination">Exercise 4: Spot the Hallucination</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading-and-resources">Further Reading and Resources</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -418,177 +465,1358 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="class-4-agentic-ai-llms-tools-and-best-practices">
-<h1>Class 4: Agentic AI — LLMs, Tools, and Best Practices<a class="headerlink" href="#class-4-agentic-ai-llms-tools-and-best-practices" title="Link to this heading">#</a></h1>
-<section id="what-is-a-large-language-model">
-<h2>What is a Large Language Model?<a class="headerlink" href="#what-is-a-large-language-model" title="Link to this heading">#</a></h2>
-<p>Large Language Models (LLMs) are the engine behind most modern AI coding assistants. Understanding how they work — and why they sometimes fail — will make you a much more effective user of these tools.</p>
-<section id="next-token-prediction">
-<h3>Next-Token Prediction<a class="headerlink" href="#next-token-prediction" title="Link to this heading">#</a></h3>
-<p>At their core, LLMs do one thing: they predict the most probable next token (roughly, next word or sub-word) given all the tokens that came before. When you ask a question, the model generates a response one token at a time, each time sampling from a probability distribution over the entire vocabulary.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="p">:</span>  <span class="s2">&quot;The capital of France is&quot;</span>
-<span class="n">Model</span><span class="p">:</span>  <span class="n">P</span><span class="p">(</span><span class="s2">&quot;Paris&quot;</span> <span class="o">|</span> <span class="nb">input</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.97</span>
-        <span class="n">P</span><span class="p">(</span><span class="s2">&quot;Lyon&quot;</span>  <span class="o">|</span> <span class="nb">input</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.01</span>
-        <span class="n">P</span><span class="p">(</span><span class="s2">&quot;Rome&quot;</span>  <span class="o">|</span> <span class="nb">input</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.003</span>
-        <span class="o">...</span>
-<span class="n">Output</span><span class="p">:</span> <span class="s2">&quot;Paris&quot;</span>
-</pre></div>
+  <section class="tex2jax_ignore mathjax_ignore" id="class-4-agentic-ai-from-zero-to-hero">
+<h1>Class 4: Agentic AI — From Zero to Hero<a class="headerlink" href="#class-4-agentic-ai-from-zero-to-hero" title="Link to this heading">#</a></h1>
+<div class="dropdown admonition">
+<p class="admonition-title">What’s in store for this class?</p>
+<ul class="simple">
+<li><p><strong>Part 1</strong> — How LLMs work (tokens, next-token prediction, training, failure modes)</p></li>
+<li><p><strong>Part 2</strong> — The agentic AI landscape (Claude Code, Gemini CLI, Copilot, Cursor, ChatGPT)</p></li>
+<li><p><strong>Part 3</strong> — Getting Claude Code running from scratch</p></li>
+<li><p><strong>Part 4</strong> — Setting up your project (<a class="reference external" href="http://CLAUDE.md">CLAUDE.md</a>, permissions)</p></li>
+<li><p><strong>Part 5</strong> — The core workflow (plan → review → execute → commit)</p></li>
+<li><p><strong>Part 6</strong> — Advanced features (hooks, MCP, extended thinking)</p></li>
+<li><p><strong>Part 7</strong> — Best practices for software engineering and research</p></li>
+<li><p><strong>Part 8</strong> — Common pitfalls and how to avoid them</p></li>
+<li><p><strong>Part 9</strong> — Exercises</p></li>
+</ul>
 </div>
-<p>This simple mechanism, scaled to hundreds of billions of parameters and trained on essentially the entire written internet, produces surprisingly capable behavior.</p>
+<section id="the-ai-coding-revolution">
+<h2>The AI Coding Revolution<a class="headerlink" href="#the-ai-coding-revolution" title="Link to this heading">#</a></h2>
+<p>In 2024, GitHub published a controlled study: developers with access to AI coding
+assistants completed tasks <strong>55% faster</strong> than those without. More than 75% of
+professional developers now use AI tools daily. For scientists who write analysis
+code, the implications are just as large — and the risks are <em>more</em> significant,
+because the stakes of a silent error in a data pipeline are much higher than a
+bug in a web app.</p>
+<p>But here’s the crucial distinction that separates effective users from frustrated ones:</p>
+<blockquote>
+<div><p><strong>Knowing <em>how</em> these tools work tells you exactly when and why they fail —
+and that knowledge is what lets you use them productively.</strong></p>
+</div></blockquote>
+<p>This class gives you the mental model, the tooling setup, and the workflow to go
+from complete beginner to confident daily user.</p>
 </section>
-<section id="training-pipeline">
-<h3>Training Pipeline<a class="headerlink" href="#training-pipeline" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p><strong>Pre-training</strong> — the model learns to predict the next token across a massive text corpus (books, code, Wikipedia, web pages). This is where most factual knowledge and language understanding comes from.</p></li>
-<li><p><strong>Supervised fine-tuning</strong> — the model is trained on curated examples of helpful conversations.</p></li>
-<li><p><strong>RLHF / RLAIF</strong> (Reinforcement Learning from Human/AI Feedback) — human raters (or another AI model) score responses, and the model is nudged toward responses that receive higher scores.</p></li>
-</ol>
-</section>
-<section id="why-llms-make-mistakes">
-<h3>Why LLMs Make Mistakes<a class="headerlink" href="#why-llms-make-mistakes" title="Link to this heading">#</a></h3>
-<p>Understanding the failure modes is just as important as knowing the capabilities:</p>
-<p><strong>Hallucination</strong>
-The model generates tokens that are statistically plausible given the context, even when it has no underlying knowledge. It cannot distinguish between “I know this” and “I’m making this up” — there is no separate knowledge store to consult. Common hallucinations include invented paper titles, non-existent function names, and fabricated statistics.</p>
-<p><strong>Sycophancy</strong>
-RLHF trains the model to generate responses that humans rate highly. Humans tend to rate confident, agreeable answers highly — even when they are wrong. The result is a model that is biased toward telling you what you want to hear. If you push back on a correct answer, the model may cave and adopt your (incorrect) view. Always verify independently; do not use social pressure to extract a different answer.</p>
-<p><strong>Context-window limitations</strong>
-LLMs have a finite context window — the amount of text they can “see” at once. Very long conversations, large files, or complex multi-step reasoning chains can fall outside this window, causing the model to lose track of earlier information or constraints.</p>
-<p><strong>No self-verification</strong>
-The model cannot run the code it writes, look up papers it cites, or otherwise check its outputs against ground truth. It generates plausible text; correctness is a side effect, not a guarantee.</p>
-<div class="important admonition">
-<p class="admonition-title">Key Takeaway</p>
-<p>LLMs are <strong>stochastic next-token predictors</strong>, not knowledge bases or theorem provers. They are excellent at pattern completion, style matching, and boilerplate generation. They are unreliable for precise factual recall, mathematical proof, and any task that requires verified ground truth.</p>
-</div>
-</section>
-</section>
-<section id="popular-agentic-ai-tools">
-<h2>Popular Agentic AI Tools<a class="headerlink" href="#popular-agentic-ai-tools" title="Link to this heading">#</a></h2>
-<p>An <strong>agentic AI</strong> goes beyond single-turn question-answering: it can take multi-step actions — reading files, writing code, running commands — in a loop until a task is complete. The landscape is evolving rapidly; the tools below are the main players as of mid-2025.</p>
+<section id="part-1-how-llms-work-and-why-they-fail">
+<h2>Part 1: How LLMs Work (and Why They Fail)<a class="headerlink" href="#part-1-how-llms-work-and-why-they-fail" title="Link to this heading">#</a></h2>
+<section id="tokens-the-building-blocks">
+<h3>Tokens — The Building Blocks<a class="headerlink" href="#tokens-the-building-blocks" title="Link to this heading">#</a></h3>
+<p>Before anything else: LLMs don’t read words, they read <strong>tokens</strong>. A token is a
+sub-word unit produced by a tokenizer. For most English text, one token ≈ one
+word or one punctuation mark, but short words are one token and long words are
+split:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Tool</p></th>
-<th class="head"><p>Maker</p></th>
-<th class="head"><p>Interface</p></th>
-<th class="head"><p>Best for</p></th>
+<tr class="row-odd"><th class="head"><p>Text</p></th>
+<th class="head"><p>Tokens</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>Claude Code</strong></p></td>
-<td><p>Anthropic</p></td>
-<td><p>Terminal (CLI)</p></td>
-<td><p>Agentic coding, multi-file edits, research workflows</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">cat</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">cat</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Gemini CLI</strong></p></td>
-<td><p>Google</p></td>
-<td><p>Terminal (CLI)</p></td>
-<td><p>Similar to Claude Code, integrates with Google ecosystem</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">neuroscience</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">neur</span></code> <code class="docutils literal notranslate"><span class="pre">oscience</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><strong>GitHub Copilot</strong></p></td>
-<td><p>Microsoft / GitHub</p></td>
-<td><p>IDE extension</p></td>
-<td><p>Inline completions, PR reviews, Copilot Workspace</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">prefrontal</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pre</span></code> <code class="docutils literal notranslate"><span class="pre">frontal</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Cursor / Windsurf</strong></p></td>
-<td><p>Anysphere / Codeium</p></td>
-<td><p>Full IDE fork</p></td>
-<td><p>Deep IDE integration, composer-style multi-file edits</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>ChatGPT (GPT-4o)</strong></p></td>
-<td><p>OpenAI</p></td>
-<td><p>Web / API</p></td>
-<td><p>Conversational tasks, Advanced Data Analysis (code interpreter)</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np.zeros(10)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">np</span></code> <code class="docutils literal notranslate"><span class="pre">.</span></code> <code class="docutils literal notranslate"><span class="pre">zeros</span></code> <code class="docutils literal notranslate"><span class="pre">(</span></code> <code class="docutils literal notranslate"><span class="pre">10</span></code> <code class="docutils literal notranslate"><span class="pre">)</span></code></p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<section id="claude-code">
-<h3>Claude Code<a class="headerlink" href="#claude-code" title="Link to this heading">#</a></h3>
-<p>Claude Code is a terminal-based agentic assistant built on Anthropic’s Claude models. It can read and write files, run shell commands, search the codebase, and iterate toward a goal — all while keeping you in the loop for approval. Key features relevant to this course:</p>
+<p>Modern models have vocabularies of 100 000–200 000 tokens. This matters because:</p>
 <ul class="simple">
-<li><p><strong>Plan mode</strong>: generates a step-by-step plan before taking any action; you approve before execution begins.</p></li>
-<li><p><strong>Permission modes</strong>: controls which actions the agent can take autonomously (read-only, write, shell commands).</p></li>
-<li><p><strong>Hooks</strong>: shell commands that run automatically before/after specific agent actions.</p></li>
-<li><p><strong>MCP servers</strong>: plug-in tools that extend the agent’s capabilities (e.g., database access, web search).</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">CLAUDE.md</span></code></strong>: a project-level instruction file that the agent reads at the start of every session.</p></li>
+<li><p>The model’s <em>context window</em> (how much it can “see”) is measured in tokens</p></li>
+<li><p>Token limits affect how much code, how many files, and how long a conversation
+the model can hold at once</p></li>
+<li><p>Rare words (species names, lab-specific abbreviations) may tokenize poorly and
+be represented less reliably</p></li>
 </ul>
 </section>
-<section id="gemini-cli">
-<h3>Gemini CLI<a class="headerlink" href="#gemini-cli" title="Link to this heading">#</a></h3>
-<p>Google’s terminal-based agent, structurally similar to Claude Code but backed by the Gemini model family. It integrates with Google services and has a very large context window, making it useful for tasks involving large codebases or documents.</p>
+<section id="the-core-mechanism-next-token-prediction">
+<h3>The Core Mechanism: Next-Token Prediction<a class="headerlink" href="#the-core-mechanism-next-token-prediction" title="Link to this heading">#</a></h3>
+<p>Everything these models do reduces to one operation:</p>
+<blockquote>
+<div><p>Given all the tokens seen so far, output a <strong>probability distribution</strong> over
+every possible next token. Sample from that distribution. Repeat.</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Input tokens:  &quot;import numpy as&quot;
+               ────────────────
+Model output:  P(&quot; np&quot;)      = 0.89
+               P(&quot; numpy&quot;)   = 0.04
+               P(&quot; pd&quot;)      = 0.02
+               P(&quot; plt&quot;)     = 0.01
+               P(everything else) ≈ 0.04
+               ────────────────
+Sampled token: &quot; np&quot;
+
+Full output:   &quot;import numpy as np&quot;
+</pre></div>
+</div>
+<p>That’s it. The model never “looks up” an answer in a database. It generates the
+most statistically likely continuation of the text you gave it, character by
+character (token by token).</p>
+<p>When that statistical likelihood aligns with correctness — as it usually does for
+well-represented patterns like Python syntax — the output is very useful. When it
+doesn’t — as it often does for obscure facts, recent events, or domain-specific
+reasoning — the output can be fluently, confidently wrong.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Transformer_(deep_learning_architecture)"><img alt="Transformer architecture" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/The-Transformer-model-architecture.png/220px-The-Transformer-model-architecture.png" /></a></p>
+<p><em>The Transformer architecture (Vaswani et al., 2017) is the foundation of all
+modern LLMs. The self-attention mechanism lets the model relate every token to
+every other token in its context window.</em></p>
+</aside>
+<p>The architecture behind most LLMs is the <strong>Transformer</strong>, introduced in the
+landmark 2017 paper <a class="reference external" href="https://arxiv.org/abs/1706.03762">“Attention Is All You Need”</a>
+by Vaswani et al. at Google. The key innovation is <strong>self-attention</strong>: a mechanism
+that lets the model simultaneously consider relationships between all pairs of
+tokens in its input window, rather than reading left-to-right sequentially.</p>
+<p>This is why LLMs are so much better than earlier approaches at tasks like code
+completion, where a variable defined at line 1 needs to be tracked through to
+line 200.</p>
+</section>
+<section id="the-training-pipeline">
+<h3>The Training Pipeline<a class="headerlink" href="#the-training-pipeline" title="Link to this heading">#</a></h3>
+<p>Modern LLMs are trained in three stages:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌─────────────────────────────────────────────────────────────────────────┐
+│  STAGE 1: PRE-TRAINING                                                  │
+│  Data: the entire readable internet + books + code + papers             │
+│  Task: predict the next token (self-supervised — no labels needed)      │
+│  Cost: months of compute, millions of dollars                           │
+│  Result: a model that &quot;knows&quot; about language, facts, and code           │
+└───────────────────────────────┬─────────────────────────────────────────┘
+                                │
+                                ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│  STAGE 2: SUPERVISED FINE-TUNING (SFT)                                  │
+│  Data: curated examples of good question→answer conversations           │
+│  Task: predict the assistant&#39;s ideal response                           │
+│  Result: the model learns to behave like a helpful assistant            │
+└───────────────────────────────┬─────────────────────────────────────────┘
+                                │
+                                ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│  STAGE 3: RLHF / RLAIF                                                  │
+│  (Reinforcement Learning from Human / AI Feedback)                      │
+│  Process: humans or another AI rate pairs of responses;                 │
+│           a reward model learns these preferences;                      │
+│           the LLM is trained via RL to maximize the reward              │
+│  Result: helpful, polite responses — but also sycophancy (see below)    │
+└─────────────────────────────────────────────────────────────────────────┘
+</pre></div>
+</div>
+<p><strong>Why this matters for you:</strong> The model’s “knowledge” comes from the pre-training
+corpus, which has a cutoff date. Anything published after that date is invisible
+to the model unless explicitly provided in the conversation. RLHF explains why the
+model is agreeable — sometimes overly so.</p>
+</section>
+<section id="failure-mode-1-hallucination">
+<h3>Failure Mode 1: Hallucination<a class="headerlink" href="#failure-mode-1-hallucination" title="Link to this heading">#</a></h3>
+<p>The model has no “I don’t know” state. When it has no reliable pattern to draw on,
+it generates whatever is most statistically likely — which often looks correct and
+is not. This is called <strong>hallucination</strong>.</p>
+<p>Common hallucinations you will encounter:</p>
+<p><strong>Invented citations</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>User: What papers should I read about calcium imaging in C. elegans?
+
+Model: I recommend:
+  - &quot;Whole-brain calcium imaging in C. elegans reveals neural correlates
+    of locomotion&quot; by Chen, Park &amp; Bhattacharya (Nature Neuroscience, 2019)
+
+Reality: This paper does not exist. The authors, title, journal, and year
+all sound plausible — none of it is real.
+</pre></div>
+</div>
+<p><strong>Non-existent API functions</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Model suggests:</span>
+<span class="n">mne</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">remove_ecg_artifacts_ica</span><span class="p">(</span><span class="n">raw</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;fastica&#39;</span><span class="p">)</span>
+
+<span class="c1"># Reality: This function does not exist in MNE-Python.</span>
+<span class="c1"># The model knows MNE-Python, knows it has ICA, and filled in the rest.</span>
+</pre></div>
+</div>
+<p><strong>Plausible but wrong explanations</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>User: Why does my EEG signal have a 50 Hz artifact?
+
+Model: This is due to the natural resonance frequency of neural tissue,
+which couples with your amplifier circuit at...
+
+Reality: It&#39;s mains electrical interference. The model gave a
+plausible-sounding but completely wrong explanation.
+</pre></div>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Defense against hallucination</p>
+<p>Never accept a citation without finding the actual paper (PubMed, Google Scholar).
+Never use a function without checking the library’s documentation.
+The model is confident regardless of whether it knows the answer.</p>
+</div>
+</section>
+<section id="failure-mode-2-sycophancy">
+<h3>Failure Mode 2: Sycophancy<a class="headerlink" href="#failure-mode-2-sycophancy" title="Link to this heading">#</a></h3>
+<p>RLHF trains the model to maximize human approval ratings. Since humans tend to
+rate agreeable, validating responses highly, the model develops a systematic bias
+toward telling you what you want to hear.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>User:   What&#39;s 7 × 8?
+Model:  56.
+
+User:   Are you sure? I thought it was 54.
+Model:  You&#39;re right, I apologize — it&#39;s 54.   ← WRONG. It&#39;s 56.
+</pre></div>
+</div>
+<p>The model will:</p>
+<ul class="simple">
+<li><p>Change a correct answer if you express doubt</p></li>
+<li><p>Praise your code even when it has bugs</p></li>
+<li><p>Agree with your proposed solution even if it’s wrong</p></li>
+<li><p>Downplay concerns you seem dismissive of</p></li>
+</ul>
+<p><strong>The defense:</strong> Never use social pressure to get a different answer. If you think
+the model is wrong, provide evidence or a counter-argument. Say:
+<em>“What is 7 × 8? Please verify by multiplication.”</em>
+— not —
+<em>“Are you sure? I think it’s 54.”</em></p>
+<p>Sycophancy is structural, not a glitch. It cannot be prompted away entirely.</p>
+</section>
+<section id="failure-mode-3-context-window-limits">
+<h3>Failure Mode 3: Context-Window Limits<a class="headerlink" href="#failure-mode-3-context-window-limits" title="Link to this heading">#</a></h3>
+<p>Every LLM has a maximum number of tokens it can process at once — the
+<strong>context window</strong>. As of 2025, models range from ~100K to ~1M tokens (roughly
+75 000–750 000 words). This sounds enormous, but it fills up fast:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Approx. tokens</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>One Python file (200 lines)</p></td>
+<td><p>~1 500</p></td>
+</tr>
+<tr class="row-odd"><td><p>Entire codebase (50 files)</p></td>
+<td><p>~75 000</p></td>
+</tr>
+<tr class="row-even"><td><p>Long conversation (1 hour)</p></td>
+<td><p>~20 000</p></td>
+</tr>
+<tr class="row-odd"><td><p>One research paper (PDF)</p></td>
+<td><p>~8 000</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>What happens when context fills up:</strong></p>
+<ul class="simple">
+<li><p>The model silently forgets earlier parts of the conversation</p></li>
+<li><p>Code written earlier in the session may be inconsistent with new code</p></li>
+<li><p>Constraints you stated at the start (“never modify <code class="docutils literal notranslate"><span class="pre">data/raw/</span></code>”) may be forgotten</p></li>
+<li><p>The model does <em>not</em> warn you when this happens</p></li>
+</ul>
+<p><strong>Defenses:</strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">/compact</span></code> in Claude Code to compress conversation history</p></li>
+<li><p>For long tasks, start a fresh session with a focused <a class="reference external" href="http://CLAUDE.md">CLAUDE.md</a></p></li>
+<li><p>Break large codebases into smaller, focused sessions</p></li>
+</ul>
+</section>
+<section id="failure-mode-4-no-self-verification">
+<h3>Failure Mode 4: No Self-Verification<a class="headerlink" href="#failure-mode-4-no-self-verification" title="Link to this heading">#</a></h3>
+<p>The model generates text. It cannot:</p>
+<ul class="simple">
+<li><p>Run the code it writes to check if it works</p></li>
+<li><p>Look up whether the function it mentions actually exists</p></li>
+<li><p>Verify a calculation by computing it independently</p></li>
+<li><p>Check whether a paper it cites is real</p></li>
+</ul>
+<p>It generates the <em>appearance</em> of correctness. You are the verification step.</p>
+<p>This is not a bug that will be fixed — it’s a fundamental property of the
+architecture. Some systems (like Claude Code, which can actually run code) partially
+address this by adding a tool-use layer on top of the model, but the underlying
+model still cannot verify its own outputs.</p>
+<div class="tip admonition">
+<p class="admonition-title">The One Mental Model You Need</p>
+<p><strong>LLMs are stochastic next-token predictors.</strong></p>
+<p>They are <em>excellent</em> at:</p>
+<ul class="simple">
+<li><p>Completing well-established patterns (Python boilerplate, common idioms)</p></li>
+<li><p>Explaining concepts that are well-represented in text</p></li>
+<li><p>Reformatting, renaming, and restructuring code</p></li>
+<li><p>Writing first drafts you’ll then edit</p></li>
+</ul>
+<p>They are <em>unreliable</em> for:</p>
+<ul class="simple">
+<li><p>Precise factual recall (especially citations, specific API details, recent events)</p></li>
+<li><p>Mathematical reasoning beyond a few steps</p></li>
+<li><p>Code that requires running to verify</p></li>
+<li><p>Anything where “sounds right” ≠ “is right”</p></li>
+</ul>
+<p>Keep this model in mind every time you use these tools.</p>
+</div>
+</section>
+</section>
+<section id="part-2-the-agentic-ai-landscape">
+<h2>Part 2: The Agentic AI Landscape<a class="headerlink" href="#part-2-the-agentic-ai-landscape" title="Link to this heading">#</a></h2>
+<section id="what-makes-a-tool-agentic">
+<h3>What Makes a Tool “Agentic”?<a class="headerlink" href="#what-makes-a-tool-agentic" title="Link to this heading">#</a></h3>
+<p>A <strong>regular</strong> AI assistant answers questions in a chat interface. You ask, it
+answers, you act.</p>
+<p>An <strong>agentic</strong> AI takes <em>actions</em> autonomously: it reads files, writes code, runs
+tests, executes shell commands, and iterates toward a goal across many steps —
+with you approving or reviewing along the way. The agent is the loop; you are the
+supervisor.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Regular AI:    User asks → Model answers → User acts
+                                    ↑
+Agentic AI:    User asks → Model plans → Model acts → Model observes result
+                                               ↗            │
+                                         (repeat)  ←────────┘
+                                         until goal reached
+</pre></div>
+</div>
+<p>This distinction matters because agentic tools can cause real effects — creating
+files, running commands, committing code. With that power comes the need for
+careful oversight.</p>
+</section>
+<section id="tool-comparison-as-of-mid-2025">
+<h3>Tool Comparison (as of mid-2025)<a class="headerlink" href="#tool-comparison-as-of-mid-2025" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Interface</p></th>
+<th class="head"><p>Underlying model</p></th>
+<th class="head"><p>Best for</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong><a class="reference external" href="https://github.com/anthropics/claude-code">Claude Code</a></strong></p></td>
+<td><p>Terminal (CLI)</p></td>
+<td><p>Claude (Anthropic)</p></td>
+<td><p>Agentic coding, multi-file edits, research workflows, plan mode</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Gemini CLI</strong></p></td>
+<td><p>Terminal (CLI)</p></td>
+<td><p>Gemini (Google)</p></td>
+<td><p>Large context tasks, Google ecosystem integration</p></td>
+</tr>
+<tr class="row-even"><td><p><strong><a class="reference external" href="https://github.com/features/copilot">GitHub Copilot</a></strong></p></td>
+<td><p>IDE extension</p></td>
+<td><p>GPT-4o / Claude</p></td>
+<td><p>Inline completions, PR reviews, staying in IDE flow</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong><a class="reference external" href="https://cursor.com">Cursor</a></strong></p></td>
+<td><p>Full IDE (VS Code fork)</p></td>
+<td><p>GPT-4o / Claude</p></td>
+<td><p>GUI-based agentic editing, Composer mode</p></td>
+</tr>
+<tr class="row-even"><td><p><strong><a class="reference external" href="https://windsurf.com">Windsurf</a></strong></p></td>
+<td><p>Full IDE (VS Code fork)</p></td>
+<td><p>Custom (Codeium)</p></td>
+<td><p>Cascade agentic mode, GUI workflow</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>ChatGPT / GPT-4o</strong></p></td>
+<td><p>Web / API</p></td>
+<td><p>GPT-4o (OpenAI)</p></td>
+<td><p>Conversational tasks, Advanced Data Analysis</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Tip: How to choose</p>
+<p>All of these tools are capable. Choose based on your workflow:</p>
+<ul class="simple">
+<li><p>If you live in the terminal → Claude Code or Gemini CLI</p></li>
+<li><p>If you prefer a GUI IDE → Cursor or Windsurf</p></li>
+<li><p>If you want quick inline help while coding → GitHub Copilot</p></li>
+<li><p>If you’re doing ad-hoc data exploration → ChatGPT Advanced Data Analysis</p></li>
+</ul>
+</div>
+</section>
+<section id="claude-code">
+<h3>Claude Code<a class="headerlink" href="#claude-code" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://github.com/anthropics/claude-code">Claude Code</a> is Anthropic’s terminal-based
+agentic coding assistant. It integrates directly with your shell, has full access
+to your filesystem (with your permission), and maintains a conversational context
+about your entire project.</p>
+<p><strong>Distinctive features:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>What it does</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Plan mode</strong></p></td>
+<td><p>Shows a step-by-step plan <em>before</em> executing anything; you approve before files are touched</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong><code class="docutils literal notranslate"><span class="pre">CLAUDE.md</span></code></strong></p></td>
+<td><p>Project-level instruction file; loaded automatically at session start</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Hooks</strong></p></td>
+<td><p>Shell commands triggered automatically before/after agent actions</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>MCP servers</strong></p></td>
+<td><p>Plug-in tools that extend agent capabilities (databases, web search, APIs)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Permission modes</strong></p></td>
+<td><p>Fine-grained control over what the agent can do without asking</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong><code class="docutils literal notranslate"><span class="pre">/compact</span></code></strong></p></td>
+<td><p>Compresses conversation history to preserve context window</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Claude Code is the tool we’ll focus on in this class. Most concepts transfer
+directly to other agentic tools.</p>
 </section>
 <section id="github-copilot">
 <h3>GitHub Copilot<a class="headerlink" href="#github-copilot" title="Link to this heading">#</a></h3>
-<p>The most widely used AI coding tool, embedded directly in VS Code, JetBrains, and other IDEs. It offers inline completions (single lines or whole functions), chat, and increasingly agentic “Copilot Workspace” features for multi-file tasks and PR generation.</p>
+<p>GitHub Copilot is the most widely deployed AI coding tool, embedded as an extension
+in VS Code, JetBrains IDEs, Neovim, and others. Its main strength is <strong>staying in
+your IDE flow</strong>: as you type, it suggests completions in gray ghost text that you
+accept with <code class="docutils literal notranslate"><span class="pre">Tab</span></code>.</p>
+<p>Beyond inline completions, Copilot Chat lets you ask questions about your code,
+and <strong>Copilot Workspace</strong> (newer) supports multi-file agentic tasks within the IDE.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>GitHub Copilot was released in 2021 and is now used by more than
+1.8 million paid subscribers and is included free for students
+through the <a class="reference external" href="https://education.github.com/pack">GitHub Student Developer Pack</a>.</p>
+</aside>
+<p><strong>Best for:</strong> developers who want AI help without leaving their IDE, and for quick
+single-file completions and explanations.</p>
 </section>
 <section id="cursor-and-windsurf">
 <h3>Cursor and Windsurf<a class="headerlink" href="#cursor-and-windsurf" title="Link to this heading">#</a></h3>
-<p>Full IDE forks (both built on VS Code) with LLM assistance deeply embedded at every level. “Composer” mode in Cursor and “Cascade” in Windsurf allow multi-file, multi-step editing similar to terminal agents, but within a graphical IDE.</p>
+<p>Both are full IDE forks built on VS Code — meaning your existing VS Code extensions,
+settings, and keybindings work as-is. The AI is embedded more deeply than a plugin.</p>
+<p><strong>Cursor’s “Composer”</strong> and <strong>Windsurf’s “Cascade”</strong> allow you to describe a goal
+and have the AI autonomously edit multiple files to achieve it, within the GUI.
+This is the closest GUI equivalent to the terminal-based agents.</p>
+<p><strong>When to choose these:</strong> if you’re more comfortable in a GUI environment, or if
+your team isn’t comfortable with terminal-based tools, Cursor/Windsurf give you
+most of the agentic power with a familiar interface.</p>
 </section>
 <section id="chatgpt-gpt-4o-advanced-data-analysis">
 <h3>ChatGPT / GPT-4o Advanced Data Analysis<a class="headerlink" href="#chatgpt-gpt-4o-advanced-data-analysis" title="Link to this heading">#</a></h3>
-<p>OpenAI’s conversational interface. Particularly useful for exploratory data analysis: the Advanced Data Analysis (code interpreter) feature can run Python in a sandboxed environment, generate plots, and iterate on data tasks interactively.</p>
+<p>OpenAI’s <strong>Advanced Data Analysis</strong> (code interpreter) mode runs real Python code
+in a sandboxed container. You can upload a CSV, describe what you want to plot or
+analyse, and the model will write and run the code — showing you the output and
+iterating if something fails.</p>
+<p><strong>Best for:</strong> rapid exploratory analysis when you want to stay conversational and
+visual, especially for quick sanity checks on data you’ve just received.</p>
 <div class="warning admonition">
-<p class="admonition-title">A Word of Caution</p>
-<p>Capabilities, pricing, and availability change rapidly in this space. Benchmark comparisons between models go stale within months. Choose a tool based on your actual workflow needs, not marketing claims.</p>
+<p class="admonition-title">Landscape warning</p>
+<p>Capabilities, benchmark rankings, and pricing change every few months.
+By the time you read this, new models and tools will have been released.
+Evaluate tools on your actual tasks, not on benchmarks or press releases.</p>
 </div>
 </section>
 </section>
-<section id="best-practices">
-<h2>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading">#</a></h2>
-<p>Knowing that LLMs are stochastic next-token predictors directly implies how to use them well. The following practices apply to Claude Code specifically, but most transfer to any agentic tool.</p>
+<section id="part-3-getting-started-with-claude-code">
+<h2>Part 3: Getting Started with Claude Code<a class="headerlink" href="#part-3-getting-started-with-claude-code" title="Link to this heading">#</a></h2>
+<section id="prerequisites-and-installation">
+<h3>Prerequisites and Installation<a class="headerlink" href="#prerequisites-and-installation" title="Link to this heading">#</a></h3>
+<p><strong>What you need:</strong></p>
+<ul class="simple">
+<li><p>Node.js 18 or later (<code class="docutils literal notranslate"><span class="pre">node</span> <span class="pre">--version</span></code> to check)</p></li>
+<li><p>An Anthropic account at <a class="reference external" href="https://console.anthropic.com">console.anthropic.com</a></p></li>
+<li><p>Terminal access (macOS Terminal, Linux bash/zsh, Windows WSL2)</p></li>
+</ul>
+<p><strong>Install:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>@anthropic-ai/claude-code
+</pre></div>
+</div>
+<p><strong>Verify:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>claude<span class="w"> </span>--version
+</pre></div>
+</div>
+<p><strong>First-time authentication:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>claude
+</pre></div>
+</div>
+<p>The first launch opens a browser window to authenticate with your Anthropic account.
+After that, credentials are stored locally and you won’t need to authenticate again.</p>
+<div class="note admonition">
+<p class="admonition-title">Anthropic API costs</p>
+<p>Claude Code uses Anthropic’s API, which has a per-token cost. For typical development
+sessions, costs are a few cents to a few dollars per hour. You can monitor usage and
+set spending limits in the <a class="reference external" href="https://console.anthropic.com">Anthropic console</a>.
+As of 2025, students and researchers can apply for research API credits.</p>
+</div>
+</section>
+<section id="your-first-session">
+<h3>Your First Session<a class="headerlink" href="#your-first-session" title="Link to this heading">#</a></h3>
+<p>Navigate to a project directory and launch:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/my_analysis_project
+claude
+</pre></div>
+</div>
+<p>You’ll see a prompt. Type your first message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt; What files are in this directory and what do they do?
+</pre></div>
+</div>
+<p>Claude Code will read the directory structure and describe each file. It already
+has context of your working directory. You haven’t written any code yet — you’ve
+just introduced it to your project.</p>
+<p><strong>A more useful first interaction:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">I</span> <span class="n">have</span> <span class="n">EEG</span> <span class="n">recordings</span> <span class="ow">in</span> <span class="n">data</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span> <span class="k">as</span> <span class="o">.</span><span class="n">edf</span> <span class="n">files</span><span class="o">.</span> <span class="n">The</span> <span class="n">file</span> <span class="n">names</span> <span class="n">follow</span> <span class="n">the</span>
+  <span class="n">pattern</span> <span class="n">S</span><span class="p">{</span><span class="n">subject_id</span><span class="p">}</span><span class="n">_</span><span class="p">{</span><span class="n">condition</span><span class="p">}</span><span class="o">.</span><span class="n">edf</span><span class="o">.</span> <span class="n">Describe</span> <span class="n">what</span> <span class="n">I</span><span class="s1">&#39;d need to write to</span>
+  <span class="n">load</span> <span class="nb">all</span> <span class="n">of</span> <span class="n">these</span> <span class="n">files</span> <span class="ow">and</span> <span class="n">extract</span> <span class="n">the</span> <span class="n">subject</span> <span class="n">IDs</span> <span class="ow">and</span> <span class="n">conditions</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>This kind of contextual question — where you describe the structure of your data
+and ask for an approach before writing any code — is one of the most powerful uses
+of the tool.</p>
+<p><img alt="Claude Code session example" src="classes/class_4/claude_code_session.png" /></p>
+<p><em>Claude Code running in a terminal. The model describes files in the project,
+proposes an approach, and waits for instructions. Note the token cost shown
+at the top right — monitoring this helps you manage API spend.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Screenshot placeholder</strong> — this image will show a real Claude Code session.
+Capture it by running <code class="docutils literal notranslate"><span class="pre">claude</span></code> in a project directory and asking a question about
+the codebase.</p>
+</div>
+</section>
+<section id="essential-commands-and-keyboard-shortcuts">
+<h3>Essential Commands and Keyboard Shortcuts<a class="headerlink" href="#essential-commands-and-keyboard-shortcuts" title="Link to this heading">#</a></h3>
+<p><strong>Keyboard shortcuts (in the session):</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Shortcut</p></th>
+<th class="head"><p>Action</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Shift+Tab</span></code></p></td>
+<td><p>Toggle <strong>plan mode</strong> on/off</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Esc</span></code></p></td>
+<td><p>Cancel the current operation (safe — undoes nothing)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code></p></td>
+<td><p>Interrupt generation mid-stream</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Up/Down</span></code></p></td>
+<td><p>Navigate conversation history</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Slash commands (type in the prompt):</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>What it does</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/help</span></code></p></td>
+<td><p>Show all available commands</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">/clear</span></code></p></td>
+<td><p>Clear conversation history (fresh start)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/compact</span></code></p></td>
+<td><p>Compress history to save context window</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">/cost</span></code></p></td>
+<td><p>Show token usage and cost for this session</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/model</span></code></p></td>
+<td><p>Switch to a different Claude model</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">/status</span></code></p></td>
+<td><p>Show current session state</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/mcp</span></code></p></td>
+<td><p>List connected MCP servers</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Useful interaction patterns:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">explain</span> <span class="p">[</span><span class="n">file</span> <span class="ow">or</span> <span class="n">function</span><span class="p">]</span>        <span class="c1"># understand existing code</span>
+<span class="o">&gt;</span> <span class="n">add</span> <span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="n">to</span> <span class="p">[</span><span class="n">file</span><span class="p">]</span>           <span class="c1"># targeted feature addition  </span>
+<span class="o">&gt;</span> <span class="n">fix</span> <span class="n">the</span> <span class="n">error</span> <span class="ow">in</span> <span class="p">[</span><span class="n">file</span><span class="p">]:</span> <span class="p">[</span><span class="n">error</span><span class="p">]</span>  <span class="c1"># paste the error directly</span>
+<span class="o">&gt;</span> <span class="n">write</span> <span class="n">tests</span> <span class="k">for</span> <span class="p">[</span><span class="n">function</span><span class="p">]</span>        <span class="c1"># test generation</span>
+<span class="o">&gt;</span> <span class="n">run</span> <span class="n">the</span> <span class="n">tests</span> <span class="ow">and</span> <span class="n">fix</span> <span class="n">failures</span>    <span class="c1"># agentic loop (uses shell)</span>
+<span class="o">&gt;</span> <span class="n">what</span> <span class="n">changed</span> <span class="n">since</span> <span class="n">the</span> <span class="n">last</span> <span class="n">commit</span> <span class="c1"># git-aware context</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="part-4-setting-up-your-project">
+<h2>Part 4: Setting Up Your Project<a class="headerlink" href="#part-4-setting-up-your-project" title="Link to this heading">#</a></h2>
+<section id="the-claude-md-file-your-project-s-briefing-document">
+<h3>The <code class="docutils literal notranslate"><span class="pre">CLAUDE.md</span></code> File — Your Project’s Briefing Document<a class="headerlink" href="#the-claude-md-file-your-project-s-briefing-document" title="Link to this heading">#</a></h3>
+<p>The single most impactful thing you can do before using Claude Code on a real
+project is write a <code class="docutils literal notranslate"><span class="pre">CLAUDE.md</span></code> file. It lives at the root of your repository and
+is <strong>automatically loaded by Claude Code at the start of every session</strong>. Think of
+it as the briefing you’d give a new collaborator on their first day.</p>
+<p><strong>A <a class="reference external" href="http://CLAUDE.md">CLAUDE.md</a> for a neuroscience analysis project:</strong></p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Auditory Attention EEG Analysis</span>
+
+Analyses EEG data from a selective auditory attention task (N=24 subjects,
+64-channel BrainAmp, 1000 Hz sampling rate). The paradigm: subjects listen to
+two simultaneous speech streams and attend to one. We measure neural tracking
+of the attended vs. unattended stream via temporal response functions (TRFs).
+
+<span class="gu">## Directory Structure</span>
+<span class="k">-</span><span class="w"> </span><span class="sb">`data/raw/`</span>       — original .vhdr/.vmrk/.eeg files — <span class="gs">**DO NOT MODIFY**</span>
+<span class="k">-</span><span class="w"> </span><span class="sb">`data/processed/`</span> — MNE Raw/Epochs objects as .fif files
+<span class="k">-</span><span class="w"> </span><span class="sb">`data/results/`</span>   — TRF objects, statistical results as .pkl/.csv
+<span class="k">-</span><span class="w"> </span><span class="sb">`src/`</span>            — all source Python modules
+<span class="k">-</span><span class="w"> </span><span class="sb">`notebooks/`</span>      — exploratory Jupyter notebooks (not run at build time)
+<span class="k">-</span><span class="w"> </span><span class="sb">`tests/`</span>          — pytest test suite
+
+<span class="gu">## Commands</span>
+<span class="k">-</span><span class="w"> </span>Run all tests:    <span class="sb">`pytest tests/ -v`</span>
+<span class="k">-</span><span class="w"> </span>Process subject:  <span class="sb">`python src/pipeline.py --subject S01`</span>
+<span class="k">-</span><span class="w"> </span>Fit TRFs:         <span class="sb">`python src/trf.py --all-subjects`</span>
+<span class="k">-</span><span class="w"> </span>Generate figures: <span class="sb">`python src/figures.py`</span>
+
+<span class="gu">## Python Environment</span>
+<span class="k">-</span><span class="w"> </span>Python 3.11, managed with conda: <span class="sb">`conda activate eeg_attention`</span>
+<span class="k">-</span><span class="w"> </span>Key libraries: MNE-Python 1.7, mne-features 0.3, mtrf-py 1.1
+
+<span class="gu">## Coding Conventions</span>
+<span class="k">-</span><span class="w"> </span>All functions: type hints + NumPy-style docstrings
+<span class="k">-</span><span class="w"> </span>Random seeds: <span class="sb">`rng = np.random.default_rng(seed=42)`</span> always
+<span class="k">-</span><span class="w"> </span>EEG operations: use MNE-Python only (no custom filtering/epoching)
+<span class="k">-</span><span class="w"> </span>Statistical thresholds: α = 0.05, FDR-corrected unless noted otherwise
+
+<span class="gu">## Hard Constraints — Do Not Break These</span>
+<span class="k">-</span><span class="w"> </span>Never commit files from <span class="sb">`data/`</span> (too large, contains participant data)
+<span class="k">-</span><span class="w"> </span>Never overwrite files in <span class="sb">`data/raw/`</span>
+<span class="k">-</span><span class="w"> </span>All figure-generating scripts must be reproducible (fixed seeds, no
+  random operations without seeding)
+<span class="k">-</span><span class="w"> </span>Keep <span class="sb">`src/legacy/`</span> intact (deprecated code preserved for reviewer reference)
+</pre></div>
+</div>
+<p>Notice the key sections:</p>
+<ol class="arabic simple">
+<li><p><strong>Project description</strong> — gives the model scientific context</p></li>
+<li><p><strong>Directory structure</strong> — tells it what’s where and what’s off-limits</p></li>
+<li><p><strong>Commands</strong> — so it can actually run things correctly</p></li>
+<li><p><strong>Environment</strong> — prevents it from suggesting wrong Python version or library</p></li>
+<li><p><strong>Conventions</strong> — so new code matches existing style</p></li>
+<li><p><strong>Hard constraints</strong> — lines that must not be crossed</p></li>
+</ol>
+<div class="important admonition">
+<p class="admonition-title">Write <a class="reference external" href="http://CLAUDE.md">CLAUDE.md</a> before your first session, not after</p>
+<p>The most common frustration with AI coding tools is: <em>“It keeps doing the wrong thing.”</em>
+In 90% of cases, the fix is a better <code class="docutils literal notranslate"><span class="pre">CLAUDE.md</span></code>. The model cannot guess your
+project structure, your conventions, or your constraints — but it will follow them
+precisely if you write them down.</p>
+<p>Spend 15 minutes on <a class="reference external" href="http://CLAUDE.md">CLAUDE.md</a> before your first session. You will save hours of
+corrections.</p>
+</div>
+</section>
+<section id="what-to-keep-out-of-claude-md">
+<h3>What to Keep Out of <code class="docutils literal notranslate"><span class="pre">CLAUDE.md</span></code><a class="headerlink" href="#what-to-keep-out-of-claude-md" title="Link to this heading">#</a></h3>
+<p>Don’t put secrets (API keys, passwords) in <a class="reference external" href="http://CLAUDE.md">CLAUDE.md</a>. Don’t put large data
+descriptions — the model should discover data structure by reading files. Don’t
+make it so long that the model can’t parse it; a good <a class="reference external" href="http://CLAUDE.md">CLAUDE.md</a> is 1–2 pages.</p>
+</section>
+<section id="permission-modes">
+<h3>Permission Modes<a class="headerlink" href="#permission-modes" title="Link to this heading">#</a></h3>
+<p>By default, Claude Code asks for confirmation before writing files or running shell
+commands. This is the right setting while you’re learning. As you build trust in
+your workflows, you can adjust:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Mode</p></th>
+<th class="head"><p>Behaviour</p></th>
+<th class="head"><p>When to use</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Default</strong></p></td>
+<td><p>Ask before every file write and shell command</p></td>
+<td><p>Starting out, unfamiliar projects</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--autoApproveTools</span> <span class="pre">read</span></code></p></td>
+<td><p>Auto-approve read-only operations</p></td>
+<td><p>Exploration sessions</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--autoApproveTools</span> <span class="pre">write</span></code></p></td>
+<td><p>Auto-approve file writes (still asks for shell)</p></td>
+<td><p>Trusted projects with good tests</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>You can also set per-tool permissions in <code class="docutils literal notranslate"><span class="pre">.claude/settings.json</span></code>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;autoApproveTools&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Read&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Glob&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Grep&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;allow&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Read(*)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Write(src/**)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Bash(pytest*)&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;deny&quot;</span><span class="p">:</span><span class="w">  </span><span class="p">[</span><span class="s2">&quot;Bash(rm*)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Bash(git push*)&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This example allows the agent to read anything, write to <code class="docutils literal notranslate"><span class="pre">src/</span></code>, and run pytest
+commands — but never <code class="docutils literal notranslate"><span class="pre">rm</span></code> or <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>. Precise control over what the agent
+can do without supervision.</p>
+<div class="warning admonition">
+<p class="admonition-title">Never use <code class="docutils literal notranslate"><span class="pre">--dangerously-skip-permissions</span></code></p>
+<p>This flag disables all confirmation prompts. Do not use it outside of
+carefully sandboxed, throwaway environments. It’s the equivalent of giving
+someone root access to your machine with no oversight.</p>
+</div>
+</section>
+<section id="git-integration">
+<h3>Git Integration<a class="headerlink" href="#git-integration" title="Link to this heading">#</a></h3>
+<p>Claude Code is git-aware by default. It can read your git history, check what’s
+changed, and perform git operations. Before every significant AI-assisted session:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verify you&#39;re on a clean branch</span>
+git<span class="w"> </span>status
+
+<span class="c1"># Create a feature branch for AI-assisted work</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>ai/add-trf-analysis
+
+<span class="c1"># Work with Claude Code...</span>
+
+<span class="c1"># Review every change before committing</span>
+git<span class="w"> </span>diff
+git<span class="w"> </span>add<span class="w"> </span>-p<span class="w">   </span><span class="c1"># stage interactively, hunk by hunk</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add TRF analysis module&quot;</span>
+</pre></div>
+</div>
+<p>Working on a dedicated branch means you can always <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">main</span></code> to get
+back to a known-good state if something goes wrong. This is your safety net.</p>
+</section>
+</section>
+<section id="part-5-the-core-workflow">
+<h2>Part 5: The Core Workflow<a class="headerlink" href="#part-5-the-core-workflow" title="Link to this heading">#</a></h2>
+<section id="the-golden-cycle">
+<h3>The Golden Cycle<a class="headerlink" href="#the-golden-cycle" title="Link to this heading">#</a></h3>
+<p>Effective use of agentic AI comes down to one repeating cycle:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌──────────────────────────────────────────────────────────────┐
+│                                                              │
+│   1. ASK WELL ──→ 2. REVIEW PLAN ──→ 3. EXECUTE            │
+│        ↑                                    │               │
+│        │                                    ▼               │
+│   6. COMMIT ←── 5. TEST ←────── 4. REVIEW DIFF             │
+│                                                              │
+└──────────────────────────────────────────────────────────────┘
+</pre></div>
+</div>
+<p>Each step is small and reviewable. Never let the agent accumulate many changes
+without a review step — a single wrong assumption early in a long chain can
+corrupt everything that follows.</p>
+</section>
+<section id="step-1-ask-well">
+<h3>Step 1: Ask Well<a class="headerlink" href="#step-1-ask-well" title="Link to this heading">#</a></h3>
+<p>The quality of the output scales directly with the quality of the input.</p>
+<p><strong>Anatomy of a good prompt:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Specific</span> <span class="n">file</span> <span class="ow">and</span> <span class="n">function</span><span class="p">]</span>
+<span class="p">[</span><span class="n">The</span> <span class="n">exact</span> <span class="n">problem</span> <span class="ow">or</span> <span class="n">desired</span> <span class="n">outcome</span><span class="p">]</span>
+<span class="p">[</span><span class="n">Any</span> <span class="n">constraints</span> <span class="ow">or</span> <span class="n">conventions</span> <span class="n">to</span> <span class="n">follow</span><span class="p">]</span>
+<span class="p">[</span><span class="n">What</span> <span class="n">success</span> <span class="n">looks</span> <span class="n">like</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Examples:</strong></p>
+<p>❌ <strong>Too vague — the model will make assumptions and likely get them wrong:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">Fix</span> <span class="n">the</span> <span class="n">analysis</span> <span class="n">script</span>
+</pre></div>
+</div>
+<p>✅ <strong>Specific and context-rich:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">In</span> <span class="n">src</span><span class="o">/</span><span class="n">spectral</span><span class="o">.</span><span class="n">py</span><span class="p">,</span> <span class="n">the</span> <span class="n">function</span> <span class="n">compute_coherence</span><span class="p">()</span> <span class="n">raises</span> <span class="n">a</span> <span class="ne">ZeroDivisionError</span>
+  <span class="n">when</span> <span class="n">the</span> <span class="n">power</span> <span class="n">spectrum</span> <span class="n">array</span> <span class="ow">is</span> <span class="n">empty</span> <span class="p">(</span><span class="n">shape</span> <span class="p">(</span><span class="mi">0</span><span class="p">,))</span><span class="o">.</span> <span class="n">Add</span> <span class="n">a</span> <span class="n">guard</span> <span class="n">that</span> <span class="n">returns</span>
+  <span class="n">np</span><span class="o">.</span><span class="n">nan</span> <span class="ow">in</span> <span class="n">that</span> <span class="n">case</span><span class="o">.</span> <span class="n">Also</span> <span class="n">add</span> <span class="n">a</span> <span class="n">pytest</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">tests</span><span class="o">/</span><span class="n">test_spectral</span><span class="o">.</span><span class="n">py</span> <span class="n">that</span>
+  <span class="n">covers</span> <span class="n">this</span> <span class="n">edge</span> <span class="n">case</span><span class="o">.</span> <span class="n">Follow</span> <span class="n">the</span> <span class="n">existing</span> <span class="n">test</span> <span class="n">style</span> <span class="ow">in</span> <span class="n">that</span> <span class="n">file</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>The second prompt tells the model:</p>
+<ul class="simple">
+<li><p>Which file and function</p></li>
+<li><p>The exact error and when it occurs</p></li>
+<li><p>The desired behaviour (<code class="docutils literal notranslate"><span class="pre">np.nan</span></code>)</p></li>
+<li><p>Where to put the test and what style to use</p></li>
+</ul>
+<p>No ambiguity means no wrong assumptions.</p>
+</section>
+<section id="step-2-plan-mode-the-most-important-feature">
+<h3>Step 2: Plan Mode — The Most Important Feature<a class="headerlink" href="#step-2-plan-mode-the-most-important-feature" title="Link to this heading">#</a></h3>
+<p>For any change that touches more than one file, <strong>enable plan mode before
+submitting</strong> (<code class="docutils literal notranslate"><span class="pre">Shift+Tab</span></code>). The agent generates a step-by-step plan and waits for
+your approval before taking any action.</p>
+<p><strong>What a good plan looks like:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>I&#39;ll make the following changes:
+
+1. Read src/spectral.py to understand the current compute_coherence() signature
+   and how the power spectrum is computed.
+
+2. Edit src/spectral.py:
+   - Add a guard at the top of compute_coherence(): if the input array is
+     empty, return np.nan immediately.
+
+3. Read tests/test_spectral.py to understand the existing test style.
+
+4. Edit tests/test_spectral.py:
+   - Add test_compute_coherence_empty_spectrum() that calls compute_coherence()
+     with an empty array and asserts the result is np.nan.
+
+Shall I proceed?
+</pre></div>
+</div>
+<p><strong>Questions to ask yourself while reading the plan:</strong></p>
+<ul class="simple">
+<li><p>Does it correctly understand what I asked?</p></li>
+<li><p>Are all the files it plans to touch the right ones?</p></li>
+<li><p>Is there anything it’s <em>not</em> doing that it should?</p></li>
+<li><p>Is it going to touch anything it shouldn’t?</p></li>
+</ul>
+<p>You can ask follow-up questions or give corrections before approving:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">Before</span> <span class="n">you</span> <span class="n">do</span> <span class="n">step</span> <span class="mi">4</span><span class="p">,</span> <span class="n">also</span> <span class="n">check</span> <span class="k">if</span> <span class="n">there</span> <span class="n">are</span> <span class="nb">any</span> <span class="n">other</span> <span class="n">tests</span> <span class="k">for</span>
+  <span class="n">compute_coherence</span><span class="p">()</span> <span class="n">that</span> <span class="n">might</span> <span class="n">need</span> <span class="n">updating</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><img alt="Plan mode output" src="classes/class_4/plan_mode_screenshot.png" /></p>
+<p><em>Plan mode shows the agent’s intended actions before any file is touched. This is
+your primary opportunity to catch misunderstandings.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Screenshot placeholder</strong> — capture this by typing <code class="docutils literal notranslate"><span class="pre">Shift+Tab</span></code> to toggle plan
+mode on, then submitting a multi-file task.</p>
+</div>
+</section>
+<section id="step-3-execute-and-monitor">
+<h3>Step 3: Execute and Monitor<a class="headerlink" href="#step-3-execute-and-monitor" title="Link to this heading">#</a></h3>
+<p>Once you approve the plan, watch the execution. Each action the agent takes is
+shown as it happens:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>● Read src/spectral.py (2.3kB)
+● Edit src/spectral.py
+    + if arr.size == 0:
+    +     return np.nan
+● Read tests/test_spectral.py (1.8kB)
+● Edit tests/test_spectral.py
+    + def test_compute_coherence_empty_spectrum():
+    +     result = compute_coherence(np.array([]))
+    +     assert np.isnan(result)
+● Bash: pytest tests/test_spectral.py -v
+    PASSED tests/test_spectral.py::test_compute_coherence_empty_spectrum
+</pre></div>
+</div>
+<p>You can interrupt at any point with <code class="docutils literal notranslate"><span class="pre">Esc</span></code>. If you see an action you didn’t intend
+(the agent is about to write to the wrong file, run a destructive command, etc.),
+interrupt immediately and clarify.</p>
+</section>
+<section id="step-4-review-the-diff">
+<h3>Step 4: Review the Diff<a class="headerlink" href="#step-4-review-the-diff" title="Link to this heading">#</a></h3>
+<p><strong>Never accept changes without reading them.</strong> The diff is your last line of
+defense. Open a second terminal window and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>diff
+</pre></div>
+</div>
+<p>Or use VS Code’s Source Control panel (⌃⇧G) to see a visual diff of each changed
+file. Read every changed line. Look for:</p>
+<ul class="simple">
+<li><p>Logic that doesn’t match your intent</p></li>
+<li><p>New dependencies that weren’t requested</p></li>
+<li><p>Deleted lines that shouldn’t have been removed</p></li>
+<li><p>Hard-coded values that should be configurable</p></li>
+<li><p>Any security issues (unsanitized inputs, hard-coded credentials)</p></li>
+</ul>
+</section>
+<section id="step-5-test">
+<h3>Step 5: Test<a class="headerlink" href="#step-5-test" title="Link to this heading">#</a></h3>
+<p>Always run the full test suite after an AI-assisted change, not just the new tests:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest<span class="w"> </span>tests/<span class="w"> </span>-v
+</pre></div>
+</div>
+<p>Ask yourself:</p>
+<ul class="simple">
+<li><p>Do the new tests actually test the right behaviour? (Tests can be wrong too)</p></li>
+<li><p>Does the full suite still pass? (The change might have broken something elsewhere)</p></li>
+<li><p>If there are no tests for a critical path, ask the model to add them</p></li>
+</ul>
+</section>
+<section id="step-6-commit">
+<h3>Step 6: Commit<a class="headerlink" href="#step-6-commit" title="Link to this heading">#</a></h3>
+<p>Keep commits small and descriptive. One commit per logical change:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>-p<span class="w">                              </span><span class="c1"># review each hunk before staging</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add guard for empty array in compute_coherence (returns np.nan)&quot;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">-p</span></code> flag in <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> shows you each changed hunk and asks whether to stage
+it. This is another review opportunity and prevents accidentally committing
+unrelated changes.</p>
+<div class="tip admonition">
+<p class="admonition-title">Don’t let the agent commit</p>
+<p>Let the agent write code. You commit. This forces a review step between generation
+and history. An AI-assisted commit that you haven’t reviewed is a commitment you
+may regret later.</p>
+</div>
+</section>
+</section>
+<section id="part-6-advanced-features">
+<h2>Part 6: Advanced Features<a class="headerlink" href="#part-6-advanced-features" title="Link to this heading">#</a></h2>
+<section id="hooks-automate-your-quality-checks">
+<h3>Hooks — Automate Your Quality Checks<a class="headerlink" href="#hooks-automate-your-quality-checks" title="Link to this heading">#</a></h3>
+<p>Hooks let you run shell commands automatically before or after specific agent
+actions. They’re defined in <code class="docutils literal notranslate"><span class="pre">.claude/settings.json</span></code> at your project root or in
+your global Claude Code settings.</p>
+<p><strong>Example: run the linter automatically after every file write:</strong></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;hooks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;postToolUse&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;matcher&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Write&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;hooks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;command&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ruff check --fix ${file}&quot;</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>With this hook, every time Claude Code writes a Python file, <code class="docutils literal notranslate"><span class="pre">ruff</span></code> runs
+automatically and fixes any style violations. The agent sees the result and can
+respond to any unfixable warnings.</p>
+<p><strong>Useful hooks for research code:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Hook</p></th>
+<th class="head"><p>Trigger</p></th>
+<th class="head"><p>Command</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Auto-lint</p></td>
+<td><p>After any <code class="docutils literal notranslate"><span class="pre">.py</span></code> write</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ruff</span> <span class="pre">check</span> <span class="pre">--fix</span> <span class="pre">${file}</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Auto-format</p></td>
+<td><p>After any <code class="docutils literal notranslate"><span class="pre">.py</span></code> write</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">black</span> <span class="pre">${file}</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Auto-test</p></td>
+<td><p>After write to <code class="docutils literal notranslate"><span class="pre">src/</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pytest</span> <span class="pre">tests/</span> <span class="pre">-x</span> <span class="pre">-q</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Guard raw data</p></td>
+<td><p>Before write to <code class="docutils literal notranslate"><span class="pre">data/raw/</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&quot;ERROR:</span> <span class="pre">data/raw</span> <span class="pre">is</span> <span class="pre">immutable&quot;;</span> <span class="pre">exit</span> <span class="pre">1</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The last example — a hook that <strong>blocks</strong> writes to <code class="docutils literal notranslate"><span class="pre">data/raw/</span></code> — is a simple way
+to enforce a critical constraint automatically.</p>
+</section>
+<section id="mcp-servers-extending-the-agent-s-reach">
+<h3>MCP Servers — Extending the Agent’s Reach<a class="headerlink" href="#mcp-servers-extending-the-agent-s-reach" title="Link to this heading">#</a></h3>
+<p>MCP (Model Context Protocol) servers are plug-ins that give the agent new
+capabilities beyond the filesystem. They let the agent interact with databases,
+APIs, web browsers, and other services.</p>
+<p><strong>Add an MCP server:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>claude<span class="w"> </span>mcp<span class="w"> </span>add<span class="w"> </span>&lt;server-name&gt;
+</pre></div>
+</div>
+<p><strong>Examples of available MCP servers:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Server</p></th>
+<th class="head"><p>What it enables</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&#64;modelcontextprotocol/server-filesystem</span></code></p></td>
+<td><p>Extended filesystem access</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&#64;modelcontextprotocol/server-github</span></code></p></td>
+<td><p>Read/write GitHub issues, PRs</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&#64;modelcontextprotocol/server-postgres</span></code></p></td>
+<td><p>Query a PostgreSQL database</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&#64;modelcontextprotocol/server-brave-search</span></code></p></td>
+<td><p>Web search</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mcp-jupyter</span></code></p></td>
+<td><p>Execute and inspect Jupyter notebook cells</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>For neuroscience research,</strong> potentially useful servers include:</p>
+<ul class="simple">
+<li><p>A database server pointing to your subject metadata database</p></li>
+<li><p>A web search server for literature lookups during coding sessions</p></li>
+<li><p>A Jupyter server for interactive notebook manipulation</p></li>
+</ul>
+<p>MCP is still a young ecosystem. Check the official registry for new servers as the
+ecosystem grows.</p>
+</section>
+<section id="extended-thinking-slow-down-for-hard-problems">
+<h3>Extended Thinking — Slow Down for Hard Problems<a class="headerlink" href="#extended-thinking-slow-down-for-hard-problems" title="Link to this heading">#</a></h3>
+<p>For genuinely difficult problems — debugging a mysterious failure, choosing between
+architectural approaches, deciding on an appropriate statistical model — you can
+ask the model to reason more carefully before responding:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt; Think carefully step-by-step before answering:
+  My TRF model is systematically overfitting on subjects with fewer trials.
+  I have: 50 subjects, 100–400 trials per subject, 64 EEG channels, 
+  a 200ms TRF window at 1000 Hz (200 time-lag features × 64 channels = 12 800
+  predictors). Ridge regression alpha is set by nested CV.
+  What&#39;s the most principled approach to handle the imbalanced trial counts?
+</pre></div>
+</div>
+<p>The model will reason through the problem — considering options, trade-offs,
+assumptions — before giving a recommendation. This doesn’t guarantee correctness,
+but it catches many errors that arise from hasty generation.</p>
+<div class="warning admonition">
+<p class="admonition-title">Extended thinking is not magic</p>
+<p>The model is still generating plausible text, not computing a ground truth. For
+statistical decisions, use extended thinking to get a set of options with
+reasoning, then verify each option against a textbook or paper before implementing.</p>
+</div>
+</section>
+</section>
+<section id="part-7-best-practices">
+<h2>Part 7: Best Practices<a class="headerlink" href="#part-7-best-practices" title="Link to this heading">#</a></h2>
 <section id="general-principles">
 <h3>General Principles<a class="headerlink" href="#general-principles" title="Link to this heading">#</a></h3>
-<p><strong>Treat the model as a capable but junior collaborator.</strong>
-It can write clean code, explain concepts, draft documentation, and suggest approaches — but it lacks domain judgment, cannot verify its own output, and will not catch its own mistakes. Your job is to review, correct, and guide.</p>
-<p><strong>Keep tasks small and focused.</strong>
-Large, vague requests produce large, vague (and often incorrect) outputs. “Refactor the entire analysis pipeline” is much harder to verify than “Write a function that loads the CSV, drops NaN rows, and returns a DataFrame”. Break work into reviewable units.</p>
-<p><strong>Use plan mode before large changes.</strong>
-When you ask Claude Code to make substantial changes, invoke plan mode first (<code class="docutils literal notranslate"><span class="pre">/plan</span></code> or press <code class="docutils literal notranslate"><span class="pre">Shift+Tab</span></code> to toggle). Read the plan carefully before approving. This is the moment to catch misunderstandings — before files are modified.</p>
-<p><strong>Version-control everything.</strong>
-Commits are cheap; undoing AI-introduced bugs is not. Commit before any significant AI-assisted change, so you can always <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> to a clean state. Treat AI-generated diffs exactly like any other code review.</p>
+<p><strong>Treat the model as a capable junior collaborator — not an oracle.</strong>
+It can write clean code, explain concepts, draft documentation, and propose
+approaches. It lacks domain judgment, cannot verify its own outputs, and will not
+catch its own mistakes. Your job is to review, correct, and guide.</p>
+<p><strong>Keep sessions small and focused.</strong>
+One task per session. Long sessions accumulate context that can confuse the model,
+and long chains of edits make it harder to review individual changes. Use <code class="docutils literal notranslate"><span class="pre">/clear</span></code>
+when switching tasks.</p>
+<p><strong>Don’t prompt-engineer around mistakes — restart with a better ask.</strong>
+If the model fundamentally misunderstands what you want, don’t try to nudge it
+with increasingly elaborate follow-ups. Start a new session with a clearer,
+more specific request. A clean context beats a patched conversation.</p>
+<p><strong>The model’s confidence is not a signal of correctness.</strong>
+LLMs express uncertainty and certainty with the same fluent prose. A confident,
+detailed, wrong answer looks identical to a confident, detailed, correct answer.
+Treat all outputs as drafts requiring verification.</p>
 </section>
 <section id="software-engineering">
 <h3>Software Engineering<a class="headerlink" href="#software-engineering" title="Link to this heading">#</a></h3>
-<p><strong>Write a <code class="docutils literal notranslate"><span class="pre">CLAUDE.md</span></code> for your project.</strong>
-This file is loaded by the agent at the start of every session. Use it to describe the project structure, coding conventions, which tests to run, and any constraints (e.g., “do not modify files in <code class="docutils literal notranslate"><span class="pre">data/raw/</span></code>”). A good <code class="docutils literal notranslate"><span class="pre">CLAUDE.md</span></code> dramatically reduces misunderstandings.</p>
-<p><strong>Prefer short iterative cycles.</strong>
-The feedback loop: <em>ask → review diff → accept or reject → commit</em> should be short. Do not let the agent accumulate many changes without review. A single wrong assumption early in a long chain of edits can corrupt everything that follows.</p>
-<p><strong>Ask for tests alongside implementation.</strong>
-The model will happily write code that passes no tests. Explicitly ask for tests: “Write this function <em>and</em> the corresponding pytest tests.” Run the tests yourself before committing.</p>
+<p><strong>Write <code class="docutils literal notranslate"><span class="pre">CLAUDE.md</span></code> first.</strong> Before any session on a real project, write the
+project instruction file. Every minute spent on <a class="reference external" href="http://CLAUDE.md">CLAUDE.md</a> saves 10 minutes of
+corrections.</p>
+<p><strong>Request tests alongside implementation.</strong>
+Never ask for just the implementation. Always ask: <em>“Write the function and
+the pytest tests for it.”</em> Review the tests as carefully as the code — tests
+that pass but test the wrong thing are worse than no tests.</p>
+<p><strong>One change, one commit.</strong>
+Don’t let the agent make five changes and then commit them all. After each logical
+change: review the diff, run the tests, commit. Small commits make it easy to
+identify and revert problems.</p>
 <p><strong>Manually audit security-sensitive code.</strong>
-LLMs can introduce subtle vulnerabilities: SQL injection, insecure deserialization, hard-coded credentials. Any code that handles user input, authentication, or sensitive data should be reviewed line by line before shipping.</p>
+AI-generated code can introduce:</p>
+<ul class="simple">
+<li><p>SQL injection (f-string queries with user input)</p></li>
+<li><p>Path traversal (unsanitized file paths)</p></li>
+<li><p>Hard-coded credentials</p></li>
+<li><p>Insecure deserialization</p></li>
+</ul>
+<p>Any code that handles user input, file paths, network requests, or authentication
+must be reviewed line by line. Seriously — do not skip this.</p>
+<p><strong>Don’t let the agent manage your secrets.</strong>
+If your project uses API keys, database passwords, or SSH keys, make sure these
+live in environment variables or a secrets manager — not in files the agent
+can read or write.</p>
 </section>
-<section id="research-specific-guidance">
-<h3>Research-Specific Guidance<a class="headerlink" href="#research-specific-guidance" title="Link to this heading">#</a></h3>
-<p><strong>Reproducibility first.</strong>
-When asking the model to write analysis code, always specify: use a seeded random number generator, pin library versions, and load data from a fixed path. The model may otherwise write code that produces different results on each run.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ask the model to write code like this, not like the version without the seed:</span>
+<section id="research-specific-best-practices">
+<h3>Research-Specific Best Practices<a class="headerlink" href="#research-specific-best-practices" title="Link to this heading">#</a></h3>
+<p><strong>Reproducibility is non-negotiable.</strong></p>
+<p>When asking the model to write analysis code, explicitly require:</p>
+<ul class="simple">
+<li><p>Fixed random seeds using numpy’s recommended API</p></li>
+<li><p>Pinned dependency versions (via <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> or <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code>)</p></li>
+<li><p>Absolute paths or config-driven paths (no <code class="docutils literal notranslate"><span class="pre">../../data/</span></code> surprises)</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ask for this:</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">indices</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">n_trials</span><span class="p">)</span>
+
+<span class="c1"># Not this (no seed, deprecated API):</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Verify statistical code independently.</strong>
-The model may use the wrong statistical test for your data type (e.g., a parametric test on non-normal data, or a test that assumes independence when measurements are repeated). If you are not sure the model’s choice is correct, look it up.</p>
-<p><strong>Do not use LLM-generated text verbatim in manuscripts.</strong>
-Use the model for scaffolding (outlines, first drafts, literature search suggestions) and editing. Do not copy-paste results sections or conclusions — the model has no access to your actual data and will generate plausible-sounding but fabricated statements.</p>
-<p><strong>Verify all citations.</strong>
-LLMs hallucinate references with high confidence. Before citing any paper the model mentions, find the actual paper (via PubMed, Google Scholar, or the journal website) and confirm that it says what the model claims it says.</p>
-<p><strong>Reserve AI for boilerplate; think for yourself on the science.</strong>
-Use AI to accelerate the parts of your work that are repetitive and verifiable: loading data, reshaping arrays, generating plots, writing docstrings. Reserve your critical thinking for hypothesis formulation, experimental design, and interpretation of results — the parts where being wrong matters most.</p>
+<p><strong>Use the model for boilerplate; think for yourself on the science.</strong></p>
+<p>AI excels at:</p>
+<ul class="simple">
+<li><p>Loading and reshaping data</p></li>
+<li><p>Writing repetitive analysis loops across subjects</p></li>
+<li><p>Generating plot templates</p></li>
+<li><p>Writing docstrings and type hints</p></li>
+</ul>
+<p>AI is unreliable for:</p>
+<ul class="simple">
+<li><p>Choosing the right statistical test for your data</p></li>
+<li><p>Deciding what to control for in a regression</p></li>
+<li><p>Interpreting a surprising result</p></li>
+<li><p>Making claims about what your findings mean</p></li>
+</ul>
+<p>These require domain knowledge and scientific judgment the model lacks.</p>
+</section>
+<section id="research-statistics-and-citations">
+<h3>Research: Statistics and Citations<a class="headerlink" href="#research-statistics-and-citations" title="Link to this heading">#</a></h3>
+<p><strong>Verify statistical code independently.</strong></p>
+<p>LLMs are confidently wrong about statistics more often than in any other area.
+Common errors:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Error</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Wrong test for data type</p></td>
+<td><p>Pearson correlation on rank data</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ignoring repeated measures</p></td>
+<td><p>Two-sample t-test on within-subject comparisons</p></td>
+</tr>
+<tr class="row-even"><td><p>Wrong multiple comparisons correction</p></td>
+<td><p>Bonferroni where FDR is appropriate</p></td>
+</tr>
+<tr class="row-odd"><td><p>Incorrect degrees of freedom</p></td>
+<td><p>Off-by-one errors in t-test df</p></td>
+</tr>
+<tr class="row-even"><td><p>Assumption violations silently ignored</p></td>
+<td><p>ANOVA on clearly non-normal distributions</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>For every statistical test the model suggests, look up: (1) what the test assumes,
+(2) whether your data meets those assumptions, (3) the original paper or textbook
+source. Do not rely on the model’s explanation of why the test is appropriate.</p>
+<p><strong>Never copy LLM-generated text into manuscripts.</strong></p>
+<p>Use the model for:</p>
+<ul class="simple">
+<li><p>Outlines and structural scaffolding</p></li>
+<li><p>First drafts you’ll heavily rewrite</p></li>
+<li><p>Improving clarity and flow of <em>your</em> text</p></li>
+<li><p>Searching for relevant literature (but verify every paper it mentions)</p></li>
+</ul>
+<p>Do <strong>not</strong> copy-paste:</p>
+<ul class="simple">
+<li><p>Results sections (the model doesn’t have access to your numbers)</p></li>
+<li><p>Conclusions or interpretations (these require your scientific judgment)</p></li>
+<li><p>Methods descriptions (they may not accurately describe what you actually did)</p></li>
+</ul>
+<p><strong>Verify every cited paper.</strong></p>
+<p>When the model mentions a paper, before using it:</p>
+<ol class="arabic simple">
+<li><p>Search for it on <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov">PubMed</a> or
+<a class="reference external" href="https://scholar.google.com">Google Scholar</a></p></li>
+<li><p>Confirm the title, authors, and year are correct</p></li>
+<li><p>Read the relevant section and confirm it says what the model claims</p></li>
+</ol>
+<p>Hallucinated references look completely real — plausible author names, real
+journals, correct year ranges. The only way to catch them is to look them up.</p>
+</section>
+</section>
+<section id="part-8-common-pitfalls">
+<h2>Part 8: Common Pitfalls<a class="headerlink" href="#part-8-common-pitfalls" title="Link to this heading">#</a></h2>
+<p>Here are the most common ways that beginners — and experienced users — get into
+trouble. Each one comes with a concrete fix.</p>
+<hr class="docutils" />
+<p><strong>Pitfall 1: Not reading the diff</strong></p>
+<blockquote>
+<div><p><em>“I asked it to add a function and it deleted three other things.”</em></p>
+</div></blockquote>
+<p>Fix: Always run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> after every agent action. Use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">-p</span></code> to stage
+changes interactively. Never use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code> after AI-assisted changes.</p>
+<hr class="docutils" />
+<p><strong>Pitfall 2: Too-long sessions</strong></p>
+<blockquote>
+<div><p><em>“After an hour of back-and-forth, it started contradicting its earlier code.”</em></p>
+</div></blockquote>
+<p>Fix: Keep sessions short. One goal per session. Use <code class="docutils literal notranslate"><span class="pre">/compact</span></code> to compress
+history, or <code class="docutils literal notranslate"><span class="pre">/clear</span></code> to start fresh. Rely on <a class="reference external" href="http://CLAUDE.md">CLAUDE.md</a> rather than conversation
+history for persistent context.</p>
+<hr class="docutils" />
+<p><strong>Pitfall 3: Accepting confident wrong answers</strong></p>
+<blockquote>
+<div><p><em>“It was so sure about the statistical test that I didn’t check. It was wrong.”</em></p>
+</div></blockquote>
+<p>Fix: The model’s confidence is not a signal of correctness. For anything
+high-stakes (statistics, citations, security), verify independently regardless
+of how confident the model sounds.</p>
+<hr class="docutils" />
+<p><strong>Pitfall 4: Asking for too much at once</strong></p>
+<blockquote>
+<div><p><em>“I asked it to refactor the whole pipeline and now nothing works.”</em></p>
+</div></blockquote>
+<p>Fix: Break large tasks into small, reviewable steps. Each step should produce a
+working, committable state. If a task can’t be broken down, use plan mode and
+review each planned step carefully before proceeding.</p>
+<hr class="docutils" />
+<p><strong>Pitfall 5: Trusting generated tests</strong></p>
+<blockquote>
+<div><p><em>“The tests all passed but the analysis results were wrong.”</em></p>
+</div></blockquote>
+<p>Fix: Tests can be wrong. Review each test: does it actually test the intended
+behaviour? Does it catch realistic failure modes? A test that trivially passes
+(e.g., <code class="docutils literal notranslate"><span class="pre">assert</span> <span class="pre">result</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">None</span></code>) provides no protection.</p>
+<hr class="docutils" />
+<p><strong>Pitfall 6: Skipping <code class="docutils literal notranslate"><span class="pre">CLAUDE.md</span></code></strong></p>
+<blockquote>
+<div><p><em>“It keeps using the wrong library / wrong convention / touching the wrong files.”</em></p>
+</div></blockquote>
+<p>Fix: Write the <a class="reference external" href="http://CLAUDE.md">CLAUDE.md</a>. This is the most consistent predictor of session
+quality. Treat it as a living document — update it whenever you catch a
+persistent misunderstanding.</p>
+<hr class="docutils" />
+<p><strong>Pitfall 7: Using AI for the wrong parts of research</strong></p>
+<blockquote>
+<div><p><em>“I asked it to interpret my results and it gave me a great story. I published it.
+The reviewers found a flaw I hadn’t noticed because the AI narrative was so
+convincing.”</em></p>
+</div></blockquote>
+<p>Fix: Use AI for technical implementation. Keep all scientific reasoning — what the
+results mean, what alternative explanations exist, what the limitations are — in
+your own hands.</p>
+</section>
+<section id="part-9-exercises">
+<h2>Part 9: Exercises<a class="headerlink" href="#part-9-exercises" title="Link to this heading">#</a></h2>
+<section id="exercise-1-install-and-explore">
+<h3>Exercise 1: Install and Explore<a class="headerlink" href="#exercise-1-install-and-explore" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Install Claude Code and authenticate with your Anthropic account.</p></li>
+<li><p>Navigate to any existing Python project (your homework, a previous analysis,
+or a fresh directory with one <code class="docutils literal notranslate"><span class="pre">.py</span></code> file).</p></li>
+<li><p>Start a session and ask: <em>“Describe the structure of this project and suggest
+one improvement.”</em></p></li>
+<li><p>Read the response. Note whether anything is incorrect or unhelpful, and think
+about what <a class="reference external" href="http://CLAUDE.md">CLAUDE.md</a> information would have prevented those issues.</p></li>
+</ol>
+</section>
+<section id="exercise-2-write-a-claude-md">
+<h3>Exercise 2: Write a <a class="reference external" href="http://CLAUDE.md">CLAUDE.md</a><a class="headerlink" href="#exercise-2-write-a-claude-md" title="Link to this heading">#</a></h3>
+<p>For the project you used in Exercise 1 (or a new one), write a <code class="docutils literal notranslate"><span class="pre">CLAUDE.md</span></code> file.
+Include:</p>
+<ul class="simple">
+<li><p>A one-paragraph project description</p></li>
+<li><p>Directory structure</p></li>
+<li><p>How to run the code and tests</p></li>
+<li><p>At least two coding conventions specific to this project</p></li>
+<li><p>At least one hard constraint (“do not modify X”)</p></li>
+</ul>
+<p>Start a new Claude Code session after writing it. Ask the same question as in
+Exercise 1. Compare the quality of the response.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Solution approach</p>
+<p>A <a class="reference external" href="http://CLAUDE.md">CLAUDE.md</a> doesn’t need to be perfect on the first try. The fastest way to
+improve it is to notice <em>each time</em> the model makes a wrong assumption and add
+a clarifying line. After 3–4 sessions, your <a class="reference external" href="http://CLAUDE.md">CLAUDE.md</a> will be comprehensive
+enough that misunderstandings become rare.</p>
+<p>Think of it like writing good documentation — it’s an investment that pays off
+over every future session on that project.</p>
+</div>
+</section>
+<section id="exercise-3-the-full-cycle">
+<h3>Exercise 3: The Full Cycle<a class="headerlink" href="#exercise-3-the-full-cycle" title="Link to this heading">#</a></h3>
+<p>Using Claude Code, complete this full workflow:</p>
+<ol class="arabic simple">
+<li><p>Enable plan mode (<code class="docutils literal notranslate"><span class="pre">Shift+Tab</span></code>)</p></li>
+<li><p>Ask: <em>“Write a Python function called <code class="docutils literal notranslate"><span class="pre">load_subject_data(path:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">dict</span></code>
+that loads a CSV file and returns a dictionary with keys ‘subject_id’, ‘data’,
+and ‘n_trials’. Add appropriate error handling for missing files and malformed
+CSVs. Also write pytest tests covering: successful load, file not found, and
+a CSV missing the expected columns.”</em></p></li>
+<li><p>Read the plan carefully. Ask at least one clarifying question or request one
+modification before approving.</p></li>
+<li><p>After execution, run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> and read every changed line.</p></li>
+<li><p>Run the tests: <code class="docutils literal notranslate"><span class="pre">pytest</span> <span class="pre">-v</span></code></p></li>
+<li><p>Commit with an informative message.</p></li>
+</ol>
+<div class="note admonition">
+<p class="admonition-title">What to watch for</p>
+<ul class="simple">
+<li><p>Does the plan match what you asked for, or did the model interpret something
+differently?</p></li>
+<li><p>Are the generated tests actually testing failure modes, or are they trivial?</p></li>
+<li><p>Is the error handling specific enough (e.g., does it distinguish “file not found”
+from “malformed CSV”), or is it catching <code class="docutils literal notranslate"><span class="pre">Exception</span></code> everywhere?</p></li>
+<li><p>After your clarifying question, did the model’s plan improve?</p></li>
+</ul>
+</div>
+</section>
+<section id="exercise-4-spot-the-hallucination">
+<h3>Exercise 4: Spot the Hallucination<a class="headerlink" href="#exercise-4-spot-the-hallucination" title="Link to this heading">#</a></h3>
+<p>Ask Claude Code (or any LLM you have access to) the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>What are the two most important papers on temporal response functions (TRFs) for
+auditory neuroscience? Give me the full citation including DOI.
+</pre></div>
+</div>
+<p>Then:</p>
+<ol class="arabic simple">
+<li><p>Take the citations the model gives you.</p></li>
+<li><p>Search for each one on <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov">PubMed</a>.</p></li>
+<li><p>For each: does the paper exist? Are the authors, title, journal, and year
+correct? Does the DOI resolve?</p></li>
+</ol>
+<p>Record what you find. If the model hallucinated any details, note which parts
+were wrong. This exercise is designed to give you direct experience with
+hallucination before it matters in a real research context.</p>
 </section>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <div class="tip admonition">
-<p class="admonition-title">Key Points</p>
+<p class="admonition-title">Key Takeaways</p>
+<p><strong>Understanding LLMs:</strong></p>
 <ol class="arabic simple">
-<li><p><strong>LLMs predict the next token</strong> — they are not knowledge bases and cannot verify their own outputs.</p></li>
-<li><p><strong>Hallucination and sycophancy are structural problems</strong>, not bugs to be patched. Always verify independently.</p></li>
-<li><p><strong>Multiple strong tools exist</strong> (Claude Code, Gemini CLI, Copilot, Cursor); the landscape changes fast — evaluate on your actual tasks.</p></li>
-<li><p><strong>Use plan mode and short review cycles</strong> to catch mistakes before they compound.</p></li>
-<li><p><strong>For research</strong>: prioritize reproducibility, verify statistics, never copy-paste generated text into manuscripts, and always track down cited papers yourself.</p></li>
+<li><p>LLMs predict the next token — they are not knowledge bases and cannot verify
+their own outputs.</p></li>
+<li><p>Hallucination and sycophancy are structural properties, not bugs. Always
+verify independently.</p></li>
+<li><p>Context windows are finite; long sessions can cause the model to forget earlier
+constraints.</p></li>
 </ol>
+<p><strong>Getting productive:</strong>
+4. Write <code class="docutils literal notranslate"><span class="pre">CLAUDE.md</span></code> before your first session — it’s the highest-leverage thing
+you can do.
+5. Use plan mode for anything touching more than one file.
+6. The cycle: ask → review plan → execute → read diff → test → commit.
+7. Keep sessions short and tasks small.</p>
+<p><strong>For research:</strong>
+8. Prioritize reproducibility: fixed seeds, pinned dependencies, no magic paths.
+9. Verify every statistical test independently against the original source.
+10. Never copy AI-generated text into manuscripts; never trust AI citations without
+verification.
+11. Use AI for boilerplate and scaffolding. Keep scientific reasoning in your own hands.</p>
 </div>
+<section id="further-reading-and-resources">
+<h3>Further Reading and Resources<a class="headerlink" href="#further-reading-and-resources" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/anthropics/claude-code">Claude Code documentation</a> — official
+repo with full feature documentation, changelog, and examples</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2212.09251">Anthropic’s research on sycophancy</a> — original
+paper describing the sycophancy problem (“Sycophancy to Subterfuge”, 2022)</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/1706.03762">Attention Is All You Need</a> — the original
+Transformer paper; worth reading to understand the architecture</p></li>
+<li><p><a class="reference external" href="https://github.blog/2022-09-07-research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/">GitHub Copilot productivity study</a>
+— the 55% faster statistic comes from here</p></li>
+<li><p><a class="reference external" href="https://bbycroft.net/llm">Llm Visualization</a> — a beautiful interactive
+visualization of how a transformer LLM processes text token by token</p></li>
+</ul>
+</section>
 </section>
 </section>
 
@@ -658,27 +1886,74 @@ Use AI to accelerate the parts of your work that are repetitive and verifiable: 
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-large-language-model">What is a Large Language Model?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#next-token-prediction">Next-Token Prediction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#training-pipeline">Training Pipeline</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-llms-make-mistakes">Why LLMs Make Mistakes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ai-coding-revolution">The AI Coding Revolution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-how-llms-work-and-why-they-fail">Part 1: How LLMs Work (and Why They Fail)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tokens-the-building-blocks">Tokens — The Building Blocks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-core-mechanism-next-token-prediction">The Core Mechanism: Next-Token Prediction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-training-pipeline">The Training Pipeline</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#failure-mode-1-hallucination">Failure Mode 1: Hallucination</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#failure-mode-2-sycophancy">Failure Mode 2: Sycophancy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#failure-mode-3-context-window-limits">Failure Mode 3: Context-Window Limits</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#failure-mode-4-no-self-verification">Failure Mode 4: No Self-Verification</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#popular-agentic-ai-tools">Popular Agentic AI Tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-the-agentic-ai-landscape">Part 2: The Agentic AI Landscape</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-makes-a-tool-agentic">What Makes a Tool “Agentic”?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tool-comparison-as-of-mid-2025">Tool Comparison (as of mid-2025)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#claude-code">Claude Code</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gemini-cli">Gemini CLI</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github-copilot">GitHub Copilot</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cursor-and-windsurf">Cursor and Windsurf</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chatgpt-gpt-4o-advanced-data-analysis">ChatGPT / GPT-4o Advanced Data Analysis</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-principles">General Principles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software-engineering">Software Engineering</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#research-specific-guidance">Research-Specific Guidance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-getting-started-with-claude-code">Part 3: Getting Started with Claude Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites-and-installation">Prerequisites and Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#your-first-session">Your First Session</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#essential-commands-and-keyboard-shortcuts">Essential Commands and Keyboard Shortcuts</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-4-setting-up-your-project">Part 4: Setting Up Your Project</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-claude-md-file-your-project-s-briefing-document">The <code class="docutils literal notranslate"><span class="pre">CLAUDE.md</span></code> File — Your Project’s Briefing Document</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-to-keep-out-of-claude-md">What to Keep Out of <code class="docutils literal notranslate"><span class="pre">CLAUDE.md</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#permission-modes">Permission Modes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-integration">Git Integration</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-5-the-core-workflow">Part 5: The Core Workflow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-golden-cycle">The Golden Cycle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-ask-well">Step 1: Ask Well</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-plan-mode-the-most-important-feature">Step 2: Plan Mode — The Most Important Feature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-execute-and-monitor">Step 3: Execute and Monitor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-review-the-diff">Step 4: Review the Diff</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-test">Step 5: Test</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-commit">Step 6: Commit</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-6-advanced-features">Part 6: Advanced Features</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hooks-automate-your-quality-checks">Hooks — Automate Your Quality Checks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mcp-servers-extending-the-agent-s-reach">MCP Servers — Extending the Agent’s Reach</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extended-thinking-slow-down-for-hard-problems">Extended Thinking — Slow Down for Hard Problems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-7-best-practices">Part 7: Best Practices</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-principles">General Principles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software-engineering">Software Engineering</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#research-specific-best-practices">Research-Specific Best Practices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#research-statistics-and-citations">Research: Statistics and Citations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-8-common-pitfalls">Part 8: Common Pitfalls</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-9-exercises">Part 9: Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-install-and-explore">Exercise 1: Install and Explore</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-write-a-claude-md">Exercise 2: Write a CLAUDE.md</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-the-full-cycle">Exercise 3: The Full Cycle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-spot-the-hallucination">Exercise 4: Spot the Hallucination</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading-and-resources">Further Reading and Resources</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
