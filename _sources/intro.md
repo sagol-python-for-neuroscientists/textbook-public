@@ -13,7 +13,7 @@ Asking questions in the "Discussions" tab is highly encouraged, since it allows 
 
 Finally, in the words of the great Albus Percival Wulfric Brian Dumbledore,
 
->_"~~Words are~~ **Writing code is**, in my not-so-humble opinion, our most inexhaustible source of magic."_
+_"~~Words are~~ **Writing code is**, in my not-so-humble opinion, our most inexhaustible source of magic."_
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/sagol-python-for-neuroscientists/textbook-public/main/source/good_luck.jpg" alt="Good luck!" />
