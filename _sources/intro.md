@@ -6,7 +6,14 @@ If you find any mistakes, have any suggestions, come across useful learning reso
 
 General questions, both technical and Python-related, can be posted to the ["Discussions" tab](https://github.com/sagol-python-for-neuroscientists/textbook-public/discussions) of the book's [Git repository](https://github.com/sagol-python-for-neuroscientists/textbook-public.git). We'll do our best to answer them as soon as possible.
 
-Asking questions in the "Discussions" tab is highly encouraged, since it allows other students to see both the issue, which they will probably run into at some point, and the answer for it. In case you still prefer to contact me directly, feel free to do so via [email](mailto:galkepler@gmail.com) (Gal Kepler).
+Asking questions in the "Discussions" tab is highly encouraged, since it allows other students to see both the issue, which they will probably run into at some point, and the answer for it. In case you still prefer to contact us directly, feel free to do so via email:
+* [Gal Kepler](mailto:galkepler@gmail.com)
+* [Gaia Negev](mailto:gaianegev@gmail.com)
+
+
+Finally, in the words of the great Albus Percival Wulfric Brian Dumbledore,
+
+>_"~~Words are~~ **Writing code is**, in my not-so-humble opinion, our most inexhaustible source of magic."_
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/sagol-python-for-neuroscientists/textbook-public/main/source/good_luck.jpg" alt="Good luck!" />
