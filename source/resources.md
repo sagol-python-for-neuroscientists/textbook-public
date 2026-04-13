@@ -8,7 +8,7 @@ Please suggest pull requests with useful websites and PDFs that you find during 
 
 ### Course-related
 
-- [Assignments' Repository](https://github.com/sagol-python-for-neuroscientists/course_site_2025)
+- [Assignments' Repository](https://github.com/sagol-python-for-neuroscientists/course_site_2026)
 
 ### Basics
 
