@@ -714,7 +714,7 @@
 <span style="color: var(--jp-ui-font-color2, gray)"> type:</span> int,
 
 
-<span style="color: var(--jp-ui-font-color2, gray)"> key:</span> increment-85bc65b9bfad3374966b351b79a00103</div></div>
+<span style="color: var(--jp-ui-font-color2, gray)"> key:</span> increment-fe6aba7a60d36c3df47b46ff25ab55a4</div></div>
 </div>
 <p>To “block”, i.e. to force the code to execute up to now, we call result():</p>
 <div class="cell docutils container">
@@ -771,6 +771,7 @@
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span><span class="w"> </span><span class="nn">streamz</span><span class="w"> </span><span class="kn">import</span> <span class="n">Stream</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">def</span><span class="w"> </span><span class="nf">increment</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
 
@@ -805,9 +806,11 @@
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span><span class="w"> </span><span class="nf">decrement</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">source</span> <span class="o">=</span> <span class="n">Stream</span><span class="p">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">a</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">increment</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">b</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">decrement</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">zip</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span><span class="o">.</span><span class="n">sink</span><span class="p">(</span><span class="nb">print</span><span class="p">)</span>
 
 <span class="ne">NameError</span>: name &#39;Stream&#39; is not defined
 </pre></div>

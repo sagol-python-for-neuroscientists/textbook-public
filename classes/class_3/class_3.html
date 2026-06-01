@@ -479,9 +479,9 @@
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">data_reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="nn">Cell In[1], line 25,</span> in <span class="ni">DataReader.read</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="k">def</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Reads data into disk and returns it. Should populate self.data.&quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">25</span>     <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="k">def</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;Reads data into disk and returns it. Should populate self.data.&quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">25</span>         <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 
 <span class="ne">NotImplementedError</span>: 
 </pre></div>
@@ -838,12 +838,15 @@ Exception: tuple index out of range; tup: (1,)
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">tup</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">tup</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">tup</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">tup</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;IndexError&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exception: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">; tup: </span><span class="si">{</span><span class="n">tup</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">8</span>     <span class="k">raise</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="c1"># process_data(a, b)</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 
 <span class="ne">IndexError</span>: tuple index out of range
 </pre></div>

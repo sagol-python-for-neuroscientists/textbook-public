@@ -764,7 +764,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7fc97094acd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7f4fecb8a510&gt;
 </pre></div>
 </div>
 </div>
@@ -910,7 +910,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7fc970951910&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7f4fecb8eb50&gt;
 </pre></div>
 </div>
 </div>
@@ -1492,17 +1492,14 @@ p.x: 20, p.y: 10
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">shopping_list_a</span> <span class="o">+</span> <span class="mi">1</span>
 
 <span class="nn">Cell In[29], line 60,</span> in <span class="ni">ShoppingList.__add__</span><span class="nt">(self, other)</span>
-<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="k">def</span><span class="w"> </span><span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">ShoppingList</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ShoppingList</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">41</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">42</span><span class="sd">     Combines two shopping lists and returns the result.</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span><span class="sd"> </span>
-<span class="sd">   (...)     57         Combined shopping list</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">59</span>     <span class="k">return</span> <span class="n">ShoppingList</span><span class="p">(</span>
-<span class="ne">---&gt; </span><span class="mi">60</span>         <span class="n">vegetables</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">vegetables</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">61</span>         <span class="n">fruit</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">fruit</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">fruit</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span>         <span class="n">bread</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">bread</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">bread</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span>     <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span>         <span class="n">ShoppingList</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span>             <span class="n">Combined</span> <span class="n">shopping</span> <span class="nb">list</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span><span class="s2">         return ShoppingList(</span>
+<span class="ne">---&gt; </span><span class="mi">60</span><span class="s2">             vegetables=self.vegetables + other.vegetables,</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span><span class="s2">             fruit=self.fruit + other.fruit,</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span><span class="s2">             bread=self.bread + other.bread,</span>
+<span class="g g-Whitespace">     </span><span class="mi">63</span><span class="s2">         )</span>
 
 <span class="ne">AttributeError</span>: &#39;int&#39; object has no attribute &#39;vegetables&#39;
 </pre></div>
